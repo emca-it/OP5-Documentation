@@ -143,7 +143,7 @@ if [[ "$output" =~ ^[0-9]+$ ]]; then
 	elif [ "$output" -le "$critlow" ]; then
 		exit $STATE_CRITICAL
 		echo "$metric = $output LOW| $output"
-	else
+	elif [ "$output" -lt "$warhigh" ] && [ "$output" -gt "$warlow" ]; then
 		exit $STATE_OK
 		echo "$metric = $output Acceptable| $output"
 	fi
