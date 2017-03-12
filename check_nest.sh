@@ -121,6 +121,15 @@ while getopts ':m:t:e:r:h:l:' opt; do
 done
 output=$(curl -s -L https://developer-api.nest.com/devices/thermostats\?auth=$token |jq '.[].'$metric'')
 
+
+# Debugging Check uncomment below statements
+echo $metric
+echo $output
+echo $warhigh
+echo $warlow
+echo $crithigh
+echo $critlow
+
 if [[ "$output" =~ ^[0-9]+$ ]]; then
 	if [ "$output" -ge "$warhigh" ] && [ "$output" -lt "$crithigh" ]; then
 		exit $STATE_WARNING
