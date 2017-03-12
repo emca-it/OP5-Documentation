@@ -109,32 +109,14 @@ print_usage() {
 
 while getopts ':m:t:e:r:h:l:' opt; do
     case $opt in
-        t)
-                        token="$OPTARG"
-                        ;;
-        e)
-                        warhigh="$OPTARG"
-                        ;;
-		r)
-                        warlow="$OPTARG"
-                        ;;
-		h)
-                        crithigh="$OPTARG"
-                        ;;
-		l)
-                        critlow="$OPTARG"
-                        ;;
-		m)
-                        metric="$OPTARG"
-                        ;;
-        h)
-                        print_usage
-                        exit 1
-                        ;;
-        *)
-                        print_usage
-                        exit 1
-                        ;;
+        t)token="$OPTARG";;
+        e)warhigh="$OPTARG";;
+		r)warlow="$OPTARG";;
+		h)crithigh="$OPTARG";;
+		l)critlow="$OPTARG";;
+		m)metric="$OPTARG";;
+        h)print_usage;;
+        *)print_usage;;
     esac
 done
 output=$(curl -s -L https://developer-api.nest.com/devices/thermostats\?auth=$token |jq '.[].'$metric'')
