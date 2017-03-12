@@ -136,7 +136,7 @@ if [[ "$output" =~ ^[0-9]+$ ]]; then
 		echo "$metric = $output LOW| $output"
 	else
 		$STATE_OK
-		echo "$metric = $output | $output"
+		echo "$metric = $output Acceptable| $output"
 	fi
 else
 	if [ "$output" == "$warhigh"]; then
