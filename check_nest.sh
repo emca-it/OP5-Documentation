@@ -132,20 +132,20 @@ echo $critlow
 
 if [[ "$output" =~ ^[0-9]+$ ]]; then
 	if [ "$output" -ge "$warhigh" ] && [ "$output" -lt "$crithigh" ]; then
-		exit $STATE_WARNING
 		echo "$metric = $output ELEVATED| $output"
-	elif [ "$output" -le "$warlow" ] && [ "$output" -gt "$critlow" ]; then
 		exit $STATE_WARNING
+	elif [ "$output" -le "$warlow" ] && [ "$output" -gt "$critlow" ]; then
 		echo "$metric = $output REDUCED| $output"
+		exit $STATE_WARNING
 	elif [ "$output" -ge "$crithigh" ]; then
-		exit $STATE_CRITICAL
 		echo "$metric = $output HIGH| $output"
-	elif [ "$output" -le "$critlow" ]; then
 		exit $STATE_CRITICAL
+	elif [ "$output" -le "$critlow" ]; then
 		echo "$metric = $output LOW| $output"
+		exit $STATE_CRITICAL
 	elif [ "$output" -lt "$warhigh" ] && [ "$output" -gt "$warlow" ]; then
-		exit $STATE_OK
 		echo "$metric = $output Acceptable| $output"
+		exit $STATE_OK
 	fi
 else
 	if [ "$output" == "$warhigh"]; then
