@@ -149,13 +149,13 @@ if [[ "$output" =~ ^[0-9]+$ ]]; then
 	fi
 else
 	if [ "$output" == "$warhigh" ]; then
+		echo "Metric $output"
 		exit $STATE_WARNING
-		echo "Metric $output"
 	elif [ "$output" == "$crithigh" ]; then
+		echo "Metric $output"
 		exit $STATE_CRITICAL
-		echo "Metric $output"
 	else
-		exit $STATE_OK
 		echo "Metric $output"
+		exit $STATE_OK
 	fi
 fi
