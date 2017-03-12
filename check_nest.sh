@@ -148,10 +148,10 @@ if [[ "$output" =~ ^[0-9]+$ ]]; then
 		exit $STATE_OK
 	fi
 else
-	if [ "$output" == "$warhigh"]; then
+	if [ "$output" == "$warhigh" ]; then
 		exit $STATE_WARNING
 		echo "Metric $output"
-	elif [ "$output" == "$crithigh"]; then
+	elif [ "$output" == "$crithigh" ]; then
 		exit $STATE_CRITICAL
 		echo "Metric $output"
 	else
