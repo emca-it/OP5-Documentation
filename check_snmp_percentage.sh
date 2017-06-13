@@ -38,6 +38,7 @@ cat <<"STOP"
         
          -L
             Label to use for Percentage Metric
+                "Metric"
         
          -w
             Warning threshold of Percentage Metric
@@ -71,7 +72,18 @@ else
 fi
 }
 
+#declare default variables
+label="Metric"
 port=161
+currpercent=-1
+warning=-1
+critical=-1
+oidtotal=-1
+oidused=-1
+community=public
+host=locahost
+
+
 . /opt/plugins/utils.sh
 
 #Prepare command line comments
@@ -130,7 +142,7 @@ currtotal=$(snmpget -v 2c -Oqv  -c $community $host:$port $oidtotal)
 
 #test for device presence and critical failure
 
-if [[ -z "$prevresult" ]]; then
+if [[ -z "$prevresult" || -z "$prevpercent" || -s "$prevused" || -z "$prevtotal" ]]; then
     perform_check
 elif [[ $prevtotal -eq 0 && $currtotal -eq 0 ]]; then   #does the device exist to be checked
     echo "*OK* $label = 0 | $label Percent=0;0;0 Used=0;0;0 Total=0;0;0"
