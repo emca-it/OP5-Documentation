@@ -58,7 +58,8 @@ currused=$(snmpget -v 2c -Oqv  -c $community $host:$port $oidcheck)
 
 #calculate percentage of total metric
 currpercent=$(awk "BEGIN { pc=100*${currused}/${currtotal}; i=int(pc); print (pc-i<0.5)?i:i+1 }")
-
+echo critical=$critical
+echo warning=$warning
     #test the calculated percentage against assigned threshold
 if [[ $currpercent -ge $critical ]]; then
     echo "*CRITICAL* $label = $currpercent | $label Percent=$currpercent;$warning;$critical Used=$currused;0;0 Total=$currtotal;0;0"
@@ -75,11 +76,6 @@ fi
 #declare default variables
 label="Metric"
 port=161
-currpercent=-1
-warning=-1
-critical=-1
-oidtotal=-1
-oidused=-1
 community=public
 host=locahost
 
@@ -87,7 +83,7 @@ host=locahost
 . /opt/plugins/utils.sh
 
 #Prepare command line comments
-while getopts ':H:o:u:L:C:w:c:S:' opt; do
+while getopts ':H:o:u:L:C:w:c:p:S:h:' opt; do
     case $opt in
         H)
             host="$OPTARG"
@@ -119,6 +115,9 @@ while getopts ':H:o:u:L:C:w:c:S:' opt; do
         h)
             print_usage
             ;;
+      --help)
+            print_usage
+            ;;  
         *)
             print_usage
             ;;
@@ -126,24 +125,25 @@ while getopts ':H:o:u:L:C:w:c:S:' opt; do
 done
 
 #get previous results from livestatus
-prevresult=$(mon query ls services -c perf_data host_name='$host' description='$servdesc')
+prevresult=$(mon query ls services -c perf_data "host_name=$host" "description=$servdesc")
 
 #assign previous perventage to variable
 prevpercent=$(echo $prevresult | awk '{print $1}' | awk -F';' '{print $1}' | awk -F'=' '{print $2}')
 
 #assign previous used to a variable
-prevused=$(echo $prevresult | awk '{print $3}' | awk -F';' '{print $1}' | awk -F'=' '{print $2}')
+prevused=$(echo $prevresult | awk '{print $2}' | awk -F';' '{print $1}' | awk -F'=' '{print $2}')
 
 #assign total available to a variable
-prevtotal=$(echo $prevresult | awk '{print $2}' | awk -F';' '{print $1}' | awk -F'=' '{print $2}')
+prevtotal=$(echo $prevresult | awk '{print $3}' | awk -F';' '{print $1}' | awk -F'=' '{print $2}')
 
 #get total available for metric
 currtotal=$(snmpget -v 2c -Oqv  -c $community $host:$port $oidtotal)
 
 #test for device presence and critical failure
 
-if [[ -z "$prevresult" || -z "$prevpercent" || -s "$prevused" || -z "$prevtotal" ]]; then
-    perform_check
+if [[ -z "$prevresult" || -z "$prevtotal" ]]; then
+    echo "*OK* $label = 0 | $label Percent=0;0;0 Used=0;0;0 Total=0;0;0"
+    exit $STATE_OK
 elif [[ $prevtotal -eq 0 && $currtotal -eq 0 ]]; then   #does the device exist to be checked
     echo "*OK* $label = 0 | $label Percent=0;0;0 Used=0;0;0 Total=0;0;0"
     exit $STATE_OK
