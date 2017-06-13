@@ -19,7 +19,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-
 print_usage() {
 cat <<"STOP"
         check_snmp_percentage.sh:
@@ -51,16 +50,15 @@ cat <<"STOP"
 STOP
 }
 
+
 perform_check() {
-   
 #get in use Metric
 currused=$(snmpget -v 2c -Oqv  -c $community $host:$port $oidcheck)
 
 #calculate percentage of total metric
 currpercent=$(awk "BEGIN { pc=100*${currused}/${currtotal}; i=int(pc); print (pc-i<0.5)?i:i+1 }")
-echo critical=$critical
-echo warning=$warning
-    #test the calculated percentage against assigned threshold
+
+#test the calculated percentage against assigned threshold
 if [[ $currpercent -ge $critical ]]; then
     echo "*CRITICAL* $label = $currpercent | $label Percent=$currpercent;$warning;$critical Used=$currused;0;0 Total=$currtotal;0;0"
     exit $STATE_CRITICAL
@@ -124,6 +122,7 @@ while getopts ':H:o:u:L:C:w:c:p:S:h:' opt; do
     esac
 done
 
+
 #get previous results from livestatus
 prevresult=$(mon query ls services -c perf_data "host_name=$host" "description=$servdesc")
 
@@ -139,8 +138,8 @@ prevtotal=$(echo $prevresult | awk '{print $3}' | awk -F';' '{print $1}' | awk -
 #get total available for metric
 currtotal=$(snmpget -v 2c -Oqv  -c $community $host:$port $oidtotal)
 
-#test for device presence and critical failure
 
+#test for device presence and critical failure
 if [[ -z "$prevresult" || -z "$prevtotal" ]]; then
     echo "*OK* $label = 0 | $label Percent=0;0;0 Used=0;0;0 Total=0;0;0"
     exit $STATE_OK
@@ -153,5 +152,3 @@ elif [[ $prevtotal -gt 0 && $currtotal -eq 0 ]]; then   #determine if the total 
 else    #generate current percentage for logic test
     perform_check
 fi
-
-
