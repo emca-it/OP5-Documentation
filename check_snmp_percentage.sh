@@ -53,7 +53,7 @@ STOP
 
 perform_check() {
 #get in use Metric
-currused=$(snmpget -v 2c -Oqv  -c $community $host:$port $oidcheck)
+currused=$(snmpget -v 2c -OUqv  -c $community $host:$port $oidcheck)
 
 #calculate percentage of total metric
 currpercent=$(awk "BEGIN { pc=100*${currused}/${currtotal}; i=int(pc); print (pc-i<0.5)?i:i+1 }")
@@ -136,7 +136,7 @@ prevused=$(echo $prevresult | awk '{print $2}' | awk -F';' '{print $1}' | awk -F
 prevtotal=$(echo $prevresult | awk '{print $3}' | awk -F';' '{print $1}' | awk -F'=' '{print $2}')
 
 #get total available for metric
-currtotal=$(snmpget -v 2c -Oqv  -c $community $host:$port $oidtotal)
+currtotal=$(snmpget -v 2c -OUqv  -c $community $host:$port $oidtotal)
 
 
 #test for device presence and critical failure
