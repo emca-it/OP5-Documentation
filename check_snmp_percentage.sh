@@ -50,10 +50,15 @@ cat <<"STOP"
 STOP
 }
 
+#get_curr_total(){
+#	#get total available for metric
+#	currtotal=$(snmpget -v 2c -OUqv  -c $community $host:$port $oidtotal)
+#}
 
 perform_check() {
 #get in use Metric
 currused=$(snmpget -v 2c -OUqv  -c $community $host:$port $oidcheck)
+
 
 #calculate percentage of total metric
 currpercent=$(awk "BEGIN { pc=100*${currused}/${currtotal}; i=int(pc); print (pc-i<0.5)?i:i+1 }")
@@ -136,11 +141,15 @@ prevused=$(echo $prevresult | awk '{print $2}' | awk -F';' '{print $1}' | awk -F
 prevtotal=$(echo $prevresult | awk '{print $3}' | awk -F';' '{print $1}' | awk -F'=' '{print $2}')
 
 #get total available for metric
-currtotal=$(snmpget -v 2c -OUqv  -c $community $host:$port $oidtotal)
+currtotal=$(snmpget -v 2c -OUqv  -c $community $host:$port $oidtotal 2>&1 | sed 's/Timeout: No Response.*/Timeout/')
 
+echo "CurrTotal=$currtotal"
 
 #test for device presence and critical failure
-if [[ -z "$prevresult" || -z "$prevtotal" ]]; then
+if [ -n "$currtotal" ] && ! [ "$currtotal" -eq "$currtotal" ] 2> /dev/null; then
+    echo "*CRITICAL* $currtotal"
+    exit $STATE_CRITICAL
+elif [[ -z "$prevresult" || -z "$prevtotal" ]]; then
     echo "*OK* $label = 0 | $label Percent=0;0;0 Used=0;0;0 Total=0;0;0"
     exit $STATE_OK
 elif [[ $prevtotal -eq 0 && $currtotal -eq 0 ]]; then   #does the device exist to be checked
