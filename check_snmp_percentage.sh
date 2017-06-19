@@ -144,7 +144,7 @@ prevtotal=$(echo $prevresult | awk '{print $3}' | awk -F';' '{print $1}' | awk -
 currtotal=$(snmpget -v 2c -OUqv  -c $community $host:$port $oidtotal 2>&1 | sed 's/Timeout: No Response.*/Timeout/')
 
 #test for device presence and critical failure
-if [ -n "$currtotal" ] && ! [ "$currtotal" -eq "$currtotal" ] 2> /dev/null; then
+if [ -n "$currtotal" ] && [ "$currtotal" == "Timeout" ] && ! [ "$currtotal" -eq "$currtotal" ] 2> /dev/null; then
     echo "*CRITICAL* $currtotal"
     exit $STATE_CRITICAL
 elif [[ -z "$prevresult" || -z "$prevtotal" ]]; then
