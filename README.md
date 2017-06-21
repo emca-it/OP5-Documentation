@@ -15,4 +15,4 @@ Details of files
 		This check takes 2 OID and reports the Percentage 1 is of the other. It also allows you to monitor if a device like a disk goes from having a value to 0
 
 	sync-local-admins-to-pollers
-		This allows you to select a local user group on your master and sync it down to the pollers.
+		This allows you to select a local user group on your master and sync it down to the pollers. (Not Production Tested source RC)
