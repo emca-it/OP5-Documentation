@@ -56,6 +56,16 @@ def main():
         action="store_true",
         help="Surpress SSL warnings"
     )
+    parser.add_argument(
+        "--upper",
+        action="store-true",
+        help="Set hostname to uppercase"
+    )
+    parser.add_argument(
+        "--lower",
+        action="store_true",
+        help="Set hostname to lowercase"
+    )
     args = parser.parse_args()
 
     logger.info("Passed Arguments: {}".format(args))
@@ -68,6 +78,8 @@ def main():
     url = args.url
     user = args.user
     password = args.password
+    case_upper = args.upper
+    case_lower = args.lower
 
     config_host = '/'.join(
         [
@@ -94,6 +106,12 @@ def main():
     with open(args.hostsfile, 'r') as importfile:
         for host in importfile:
             host = host.rstrip()  # Stripping newline character from host
+
+            if case_lower:
+                host = host.lower()
+            elif case_upper:
+                host = host.upper()
+
             logger.info("Adding host {}".format(host))
 
             json_payload = json_builder(json_template, host)
