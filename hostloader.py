@@ -24,8 +24,25 @@ def json_builder(template, host):
 
 def main():
     # TODO: Option to set logging level
-    logging.basicConfig(filename="requests.log", level=logging.INFO)
-    logger = logging.getLogger('jsonrequests')
+    # Logging formatting options:
+    #     https://docs.python.org/2/library/logging.html#logrecord-attributes
+    log_entry_format = ':'.join(
+        [
+            '%(asctime)s',
+            '%(levelname)s',
+            '%(filename)s',
+            '%(funcName)s',
+            '%(lineno)s',
+            '%(message)s',
+        ]
+    )
+
+    logging.basicConfig(
+        format=log_entry_format,
+        level=logging.INFO,
+        filename="hostloader.log"
+    )
+    logger = logging.getLogger('hostloader')
 
     ssl_check = True
     save_check = 0
