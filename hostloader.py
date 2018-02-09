@@ -13,7 +13,8 @@ import logging
 import requests
 
 # TODO: Capture signals to allow a smooth exit rather then crash.
-# TODO: Read from stdin so data can be piped in
+# TODO: Read from stdin so data can be piped in.
+# TODO: Add threading or multiprocessing so work can oe chunked.
 
 
 def json_builder(template, host):
