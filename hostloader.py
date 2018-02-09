@@ -13,6 +13,7 @@ import logging
 import requests
 
 # TODO: Capture signals to allow a smooth exit rather then crash.
+# TODO: Read from stdin so data can be piped in
 
 
 def json_builder(template, host):
@@ -22,6 +23,7 @@ def json_builder(template, host):
 
 
 def main():
+    # TODO: Option to set logging level
     logging.basicConfig(filename="requests.log", level=logging.INFO)
     logger = logging.getLogger('jsonrequests')
 
@@ -97,6 +99,10 @@ def main():
             "change"
         ]
     )
+
+    if (case_upper and case_lower):
+        logger.error("There can be only one case option.")
+        return 10
 
     with open(args.jsontemplate, 'r') as json_file:
         json_template = json.load(json_file)
