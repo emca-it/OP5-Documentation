@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-# Writen for python 2.7
+# Written for python 2.7
 # This script is used for adding hosts, through line seperated json of host
 # paramaters
 
