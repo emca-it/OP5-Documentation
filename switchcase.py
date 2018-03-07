@@ -33,7 +33,7 @@ def main():
         help="File containing the hosts."
     )
     parser.add_argument(
-        "user",
+        "account",
         help="Account to log into OP5 Monitor."
     )
     parser.add_argument(
@@ -75,26 +75,65 @@ def main():
     print(args.lower)
     print(args.upper)
 
-    if not args.lower or not args.upper:
+    # TODO: Figure out is argparse can deal with this.
+    if not args.lower and not args.upper:
         logger.error("No cases selected. Please, pick one.")
+        print("No cases selected. Please, pick one.")
         return 10
-    elif args.lower or args.upper:
+    elif args.lower and args.upper:
         logger.error("Both cases selected. Please, pick one.")
+        print("Both cases selected. Please, pick one.")
         return 10
 
     if args.nossl:
         print("Supressing SSL warnings...")
         ssl_check = False
-        requests.package.urllib3.disable_warnings()
+        requests.packages.urllib3.disable_warnings()
+
+    auth_pair = (args.account, args.password)
+    server_target = "/".join(
+        args.url,
+        'api',
+        'config',
+        'host',
+    )
+    http_header={'content-type': 'application/json'}
+    save_interval = 20
+    save_check = 0
 
     with open(args.listfile, 'rU') as hostlist:
         reader = csv.reader(hostlist, delimiter=',')
         for line in reader:
             if len(line) != 2:
+                logger.info("Skipping line number {0}. {1}".format(
+                    reader.line_num,
+                    line
+                ))
                 continue
             elif line[0] != line[1]:
-                print(line)
+                json_payload = json.dumps({"host_name": line[1]})
+                http_package = requests.patch(
+                    "/".join(
+                        [
+                            server_target,
+                            line[1]
+                        ]
+                    ),
+                    data=json_payload,
+                    verify=ssl_check,
+                    auth=auth_pair,
+                    headers=http_header,
+                )
 
+                if save_check < save_interval:
+                    save_check += 1
+                else:
+                    http_package = requests.post(
+                        http_package,
+                        data={},
+                        verify=ssl_check,
+                        auth=auth_pair,
+                    )
 
     return 0
 
