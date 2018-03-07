@@ -70,6 +70,14 @@ def main():
         action='store_true',
         help="Switch case to uppercase."
     )
+    parser.add_argument(
+        '-i',
+        '--save-interval',
+        type=int,
+        default=20,
+        dest="save_interval"
+        help="Sets the interval between saves."
+    )
     args = parser.parse_args()
 
     print(args.lower)
@@ -98,7 +106,7 @@ def main():
         'host',
     )
     http_header={'content-type': 'application/json'}
-    save_interval = 20
+    save_interval = args.save_interval
     save_check = 0
 
     with open(args.listfile, 'rU') as hostlist:
