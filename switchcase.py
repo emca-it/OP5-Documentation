@@ -51,7 +51,7 @@ def main():
     )
     parser.add_argument(
         "-n",
-        "--noop",
+        "--nop",
         action='store_true',
         help="Dry run, no operations are executed."
     )
@@ -134,8 +134,6 @@ def main():
                 ))
                 continue
             elif line[0] != line[1]:
-                line[0] = line[0].replace(" ", "%20")
-                line[1] = line[1].replace(" ", "%20")
                 logger.info("Adding line number {0}.\n{1}".format(
                     reader.line_num,
                     line
@@ -152,10 +150,10 @@ def main():
                 server_target_host = "/".join(
                     [
                         server_target,
-                        line[0]
+                        requests.utils.quote(line[0])
                     ]
                 )
-                if not args.noop:
+                if not args.nop:
                     http_package = requests.patch(
                         server_target_host,
                         data=json_payload,
@@ -166,22 +164,21 @@ def main():
 
                     logger.info('Header: {0}'.format(http_package.headers))
                     logger.info('Request: {0}'.format(http_package.request))
-                    #logger.info('Text: {0}'.format(http_package.text))
+                    logger.info('Text: {0}'.format(http_package.text))
 
-                if save_check < save_interval and not args.noop:
+                if save_check < save_interval and not args.nop:
                     save_check += 1
-                elif args.noop or args.pop:
+                elif args.nop or args.pop:
+                    logger.info("No op or partial op. Not saving.")
                     print("No op or partial op. Not saving.")
-                    print("Not saving. No op or partial op enabled.")
                 else:
-                    print("Saving work.")
                     logger.info("Saving work.")
                     save_work(server_target, ssl_check, auth_pair)
                     save_check = 0
 
-    if args.noop or args.pop:
-        logger.info("Not saving. No op or partial op enabled.")
-        print("Not saving. No op or partial op enabled.")
+    if args.nop or args.pop:
+        logger.info("No op or partial op. Not saving.")
+        print("No op or partial op. Not saving.")
     else:
         print("Saving work.")
         logger.info("Saving work.")
