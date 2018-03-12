@@ -95,7 +95,7 @@ def main():
     )
     args = parser.parse_args()
 
-    # TODO: Figure out is argparse can deal with this.
+    # TODO: Figure out if argparse can deal with this.
     if not args.lower and not args.upper:
         logger.error("No cases selected. Please, pick one.")
         print("No cases selected. Please, pick one.")
@@ -164,9 +164,9 @@ def main():
                         headers=http_header
                     )
 
-                logger.info('Header: {0}'.format(http_package.headers))
-                logger.info('Request: {0}'.format(http_package.request))
-                #logger.info('Text: {0}'.format(http_package.text))
+                    logger.info('Header: {0}'.format(http_package.headers))
+                    logger.info('Request: {0}'.format(http_package.request))
+                    #logger.info('Text: {0}'.format(http_package.text))
 
                 if save_check < save_interval and not args.noop:
                     save_check += 1
@@ -179,13 +179,13 @@ def main():
                     save_work(server_target, ssl_check, auth_pair)
                     save_check = 0
 
-    if not args.noop or not args.pop:
+    if args.noop or args.pop:
+        logger.info("Not saving. No op or partial op enabled.")
+        print("Not saving. No op or partial op enabled.")
+    else:
         print("Saving work.")
         logger.info("Saving work.")
         save_work(server_target, ssl_check, auth_pair)
-    else:
-        logger.info("Not saving. No op or partial op enabled.")
-        print("Not saving. No op or partial op enabled.")
 
     return 0
 
