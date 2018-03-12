@@ -7,6 +7,15 @@ import logging
 import csv
 
 
+def save_work(server_target, ssl_check, auth_pair):
+    requests.post(
+        server_target,
+        data={},
+        verify=ssl_check,
+        auth=auth_pair,
+    )
+
+
 def main():
     log_format = ':'.join(
         [
@@ -43,13 +52,19 @@ def main():
     parser.add_argument(
         "-n",
         "--noop",
-        action='store_false',
+        action='store_true',
         help="Dry run, no operations are executed."
+    )
+    parser.add_argument(
+        "-p",
+        "--pop",
+        action='store_true',
+        help="Partial operations, don't save anything."
     )
     parser.add_argument(
         "-d",
         "--dest-url",
-        dest='dest_url',
+        dest='url',
         default="https://localhost",
         help="The URL of the OP5 installation. Default: https://localhost"
     )
@@ -75,13 +90,10 @@ def main():
         '--save-interval',
         type=int,
         default=20,
-        dest="save_interval"
+        dest="save_interval",
         help="Sets the interval between saves."
     )
     args = parser.parse_args()
-
-    print(args.lower)
-    print(args.upper)
 
     # TODO: Figure out is argparse can deal with this.
     if not args.lower and not args.upper:
@@ -100,50 +112,83 @@ def main():
 
     auth_pair = (args.account, args.password)
     server_target = "/".join(
-        args.url,
-        'api',
-        'config',
-        'host',
+        [
+            args.url,
+            'api',
+            'config',
+            'host',
+        ]
     )
-    http_header={'content-type': 'application/json'}
+    http_header = {'content-type': 'application/json'}
     save_interval = args.save_interval
     save_check = 0
 
     with open(args.listfile, 'rU') as hostlist:
         reader = csv.reader(hostlist, delimiter=',')
         for line in reader:
+            print("Line: {0}".format(line))
             if len(line) != 2:
-                logger.info("Skipping line number {0}. {1}".format(
+                logger.info("Skipping line number {0}.\n{1}".format(
                     reader.line_num,
                     line
                 ))
                 continue
             elif line[0] != line[1]:
-                json_payload = json.dumps({"host_name": line[1]})
-                http_package = requests.patch(
-                    "/".join(
-                        [
-                            server_target,
-                            line[1]
-                        ]
-                    ),
-                    data=json_payload,
-                    verify=ssl_check,
-                    auth=auth_pair,
-                    headers=http_header,
-                )
+                line[0] = line[0].replace(" ", "%20")
+                line[1] = line[1].replace(" ", "%20")
+                logger.info("Adding line number {0}.\n{1}".format(
+                    reader.line_num,
+                    line
+                ))
+                if args.lower:
+                    host_name = line[0].lower()
+                elif args.upper:
+                    host_name = line[0].upper()
 
-                if save_check < save_interval:
-                    save_check += 1
-                else:
-                    http_package = requests.post(
-                        http_package,
-                        data={},
+                json_payload = json.dumps({"host_name": host_name})
+                logger.info("JSON Payload: {0}".format(json_payload))
+                logger.info("Server target: {0}/{1}".format(server_target,
+                                                            line[0]))
+                server_target_host = "/".join(
+                    [
+                        server_target,
+                        line[0]
+                    ]
+                )
+                if not args.noop:
+                    http_package = requests.patch(
+                        server_target_host,
+                        data=json_payload,
                         verify=ssl_check,
                         auth=auth_pair,
+                        headers=http_header
                     )
 
+                logger.info('Header: {0}'.format(http_package.headers))
+                logger.info('Request: {0}'.format(http_package.request))
+                #logger.info('Text: {0}'.format(http_package.text))
+
+                if save_check < save_interval and not args.noop:
+                    save_check += 1
+                elif args.noop or args.pop:
+                    print("No op or partial op. Not saving.")
+                    print("Not saving. No op or partial op enabled.")
+                else:
+                    print("Saving work.")
+                    logger.info("Saving work.")
+                    save_work(server_target, ssl_check, auth_pair)
+                    save_check = 0
+
+    if not args.noop or not args.pop:
+        print("Saving work.")
+        logger.info("Saving work.")
+        save_work(server_target, ssl_check, auth_pair)
+    else:
+        logger.info("Not saving. No op or partial op enabled.")
+        print("Not saving. No op or partial op enabled.")
+
     return 0
+
 
 if __name__ == '__main__':
     main()
