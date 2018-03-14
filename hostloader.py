@@ -78,7 +78,7 @@ def main():
     )
     parser.add_argument(
         "--upper",
-        action="store-true",
+        action="store_true",
         help="Set hostname to uppercase"
     )
     parser.add_argument(
