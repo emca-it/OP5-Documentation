@@ -2,7 +2,7 @@
 
 ## Background
 
-Sometimes one needs to troubleshoot the argument parsing or the results of strangely behaving check plugins, notification scripts, etc. that are being executed from within op5 Monitor. This article explains how to install a generic command wrapper script, *pwrap*, which simplifies the troubleshooting of things like this. 
+Sometimes one needs to troubleshoot the argument parsing or the results of strangely behaving check plugins, notification scripts, etc. that are being executed from within OP5 Monitor. This article explains how to install a generic command wrapper script, *pwrap*, which simplifies the troubleshooting of things like this. 
 
  
 
@@ -31,7 +31,7 @@ Prior to installing the pwrap script, the executable file subject to troubleshoo
 -   **.bak\_***original\_executable\_name *(a *.bak\_* string prepended to the filename)
 -   **bak/***original\_executable\_name *(the executable file placed in a sub directory called *bak*)
 
-The executable file can be moved to this location at once, but it is recommended to make a copy instead. For example, in case the executable file is a check plugin that is periodically run by op5 Monitor, copying the file instead of moving it avoids any temporary "file not found" issues, that could possibly otherwise appear at least until the next step is completed.
+The executable file can be moved to this location at once, but it is recommended to make a copy instead. For example, in case the executable file is a check plugin that is periodically run by OP5 Monitor, copying the file instead of moving it avoids any temporary "file not found" issues, that could possibly otherwise appear at least until the next step is completed.
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # cp -pv /opt/plugins/check_nrpe{,.bak}

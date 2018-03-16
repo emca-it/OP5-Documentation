@@ -1,4 +1,4 @@
-# op5 Trapper
+# OP5 Trapper
 
 # About
 
@@ -9,21 +9,6 @@ In this chapter we will cover the Trapper extension.
 Throughout the manual we may use the terms 'trap' from SNMP v1 and 'notification' from SNMP v2 interchangeably, except the places where it is stated explicitly. For the sake of readability, we will also use foreshortened, fake examples of SNMP OIDs – e.g.: ".1.1", ".1.2", ".1.3". You will need to substitute real OIDs into your instances.
 
 # Workflow
-
-**Table of Contents**
-
--   [About](#op5Trapper-About)
--   [Preface](#op5Trapper-Preface)
--   [Workflow](#op5Trapper-Workflow)
--   [Quick Start](#op5Trapper-QuickStart)
--   [Matchers](#op5Trapper-Matchers)
--   [Handlers](#op5Trapper-Handlers)
-    -   [Context](#op5Trapper-Context)
-    -   [Actions](#op5Trapper-Actions)
-    -   [Code examples](#op5Trapper-Codeexamples)
--   [Modules](#op5Trapper-Modules)
--   [Language](#op5Trapper-Language)
--   [Map to service](#op5Trapper-Maptoservice)
 
 # Quick Start
 

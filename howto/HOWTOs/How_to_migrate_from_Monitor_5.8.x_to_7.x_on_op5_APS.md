@@ -1,4 +1,4 @@
-# How to migrate from Monitor 5.8.x to 7.x on op5 APS
+# How to migrate from Monitor 5.8.x to 7.x on OP5 APS
 
 1) Upgrade the old system to 5.8.4
 

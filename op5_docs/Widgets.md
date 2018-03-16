@@ -4,7 +4,7 @@
 
 Widgets are used on a [dashboard](Tactical_overview) and gives the user the ability to personalize a view to display the status data they are interested in.
 
-The first thing you will see when you login to op5 Monitor is a dashboard and it can look something like this.
+The first thing you will see when you login to OP5 Monitor is a dashboard and it can look something like this.
 
 ![](attachments/16482313/18481251.png)
 
@@ -15,22 +15,6 @@ In a dashboard you may:
 -   Remove widgets
 
 All changes you make with the widgets are saved per dashboard.
-
-**Table of Content**
-
--   [About](#Widgets-About)
--   [Widget list](#Widgets-Widgetlist)
-    -   [Big number](#Widgets-Bignumber)
-    -   [State summary](#Widgets-Statesummary)
-    -   [NagVis](#Widgets-NagVis)
-    -   [Other widgets](#Widgets-Otherwidgets)
--   [Widget parts](#Widgets-Widgetparts)
-    -   [Setting widget title](#Widgets-Settingwidgettitle)
-    -   [Minimize and maximize](#Widgets-Minimizeandmaximize)
-    -   [Widget settings](#Widgets-Widgetsettings)
-    -   [Multiple widgets](#Widgets-Multiplewidgets)
-    -   [Closing widgets](#Widgets-Closingwidgets)
--   [Moving widgets](#Widgets-Movingwidgets)
 
 # Widget list
 
@@ -60,7 +44,7 @@ Displays a NagVis map of any kind in a widget box on your dashboard.
 
 ## Other widgets
 
-There are many more widgets available that display a wide array of data and status information such as, when running op5 Monitor you can play around with them as much as you like and simply remove them from the dashboard if they do not suit your needs.
+There are many more widgets available that display a wide array of data and status information such as, when running OP5 Monitor you can play around with them as much as you like and simply remove them from the dashboard if they do not suit your needs.
 
 -   -   Unacknowledged Service Problems
     -   Scheduled Downtime
@@ -94,7 +78,7 @@ Below you see an example of what a widget can look like:
 
 ## Setting widget title
 
-The widget header displays the title of the widget, by default many widgets will choose their name based on their setting, but this can cause some confusion, so op5 Monitor allows you to override the generated name by assigning a custom title. To set this open up the settings for the widget and input your new title in the "Custom title" field, then click save and the widget refreshes with the new title in its header.
+The widget header displays the title of the widget, by default many widgets will choose their name based on their setting, but this can cause some confusion, so OP5 Monitor allows you to override the generated name by assigning a custom title. To set this open up the settings for the widget and input your new title in the "Custom title" field, then click save and the widget refreshes with the new title in its header.
 
 ## Minimize and maximize
 

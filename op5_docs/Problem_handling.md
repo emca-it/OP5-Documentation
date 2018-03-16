@@ -2,38 +2,17 @@
 
 # About
 
-Much of your work with op5 Monitor is about problem handling. In the beginning when you start working with op5 Monitor normally most of the time is about configuring, tweaking and fixing problems. After a while you will see that you can start working in a proactive way instead of how it used to be.
-In this section we will take a look at how you can work effectively with op5 Monitor as a great help during your problem handling.
-
-**Table of Content**
-
--   [About](#Problemhandling-About)
--   [Hard and soft states](#Problemhandling-Hardandsoftstates)
--   [Alerts and notifications management](#Problemhandling-Alertsandnotificationsmanagement)
--   [Unacknowledged problems views](#Problemhandling-Unacknowledgedproblemsviews)
--   [Acknowledge problems](#Problemhandling-Acknowledgeproblems)
-    -   [Acknowledging a problem in the GUI](#Problemhandling-AcknowledgingaproblemintheGUI)
-    -   [Acknowledging a problem by sms](#Problemhandling-Acknowledgingaproblembysms)
-    -   [Removing an acknowledge](#Problemhandling-Removinganacknowledge)
-    -   [Removing multiple acknowledgements](#Problemhandling-Removingmultipleacknowledgements)
--   [Schedule downtime](#Problemhandling-Scheduledowntime)
-    -   [Viewing scheduled downtime](#Problemhandling-Viewingscheduleddowntime)
-    -   [Scheduling downtime](#Problemhandling-Schedulingdowntime)
-    -   [Remove a scheduled downtime](#Problemhandling-Removeascheduleddowntime)
--   [Schedule recurring downtime](#Problemhandling-Schedulerecurringdowntime)
-    -   [Scheduling a recurring downtime](#Problemhandling-Schedulingarecurringdowntime)
-    -   [Viewing your recurring downtime schedules](#Problemhandling-Viewingyourrecurringdowntimeschedules)
-    -   [Editing a recurring downtime](#Problemhandling-Editingarecurringdowntime)
-    -   [Deleting a recurring downtime](#Problemhandling-Deletingarecurringdowntime)
+Much of your work with OP5 Monitor is about problem handling. In the beginning when you start working with OP5 Monitor normally most of the time is about configuring, tweaking and fixing problems. After a while you will see that you can start working in a proactive way instead of how it used to be.
+In this section we will take a look at how you can work effectively with OP5 Monitor as a great help during your problem handling.
 
 # Hard and soft states
 
-A problem is classified as a **soft** problem until the number of checks has reached the configured **max\_check\_attempts** value. When **max\_check\_attempts** is reached the problem is reclassified as **hard** and normally op5 Monitor will send out a notification about the problem. **Soft** problems do not result in a notification.
+A problem is classified as a **soft** problem until the number of checks has reached the configured **max\_check\_attempts** value. When **max\_check\_attempts** is reached the problem is reclassified as **hard** and normally OP5 Monitor will send out a notification about the problem. **Soft** problems do not result in a notification.
 
 # Alerts and notifications management
 
-Alerts and notifications are two of the most important things for you as a system administrator who depends on a monitoring tool like op5 Monitor.
- Alerts, alarm and notifications are called different things in most monitoring system. In op5 Monitor we define them like this:
+Alerts and notifications are two of the most important things for you as a system administrator who depends on a monitoring tool like OP5 Monitor.
+ Alerts, alarm and notifications are called different things in most monitoring system. In OP5 Monitor we define them like this:
 
  
 
@@ -63,7 +42,7 @@ Notifications are sent out on state changes. A notification is sent during one o
 -   flapping started, stopped and disabled
 -   downtime started, stopped and canceled
 
- Notifications can be sent by almost anything. The following are included by default in op5 Monitor:
+ Notifications can be sent by almost anything. The following are included by default in OP5 Monitor:
 
 -   email
 -   sms
@@ -74,7 +53,7 @@ Notifications are sent out on state changes. A notification is sent during one o
 
 # Unacknowledged problems views
 
-As you can see in the GUI there are many views in op5 Monitor to show you host and service status in. Two of the most useful default views for a system administrator, is the unacknowledged  service view and the unacknowledged hosts view.
+As you can see in the GUI there are many views in OP5 Monitor to show you host and service status in. Two of the most useful default views for a system administrator, is the unacknowledged  service view and the unacknowledged hosts view.
 
 ![](attachments/16482319/19234885.png)
  In these views you will only find unacknowledged problems for hosts and services
@@ -110,11 +89,11 @@ The most common way to acknowledge a problem is to do it in the GUI. This is eas
 
 ## Acknowledging a problem by sms
 
-If you have received your notification by sms you can acknowledge it by sending a sms back to the op5 Monitor server.
+If you have received your notification by sms you can acknowledge it by sending a sms back to the OP5 Monitor server.
  To acknowledge a problem by sms
 
 1.  Pick up the notification sms in your mobile phone.
-2.  Forward it to the op5 Monitor server (you must forward the complete sms just the way it looked like when you got it).
+2.  Forward it to the OP5 Monitor server (you must forward the complete sms just the way it looked like when you got it).
 
 If you now take a look at the host or service you will see that it has been acknowledged and a small comment is placed in the comment part for the object.
 
@@ -145,7 +124,7 @@ To remove several acknowledgements:
 
 # Schedule downtime
 
-Using scheduled downtime enables you to plan for system work ahead. When a host or service is scheduled for downtime op5 Monitor suppresses alarms for that host or service. Furthermore op5 Monitor informs you about when a host or service is scheduled for downtime through the web interface. Information about the scheduled downtime is also stored so that planned system work does not affect availability reports.
+Using scheduled downtime enables you to plan for system work ahead. When a host or service is scheduled for downtime OP5 Monitor suppresses alarms for that host or service. Furthermore OP5 Monitor informs you about when a host or service is scheduled for downtime through the web interface. Information about the scheduled downtime is also stored so that planned system work does not affect availability reports.
  It is possible to schedule downtime for the following object types:
 
 -   -   hosts

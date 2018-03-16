@@ -18,7 +18,7 @@ IP: 10.1.0.2
 
 ## Requirements
 
--   `At least OpenVPN 2.2.0 from op5 repository on both master and poller. `\# yum install openvpn
+-   `At least OpenVPN 2.2.0 from OP5 repository on both master and poller. `\# yum install openvpn
 
 ## How-to
 

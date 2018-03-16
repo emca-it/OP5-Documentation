@@ -2,27 +2,10 @@
 
 # About
 
- 
-
-**Table of Content**
-
--   [About](#Eventsandlogs-About)
--   [Alert summary - Top alert producers](#Eventsandlogs-Alertsummary-TopalertproducersAlertsummary-Topalertproducers)
-    -   [Creating a Top alert producers report](#Eventsandlogs-CreatingtopalertproducersreportCreatingaTopalertproducersreport)
-    -   [Top alert producers result](#Eventsandlogs-Topalertproducersresult)
-    -   [Saving an Alert summary report](#Eventsandlogs-SavinganAlertsummaryreport)
-    -   [Scheduling an Alert summary report](#Eventsandlogs-SchedulinganAlertsummaryreport)
--   [Trends](#Eventsandlogs-Trends)
-    -   [Creating a trend report](#Eventsandlogs-Creatingatrendreport)
--   [Event log](#Eventsandlogs-Eventlog)
-    -   [Viewing and filtering logs](#Eventsandlogs-Viewingandfilteringlogs)
--   [Alert History](#Eventsandlogs-AlertHistory)
-    -   [Viewing and filtering logs](#Eventsandlogs-Viewingandfilteringlogs.1)
-
 # Alert summary - Top alert producers
 
-One useful report in op5 Monitor is the Top alert producers report. This report is created from the Alert summary.
- The Top alert producers report makes it easy to identify the biggest problem producers in your environment monitored by op5 Monitor.
+One useful report in OP5 Monitor is the Top alert producers report. This report is created from the Alert summary.
+ The Top alert producers report makes it easy to identify the biggest problem producers in your environment monitored by OP5 Monitor.
 
 ## Creating a Top alert producers report
 
@@ -97,12 +80,12 @@ Trends display a graphic view of status on a host or a service during a selected
 
 # Event log
 
-An event log displays a list of all events that has occurred in op5 Monitor. It shows you everything from alerts and notifications to op5 Monitor service restarting. In other words this is a log viewer for the main op5 Monitor log.
+An event log displays a list of all events that has occurred in OP5 Monitor. It shows you everything from alerts and notifications to OP5 Monitor service restarting. In other words this is a log viewer for the main OP5 Monitor log.
 
 ## Viewing and filtering logs
 
-In the op5 Monitor event log you can
- view every event that took place in op5 Monitor
+In the OP5 Monitor event log you can
+ view every event that took place in OP5 Monitor
  filter out any kind of events you do not want to see
  set the start and end time of the logs you like to view.
 
@@ -130,9 +113,9 @@ The alert history view is a view for all alerts that has been detected by the sy
 
 ## Viewing and filtering logs
 
-In the op5 Monitor alert history you can
+In the OP5 Monitor alert history you can
 
--   -   view every alert that took place in op5 Monitor
+-   -   view every alert that took place in OP5 Monitor
     -   filter out any kind of alerts you do not want to see
     -   set the start and end time of the alerts you like to view.
 

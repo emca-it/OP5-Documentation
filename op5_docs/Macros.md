@@ -2,18 +2,12 @@
 
 # About
 
-Macros can be used to a lot of things. It can for example be used for paths, passwords and retrieving information from op5 monitor.
+Macros can be used to a lot of things. It can for example be used for paths, passwords and retrieving information from OP5 Monitor.
 You can read more about notification commands in Notification macros in the Notifications chapter.
-
-**Table of Content**
-
--   [About](#Macros-About)
--   [Pre-defined macros](#Macros-Pre-definedmacros)
--   [Custom macros](#Macros-Custommacros)
 
 # Pre-defined macros
 
-By default op5 monitor has a number pre-defined macros. All from path to plugin folder to retrieving information about the last state of service check.
+By default OP5 Monitor has a number pre-defined macros. All from path to plugin folder to retrieving information about the last state of service check.
  Below is a list of some macros a complete lite of macros can be found in the Naemon documentation: <http://www.naemon.org/documentation/usersguide/macrolist.html>
 
 <table>

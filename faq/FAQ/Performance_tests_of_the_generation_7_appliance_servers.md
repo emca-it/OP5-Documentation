@@ -98,7 +98,7 @@ These numbers will always be a guideline rather than a solid limit, since all ch
 
 Keep in mind that some plugins (SNMP interface checks with the Perl checks, check\_vmware\_api, etc) use a lot of resources, so you will have to adapt these recommendations to the kind of environment the system will be deployed in.
 
-We hope you, dear reader, have a better understanding of the scaling of op5 Monitor now than when you started reading this document. Thank you for your time!
+We hope you, dear reader, have a better understanding of the scaling of OP5 Monitor now than when you started reading this document. Thank you for your time!
 
 ## Appendix A - Dell DPACK performance reports
 

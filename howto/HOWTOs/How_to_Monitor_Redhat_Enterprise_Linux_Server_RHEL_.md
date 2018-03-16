@@ -6,15 +6,15 @@ The purpose of this article is to describe how [op5 Monitor](http://www.op5.com
 
 ## Watch the HOWTO video:
 
-![](images/icons/grey_arrow_down.png)Click to watch monitoring of Linux servers with op5 Monitor
+![](images/icons/grey_arrow_down.png)Click to watch monitoring of Linux servers with OP5 Monitor
 
  
 
 [![Get Adobe Flash player](https://www.adobe.com/images/shared/download_buttons/get_flash_player.gif)](https://get.adobe.com/flashplayer/)
 
-**Monitoring Linux servers with op5 Monitor:**
+**Monitoring Linux servers with OP5 Monitor:**
 
-In this video we will give you a quick tour covering Linux server and application monitoring. op5 Monitor provides you the ability to keep an eye on various aspects of the Linux ecosystem such as KVM virtual machines, the JBOSS application server, MySQL databases and things like disk usage, system load, available updates and similar. op5 Monitor is a great fit for Linux monitoring since it’s built on top of flexible and proven open source software.
+In this video we will give you a quick tour covering Linux server and application monitoring. OP5 Monitor provides you the ability to keep an eye on various aspects of the Linux ecosystem such as KVM virtual machines, the JBOSS application server, MySQL databases and things like disk usage, system load, available updates and similar. OP5 Monitor is a great fit for Linux monitoring since it’s built on top of flexible and proven open source software.
 
  
 
@@ -26,9 +26,9 @@ Download NRPE client from our [download area](http://www.op5.com/download-op5-mo
 
 ## Adding the server and basic checks
 
-Now are you ready to add your new RHEL server to op5 Monitor.
+Now are you ready to add your new RHEL server to OP5 Monitor.
 
-Login to your op5 Monitor and go to *‘Configure’ -\> ‘Add New hosts’*
+Login to your OP5 Monitor and go to *‘Configure’ -\> ‘Add New hosts’*
 
 Fill in all information about your server and  in the *‘Service Checks’* section, select ‘*Add UNIX Client Services(NRPE)’.* Then click on *‘Add services’.  *This will scan your server for some basic checks.
 ![](attachments/688583/5242946.png)
@@ -64,7 +64,7 @@ Note: You may need to do minor changes to the services you add, depending on how
 
 ## Additional checks
 
-There are many checks and plugins from op5 or Nagios Exchange community that could meet your needs. On op5.com you can find many resources like manuals, FAQ’s, webcasts and how-to’s on how to efficiently monitor a range of various hardware, services or applications in your Redhat environment.
+There are many checks and plugins from OP5 or Nagios Exchange community that could meet your needs. On op5.com you can find many resources like manuals, FAQ’s, webcasts and how-to’s on how to efficiently monitor a range of various hardware, services or applications in your Redhat environment.
 
 ### Some resources examples
 

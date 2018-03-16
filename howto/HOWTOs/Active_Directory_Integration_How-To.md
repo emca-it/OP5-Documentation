@@ -6,39 +6,39 @@ This article was written for version 6.1 of Monitor, it could work on both lower
 
 # Introduction
 
-It’s very common to have an Active Directory server for user management. Therefore, integrating op5 Monitor to Active Directory is a very common task, which isn’t necessarily trivial. This howto shows how to design and integrate op5 Monitor in a way that is easy to manage.
+It’s very common to have an Active Directory server for user management. Therefore, integrating OP5 Monitor to Active Directory is a very common task, which isn’t necessarily trivial. This howto shows how to design and integrate OP5 Monitor in a way that is easy to manage.
 
 Active Directory is a registered trademark of Microsoft, and is one of many implementations of an LDAP directory server. Other implementations use different schemas, and therefore many of the fields below is the same for every Active  Directory integration.
 
 This HowTo assumes that the Active Directory works on only one domain.
 
-/\*\*/ Introduction Preparations Prepare Active Directory Configure op5 Monitor to access Active Directory Testing the connection Testing users and group memberships Configure group rights Troubleshooting
+/\*\*/ Introduction Preparations Prepare Active Directory Configure OP5 Monitor to access Active Directory Testing the connection Testing users and group memberships Configure group rights Troubleshooting
 
 # Preparations
 
-To be able to integrate op5 Monitor, you need access to the Active Directory, where you should be able to add users and groups, which will be needed.
+To be able to integrate OP5 Monitor, you need access to the Active Directory, where you should be able to add users and groups, which will be needed.
 
-It is important to have knowledge of the structure of the Active Directory. Knowing where users and groups are defined will save you some trouble when creating the Auth Module for Active Directory in op5 Monitor.
+It is important to have knowledge of the structure of the Active Directory. Knowing where users and groups are defined will save you some trouble when creating the Auth Module for Active Directory in OP5 Monitor.
 
 # Prepare Active Directory
 
-When configuring the group rights, op5 Monitor binds with a service account in the Active Directory to get access to user information and group memberships. Therefore you need to create a service account for the op5 monitor in your domain. (May be skipped if you already have a service account.) 
+When configuring the group rights, OP5 Monitor binds with a service account in the Active Directory to get access to user information and group memberships. Therefore you need to create a service account for the OP5 Monitor in your domain. (May be skipped if you already have a service account.) 
 
 Take note of the “User logon name”, and the field to the right. Together they make the field “userPrincipalName”. Of course, you also need the password for the account.
 
 Then create one group per set of permissions you are using for monitor. In this example, we set up two groups:
 
--   op5 administrator
+-   OP5 administrator
 
--   op5 read only
+-   OP5 read only
 
-The administrator group gets full access to the op5 Monitor system, and limited user has permissions to view everything but cannot edit anything.
+The administrator group gets full access to the OP5 Monitor system, and limited user has permissions to view everything but cannot edit anything.
 
-These groups are created in the Active directory resulting in op5 Monitor not handling who have access, but how the users access monitor. Hence the groups are named after permissions, not after the structure of the organisation.
+These groups are created in the Active directory resulting in OP5 Monitor not handling who have access, but how the users access monitor. Hence the groups are named after permissions, not after the structure of the organisation.
 
  
 
-The users are placed in the group NOC users. The NOC users group is placed in the OU Structure. The NOC users group is a member of the group op5 administrators which is placed in the OU Services. This gives us an example of how recursive groups are set up.
+The users are placed in the group NOC users. The NOC users group is placed in the OU Structure. The NOC users group is a member of the group OP5 administrators which is placed in the OU Services. This gives us an example of how recursive groups are set up.
 
 Another thing to note is the distinguished name for the domain.
 
@@ -46,7 +46,7 @@ In Active Directory Users and Computers, enable “Advanced Attributes” from t
 
 The preparations of the Active Directory is now done.
 
-# Configure op5 Monitor to access Active Directory
+# Configure OP5 Monitor to access Active Directory
 
 Active directory is interfaced using LDAP.
 
@@ -74,7 +74,7 @@ Normally when connecting to LDAP you would use port number 389 (port number 636 
 
 The first interface is the one available at the default LDAP ports (389, 636).
 
-When building an Active Directory forest with multiple domains and trusts, Active Directory uses referrals to pass users between servers. This is a problem for the PHP ldap interface op5 Monitor uses.
+When building an Active Directory forest with multiple domains and trusts, Active Directory uses referrals to pass users between servers. This is a problem for the PHP ldap interface OP5 Monitor uses.
 
 Therefore the second interface (called Global Catalog) is preferred. When using this LDAP interface, the Active Directory server itself forwards the requests, so the client only needs to have access to the first server. To access the Global Catalog, use port number 3268 instead (port number 3269 for ssl).
 
@@ -162,7 +162,7 @@ This is a tricky field.
 
 Not all directory servers supports groups as members of groups. Active Directory does, and that’s one key feature of Active Directory.
 
-Checking this option makes op5 Monitor not only resolve the group membership of the user, but also the group membership of the groups found, and does that until no more groups is found.
+Checking this option makes OP5 Monitor not only resolve the group membership of the user, but also the group membership of the groups found, and does that until no more groups is found.
 
 In bigger directories this is a heavy operation. Fortunately, Active Directory can do this internally, so the client don’t have to.
 
@@ -188,7 +188,7 @@ Use “userPrincipalName” as userkey
 
 ### Userkey is UPN
 
-Checking this box makes op5 Monitor cut away the username after the @-sign, when using user principal name as userkey. This is what Active Directory does.
+Checking this box makes OP5 Monitor cut away the username after the @-sign, when using user principal name as userkey. This is what Active Directory does.
 
 Check the checkbox “Userkey is UPN”
 
@@ -314,7 +314,7 @@ If you are contacting the support about LDAP authentication, they will ask for t
 
  
 
-### Stacktrace when logging in to op5 Monitor saying: ldap\_search(): Operations Error.
+### Stacktrace when logging in to OP5 Monitor saying: ldap\_search(): Operations Error.
 
 One of the reasons you may get this stacktrace is if you are trying to search the global scope of the Active Directory in 2003 or 2008 servers schema. This can sometimes be resolved by adding an LDAP option to your auth module.
 

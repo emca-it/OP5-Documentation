@@ -15,7 +15,7 @@ Version
 
 This article was written for version 7.x of Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
  
 
@@ -79,7 +79,7 @@ For the user we created earlier create the .ssh folder and an authorized\_keys f
 2.  Test the ssh key by connecting over ssh to the remote host:
     asmonitor ssh -i /opt/monitor/.ssh/id\_rsa\_check\_by\_ssh \${REMOTE\_HOST\_USER}@\${REMOTE\_HOST\_NAME}
 
-As `${REMOTE_HOST_NAME}` remember that you need to use the same as you have/will set as "host\_address" in the op5 Monitor object configuration.
+As `${REMOTE_HOST_NAME}` remember that you need to use the same as you have/will set as "host\_address" in the OP5 Monitor object configuration.
 
 ### Install the plugin(s)
 

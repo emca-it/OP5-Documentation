@@ -1,14 +1,14 @@
-# Graphing total services that are acknowledged / not acknowledged in op5 Monitor
+# Graphing total services that are acknowledged / not acknowledged in OP5 Monitor
 
 Version
 
-This article was written for version 7.x of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 7.x of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
 ## About this article
 
-This article shows how to graph the total amount of services (excluding those that are in scheduled downtime, state = ok and in\_notification\_period = 1) in op5 Monitor. This is really handy if you want to follow up on number of incidents in your environment over time and how how incidents gets handled over time in an nice graph.
+This article shows how to graph the total amount of services (excluding those that are in scheduled downtime, state = ok and in\_notification\_period = 1) in OP5 Monitor. This is really handy if you want to follow up on number of incidents in your environment over time and how how incidents gets handled over time in an nice graph.
 
  
 
@@ -50,7 +50,7 @@ exit 0
 
 ## Create a custom pnp template for a nicer performance graph
 
-By default op5 Monitor will create a graph for you using a generic template. But you probably want to create a more attractive graph to show and for this we will create our own template.
+By default OP5 Monitor will create a graph for you using a generic template. But you probably want to create a more attractive graph to show and for this we will create our own template.
 
 **\# /opt/monitor/op5/pnp/templates/check\_services\_ackunack\_custom.php**
 
@@ -58,10 +58,10 @@ By default op5 Monitor will create a graph for you using a generic template. But
 <?php
 /*
 License: GPL
-Copyright (c) 2009 op5 AB
+Copyright (c) 2009 OP5 AB
 Author: Mattias Ryrlen <dev@op5.com>
 Contributor(s): Joerg Linge <joerg.linge@pnp4nagios.org>
-For direct contact with any of the op5 developers send a mail to dev@op5.com
+For direct contact with any of the OP5 developers send a mail to dev@op5.com
 Discussions are directed to the mailing list op5-users@op5.com,
 see http://lists.op5.com/mailman/listinfo/op5-users
 This program is free software; you can redistribute it and/or modify

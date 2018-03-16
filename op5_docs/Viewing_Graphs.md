@@ -6,16 +6,9 @@ op5 Monitor includes support for graphing what's known as "performance data" ret
 Performance data can be anything that gives a more detailed picture of a particular check's performance characteristics than the OK/WARNING/CRITICAL levels found in Monitor responses.
 For example: check\_ping returns performance data for packet loss and round trip times. This data is stored by Monitor and used to create graphs for different time periods, such as the last 24 hours and past week. This feature can be very helpful in identifying trends or potential problems in a network.
 
-**Table of Content**
-
--   [About](#ViewingGraphs-About)
--   [Viewing graphs](#ViewingGraphs-Viewinggraphs)
--   [Adding graphs for custom plugins](#ViewingGraphs-Addinggraphsforcustomplugins)
--   [Graph basket](#ViewingGraphs-Graphbasket)
-
 # Viewing graphs
 
-From most of the views in op5 Monitor you can find the graph icon looking like this: ![](attachments/16482317/17859856.png)
+From most of the views in OP5 Monitor you can find the graph icon looking like this: ![](attachments/16482317/17859856.png)
 To view the graphs for a service or a host click on the graph icon and you will get the graph view.
 
 ![](attachments/16482317/17859860.png)

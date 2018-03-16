@@ -1,10 +1,10 @@
 # Monitoring HP/Compaq servers
 
-Are you using op5 monitor version 6.3 or newer?
+Are you using OP5 Monitor version 6.3 or newer?
 
-The first steps of this how-to is for op5 monitor version 6.2 or older. if you have upgraded to version 6.3 of op5 monitor the check\_hpasm plugin is shipped with the product, please follow the [instructions](#MonitoringHP/Compaqservers-instructions6.3) to start using check\_hpasm. If you have a fresh installation of op5 monitor 6.3 or newer the new commands are already configured and ready to use. The [new check\_commands](#MonitoringHP/Compaqservers-new-services) can be viewed at the bottom of this page.
+The first steps of this how-to is for OP5 Monitor version 6.2 or older. if you have upgraded to version 6.3 of OP5 Monitor the check\_hpasm plugin is shipped with the product, please follow the [instructions](#MonitoringHP/Compaqservers-instructions6.3) to start using check\_hpasm. If you have a fresh installation of OP5 Monitor 6.3 or newer the new commands are already configured and ready to use. The [new check\_commands](#MonitoringHP/Compaqservers-new-services) can be viewed at the bottom of this page.
 
-# Instructions for op5 monitor 6.2 or older:
+# Instructions for OP5 Monitor 6.2 or older:
 
 **Monitoring HP/Compaq servers with check\_hpasm**
 
@@ -72,13 +72,13 @@ Configure a new service for your HP/Compaq server.
     check\_command\_args: public
 3.  Save the new service. Click on button ‘Apply Changes’, ‘Save submitted changes’ and ‘Save objects i have changed’
 
-# Instructions for op5 monitor 6.3 or newer:
+# Instructions for OP5 Monitor 6.3 or newer:
 
 Instructions for upgrade of monitor
 
-Note that these instructions are only for if you have upgraded from op5 monitor version 6.2 or older. If you have a fresh installation of op5 monitor 6.3 or newer the new commands are already configured and ready to use.
+Note that these instructions are only for if you have upgraded from OP5 Monitor version 6.2 or older. If you have a fresh installation of OP5 Monitor 6.3 or newer the new commands are already configured and ready to use.
 
-The check commands for monitoring hp proliant and hp bladesystem have been changed in op5 monitor 6.3. To configure them correctly follow these instructions.
+The check commands for monitoring hp proliant and hp bladesystem have been changed in OP5 Monitor 6.3. To configure them correctly follow these instructions.
 
 1.  Go to Configure -\> Check command import -\> Expand check\_hpasm and mark the checkboxes -\> import selected commands
     ![](attachments/688606/6422588.png)

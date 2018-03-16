@@ -1,4 +1,4 @@
-# op5 Monitor 6.3 to 7.0.4
+# OP5 Monitor 6.3 to 7.0.4
 
  
 
@@ -184,38 +184,38 @@ A copyleft license allows any use, but prohibits binary-only distribution.
 
 A proprietary license can carry arbitrary restrictions, and must be investigated on a per-license basis.
 
--   monitor-backup – op5 Immaterial Rights License
--   monitor-gui – op5 Software License
--   monitor-http-api – op5 Software License
--   monitor-manual – op5 Immaterial Rights License
--   monitor-notify – op5 AB Proprietary Software License
--   monitor-plugin-check\_libvirt – op5 Software License
--   monitor-plugin-check\_op5backup – op5 Software License
--   monitor-plugin-check\_oracle – op5 Software License
--   monitor-plugin-check\_ucs – op5 Software License
--   monitor-widget-hostperf – op5 Software License
--   monitor-widget-merlin-node-status – op5 Software License
--   monitor-widget-services – op5 Software License
--   monitor-widget-services-critical-acknowledged – op5 Software License
--   monitor-widget-services-critical-unacknowledged – op5 Software License
--   monitor-widget-synergy – op5 Software License
--   monitor-wizard – op5 Software License
--   op5-default – op5 Software License
--   op5-monitor – op5 Software License
--   op5-monitor-release – op5 Software License
--   op5-oracle – op5 Software License
--   op5-release – op5 Software License
--   op5-synergy-processor – op5 Software License
--   op5-system-addons – op5 Software License
--   op5backup – op5 Software License
--   op5common – op5 Software License
--   op5config – op5 Software License
--   op5license – op5 Software License
+-   monitor-backup – OP5 Immaterial Rights License
+-   monitor-gui – OP5 Software License
+-   monitor-http-api – OP5 Software License
+-   monitor-manual – OP5 Immaterial Rights License
+-   monitor-notify – OP5 AB Proprietary Software License
+-   monitor-plugin-check\_libvirt – OP5 Software License
+-   monitor-plugin-check\_op5backup – OP5 Software License
+-   monitor-plugin-check\_oracle – OP5 Software License
+-   monitor-plugin-check\_ucs – OP5 Software License
+-   monitor-widget-hostperf – OP5 Software License
+-   monitor-widget-merlin-node-status – OP5 Software License
+-   monitor-widget-services – OP5 Software License
+-   monitor-widget-services-critical-acknowledged – OP5 Software License
+-   monitor-widget-services-critical-unacknowledged – OP5 Software License
+-   monitor-widget-synergy – OP5 Software License
+-   monitor-wizard – OP5 Software License
+-   op5-default – OP5 Software License
+-   op5-monitor – OP5 Software License
+-   op5-monitor-release – OP5 Software License
+-   op5-oracle – OP5 Software License
+-   op5-release – OP5 Software License
+-   op5-synergy-processor – OP5 Software License
+-   op5-system-addons – OP5 Software License
+-   op5backup – OP5 Software License
+-   op5common – OP5 Software License
+-   op5config – OP5 Software License
+-   op5license – OP5 Software License
 -   oracle-instantclient11.2-basic – Oracle Technology Network Development and Distribution
 -   oracle-instantclient11.2-sqlplus – Oracle Technology Network Development and Distribution
--   plugins-metadata – op5 Software License
--   portal – op5 Immaterial Rights License
--   smsacknowledge – op5 Immaterial Rights License
--   smspassivecheck – op5 Immaterial Rights License
--   smsreceiver – op5 Immaterial Rights License
+-   plugins-metadata – OP5 Software License
+-   portal – OP5 Immaterial Rights License
+-   smsacknowledge – OP5 Immaterial Rights License
+-   smspassivecheck – OP5 Immaterial Rights License
+-   smsreceiver – OP5 Immaterial Rights License
 

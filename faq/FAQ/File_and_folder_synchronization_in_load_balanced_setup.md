@@ -33,5 +33,5 @@ sync {
 
  
 
-Since the sync is done by the monitor user, the files and directories included must be owned by that user. More detailed information: can be found in the [File synchronization section in the op5 Monitor Administrator documentation](https://kb.op5.com/display/DOC/File+synchronization)
+Since the sync is done by the monitor user, the files and directories included must be owned by that user. More detailed information: can be found in the [File synchronization section in the OP5 Monitor Administrator documentation](https://kb.op5.com/display/DOC/File+synchronization)
 

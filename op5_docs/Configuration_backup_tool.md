@@ -2,9 +2,9 @@
 
 # About
 
- The op5 Monitor GUI has got a built-in configuration backup feature. This is not supposed to be a replacement to  [op5-backup](op5-backup)
+ The OP5 Monitor GUI has got a built-in configuration backup feature. This is not supposed to be a replacement to  [op5-backup](op5-backup)
 
-The configuration backup is only backing up the op5 Monitor configuration, nothing else.
+The configuration backup is only backing up the OP5 Monitor configuration, nothing else.
 
  
 
@@ -21,7 +21,7 @@ In the list of backups the first column is called **ACTIONS**. This is the funct
 
 1.  Click Backup/Restore in the main menu.
     ![](attachments/16482367/16679056.png)
-2.  Click **Save your current op5 Monitor configuration**.
+2.  Click **Save your current OP5 Monitor configuration**.
     ![](attachments/16482367/16679057.png)
 3.  Now your backup is created and can be restored at any time you like.
     ![](attachments/16482367/16679058.png)

@@ -4,20 +4,11 @@
 
 There is limited support for synchronizing files between peers, and between masters and pollers.
 
-For example, when a new user has been added in op5 Monitor on one of your masters, this function can be used to automatically synchronize the user database files on all other peers and pollers.
+For example, when a new user has been added in OP5 Monitor on one of your masters, this function can be used to automatically synchronize the user database files on all other peers and pollers.
 
 # Prerequisites
 
 Make sure you have already set up a either a [load balanced](Load_balanced_monitoring) or [distributed](Distributed_Monitoring) monitoring environment (or a combination of which).
-
-**Table of Content**
-
--   [Introduction](#Filesynchronization-Introduction)
--   [Prerequisites](#Filesynchronization-Prerequisites)
--   [The configuration](#Filesynchronization-Theconfiguration)
-    -   [Configuring the sync directive](#Filesynchronization-Configuringthesyncdirective)
-    -   [Permission limitations](#Filesynchronization-Permissionlimitations)
--   [Triggering the synchronization](#Filesynchronization-Triggeringthesynchronization)
 
 # The configuration
 

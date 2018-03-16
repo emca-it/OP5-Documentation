@@ -4,7 +4,7 @@ Version
 
 This article was written for version 7.3.4 of Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
  
 
@@ -23,7 +23,7 @@ All local user passwords are stored in /etc/op5/auth\_users.yml, and they are li
 The monitor command that changes the local users, including their passwords, is "/usr/bin/op5-manage-users". Running 'op5-manage-users' without any arguments prints its syntax help:
 
     monitor:
-    This is a small helper for adding/changing/deleting users in op5 Monitor.
+    This is a small helper for adding/changing/deleting users in OP5 Monitor.
 
     Create/edit user:
       /usr/bin/op5-manage-users --update --username=<username> (--password=<password>) --module=<module1> [--module=<modulen>] [--realname=<realname> --group=<group1> [--group=<groupn>]]

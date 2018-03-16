@@ -1,12 +1,12 @@
-# Webinar op5 Monitor 7.0 questions
+# Webinar OP5 Monitor 7.0 questions
 
 ## In this document we have listed all of the questions asked during our webinars on September 11th and September 17th 2014
 
-You can download the presentation deck from our webinar: ***["What's new in op5 Monitor 7.0" right here!](attachments/11632712/11567119.pdf)***
+You can download the presentation deck from our webinar: ***["What's new in OP5 Monitor 7.0" right here!](attachments/11632712/11567119.pdf)***
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 
@@ -14,9 +14,9 @@ You can download the presentation deck from our webinar: ***["What's new in op5
 
  
 
-#### Q1: So what happen to Logserver Product and what does it mean for Licensing using Logger in op5 Monitor?
+#### Q1: So what happen to Logserver Product and what does it mean for Licensing using Logger in OP5 Monitor?
 
-A: op5 Monitor Logserver that has been shipped as an extension to op5 Monitor Enterprise will continue to be fully supported - no difference from before, licensing is the same. op5 Logger is an integrated feature in op5 Monitor Enterprise+. It’ included in the overall licence - hence a 300 Monitor Enterprise+ licence will be able to collect logs from 300 hosts.
+A: OP5 Monitor Logserver that has been shipped as an extension to OP5 Monitor Enterprise will continue to be fully supported - no difference from before, licensing is the same. OP5 Logger is an integrated feature in OP5 Monitor Enterprise+. It’ included in the overall licence - hence a 300 Monitor Enterprise+ licence will be able to collect logs from 300 hosts.
 
 #### Q2: Will Logger be integrated with Monitor's user control? Can you define which host's logs can a user access?
 
@@ -28,7 +28,7 @@ The user rights are set on a user group level, hence if a user is part of a def
 
 #### Q3: Is it possible to integrate with a currently existing syslog-ng server backend?
 
-A:  As op5 Logger is using syslog-ng as back-end it must be possible in one way or another...Please contact us on <presale@op5.com> so we can discuss best way for you.
+A:  As OP5 Logger is using syslog-ng as back-end it must be possible in one way or another...Please contact us on <presale@op5.com> so we can discuss best way for you.
 
 #### Q4: Can you tell us what the logging-backend is?
 
@@ -36,35 +36,35 @@ A: Syslog-NG
 
 #### Q5: How about the development for the OP5 Logserver? Will it only be lie critical updates for it and all new functionality be only for the Logger version?
 
-A: We will sustain full support including bug fixes for op5 LogServer. The focus for future new features and functions will be op5 Logger.
+A: We will sustain full support including bug fixes for OP5 LogServer. The focus for future new features and functions will be OP5 Logger.
 
 #### Q6 Can you list other host logs by the Logger link to be able to correlate errors?
 
-A: I’m not sure that I understand your question, however read the article in op5 Knowledge base with a description how we did the “root cause analysis example” at <https://kb.op5.com/x/KQCn>. Hopefully it will give you an idea howto implement what you ask for.
+A: I’m not sure that I understand your question, however read the article in OP5 Knowledge base with a description how we did the “root cause analysis example” at <https://kb.op5.com/x/KQCn>. Hopefully it will give you an idea howto implement what you ask for.
 
-#### Q7: Sending all logs to op5 logger may generate huge load, are you having already experiences with that new workload for op5 monitor at all?
+#### Q7: Sending all logs to OP5 logger may generate huge load, are you having already experiences with that new workload for OP5 Monitor at all?
 
-A: Yes - this is true - and one of the problems we encountered was in the free search box - so we have added support for narrowing smart search, i.e. h:backup will only list hosts with “backup” in it, l:backup only search and list log data. It’s also a configuration on how much data you need to have in your primary log DB, and when / how often you rotate your data out to the archives. A third option is also to do a split configuration, i.e. op5 Monitor on one machine and op5 Logger on a second machine - both optimized for resources for their particular usage.
+A: Yes - this is true - and one of the problems we encountered was in the free search box - so we have added support for narrowing smart search, i.e. h:backup will only list hosts with “backup” in it, l:backup only search and list log data. It’s also a configuration on how much data you need to have in your primary log DB, and when / how often you rotate your data out to the archives. A third option is also to do a split configuration, i.e. OP5 Monitor on one machine and OP5 Logger on a second machine - both optimized for resources for their particular usage.
 
 #### Q8: Windows syslog agent, nsclient is both very old in the "packaged" op5way. When will you bring these up to date or update the versions? Get rid of the check\_nt also…
 
 A: We do have an ongoing investigation to fix these issues. I hope that we have an answer shortly to this.
 
-#### Q9: How do I handle my old filters created in op5 LogServer if I migrate to op5 Monitor Enterprise+ with integrated Logger?
+#### Q9: How do I handle my old filters created in OP5 LogServer if I migrate to OP5 Monitor Enterprise+ with integrated Logger?
 
-A: There is no automatic import tool to migrate op5 Logserver filters to op5 Logger. The smart filter capabilities in op5 Logger do use the same syntax as all other filters in op5 Monitor so it is rather simple to manually convert them. We suggest you contact op5 Professional Services to assure the best way way for your particular filters.
+A: There is no automatic import tool to migrate OP5 Logserver filters to OP5 Logger. The smart filter capabilities in OP5 Logger do use the same syntax as all other filters in OP5 Monitor so it is rather simple to manually convert them. We suggest you contact OP5 Professional Services to assure the best way way for your particular filters.
 
 #### Q10: Does the Logger cost extra, do we need an additional license? 
 
-A: The Logger is an integrated feature in op5 Monitor Enterprise+, so if you are running that version today it will be no additional cost. If you are running op5 Monitor Enterprise (no plus) you will get the Logger functionality when upgrading to v7.0, however it will be limited to collect logs only from ”local host” i.e. the op5 monitor system. That enables you to test it etc. If you want to be able to collect logs from all over, you need to upgrade your system from op5 Monitor Enterprise to Monitor Enterprise+, this will also give you Trapper.
+A: The Logger is an integrated feature in OP5 Monitor Enterprise+, so if you are running that version today it will be no additional cost. If you are running OP5 Monitor Enterprise (no plus) you will get the Logger functionality when upgrading to v7.0, however it will be limited to collect logs only from ”local host” i.e. the OP5 Monitor system. That enables you to test it etc. If you want to be able to collect logs from all over, you need to upgrade your system from OP5 Monitor Enterprise to Monitor Enterprise+, this will also give you Trapper.
 
 #### Q11: What about new logger and master / poller systems, eg is it possible to collect logs with poller and access it from master?
 
-A: The op5 Logger do not support the peer/poller functionality as other parts of op5 Monitor. To access the op5 Logger GUI you need to login to the system that has the logs, in this case the poller. It is also possible to access the logs via the API.
+A: The OP5 Logger do not support the peer/poller functionality as other parts of OP5 Monitor. To access the OP5 Logger GUI you need to login to the system that has the logs, in this case the poller. It is also possible to access the logs via the API.
 
 #### Q12: Is the logger part of all the versions or just the enterprise?
 
-A: Its only included in op5 Monitor Enterprise Plus and op5 Monitor Free Trial
+A: Its only included in OP5 Monitor Enterprise Plus and OP5 Monitor Free Trial
 
 #### Q13: How are the logs stored in logger?
 
@@ -80,7 +80,7 @@ A:  [Download the presentations here](attachments/11632712/11567119.pdf)
 
 #### Q16: What about iPad App ?
 
-A: The op5 app is built to work on the iPad but it’s optimised for the iPhone.
+A: The OP5 app is built to work on the iPad but it’s optimised for the iPhone.
 
 #### Q17: Does the App support Ack commands?
 
@@ -100,7 +100,7 @@ A1: No - as this is an on-prem system - you will need to register your system to
 
 A2: (Peter):
 
-To be able to get push notifications working in the app, the op5 system must send the notification to a central system. Which require an internet connection for the op5 Monitor system. Then your specific device must be identified and mapped against your op5 Monitor system at the central notification system. That is technical complicated and many Enterprise customers do not accept that kind of connection out of security issues. Depending on if you use Android or iOS the technical solutions are very different.
+To be able to get push notifications working in the app, the OP5 system must send the notification to a central system. Which require an internet connection for the OP5 Monitor system. Then your specific device must be identified and mapped against your OP5 Monitor system at the central notification system. That is technical complicated and many Enterprise customers do not accept that kind of connection out of security issues. Depending on if you use Android or iOS the technical solutions are very different.
 
 It is possible to use solutions like “notify my Android” or SMS to get it working.
 
@@ -108,7 +108,7 @@ if there is a demand we will investigate it.
 
 #### Q21: Does the App only work if your monitor is upgraded to 7.0?
 
-A: The op5 Mobile App works on 6.3 and later. Today that is 6.3.x and 7.0.
+A: The OP5 Mobile App works on 6.3 and later. Today that is 6.3.x and 7.0.
 
 #### Q22: Off topic: when will nsclient++ 4 be released ?
 
@@ -120,13 +120,13 @@ A: No not for the moment. Do you have any input of how you want it to work we hi
 
 #### Q24: Can OP5 check DDOS attack ?
 
-A: In many cases there is a possibility to use an IDS system that can log if there is suspicions traffic. By using op5 Logger you can achieve monitoring of DDOS attacks.
+A: In many cases there is a possibility to use an IDS system that can log if there is suspicions traffic. By using OP5 Logger you can achieve monitoring of DDOS attacks.
 
  
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 

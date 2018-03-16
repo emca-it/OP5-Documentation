@@ -1,10 +1,10 @@
-# Upgrade paths for op5 products
+# Upgrade paths for OP5 products
 
 # Purpose of this document
 
 This document lists the minimum number of system- and product-versions recommended to install when upgrading old installations to the latest versions.
 
-Releases previous to 5.2 are considered deprecated. If you are upgrading from a version previous to 5.2 please contact op5 to consult the upgrade before continuing.
+Releases previous to 5.2 are considered deprecated. If you are upgrading from a version previous to 5.2 please contact OP5 to consult the upgrade before continuing.
 
 -   [Purpose of this document](#Upgradepathsforop5products-Purposeofthisdocument)
 -   [Minor Upgrades](#Upgradepathsforop5products-MinorUpgrades)
@@ -33,11 +33,11 @@ Releases previous to 5.2 are considered deprecated. If you are upgrading from a 
 
 # Minor Upgrades
 
-Minor upgrades within a major version is done via yum or via the op5 portal page. The preferred way is however via yum.
+Minor upgrades within a major version is done via yum or via the OP5 portal page. The preferred way is however via yum.
 
 ## Yum upgrade
 
-To upgrade op5 Monitor via yum log in to the the console or via ssh.
+To upgrade OP5 Monitor via yum log in to the the console or via ssh.
 
 To begin upgrading type:
 
@@ -57,7 +57,7 @@ See manual for more information.
 
 Before you upgrade to the next major version you need to verify that you are running the latest minor version of you release. This can be done by doing a minor upgrade.
 
-The minimal version you need before continuing is version 5.8. If you do not have at least 5.8 please upgrade your installation before continuing. Either do a minor upgrade if you are on version 5.2, if you are running a version below 5.2 please contact op5 for help with upgrading.
+The minimal version you need before continuing is version 5.8. If you do not have at least 5.8 please upgrade your installation before continuing. Either do a minor upgrade if you are on version 5.2, if you are running a version below 5.2 please contact OP5 for help with upgrading.
 
 Major upgrades should always be done one major at the time, ie. if you are running version 5.8 you need to install the latest version of Monitor 6 before upgrading to version 7.
 
@@ -69,7 +69,7 @@ If you are running a 32 bit OS or if you are on CentOS/RHEL 4 you need to upgrad
 
 ## Upgrade 
 
-1.  Download the latest version of op5 Monitor from[ www.op5.com](http://www.op5.com/) to /root of your monitor server. It is the Free Software that you should download.
+1.  Download the latest version of OP5 Monitor from[ www.op5.com](http://www.op5.com/) to /root of your monitor server. It is the Free Software that you should download.
 
 2.  Unpack the tar.gz file\# tar zxfv op5-monitor-X.X.X-YYYYY.tar.gz
 
@@ -95,11 +95,11 @@ Here can articles about known issues be found: http://www.op5.com/blog/support-n
 
 -   Basic  Linux knowledge is required.
 
--   The LDAP authentication is totally rewritten after version 5.8, if you are using an LDAP integration with op5 monitor 5.8 or earlier your configuration will be converted. Make sure to read the manual on LDAP integration and go  through your configuration after the upgrade to make sure everything is working.
+-   The LDAP authentication is totally rewritten after version 5.8, if you are using an LDAP integration with OP5 Monitor 5.8 or earlier your configuration will be converted. Make sure to read the manual on LDAP integration and go  through your configuration after the upgrade to make sure everything is working.
 
 ## Preparations
 
-1.  Download the latest Appliance System (op5 APS) and op5 Monitor from  http://www.op5.com/get-op5-monitor/download/
+1.  Download the latest Appliance System (op5 APS) and OP5 Monitor from  http://www.op5.com/get-op5-monitor/download/
 
 2.  Burn  the ISO image on a CD.
 
@@ -119,9 +119,9 @@ Answer yes if any updates are available
 
 ## Upgrade offline system
 
-If you do not have access to the internet from your op5 server, follow these steps to do an offline upgrade.
+If you do not have access to the internet from your OP5 server, follow these steps to do an offline upgrade.
 
-You need to download and get the following files to the op5 Monitor server:
+You need to download and get the following files to the OP5 Monitor server:
 
 http://repos.op5.com/centos/5/x86\_64/system-addons/3.0/updates/perl-Config-Simple-4.59-1.el5.rf.noarch.rpm
 
@@ -187,7 +187,7 @@ If the backup file is complete it will list the files in the backup file like th
 
 ### Backup acknowledgement and current state
 
-If you would like to backup acknowledgements and a hosts/service current state stop op5 Monitor with
+If you would like to backup acknowledgements and a hosts/service current state stop OP5 Monitor with
 
 \# mon stop
 
@@ -195,7 +195,7 @@ Copy the following file off the server
 
 /opt/monitor/var/status.sav
 
-Restart op5 Montor
+Restart OP5 Montor
 
 \# mon start
 
@@ -229,13 +229,13 @@ These are described below and should be done in this order.
 
 4.  Login as root, using the default password (monitor)
 
-## op5 Monitor installation
+## OP5 Monitor installation
 
 1.  Copy  the monitor tar-file to /root
 
 2.  Extract the file using:\# tar zxfv op5-monitor-X.X.X-YYYYY.tar.gz 
 
-3.  Go to the newly created op5 monitor folder\# cd op5-monitor-X.X.X 
+3.  Go to the newly created OP5 Monitor folder\# cd op5-monitor-X.X.X 
 
 4.  Start the installation\# ./install.sh
 
@@ -269,7 +269,7 @@ Reboot server\# reboot
 
 Restore host/service states
 
-Stop op5 Monitor
+Stop OP5 Monitor
 
 1.  \# mon stop
 
@@ -289,5 +289,5 @@ Verify that your installation if working as intended. Some things to verify
 
 -   Business Services
 
-Congratulations, you are now running the latest version of op5 Monitor
+Congratulations, you are now running the latest version of OP5 Monitor
 

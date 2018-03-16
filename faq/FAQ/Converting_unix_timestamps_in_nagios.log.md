@@ -57,7 +57,7 @@ e2d()
 }
 ```
 
-All of the text in the block above (i.e. the bash function) can be copied and then pasted into the op5 Monitor server's bash shell (if connected via SSH that is), which will create a command called *e2d* that exists during the current shell session. To always have access to the command, the function can be pasted into *\~/.bashrc* or one of the other bash startup files.
+All of the text in the block above (i.e. the bash function) can be copied and then pasted into the OP5 Monitor server's bash shell (if connected via SSH that is), which will create a command called *e2d* that exists during the current shell session. To always have access to the command, the function can be pasted into *\~/.bashrc* or one of the other bash startup files.
 
  
 

@@ -2,9 +2,9 @@
 
 Version
 
-This article was written for version 7.0 of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 7.0 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
 # Introduction
 
@@ -75,7 +75,7 @@ After executing the command above, you should hopefully retrieve the following m
 If not, verify that you have entered the correct user name and password, have been given adequate permissions and the the service/host name is spelled/capitalized correctly.
 When self-signed SSL certificates are used on the *op5 Monitor* server, you must include the "–insecure" argument - this however **not** recommended.
 
-The service should now be updated in op5 Monitor:
+The service should now be updated in OP5 Monitor:
 
 ![](attachments/12189807/12386341.png)
 

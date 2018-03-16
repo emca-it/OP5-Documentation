@@ -1,16 +1,5 @@
 # IBM Director handler for Trapper
 
-**Table of Content**
-
--   [Introduction](#IBMDirectorhandlerforTrapper-Introduction)
--   [Prerequisites](#IBMDirectorhandlerforTrapper-Prerequisites)
--   [Configuring SNMP-traps in IBM Director](#IBMDirectorhandlerforTrapper-ConfiguringSNMP-trapsinIBMDirector)
--   [Matching process overview](#IBMDirectorhandlerforTrapper-Matchingprocessoverview)
--   [Testing the trap handler](#IBMDirectorhandlerforTrapper-Testingthetraphandler)
--   [Advanced usage](#IBMDirectorhandlerforTrapper-Advancedusage)
--   [Technical description of the mapping process](#IBMDirectorhandlerforTrapper-Technicaldescriptionofthemappingprocess)
--   [Extend the functionality](#IBMDirectorhandlerforTrapper-Extendthefunctionality)
-
 ## Introduction
 
 The purpose of this document is to describe the inner workings of the "IBM Director" trap handler and show how to use it.

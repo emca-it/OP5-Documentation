@@ -8,9 +8,9 @@ This page will redirect to [Installation of NRPE agent on CentOS and RHEL](/disp
 
 Version
 
-This article was written for version 7.0 of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 7.0 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
  
 
@@ -20,7 +20,7 @@ If you need to use the NRPE monitoring agent on a *Red Hat Enterprise Linux*-bas
 
 In this how-to we will configure the repository and required packages on CentOS/RHEL 6 and 7 based systems.
 
-The EPEL repository is not controlled and managed by op5 AB - we can not guarantee the quality of the software packages.
+The EPEL repository is not controlled and managed by OP5 AB - we can not guarantee the quality of the software packages.
 
 # Prerequisites
 

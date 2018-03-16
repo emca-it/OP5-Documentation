@@ -2,9 +2,9 @@
 
 Version
 
-This article was written for version 7.0.4 of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 7.0.4 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
  
 
@@ -19,7 +19,7 @@ This how-to will show you how to setup *Selenium Server* on *Microsoft Windows*�
 
 Support information
 
-Selenium Server, the check plugin and it's dependencies are third-party products, not supported by op5 AB
+Selenium Server, the check plugin and it's dependencies are third-party products, not supported by OP5 AB
 
 ## Prerequisites
 
@@ -126,7 +126,7 @@ command_line:   $USER1$/check_nrpe -u -H '$HOSTADDRESS$' -t 50 -c check_selenium
 
 ## Monitoring test cases
 
-Create a new service on your target host in op5 Monitor and select the "check\_selenium\_server" command.
+Create a new service on your target host in OP5 Monitor and select the "check\_selenium\_server" command.
 The check command requires three arguments:
  
 

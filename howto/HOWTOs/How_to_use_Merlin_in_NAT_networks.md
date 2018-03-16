@@ -2,11 +2,11 @@
 
 Information
 
-This article was written for version 6.3.0.1 of op5 monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 6.3.0.1 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
 This article does not include configuration of iptables (firewall) though it is recommended to use it. In this article iptables is disabled.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
 # Introduction 
 

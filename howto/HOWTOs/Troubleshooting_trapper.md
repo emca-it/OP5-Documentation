@@ -10,7 +10,7 @@ First of all, make sure that the traps actually reach your trapper host. You can
 
 > `tcpdump -i any udp dst port 162`
 
-If packets aren't arriving at the host when you know they should be, the problem is either misconfiguration of the devices sending traps, or firewall issues. This means further investigation on the op5 server is futile, and the problem is located elsewhere.
+If packets aren't arriving at the host when you know they should be, the problem is either misconfiguration of the devices sending traps, or firewall issues. This means further investigation on the OP5 server is futile, and the problem is located elsewhere.
 
 If packets arrive at the host but nothing is shown in the GUI, you should ensure that your DNS servers are properly configured. A symptom if misconfigured DNS servers tend to be a fully populated receive queue for the collector daemon. You can check this by using **netstat**, like so:
 
@@ -25,9 +25,9 @@ Which basically means "There are 126408 bytes in the receive queue for the daemo
 ## Related articles
 
 -   Page:
-    [How to configure op5 Trapper Extension (Cisco handler)](../HOWTOs/How_to_configure_op5_Trapper_Extension_Cisco_handler_)
+    [How to configure OP5 Trapper Extension (Cisco handler)](../HOWTOs/How_to_configure_op5_Trapper_Extension_Cisco_handler_)
 -   Page:
-    [Getting started with op5 Trapper](/display/HOWTOs/Getting+started+with+op5+Trapper)
+    [Getting started with OP5 Trapper](/display/HOWTOs/Getting+started+with+op5+Trapper)
 -   Page:
     [Sending results using query handler](/display/HOWTOs/Sending+results+using+query+handler)
 -   Page:

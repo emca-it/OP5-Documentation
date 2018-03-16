@@ -1,10 +1,10 @@
 # Monitor HP RAID controller
 
-Monitors HP RAID controller, this is not checked by the normal HP hardware check in op5 Monitor.
+Monitors HP RAID controller, this is not checked by the normal HP hardware check in OP5 Monitor.
 
 # About
 
-This will enable HP RAID monitoring on your HP Proliant server. This how will require that you download an external script to your op5 Agent.
+This will enable HP RAID monitoring on your HP Proliant server. This how will require that you download an external script to your OP5 Agent.
 
 If there is a problem with your RAID the output will tell you the problem, for example say which disk that is failing.
 
@@ -14,7 +14,7 @@ If there is a problem with your RAID the output will tell you the problem, for e
 
 ## Step-by-step guide
 
-1.  Download the script [check\_smartarray.vbs](attachments/12189909/12386356.vbs) to your op5 Agent script folder, C:\\Program Files\\op5\\NSClient++\\scripts
+1.  Download the script [check\_smartarray.vbs](attachments/12189909/12386356.vbs) to your OP5 Agent script folder, C:\\Program Files\\op5\\NSClient++\\scripts
 2.  Edit custom.ini, located in C:\\Program Files\\op5\\NSClient++\\
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
@@ -24,8 +24,8 @@ If there is a problem with your RAID the output will tell you the problem, for e
 
     Note that you might need to change the path to hpacucli.exe.
 
-3.  Save the file and restart the op5 NSClient++ windows service.
-4.  Go to op5 Monitor -\> Configure -\> Commands
+3.  Save the file and restart the OP5 NSClient++ windows service.
+4.  Go to OP5 Monitor -\> Configure -\> Commands
 5.  Create a new check command with the following settings:
     **command\_name:** check\_hp\_raid
     **command\_line:** \$USER1\$/check\_nrpe -H \$HOSTADDRESS\$ -t 30 -c check\_raid
@@ -51,5 +51,5 @@ This is how it might look when there is a problem with your RAID
 -   Page:
     [Agentless Monitoring of Windows using WMI](/display/HOWTOs/Agentless+Monitoring+of+Windows+using+WMI)
 -   Page:
-    [Monitoring the hardware of your op5 server](/display/HOWTOs/Monitoring+the+hardware+of+your+op5+server)
+    [Monitoring the hardware of your OP5 server](/display/HOWTOs/Monitoring+the+hardware+of+your+op5+server)
 

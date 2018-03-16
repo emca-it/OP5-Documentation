@@ -10,11 +10,11 @@ With WebInject, you can actually try out the entire login process, evaluate that
 
 There are a few things you need to be able to start working with WebInject
 
--   SSH access to your op5 Monitor server
+-   SSH access to your OP5 Monitor server
 -   A web browser pointing at the page you will test
 -   Basic Linux knowledge is preferred
 
-In all examples and guides we assume you are logged in on the op5 Monitor server by ssh and that you know how to handle a text editor in Linux.
+In all examples and guides we assume you are logged in on the OP5 Monitor server by ssh and that you know how to handle a text editor in Linux.
 
  
 
@@ -22,7 +22,7 @@ In all examples and guides we assume you are logged in on the op5 Monitor server
 
 ## **How it works**
 
-WebInject is a standalone application that performs tests and logs its results to the terminal, optionally writing a transcript of the session to disk. It may also be used as a plug-in to op5 Monitor and this is what we are going to do in this how-to.
+WebInject is a standalone application that performs tests and logs its results to the terminal, optionally writing a transcript of the session to disk. It may also be used as a plug-in to OP5 Monitor and this is what we are going to do in this how-to.
 
 It takes two input files, both written in xml,
 
@@ -31,7 +31,7 @@ It takes two input files, both written in xml,
 
 It returns its output on STDOUT – either in standalone mode when it will print an extensive report – or in plug-in mode when it will print a short format suitable for monitor
 
-In op5 Monitor you will find WebInject installed in:
+In OP5 Monitor you will find WebInject installed in:
 
  
 
@@ -68,7 +68,7 @@ The value [given in seconds] will be compared to the global time elapsed to run 
 **reporttype – [ nagios | mrtg | external | standard ]**
 
 This setting is used to enable output formatting that is compatible for use with specific external programs.
- **nagios** – Output of WebInject in console mode will be compatible for use as a plug-in for op5 Monitor, Naemon or Nagios.
+ **nagios** – Output of WebInject in console mode will be compatible for use as a plug-in for OP5 Monitor, Naemon or Nagios.
  **Standard** – Formatted output mode (omitting this setting defaults to ‘standard’ mode).
 
 The following example shows how a config.xmlmight look like:
@@ -313,11 +313,11 @@ Verifications Failed: 0
 
  
 
-When you get a result without any failed cases you are ready to add the test to op5 Monitor.
+When you get a result without any failed cases you are ready to add the test to OP5 Monitor.
 
-**Adding a WebInject service in op5 Monitor**
+**Adding a WebInject service in OP5 Monitor**
 
-To add a WebInject service to op5 Monitor:
+To add a WebInject service to OP5 Monitor:
 
 1.  Open up the host (www.example.org in this case) and chose “Add new service”.
 2.  Set at least the following options:
@@ -351,7 +351,7 @@ WebInject can do a lot more than what we have seen here in this how-to. For more
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 

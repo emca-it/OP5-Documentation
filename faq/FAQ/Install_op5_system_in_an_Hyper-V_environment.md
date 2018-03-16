@@ -1,10 +1,10 @@
-# Install op5 system in an Hyper-V environment
+# Install OP5 system in an Hyper-V environment
 
 ## Question
 
 * * * * *
 
-How do I install op5 system in an Hyper-V environment?
+How do I install OP5 system in an Hyper-V environment?
 
 I get an error message saying "Unable to open input kickstart file: Could not open/read file:///tmp/buildnet"
 

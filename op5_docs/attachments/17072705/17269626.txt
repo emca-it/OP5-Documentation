@@ -1,7 +1,7 @@
 How
 ------------------
-1. Fully update/upgrade op5 System 2.8 and your products before attempting
-   op5 System 3.0 upgrade. Latest software-versions (upgrades) before System 3.0
+1. Fully update/upgrade OP5 System 2.8 and your products before attempting
+   OP5 System 3.0 upgrade. Latest software-versions (upgrades) before System 3.0
    are:
 	op5 System 2.8
 	op5 Monitor 3.0
@@ -41,7 +41,7 @@ downloaded separately.
 
 _about TAR-files_
 op5 software is distributed via gzip-compressed tar-balls (tape archives). Since
-you can easily extract these archives on your op5 System, there is no need to
+you can easily extract these archives on your OP5 System, there is no need to
 uncompress (extract) the content of these archives before transferring (or
 downloading) the files to your server.
 
@@ -140,7 +140,7 @@ type 'install' and press enter
 The system-installation-process will take several minutes -get some coffe
 The system-installation-process is done when you see the on-screen-instruction
 telling you to remove the installation media and press the reboot button
-After reboot you'll have a clean op5 System installation (Operating system)
+After reboot you'll have a clean OP5 System installation (Operating system)
 without any running configuration.
 At startup you can setup basic system configuration. This is however not needed
 if you're upgrading, since these settings are in the backup made by the

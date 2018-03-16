@@ -17,13 +17,6 @@ The Change Password link opens the **Change Password** page where the password 
 
 The *Settings* list is where various user accessible settings can be tuned or enabled.
 
-**Table of Contents**
-
--   [About](#Myaccount-About)
--   [Accessing the My Account Page](#Myaccount-AccessingtheMyAccountPage)
--   [Changing account password](#Myaccount-Changingaccountpassword)
--   [Pagination](#Myaccount-Pagination)
-
 # Accessing the My Account Page
 
 1.  Hover over the account avatar/account name on the left hand side of the OP5 Monitor Toolbar to reveal a drop down menu.

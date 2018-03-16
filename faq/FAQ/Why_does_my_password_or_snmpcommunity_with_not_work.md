@@ -10,7 +10,7 @@ Why doesn't my configured check work if i have a "**!**" in my password or snmp 
 
 * * * * *
 
-Since "!" is used as a separator in "check\_command\_args" in op5 Monitor, you will need to escape the sign "!" with a "\\" (backslash) to make op5 Monitor interper the character as input and not a separator.
+Since "!" is used as a separator in "check\_command\_args" in OP5 Monitor, you will need to escape the sign "!" with a "\\" (backslash) to make OP5 Monitor interper the character as input and not a separator.
 
 ## Example
 

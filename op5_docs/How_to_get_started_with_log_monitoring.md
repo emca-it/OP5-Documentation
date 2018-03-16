@@ -2,7 +2,7 @@
 
 ## **Introduction**
 
-What to log, when & where – a best practice article on getting started with a centralized logserver and log monitoring. op5 LogServer is an extension module available to op5 Monitor Enterprise customers.
+What to log, when & where – a best practice article on getting started with a centralized logserver and log monitoring. OP5 LogServer is an extension module available to OP5 Monitor Enterprise customers.
 
 To really make use of a centralized logserver and get return on investment, you have to learn how to use it and configure it to suit your needs. Installation is a breeze but knowing what to do next is not as easy.
 

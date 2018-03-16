@@ -1,10 +1,10 @@
-# How to configure monitoring objects using op5 Monitor REST API
+# How to configure monitoring objects using OP5 Monitor REST API
 
 Version
 
-This article was written for version 7.2 of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 7.2 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
  
 
@@ -50,7 +50,7 @@ Getting started
 
 Before you start using the REST API you need to make sure you have a user which can access the REST API.
 
-More about this can be found in "[How to use op5 Monitor REST API](How_to_use_op5_Monitor_REST_API)".
+More about this can be found in "[How to use OP5 Monitor REST API](How_to_use_op5_Monitor_REST_API)".
 
 # Changes
 

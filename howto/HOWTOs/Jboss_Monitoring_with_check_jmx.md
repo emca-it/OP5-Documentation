@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This how-to will show how to monitor a installation of Jboss with op5 Monitor and the plugin [check\_jmx](https://kb.op5.com/display/PLUGINS/check_jmx).
+This how-to will show how to monitor a installation of Jboss with OP5 Monitor and the plugin [check\_jmx](https://kb.op5.com/display/PLUGINS/check_jmx).
 
 Java Management Extensions (JMX) is a [Java](http://en.wikipedia.org/wiki/Java_platform) technology that supplies tools for managing and monitoring [applications](http://en.wikipedia.org/wiki/Application_software), system objects, devices (e. g. printers) and service oriented networks. Those resources are represented by objects called MBeans (for [Managed Bean](http://en.wikipedia.org/wiki/JMX#Managed_Bean)).\*
 
@@ -31,7 +31,7 @@ It is also possible to run the checks in this how-to with a username and passwor
 
 The check\_jmx plugin is included in the op5-plugins package and is located in `/opt/plugins`. Metadata/checkcommand information is installed in `/opt/plugins/metadata/check_jmx.metadata`.
 
-You will also need java installed in your op5 Monitor, you can install java via yum from our repositories: "**`yum install java-1.7.0-openjdk`"**
+You will also need java installed in your OP5 Monitor, you can install java via yum from our repositories: "**`yum install java-1.7.0-openjdk`"**
 
 More information regarding java installation and it's versions can be found through the CentOS community: <http://wiki.centos.org/HowTos/JavaOnCentOS>
 
@@ -43,7 +43,7 @@ The plugin consist of a shell script wrapper (`check_jmx`) and a java jar file (
 
 ## Examples
 
-You can test the different checks from command-line to verify that they works before you implement them into op5 Monitor. check the ‘used’ key of attribute ‘HeapMemoryUsage’ in the object:  ‘java.lang:type=Memory’
+You can test the different checks from command-line to verify that they works before you implement them into OP5 Monitor. check the ‘used’ key of attribute ‘HeapMemoryUsage’ in the object:  ‘java.lang:type=Memory’
 
     cd /opt/plugins
     ./check_jmx -U service:jmx:rmi:///jndi/rmi://'app-server':'1090'/jmxrmi -O java.lang:type=Memory -A HeapMemoryUsage -K "used"
@@ -110,7 +110,7 @@ This is just an example of some parameters that you can monitor with check\_jmx,
 
 The developers site: <http://snippets.syabru.ch/nagios-jmx-plugin/>
 
-JMX4Perl How-to: [How to monitor your application server with op5 Monitor and JMX4Perl](How_to_monitor_your_application_server_with_op5_Monitor_and_JMX4Perl) 
+JMX4Perl How-to: [How to monitor your application server with OP5 Monitor and JMX4Perl](How_to_monitor_your_application_server_with_op5_Monitor_and_JMX4Perl) 
 
 JMX on wikipedia: <http://en.wikipedia.org/wiki/JMX>
 
@@ -120,7 +120,7 @@ JMX on wikipedia: <http://en.wikipedia.org/wiki/JMX>
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 

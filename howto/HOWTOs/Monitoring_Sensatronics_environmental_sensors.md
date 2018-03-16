@@ -2,7 +2,7 @@
 
 # Introduction
 
-If you want to monitor temperature, humidity or wetness op5 recommends the *[Sensatronics](http://www.sensatronics.com/)E* series of environmental monitors.
+If you want to monitor temperature, humidity or wetness OP5 recommends the *[Sensatronics](http://www.sensatronics.com/)E* series of environmental monitors.
 In this how-to we will configure the *EM2* model, connect the sensor probes and add relevant services in *op5 Monitor*.
 Many of the following steps can be used for other *Sensatronics* products, but be aware of minor differences and consult the included manuals.
 
@@ -38,9 +38,9 @@ Use the keyboard to configure IP Address (A), Hostname (B), SNMP Community and T
 
 You should now be able to ping the device and access the internal web server.
 
-## Service configuration in op5 Monitor
+## Service configuration in OP5 Monitor
 
-Add the device as a new host in Monitor. The following services will use the check\_em1 which is included with op5 Monitor.
+Add the device as a new host in Monitor. The following services will use the check\_em1 which is included with OP5 Monitor.
 
 ### Temperature
 

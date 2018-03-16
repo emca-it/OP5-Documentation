@@ -16,7 +16,7 @@ From this menu you can:
 
 ## To edit a plain NagVis map
 
-1.  Click on NagVis in the monitoring menu of op5 Monitor.
+1.  Click on NagVis in the monitoring menu of OP5 Monitor.
 2.  Click on the NagVis map that you want to edit.
 3.  Use the menu on the top to access the edit options.
     ![](attachments/16482341/16678963.png)

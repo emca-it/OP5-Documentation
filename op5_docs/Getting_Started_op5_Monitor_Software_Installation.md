@@ -1,12 +1,12 @@
-# Getting Started: op5 Monitor Software Installation
+# Getting Started: OP5 Monitor Software Installation
 
 Version
 
 This article was written for version 7.2 of Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
-This document applies to the installable software version of op5 Monitor. For information on the setting up the VM version, refer to the quick start guide here.
+This document applies to the installable software version of OP5 Monitor. For information on the setting up the VM version, refer to the quick start guide here.
 
  
 
@@ -76,6 +76,6 @@ This document applies to the installable software version of op5 Monitor. For in
 
 12. After reboot, use your browser and browse to the server, use the following address:
     https://\<IP or hostname\>/monitor
-13. You will be prompted to create an account with administrator privileges the first time you access op5 Monitor. Save the login credentials at a safe location so that the account is not lost.
+13. You will be prompted to create an account with administrator privileges the first time you access OP5 Monitor. Save the login credentials at a safe location so that the account is not lost.
     ![](attachments/17661962/17858614.png) 
 

@@ -4,19 +4,6 @@
 
 This guide will take you through the process of setting up a NagVis and Listview widgets as an external widgets, so you can display them on external websites. External widgets are often used to set up various status displays on large monitors.
 
-**Table of Contents**
-
--   [About](#ExternalWidgetconfiguration-About)
--   [Local user account](#ExternalWidgetconfiguration-Localuseraccount)
--   [Configuration](#ExternalWidgetconfiguration-Configuration)
-    -   [NagVis example](#ExternalWidgetconfiguration-NagVisexample)
-    -   [Listview example](#ExternalWidgetconfiguration-Listviewexample)
--   [Explanation of configuration parameters](#ExternalWidgetconfiguration-Explanationofconfigurationparameters)
-
-[Displaying the widget](#ExternalWidgetconfiguration-Displayingthewidget)
-
-[The result](#ExternalWidgetconfiguration-Theresult)
-
 # Local user account
 
 To be able to display content in a external widget, you will need a local user account configured in OP5 Monitor. TODO: Insert link to Local user configuration (missing)

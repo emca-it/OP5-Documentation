@@ -1,6 +1,6 @@
-# Docs for all op5 releases
+# Docs for all OP5 releases
 
-This page intends to collect all product manuals for op5 Monitor and it's extensions for historical reference.
+This page intends to collect all product manuals for OP5 Monitor and it's extensions for historical reference.
 
  
 

@@ -45,15 +45,15 @@ Step-by-step guide
 ## Related articles
 
 -   Page:
-    [Upgrade paths for op5 products](/display/HOWTOs/Upgrade+paths+for+op5+products)
+    [Upgrade paths for OP5 products](/display/HOWTOs/Upgrade+paths+for+op5+products)
 -   Page:
-    [Getting started with op5 Monitor](/display/HOWTOs/Getting+started+with+op5+Monitor)
+    [Getting started with OP5 Monitor](/display/HOWTOs/Getting+started+with+op5+Monitor)
 -   Page:
     [Configure a Linux server for SNMP monitoring](/display/HOWTOs/Configure+a+Linux+server+for+SNMP+monitoring)
 -   Page:
     [Migrate Monitor 7 from EL6 to EL7](/display/HOWTOs/Migrate+Monitor+7+from+EL6+to+EL7)
 -   Page:
-    [How to migrate from Monitor 5.8.x to 7.x on op5 APS](/display/HOWTOs/How+to+migrate+from+Monitor+5.8.x+to+7.x+on+op5+APS)
+    [How to migrate from Monitor 5.8.x to 7.x on OP5 APS](/display/HOWTOs/How+to+migrate+from+Monitor+5.8.x+to+7.x+on+op5+APS)
 
 ## Comments:
 

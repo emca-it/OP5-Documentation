@@ -8,12 +8,6 @@ The menu can be accessed thrugh right clicking on the status icon in front of a 
 
 This menu will only appear if you are 'Authorized for system commands', this is set under User Rights in the configuration, see [Authorization](Authorization).
 
-**Table of Content**
-
--   [About](#QuickActionMenu-About)
--   [Host Actions](#QuickActionMenu-HostActions)
--   [Service Actions](#QuickActionMenu-ServiceActions)
-
 # Host Actions
 
 The actions accessible from the host quick access menu are: 

@@ -1,4 +1,4 @@
-# Install and Get Started with op5 Monitor
+# Install and Get Started with OP5 Monitor
 
 **Related Links:**
 
@@ -8,11 +8,11 @@ op5 Monitor 7.1 User Manual ([PDF](https://kb.op5.com/download/attachments/1094
 
 # License
 
-The full, trial version license for op5 Monitor lets you monitor an unlimited amount of hosts/devices with infinite number of services for 30 days. After 30 days, there will be an opportunity to purchase a permanent license.  
+The full, trial version license for OP5 Monitor lets you monitor an unlimited amount of hosts/devices with infinite number of services for 30 days. After 30 days, there will be an opportunity to purchase a permanent license.  
 
-# Download and installation of op5 Monitor
+# Download and installation of OP5 Monitor
 
-There are three different installation options for op5 Monitor:  Virtual Appliance, Software, and Cloud Server.
+There are three different installation options for OP5 Monitor:  Virtual Appliance, Software, and Cloud Server.
 
 To deploy on a Windows machine without Linux, use the Virtual Appliance option.  
 
@@ -36,7 +36,7 @@ To install, you will need a running CentOS 6 or RHEL 6, which is not included wi
 
 ### Installation
 
-1.  Download op5 Monitor to your home directory
+1.  Download OP5 Monitor to your home directory
 2.  Unpack the tar.gz file
 3.  Go to the newly created folder
 4.  Run ./install.sh
@@ -47,9 +47,9 @@ To install, you will need a running CentOS 6 or RHEL 6, which is not included wi
 
 ## Cloud Server 
 
-Cloud servers are available at Amazon, Azure, and CityCloud. Although the op5 Monitor license is still free,  you will need a subscription for any of the Cloud server providers. Installation instructions can be found on those sites accordingly. However after getting it up and running, there is no appreciable difference between a cloud server and software installation.  After the cloud server installation, op5 Monitor can be installed using the same steps as the software installation.
+Cloud servers are available at Amazon, Azure, and CityCloud. Although the OP5 Monitor license is still free,  you will need a subscription for any of the Cloud server providers. Installation instructions can be found on those sites accordingly. However after getting it up and running, there is no appreciable difference between a cloud server and software installation.  After the cloud server installation, OP5 Monitor can be installed using the same steps as the software installation.
 
-# Accessing Your New op5 Installation 
+# Accessing Your New OP5 Installation 
 
 op5's main interface can be easily accessed using any web browser.  In addition to monitoring your network in a unified, single pane of glass, most configuration options can be accessed via the graphical user interface.
 
@@ -59,9 +59,9 @@ op5's main interface can be easily accessed using any web browser.  In addition
 
 2.  From the “Start” tab, click the "op5 Monitor" button.
 
-3.  You will be prompted to create an account with administrator privileges the first time you access op5 Monitor. 
+3.  You will be prompted to create an account with administrator privileges the first time you access OP5 Monitor. 
 
-If you see a warning when first launching the web GUI, don't panic!  This warning is not an issue with the op5 application, and poses no real risk.  op5 ships by default with self-signed SSL Certificates, a common practice when deploying any new web service that is secured via SSL.  The warning page can safely be skipped using any browser by adding an exception:
+If you see a warning when first launching the web GUI, don't panic!  This warning is not an issue with the OP5 application, and poses no real risk.  op5 ships by default with self-signed SSL Certificates, a common practice when deploying any new web service that is secured via SSL.  The warning page can safely be skipped using any browser by adding an exception:
 
 Chrome - Click "Advanced," then "Proceed to example.com"
 
@@ -69,7 +69,7 @@ Firefox - Click "I Understand the Risks," then "Add Exception," and finally "Con
 
 Internet Explorer - Click on "Continue to this website (not recommended) to bypass SSL warning in Internet Explorer."
 
-To fix the issue permanently, refer to the following op5 KB article:  Add or renew an SSL certificate for op5 Monitor
+To fix the issue permanently, refer to the following OP5 KB article:  Add or renew an SSL certificate for OP5 Monitor
 
 # Server Configuration
 
@@ -86,7 +86,7 @@ Configure IP address, hostname and mail gateway as needed.
 ## Software
 
 The software version does include the web-based "Configure System" tool, but is limited to license management.
-You will need to configure the system settings such as IP address, hostname and mail gateway through Linux.  (Note: This is strictly referring to the "Configure System" tool and not the "op5 Monitor Configuration" tool that is used to configure op5 Monitor, hosts, services, contact groups, etc.)
+You will need to configure the system settings such as IP address, hostname and mail gateway through Linux.  (Note: This is strictly referring to the "Configure System" tool and not the "op5 Monitor Configuration" tool that is used to configure OP5 Monitor, hosts, services, contact groups, etc.)
 
 Additional information can be found in the manual chapter [Manually from the prompt](https://kb.op5.com/display/DOC/Manually+from+the+prompt).
 
@@ -98,13 +98,13 @@ Before a server or network equipment can be monitored, you may require a particu
 
 This can be downloaded from [op5.com](http://www.op5.com/download-op5-monitor/agents/)
 
-Remember to allow your op5 server to query the agent. This is configured during the installation of the agent.
+Remember to allow your OP5 server to query the agent. This is configured during the installation of the agent.
 
 ## NRPE
 
 This can also be downloaded from [op5.com](http://www.op5.com/download-op5-monitor/agents/) or from the repository of your distribution. Our version does contain some pre-configured items.
 
-Remember to allow your op5 server to query the agent. This is done in */etc/nrpe.conf* under the allowed\_hosts option.
+Remember to allow your OP5 server to query the agent. This is done in */etc/nrpe.conf* under the allowed\_hosts option.
 
 ## SNMP
 
@@ -116,7 +116,7 @@ op5 Monitor includes a "Host Configuration Wizard" for easy deployment and confi
 
 We will start off by demonstrating how to deploy a device by using the "Host Configuration Wizard."
 
-First, login in to your op5 Monitor server at *https://\<op5-ip\>/monitor*
+First, login in to your OP5 Monitor server at *https://\<op5-ip\>/monitor*
 
 *
 *

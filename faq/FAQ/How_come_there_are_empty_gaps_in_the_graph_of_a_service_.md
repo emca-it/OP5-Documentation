@@ -28,7 +28,7 @@ How come there are empty gaps in the graph of a service, such as seen in the scr
 
 ### RRD, minimal heartbeat and check intervals
 
-What's important to be aware of is that RRD files (which is used for the graphing), contains calculated averages of all the inserted values, and in most cases you won't notice that a check skipped a beat, the graph will just be smoothed out. And not just only in case of one skipped beat actually, in the default configuration of op5 Monitor, the "minimal heartbeat" is set to 8460 seconds, i.e. 2 hours and 21 minutes, which is the maximum amount of time between two inserted data points, where it is still allowed to calculate an average value.
+What's important to be aware of is that RRD files (which is used for the graphing), contains calculated averages of all the inserted values, and in most cases you won't notice that a check skipped a beat, the graph will just be smoothed out. And not just only in case of one skipped beat actually, in the default configuration of OP5 Monitor, the "minimal heartbeat" is set to 8460 seconds, i.e. 2 hours and 21 minutes, which is the maximum amount of time between two inserted data points, where it is still allowed to calculate an average value.
 
 In other words, if a performance data value for a check was generated and inserted into the RRD file at 07:00, and then there wasn't any new performance data inserted until 09:00 – the graph still shouldn't display any gap (given that the inserted values were \>0). If you look at the graph just before the new insert at 09:00, the graph will however only show data up until 07:00, and then the gap is filled out once the clock hits 09:00.
 
@@ -42,7 +42,7 @@ The minimal heartbeat is set per graph, statically. It can be configured for *ne
 
 To modify the minimal heartbeat value for existing graphs, you have to:
 
-1.  Locate the graph in the */opt/monitor/op5/pnp/perfdata *directory tree, where a separate directory is found for each host, and then an RRD for every service and data source (given that you are running RRD in MULTI mode – contact op5 Support to find out more).
+1.  Locate the graph in the */opt/monitor/op5/pnp/perfdata *directory tree, where a separate directory is found for each host, and then an RRD for every service and data source (given that you are running RRD in MULTI mode – contact OP5 Support to find out more).
 2.  In case the RRD file is located in the current working directory as *service\_ds.rrd*, and the minimal heartbeat should be set to 86400 (a full day), you would run this command:
     `rrdtool tune service_ds.rrd --heartbeat 1:86400`
 

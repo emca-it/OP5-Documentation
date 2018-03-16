@@ -1,10 +1,10 @@
-# How do I integrate op5 Monitor authentication with Microsoft Active Directory?
+# How do I integrate OP5 Monitor authentication with Microsoft Active Directory?
 
 ## Question
 
 * * * * *
 
-How do I integrate op5 Monitor authentication with Microsoft Active Directory?
+How do I integrate OP5 Monitor authentication with Microsoft Active Directory?
 
 ## Answer
 

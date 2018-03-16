@@ -1,6 +1,6 @@
-# How to run op5 Monitor on a Windows PC
+# How to run OP5 Monitor on a Windows PC
 
-Follow these steps to set up op5 Monitor on a Windows PC. Make sure you are logged in to op5.com, otherwise the download section will not allow you to download the virtual image.
+Follow these steps to set up OP5 Monitor on a Windows PC. Make sure you are logged in to op5.com, otherwise the download section will not allow you to download the virtual image.
 
 1) Download Virtual Box from:<https://www.virtualbox.org/wiki/Downloads>
 
@@ -20,5 +20,5 @@ Follow these steps to set up op5 Monitor on a Windows PC. Make sure you are logg
 
 ![](attachments/688579/5242957.jpg)
 
-9) Type in the ip address shown in your web browser and log in. You will be prompted to create an account with administrator privileges the first time you access op5 Monitor. 
+9) Type in the ip address shown in your web browser and log in. You will be prompted to create an account with administrator privileges the first time you access OP5 Monitor. 
 

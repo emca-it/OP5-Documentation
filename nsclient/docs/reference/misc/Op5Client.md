@@ -27,7 +27,7 @@ Section for the Op5 server
 
 | Key                                       | Default Value | Description            |
 |-------------------------------------------|---------------|------------------------|
-| [channel](#channel)                       | op5           | CHANNEL                |
+| [channel](#channel)                       | OP5           | CHANNEL                |
 | [contactgroups](#contact-groups)          |               | Contact groups         |
 | [default checks](#install-default-checks) | true          | Install default checks |
 | [hostgroups](#host-groups)                |               | Host groups            |
@@ -279,7 +279,7 @@ remove=false
 
 #### Op5 base url <a id="/settings/op5/server"></a>
 
-The op5 base url i.e. the url of the Op5 monitor REST API for instance https://monitor.mycompany.com
+The OP5 base url i.e. the url of the Op5 monitor REST API for instance https://monitor.mycompany.com
 
 
 

@@ -6,14 +6,6 @@ Multiple commands are used to apply a single command to one or more objects at t
 
 In lists of objects (such as host and service list views) that have commands you may perform commands on multiple objects within the list at the same time. This is very useful if you, for instance, have a bigger problem with one or many services and you want to acknowledge all of them at once.
 
-**Table of Content**
-
--   [About](#Multiplehostandservicecommands-About)
--   [Multiple host commands list](#Multiplehostandservicecommands-Multiplehostcommandslist)
--   [Multiple service commands list](#Multiplehostandservicecommands-Multipleservicecommandslist)
--   [Example](#Multiplehostandservicecommands-Example)
-    -   [Execute multiple commands](#Multiplehostandservicecommands-Executemultiplecommands)
-
 # Multiple host commands list
 
 -   Schedule downtime

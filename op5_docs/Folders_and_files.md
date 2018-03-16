@@ -2,16 +2,11 @@
 
 # About
 
- This chapter describes the different folders of your op5 Monitor system
-
-**Table of Content**
-
--   [About](#Foldersandfiles-About)
--   [Folders and files](#Foldersandfiles-Foldersandfiles)
+ This chapter describes the different folders of your OP5 Monitor system
 
 # Folders and files
 
-The main parts of op5 Monitor is located in /opt/monitor in the file system.
+The main parts of OP5 Monitor is located in /opt/monitor in the file system.
 
 <table>
 <colgroup>

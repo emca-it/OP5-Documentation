@@ -2,27 +2,11 @@
 
 # About
 
-Hosts and services are the objects that are monitored by op5 Monitor.
-
-**Table of Content**
-
--   [About](#Hostsandservices-About)
--   [A host in detail](#Hostsandservices-Ahostindetail)
--   [Page links](#Hostsandservices-Pagelinks)
--   [Host information header](#Hostsandservices-Hostinformationheader)
--   [Host state information](#Hostsandservices-Hoststateinformation)
--   [Host commands](#Hostsandservices-Hostcommands)
--   [Comments](#Hostsandservices-Comments)
--   [A service in detail](#Hostsandservices-Aserviceindetail)
--   [Page links](#Hostsandservices-Pagelinks.1)
--   [Service header information](#Hostsandservices-Serviceheaderinformation)
--   [Service state information](#Hostsandservices-Servicestateinformation)
--   [Service commands](#Hostsandservices-Servicecommands)
--   [Comments](#Hostsandservices-Comments.1)
+Hosts and services are the objects that are monitored by OP5 Monitor.
 
 # A host in detail
 
-A host can be any kind of network device, virtual device and other objects that you might reach from the op5 Monitor server.
+A host can be any kind of network device, virtual device and other objects that you might reach from the OP5 Monitor server.
  Let us take a look at the Host information view and see what parts it is built upon. In the coming sections we will go through each part and learn how they can be used.
 ![](attachments/16482322/16679308.png)
  The table below describes each part of the Host information view briefly.
@@ -135,7 +119,7 @@ Automatically added comments can be:
 
 As a manually added comment you can type in almost anything you like.
  ![](attachments/16482322/16679309.png)
- Comments are designed to be short texts. If you would like to add documentation, longer descriptions and so on you should consider using the Dokuwiki that is included in op5 Monitor.
+ Comments are designed to be short texts. If you would like to add documentation, longer descriptions and so on you should consider using the Dokuwiki that is included in OP5 Monitor.
 
 # A service in detail
 
@@ -249,5 +233,5 @@ There are two types of comments:
 
 As a manually added comment you can type in almost anything you like.
  ![](attachments/16482322/16679252.png)
- Comments are designed to be short texts. If you would like to add documentation, longer descriptions and so on you should consider using the [Dokuwiki](Dokuwiki) that is included in op5 Monitor.
+ Comments are designed to be short texts. If you would like to add documentation, longer descriptions and so on you should consider using the [Dokuwiki](Dokuwiki) that is included in OP5 Monitor.
 

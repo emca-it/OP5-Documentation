@@ -1,23 +1,10 @@
-# op5 NSClient++
+# OP5 NSClient++
 
 # About
 
 [NSClient++](http://nsclient.org/) is the agent we  for monitoring hosts that run Microsoft Windows. It integrates very well with recent Windows Servers versions, copying its commands into the Registry and simplifying authentication. It also has versions for Linux, but OP5 has not tested against such implementations.
 
 OP5 used to provide a modified version of NSClient++. Starting with version 0.4.x and moving into the 0.5.x series, the main NSClient++ release has a cleaner integration with OP5 Monitor as well as the operating system. We strongly recommend [downloading the latest stable release directly](https://nsclient.org/download/) from our friends there.
-
-**Table of Contents**
-
--   [About](#op5NSClient++-About)
--   [Lead plugins for NSClient++ communication](#op5NSClient++-LeadpluginsforNSClient++communication)
-    -   [check\_nt](#op5NSClient++-check_nt)
-    -   [check\_nrpe](#op5NSClient++-check_nrpe)
--   [Configuration files](#op5NSClient++-Configurationfiles)
-    -   [Modern approach (v0.5.x)](#op5NSClient++-Modernapproach(v0.5.x))
-    -   [Deprecated approach (v0.3.x and older)](#op5NSClient++-Deprecatedapproach(v0.3.xandolder))
-    -   [Adding a custom script or plugin to NSClient++](#op5NSClient++-AddingacustomscriptorplugintoNSClient++)
-
- 
 
 # Lead plugins for NSClient++ communication
 
@@ -53,7 +40,7 @@ Description|NSC.ini
 This is the standard configuration file. This contains the default settings for NSClient++
  This file might be overwritten during an update of NSClient++|op5.ini
 
-This is a op5 specific configuration file. Here are the changes made by op5 entered.
+This is a OP5 specific configuration file. Here are the changes made by OP5 entered.
  This file might be overwritten during an update of NSClient++|custom.ini
 
 This is where you shall place your own configuration.
@@ -79,7 +66,7 @@ description
 
 `allowed_hosts=`
 
-This option lists all servers that are allowed to talk to the agent. Enter the IP-address of the op5 Monitor server or servers if used in a load balanced configuration. If this option is left blank anybody will be able to communicate with the agent.
+This option lists all servers that are allowed to talk to the agent. Enter the IP-address of the OP5 Monitor server or servers if used in a load balanced configuration. If this option is left blank anybody will be able to communicate with the agent.
 
 `[log]`
 

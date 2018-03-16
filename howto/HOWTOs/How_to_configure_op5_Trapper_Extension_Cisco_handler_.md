@@ -1,15 +1,15 @@
-# How to configure op5 Trapper Extension (Cisco handler)
+# How to configure OP5 Trapper Extension (Cisco handler)
 
-The purpose of this document is to describe how to configure op5 Trapper. In the example below we show you how to do this for Cisco devices but can be used as a template for other devices as well or be extended to handle additional types and events.
+The purpose of this document is to describe how to configure OP5 Trapper. In the example below we show you how to do this for Cisco devices but can be used as a template for other devices as well or be extended to handle additional types and events.
 
 ## Prerequisites
 
--   op5 Monitor with op5 Trapper Extension
--   A Cisco device configured to send traps to op5 Monitor and with trap type set as "syslog"
+-   OP5 Monitor with OP5 Trapper Extension
+-   A Cisco device configured to send traps to OP5 Monitor and with trap type set as "syslog"
 
  
 
-To Configure a Cisco device to send traps to op5 Monitor and with type "syslog" as covered in this example do the following:
+To Configure a Cisco device to send traps to OP5 Monitor and with type "syslog" as covered in this example do the following:
 
  
 
@@ -20,9 +20,9 @@ To Configure a Cisco device to send traps to op5 Monitor and with type "syslog" 
 
  
 
-## op5 Monitor and op5 Trapper configuration:
+## OP5 Monitor and OP5 Trapper configuration:
 
--   #### op5 Monitor:
+-   #### OP5 Monitor:
 
 Create a destination host and service for your traps, this service need to be added manually for this example to work. You also need to disable active checks as traps are handled as passive results from trapper.
 
@@ -108,11 +108,11 @@ end
 
 And save your handler-file with :wq
 
-*Note: This handler, when loaded in op5 Trapper will match all traps of the type (Cisco Syslog MIB) and set severity in Monitor as stated in our rule (severity 1-4 we set as CRITICAL, 5 as WARNING and 6-8 as OK-state)*
+*Note: This handler, when loaded in OP5 Trapper will match all traps of the type (Cisco Syslog MIB) and set severity in Monitor as stated in our rule (severity 1-4 we set as CRITICAL, 5 as WARNING and 6-8 as OK-state)*
 
  
 
-Now we need to tell op5 trapper to create our handler:
+Now we need to tell OP5 trapper to create our handler:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # /opt/trapper/bin/traped create handler cisco-syslog
@@ -173,7 +173,7 @@ Now when you have your handler loaded it's time to test it!
 
  
 
-Take a look in the op5 Trapper view in Monitor, you should see a new line as in the screenshot below:
+Take a look in the OP5 Trapper view in Monitor, you should see a new line as in the screenshot below:
 
 ![Traps in gui](attachments/688778/5242986.jpg)
 
@@ -215,20 +215,20 @@ Log explained in more detail:
 -   Trap severity is: 4
     -   Actual severity in the original trap
 -   Severity to state: 2
-    -   How we translate trap-severity to op5 Monitor severity (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN)
+    -   How we translate trap-severity to OP5 Monitor severity (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN)
 -   Trap message is: Line protocol on Interface GigabitEthernet1/0/13, changed state to down
     -   Trap message
 -   Tag matching: GigabitEthernet1/0/13
     -   Not covered in this howto, please see trapper manual. 
 -   SNMP trap handler executed.
 -   The state of Interface linkstatus at switch1-sth is now CRITICAL
-    -   op5 Monitor status change (and not just trapper state change for a specific "tag")
+    -   OP5 Monitor status change (and not just trapper state change for a specific "tag")
 -   Message: Line protocol on Interface GigabitEthernet1/0/13, changed state to down
-    -   Resulting status output in op5 Monitor.
+    -   Resulting status output in OP5 Monitor.
 
  
 
-If we take a look in op5 Monitor log files /opt/monitor/var/nagios.log you will see the result submitted by trapper to Monitor and the service will be updated with the actual status:
+If we take a look in OP5 Monitor log files /opt/monitor/var/nagios.log you will see the result submitted by trapper to Monitor and the service will be updated with the actual status:
 
  
 
@@ -236,5 +236,5 @@ If we take a look in op5 Monitor log files /opt/monitor/var/nagios.log you will 
 [1331841880] EXTERNAL COMMAND: PROCESS_SERVICE_CHECK_RESULT;op5-system;SNMP Traps and Notifications;1;duplex mismatch discovered on FastEthernet0/7 (not full duplex), with op5-system.op5.com GigabitEthernet0/1 (full duplex).
 ```
 
-*Note: If you see a message below this line saying something similar to “host could not be found/host missing/unknown host” or “service missing/unknown” the problem is most likely caused by the hostname resolved by trapper is not configured in op5 Monitor or it could be configured using a different name.*
+*Note: If you see a message below this line saying something similar to “host could not be found/host missing/unknown host” or “service missing/unknown” the problem is most likely caused by the hostname resolved by trapper is not configured in OP5 Monitor or it could be configured using a different name.*
 

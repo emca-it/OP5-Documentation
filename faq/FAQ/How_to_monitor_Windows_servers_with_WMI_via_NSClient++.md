@@ -4,7 +4,7 @@ This how-to is for monitoring Windows hosts using WMI through NSClient++. For ag
 
 ## **Introduction**
 
-Using op5 Monitor in combination with Windows Management Instrumentation (WMI) system administrators can query, change, and monitor configuration settings on desktops and servers in their IT environment.
+Using OP5 Monitor in combination with Windows Management Instrumentation (WMI) system administrators can query, change, and monitor configuration settings on desktops and servers in their IT environment.
 
 In this how-to we will add a service looking for accounts that are enabled in Windows and have their password set to never expire. The monitoring is made by using check\_nrpe with the agent NSClient++ using CheckWMI.
 
@@ -31,13 +31,13 @@ To configure NSClient++,
 
 3.  Restart the NSClient++ service
 
-## **Adding a check\_command to op5 Monitor**
+## **Adding a check\_command to OP5 Monitor**
 
-Now we will add a new check\_command to op5 Monitor. This check\_command will let you set a few arguments when adding a new service later on.
+Now we will add a new check\_command to OP5 Monitor. This check\_command will let you set a few arguments when adding a new service later on.
 
-To add check\_command to op5 Monitor:
+To add check\_command to OP5 Monitor:
 
-1.  Open up Configure in op5 Monitor
+1.  Open up Configure in OP5 Monitor
 2.  Click “Commands”
 3.  Add a new check\_command with the following settings
 
@@ -56,9 +56,9 @@ command\_line
 **\$ARG1\$:** Warning level
  **\$ARG2\$:** Critical level
 
-## **Adding a service to op5 Monitor**
+## **Adding a service to OP5 Monitor**
 
-To add a new service to op5 Monitor:
+To add a new service to OP5 Monitor:
 
 1.  Open up the host you like to monitor and chose “Add new service”.
 2.  Set at least the following options:

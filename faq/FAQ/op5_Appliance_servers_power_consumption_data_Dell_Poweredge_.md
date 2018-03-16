@@ -1,10 +1,10 @@
-# op5 Appliance servers power consumption data (Dell Poweredge)
+# OP5 Appliance servers power consumption data (Dell Poweredge)
 
 ## Question
 
 * * * * *
 
-What are the power requirements for op5 Appliance servers? (Dell Poweredge)
+What are the power requirements for OP5 Appliance servers? (Dell Poweredge)
 
 ## Answer
 

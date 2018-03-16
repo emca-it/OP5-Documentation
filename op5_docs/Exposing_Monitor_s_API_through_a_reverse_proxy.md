@@ -2,9 +2,9 @@
 
 Version
 
-This article was written for version 6.3.1 of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 6.3.1 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
  
 
@@ -16,7 +16,7 @@ In this how-to we will configure the [Apache HTTP server](https://httpd.apache.o
 
  
 
-Exposing a op5 Monitor system directly to the Internet or other untrusted networks is not recommended. We encourage you to use a [VPN solution](http://en.wikipedia.org/wiki/Virtual_private_network) or similar to restrict access.
+Exposing a OP5 Monitor system directly to the Internet or other untrusted networks is not recommended. We encourage you to use a [VPN solution](http://en.wikipedia.org/wiki/Virtual_private_network) or similar to restrict access.
 
  
 

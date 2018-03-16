@@ -11,7 +11,7 @@
 
 # Introduction and addition of user
 
-If you want to use SNMP to monitor your Linux- and UNIX-servers, it's imperative that you configure the SNMP daemon on those servers to make them respond to queries from the op5 Monitor server.
+If you want to use SNMP to monitor your Linux- and UNIX-servers, it's imperative that you configure the SNMP daemon on those servers to make them respond to queries from the OP5 Monitor server.
 
 Most people will want to use SNMP version 3 in the "authenticated and privacy protected" mode, commonly abbreviated as authPriv, but other methods are also covered in this section.Please note that the SNMP protocol version 1 and 2c is un-encrypted, so someone capable of reading traffic flows in your network will be able to read values (including community names) from queries and responses sent to and from the SNMP-monitored device.SNMP version 1 has limits in both performance and the datatypes it offers that makes it highly unsuitable for monitoring, so we strongly advise against using it.
 

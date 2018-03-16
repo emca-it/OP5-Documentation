@@ -113,7 +113,7 @@ NSClient++ consists of the following features most which can be disable when doi
 | SampleScripts       | Scripts                | Scripts for checking and testing various aspects of your computer and NSClient++          |
 | Shortcuts           | Shortcuts              | Main Service shortcuts                                                                    |
 | WEBPlugins          | WEB Server             | NSClient WEB Server. Use this to administrate or check NSClient via a browser or REST API |
-| OP5Montoring        | OP5 Monitoring         | Scripts/config for the op5 monitoring system.                                             |
+| OP5Montoring        | OP5 Monitoring         | Scripts/config for the OP5 Monitoring system.                                             |
 
 ### Silent install
 
@@ -138,7 +138,7 @@ msiexec /i NSCP-<version>.msi CONF_CAN_CHANGE=1 MONITORING_TOOL=none
 CONF_CAN_CHANGE forces the config to become writable (if you run silently the detection never happens so this flag is never updated).
 MONITORING_TOOL If no monitoring tool is specified it will default to "default" and overwrite various options given on the command line.
 
-#### Silent op5 install
+#### Silent OP5 install
 
 To enable active checks via NRPE from OP5 you can set the `MONITORING_TOOL` option to `OP5`.
 
@@ -146,7 +146,7 @@ To enable active checks via NRPE from OP5 you can set the `MONITORING_TOOL` opti
 msiexec /i NSClient++.msi MONITORING_TOOL=OP5
 ```
 
-#### Silent op5 install (Northbound)
+#### Silent OP5 install (Northbound)
 
 To enable passive reports via OP5s Northbound API you can set the `OP5_SERVER`, `OP5_USER` and `OP5_PASSWORD` options.
 In this case setting `MONITORING_TOOL` is done automatically when ever `OP5_SERVER` is detected.

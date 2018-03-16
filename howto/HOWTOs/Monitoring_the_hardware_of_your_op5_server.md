@@ -1,6 +1,6 @@
-# Monitoring the hardware of your op5 server
+# Monitoring the hardware of your OP5 server
 
-This how-to describes how to monitor the local hardware of you op5 server. The method described in this white-paper applies to the following models:
+This how-to describes how to monitor the local hardware of you OP5 server. The method described in this white-paper applies to the following models:
 
 -   PE-860 (a.k.a “entry”, fourth generation)
 -   PE-1950 (a.k.a “standard” and “large”, fourth generation)
@@ -64,11 +64,11 @@ If you performed a full install, you can now browse the OMSA web-gui at https po
 
 https://your-servers-address:1311/
 
-To login, use the “root”-account of the op5 Monitor server.
+To login, use the “root”-account of the OP5 Monitor server.
 
 ## **Adding services**
 
-When OMSA is installed you need to one service on the host-object for your op5 server. The required check-command can be imported using the function “Check Command Import” which you’ll find under ‘Configure’ -\> ‘Commands’ -\> ‘Related Items:’.
+When OMSA is installed you need to one service on the host-object for your OP5 server. The required check-command can be imported using the function “Check Command Import” which you’ll find under ‘Configure’ -\> ‘Commands’ -\> ‘Related Items:’.
 
 Add the following service:
 

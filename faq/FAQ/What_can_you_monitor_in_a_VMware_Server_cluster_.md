@@ -1,6 +1,6 @@
 # What can you monitor in a VMware Server/cluster?
 
-**A general description of supported commands and sub-command for op5 Monitor 5.x and 6.x**
+**A general description of supported commands and sub-command for OP5 Monitor 5.x and 6.x**
 
 ![](attachments/3801484/4358168.png)
 Level = status source

@@ -2,18 +2,7 @@
 
 # About
 
-By making a file write-protected it cannot be changed by op5 Configuration. This is equivalent to the naemon function called **notouch.**
-
-**Table of Content**
-
--   [About](#Writeprotectedconfigurationfiles-About)
--   [Writing the file ](#Writeprotectedconfigurationfiles-Writingthefile)
-
-<!-- -->
-
-     
-
-     
+By making a file write-protected it cannot be changed by OP5 Configuration. This is equivalent to the naemon function called **notouch.**
 
 # Writing the file 
 
@@ -27,7 +16,7 @@ $notouch_file_prefix = 'static_';
 ?>
 ```
 
-If a configuration file in is renamed with the `static_ `prefix op5 configuration will not be able to change this file.
+If a configuration file in is renamed with the `static_ `prefix OP5 configuration will not be able to change this file.
 
  
 

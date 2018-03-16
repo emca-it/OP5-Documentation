@@ -6,23 +6,11 @@ OP5 SyslogAgent runs as a service under a large variety of Windows Server versio
 
 OP5 SyslogAgent is a repackaged version of the Datagram SyslogAgent, which itself began as a bug-fixed version of Sabre Net's old NT\_Syslog. It is licensed as GPL software.
 
-**Table of Contents**
-
--   [About](#WindowsSyslogAgent-About)
--   [Download and Installation](#WindowsSyslogAgent-DownloadandInstallation)
--   [Upgrading](#WindowsSyslogAgent-Upgrading)
--   [Configuration](#WindowsSyslogAgent-ConfigurationConfiguration)
-    -   [Configuring the elementary functions](#WindowsSyslogAgent-Configuringtheelementaryfunctions)
-    -   [Configuration options](#WindowsSyslogAgent-Configurationoptions)
-    -   [Exporting a configuration](#WindowsSyslogAgent-Exportingaconfiguration)
-
- 
-
 # Download and Installation
 
 The OP5 SyslogAgent installation package consists of an MSI installer, available as either 32-bit or 64-bit from [our web site's Download Library](https://www.op5.com/op5-monitor/download-library/category/windows-syslog-agent/). To install, simply double-click the installation MSI file (usually as an Administrator) and follow the on-screen instructions. Note that product has not been updated since OP5 revised its logo:
 ![](attachments/16482385/16679132.png)
- By default the OP5 SyslogAgent will be installed in an op5 subdirectory, which itself will be placed in "`%SystemRoot%\%ProgramFiles%`": by default, that path becomes "`C:\Program Files\op5\SyslogAgent\`". Please review the [upcoming section](#WindowsSyslogAgent-Configuration) for any configuration details.
+ By default the OP5 SyslogAgent will be installed in an OP5 subdirectory, which itself will be placed in "`%SystemRoot%\%ProgramFiles%`": by default, that path becomes "`C:\Program Files\op5\SyslogAgent\`". Please review the [upcoming section](#WindowsSyslogAgent-Configuration) for any configuration details.
 
 # Upgrading
 
@@ -47,11 +35,11 @@ When the configuration tool is started the following window should be displayed:
 
 To configure the elementary functions and start the SyslogAgent started follow the following steps:
 
--   -   Enter the IP address in the field **Syslog Server:**. This IP should be the one to your op5 Logserver or op5 Monitor server.
+-   -   Enter the IP address in the field **Syslog Server:**. This IP should be the one to your OP5 Logserver or OP5 Monitor server.
     -   Make sure the check box "**Enable forwarding of event logs**" is checked.
     -   Press **Start Service**.
 
-Your SyslogAgent is now configured and should be sending logs to your op5 Logserver or op5 Monitor server.
+Your SyslogAgent is now configured and should be sending logs to your OP5 Logserver or OP5 Monitor server.
 
 ## Configuration options
 

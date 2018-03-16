@@ -1,10 +1,10 @@
-# Can op5 monitor my SAN?
+# Can OP5 Monitor my SAN?
 
 ## Question
 
 * * * * *
 
-Can op5 monitor my SAN?
+Can OP5 Monitor my SAN?
 
 ## Answer
 

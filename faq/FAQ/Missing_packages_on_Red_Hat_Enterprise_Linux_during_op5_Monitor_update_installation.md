@@ -1,10 +1,10 @@
-# Missing packages on Red Hat Enterprise Linux during op5 Monitor update/installation
+# Missing packages on Red Hat Enterprise Linux during OP5 Monitor update/installation
 
 ## Question
 
 * * * * *
 
-During the installation or upgrade of op5 Monitor on Red Hat Enterprise Linux, yum might fail due to missing dependencies. Depending on which version of op5 Monitor and RHEL, the following packages could be missing:
+During the installation or upgrade of OP5 Monitor on Red Hat Enterprise Linux, yum might fail due to missing dependencies. Depending on which version of OP5 Monitor and RHEL, the following packages could be missing:
 
 -   perl(Archive::Zip)
 -   perl(Class::Accessor)

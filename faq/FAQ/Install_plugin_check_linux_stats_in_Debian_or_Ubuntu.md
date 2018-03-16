@@ -20,7 +20,7 @@ When the dependencies are met the plugin can be copied to the folder `/usr/lib/n
 
  
 
-Some example commands that can be configured on the Ubuntu/Debian host and called from op5 Monitor with the name of the command[name] via the check\_command "check\_nrpe".
+Some example commands that can be configured on the Ubuntu/Debian host and called from OP5 Monitor with the name of the command[name] via the check\_command "check\_nrpe".
 
 Thresholds are just examples and should be adjusted to reflect the configuration of the server.
 

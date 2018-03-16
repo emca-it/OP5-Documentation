@@ -1,18 +1,18 @@
-# Installing the op5 community repository and support tools
+# Installing the OP5 community repository and support tools
 
 ## Question
 
 * * * * *
 
-How do I install the op5 community yum package repository, and the "support tools" found within?
+How do I install the OP5 community yum package repository, and the "support tools" found within?
 
 ## Answer
 
 * * * * *
 
-#### op5 Monitor 7.0.4 or later
+#### OP5 Monitor 7.0.4 or later
 
-As of version 7.0.4 of op5 Monitor, the community repository files are pre-installed. The repositories are, however, marked as disabled and must be enabled on the command line.
+As of version 7.0.4 of OP5 Monitor, the community repository files are pre-installed. The repositories are, however, marked as disabled and must be enabled on the command line.
 
  
 
@@ -26,7 +26,7 @@ In case some tools are already installed, or some are not up to date, this comma
 
  
 
-#### op5 Monitor 7.0.3 or earlier
+#### OP5 Monitor 7.0.3 or earlier
 
 In case of running a version that is older than 7.0.4, it is recommended to simply upgrade to 7.0.4 (or later), and then execute the command above. However, if upgrading is not feasible, please find further instructions below.
 

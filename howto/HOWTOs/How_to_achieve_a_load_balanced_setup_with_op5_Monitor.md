@@ -1,6 +1,6 @@
-# How to achieve a load balanced setup with op5 Monitor
+# How to achieve a load balanced setup with OP5 Monitor
 
- Since the time of writing this HOWTO all related information has been moved into our op5 Monitor Administrator Manual (see link below).
+ Since the time of writing this HOWTO all related information has been moved into our OP5 Monitor Administrator Manual (see link below).
 
  
 

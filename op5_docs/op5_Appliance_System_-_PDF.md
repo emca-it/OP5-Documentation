@@ -1,4 +1,4 @@
-# op5 Appliance System - PDF
+# OP5 Appliance System - PDF
 
 Collection of manuals for historical reference.
 

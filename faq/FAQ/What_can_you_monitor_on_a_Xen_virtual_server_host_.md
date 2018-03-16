@@ -1,6 +1,6 @@
 # What can you monitor on a Xen virtual server/host?
 
-### **An overview of supported commands and sub-command for op5 Monitor 5.x and 6.x**
+### **An overview of supported commands and sub-command for OP5 Monitor 5.x and 6.x**
 
 ![](attachments/3801495/4358170.png)
 

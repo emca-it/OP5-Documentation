@@ -6,24 +6,9 @@
 
 The mon command is a very powerful command. Primarily, this is the command that is used to manually stop and start the monitor system processes, and to set up a distributed or a load balanced environment.
 
-Handle this command with care! It has the power to both create and destroy your whole op5 installation.
+Handle this command with care! It has the power to both create and destroy your whole OP5 installation.
 
-**Do not use this command unless specifically instructed by op5 Support or the Documentation itself.**
-
-**Table of Content**
-
--   [About](#Themoncommand-About)
--   [The commands](#Themoncommand-Thecommands)
-    -   [start](#Themoncommand-start)
-    -   [stop](#Themoncommand-stop)
-    -   [restart](#Themoncommand-restart)
-    -   [ecmd](#Themoncommand-ecmd)
-    -   [log](#Themoncommand-log)
-    -   [node](#Themoncommand-node)
-    -   [oconf](#Themoncommand-oconf)
-    -   [sshkey](#Themoncommand-sshkey)
-    -   [sysconf](#Themoncommand-sysconf)
-    -   [check](#Themoncommand-check)
+**Do not use this command unless specifically instructed by OP5 Support or the Documentation itself.**
 
 # The commands
 
@@ -294,7 +279,7 @@ As of Monitor 6, enabling the ramdisk is no longer recommended. To disable the r
 $ mon check spool [--maxage=<seconds>] [--warning=X] [--critical=X] <path> [--delete]
 ```
 
-Checks a certain spool directory for files (and files only) that are older than 'maxage'. It's intended to prevent buildup of checkresult files and unprocessed performance-data files in the various spool directories used by op5 Monitor.
+Checks a certain spool directory for files (and files only) that are older than 'maxage'. It's intended to prevent buildup of checkresult files and unprocessed performance-data files in the various spool directories used by OP5 Monitor.
 
 <table>
 <colgroup>
@@ -319,7 +304,7 @@ Only one directory at a time may be checked.
 $ mon check cores --warning=X --critical=X [--dir=]
 ```
 
-Checks for memory dumps resulting from segmentation violation from core parts of op5 Monitor. Detected core-files are moved to /tmp/mon-cores in order to keep working directories clean.
+Checks for memory dumps resulting from segmentation violation from core parts of OP5 Monitor. Detected core-files are moved to /tmp/mon-cores in order to keep working directories clean.
 
 <table>
 <colgroup>

@@ -10,15 +10,15 @@ How do I replicate a Tactical Overview from one user to another?
 
 * * * * *
 
-This article will show you how to copy the settings from one users TAC to another. The guide applies to both existing local users in op5 Monitor and users authentication from LDAP/AD, existing and also users that never logged in to op5 Monitor.
+This article will show you how to copy the settings from one users TAC to another. The guide applies to both existing local users in OP5 Monitor and users authentication from LDAP/AD, existing and also users that never logged in to OP5 Monitor.
 
-The example below is intended for the op5 Monitor administrator that wants to define a common view on Tactical Overview.
+The example below is intended for the OP5 Monitor administrator that wants to define a common view on Tactical Overview.
 
 Linux command line experience and basic knowledge of MySQL is required.
 
  
 
-This article is intended for use on op5 Monitor 7.1.5. The behaviour might change in later versions of the product.
+This article is intended for use on OP5 Monitor 7.1.5. The behaviour might change in later versions of the product.
 
  
 
@@ -28,9 +28,9 @@ Target *user*: **newuser**
 
  
 
-1. Log in to op5 Monitor user interface and configure a Tactical Overview  with a user that reflects what should be replicated to multiple users in the GUI on the *source user*.
+1. Log in to OP5 Monitor user interface and configure a Tactical Overview  with a user that reflects what should be replicated to multiple users in the GUI on the *source user*.
 
-2. Log in as root via ssh on your op5 Monitor server
+2. Log in as root via ssh on your OP5 Monitor server
 
 3. Take a backup of the database prior to doing any changes:
 

@@ -2,7 +2,7 @@
 #
 # Script to modify first_notification_delay dynaimcally via cron.
 #
-# Written by Daniel Jerveren - op5 AB.
+# Written by Daniel Jerveren - OP5 AB.
 
 
 SVC_DELAY=5

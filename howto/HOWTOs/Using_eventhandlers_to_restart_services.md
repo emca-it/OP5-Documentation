@@ -2,7 +2,7 @@
 
 ## **General info**
 
-This how-to describes the principle of using event handlers in op5 Monitor to restart services/processes/daemons that has stopped responding in a correct manner.
+This how-to describes the principle of using event handlers in OP5 Monitor to restart services/processes/daemons that has stopped responding in a correct manner.
 
 The principle is described using an example where we restart Microsoft Internet Information Service (IIS).
 You can of course use event handlers to initiate any kind of action upon a state-change of a host or a service (like writing an entry to a log or power cycling an appliance-server).
@@ -55,13 +55,13 @@ command[restart_iis]=C:\Program Files\OP5\op5_NSClient++\scripts\restartiis.bat
 
 Restart the NSClient++ system service to reload the configuration.
 
-Test your restart-action end-to-end from the command line interface at your op5 server (via ssh or directly at console):
+Test your restart-action end-to-end from the command line interface at your OP5 server (via ssh or directly at console):
 
     /opt/plugins/check_nrpe -H 192.168.1.8 -c restart_iis
 
-If your test successfully restarted the IIS-service, you can now continue with the scripting and configuration at the op5 Monitor server-side.
+If your test successfully restarted the IIS-service, you can now continue with the scripting and configuration at the OP5 Monitor server-side.
 
-### The op5 Monitor server-side
+### The OP5 Monitor server-side
 
 First create a script that your new event handler-command can refer to.
 The script must be able to handle different state-types and have some kind of logging. An example follows:
@@ -100,7 +100,7 @@ Change the permissions to 755:
 
     chmod 755 /opt/plugins/restart_windows_service.sh
 
-Use Configure in op5 Monitors and add a new “command” (Configure -\> Commands).
+Use Configure in OP5 Monitors and add a new “command” (Configure -\> Commands).
 Configure your new command like this:
 
 <table>
@@ -138,7 +138,7 @@ To make the above example more generalized you can add support for arguments, li
 
 Windows-service names are the short name for a service(Manage this computer -\> Services -\> Properties -\> “Service Name” (Not Display Name))
 
-It’s important to understand that adding support for arguments involves modifying the whole transport of data between the op5 Monitor server and the target Windows server.
+It’s important to understand that adding support for arguments involves modifying the whole transport of data between the OP5 Monitor server and the target Windows server.
 
 ### **The configuration-changes**
 
@@ -164,7 +164,7 @@ Please note that we add `$ARG1$` /and/ change the name of the command
 
 Restart the NSClient++-service to load the changes.
 
-### **The op5 Monitor server-side**
+### **The OP5 Monitor server-side**
 
 First we need to modify the event handler-script. An example follows.
 

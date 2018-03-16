@@ -2,20 +2,20 @@
 
 ## **Introduction**
 
-This guide will describe how to use op5 Monitor to keep track of unused switch ports on your network.
+This guide will describe how to use OP5 Monitor to keep track of unused switch ports on your network.
 
 ## **Prerequisites**
 
 Before you start please make sure of the following:
 
--   op5 Monitor is installed
--   you have SNMP access from the op5 Monitor server to the switch(es) you would like to monitor
+-   OP5 Monitor is installed
+-   you have SNMP access from the OP5 Monitor server to the switch(es) you would like to monitor
 
 ## **Adding the command**
 
 To add the new command:
 
-1.  Open up the op5 Monitor configuration tool and click "**Commands**".
+1.  Open up the OP5 Monitor configuration tool and click "**Commands**".
 2.  Add a new check command with the following data:
 
         command_name  check_portstatus
@@ -30,7 +30,7 @@ To add the new command:
 
 To add the new service:
 
-1.  Open up the op5 Monitor configuration tool.
+1.  Open up the OP5 Monitor configuration tool.
 2.  Pick up the host you like to add the service to and click "**Services for this host**"
 3.  Add a new service like this
 

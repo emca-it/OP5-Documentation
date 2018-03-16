@@ -6,19 +6,6 @@
 
 It does not backup the operating system nor does it include logger data.
 
-**Table of Content**
-
--   [About](#op5-backup-About)
--   [Configuration](#op5-backup-Configuration)
--   [Create a backup](#op5-backup-Createabackup)
-    -   [Creating a full backup](#op5-backup-Creatingafullbackup)
-    -   [Creating a custom backup](#op5-backup-Creatingacustombackup)
-    -   [Creating a change arch backup](#op5-backup-Creatingachangearchbackup)
--   [Restoring a backup](#op5-backup-Restoringabackup)
--   [To restore a full backup type:](#op5-backup-Torestoreafullbackuptype:)
--   [Verify a backup](#op5-backup-Verifyabackup)
--   [Deleting a backup](#op5-backup-Deletingabackup)
-
 # Configuration
 
 The configuration for op5-backup is located in:
@@ -42,7 +29,7 @@ A full backup will back up the following (if installed):
 -   Logserver
 -   Trapper
 
-To run a full backup of your op5 server type in the console:
+To run a full backup of your OP5 server type in the console:
 
 ``` {style="margin-left: 60.0px;"}
 op5-backup
@@ -110,7 +97,7 @@ Only do a full restore when using a local terminal. Do not restore via SSH. The 
 # Verify a backup
 
 It is very good practice to verify the backups from time to time. Especially after a manual backup.
- This is done using SSH or the console of the op5 server.
+ This is done using SSH or the console of the OP5 server.
 
 ``` {style="margin-left: 30.0px;"}
 tar vft <backup-file>

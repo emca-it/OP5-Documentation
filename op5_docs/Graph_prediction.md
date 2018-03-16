@@ -5,11 +5,6 @@
 A graph prediction plots a line across the graph to predict when it will cross the thresholds.
 ![](attachments/16482348/16679163.png)
 
-**Table of Content**
-
--   [About ](#Graphprediction-About)
--   [Activate graph prediction](#Graphprediction-Activategraphprediction)
-
 # Activate graph prediction
 
 The graph prediction is not used by default. To enable graph prediction you have to change the template that is used for the specific check command.

@@ -8,18 +8,18 @@ This is an unsupported plugin. More information about the bischeck plugin can be
 
 ## Prerequisites
 
-A op5 Monitor installation with Bischeck installed. For information on how to install this addon, please read: [Installing Bischeck](Installing_Bischeck)
+A OP5 Monitor installation with Bischeck installed. For information on how to install this addon, please read: [Installing Bischeck](Installing_Bischeck)
 
 ## 
-Getting started with Bischeck and op5 Monitor
+Getting started with Bischeck and OP5 Monitor
 
-Until version 6.1 of op5 Monitor all monitoring was limited to static thresholds, like the classic 90% utilization for a file system. In many business cases static thresholds are not enough since they only provide a limited granularity as to when an alarm should be triggered. In the file system example it can be equally important to have a threshold for the speed of growth of the utilization. This means that we need to be able to define a threshold by calculating a utilization delta over a period of time. With Bischeck Adaptive and dynamic thresholds we can:
+Until version 6.1 of OP5 Monitor all monitoring was limited to static thresholds, like the classic 90% utilization for a file system. In many business cases static thresholds are not enough since they only provide a limited granularity as to when an alarm should be triggered. In the file system example it can be equally important to have a threshold for the speed of growth of the utilization. This means that we need to be able to define a threshold by calculating a utilization delta over a period of time. With Bischeck Adaptive and dynamic thresholds we can:
 
 -   Define different threshold depending on the time of the day, day of the week or month
 
 -   Calculate thresholds based on historical data using mathematical functions like average, max, sum, etc
 
-All this, and much more, can be done with Bischeck. Bischeck integrates with op5 Monitor over standard API like Livestatus and NSCA.
+All this, and much more, can be done with Bischeck. Bischeck integrates with OP5 Monitor over standard API like Livestatus and NSCA.
 
 For this article we will use an example from the area of network traffic. Our imaginary customer's network load differs a lot between day and night but previously the same threshold has been used irregardless of time of day. During the night a huge volume of backup data is transferred over the network which often pushes the utilization over the 80% utilization limit set for critical level. This behavior is acceptable during the night but not during the day. The result in this scenario is that our customer experiences a large number of alarms during the night even though the situation is perfectly acceptable. One solution is to increase the threshold for critical alarms to 90% but that will not be acceptable during the day. Another solution is to disable notifications during the night but that will be like driving blind.
 
@@ -84,11 +84,11 @@ Let's start with the core configuration file bischeck.xml. In this configuration
 
  
 
-In Bischeck we have three main configuration concepts that define what to monitor; host, service and serviceitem. The host and service name must be equivalent to what is configured in op5 Monitor as a passive service.
+In Bischeck we have three main configuration concepts that define what to monitor; host, service and serviceitem. The host and service name must be equivalent to what is configured in OP5 Monitor as a passive service.
 
 In Bischeck the host definition acts only as a container for the rest of the configuration. Service defines the connection method to be used against the system to monitor and the schedule to monitor. Serviceitems defines the query used to retrieve data and the threshold class that will be used to determine threshold level for the measured data. A host can have multiple services and a service can have multiple serviceitems, but the state level for the service is set by the serviceitem with the highest level of severity.
 
-Looking at our example we have defined a host called **moon** at line 4 and a service called **net** at line 7. At line 8 we can see that the service is executed every 15 minutes. At line 10 we define that the connection used by serviceitems is done by using livestatus against the host localhost at socket port 6557. This is the default op5 Monitor livestatus port.
+Looking at our example we have defined a host called **moon** at line 4 and a service called **net** at line 7. At line 8 we can see that the service is executed every 15 minutes. At line 10 we define that the connection used by serviceitems is done by using livestatus against the host localhost at socket port 6557. This is the default OP5 Monitor livestatus port.
 
 For the service net we define two serviceitems. The first retrieve the performance data over livestatus for host moon and service "IF 2: eth0 traffic" with the performance data label “in\_traffic”. We do the same for serviceitem “out” but with performance data label “out\_traffic”.
 
@@ -187,7 +187,7 @@ For the service definition moon-totalTraffic-total we measured the total percent
 
 At line 56 we define two hourinterval; between 00:00-06:00 we have a threshold of 90 and between 07:00-23:00 the threshold level is 80.
 
-Now we have two new services, moon-net and moon-totalTraffic that we need to integrate with op5 Monitor. This is done by creating two services, net and totalTraffic, for host moon in op5 Monitor. The services must be enabled for passive checks.
+Now we have two new services, moon-net and moon-totalTraffic that we need to integrate with OP5 Monitor. This is done by creating two services, net and totalTraffic, for host moon in OP5 Monitor. The services must be enabled for passive checks.
 
 ## Finalize Bischeck Setup within OP5 Monitor
 
@@ -209,7 +209,7 @@ Bischeck is an incredible tool for bringing adaptive thresholds into OP5 Monitor
     2.  Alternatively you can find the Graphs mentioned in documentation but not provided within the tar, at [the Git repo.](https://github.com/thenodon/bischeck/tree/master/src/main/php/php4nagios/templates.)
     3.  Upload to /opt/monitor/op5/pnp/templates, and create a symbolic link in templates.dist pointing to the template in the templates-folder. This will insure your plugin will remain, throughout future updates to OP5.
 
-Hopefully this example gave you some ideas as to how Bischeck can be used together with op5 Monitor to create dynamic and adaptive thresholds! To read more about what you can do with Bischeck please visit [www.bischeck.org](http://www.bischeck.org/)  or the [Bischeck github page](https://github.com/thenodon/bisconf).
+Hopefully this example gave you some ideas as to how Bischeck can be used together with OP5 Monitor to create dynamic and adaptive thresholds! To read more about what you can do with Bischeck please visit [www.bischeck.org](http://www.bischeck.org/)  or the [Bischeck github page](https://github.com/thenodon/bisconf).
 
 ## Comments:
 

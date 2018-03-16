@@ -1,4 +1,4 @@
-# How to resize the filesystem in op5 Applicance
+# How to resize the filesystem in OP5 Applicance
 
 Version info
 
@@ -6,7 +6,7 @@ This partition-layout will be changed in APS 6.5 to use 2GB for /tmp if the hard
 
  
 
-On older op5 Appliance server installations, the partition layout for the */tmp* directory has a fixed size of approximately 15GB. In normal cases this is an non-issue but when running in virtual systems or in test-environments where you'll want to keep the virtual drives as small as possible you might want to change this. This can easily be solved by resizing the volume using LVM. Just follow the simple steps below.
+On older OP5 Appliance server installations, the partition layout for the */tmp* directory has a fixed size of approximately 15GB. In normal cases this is an non-issue but when running in virtual systems or in test-environments where you'll want to keep the virtual drives as small as possible you might want to change this. This can easily be solved by resizing the volume using LVM. Just follow the simple steps below.
 
  
 

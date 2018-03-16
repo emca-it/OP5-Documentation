@@ -4,11 +4,6 @@
 
 In this section we will take a look at time periods.
 
-**Table of Content**
-
--   [About](#Timeperiods-About)
--   [Add a time period](#Timeperiods-RTF33363232383a204865616469Addatimeperiod)
-
 # Add a time period
 
 Time periods is time defining objects that span over a week. You can define included time for each day of the week in the time period definition.

@@ -56,7 +56,7 @@ When you are done adding you services it should look like something like this:
 
 ## 4 - Visualize for everybody!
 
-Below are a few screenshots to give inspiration on what you can do to visualize your BSM-services on dashboards and big screens using Nagvis in op5 Monitor. Sky is the limit here. Popular choices are Visio-diagrams and also as simple as creating a spreadsheet to use as background as seen below:
+Below are a few screenshots to give inspiration on what you can do to visualize your BSM-services on dashboards and big screens using Nagvis in OP5 Monitor. Sky is the limit here. Popular choices are Visio-diagrams and also as simple as creating a spreadsheet to use as background as seen below:
 
 ![](attachments/5376342/5734737.png)
 

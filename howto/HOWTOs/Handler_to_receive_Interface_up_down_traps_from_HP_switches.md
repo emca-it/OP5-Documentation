@@ -4,7 +4,7 @@ Version
 
 This article was written for version 2.1 of Trapper, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
 Demo handler for snmp traps from HP switches. Tested with a ProCurve 2520G-8-Port / J9298A.
 

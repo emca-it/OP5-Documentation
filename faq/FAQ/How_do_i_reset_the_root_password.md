@@ -10,7 +10,7 @@ How do i reset the root password?
 
 * * * * *
 
-This is a short instruction on how to boot op5 Appliance System (or any other system..) into Single User mode for password recovery of the root account. Booting the system into single user mode is easy, all you need to do is interrupt the bootloader and change the arguments passed to the kernel during startup. To achieve this, follow these simple steps.
+This is a short instruction on how to boot OP5 Appliance System (or any other system..) into Single User mode for password recovery of the root account. Booting the system into single user mode is easy, all you need to do is interrupt the bootloader and change the arguments passed to the kernel during startup. To achieve this, follow these simple steps.
 
 -   Make sure you have console access and reboot the server.
 -   When the boot prompt show up, hit the keyboard a couple of time to stop grub from booting the kernel.

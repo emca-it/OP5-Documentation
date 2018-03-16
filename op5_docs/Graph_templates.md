@@ -4,11 +4,6 @@
 
 Graph templates controls how your graphs look. By changing the template for on check command you can customize how the graph for that check will look.
 
-**Table of Content**
-
--   [About ](#Graphtemplates-About)
--   [Changing Graph template](#Graphtemplates-changing_graph_templateChangingGraphtemplate)
-
 # Changing Graph template
 
 By default a the template default is used for drawing graphs. This can be changed for a specific check command.

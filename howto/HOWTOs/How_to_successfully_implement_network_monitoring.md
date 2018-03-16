@@ -36,7 +36,7 @@ Task /service-type
 
 Description
 
-Applicable op5 products
+Applicable OP5 products
 
 Commonly used plugins
 

@@ -1,6 +1,6 @@
 # ServiceNow Event Creation
 
-This guide provides the steps to add event creation bewteen op5 and ServiceNow. These steps are based on ServiceNow integration through instructions and scripts available from ServiceNow. Easily implemented within op5, can also be used by any Nagios based patform.
+This guide provides the steps to add event creation bewteen OP5 and ServiceNow. These steps are based on ServiceNow integration through instructions and scripts available from ServiceNow. Easily implemented within op5, can also be used by any Nagios based patform.
 
 ## How to add event creation between op5 Monitor and ServiceNow
 

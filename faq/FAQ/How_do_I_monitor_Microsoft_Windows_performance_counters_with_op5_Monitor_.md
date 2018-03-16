@@ -1,10 +1,10 @@
-# How do I monitor Microsoft Windows performance counters, with op5 Monitor?
+# How do I monitor Microsoft Windows performance counters, with OP5 Monitor?
 
 ## Question
 
 * * * * *
 
-How do I monitor Microsoft Windows performance counters, with op5 Monitor?
+How do I monitor Microsoft Windows performance counters, with OP5 Monitor?
 
 ## Answer
 

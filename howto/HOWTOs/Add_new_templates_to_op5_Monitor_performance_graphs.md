@@ -1,18 +1,18 @@
-# Add new templates to op5 Monitor performance graphs
+# Add new templates to OP5 Monitor performance graphs
 
 ## **Introduction**
 
 op5 Monitor includes support for graphing what’s known as “performance data” returned by check plugins that support this feature. Performance data can be anything that gives a more detailed picture of a particular check’s performance characteristics than the OK/WARNING/CRITICAL levels that Monitor reacts to.
 
-For example, check\_ping returns performance data for packet loss and round trip times. This data is stored by op5 Monitor and used to create graphs for different time periods, such as the last 24 hours and past week. This feature can be very helpful in identifying trends or potential problems in a network.
+For example, check\_ping returns performance data for packet loss and round trip times. This data is stored by OP5 Monitor and used to create graphs for different time periods, such as the last 24 hours and past week. This feature can be very helpful in identifying trends or potential problems in a network.
 
-The purpose of this article is to describe how one can add support for new plugins to op5 Monitor’s graph system, and create what is known as “templates” for the graph system.
+The purpose of this article is to describe how one can add support for new plugins to OP5 Monitor’s graph system, and create what is known as “templates” for the graph system.
 
 ## **Prerequisites**
 
 To be able to complete this how-to you will need the following:
 
--   op5 Monitor installed correctly
+-   OP5 Monitor installed correctly
 -   a host to which you can add a service for testing purposes
 -   a check, returning performance data that you want to graph (or use the dummy check)
 
@@ -57,7 +57,7 @@ Try executing the file, you should see output similar to this (all on one line):
 # /opt/plugins/check_dummy_howto OK: Perfdata graph dummy check|pct=11%;80;95;;val=139;350;450;;
 ```
 
-Now, open up op5 Monitor’s web interface and go to Configure. Add a new check command with the below settings:
+Now, open up OP5 Monitor’s web interface and go to Configure. Add a new check command with the below settings:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 command_name: check_dummy_howto command_line: $USER1$/check_dummy_howto
@@ -65,7 +65,7 @@ command_name: check_dummy_howto command_line: $USER1$/check_dummy_howto
 
 And save the command. Then add a service to a non-critical host using this check\_command. Remember to verify that the check works as expected by using “Test this service”
 
-If everything checks out, save the configuration. op5 Monitor will now start to execute check\_dummy\_howto with its regular check interval, and save the performance data returned by the script. Now is a good time for a coffee break, to let Monitor gather some data to work with.
+If everything checks out, save the configuration. OP5 Monitor will now start to execute check\_dummy\_howto with its regular check interval, and save the performance data returned by the script. Now is a good time for a coffee break, to let Monitor gather some data to work with.
 
 **
 **
@@ -171,7 +171,7 @@ That last part, “:STACK”, means that the second area will be stacked on top 
 
 ## **Conclusion**
 
-This how-to only scratches the surface of what is possible to do with graph templates in op5 Monitor. If you want to learn more, you can find documentation for the components here:
+This how-to only scratches the surface of what is possible to do with graph templates in OP5 Monitor. If you want to learn more, you can find documentation for the components here:
 
 RRDTool: <http://oss.oetiker.ch/rrdtool/doc/index.en.html>
 

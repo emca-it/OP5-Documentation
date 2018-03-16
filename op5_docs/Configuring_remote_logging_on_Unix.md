@@ -8,7 +8,7 @@ Most Unix and Linux systems have built-in support for syslog. Thus you do not ne
 
  On most systems, you will find a configuration file, */etc/syslog.conf* . This is where you enter the host name or IP address of your OP5 Monitor host.
 
-If your op5 Monitor host is on IP address 172.16.32.64, and you want to forward all facilities to it, append the following to /etc/syslog.conf and restart your syslog daemon:
+If your OP5 Monitor host is on IP address 172.16.32.64, and you want to forward all facilities to it, append the following to /etc/syslog.conf and restart your syslog daemon:
 
 ``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
  . @172.16.32.64

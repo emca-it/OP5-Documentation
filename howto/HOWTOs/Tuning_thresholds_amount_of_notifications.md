@@ -4,13 +4,13 @@
 
  
 
-Any monitoring system, including op5 Monitor, needs to be adjusted to suit your organizations specific needs. This how-to describes the basics of identifying the source(s) of your notifications and adjusting thresholds and configuration to get rid of false/uninteresting or exaggerated alerts (“alarms”/notifications). A new installation definitely needs tuning, but it’s also a good idea to generate reports on a regular basis to prevent being flooded with notifications.
+Any monitoring system, including OP5 Monitor, needs to be adjusted to suit your organizations specific needs. This how-to describes the basics of identifying the source(s) of your notifications and adjusting thresholds and configuration to get rid of false/uninteresting or exaggerated alerts (“alarms”/notifications). A new installation definitely needs tuning, but it’s also a good idea to generate reports on a regular basis to prevent being flooded with notifications.
 
 ## Basic workflow
 
  
 
-When tuning an op5 Monitor configuration you follow three basic steps:
+When tuning an OP5 Monitor configuration you follow three basic steps:
 
 -   Create a report to identify your top alert producers
 -   Make a decision on what to do (use table below****)****

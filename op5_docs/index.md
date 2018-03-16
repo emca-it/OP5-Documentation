@@ -218,12 +218,12 @@
 
             -   [Folders and files](Folders_and_files)
 
-            -   [How op5 Monitor works "under the hood"](How_op5_Monitor_works_under_the_hood_)
-                -   [.How op5 Monitor works "under the hood" v6](.How_op5_Monitor_works_under_the_hood_v6)
+            -   [How OP5 Monitor works "under the hood"](How_op5_Monitor_works_under_the_hood_)
+                -   [.How OP5 Monitor works "under the hood" v6](.How_op5_Monitor_works_under_the_hood_v6)
 
-                -   [.How op5 Monitor works "under the hood" v7.1.6](.How_op5_Monitor_works_under_the_hood_v7.1.6)
+                -   [.How OP5 Monitor works "under the hood" v7.1.6](.How_op5_Monitor_works_under_the_hood_v7.1.6)
 
-                -   [.How op5 Monitor works "under the hood" v7.3.0](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+                -   [.How OP5 Monitor works "under the hood" v7.3.0](.How_op5_Monitor_works_under_the_hood_v7.3.0)
 
             -   [Tweaks](Tweaks)
 
@@ -359,12 +359,12 @@
 
             -   [.Plugins v7.3.21](.Plugins-v7.3.21_23792277.html)
 
-            -   [Adding your first plugin to op5 Monitor](Adding_your_first_plugin_to_op5_Monitor)
-                -   [.Adding your first plugin to op5 Monitor v6](.Adding-your-first-plugin-to-op5-Monitor-v6_19073987.html)
+            -   [Adding your first plugin to OP5 Monitor](Adding_your_first_plugin_to_op5_Monitor)
+                -   [.Adding your first plugin to OP5 Monitor v6](.Adding-your-first-plugin-to-op5-Monitor-v6_19073987.html)
 
-                -   [.Adding your first plugin to op5 Monitor v7.3.0](.Adding-your-first-plugin-to-op5-Monitor-v7.3.0_19073986.html)
+                -   [.Adding your first plugin to OP5 Monitor v7.3.0](.Adding-your-first-plugin-to-op5-Monitor-v7.3.0_19073986.html)
 
-                -   [.Adding your first plugin to op5 Monitor v7.3.21](.Adding-your-first-plugin-to-op5-Monitor-v7.3.21_23792301.html)
+                -   [.Adding your first plugin to OP5 Monitor v7.3.21](.Adding-your-first-plugin-to-op5-Monitor-v7.3.21_23792301.html)
 
             -   [Creating a more complex plugin](Creating_a_more_complex_plugin)
                 -   [.Creating a more complex plugin v6](.Creating-a-more-complex-plugin-v6_19073993.html)
@@ -496,10 +496,10 @@
 
             -   [.Installation and Upgrading v7.1.6](.Installation-and-Upgrading-v7.1.6_17072704.html)
 
-    -   [Docs for all op5 releases](Docs_for_all_op5_releases)
-        -   [.Docs for all op5 releases v6](.Docs-for-all-op5-releases-v6_17072148.html)
+    -   [Docs for all OP5 releases](Docs_for_all_op5_releases)
+        -   [.Docs for all OP5 releases v6](.Docs-for-all-op5-releases-v6_17072148.html)
 
-        -   [.Docs for all op5 releases v7.2.9](.Docs-for-all-op5-releases-v7.2.9_18317592.html)
+        -   [.Docs for all OP5 releases v7.2.9](.Docs-for-all-op5-releases-v7.2.9_18317592.html)
 
         -   [op5 Appliance System - PDF](op5_Appliance_System_-_PDF)
 

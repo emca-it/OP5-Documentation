@@ -10,13 +10,6 @@ Earlier we [mentioned that Naemon maintains plugin compatibility with Nagios](ht
 
 To get you moving, we have provided just a few of the most important macros below. These are most important things to understand before you go to another page.
 
-**Table of Contents**
-
--   [About](#Pathsandmacros-About)
--   [Most important macros](#Pathsandmacros-Mostimportantmacros)
-    -   [USER series](#Pathsandmacros-USERseries)
-    -   [ARGument series](#Pathsandmacros-ARGumentseries)
-
 # Most important macros
 
 ## USER series

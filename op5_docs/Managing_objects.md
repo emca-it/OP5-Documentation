@@ -8,55 +8,6 @@ In the subsections to Managing objects we will assume that you start from the ma
 
 ![](attachments/16482396/21300106.png)
 
-**Table of Content**
-
--   [About](#Managingobjects-About)
--   [Before you start](#Managingobjects-Beforeyoustart)
-    -   [Add new](#Managingobjects-Addnew)
-    -   [Configuration files](#Managingobjects-Configurationfiles)
-    -   [Help](#Managingobjects-Help)
-    -   [Templates](#Managingobjects-Templates)
--   [Contacts](#Managingobjects-ContactsContacts)
-    -   [Adding a contact](#Managingobjects-Addingacontact)
-    -   [Modify a contact](#Managingobjects-Modifyacontact)
-    -   [Delete a contact](#Managingobjects-Deleteacontact)
--   [Hosts](#Managingobjects-Hosts)
-    -   [Adding a host with new host option](#Managingobjects-Addingahostwithnewhostoption)
-    -   [Adding hosts with network scan](#Managingobjects-Addinghostswithnetworkscan)
-    -   [Modifying a host](#Managingobjects-Modifyingahost)
-    -   [Deleting a host](#Managingobjects-Deletingahost)
-    -   [Renaming objects](#Managingobjects-Renamingobjects)
-    -   [Adding a new autoscan configuration](#Managingobjects-Addinganewautoscanconfiguration)
-    -   [Adding a host to blacklist](#Managingobjects-Addingahosttoblacklist)
-    -   [The result](#Managingobjects-Theresult)
--   [Services](#Managingobjects-Services)
-    -   [Adding a service](#Managingobjects-adding-serviceAddingaservice)
-    -   [Modifying a service](#Managingobjects-modify-serviceModifyingaservice)
-    -   [Test this check](#Managingobjects-Testthischeck)
-    -   [Deleting a service](#Managingobjects-Deletingaservice)
-    -   [Scanning host for network services](#Managingobjects-Scanninghostfornetworkservices)
-    -   [Scanning a host for snmp interfaces](#Managingobjects-Scanningahostforsnmpinterfaces)
--   [Scanning host for windows services](#Managingobjects-Scanninghostforwindowsservices)
-    -   [Scan for services using agent](#Managingobjects-Scanforservicesusingagent)
-    -   [Scan for service using WMI](#Managingobjects-ScanforserviceusingWMI)
--   [Custom Variables](#Managingobjects-CustomVariables)
-    -   [Creating a new custom variable](#Managingobjects-create-custom-varCreatinganewcustomvariable)
-    -   [Example](#Managingobjects-Example)
--   [Dynamic Button](#Managingobjects-DynamicButton)
-    -   [Configuration](#Managingobjects-Configuration)
--   [Escalations](#Managingobjects-Escalations)
-    -   [Adding a host escalation](#Managingobjects-Addingahostescalation)
-    -   [Modifying a host escalation](#Managingobjects-Modifyingahostescalation)
-    -   [Deleting a host escalation](#Managingobjects-Deletingahostescalation)
--   [Access rights and contacts](#Managingobjects-Accessrightsandcontacts)
-    -   [Connecting access rights to contacts](#Managingobjects-Connectingaccessrightstocontacts)
--   [Management packs](#Managingobjects-Managementpacks)
-    -   [Creating management packs](#Managingobjects-Creatingmanagementpacks)
-    -   [Group in Group with Management Packs](#Managingobjects-GroupinGroupwithManagementPacks)
-    -   [Activate Management Packs](#Managingobjects-ActivateManagementPacks)
-    -   [Import Management Packs](#Managingobjects-ImportManagementPacks)
-    -   [Export Management Packs](#Managingobjects-ExportManagementPacks)
-
 # 
 Before you start
 
@@ -249,7 +200,7 @@ $ exit
 # mon start
 ```
 
-If there is a lot of historical data this program can take a while to execute and during this time the OP5 monitor service will not be running.
+If there is a lot of historical data this program can take a while to execute and during this time the OP5 Monitor service will not be running.
 
 Note that this does not work on schedule downtime objects. If a host is renamed that has a scheduled downtime the scheduled downtime will be removed and needs to be re-configured.
 
@@ -702,7 +653,7 @@ To be able to login to OP5 Monitor you need to have a user, described in Local u
 
 A management pack is essantially a group of services connected to a hostgroup with the possibility to add custom variables. These are then used by the Host Wizard.
  The benefit with using management packs is that the monitoring will be more homogenous.
- The picture below shows how management packs integrates into OP5 monitor.
+ The picture below shows how management packs integrates into OP5 Monitor.
  ![](attachments/16482396/21300144.png)
 
 ## Creating management packs

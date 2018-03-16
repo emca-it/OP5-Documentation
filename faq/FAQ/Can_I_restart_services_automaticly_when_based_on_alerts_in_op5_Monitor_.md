@@ -1,10 +1,10 @@
-# Can I restart services automaticly when based on alerts in op5 Monitor?
+# Can I restart services automaticly when based on alerts in OP5 Monitor?
 
 ## Question
 
 * * * * *
 
-Can I restart services automaticly when based on alerts in op5 Monitor?
+Can I restart services automaticly when based on alerts in OP5 Monitor?
 
 ## Answer
 

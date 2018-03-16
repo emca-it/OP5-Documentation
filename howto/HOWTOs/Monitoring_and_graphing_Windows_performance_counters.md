@@ -1,6 +1,6 @@
 # Monitoring and graphing Windows performance counters
 
-This how-to covers how to monitor and graph a Windows performance counter in op5 Monitor and op5 Statistics.
+This how-to covers how to monitor and graph a Windows performance counter in OP5 Monitor and OP5 Statistics.
 
 op5 Statistics is considered deprecated software and is not supported.
 
@@ -22,7 +22,7 @@ Request the counter-value from command-line to verify access and to examine the 
 
 (in this example the returned value is an integer with a value of 20)
 
-To monitor this counter in op5 Monitor, just add the following check-command and service:
+To monitor this counter in OP5 Monitor, just add the following check-command and service:
 
 <table>
 <colgroup>
@@ -41,7 +41,7 @@ $USER1$/check_nt -H $HOSTADDRESS$ -v COUNTER -l “Terminal Services Session (Co
 
 ## **Graphing the performance counter**
 
-To graph this counter in op5 Statistics, follow the steps below. Some of the steps can be performed faster using the duplicate function which is available for Data Templates, Graph Templates and Host Templates. This guide will however cover how to manually add new templates from scratch.:
+To graph this counter in OP5 Statistics, follow the steps below. Some of the steps can be performed faster using the duplicate function which is available for Data Templates, Graph Templates and Host Templates. This guide will however cover how to manually add new templates from scratch.:
 
 1. If you haven’t already added the host, for which you want to create graphs, to Statistics device-list, export the device from Monitor webconfig:
  ‘Configure’ -\> ‘Export hosts to statistics’:

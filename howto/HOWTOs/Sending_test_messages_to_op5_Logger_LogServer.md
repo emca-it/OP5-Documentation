@@ -1,10 +1,10 @@
-# Sending test messages to op5 Logger/LogServer
+# Sending test messages to OP5 Logger/LogServer
 
 Version
 
-This article was written for version 7.0 of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 7.0 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
 # Introduction
 

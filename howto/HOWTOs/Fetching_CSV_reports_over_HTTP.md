@@ -5,7 +5,7 @@
 -   [Caveats](https://kb.op5.com/display/HOWTOs/Fetching+CSV+reports+over+HTTP#FetchingCSVreportsoverHTTP-Caveats)
 -   [References](https://kb.op5.com/display/HOWTOs/Fetching+CSV+reports+over+HTTP#FetchingCSVreportsoverHTTP-References)
 
-The op5 Monitor HTTP API provides access to report data, delivering the E in the [ETL model](http://en.wikipedia.org/wiki/Extract,_transform,_load) for customers interested in performing their own report analysis in a data warehouse solution. In some cases, custom analysis is not required and in those cases the data in the standard op5 Monitor reports often provides the necessary information. op5 Monitor does not provide an API for getting existing reports so this solution is not guaranteed to work in the future, but they can be fetched over HTTP with a little work. To do this, two steps are required: authentication and setting parameters.
+The OP5 Monitor HTTP API provides access to report data, delivering the E in the [ETL model](http://en.wikipedia.org/wiki/Extract,_transform,_load) for customers interested in performing their own report analysis in a data warehouse solution. In some cases, custom analysis is not required and in those cases the data in the standard OP5 Monitor reports often provides the necessary information. OP5 Monitor does not provide an API for getting existing reports so this solution is not guaranteed to work in the future, but they can be fetched over HTTP with a little work. To do this, two steps are required: authentication and setting parameters.
 
 ## Authentication
 
@@ -28,7 +28,7 @@ https://192.168.1.150/monitor/index.php/alert\_history/generate?username=monitor
 
 ## Report parameters
 
-Set up the report you want to generate by using the op5 Monitor web interface. Once the report is generated, click the "Direct link" button and copy the URL. You can now use the URL from curl or another tool. Append **&output\_format=csv** and then append the authentication mentioned above.
+Set up the report you want to generate by using the OP5 Monitor web interface. Once the report is generated, click the "Direct link" button and copy the URL. You can now use the URL from curl or another tool. Append **&output\_format=csv** and then append the authentication mentioned above.
 
 As this is not an API, the parameter names and meaning may change between releases so make sure you verify on each upgrade.
 

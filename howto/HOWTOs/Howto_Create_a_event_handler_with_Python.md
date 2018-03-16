@@ -8,7 +8,7 @@ If you're not familiar with Python, check out our check plugin tutorial for more
 
 ## How does event handlers work?
 
-Every time a service change state, op5 Monitor will run the event handler that's associated with that service or host.Just like check plugins, an event handler is a external program or script executed by the scheduler. It's given some arguments and then performs some logic.
+Every time a service change state, OP5 Monitor will run the event handler that's associated with that service or host.Just like check plugins, an event handler is a external program or script executed by the scheduler. It's given some arguments and then performs some logic.
 
 The event handler is defined as a command and can use the built in *Naemon* or [*Nagios macros*](http://nagios.sourceforge.net/docs/3_0/macrolist.html).
 
@@ -56,9 +56,9 @@ if args.service_attempt == 1 and args.service_state == "CRITICAL" and args.servi
 
 Once we have created our event handler, it should be placed in /opt/plugins/custom/.
 
-### Step 2, create the command and associate with service in op5 Monitor
+### Step 2, create the command and associate with service in OP5 Monitor
 
-In op5 Monitor, go to Configure -\> Commands and make sure that "Add New" is selected.
+In OP5 Monitor, go to Configure -\> Commands and make sure that "Add New" is selected.
 
 command\_name: increase-memory
 command\_line: \$USER3\$/custom/increase-memory.py --service-state \$SERVICESTATE\$ --service-state-type \$SERVICESTATETYPE\$ --service-attempt \$SERVICEATTEMPT\$ --host-name \$HOSTNAME\$

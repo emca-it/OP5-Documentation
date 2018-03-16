@@ -1,6 +1,6 @@
 # Why security scanners shouldn't be trusted blindly
 
-## I ran Nessus/other security scanner against my op5 Monitor machine, and it told me that several software packages are out of date and contain vulnerabilities, but according to "yum update" there are no more recent versions available!
+## I ran Nessus/other security scanner against my OP5 Monitor machine, and it told me that several software packages are out of date and contain vulnerabilities, but according to "yum update" there are no more recent versions available!
 
 * * * * *
 
@@ -14,7 +14,7 @@ At the time of writing, the patch level of PHP is 46 (php-5.3.3-46) -- meaning t
 
  
 
-So, as long as you are running the most recent packages provided by RedHat for RHEL/CentOS, or from op5 for op5 Appliance OS (APS), there should generally be no reason to be alarmed, provided the Operating System version is still supported according to [RedHat's Support Life Cycle Matrix](https://access.redhat.com/support/policy/updates/errata). You can read about RedHat's backporting policy [here](https://access.redhat.com/security/updates/backporting).
+So, as long as you are running the most recent packages provided by RedHat for RHEL/CentOS, or from OP5 for OP5 Appliance OS (APS), there should generally be no reason to be alarmed, provided the Operating System version is still supported according to [RedHat's Support Life Cycle Matrix](https://access.redhat.com/support/policy/updates/errata). You can read about RedHat's backporting policy [here](https://access.redhat.com/security/updates/backporting).
 
  
 

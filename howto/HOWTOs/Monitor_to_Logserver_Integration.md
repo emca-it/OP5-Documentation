@@ -1,14 +1,14 @@
 # Monitor to Logserver Integration
 
-You can use op5 Monitor to query op5 LogServer on how many matches a filter return and then throw OK|WARNING|CRITICAL values depending on the information returned. You can also get a url in your Monitor window that points to the op5 LogServer with the current filter checked.
+You can use OP5 Monitor to query OP5 LogServer on how many matches a filter return and then throw OK|WARNING|CRITICAL values depending on the information returned. You can also get a url in your Monitor window that points to the OP5 LogServer with the current filter checked.
 
 ## Prerequisites
 
-Before you begin you need to have op5 Monitor and op5 LogServer configured and up and running.
+Before you begin you need to have OP5 Monitor and OP5 LogServer configured and up and running.
 
--   op5 Monitor
+-   OP5 Monitor
     -   Updated to latest release
--   op5 LogServer
+-   OP5 LogServer
     -   Updated to latest release
     -   A user created with access to the filters you will use
     -   One or more working filters
@@ -39,7 +39,7 @@ check\_logserver\_host\_filter
 
 \$USER1\$/check\_ls\_log -r \<logserverhost\> -l \<user\> -p \<password\> -f "\$ARG1\$" -H “\$ARG2\$” -i \$ARG3\$ -w \$ARG4\$ -c \$ARG5\$
 
-*\<user\> and \<password\> must be a valid user/password in op5 Logserver.*
+*\<user\> and \<password\> must be a valid user/password in OP5 Logserver.*
 
  
 

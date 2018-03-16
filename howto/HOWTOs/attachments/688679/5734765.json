@@ -3,7 +3,7 @@
         {
             "description": "This is the first version of the Standalone VMware ESXi virtualization host management pack",
             "version": 1,
-            "description": "This update is part of a change of all vmware check commands shipped with op5 Monitor. It should not affect on the check commands used by this management pack",
+            "description": "This update is part of a change of all vmware check commands shipped with OP5 Monitor. It should not affect on the check commands used by this management pack",
             "version": 2
         }
     ],

@@ -4,12 +4,6 @@
 
 Host wizard is a tool to create a new host based on management packs (preconfigured services).
 
-**Table of Content**
-
--   [About](#HostWizard-About)
--   [Adding a host using Host wizard](#HostWizard-AddingahostusingHostwizard)
-    -   [Groups rights for Host Wizard](#HostWizard-GroupsrightsforHostWizard)
-
 # Adding a host using Host wizard
 
 -   Go to the **Configuration** menu and select **Host Wizard** 

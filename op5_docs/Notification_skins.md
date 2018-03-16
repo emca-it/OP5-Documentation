@@ -4,14 +4,6 @@
 
 The three basic notifications (email, sms and htmlpost notifications) are all using something called notification skins. The notification skins are templates describing how the notification is supposed to look like when it is sent to its receiver.
 
-**Table of Content**
-
--   [About](#Notificationskins-About)
--   [Files](#Notificationskins-Files)
--   [The content of a notification skin](#Notificationskins-Thecontentofanotificationskin)
--   [Creating custom notification skins](#Notificationskins-Creatingcustomnotificationskins)
-    -   [To create custom notification skins](#Notificationskins-Tocreatecustomnotificationskins)
-
 # Files
 
 If we will take a look at the notify folder we will find the following skins folders:
@@ -49,7 +41,7 @@ This is a very simple skin. The reason for that is that you can not send too muc
 
  `From: op5Monitor To: #CONTACTEMAIL# Subject: [op5] #NOTIFICATIONTYPE#: '#SERVICEDESC#' on '#HOSTNAME#' is #SERVICESTATE#`
 ` #extra_host_vars#`
-` op5 Monitor`
+` OP5 Monitor`
 ` Service #NOTIFICATIONTYPE# detected #LASTSERVICESTATECHANGE#. '#SERVICEDESC#' on host '#HOSTNAME#' has passed the #SERVICESTATE# threshold.`
 ` #STATUS_URL#`
 ` Additional info;`

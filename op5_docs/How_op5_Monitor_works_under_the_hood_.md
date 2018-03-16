@@ -1,8 +1,8 @@
-# How op5 Monitor works "under the hood"
+# How OP5 Monitor works "under the hood"
 
 # Introduction
 
-The purpose of this article is to give the reader a high-level overview of how op5 Monitor works "under the hood".
+The purpose of this article is to give the reader a high-level overview of how OP5 Monitor works "under the hood".
 It will cover the different components of the product and how they interact with each other.
 
 # Overview
@@ -14,7 +14,7 @@ This illustration is a simplified version of the components relationships*
 
 # Components
 
-Below are descriptions of the most critical components included in op5 Monitor:
+Below are descriptions of the most critical components included in OP5 Monitor:
 
 ## Naemon -
 
@@ -29,7 +29,7 @@ but can easily be extended to support other applications, thanks to it's compati
 
 ### Additional information
 
--   [Plugins included in op5 Monitor](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+-   [Plugins included in OP5 Monitor](.How_op5_Monitor_works_under_the_hood_v7.3.0)
 -   HOW-TO: [Developing your own check plugin](.How_op5_Monitor_works_under_the_hood_v7.3.0)
 -   HOW-TO: [Installing third-party plugins](https://kb.op5.com/display/HOWTOs/Installing+third-party+plugins)
 -   Blog post: [op5 on Naemon, Nagios and the future](https://www.op5.com/blog/news/op5-naemon-nagios-future/)
@@ -89,7 +89,7 @@ Trapper can be managed in Ninja or via the command line tool "traped".
 ### Additional information
 
 -   [Trapper documentation](op5_Trapper_Manual)
--   HOW-TO: [Getting started with op5 Trapper](https://kb.op5.com/display/HOWTOs/Getting+started+with+op5+Trapper)
+-   HOW-TO: [Getting started with OP5 Trapper](https://kb.op5.com/display/HOWTOs/Getting+started+with+op5+Trapper)
 -   [Manual page for snmptrapd configuration](http://www.net-snmp.org/docs/man/snmptrapd.conf.html) (external)
 
 ## Synergy -
@@ -108,7 +108,7 @@ Synergy can be configured in Ninja under "Business Services" or with configurati
 -   [Business Services documentation](.How_op5_Monitor_works_under_the_hood_v7.3.0)
 -   [Business Service monitoring manual](.How_op5_Monitor_works_under_the_hood_v7.3.0)
 -   HOW-TO: [4 steps to turn on simple BSM in your system](https://kb.op5.com/display/HOWTOs/4+steps+to+turn+on+simple+BSM+in+your+system)
--   Webinar: [Introduction to Business Services Management in op5 Monitor](https://youtu.be/w5l_URdQKUs)
+-   Webinar: [Introduction to Business Services Management in OP5 Monitor](https://youtu.be/w5l_URdQKUs)
 
 ## Ninja -
 

@@ -12,7 +12,7 @@ How do I set up a geographical map in NagVis?
 
 The current geographical map feature in NagVis does not work straight out-of-the-box, and needs some configuration to get going.
 
-1.  In the op5 Monitor interface, click *Monitor*, and then *NagVis* via the main menu.
+1.  In the OP5 Monitor interface, click *Monitor*, and then *NagVis* via the main menu.
 2.  In the NagVis interface, click *Options -\> Manage Maps -\> Create Map*.
 3.  Set *ID* and A*lias*, and select *Geographical map *as the *Map Type*. The alias is the name that will be displayed in the interface.
 4.  An error message will now show up that says "No location source file given. Terminate rendering geomap", but don't worry and click *Edit Map -\> Map Options*.

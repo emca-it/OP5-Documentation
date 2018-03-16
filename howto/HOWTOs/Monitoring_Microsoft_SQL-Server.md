@@ -1,6 +1,6 @@
 # Monitoring Microsoft SQL-Server
 
-Microsoft SQL Server is one of the most used databases today. Because it often has an important role in your business you need to make sure you get alerted if there is a problem with your databases. The purpose of this article is to describe how op5 Monitor can be used to monitor both important environment parts of the operating system and how to perform queries to the database. In this document we will assume that Microsoft SQL Server is the main application running on the server.
+Microsoft SQL Server is one of the most used databases today. Because it often has an important role in your business you need to make sure you get alerted if there is a problem with your databases. The purpose of this article is to describe how OP5 Monitor can be used to monitor both important environment parts of the operating system and how to perform queries to the database. In this document we will assume that Microsoft SQL Server is the main application running on the server.
 
 ## **This will be done**
 
@@ -13,7 +13,7 @@ The suggested configuration components for monitoring Microsoft SQL Server are:
 
 ## **Check commands**
 
-Add the required check-commands, if they don’t already exist in your configuration, with the import functionality in op5 Monitor (‘Configure’ -\> ‘Commands’ -\> ‘Check Command Import’):
+Add the required check-commands, if they don’t already exist in your configuration, with the import functionality in OP5 Monitor (‘Configure’ -\> ‘Commands’ -\> ‘Check Command Import’):
 
 ### **List of commands**
 
@@ -83,7 +83,7 @@ check\_nt\_physical\_disk\_time
 check\_mssql\_num\_deadlocks
 
 -   Deadlocks appear when two processes, who has locked one “pieces of data” each, both try to lock the same “new piece” of data at the same time. Every involved process will be waiting indefinitely for the other process to release the lock. Microsoft SQL Server will detect and kill one of the processes which means that one process will loose data
--   op5 Monitor will send a Critical alert as soon as one deadlock appears
+-   OP5 Monitor will send a Critical alert as soon as one deadlock appears
 
 check\_mssql\_num\_user\_connections
 

@@ -1,21 +1,21 @@
-# How to write your own plugin to op5 Monitor or Nagios
+# How to write your own plugin to OP5 Monitor or Nagios
 
 ## Introduction
 
-op5 Monitor is shipped with many plugins that cover most monitoring needs. But what to do if one of your corporate applications can not be monitored straight out of the box? Often you can find a plugin at [www.monitoring-plugins.org](https://www.monitoring-plugins.org/) or [www.nagiosexchange.org](http://www.nagiosexchange.org/ "Nagios exchange"), and since op5 Monitor, Naemon and Nagios uses the same plugin format you can often simply download a plugin, put it in the correct directory and start using it.
+op5 Monitor is shipped with many plugins that cover most monitoring needs. But what to do if one of your corporate applications can not be monitored straight out of the box? Often you can find a plugin at [www.monitoring-plugins.org](https://www.monitoring-plugins.org/) or [www.nagiosexchange.org](http://www.nagiosexchange.org/ "Nagios exchange"), and since OP5 Monitor, Naemon and Nagios uses the same plugin format you can often simply download a plugin, put it in the correct directory and start using it.
 
-However, if you can not find a suitable plugin anywhere you might have to write your own plugin. This article aims to describe the format and walk you through writing a simple plugin. It is intended for the op5 system administrator who wants to extend the capabilities of an op5 System and leave the boss impressed with how precise data can be extracted.
+However, if you can not find a suitable plugin anywhere you might have to write your own plugin. This article aims to describe the format and walk you through writing a simple plugin. It is intended for the OP5 system administrator who wants to extend the capabilities of an OP5 System and leave the boss impressed with how precise data can be extracted.
 
 ## Prerequisites
 
 -   Scripting/Programming knowledge
--   Root-privileges  on the host system running op5 Monitor
+-   Root-privileges  on the host system running OP5 Monitor
 
  
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 
@@ -23,11 +23,11 @@ However, if you can not find a suitable plugin anywhere you might have to write 
 
 ## Accessing and editing files
 
-In order to develop plugins of your own, you will need shell access and sometimes the possibility to transfers files to and from the op5 server.
+In order to develop plugins of your own, you will need shell access and sometimes the possibility to transfers files to and from the OP5 server.
 
 If you do not already have this, software that can provide this for Windows is [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/) for terminal access via SSH and [WinSCP](http://winscp.net/) for file transfers via SFTP (SSH). If you use a Macintosh or UNIX/Linux desktop you can use the commands ssh or scp from a local terminal window.
 
-You will need to use a text editor to write your plugin. On the op5 server there are two popular editors that you could use for this purpose: vim and jed.
+You will need to use a text editor to write your plugin. On the OP5 server there are two popular editors that you could use for this purpose: vim and jed.
 
 vim is a very capable mode based editor that has a high usability threshold, whilst jed is also a capable text editor that is friendlier to first time users. If you do not know what you want to use, it is a good idea to start with jed. If you want to use jed, you need to have a terminal with light text and dark background to see the text.
 
@@ -166,7 +166,7 @@ fi
 
  
 
-Now add a check\_command like this using the op5 Monitor web gui:
+Now add a check\_command like this using the OP5 Monitor web gui:
 
 <table>
 <colgroup>
@@ -200,7 +200,7 @@ In order to use the perl example you only need the copy the file into the /opt/p
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 

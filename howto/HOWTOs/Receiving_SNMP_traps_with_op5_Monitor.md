@@ -1,6 +1,6 @@
-# Receiving SNMP traps with op5 Monitor
+# Receiving SNMP traps with OP5 Monitor
 
-This article remains for historical reference, to handle traps in later versions of op5 Monitor see: [op5 Trapper Home](https://kb.op5.com/display/DOC/op5+Trapper)
+This article remains for historical reference, to handle traps in later versions of OP5 Monitor see: [op5 Trapper Home](https://kb.op5.com/display/DOC/op5+Trapper)
 
  
 
@@ -18,11 +18,11 @@ In order to monitor SNMP traps sent from a host you need to arrange the followin
 
 -   Enable SNMP traps to be sent to the monitor server from the monitored host
 -   Make sure that no firewalls block the SNMP traps ( 162/udp )
--   Create one or more services in op5 Monitor web GUI to search the trap logs
+-   Create one or more services in OP5 Monitor web GUI to search the trap logs
 
 # Configuring the monitored host
 
-You need to enable SNMP traps on the host you wish to monitor, and configure it to send these to the op5 Monitor server.
+You need to enable SNMP traps on the host you wish to monitor, and configure it to send these to the OP5 Monitor server.
 
 Exactly how this is done depends on the device itself. Most “black boxes” such as routers, switches, printers etc have a distinct configuration utility – such as a web page or a telnet interface.
 
@@ -30,9 +30,9 @@ If you wish to enable traps from an application that run on a standard operating
 
 The monitor server does not need any initial configuration to receive traps – snmptrapd is enabled by default and properly configured.
 
-# Configuring services in op5 Monitor
+# Configuring services in OP5 Monitor
 
-When traps are received, they will be placed in a log file that is accessible through the web server, on the format https://servername/logs/172.16.45.3\_\_snmptraps.log where the IP address is that of the trapping host and server name is that of your op5 Monitor server.
+When traps are received, they will be placed in a log file that is accessible through the web server, on the format https://servername/logs/172.16.45.3\_\_snmptraps.log where the IP address is that of the trapping host and server name is that of your OP5 Monitor server.
 
 The typical concept is searching these files for new traps that match a certain keyword search. There is a predefined check command for this, called check\_log\_snmptraps. It takes the keyword as an argument but figures out what file to search for by itself, provided that you have configured hosts using the IP address and not DNS name in Monitor.
 

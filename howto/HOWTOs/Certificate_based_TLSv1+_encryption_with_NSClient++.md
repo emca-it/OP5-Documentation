@@ -4,7 +4,7 @@ Version
 
 This article was written for version 0.4.4 of NSClient++. Versions 0.3.x and earlier of NSClient++ did not rely on the Windows Registry as heavily, so these notes would not apply. These instructions should work on later versions unless otherwise noted.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
  
 

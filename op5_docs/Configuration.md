@@ -2,7 +2,7 @@
 
 # About
 
-The Configuration menu item in op5 Monitor is the place where all the pages related to configuring op5 Monitor.
+The Configuration menu item in OP5 Monitor is the place where all the pages related to configuring OP5 Monitor.
 
 ![](attachments/16482339/23792992.png)
 

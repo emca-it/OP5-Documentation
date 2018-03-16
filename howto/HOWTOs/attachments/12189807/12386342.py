@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-'''A script to update the status of a service in op5 Monitor'''
+'''A script to update the status of a service in OP5 Monitor'''
 
 author = 'Joel Rangsmo <jrangsmo@op5.com>'
 url = 'https://github.com/Doctor-love/op5-Monitor-service-status-updater'
@@ -26,23 +26,23 @@ aparser = argparse.ArgumentParser(
     % (author, url))
 
 aparser.add_argument('-M', '--monhost',
-                     help='Specify op5 Monitor server', required=True)
+                     help='Specify OP5 Monitor server', required=True)
 
 aparser.add_argument('-u', '--username',
-                     help='Specify op5 Monitor username', required=True)
+                     help='Specify OP5 Monitor username', required=True)
 
 aparser.add_argument('-p', '--password',
-                     help='Specify op5 Monitor password', required=True)
+                     help='Specify OP5 Monitor password', required=True)
 
-aparser.add_argument('-H', '--host', help='Name of host object in op5 Monitor',
+aparser.add_argument('-H', '--host', help='Name of host object in OP5 Monitor',
                      required=True)
 
 aparser.add_argument('-S', '--service',
-                     help='Description/name of service in op5 Monitor',
+                     help='Description/name of service in OP5 Monitor',
                      required=True)
 
 aparser.add_argument('-s', '--status',
-                     help='Status of service in op5 Monitor',
+                     help='Status of service in OP5 Monitor',
                      choices=('OK', 'WARNING', 'CRITICAL', 'UNKNOWN'),
                      required=True)
 
@@ -58,7 +58,7 @@ aparser.add_argument('-P', '--path',
                      default='/api/command/PROCESS_SERVICE_CHECK_RESULT')
 
 aparser.add_argument('-r', '--port',
-                     help='HTTPS port for API access on the op5 Monitor host',
+                     help='HTTPS port for API access on the OP5 Monitor host',
                      type=int, default=443)
 
 aparser.add_argument('-v', '--version', help='Display script version',

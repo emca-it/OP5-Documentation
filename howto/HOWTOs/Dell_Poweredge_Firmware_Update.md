@@ -2,7 +2,7 @@
 
 This article will show you how to update your bios and firmware from the command line. This applies to the following operating systems: 
 
--   op5 Appliance System 6
+-   OP5 Appliance System 6
 -   CentOS 6
 -   Red Hat Enterprise Linux 6
 
@@ -27,5 +27,5 @@ In some cases a previous installed version of Dell Openmanage can create issues 
 
 ### Hardware monitoring
 
-You might also want to monitor your hardware of your servers. you can find information on how to do that just here: [Monitoring the hardware of your op5 server](Monitoring_the_hardware_of_your_op5_server)
+You might also want to monitor your hardware of your servers. you can find information on how to do that just here: [Monitoring the hardware of your OP5 server](Monitoring_the_hardware_of_your_op5_server)
 

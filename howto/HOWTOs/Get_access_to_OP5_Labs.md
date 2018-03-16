@@ -4,7 +4,7 @@ Version
 
 This article was written for version 7.3.14 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
 # What is OP5 Labs?
 

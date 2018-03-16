@@ -6,7 +6,7 @@ Version & Support
 
 This article was written for version 7.3.5 of Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
 ## Installation
 

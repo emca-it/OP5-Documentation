@@ -1,10 +1,10 @@
-# How do I Schedule Reports in op5 Monitor?
+# How do I Schedule Reports in OP5 Monitor?
 
 ## Question
 
 * * * * *
 
-How do I Schedule Reports in op5 Monitor?
+How do I Schedule Reports in OP5 Monitor?
 
 ## Answer
 

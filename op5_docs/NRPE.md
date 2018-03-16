@@ -10,18 +10,6 @@ NRPE is used in combination with a set of local plugins. While there are only a 
 
 OP5 recommends using SNMPv3 for monitoring Linux systems instead of NRPE. SNMPv3 provides better authentication and encryption, as NRPE provides very little. SNMPv3 is compatible with existing plugins and is [easy to configure](https://kb.op5.com/display/HOWTOs/Configure+a+Linux+server+for+SNMP+monitoring). We provide the following as a thorough presentation of a fallback approach.
 
-**Table of Contents**
-
--   [About](#NRPE-About)
--   [Caveat](#NRPE-Caveat)
--   [Installing NRPE](#NRPE-InstallingNRPE)
--   [Configuring NRPE](#NRPE-nrpe-configConfiguringNRPE)
-    -   [NRPE main configuration file settings](#NRPE-NRPEmainconfigurationfilesettings)
--   [NRPE Commands](#NRPE-nrpe-cmdsNRPECommands)
-    -   [NRPE command formatting and definitions](#NRPE-NRPEcommandformattinganddefinitions)
-    -   [Adding commands to NRPE](#NRPE-AddingcommandstoNRPE)
--   [Plugins used with NRPE](#NRPE-PluginsusedwithNRPE)
-
 # Installing NRPE
 
 Download and install NRPE using the package repository for your operating system, such as:

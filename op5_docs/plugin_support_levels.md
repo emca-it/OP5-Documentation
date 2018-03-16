@@ -6,15 +6,6 @@ Plugins that we ship with OP5 Monitor have different support levels. Many came f
 
 How can you determine which of our four support levels will apply? You can see the values for individual plugins by looking at the Plugins Index page from the Configure page, or https://{your.op5.server}/monitor/index.php/plugin/index (substituting "{your.op5.server}" with your server's FQDN).
 
-**Table of Contents**
-
--   [About](#plugin_support_levels-About)
--   [Full](#plugin_support_levels-Full)
--   [Bug Support](#plugin_support_levels-BugSupport)
--   [Best Effort](#plugin_support_levels-BestEffort)
--   [Deprecated](#plugin_support_levels-Deprecated)
--   [Unsupported](#plugin_support_levels-Unsupported)
-
 icon
 
 name
@@ -37,7 +28,7 @@ OP5 fully supports and continuously tests this plugin. We have a fully compatibl
 
 medium
 
-OP5 does not test this plugin continuously. We may not have a compatible test environment available, as that may require resources beyond demand. If we or you discover a defect with the plugin, we will examine its importance and give it priority based on its customer impact as well as the necessary developer effort. OP5 monitors its upstream project (if there is one) and updates the shipped plugin regularly.
+OP5 does not test this plugin continuously. We may not have a compatible test environment available, as that may require resources beyond demand. If we or you discover a defect with the plugin, we will examine its importance and give it priority based on its customer impact as well as the necessary developer effort. OP5 Monitors its upstream project (if there is one) and updates the shipped plugin regularly.
 
 ![Best Effort button, orange background](attachments/16482417/23793068.png "Best Effort button")
 

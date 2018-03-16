@@ -147,7 +147,7 @@ The user that submits additions or changes via the API's '/change' method will g
 
 #### Backups
 
-Backup op5 monitor frequently. One can get a full backup of an OP5 Monitor using the command 'op5-backup'. One can also tie this to a cron job. Files will be saved in '/root' unless specified within the op5-backup parameters [which file or args?] .
+Backup OP5 Monitor frequently. One can get a full backup of an OP5 Monitor using the command 'op5-backup'. One can also tie this to a cron job. Files will be saved in '/root' unless specified within the op5-backup parameters [which file or args?] .
 
 #### Configuration Management
 

@@ -6,7 +6,7 @@ This article was written for version 6.2 of Monitor, it could work on both lower
 
 This will guide you through the steps to add hardware monitoring for Cisco, Procurve, Extreme network, Juniper, Blue Coat and Citrix Netscaler network equipment.
 
-1.  Go to op5 Monitor Configuration | Commands![](attachments/3801462/4358164.png)
+1.  Go to OP5 Monitor Configuration | Commands![](attachments/3801462/4358164.png)
 2.  Add a new command:
     **command\_name:** check\_snmp\_environment
     **command\_line:** \$USER1\$/check\_snmp\_environment -H \$HOSTADDRESS\$ -2 -C \$ARG1\$ -T \$ARG2\$ -f

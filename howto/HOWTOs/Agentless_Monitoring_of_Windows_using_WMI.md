@@ -31,7 +31,7 @@ WMI monitoring should be used only when it's not possible to use the agent.
 
 [OP5 Monitor: Open Source Network Monitoring](#AgentlessMonitoringofWindowsusingWMI-OP5Monitor:OpenSourceNetworkMonitoring)
 
--   [Download op5 Monitor Free](#AgentlessMonitoringofWindowsusingWMI-Downloadop5MonitorFree)
+-   [Download OP5 Monitor Free](#AgentlessMonitoringofWindowsusingWMI-Downloadop5MonitorFree)
 
 ## Information about WMI
 
@@ -69,7 +69,7 @@ WMI is Microsoft’s implementation of the Web-Based Enterprise Management ([WBE
 
 ### **Usage examples**
 
-To start monitoring Windows system services you need to add a new service the your host in op5 Monitor.
+To start monitoring Windows system services you need to add a new service the your host in OP5 Monitor.
 See the product [Manual](https://kb.op5.com/display/DOC/Managing+objects#Managingobjects-adding-serviceAddingaservice) for more information regarding service configuration.
 
 #### Monitoring all system services 
@@ -98,7 +98,7 @@ See the product [Manual](https://kb.op5.com/display/DOC/Managing+objects#Managi
 
 ### Manually test the check\_wmi\_plus plugin
 
-Execute the following command via SSH or console on the server running op5 Monitor:
+Execute the following command via SSH or console on the server running OP5 Monitor:
 
 ``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
 # asmonitor /opt/plugins/check_wmi_plus.pl -H [IP or Hostname] -u [username] -p [password] -m checkmem -w 80 -c 90
@@ -112,7 +112,7 @@ Security 
 
 It’s possible to add user and password to a central file “`/opt/monitor/etc/resource.cfg`”.
 
-This allows you to partially hide the credentials from the op5 GUI and to update a single file if they need to be updated.
+This allows you to partially hide the credentials from the OP5 GUI and to update a single file if they need to be updated.
 Note that you need to edit all of the WMI `check_command` to use `$USER8$` and `$USER9$` instead of` $ARG1$` and `$ARG2$`.
 You will also have to rename the remaining arguments.
 
@@ -131,7 +131,7 @@ $USER8$=[wmi username]
 $USER9$=[wmi password]
 ```
 
-Restart the monitor service via SSH or console on the op5 Monitor server:
+Restart the monitor service via SSH or console on the OP5 Monitor server:
 
 ``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
 # service monitor restart
@@ -224,7 +224,7 @@ Read more
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 

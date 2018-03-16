@@ -2,7 +2,7 @@
 
 This article intends to give the reader a brief introduction on how to install and configure the EPEL upstream version of the NRPE agent on CentOS/RHEL 6 and 7.
 
-Historically, op5 has compiled and packaged the NRPE agent for a large number of Linux distributions, but as per Q2 2014 we stopped doing this since it required a lot of maintenance and time. More information on this decision can be found here: <https://www.op5.com/blog/blogs/op5-developers-blog/deprecation-notices-q2-2014/>
+Historically, OP5 has compiled and packaged the NRPE agent for a large number of Linux distributions, but as per Q2 2014 we stopped doing this since it required a lot of maintenance and time. More information on this decision can be found here: <https://www.op5.com/blog/blogs/op5-developers-blog/deprecation-notices-q2-2014/>
 
  
 
@@ -39,7 +39,7 @@ Note that this article is intended for CentOS/RHEL 6 and 7 **client hosts**, and
 
  
 
-2. Install NRPE and the plugins that is required to add the services via the function "Add UNIX client services" when adding a new host in the configuration UI in op5 Monitor
+2. Install NRPE and the plugins that is required to add the services via the function "Add UNIX client services" when adding a new host in the configuration UI in OP5 Monitor
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # yum install nrpe nagios-plugins-users nagios-plugins-load nagios-plugins-swap nagios-plugins-disk nagios-plugins-procs
@@ -47,7 +47,7 @@ Note that this article is intended for CentOS/RHEL 6 and 7 **client hosts**, and
 
  
 
- 3. Configure the agent to utilize the plugins using commands supported by op5 Monitor host scan.
+ 3. Configure the agent to utilize the plugins using commands supported by OP5 Monitor host scan.
 
 Create a new file called **/etc/nrpe.d**/**op5\_commands.cfg** containing the following information:
 

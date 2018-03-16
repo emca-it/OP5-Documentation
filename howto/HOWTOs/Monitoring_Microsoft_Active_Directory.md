@@ -1,20 +1,20 @@
 # Monitoring Microsoft Active Directory
 
-Microsoft Active Directory is used to share user list, provide single sign on and other central features in large Microsoft based workstation and server networks. Active Directory is Microsoft’s implementation of existing business standards such as LDAP, Kerberos and DNS. The purpose of this article is describing how op5 Monitor can be used to monitor these core features of an Active Directory and make sure that notifications are sent about common errors.
+Microsoft Active Directory is used to share user list, provide single sign on and other central features in large Microsoft based workstation and server networks. Active Directory is Microsoft’s implementation of existing business standards such as LDAP, Kerberos and DNS. The purpose of this article is describing how OP5 Monitor can be used to monitor these core features of an Active Directory and make sure that notifications are sent about common errors.
 
  
 
 ## Watch the HOWTO video:
 
-![](images/icons/grey_arrow_down.png)Click to watch monitoring of Microsoft servers with op5 Monitor
+![](images/icons/grey_arrow_down.png)Click to watch monitoring of Microsoft servers with OP5 Monitor
 
  
 
 [![Get Adobe Flash player](https://www.adobe.com/images/shared/download_buttons/get_flash_player.gif)](https://get.adobe.com/flashplayer/)
 
-**Monitoring Microsoft servers with op5 Monitor:**
+**Monitoring Microsoft servers with OP5 Monitor:**
 
-In this video we will give you a tour on how to setup monitoring on Microsoft Windows, Active Directory and Microsoft hyper-v. op5 monitor provides you with the ability to monitor software in the Microsoft product line, such as Microsoft Windows, SQL Server, Active Directory, IIS and Exchange.
+In this video we will give you a tour on how to setup monitoring on Microsoft Windows, Active Directory and Microsoft hyper-v. OP5 Monitor provides you with the ability to monitor software in the Microsoft product line, such as Microsoft Windows, SQL Server, Active Directory, IIS and Exchange.
 
 Prerequisites
 
@@ -23,7 +23,7 @@ To be able to complete this how-to you will need the following files:
 -   [check\_ad.vbs](http://exchange.nagios.org/components/com_mtree/attachment.php?link_id=2332&cf_id=30)
 -   [check\_ad\_time.vbs](http://git.op5.org/gitweb?p=monitor/vbs-plugins.git;a=tree)
 
-*The scripts are not officially supported by op5 Support, but we will help you as good as we can.*
+*The scripts are not officially supported by OP5 Support, but we will help you as good as we can.*
 
  
 

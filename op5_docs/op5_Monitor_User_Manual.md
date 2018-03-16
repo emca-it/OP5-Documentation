@@ -1,4 +1,4 @@
-# op5 Monitor User Manual
+# OP5 Monitor User Manual
 
 # Welcome to the OP5 Monitor User Guide!
 

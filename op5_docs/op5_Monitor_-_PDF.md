@@ -1,6 +1,6 @@
-# op5 Monitor - PDF
+# OP5 Monitor - PDF
 
-PDF Versions of op5 Monitor manuals current versions and for historical reference.
+PDF Versions of OP5 Monitor manuals current versions and for historical reference.
 
  
 

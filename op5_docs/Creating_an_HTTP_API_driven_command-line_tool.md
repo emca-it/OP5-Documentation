@@ -2,9 +2,9 @@
 
 Version
 
-This article was written for version 7.0 of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 7.0 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
 Deprecation consideration
 
@@ -20,19 +20,19 @@ We are in the process of revising the command API structure into a better substi
 
 This how-to was made for you to learn how to build your own tool for executing remote commands against the HTTP API, you may download the finished script directly and utilize it as you wish without warranty or support, we do highly recommend you to read through the guide to gain the knowledge of maintaining and extending the script. To follow this guide it is recommended that you have a basic grasp of Linux and PHP.
 
-The op5 Monitor HTTP API is an HTTP service supplying data and actions, from and to, op5 Monitor for integration with external services, scripts or tools. It is the recommended and supported way of communicating with op5 Monitor from external sources.
+The OP5 Monitor HTTP API is an HTTP service supplying data and actions, from and to, OP5 Monitor for integration with external services, scripts or tools. It is the recommended and supported way of communicating with OP5 Monitor from external sources.
 
-Getting started with the op5 Monitor HTTP API may be bulky for regular use in a command line or scripts written in languages that do not have easy interfaces for HTTP requests. This article will remedy that by showing you how you may create your own tools that utilize the HTTP API to fulfill some uses that NSCA serves (or served).
+Getting started with the OP5 Monitor HTTP API may be bulky for regular use in a command line or scripts written in languages that do not have easy interfaces for HTTP requests. This article will remedy that by showing you how you may create your own tools that utilize the HTTP API to fulfill some uses that NSCA serves (or served).
 
 NSCA, Nagios Service Check Acceptor, is a daemon and CLI tool for submitting passive service checks to Nagios or Naemon.
 
 ### Why use the HTTP API when we have NSCA available?
 
-NSCA is a generalized tool for submitting commands to Nagios and some derivatives thereof (e.g. Naemon), it is a direct hook into the command interface of Nagios, skipping any authentication layers supplied by op5 monitor, for that reason alone you should want to build on the HTTP API. As the HTTP API is tailored to fit straight into the authentication and relation structure given by op5 Monitor. In essence you can only do with the API what you can do in the web interface given the same user.
+NSCA is a generalized tool for submitting commands to Nagios and some derivatives thereof (e.g. Naemon), it is a direct hook into the command interface of Nagios, skipping any authentication layers supplied by OP5 Monitor, for that reason alone you should want to build on the HTTP API. As the HTTP API is tailored to fit straight into the authentication and relation structure given by OP5 Monitor. In essence you can only do with the API what you can do in the web interface given the same user.
 
-Furthermore op5 Monitor extends the functionality of Naemon and will provide more commands which will not be reflected in NSCA as it maps directly to Nagios.
+Furthermore OP5 Monitor extends the functionality of Naemon and will provide more commands which will not be reflected in NSCA as it maps directly to Nagios.
 
- Our target is to gain a command line interface as simple as possible that will not negate the gains of running over the HTTP API as discussed above. op5 does not support this as user requirements vary wildly. By instead stabilizing and grounding the HTTP API we can support more use cases at a smaller zone than then CLI tool ever could.
+ Our target is to gain a command line interface as simple as possible that will not negate the gains of running over the HTTP API as discussed above. OP5 does not support this as user requirements vary wildly. By instead stabilizing and grounding the HTTP API we can support more use cases at a smaller zone than then CLI tool ever could.
 
 This theoretical command that we will put into practice during this guide will look something like this:
 
@@ -75,7 +75,7 @@ This will show you the HTTP API help page for submitting a passive check result 
 curl -u '<your username>:<your password>' -H 'content-type: application/json' -d '{"host_name":"string","status_code":"int","plugin_output":"string"}' 'https://<your monitor host>/api/command/PROCESS_SERVICE_CHECK_RESULT'
 ```
 
-The examples above contains type information expected by the command, such as "string" and "int", if populated with data it would look something like below, given a host called **host** and a service called **service** and op5 Monitor running at **127.0.0.1**:
+The examples above contains type information expected by the command, such as "string" and "int", if populated with data it would look something like below, given a host called **host** and a service called **service** and OP5 Monitor running at **127.0.0.1**:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 curl -u '<your username>:<your password>' -H 'content-type: application/json' -d '{"host_name":"host","service_description":"service","status_code":"0","plugin_output":"The backup was flawless"}' 'https://127.0.0.1/api/command/PROCESS_SERVICE_CHECK_RESULT'
@@ -85,11 +85,11 @@ That is a mouthful to type, in a script it may be okay, but for everyday use fro
 
 ## Creating a tool for the job
 
-We will create a tool to help us submit just this explicit command at first, then by generalizing and error handling extend that tool, but before you copy-paste and run away I would advise you to read through this guide as the end-result is far better given that you understand how it works and how you may extend it to support all commands that the op5 Monitor HTTP API currently supplies.
+We will create a tool to help us submit just this explicit command at first, then by generalizing and error handling extend that tool, but before you copy-paste and run away I would advise you to read through this guide as the end-result is far better given that you understand how it works and how you may extend it to support all commands that the OP5 Monitor HTTP API currently supplies.
 
 We will create this tool in PHP but following the examples seen on the help page we visited before, you could create it in bash or python using the same logic.
 
-This script is unsupported by op5, if you find errors it should be reported as spelling mistakes in the op5 Knowledge Base.
+This script is unsupported by op5, if you find errors it should be reported as spelling mistakes in the OP5 Knowledge Base.
 
 **example1.php**  Expand source
 
@@ -169,7 +169,7 @@ This tool can only submit the PROCESS\_SERVICE\_CHECK\_RESULT command and will n
 
 ### Error handling
 
-This script is unsupported by op5, if you find errors it should be reported as spelling mistakes in the op5 Knowledge Base.
+This script is unsupported by op5, if you find errors it should be reported as spelling mistakes in the OP5 Knowledge Base.
 
 **example2.php**  Expand source
 
@@ -271,7 +271,7 @@ This part contains more advanced PHP scripting than the previous ones.
 
 The reason we include this script is that it is easily exntedable to support more commands that just the submission of passive check results which we will show after the script itself,
 
-This script is unsupported by op5, if you find errors it should be reported as spelling mistakes in the op5 Knowledge Base.
+This script is unsupported by op5, if you find errors it should be reported as spelling mistakes in the OP5 Knowledge Base.
 
 **remote.php**  Expand source
 
@@ -348,7 +348,7 @@ function remote_call ($command, array $data) {
  */
 
 /**
- * Submits a passive service check result using the op5 Monitor
+ * Submits a passive service check result using the OP5 Monitor
  * PROCESS_SERVICE_CHECK_RESULT endpoint of the HTTP API
  *
  * @param  string $host        The host
@@ -368,7 +368,7 @@ function service_result ($host, $service, $parameters) {
 }
 
 /**
- * Submits a passive host check result using the op5 Monitor
+ * Submits a passive host check result using the OP5 Monitor
  * PROCESS_HOST_CHECK_RESULT endpoint of the HTTP API
  *
  * @param  string $host        The host
@@ -419,7 +419,7 @@ As can be seen in the last script we have two functions that are closely tied wi
 
 ``` {.php data-syntaxhighlighter-params="brush: php; gutter: false; theme: Confluence; collapse: true" data-theme="Confluence" style="brush: php; gutter: false; theme: Confluence; collapse: true"}
 /**
- * Submits an acknowledge to op5 Monitor ACKNOWLEDGE_HOST_PROBLEM
+ * Submits an acknowledge to OP5 Monitor ACKNOWLEDGE_HOST_PROBLEM
  * endpoint of the HTTP API
  *
  * @param  string $host        The host
@@ -438,7 +438,7 @@ function host_ack ($host, $parameters) {
 }
 
 /**
- * Submits an acknowledge to op5 Monitor ACKNOWLEDGE_SVC_PROBLEM
+ * Submits an acknowledge to OP5 Monitor ACKNOWLEDGE_SVC_PROBLEM
  * endpoint of the HTTP API
  *
  * @param  string $host        The host
@@ -528,7 +528,7 @@ op5remote result "host;service" 0 "This service is OK"
 
 We highly recommend that you read this guide in full for information on how to make it work for you rather than simply downloading it.
 
-This script is unsupported by op5, if you find errors it should be reported as spelling mistakes in the op5 Knowledge Base.
+This script is unsupported by op5, if you find errors it should be reported as spelling mistakes in the OP5 Knowledge Base.
 
 op5 Remote Source
 

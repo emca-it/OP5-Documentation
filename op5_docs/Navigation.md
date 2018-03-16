@@ -2,32 +2,32 @@
 
 # About
 
-The GUI in op5 Monitor is built to be as simple as possible to use.
+The GUI in OP5 Monitor is built to be as simple as possible to use.
 In this chapter the different parts of the GUI is described.
 
 # Login and logout
 
-## Logging in to op5 Monitor
+## Logging in to OP5 Monitor
 
-First of all you need to login before you can start using op5 Monitor.
- To login to the op5 Monitor GUI:
- Point your browser to the portal page of your op5 Monitor server ( <https://yourserver/> )
+First of all you need to login before you can start using OP5 Monitor.
+ To login to the OP5 Monitor GUI:
+ Point your browser to the portal page of your OP5 Monitor server ( <https://yourserver/> )
 
-Click op5 Monitor.
+Click OP5 Monitor.
 ![](attachments/16482331/18481425.png)
  Enter your login and password.
 
 Click **Login**
 
-Logging out from op5 Monitor
+Logging out from OP5 Monitor
 
-To logout from op5 Monitor hover you profile in the upper right corner and click "Log out" in the drop-down
+To logout from OP5 Monitor hover you profile in the upper right corner and click "Log out" in the drop-down
 
 ![](attachments/16482331/18481424.png)
 
 # In-line help
 
-A manual is great but sometimes you only need to get a fast answer about a special part of op5 Monitor.
+A manual is great but sometimes you only need to get a fast answer about a special part of OP5 Monitor.
 
 ## Get information from the in-line help
 
@@ -37,7 +37,7 @@ Click anywhere outside the help text to hide it.
 
 # Main menu
 
-The navigation in op5 Monitor is simple and can be found in the top of the GUI. There are five main sections, seen from the left.
+The navigation in OP5 Monitor is simple and can be found in the top of the GUI. There are five main sections, seen from the left.
 
 -   Branding (About menu)
 -   Dashboards
@@ -80,16 +80,3 @@ In every view where you find the icons for
 
 To quickly show the host address of a host, hold the mouse over the hostname. A pop-up will appear with the host address.
  ![](attachments/16482331/18481432.png)
-
-**Table of Content**
-
--   [About](#Navigation-About)
--   [Login and logout](#Navigation-Loginandlogout)
-    -   [Logging in to op5 Monitor](#Navigation-Loggingintoop5Monitor)
--   [In-line help](#Navigation-In-linehelp)
-    -   [Get information from the in-line help](#Navigation-Getinformationfromthein-linehelp)
--   [Main menu](#Navigation-Mainmenu)
--   [Add custom quickbar link](#Navigation-Addcustomquickbarlink)
--   [Pop up graphs and comments](#Navigation-Popupgraphsandcomments)
--   [Mouse over host](#Navigation-Mouseoverhost)
-

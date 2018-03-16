@@ -1,4 +1,4 @@
-# op5 Monitor Enterprise v7.2.5
+# OP5 Monitor Enterprise v7.2.5
 
 **Copyleft**
 
@@ -154,50 +154,50 @@ A copyleft license allows any use, but prohibits binary-only distribution.
 
 A proprietary license can carry arbitrary restrictions, and must be investigated on a per-license basis.
 
--   libop5license, op5 Software License
--   logfilter, op5 Software License
--   monitor-backup, op5 Immaterial Rights License
--   monitor-http-api, op5 Software License
--   monitor-notify, op5 AB Proprietary Software License
--   monitor-passive, op5 Immaterial Rights License
--   monitor-passive-traps, op5 Immaterial Rights License
--   monitor-plugin-check\_apica\_responsetime, op5 Software License
--   monitor-plugin-check\_op5\_filter, op5 Software License
--   monitor-plugin-check\_ucs, op5 Software License
--   monitor-widget-getting-started, op5 Software License
--   monitor-widget-hostperf, op5 Software License
--   monitor-widget-merlin-node-status, op5 Software License
--   monitor-widget-services, op5 Software License
--   monitor-widget-services-critical-acknowledged, op5 Software License
--   monitor-widget-services-critical-unacknowledged, op5 Software License
--   monitor-widget-synergy, op5 Software License
--   monitor-wizard, op5 Software License
--   op5-community-release, op5 Software License
--   op5-default, op5 Software License
--   op5-logserver, op5 Software License
--   op5-logserver-db, op5 Immaterial Works License
--   op5-logserver-gui, op5 Software License
--   op5-monitor, op5 Software License
--   op5-monitor-release, op5 Software License
--   op5-oracle, op5 Software License
--   op5-postgresql-config, op5 Immaterial Works License
--   op5-release, op5 Software License
--   op5-release-public-beta, op5 Software License
--   op5-synergy-processor, op5 Software License
--   op5-syslog-ng, op5 Immaterial Works License
--   op5-sysnagios-extension, op5 Software License
--   op5backup, op5 Software License
--   op5common, op5 Software License
--   op5config, op5 Software License
--   op5license, op5 Software License
+-   libop5license, OP5 Software License
+-   logfilter, OP5 Software License
+-   monitor-backup, OP5 Immaterial Rights License
+-   monitor-http-api, OP5 Software License
+-   monitor-notify, OP5 AB Proprietary Software License
+-   monitor-passive, OP5 Immaterial Rights License
+-   monitor-passive-traps, OP5 Immaterial Rights License
+-   monitor-plugin-check\_apica\_responsetime, OP5 Software License
+-   monitor-plugin-check\_op5\_filter, OP5 Software License
+-   monitor-plugin-check\_ucs, OP5 Software License
+-   monitor-widget-getting-started, OP5 Software License
+-   monitor-widget-hostperf, OP5 Software License
+-   monitor-widget-merlin-node-status, OP5 Software License
+-   monitor-widget-services, OP5 Software License
+-   monitor-widget-services-critical-acknowledged, OP5 Software License
+-   monitor-widget-services-critical-unacknowledged, OP5 Software License
+-   monitor-widget-synergy, OP5 Software License
+-   monitor-wizard, OP5 Software License
+-   op5-community-release, OP5 Software License
+-   op5-default, OP5 Software License
+-   op5-logserver, OP5 Software License
+-   op5-logserver-db, OP5 Immaterial Works License
+-   op5-logserver-gui, OP5 Software License
+-   op5-monitor, OP5 Software License
+-   op5-monitor-release, OP5 Software License
+-   op5-oracle, OP5 Software License
+-   op5-postgresql-config, OP5 Immaterial Works License
+-   op5-release, OP5 Software License
+-   op5-release-public-beta, OP5 Software License
+-   op5-synergy-processor, OP5 Software License
+-   op5-syslog-ng, OP5 Immaterial Works License
+-   op5-sysnagios-extension, OP5 Software License
+-   op5backup, OP5 Software License
+-   op5common, OP5 Software License
+-   op5config, OP5 Software License
+-   op5license, OP5 Software License
 -   oracle-instantclient11.2-basic, Oracle Technology Network Development and Distribution
 -   oracle-instantclient11.2-sqlplus, Oracle Technology Network Development and Distribution
--   php-op5license, op5 Software License
--   plugins-metadata, op5 Software License
--   portal, op5 Immaterial Rights License
--   smsacknowledge, op5 Immaterial Rights License
--   smspassivecheck, op5 Immaterial Rights License
--   smsreceiver, op5 Immaterial Rights License
+-   php-op5license, OP5 Software License
+-   plugins-metadata, OP5 Software License
+-   portal, OP5 Immaterial Rights License
+-   smsacknowledge, OP5 Immaterial Rights License
+-   smspassivecheck, OP5 Immaterial Rights License
+-   smsreceiver, OP5 Immaterial Rights License
 
 **Permissive**
 

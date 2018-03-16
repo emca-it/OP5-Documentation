@@ -1,6 +1,6 @@
-# op5 Monitor integration towards BMC Proactive Net Performance Management (BPPM) using BMC Impact Poster (msend)
+# OP5 Monitor integration towards BMC Proactive Net Performance Management (BPPM) using BMC Impact Poster (msend)
 
-This document describes how to integrate op5 Monitor to BMC Proactive Net Performance Management (BPPM) using BMC Impact Poster (msend). It requires configuration to be added on the receiving end and these steps are not covered in this how-to
+This document describes how to integrate OP5 Monitor to BMC Proactive Net Performance Management (BPPM) using BMC Impact Poster (msend). It requires configuration to be added on the receiving end and these steps are not covered in this how-to
 
  
 
@@ -12,7 +12,7 @@ Attachment: [monitor\_msendwrapper.pl](attachments/688567/1310726.pl) is insta
 
 ## **Commands**
 
-The commands needed in op5 Monitor are added to /opt/monitor/etc/misccommands.cfg:
+The commands needed in OP5 Monitor are added to /opt/monitor/etc/misccommands.cfg:
 
  
 
@@ -37,7 +37,7 @@ Classes specified are in 1:1 relation to the information included in a regular e
 
 To use these commands you need to specify a contact much like when sending emails or text-messages and if needed added to a contact-group for example the default contact-group "support-group" which are used in templates so all hosts and services will be enabled at once. The contact set up in this specific case is named "msend-to-bem" and are a member of support-group, host\_notification\_command is set to host-msend-to-bem and service\_notifcation\_command is set to service-msend-to-bem
 
-Further information about configure these commands and other useful information about op5 Monitor please visit our online manual.
+Further information about configure these commands and other useful information about OP5 Monitor please visit our online manual.
 
 ## **Configuration for msend**
 
@@ -47,9 +47,9 @@ Are specified directly in monitor\_msendwrapper.pl and take special notice of "C
 
 Manual tests without the use of the wrapper can be done using this line: /opt/plugins/custom/msend -n bmcis02 -n @bmcis02:1828\#mc -a OP5\_EVENT -m "testing as monitor user" and the result/connectivity could be verified on the receiving end.
 
-To test the wrapper, uncomment the line in monitor\_msendwrapper.pl: \#\`echo "\$MSEND" "\$COMMANDLINE" "\$ARGS" \>\> /tmp/msend.log\`; and manually execute the script. The log will show the actual command that will be used but no classes. To also expand classes and macros op5 Monitor must be running the script as a notification command. (Unless manually create a script setting these variables)
+To test the wrapper, uncomment the line in monitor\_msendwrapper.pl: \#\`echo "\$MSEND" "\$COMMANDLINE" "\$ARGS" \>\> /tmp/msend.log\`; and manually execute the script. The log will show the actual command that will be used but no classes. To also expand classes and macros OP5 Monitor must be running the script as a notification command. (Unless manually create a script setting these variables)
 
-To test the full command and classes/macros have the line in monitor\_msendwrapper.pl un-commended as stated above and trigger a event in op5 Monitor (ex use passive check-results) and take a look in mend.log. In this case nothing has been sent to BPPM only logged to this file. To test this for real comment out the line and make sure the last line in the script is uncommented. Verify on BPPM side what info gets sent.
+To test the full command and classes/macros have the line in monitor\_msendwrapper.pl un-commended as stated above and trigger a event in OP5 Monitor (ex use passive check-results) and take a look in mend.log. In this case nothing has been sent to BPPM only logged to this file. To test this for real comment out the line and make sure the last line in the script is uncommented. Verify on BPPM side what info gets sent.
 
 Successful test should produce a line in msend.log looking something like this:
 

@@ -1,4 +1,4 @@
-# Disable Host Wizard globally in op5 Monitor
+# Disable Host Wizard globally in OP5 Monitor
 
 ## How do I prevent the Host Wizard to show up for users logging in for the first time?
 

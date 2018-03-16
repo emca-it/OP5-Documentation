@@ -1,12 +1,12 @@
-# Webinar op5 Monitor 7.1 questions
+# Webinar OP5 Monitor 7.1 questions
 
 ## In this document we have listed all of the questions asked during our webinars on September 29th 2015
 
-You can download the presentation deck from our webinar: ***["What's new in op5 Monitor 7.1" right here!](http://www.op5.com/blog/wpfb-file/op5-monitor_7-1_webinar-pdf/)***
+You can download the presentation deck from our webinar: ***["What's new in OP5 Monitor 7.1" right here!](http://www.op5.com/blog/wpfb-file/op5-monitor_7-1_webinar-pdf/)***
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 
@@ -16,7 +16,7 @@ You can download the presentation deck from our webinar: ***["What's new in op5
 
 ***Question: Did new version is compatible with aNag app for android?***
 
-Answer: aNag uses the nagios CGIs. Several security issues has been reported using the CGIs so we have removed them and encourage tools that want to integrate with op5 Monitor to use the APIs. The APIs is a REST API and are consistent, secure and feature rich and uses industry standards like JSON and XML. op5 have a app that is free and available both for Android and iOS utilizing the REST API today. 
+Answer: aNag uses the nagios CGIs. Several security issues has been reported using the CGIs so we have removed them and encourage tools that want to integrate with OP5 Monitor to use the APIs. The APIs is a REST API and are consistent, secure and feature rich and uses industry standards like JSON and XML. OP5 have a app that is free and available both for Android and iOS utilizing the REST API today. 
 
 ***Question: How about the possibility to set access rights per host/hostgroup/service etc***
 
@@ -30,15 +30,15 @@ Answer: We are working on making the TAC better with easier ways of building the
 
 ***Question: Hi, a performance question: How about the GUI response? it is improved? it can get a little sluggish if you have a very large number of hosts/services/etc..***
 
-Answer: There are many ways to enhance GUI performance, I would recommend you to use op5 Professional service to find bottlenecks and the system to fine tune it. Please send an email to niklas.hagg@op5.com, head of Professional services.
+Answer: There are many ways to enhance GUI performance, I would recommend you to use OP5 Professional service to find bottlenecks and the system to fine tune it. Please send an email to niklas.hagg@op5.com, head of Professional services.
 
 ### Is possible to add to OP5 Android App more than one instance op5?
 
-Answer: No not in current version. We have issue logged for it already in backlog and has high priority for upcoming releases, although we have no dates for upcoming releases yet to communicate. However - the op5 App uses filters, so if you have a peered monitor architecture you can define one or multiple filters and enable them to one or many users of the app. This can be useful for example in an MSP or similar set up where you want do limit the information to the app / specific user. 
+Answer: No not in current version. We have issue logged for it already in backlog and has high priority for upcoming releases, although we have no dates for upcoming releases yet to communicate. However - the OP5 App uses filters, so if you have a peered monitor architecture you can define one or multiple filters and enable them to one or many users of the app. This can be useful for example in an MSP or similar set up where you want do limit the information to the app / specific user. 
 
 ### Question: Regarding AD integration: It would be really neat if we could assign AD accounts as contacts - as it is now i need to add all AD accounts as contacts, so i can set their permissions
 
-Answer: I understand that this is a wish that alot of our customers wants. We have spent alot of time analysing customer setups and found that almost every customer has their own implementation of their AD, thus very hard todo a out of the box tool. However op5 Professional Service has done this several times and have know how to implement it. I recommend to have a chat with them.
+Answer: I understand that this is a wish that alot of our customers wants. We have spent alot of time analysing customer setups and found that almost every customer has their own implementation of their AD, thus very hard todo a out of the box tool. However OP5 Professional Service has done this several times and have know how to implement it. I recommend to have a chat with them.
 
 ### Question: Please consider having DevBeer in Malmö - Gothenborg is a looong way from Copenhagen :)
 
@@ -70,7 +70,7 @@ Answer: This is a new feature request.  Please see: [How to submit a new bug/
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 

@@ -2,7 +2,7 @@
 
 # About
 
-Filters can be used to filter out content in op5 Monitor. They can be based on names, states, comments or other information. 
+Filters can be used to filter out content in OP5 Monitor. They can be based on names, states, comments or other information. 
 Filters can be applied on listviews. All listview content is based on filters, so for example when viewing a host and its services the view is based on a filter that can be manipulated.
 
 # Edit filter
@@ -110,21 +110,3 @@ Use the delete icon behind the filter that you would like to remove.
 # Related pages
 
 Error rendering macro 'sv-contentbylabel' : null
-
-**Table of Content**
-
--   [About](#Filters-About)
--   [Edit filter](#Filters-Editfilter)
--   [Filter categories](#Filters-Filtercategories)
--   [Filter Groups](#Filters-FilterGroups)
--   [Rule](#Filters-Rule)
--   [Date and Time](#Filters-DateandTime)
--   [Examples](#Filters-Examples)
-    -   [Example 1](#Filters-Example1)
-    -   [Example 2](#Filters-Example2)
-    -   [Example 3](#Filters-Example3)
-    -   [Example 4](#Filters-Example4)
--   [Save filters](#Filters-Savefilters)
--   [Remove filters](#Filters-Removefilters)
--   [Related pages](#Filters-Relatedpages)
-

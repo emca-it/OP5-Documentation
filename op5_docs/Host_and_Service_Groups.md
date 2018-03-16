@@ -6,16 +6,6 @@ A host or service group is a collection of hosts or services that has something 
 
 It can be for example location, function or hadrware type.
 
-**Table of Content**
-
--   [About](#HostandServiceGroups-About)
--   [Using Host groups](#HostandServiceGroups-UsingHostgroups)
-    -   [Host group commands](#HostandServiceGroups-Hostgroupcommands)
-    -   [Host group reporting](#HostandServiceGroups-Hostgroupreporting)
--   [Using Service groups](#HostandServiceGroups-UsingServicegroups)
-    -   [Service group commands](#HostandServiceGroups-Servicegroupcommands)
-    -   [Service group reporting](#HostandServiceGroups-Servicegroupreporting)
-
 # Using Host groups
 
 A host is normally placed in one or more host groups. A host group can contains any kind of hosts in any way you want to.

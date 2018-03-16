@@ -1,8 +1,8 @@
-# Upgrading from op5 Monitor 6.x to 7.x
+# Upgrading from OP5 Monitor 6.x to 7.x
 
 Version
 
-This article was written for version 6.3 of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 6.3 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
  
 

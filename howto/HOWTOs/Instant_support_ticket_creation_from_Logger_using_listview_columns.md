@@ -1,6 +1,6 @@
 # Instant support ticket creation from Logger using listview columns
 
-The custom columns language in op5 Monitor is a powerful tool. It can access details on the listed objects. This simple example shows how to create a link that auto-generates an email with necessary information when clicked.
+The custom columns language in OP5 Monitor is a powerful tool. It can access details on the listed objects. This simple example shows how to create a link that auto-generates an email with necessary information when clicked.
 
 The Log messages listing looks like this by default:
 ![](attachments/12977050/13271299.png) 

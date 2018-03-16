@@ -1,15 +1,15 @@
-# How to achieve a distributed setup with op5 Monitor
+# How to achieve a distributed setup with OP5 Monitor
 
 ## **Introduction**
 
-This how-to will help you configure a distributed set-up with op5 Monitor. Using the standard way of today. First of all read the documentation to get the basic knowledge about how the distributed set-up works. Then follow the step-by-step instructions about how to set-up your distributed monitoring environment.
+This how-to will help you configure a distributed set-up with OP5 Monitor. Using the standard way of today. First of all read the documentation to get the basic knowledge about how the distributed set-up works. Then follow the step-by-step instructions about how to set-up your distributed monitoring environment.
 
 ## **Prerequisites**
 
-To start using op5 Monitor in a distributed monitoring environment you need to make sure:
+To start using OP5 Monitor in a distributed monitoring environment you need to make sure:
 
--   you have at least two op5 Monitor servers ***of the same architecture*** and **same version** up and running.
--   op5 Monitor \>=5.2 is installed and running on both machines.
+-   you have at least two OP5 Monitor servers ***of the same architecture*** and **same version** up and running.
+-   OP5 Monitor \>=5.2 is installed and running on both machines.
 
 Then read the documentation and start working.
 

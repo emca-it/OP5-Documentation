@@ -1,6 +1,6 @@
-# op5 Logserver Extension - PDF
+# OP5 Logserver Extension - PDF
 
-Collection of manuals for op5 Logserver Extension, current and historical releases.
+Collection of manuals for OP5 Logserver Extension, current and historical releases.
 
  
 

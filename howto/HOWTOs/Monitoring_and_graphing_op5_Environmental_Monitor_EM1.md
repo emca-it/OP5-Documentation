@@ -1,16 +1,16 @@
-# Monitoring and graphing op5 Environmental Monitor EM1
+# Monitoring and graphing OP5 Environmental Monitor EM1
 
 ## **Introduction**
 
-The Sensatronics model EM1 is part of the op5 Environment Starter Packs and sold separately under the name op5 Environmental Monitor EM1. This how-to describes how to set up monitoring of the environmental module in op5 Monitor.
+The Sensatronics model EM1 is part of the OP5 Environment Starter Packs and sold separately under the name OP5 Environmental Monitor EM1. This how-to describes how to set up monitoring of the environmental module in OP5 Monitor.
 
 ## **Prerequisites**
 
--   op5 Monitor installed correctly
--   Sensatronics EM1 set up in accordance with the op5 Environment module manual or the accompanying Sensatronics Model EM1 Environmental Monitor Quick Start Guide.
--   HTTP network access from the op5 server to the environmental monitor.
+-   OP5 Monitor installed correctly
+-   Sensatronics EM1 set up in accordance with the OP5 Environment module manual or the accompanying Sensatronics Model EM1 Environmental Monitor Quick Start Guide.
+-   HTTP network access from the OP5 server to the environmental monitor.
 
-## **Configuring op5 Monitor**
+## **Configuring OP5 Monitor**
 
 Verify that your configuration contains the following commands:
 
@@ -26,7 +26,7 @@ Add a new host object for your EM1, an example follows below:
 
     host_name: environment-sth
 
-    alias:  op5 Environmental Monitor EM1
+    alias:  OP5 Environmental Monitor EM1
 
 address: env1-sth.int.op5.se
 
@@ -50,7 +50,7 @@ Add services for temperature and/or humidity, examples follows below:
 
     check_command_args: 1!40:60!35:65
 
-## **Configuring op5 Statistics**
+## **Configuring OP5 Statistics**
 
  
 

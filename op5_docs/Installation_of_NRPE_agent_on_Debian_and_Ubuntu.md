@@ -66,7 +66,7 @@ allowed_hosts=127.0.0.1,10.0.0.10,10.0.0.11
 
  
 
-Now you can add the services via the function "Add UNIX client services" when adding a host in op5 Monitor.
+Now you can add the services via the function "Add UNIX client services" when adding a host in OP5 Monitor.
 
  
 

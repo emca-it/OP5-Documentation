@@ -1,8 +1,8 @@
-# Collect system logs for op5 Support
+# Collect system logs for OP5 Support
 
-This how-to will describe how to prepare and collect log data for naemon (nagios) and merlin, and supplying this data to op5 Support.
+This how-to will describe how to prepare and collect log data for naemon (nagios) and merlin, and supplying this data to OP5 Support.
 
-Doing this is often helpful in regards to decreasing the time to resolution for your support case, and it's especially useful in case you contact op5 Support regarding issues related to:
+Doing this is often helpful in regards to decreasing the time to resolution for your support case, and it's especially useful in case you contact OP5 Support regarding issues related to:
 
 -   Notifications
 -   Check execution
@@ -11,16 +11,16 @@ Doing this is often helpful in regards to decreasing the time to resolution for 
 
 # Instructions
 
-1.  Log on as root to all your op5 Monitor nodes (masters, peers and pollers) via SSH, and [make sure that the "op5 community" package repository and the "support tools" are installed.
+1.  Log on as root to all your OP5 Monitor nodes (masters, peers and pollers) via SSH, and [make sure that the "op5 community" package repository and the "support tools" are installed.
      ](https://kb.op5.com/display/FAQ/Installing+the+op5+community+repository+and+support+tools)
 
-2.  Log on as root to *one *of your op5 Monitor *master* nodes via SSH (if you only have a single server, then that's the one), and execute the following command:
+2.  Log on as root to *one *of your OP5 Monitor *master* nodes via SSH (if you only have a single server, then that's the one), and execute the following command:
 
     ``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
     mon sop collect-logs
     ```
 
-    This tool will collect all naemon and merlin log data generated the last 30 days, from all your op5 Monitor nodes, and finally create a tarball containing this data, ready to be sent to op5 Support.
+    This tool will collect all naemon and merlin log data generated the last 30 days, from all your OP5 Monitor nodes, and finally create a tarball containing this data, ready to be sent to OP5 Support.
 
     For a shorter or longer time period of log data, or to store the tarball at a specific location, start the command with argument `--help `for more information.
 
@@ -66,5 +66,5 @@ Doing this is often helpful in regards to decreasing the time to resolution for 
     ```
 
 3.  As can be seen in the output above, the file */tmp/op5logcollect.1461324223.6124.6AQ6LG/op5-monitor-logs\_2016-04-22\_13.23.43.tgz *was created.
-    Either download this file using scp/sftp (WinSCP is a nice tool if you're using Windows) and then attach to your support ticket, or send the file directly to op5 by scp via the op5 Monitor server command line (ask op5 Support for instructions).
+    Either download this file using scp/sftp (WinSCP is a nice tool if you're using Windows) and then attach to your support ticket, or send the file directly to OP5 by scp via the OP5 Monitor server command line (ask OP5 Support for instructions).
 

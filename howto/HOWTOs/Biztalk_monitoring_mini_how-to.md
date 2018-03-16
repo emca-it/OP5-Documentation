@@ -2,7 +2,7 @@
 
 Disclaimer
 
-## The plugins in this HOWTO has not been fully tested with all Biztalk versions, for example certain variables or aguments used and available functionality may differ in your environment, please let us know if you have any issues with the plugins or commands mentioned in this HOWTO. All the plugins in this article is shipped with the default op5 Monitor plugins-package.
+## The plugins in this HOWTO has not been fully tested with all Biztalk versions, for example certain variables or aguments used and available functionality may differ in your environment, please let us know if you have any issues with the plugins or commands mentioned in this HOWTO. All the plugins in this article is shipped with the default OP5 Monitor plugins-package.
 
 * * * * *
 

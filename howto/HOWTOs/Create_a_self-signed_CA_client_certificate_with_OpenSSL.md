@@ -4,7 +4,7 @@ Version
 
 This article was written for version 1.0.1f of openssl, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
 This is a short instruction on how you can create your own CA certificate & then generate a client certificate based on this CA.
 

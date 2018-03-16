@@ -1,8 +1,8 @@
-# Monitor KVM virtual servers with op5 Monitor
+# Monitor KVM virtual servers with OP5 Monitor
 
  
 
-### **An overview of supported commands and sub-command for op5 Monitor 5.x and 6.x**
+### **An overview of supported commands and sub-command for OP5 Monitor 5.x and 6.x**
 
 ![](attachments/3801491/4358169.png)
 

@@ -10,18 +10,6 @@ A logfile is a file that records either events that occur in an operating system
 
 We have based the paths presented below on a CentOS 6 installation. There may be differences on CentOS 7, so we are revising as we move the Monitor Appliance to that version.
 
-**Table of Contents**
-
--   [About](#Troubleshooting-About)
--   [Preface](#Troubleshooting-Preface)
--   [Log Files](#Troubleshooting-LogFiles)
--   [Log levels](#Troubleshooting-Loglevels)
-    -   [log.yml](#Troubleshooting-log.yml)
-    -   [smsd.log](#Troubleshooting-smsd.log)
-    -   [syslog-ng](#Troubleshooting-syslog-ng)
--   [Examples](#Troubleshooting-Examples)
-    -   [Business Services](#Troubleshooting-BusinessServices)
-
 # Log Files
 
 The table shows the available modules and their log files.

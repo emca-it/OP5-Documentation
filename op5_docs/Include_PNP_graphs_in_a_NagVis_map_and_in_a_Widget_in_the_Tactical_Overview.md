@@ -6,7 +6,7 @@ Redirection Notice
 
 This page will redirect to [DOC:NagVis maps\#Addagraph](/display/DOC/NagVis+maps) in about 5 seconds.
 
-This documentation is deprecated in favour of the op5 Monitor administrator documentation: [NagVis maps\#Addagraph](https://kb.op5.com/display/DOC/NagVis+maps#NagVismaps-Addagraph)
+This documentation is deprecated in favour of the OP5 Monitor administrator documentation: [NagVis maps\#Addagraph](https://kb.op5.com/display/DOC/NagVis+maps#NagVismaps-Addagraph)
 
  
 

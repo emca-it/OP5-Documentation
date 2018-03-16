@@ -25,7 +25,7 @@ In previous versions of check-nt the argument-numbers are numbered with number o
 
 -   Restart NSClient++ to load the new settings.
 
-## Configuration at your op5 Monitor server
+## Configuration at your OP5 Monitor server
 
 -   Test your new nrpe command at command-line:
      monitor!monitor:\~\$ /opt/plugins/check\_nrpe -H remote-windows-server.domain.com -c check\_ping -a mailserver.domain.com 100,20% 500,60%

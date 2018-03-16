@@ -2,7 +2,7 @@
 
 # About
 
-This chapter describes the backend of op5 Monitor
+This chapter describes the backend of OP5 Monitor
 
 # Backend parts
 
@@ -20,6 +20,6 @@ This is a database that includes Naemon object status and status changes. It als
 
 # Backend Layout
 
-Describes the workflow of the op5 Monitor backend
+Describes the workflow of the OP5 Monitor backend
 ![](attachments/16482361/16679179.png)
 

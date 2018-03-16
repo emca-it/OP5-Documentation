@@ -1,10 +1,10 @@
-# How do I add my own MIBs to an op5 system?
+# How do I add my own MIBs to an OP5 system?
 
 ## Question
 
 * * * * *
 
-How do I add my own MIBs to an op5 system?
+How do I add my own MIBs to an OP5 system?
 
 ## Answer
 

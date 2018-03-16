@@ -2,32 +2,19 @@
 
 # Introduction
 
-The op5 Monitor backend can easily be used as a load balanced monitoring solution. The load balanced model looks like this.
+The OP5 Monitor backend can easily be used as a load balanced monitoring solution. The load balanced model looks like this.
  ![](attachments/16482411/21300233.png)
 The load balanced solution have two or more peers in the same environment sharing the same tasks (the hosts to monitor). Any new configuration made on any of the peers is distributed to the other peers. The peers divides the load automatically and keep tracks of when one peer go down, the other(s) take over the job.
-
-**Table of Content**
-
--   [Introduction](#Loadbalancedmonitoring-Introduction)
--   [Before we start](#Loadbalancedmonitoring-Beforewestart)
-    -   [Prerequisites](#Loadbalancedmonitoring-Prerequisites)
-    -   [Cluster state information](#Loadbalancedmonitoring-monnodestatusClusterstateinformation)
--   [The configuration](#Loadbalancedmonitoring-Theconfiguration)
-    -   [Setting up the load balanced solution](#Loadbalancedmonitoring-Settinguptheloadbalancedsolution)
-    -   [Adding another peer](#Loadbalancedmonitoring-Addinganotherpeer)
-    -   [Removing a peer](#Loadbalancedmonitoring-Removingapeer)
-    -   [File and directory synchronization](#Loadbalancedmonitoring-Fileanddirectorysynchronization)
--   [More information](#Loadbalancedmonitoring-Moreinformation)
 
 # Before we start
 
 ## Prerequisites
 
-There are a few things you need to take care of before you can start setting up a load balanced monitoring. You need to make sure you have at least two servers of **the same architecture **(32/64 bit), both running the **same** version of op5 Monitor.
+There are a few things you need to take care of before you can start setting up a load balanced monitoring. You need to make sure you have at least two servers of **the same architecture **(32/64 bit), both running the **same** version of OP5 Monitor.
 
 More specifically, make sure that:
 
--   -   op5 Monitor version \>=5.2 is installed and running on all servers.
+-   -   OP5 Monitor version \>=5.2 is installed and running on all servers.
     -   The peers will connect to each other on the following TCP ports, that must be opened up for successful communication:
         -   22 (SSH), used for distributing configuration between peers.
         -   15551 (merlin), used for state communication, such as check results.
@@ -37,7 +24,7 @@ More specifically, make sure that:
 
 ## Cluster state information
 
-In the op5 Monitor system, a tool called *mon* can be found via the command line (accessed via SSH). To view the current cluster state, run the command like this:
+In the OP5 Monitor system, a tool called *mon* can be found via the command line (accessed via SSH). To view the current cluster state, run the command like this:
 
 `mon node status`
 
@@ -74,14 +61,14 @@ This load balanced configuration will be set up with two peered nodes ("peers"):
     asmonitor mon sshkey push --type=peer
 7.  Push peer-blue's configuration to peer-green:
     asmonitor mon oconf push peer-green
-8.  Restart op5 Monitor on all nodes:
+8.  Restart OP5 Monitor on all nodes:
     `mon node ctrl --self -- mon restart`
      
 9.  After a minute or two, make sure that the peers are fully connected and synchronized according to [mon node status](#Loadbalancedmonitoring-monnodestatus).
 
  
 
-In case you have been running op5 Monitor for a while already, and you are now about to convert your standalone server to a load balanced setup, you should think of peer-blue as your current op5 Monitor server, and peer-green as the new peer. This is important to get right, as you may otherwise push the new peer's empty host/service object configuration to the current server, effectively overwriting your actual configuration. If in doubt, please consult your technical contact at op5.
+In case you have been running OP5 Monitor for a while already, and you are now about to convert your standalone server to a load balanced setup, you should think of peer-blue as your current OP5 Monitor server, and peer-green as the new peer. This is important to get right, as you may otherwise push the new peer's empty host/service object configuration to the current server, effectively overwriting your actual configuration. If in doubt, please consult your technical contact at op5.
 
 In addition, you will also want to copy /opt/monitor/var/status.sav from your original master to the new peer, in order for them to agree on host/service comments, acknowledgements, scheduled downtimes etc. issued on the original master before the new peer was added. To achieve this, you need to stop the Monitor service with on both nodes before copying the file and then start the Monitor service again on both nodes:
 
@@ -119,7 +106,7 @@ In this instruction we will have the following hosts:
 
 6.  On any one of the previously existing peers (green or blue in this case), push its configuration to the new peer:
     `asmonitor mon oconf push peer-red `
-7.  Finally, on any of the peers (old or new), trigger a full restart op5 Monitor on all nodes:
+7.  Finally, on any of the peers (old or new), trigger a full restart OP5 Monitor on all nodes:
     `mon node ctrl --self -- mon restart`
 8.  After a minute or two, make sure that the peers are fully connected and synchronized according to [mon node status](#Loadbalancedmonitoring-monnodestatus).
 
@@ -142,7 +129,7 @@ The peer will be removed from all other peers' configuration.
 3.  Remove all local configuration:
     `mon node remove $(mon node list --type=peer) `
      
-4.  Restart op5 Monitor:mon restart
+4.  Restart OP5 Monitor:mon restart
 5.  Unless peer-red isn't powered off, the node will be running with the same configuration as its previous peers, but as a standalone server, performing all host/service check on its own. 
 
 ## File and directory synchronization

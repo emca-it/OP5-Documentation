@@ -2,11 +2,11 @@
 
 Support information
 
-This article was written for version 7.2.9 of OP5 Monitor and Servicenow Helsinki, it could work on both lower and higher version if nothing else is stated. The ServiceNow integration, the integration pack and it's dependencies are third-party add ons and is not officially supported by op5 AB.  If you need a supported integration between OP5 Monitor and ServiceNow please [contact us!](https://www.op5.com/about/contact-us/)
+This article was written for version 7.2.9 of OP5 Monitor and Servicenow Helsinki, it could work on both lower and higher version if nothing else is stated. The ServiceNow integration, the integration pack and it's dependencies are third-party add ons and is not officially supported by OP5 AB.  If you need a supported integration between OP5 Monitor and ServiceNow please [contact us!](https://www.op5.com/about/contact-us/)
 
  
 
-This integration will enhance ServiceNow incidents with valuable and business critical information. op5 will automatically create and populate ServiceNow incidents with information that will help you to determinate the root cause of the alert.
+This integration will enhance ServiceNow incidents with valuable and business critical information. OP5 will automatically create and populate ServiceNow incidents with information that will help you to determinate the root cause of the alert.
 
 It is advised that this integration is used in combination with op5's** Business service management** functionality where focus is on the health and performance of critical business processes such as sales, order processing, production and payroll and how they are connected to underlying IT infrastructure. Instead of just focusing on the status of your server monitoring, printer monitoring, network monitoring, or other technical components. 
 

@@ -4,13 +4,13 @@
 
 There are many ways to verify that a [Microsoft Exchange](http://en.wikipedia.org/wiki/Microsoft_Exchange_Server) mail server is running. You can check mail delivery, tcp-ports, services and more. No single test will provide a complete picture of the status of your Exchange-server, hence this how-to will describe how to combine several tests to have a reliable set of services that together provide the complete picture of the exchange servers status.
 
-This how-to primarily covers how to Monitor Microsoft Exchange Server 2010. We assume you already have the latest op5 Windows agent NSClient++ installed and running on your Exchange-server.
+This how-to primarily covers how to Monitor Microsoft Exchange Server 2010. We assume you already have the latest OP5 Windows agent NSClient++ installed and running on your Exchange-server.
 
  
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 
@@ -37,7 +37,7 @@ Scan the host (your Exchange-server) the web-gui-function ‘Scan host \<hostnam
  *command\_line:*
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
-$USER1$/check_email_delivery -p '/opt/plugins/check_smtp_send -H $ARG1$ --mailto $ARG2$ --mailfrom $ARG3$ -U $ARG4$ -P $ARG5$ --header "Subject: op5 Monitor Test"' -p '/opt/plugins/check_imap_receive -H $ARG6$ -U $ARG4$ -P $ARG5$ -s SUBJECT -s "op5 Monitor Test"'
+$USER1$/check_email_delivery -p '/opt/plugins/check_smtp_send -H $ARG1$ --mailto $ARG2$ --mailfrom $ARG3$ -U $ARG4$ -P $ARG5$ --header "Subject: OP5 Monitor Test"' -p '/opt/plugins/check_imap_receive -H $ARG6$ -U $ARG4$ -P $ARG5$ -s SUBJECT -s "op5 Monitor Test"'
 ```
 
  
@@ -161,7 +161,7 @@ service\_name: Messages Delivery per Second
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 

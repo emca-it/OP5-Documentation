@@ -2,11 +2,11 @@
 
 **Introduction**
 
-This how-to describes how to setup your op5 Monitor server with Oracle Instant Client to be able to use the plugin check\_oracle directly towards the Oracle Database. This means we eliminate the use of 3rd party agents on the server, and it’s the same syntax for Linux/UNIX and Windows platforms. In this how-to we will use version 11.2.0.2.0.6 of Oracle Instant Client. The 11-series client works for checks against Oracle 11 and Oracle 10 databases. The word ‘\<shell\>\#’ means that you will need to type a command in the command line interface.
+This how-to describes how to setup your OP5 Monitor server with Oracle Instant Client to be able to use the plugin check\_oracle directly towards the Oracle Database. This means we eliminate the use of 3rd party agents on the server, and it’s the same syntax for Linux/UNIX and Windows platforms. In this how-to we will use version 11.2.0.2.0.6 of Oracle Instant Client. The 11-series client works for checks against Oracle 11 and Oracle 10 databases. The word ‘\<shell\>\#’ means that you will need to type a command in the command line interface.
 
 ## **Requirements**
 
--   Oracle Instant Client installed on your op5 Monitor server.
+-   Oracle Instant Client installed on your OP5 Monitor server.
 
 -   A user with sufficient access to the databases you want to monitor is needed. The user needs the following permissions:
 
@@ -25,9 +25,9 @@ grant select on SYS.DBA_FREE_SPACE to <USER>;
 
 **Oracle Instant Client**
 
-1.  Begin by logging on to your op5 Monitor server via SSH.
+1.  Begin by logging on to your OP5 Monitor server via SSH.
      
-2.  The Oracle Instant Client should be installed by default in your op5 Monitor setup. To make sure, execute the command below, which will install the needed packages if they are missing.
+2.  The Oracle Instant Client should be installed by default in your OP5 Monitor setup. To make sure, execute the command below, which will install the needed packages if they are missing.
     `# yum install oracle-instantclient11.2-sqlplus oracle-instantclient11.2-devel`
 3.  A set of environment variables are needed, both for the shell and Nagios/Naemon. Set this up by creating the file */etc/profile.d/*check\_oracle.sh** with the following contents:
 
@@ -38,7 +38,7 @@ grant select on SYS.DBA_FREE_SPACE to <USER>;
     PATH=$PATH:$ORACLE_HOME/bin
     ```
 
-    In case of running op5 Monitor version 7.0.5.2 or later, make sure that the same data as seen above is also found in the file */etc/sysconfig/naemon*.
+    In case of running OP5 Monitor version 7.0.5.2 or later, make sure that the same data as seen above is also found in the file */etc/sysconfig/naemon*.
 
 4.  Now log out the current SSH session, and then log on again.
 5.  Verify that the environment variables were properly read at log-on by printing their content into the terminal:
@@ -102,7 +102,7 @@ DBI support with DBD::Oracle module is now installed.
 
  
 
-The following steps are not supported by op5 or Oracle, but are known to work. If you are having problem though, you could also use the dummy login test instead. (check\_oracle -l \<SID\>)
+The following steps are not supported by OP5 or Oracle, but are known to work. If you are having problem though, you could also use the dummy login test instead. (check\_oracle -l \<SID\>)
 
  
 
@@ -135,7 +135,7 @@ Verify that your tnsping is working.
 
 **Restart Monitor**
 
-The last thing you need to do is to restart op5 Monitor. This is done with the following command:
+The last thing you need to do is to restart OP5 Monitor. This is done with the following command:
 
     # service naemon restart
 

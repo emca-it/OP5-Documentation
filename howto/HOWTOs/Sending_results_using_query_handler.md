@@ -4,7 +4,7 @@ Version
 
 This article was written for version 6.2 of Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
 # Table of Contents
 
@@ -14,9 +14,9 @@ Articles in the Community-Space are not supported by op5 Support.
 
 # About
 
-This article describes how to use the query handler to send passive results to op5 Monitor. These types of passive results can be used for scrips that is not scheduled by op5 Monitor to perform checks.
+This article describes how to use the query handler to send passive results to OP5 Monitor. These types of passive results can be used for scrips that is not scheduled by OP5 Monitor to perform checks.
 
-To send a passive result to op5 Monitor we use the command 'mon qh query command run' or writing directly to the socket. Both methods are described in this how-to. Using the mon-command is a debugging tool. For implementations where passive results are sent to the monitor server using the socket is the preferred way.
+To send a passive result to OP5 Monitor we use the command 'mon qh query command run' or writing directly to the socket. Both methods are described in this how-to. Using the mon-command is a debugging tool. For implementations where passive results are sent to the monitor server using the socket is the preferred way.
 
 # Service
 
@@ -68,7 +68,7 @@ The command output if everything is ok is
 OK:No error
 ```
 
-This result will look like this in op5 Monitor:
+This result will look like this in OP5 Monitor:
 
 ![](attachments/5375144/5734585.png)
 
@@ -76,7 +76,7 @@ This result will look like this in op5 Monitor:
 
 It is possible to send in passive results with multiline support. To do this we need to change the *escape\_html\_tags=1* to *escape\_html\_tags=0* in the file */opt/monitor/etc/cgi.cfg*
 
-To send a multiline result to op5 Monitor use the \<br\> tag in the output. Example:
+To send a multiline result to OP5 Monitor use the \<br\> tag in the output. Example:
 
 **mon-command**
 

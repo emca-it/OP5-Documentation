@@ -1,10 +1,10 @@
-# Monitoring HPE 3PAR StoreServ with op5 Monitor
+# Monitoring HPE 3PAR StoreServ with OP5 Monitor
 
 Version
 
-This article was written for version 7.3.9 of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 7.3.9 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
  
 
@@ -20,17 +20,17 @@ Plugin is tested against HPE 3PAR simulator running on version 3.2.2 (MU2).
 
 Support information
 
-3PAR check plugin and it's dependencies are third-party products, not supported by op5 AB
+3PAR check plugin and it's dependencies are third-party products, not supported by OP5 AB
 
 ## Prerequisites
 
 -   Admin level access to 3PAR
 -   Basic knowledge of service configuration in *op5 Monitor*
--   SSH access from op5 Monitor to 3PAR
+-   SSH access from OP5 Monitor to 3PAR
 
 ## Software download
 
-Download check\_3par.sh ([download](https://exchange.nagios.org/directory/Plugins/Hardware/Storage-Systems/SAN-and-NAS/3PAR-check-script/details)) and store it to op5 Monitor /opt/plugins/custom and make it executable.
+Download check\_3par.sh ([download](https://exchange.nagios.org/directory/Plugins/Hardware/Storage-Systems/SAN-and-NAS/3PAR-check-script/details)) and store it to OP5 Monitor /opt/plugins/custom and make it executable.
 
 Please note, that there are more recent update to that script mentioned in comments (which supports SSD drives as well). 
 
@@ -44,7 +44,7 @@ Also some other 3par related scripts are available (one at GitHub as check\_3par
 
 ## Create SSH key for monitor user
 
-Login to op5 Monitor as **monitor** user and create SSH key if not yet created
+Login to OP5 Monitor as **monitor** user and create SSH key if not yet created
 
 Check files under /opt/monitor/.ssh
 
@@ -98,7 +98,7 @@ Password:
 
 ## Setup passwordless SSH 
 
-(enter the command and then copy&paste SSH key from op5 server to here)... Remember to press "Enter" twice
+(enter the command and then copy&paste SSH key from OP5 server to here)... Remember to press "Enter" twice
 
  
 
@@ -194,7 +194,7 @@ Go to the "Commands" configuration page in *op5 Monitor* and create a new check 
 
 ## Monitoring test cases
 
-Create a new service on your target host in op5 Monitor and select the "check\_3par" command.
+Create a new service on your target host in OP5 Monitor and select the "check\_3par" command.
 The check command requires one argument:
  
 

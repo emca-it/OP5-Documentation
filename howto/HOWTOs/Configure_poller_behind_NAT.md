@@ -4,7 +4,7 @@ Version
 
 This article was written for version 6.2 of Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
  
 
@@ -21,7 +21,7 @@ In this example we have a master server called *master01* and a poller called�
 # Prerequisites
 
 -   The master server must be accessible on port 22 and 15551 from the poller.
--   Basic understanding of op5 Monitor with master-peer configuration
+-   Basic understanding of OP5 Monitor with master-peer configuration
 
 # Steps
 
@@ -83,7 +83,7 @@ In this example we have a master server called *master01* and a poller called�
     mon sshkey push --all
     ```
 
-8.  On *master01*, restart the op5 Monitor system services by executing the command below.
+8.  On *master01*, restart the OP5 Monitor system services by executing the command below.
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     mon restart

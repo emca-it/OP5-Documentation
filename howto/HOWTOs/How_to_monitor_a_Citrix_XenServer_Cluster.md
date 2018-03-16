@@ -28,11 +28,11 @@ Through the plugin we can check the following parameters on the host and virtual
 
 ## Prerequisites
 
--   Make sure you have the latest op5 plugin package installed. To verify this simply do a “yum update” when logged in to op5 Monitor via SSH.
+-   Make sure you have the latest OP5 plugin package installed. To verify this simply do a “yum update” when logged in to OP5 Monitor via SSH.
 -   Create a common *user* on your hosts. It will be used by the plugin to communicate with the XEN API on your hosts.
--   Add the master host in your cluster environment to op5 Monitor. All checks in this how-to will ask the master host.
-    *Note:* If you need to monitor VMs that is not running on the master host, also add the host that the VM is running on to the op5 Monitor and add the VM checks to that host.
--   Host address in op5 Monitor must be the IP of the server.
+-   Add the master host in your cluster environment to OP5 Monitor. All checks in this how-to will ask the master host.
+    *Note:* If you need to monitor VMs that is not running on the master host, also add the host that the VM is running on to the OP5 Monitor and add the VM checks to that host.
+-   Host address in OP5 Monitor must be the IP of the server.
 
  
 
@@ -195,7 +195,7 @@ This plugin is still under development. More checks will be added. Please send y
 
 All checks have been tested on Citrix XenServer cluster v5.5 and 6.0.
 
-You can see this plugin in use on our [demo](http://demo.op5.com/ "online demo op5 monitor") site.
+You can see this plugin in use on our [demo](http://demo.op5.com/ "online demo OP5 Monitor") site.
 
  
 

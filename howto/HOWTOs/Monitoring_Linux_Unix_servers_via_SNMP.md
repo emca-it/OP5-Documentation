@@ -6,9 +6,9 @@ For some servers it's unsuitable to install a specific agent that allows retriev
 
 This is necessary in order for the host to respond to our queries. Following the HowTo article [Configure a Linux server for SNMP monitoring](Configure_a_Linux_server_for_SNMP_monitoring) will prepare the target host for monitoring. For the remainder of this article, we'll assume that you've followed those steps. You should, however, replace **authPass** and **privPass** here with the passwords you chose when configuring your server for monitoring.
 
-## 2 - Add the server as a host in op5 Monitor
+## 2 - Add the server as a host in OP5 Monitor
 
-This step is explained in great detail in the manual pages detailing how to use the [configuring](https://kb.op5.com/display/DOC/configuring), although you may want to use the [Host Wizard](https://kb.op5.com/display/DOC/Host+Wizard) to add one or more hosts to your op5 Monitoring system.
+This step is explained in great detail in the manual pages detailing how to use the [configuring](https://kb.op5.com/display/DOC/configuring), although you may want to use the [Host Wizard](https://kb.op5.com/display/DOC/Host+Wizard) to add one or more hosts to your OP5 Monitoring system.
 
 ## 3 - Configure the SNMP checks
 
@@ -19,11 +19,11 @@ The server-specific SNMP based checks primarily relate to checking things such a
 -   Disk usage - Full disks spell trouble on most servers
 -   Processes - A computer without processes is worse than useless. Make sure yours are running.
 
-Using the op5 Monitor Configuration Tool, you have the option to add new services to a host. How to do so is explained in the manual for the [configuring](https://kb.op5.com/display/DOC/configuring). Briefly though; A check-command is used to create a particular check. The complete list of server-specific unix/linux checkcommands as of 2015-08-16 is listed below. There are other SNMP based checks that can be performed against servers, but some of them are vendor specific (such as chassis temperature etc), and some of them are explained elsewhere or have great tool support in the configuration tool (such as network traffic checks).
+Using the OP5 Monitor Configuration Tool, you have the option to add new services to a host. How to do so is explained in the manual for the [configuring](https://kb.op5.com/display/DOC/configuring). Briefly though; A check-command is used to create a particular check. The complete list of server-specific unix/linux checkcommands as of 2015-08-16 is listed below. There are other SNMP based checks that can be performed against servers, but some of them are vendor specific (such as chassis temperature etc), and some of them are explained elsewhere or have great tool support in the configuration tool (such as network traffic checks).
 
 ### Configuring checks using SNMP v3
 
-Setting up all the parameters required for using SNMP can be a daunting task, and creating separate check commands for all possible variations would quickly become unwieldy. Because of that, we have chosen to use a less rigid format for SNMP v3 checks which allows you, the user, to pass command-line arguments specifically for SNMP v3 authentication and encryption directly to the plugins. Keep in mind that (almost) all checks in op5 Monitor are executed by plugins, which are basically small scripts and programs that tend to perform one small task (although sometimes in a couple of different ways) quickly and efficiently.
+Setting up all the parameters required for using SNMP can be a daunting task, and creating separate check commands for all possible variations would quickly become unwieldy. Because of that, we have chosen to use a less rigid format for SNMP v3 checks which allows you, the user, to pass command-line arguments specifically for SNMP v3 authentication and encryption directly to the plugins. Keep in mind that (almost) all checks in OP5 Monitor are executed by plugins, which are basically small scripts and programs that tend to perform one small task (although sometimes in a couple of different ways) quickly and efficiently.
 
 The relevant help-text section for SNMP v3 plugin parameters follows:
 
@@ -64,7 +64,7 @@ Note that we don't recommend using SNMP v2c, since it doesn't allow for strong a
 
 ## Choose what to monitor
 
-Below is a list of all server specific but vendor generic checkcommands provided by default. The list is exhaustive as of op5 Monitor version 7.1.0.
+Below is a list of all server specific but vendor generic checkcommands provided by default. The list is exhaustive as of OP5 Monitor version 7.1.0.
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 check_snmp_cpu_custom
@@ -122,13 +122,13 @@ check_snmp_procs_syslog_v3
 ## Related articles
 
 -   Page:
-    [Getting started with op5 Monitor](/display/HOWTOs/Getting+started+with+op5+Monitor)
+    [Getting started with OP5 Monitor](/display/HOWTOs/Getting+started+with+op5+Monitor)
 -   Page:
     [Monitoring Dell servers](/display/HOWTOs/Monitoring+Dell+servers)
 -   Page:
     [Configure a Linux server for SNMP monitoring](/display/HOWTOs/Configure+a+Linux+server+for+SNMP+monitoring)
 -   Page:
-    [How to configure op5 Trapper Extension (Cisco handler)](../HOWTOs/How_to_configure_op5_Trapper_Extension_Cisco_handler_)
+    [How to configure OP5 Trapper Extension (Cisco handler)](../HOWTOs/How_to_configure_op5_Trapper_Extension_Cisco_handler_)
 -   Page:
     [Migrate Monitor 7 from EL6 to EL7](/display/HOWTOs/Migrate+Monitor+7+from+EL6+to+EL7)
 

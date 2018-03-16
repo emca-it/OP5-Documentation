@@ -21,16 +21,6 @@ The following views, or tables, uses listviews:
 -   Notifications
 -   Saved filters
 
-**Table of Content**
-
--   [About](#Listviews-About)
--   [Columns](#Listviews-columnsColumns)
-    -   [Column list](#Listviews-Columnlist)
-    -   [Custom columns](#Listviews-Customcolumns)
-    -   [Sorting](#Listviews-Sorting)
--   [More information](#Listviews-Moreinformation)
-    -   [Related pages](#Listviews-Relatedpages)
-
 # Columns
 
 Every user can choose which columns to display in listviews. The columns can be specified under **My Account** in the **Profile** menu, by hovering your username.

@@ -4,11 +4,6 @@
 
 This document describes how to get logged in to OP5 Monitor. There isn't anything necessarily tricky about getting logged in, but it is an important step to getting people acclimated to OP5 Monitor.
 
-**Table of Content**
-
--   [About](#GettingLoggedIn-About)
--   [Getting Logged In](#GettingLoggedIn-GettingLoggedIn)
-
 # Getting Logged In
 
 Like many applications, the first step is to get logged in. An account should already have been created by an OP5 Monitor administrator, and the account credentials should be readily available.

@@ -23,7 +23,7 @@ Configuring Postfix 
 
 ### Using an open relay server (no authentication)
 
-### op5 Appliance System (APS)
+### OP5 Appliance System (APS)
 
 The APS lets you configure the relay server using the web based configuration tool (Portal).
 
@@ -40,7 +40,7 @@ The APS lets you configure the relay server using the web based configuration to
 
 Depending on the configuration of the relaying mail server, different authentication mechanisms are required. In this case, the basic plain authentication mode will be used.
 
-1.  Log on to your `root` account at your op5 Monitor server using SSH.
+1.  Log on to your `root` account at your OP5 Monitor server using SSH.
 2.  Create a new SASL authentication file unless one already exists.
     1.  Run the following commands:
         `[ -e /etc/postfix/sasl_passwd ] || : > /etc/postfix/sasl_passwd`
@@ -82,7 +82,7 @@ Depending on the configuration of the relaying mail server, different authentica
 
 ### **Sending a test message**
 
-#### op5 Appliance System (APS)
+#### OP5 Appliance System (APS)
 
 Enter the Email Settings page in the Portal and send a test message.
 
@@ -98,7 +98,7 @@ Enter the Email Settings page in the Portal and send a test message.
 
 #### Finding (error) log messages
 
-1.  Log on to your root account at your op5 Monitor server using SSH.
+1.  Log on to your root account at your OP5 Monitor server using SSH.
 2.  Monitor the system mail log file by running the following command:
     `tail -n0 -F /var/log/maillog`
 3.  Meanwhile, send a test message using one of the methods outlined above.
@@ -131,7 +131,7 @@ Note: If configuring this for Office365, you need to use a regular mailbox accou
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 

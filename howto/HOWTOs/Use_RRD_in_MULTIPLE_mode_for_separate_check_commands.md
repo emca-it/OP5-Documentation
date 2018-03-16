@@ -2,11 +2,11 @@
 
 Version
 
-This article was written for version 6.2.2 of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 6.2.2 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 support.
+Articles in the Community-Space are not supported by OP5 support.
 
-Most plugins shipped with op5 Monitor will always print the same number of labels in the performance data part of the check result, making the default storage type for rrd files single. This means that each service will have one rrd file containing a static amount of data sources, which is determined either by a special template for the particular check command used, or by the default template the first time the check runs.
+Most plugins shipped with OP5 Monitor will always print the same number of labels in the performance data part of the check result, making the default storage type for rrd files single. This means that each service will have one rrd file containing a static amount of data sources, which is determined either by a special template for the particular check command used, or by the default template the first time the check runs.
 
 You could compare it to creating a MySQL table for each check, with a fixed number of columns because you know that the number of columns will never increase.
 

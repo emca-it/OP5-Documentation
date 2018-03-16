@@ -31,7 +31,7 @@ Business Object
 
 Rule
  Shows which rule is applied to the group.
- For more information about the different rules see Rules types on page 156 in op5 Administrator manual.
+ For more information about the different rules see Rules types on page 156 in OP5 Administrator manual.
 
 3
 
@@ -39,7 +39,7 @@ Actions
  A list of action buttons.
  Click the icons to
 
--   -   Look up service/host in op5 monitor
+-   -   Look up service/host in OP5 Monitor
     -   Go to the configuration for the host or service
     -   Add sub element, only available on groups
     -   Edit object
@@ -60,5 +60,5 @@ Duration
 6
 
 Status Information
- Displays in what state the current group is in. For hosts and services the output from the op5 monitor check is displayed.
+ Displays in what state the current group is in. For hosts and services the output from the OP5 Monitor check is displayed.
 

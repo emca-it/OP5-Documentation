@@ -1,10 +1,10 @@
-# How is op5 Monitor integrated with products from Packetfront?
+# How is OP5 Monitor integrated with products from Packetfront?
 
 ## Question
 
 * * * * *
 
-How is op5 Monitor integrated with products from Packetfront?
+How is OP5 Monitor integrated with products from Packetfront?
 
 ## Answer
 

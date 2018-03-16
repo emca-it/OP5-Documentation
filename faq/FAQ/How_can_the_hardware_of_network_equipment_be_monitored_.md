@@ -30,5 +30,5 @@ This plugin provides temperature logs combined with the SNMP-location (in perfor
 
  
 
-check\_snmp\_env is since op5 Monitor 6.1 included and supported. More information about the plugin and the support level can be found [here](https://kb.op5.com/display/PLUGINS/check_snmp_env).
+check\_snmp\_env is since OP5 Monitor 6.1 included and supported. More information about the plugin and the support level can be found [here](https://kb.op5.com/display/PLUGINS/check_snmp_env).
 

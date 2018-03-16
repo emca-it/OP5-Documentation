@@ -1,10 +1,10 @@
-# NRPE conflicts op5 Monitor installation on Red Hat Enterprise Linux 6
+# NRPE conflicts OP5 Monitor installation on Red Hat Enterprise Linux 6
 
 ## Question
 
 * * * * *
 
-Why do I get package conflicts with the NRPE package when installing or upgrading op5 Monitor on Red Hat Enterprise Linux 6?
+Why do I get package conflicts with the NRPE package when installing or upgrading OP5 Monitor on Red Hat Enterprise Linux 6?
 
  
 

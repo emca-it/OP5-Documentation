@@ -4,12 +4,6 @@
 
 This is the initial overview of OP5 Monitor, and it's meant to get people familiar with the parts of OP5 Monitor. No prior knowledge is assumed.
 
-**Table of Contents**
-
--   [About](#FirstContact-About)
--   [Welcome Page](#FirstContact-WelcomePage)
--   [Initial Login](#FirstContact-InitialLogin)
-
 # Welcome Page
 
 The *Welcome* page is the initial landing point for people accessing OP5 Monitor. The default *Welcome* page is shown below, but it can be customized to suit the client.

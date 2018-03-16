@@ -12,7 +12,7 @@ How do I troubleshoot the [GSM Modem / GSM Gateway / GSM Terminal](https://kb.op
 
 **Recommendations:**
 
-Connect the modem directly to the op5 Monitor server instead of using a Ethernet over Serial solution. This will guarantee that notifications can be sent even if the local network goes down.
+Connect the modem directly to the OP5 Monitor server instead of using a Ethernet over Serial solution. This will guarantee that notifications can be sent even if the local network goes down.
 
  
 
@@ -57,7 +57,7 @@ This could be three different problems:
 -   The SIM card is missing.
 -   The PIN code is incorrect or isn't configured.
 
-5. If the server is a brand new op5 Appliance machine from Dell, the COM1 port may be redirected to iDRAC.
+5. If the server is a brand new OP5 Appliance machine from Dell, the COM1 port may be redirected to iDRAC.
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 root@monitor:~# omreport chassis biossetup

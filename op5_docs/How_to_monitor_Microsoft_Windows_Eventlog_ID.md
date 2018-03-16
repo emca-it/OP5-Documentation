@@ -5,29 +5,12 @@
 In Microsoft Windows, almost all events are logged to the event log.
 This how-to applies to two versions of the agent NSClient++, due to changes in the command used, and describes the process for monitoring **a specific** event log ID, which can help you detect changes and behavior patterns on your system.
 
-**Table of Content**
-
--   [Introduction](#HowtomonitorMicrosoftWindowsEventlogID-Introduction)
-
-[NSClient++ 0.4.4.15](#HowtomonitorMicrosoftWindowsEventlogID-NSClient++0.4.4.15)
-
--   [Prerequisites](#HowtomonitorMicrosoftWindowsEventlogID-Prerequisites)
--   [Adding the check command](#HowtomonitorMicrosoftWindowsEventlogID-Addingthecheckcommand)
--   [Using the check command in a service](#HowtomonitorMicrosoftWindowsEventlogID-Usingthecheckcommandinaservice)
--   [Additional information](#HowtomonitorMicrosoftWindowsEventlogID-Additionalinformation)
-
-[NSClient ++ 0.3.9](#HowtomonitorMicrosoftWindowsEventlogID-NSClient++0.3.9)
-
--   [Prerequisites](#HowtomonitorMicrosoftWindowsEventlogID-Prerequisites.1)
--   [Adding the check command](#HowtomonitorMicrosoftWindowsEventlogID-Addingthecheckcommand.1)
--   [Using the check command in a service](#HowtomonitorMicrosoftWindowsEventlogID-Usingthecheckcommandinaservice.1)
-
 # NSClient++ 0.4.4.15
 
 ## Prerequisites
 
 -   The NSClient++ monitoring agent version 0.4.4.15 installed on the target host
--   Permissions to add check commands and services in op5 Monitor
+-   Permissions to add check commands and services in OP5 Monitor
 
 ## 
 Adding the check command
@@ -124,7 +107,7 @@ For more advanced information have a look at the NSClient++ 0.4.4 [check\_event
 ## Prerequisites
 
 -   The NSClient++ monitoring agent version 0.3.9 installed on the target host
--   Permissions to add check commands and services in op5 Monitor
+-   Permissions to add check commands and services in OP5 Monitor
 
 ## 
 Adding the check command
@@ -216,7 +199,7 @@ Configuration instructions:
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 

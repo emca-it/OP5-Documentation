@@ -8,21 +8,6 @@ A plugin is a small executable that takes optional command line parameters as in
 2.  Reports a diagnostic message on stdout (will be shown in the web GUI)
 3.  Returns an exit code.
 
-**Table of Content**
-
--   [About](#Theplugininterface-About)
--   [Example](#Theplugininterface-Example)
--   [Status information](#Theplugininterface-Statusinformation)
--   [Performance data](#Theplugininterface-Performancedata)
--   [Example 2 ](#Theplugininterface-Example2)
--   [Return code](#Theplugininterface-Returncode)
-
-<!-- -->
-
-     
-
-     
-
 # Example
 
 Execute `check_tcp` to test the port 80/tcp on 193.201.96.136
@@ -98,7 +83,7 @@ Performance data output:
 
 # Return code
 
-The return code is the one that op5 Monitor uses to determine what state the services is in. It may be one of the following:
+The return code is the one that OP5 Monitor uses to determine what state the services is in. It may be one of the following:
  `0, 1, 2, 3`
  Any return code above 0 is to be known as **problem states**.
  The return codes in detail*:*

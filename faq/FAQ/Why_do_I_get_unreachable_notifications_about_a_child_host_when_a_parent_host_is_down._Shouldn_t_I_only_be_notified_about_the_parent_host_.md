@@ -10,7 +10,7 @@ Why do I get unreachable notifications about a child host when a parent host is 
 
 * * * * *
 
-When op5 Monitor realize that a child host is down it will test if the parent host is down. If the parent host is down op5 Monitor will set the childhost to unreachable state. The notifications sent out later on will be: 
+When OP5 Monitor realize that a child host is down it will test if the parent host is down. If the parent host is down OP5 Monitor will set the childhost to unreachable state. The notifications sent out later on will be: 
 
 1.  Parent host: down 
 2.  Child host: unreachable 

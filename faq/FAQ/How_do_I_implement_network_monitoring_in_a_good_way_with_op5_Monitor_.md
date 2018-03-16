@@ -1,10 +1,10 @@
-# How do I implement network monitoring in a good way with op5 Monitor?
+# How do I implement network monitoring in a good way with OP5 Monitor?
 
 ## Question
 
 * * * * *
 
-How do I implement network monitoring in a good way with op5 Monitor?
+How do I implement network monitoring in a good way with OP5 Monitor?
 
 ## Answer
 

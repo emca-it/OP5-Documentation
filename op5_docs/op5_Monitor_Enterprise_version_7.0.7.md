@@ -1,4 +1,4 @@
-# op5 Monitor Enterprise version: 7.0.7
+# OP5 Monitor Enterprise version: 7.0.7
 
 **Permissive licenses**
 
@@ -260,7 +260,7 @@ A proprietary license can carry arbitrary restrictions, and must be investigated
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p>The op5 Software License is available at <a href="https://www.op5.com/op5-software-license/">https://www.op5.com/op5-software-license/</a></p>
+<td align="left"><p>The OP5 Software License is available at <a href="https://www.op5.com/op5-software-license/">https://www.op5.com/op5-software-license/</a></p>
 <img src="images/icons/contenttypes/comment_16.png" /> Posted by mfalkvidd at Jul 17, 2015 09:40</td>
 </tr>
 </tbody>

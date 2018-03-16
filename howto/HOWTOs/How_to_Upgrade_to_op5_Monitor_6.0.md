@@ -1,6 +1,6 @@
-# How to Upgrade to op5 Monitor 6.0
+# How to Upgrade to OP5 Monitor 6.0
 
-This article describes how to upgrade to op5 Monitor 6.
+This article describes how to upgrade to OP5 Monitor 6.
 
 # Known issues
 
@@ -9,16 +9,16 @@ Here can articles about known issues be found: <http://www.op5.com/blog/support
 # Good to know
 
 -   Basic Linux knowledge is required.
--   The LDAP authentication is totally rewritten, if you are using an LDAP integration with op5 monitor today your configuration will be converted. Make sure to read the manual on LDAP integration and go through your configuration after the upgrade to make sure everything is working.
+-   The LDAP authentication is totally rewritten, if you are using an LDAP integration with OP5 Monitor today your configuration will be converted. Make sure to read the manual on LDAP integration and go through your configuration after the upgrade to make sure everything is working.
 
 # Preparations
 
-1.  Download the latest Appliance System 6 (op5 APS) and op5 Monitor 6 from <http://www.op5.com/get-op5-monitor/download/>
+1.  Download the latest Appliance System 6 (op5 APS) and OP5 Monitor 6 from <http://www.op5.com/get-op5-monitor/download/>
 2.  Burn the ISO image on a CD.
 
 # Upgrade old system
 
-Before we can install the new version we have to make sure the old server is up to date so that the backup will include everything. If you are using a op5 Monitor below version 5.2.0 please follow the [upgrade path how-to](http://www.op5.com/how-to/upgrade-paths-for-op5-products/) first.****
+Before we can install the new version we have to make sure the old server is up to date so that the backup will include everything. If you are using a OP5 Monitor below version 5.2.0 please follow the [upgrade path how-to](http://www.op5.com/how-to/upgrade-paths-for-op5-products/) first.****
 ****
 
 1.  Run the following command to upgrade the system to latest version
@@ -26,14 +26,14 @@ Before we can install the new version we have to make sure the old server is up 
     2.  *\# yum upgrade*
     3.  Answer yes if any updates are available
 
-2.  Verify that you have backup version 4.0.0 and op5 monitor version 5.8.4
+2.  Verify that you have backup version 4.0.0 and OP5 Monitor version 5.8.4
      *\# rpm -qa |egrep ‘monitor-release|backup’*
 
 ## Upgrade offline system
 
-If you do not have access to the internet from your op5 server, follow these steps to do an offline upgrade.
+If you do not have access to the internet from your OP5 server, follow these steps to do an offline upgrade.
 
-You need to download and get the following files to the op5 Monitor server:
+You need to download and get the following files to the OP5 Monitor server:
  <http://repos.op5.com/centos/5/x86_64/system-addons/3.0/updates/perl-Config-Simple-4.59-1.el5.rf.noarch.rpm>
  <http://repos.op5.com/centos/5/x86_64/system-addons/3.0/updates/op5backup-2.2.0-op5.1.noarch.rpm>
  <http://repos.op5.com/centos/5/x86_64/monitor/5/updates/op5-monitor-repo-config-5.7.3.3-op5.1.noarch.rpm>
@@ -90,14 +90,14 @@ If the backup file is complete it will list the files in the backup file like th
 
 ## Backup acknowledgement and current state
 
-If you would like to backup acknowledgements and a hosts/service current state stop op5 Monitor with
+If you would like to backup acknowledgements and a hosts/service current state stop OP5 Monitor with
  *\# mon stop*
 
 Copy the following file off the server
 
 */opt/monitor/var/status.sav*
 
-Restart op5 Montor
+Restart OP5 Montor
 
 *\# mon start*
 
@@ -126,12 +126,12 @@ These are described below and should be done in this order.
 3.  Press arrow down then enter to select “install”. Do not click on anything until the server has rebooted.
 4.  Login to APS 6.0 as root, using the default password (monitor)
 
-## op5 Monitor installation
+## OP5 Monitor installation
 
 1.  Copy the monitor tar-file to */root*
 2.  Extract the file using:
      *\# tar zxfv op5-monitor-.tar.gz*
-3.  Go to the newly created op5 monitor folder
+3.  Go to the newly created OP5 Monitor folder
      \# cd op5-monitor-
 4.  Start the installation
      *\# ./install.sh*
@@ -157,7 +157,7 @@ Follow the instructions in this how-to: [How to Install VMware vSphere SDK for 
 7.  Do a *\# yum update* to install the latest patches. **Important for a peered environment!**
 8.  Reboot server
 9.  Restore host/service states
-     Stop op5 Monitor
+     Stop OP5 Monitor
      *\# mon stop*
      Copy status.sav back to */opt/monitor/var/* and restart op5
      *\# mon start *
@@ -167,9 +167,9 @@ Follow the instructions in this how-to: [How to Install VMware vSphere SDK for 
 1.  Reinstall sms-tools, only if no SMS-notification is sent out.
      *\# yum reinstall smstools *
 
-**Congratulations, you are now running op5 Monitor 6.0 and APS 6.0!**
+**Congratulations, you are now running OP5 Monitor 6.0 and APS 6.0!**
 
 ## Upgrade Monitor 6.0
 
-The [Upgrade path for op5 Monitor 6](Upgrade_path_for_op5_Monitor_6) describes how to upgrade Monitor 6.0 to the latest version.
+The [Upgrade path for OP5 Monitor 6](Upgrade_path_for_op5_Monitor_6) describes how to upgrade Monitor 6.0 to the latest version.
 

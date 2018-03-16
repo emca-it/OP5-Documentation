@@ -1,4 +1,4 @@
-# How do i secure my op5 installation?
+# How do i secure my OP5 installation?
 
 ## Question
 

@@ -14,16 +14,16 @@
 
 ## Get started
 
--   [Getting started with op5 Monitor](Getting_started_with_op5_Monitor)
--   [Getting started with op5 Monitor from Amazon Web Services Marketplace](Getting_started_with_op5_Monitor_from_Amazon_Web_Services_Marketplace)
+-   [Getting started with OP5 Monitor](Getting_started_with_op5_Monitor)
+-   [Getting started with OP5 Monitor from Amazon Web Services Marketplace](Getting_started_with_op5_Monitor_from_Amazon_Web_Services_Marketplace)
 
 ## Continue reading...
 
 -   [4 steps to turn on simple BSM in your system](4_steps_to_turn_on_simple_BSM_in_your_system)
 -   [How to set up load balanced monitoring](https://kb.op5.com/display/DOC/Load+balanced+monitoring)
--   [How to achieve a distributed setup with op5 Monitor](How_to_achieve_a_distributed_setup_with_op5_Monitor)
--   [Adding your first community plugin to op5 Monitor](https://kb.op5.com/display/DOC/Adding+your+first+plugin+to+op5+Monitor)
--   [Integrating op5Live with op5 Monitor](https://kb.op5.com/display/LIVE/Integrating+op5Live+with+op5+Monitor)
+-   [How to achieve a distributed setup with OP5 Monitor](How_to_achieve_a_distributed_setup_with_op5_Monitor)
+-   [Adding your first community plugin to OP5 Monitor](https://kb.op5.com/display/DOC/Adding+your+first+plugin+to+op5+Monitor)
+-   [Integrating op5Live with OP5 Monitor](https://kb.op5.com/display/LIVE/Integrating+op5Live+with+op5+Monitor)
 
  
 
@@ -44,7 +44,7 @@
 ## Get started
 
 -   [op5Live - The basics](https://kb.op5.com/display/LIVE/op5Live+-+The+basics)
--   [Integrating op5Live with op5 Monitor](https://kb.op5.com/display/LIVE/Integrating+op5Live+with+op5+Monitor)
+-   [Integrating op5Live with OP5 Monitor](https://kb.op5.com/display/LIVE/Integrating+op5Live+with+op5+Monitor)
 
 ## Continue reading...
 
@@ -70,7 +70,7 @@
 
 ## Get started
 
--   [How to use the op5 Monitor App](How_to_use_the_op5_Monitor_App)
+-   [How to use the OP5 Monitor App](How_to_use_the_op5_Monitor_App)
 
 ## Continue reading...
 

@@ -1,10 +1,10 @@
-# How do I use op5 Monitor to monitor my HP printers?
+# How do I use OP5 Monitor to monitor my HP printers?
 
 ## Question
 
 * * * * *
 
-How do I use op5 Monitor to monitor my HP printers?
+How do I use OP5 Monitor to monitor my HP printers?
 
 ## Answer
 

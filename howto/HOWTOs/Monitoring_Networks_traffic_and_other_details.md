@@ -4,7 +4,7 @@
 
  
 
-This is an inspirational how-to aiming to show some examples of information and graphs that you can configure in your op5 Monitor system. It contains is a mix of standard op5 Monitor checks and more advanced options to enhance monitoring of specifically networks, links, VPN's and network devices. If you are interested to implement the more advanced features and lack time or resources, please feel free to contact us for more information or that one of our partners can assist you. Note, all graphs and checks used below are based on free to use checks or plugins. 
+This is an inspirational how-to aiming to show some examples of information and graphs that you can configure in your OP5 Monitor system. It contains is a mix of standard OP5 Monitor checks and more advanced options to enhance monitoring of specifically networks, links, VPN's and network devices. If you are interested to implement the more advanced features and lack time or resources, please feel free to contact us for more information or that one of our partners can assist you. Note, all graphs and checks used below are based on free to use checks or plugins. 
 
  
 
@@ -12,7 +12,7 @@ This is an inspirational how-to aiming to show some examples of information and 
 
 # OP5 Monitor - Network monitoring
 
-As the business IT services are getting more distributed with multiple datacenters and the utilization of SaaS services continues to grow rapidly within Enterprise IT - the need for great working networks is essential. These shifts have direct impact on application performance, response times and overall user experience. OP5 Monitor has multiple built in ready to use checks to enable detailed monitoring of your network status and by that giving you early warnings before a major problem occurs. All performance data can be configured with thresholds to trigger alarms. It is also possible to generate trend graphs showing how your performance data xwill evolve over time based on historical data. The purpose of this paper is to show a few examples of what is possible to configure and monitor with op5 Monitor. 
+As the business IT services are getting more distributed with multiple datacenters and the utilization of SaaS services continues to grow rapidly within Enterprise IT - the need for great working networks is essential. These shifts have direct impact on application performance, response times and overall user experience. OP5 Monitor has multiple built in ready to use checks to enable detailed monitoring of your network status and by that giving you early warnings before a major problem occurs. All performance data can be configured with thresholds to trigger alarms. It is also possible to generate trend graphs showing how your performance data xwill evolve over time based on historical data. The purpose of this paper is to show a few examples of what is possible to configure and monitor with OP5 Monitor. 
 
 Big Thanks to 33K Communications for sharing graphs and content 
 
@@ -28,7 +28,7 @@ If you are interested in knowing more about about the features and possibilities
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 
@@ -247,7 +247,7 @@ echo "IP SLA \# \$2 ( udp-jitter - G.711 mu Law (g711ulaw: 64 kbps PCM compressi
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 

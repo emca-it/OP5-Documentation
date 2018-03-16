@@ -1,12 +1,12 @@
-# Integration of op5-docuwiki with op5 Monitor
+# Integration of op5-docuwiki with OP5 Monitor
 
 ## Introduction
 
-op5 dokuwiki is a simple web-application making it easy for anyone to add, remove and edit web pages. One possible area of use is as a simple inventory system storing information regarding hosts and services. It  can be just one click away when using the “notes urls” i op5 Monitor. Combining these products will give you the possibility to actually have an updated documentation/inventory of all your hosts, that stays updated. The op5 dokuwiki is already installed on your op5 Monitor server so you can start use it at once.
+op5 dokuwiki is a simple web-application making it easy for anyone to add, remove and edit web pages. One possible area of use is as a simple inventory system storing information regarding hosts and services. It  can be just one click away when using the “notes urls” i OP5 Monitor. Combining these products will give you the possibility to actually have an updated documentation/inventory of all your hosts, that stays updated. The OP5 dokuwiki is already installed on your OP5 Monitor server so you can start use it at once.
 
-## Integrating with op5 Monitor
+## Integrating with OP5 Monitor
 
-Integrating op5 dokuwiki in op5 Monitor means to configure the so called notes\_urls in Monitor to point to docuwiki. This way you can easily access your documentation/inventory from many of Monitor’s status-views by clicking the notes-icon next to the host name.
+Integrating OP5 dokuwiki in OP5 Monitor means to configure the so called notes\_urls in Monitor to point to docuwiki. This way you can easily access your documentation/inventory from many of Monitor’s status-views by clicking the notes-icon next to the host name.
 
 Integrating a single host or all your hosts to the dokuwiki in few steps.
 
@@ -24,7 +24,7 @@ The host you edited should now have a folder-icon net to it’s host name in the
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 

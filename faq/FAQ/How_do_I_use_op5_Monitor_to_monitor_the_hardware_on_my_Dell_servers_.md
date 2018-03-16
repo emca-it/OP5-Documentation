@@ -1,10 +1,10 @@
-# How do I use op5 Monitor to monitor the hardware on my Dell servers?
+# How do I use OP5 Monitor to monitor the hardware on my Dell servers?
 
 ## Question
 
 * * * * *
 
-How do I use op5 Monitor to monitor the hardware on my Dell servers?
+How do I use OP5 Monitor to monitor the hardware on my Dell servers?
 
 ## Answer
 

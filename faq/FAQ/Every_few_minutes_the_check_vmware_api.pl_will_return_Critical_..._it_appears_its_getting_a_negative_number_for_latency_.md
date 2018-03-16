@@ -30,7 +30,7 @@ This problem can be fixed by collecting multiple samples of the data, described 
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p>This should be fully fixed in op5 Monitor 6.3: <a href="https://bugs.op5.com/view.php?id=4532#c18233">https://bugs.op5.com/view.php?id=4532#c18233</a></p>
+<td align="left"><p>This should be fully fixed in OP5 Monitor 6.3: <a href="https://bugs.op5.com/view.php?id=4532#c18233">https://bugs.op5.com/view.php?id=4532#c18233</a></p>
 <img src="images/icons/contenttypes/comment_16.png" /> Posted by peklof at Mar 24, 2014 09:40</td>
 </tr>
 </tbody>

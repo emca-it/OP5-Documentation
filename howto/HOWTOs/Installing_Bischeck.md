@@ -1,6 +1,6 @@
 # Installing Bischeck
 
-This guide will help you install Bishcheck for op5 Monitor.
+This guide will help you install Bishcheck for OP5 Monitor.
 
 To be able to use bischeck and the benifits of dynamic thresholds bischeck must first be installed and NSCA needs to be configured.
 This guide requires basic linux skills.
@@ -8,7 +8,7 @@ This guide requires basic linux skills.
 **DISCLAMER**:
 This is an unsupported plugin. More information about the bischeck plugin can be found at the [bischeck github page](https://github.com/thenodon/bischeck) or at the [bischeck.org](http://www.bischeck.org/).
 
-# Install bischeck on op5 Monitor
+# Install bischeck on OP5 Monitor
 
 1.  Install the bischeck package:
 

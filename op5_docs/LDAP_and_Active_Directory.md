@@ -2,38 +2,7 @@
 
 # About
 
-For central user management, an LDAP server can be used, like Microsoft Active Directory or OpenLDAP. When used, op5 Monitor verifies the user with the LDAP server lookup the group membership of the users in the directory.
-
-**Table of Content**
-
--   [About](#LDAPandActiveDirectory-About)
--   [Prepare your domain](#LDAPandActiveDirectory-Prepareyourdomain)
--   [Connection parameters](#LDAPandActiveDirectory-Connectionparameters)
-    -   [Server](#LDAPandActiveDirectory-Server)
-    -   [Port](#LDAPandActiveDirectory-Port)
-    -   [Encryption](#LDAPandActiveDirectory-Encryption)
-    -   [Bind DN](#LDAPandActiveDirectory-BindDN)
-    -   [Bind secret](#LDAPandActiveDirectory-Bindsecret)
-    -   [Resolve with service account](#LDAPandActiveDirectory-Resolvewithserviceaccount)
-    -   [Base DN](#LDAPandActiveDirectory-BaseDN)
-    -   [User base DN](#LDAPandActiveDirectory-UserbaseDN)
-    -   [User filter](#LDAPandActiveDirectory-Userfilter)
-    -   [Group Base DN](#LDAPandActiveDirectory-GroupBaseDN)
-    -   [Group filter](#LDAPandActiveDirectory-Groupfilter)
-    -   [Groupkey](#LDAPandActiveDirectory-Groupkey)
-    -   [Group Recursive](#LDAPandActiveDirectory-GroupRecursive)
-    -   [UPN Suffix](#LDAPandActiveDirectory-UPNSuffix)
-    -   [Userkey](#LDAPandActiveDirectory-Userkey)
-    -   [Userkey is UPN](#LDAPandActiveDirectory-UserkeyisUPN)
-    -   [Userkey realname](#LDAPandActiveDirectory-Userkeyrealname)
-    -   [Userkey email](#LDAPandActiveDirectory-Userkeyemail)
-    -   [Memberkey](#LDAPandActiveDirectory-Memberkey)
-    -   [Memberkey is DN](#LDAPandActiveDirectory-MemberkeyisDN)
-    -   [Bind with UPN](#LDAPandActiveDirectory-BindwithUPN)
-    -   [Protocol version](#LDAPandActiveDirectory-Protocolversion)
--   [Example configuration for Active Directory](#LDAPandActiveDirectory-ExampleconfigurationforActiveDirectory)
--   [Test your connection](#LDAPandActiveDirectory-Testyourconnection)
--   [More Information](#LDAPandActiveDirectory-MoreInformation)
+For central user management, an LDAP server can be used, like Microsoft Active Directory or OpenLDAP. When used, OP5 Monitor verifies the user with the LDAP server lookup the group membership of the users in the directory.
 
 Before we start
 
@@ -44,7 +13,7 @@ This documentation assumes that you have:
 
 # Prepare your domain
 
-In op5 Monitor, permissions is handled by groups. Make sure you have one group available for each role in the system.
+In OP5 Monitor, permissions is handled by groups. Make sure you have one group available for each role in the system.
  If the domain doesn't allow to bind anonymously to resolve group memberships or find users, a service account must be added. This account needs to have read access to resolve group membership and search for users in the system.
 
 # Connection parameters
@@ -59,7 +28,7 @@ TCP port to connect to. Leave blank for default. (389 for no encryption/start-tl
 
 ## Encryption
 
-Which type of encryption to use for connection between op5 Monitor to the LDAP server. (none, start\_tls or ssl). Make sure to have a valid ssl certificate for the LDAP server, and php recognizes it.
+Which type of encryption to use for connection between OP5 Monitor to the LDAP server. (none, start\_tls or ssl). Make sure to have a valid ssl certificate for the LDAP server, and php recognizes it.
 
 ## Bind DN
 
@@ -158,7 +127,7 @@ Server:`ldap.example.com`
 
 # Test your connection
 
-To test if the system can bind using "Bind DN" and "Bind Secret", go to Assign Group Rights page in op5 configuration. A column has appeared for the driver, and the corresponding group parameters is correctly set.
+To test if the system can bind using "Bind DN" and "Bind Secret", go to Assign Group Rights page in OP5 configuration. A column has appeared for the driver, and the corresponding group parameters is correctly set.
  If a group is successfully resolved, the corresponding cell is turned green. If it is determined that the group doesn't exist in the LDAP domain, the cell is red. In either way, a successful connection has been established.
  If the connection failed, all the cells are gray.
 

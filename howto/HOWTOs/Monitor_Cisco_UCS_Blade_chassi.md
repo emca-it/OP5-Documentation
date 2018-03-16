@@ -44,7 +44,7 @@ If you don't wish to configure the commands manually, you can use the [community
 
  
 
-1.  Go to op5 Monitor Configuration | Commands
+1.  Go to OP5 Monitor Configuration | Commands
     ![](attachments/3801462/4358164.png)
 
 2.  Create 5 check commands:

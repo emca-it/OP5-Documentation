@@ -16,19 +16,6 @@ This document does not attempt to replace those pages, as they are kept updated 
 
 Note also that there is still a section for Status API. This has been obsolete since OP5 Monitor version 6.3, replaced by the Filter queries (which get their data more directly from the databases). We will remove this section in an upcoming release. 
 
-**Table of Contents**
-
--   [About](#HTTP-API-About)
--   [HTTP Filter API](#HTTP-API-HTTPFilterAPI)
-    -   [Filter](#HTTP-API-Filter)
-    -   [Count](#HTTP-API-Count)
--   [HTTP Configuration API](#HTTP-API-HTTPConfigurationAPI)
--   [HTTP Command API](#HTTP-API-HTTPCommandAPI)
--   [HTTP Report API](#HTTP-API-HTTPReportAPI)
--   [HTTP Filter API](#HTTP-API-HTTPFilterAPI.1)
--   [Script Example](#HTTP-API-ScriptExample)
-    -   [REST and LDAP](#HTTP-API-RESTandLDAP)
-
 # HTTP Filter API
 
 The filter API will allow you to fetch information and status from filters about hosts, services, traps, logs and much more. For more information about filters, please read the [Filters](Filters) chapter. If you are already familair with OP5 Listview syntax, then you can create filter queries with minimal character replacements: '%20' for space, for example.
@@ -52,17 +39,17 @@ Example: To get a count of the objects using the same query as above --
 This is an example of how a query might look like, in this example we will fetch hosts that are down, not acknowledged and not in scheduled downtime
  https://demo.op5.com/api/filter/query?query=[hosts] state != 0 and acknowledged = 0 and scheduled\_downtime\_depth = 0
 
-The documentation for filters can be found [here](https://demo%40op5.com:MonitorDemo123@demo.op5.com/api/help/filter) or in your op5 Monitor server at https://{your.op5.monitor}/api/help/filter
+The documentation for filters can be found [here](https://demo%40op5.com:MonitorDemo123@demo.op5.com/api/help/filter) or in your OP5 Monitor server at https://{your.op5.monitor}/api/help/filter
 
 # HTTP Configuration API
 
-The configure API is used to manipulate the object configuration used by op5 Monitor. It uses the same configuration database as the op5 Monitor Configuration tool does. Objects changed by the API will also be visible within the configuration GUI. You may use it to integrate OP5 Monitor with other third-party software.
+The configure API is used to manipulate the object configuration used by OP5 Monitor. It uses the same configuration database as the OP5 Monitor Configuration tool does. Objects changed by the API will also be visible within the configuration GUI. You may use it to integrate OP5 Monitor with other third-party software.
 
-The API help page for configuration can be found [here](https://demo%40op5.com:MonitorDemo123@demo.op5.com/api/help/config) or in your op5 Monitor server at https://{your.op5.monitor}/api/help/filter .
+The API help page for configuration can be found [here](https://demo%40op5.com:MonitorDemo123@demo.op5.com/api/help/config) or in your OP5 Monitor server at https://{your.op5.monitor}/api/help/filter .
 
 # HTTP Command API
 
-The command section lets you submit the following commands to OP5 Monitor using the REST API. The API help page for commands can be found [here](https://demo%40op5.com:MonitorDemo123@demo.op5.com/api/help/command) or in your op5 Monitor server at https://{your.op5.monitor}/api/help/command .
+The command section lets you submit the following commands to OP5 Monitor using the REST API. The API help page for commands can be found [here](https://demo%40op5.com:MonitorDemo123@demo.op5.com/api/help/command) or in your OP5 Monitor server at https://{your.op5.monitor}/api/help/command .
 
 # HTTP Report API
 

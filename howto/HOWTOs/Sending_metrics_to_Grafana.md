@@ -336,7 +336,7 @@ No. Historical data is not exported to InfluxDB.
 
 Please get in touch with us to get OP5 professional services to tailor it for your environment and needs.
 
-**How do I send metrics from multiple OP5 monitor instances (peer, pollers) to Grafana?**
+**How do I send metrics from multiple OP5 Monitor instances (peer, pollers) to Grafana?**
 
 Please get in touch with us to get OP5 professional services to tailor it for your environment and needs.
 

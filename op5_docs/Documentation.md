@@ -4,7 +4,7 @@
 
  
 
-Manuals in this space are always updated for the current release. If you are looking for older versions or want to download a PDF version of a manual visit [Docs for all op5 releases.](Docs_for_all_op5_releases)
+Manuals in this space are always updated for the current release. If you are looking for older versions or want to download a PDF version of a manual visit [Docs for all OP5 releases.](Docs_for_all_op5_releases)
 
 Search
 
@@ -27,11 +27,11 @@ Search
 
 ## Getting started guides
 
-[Getting started with op5 Monitor in Amazon AWS](https://kb.op5.com/display/HOWTOs/Getting+started+with+op5+Monitor+from+Amazon+Web+Services+Marketplace)
+[Getting started with OP5 Monitor in Amazon AWS](https://kb.op5.com/display/HOWTOs/Getting+started+with+op5+Monitor+from+Amazon+Web+Services+Marketplace)
 
-[Getting started with op5 Monitor](https://kb.op5.com/display/HOWTOs/Getting+started+with+op5+Monitor)
+[Getting started with OP5 Monitor](https://kb.op5.com/display/HOWTOs/Getting+started+with+op5+Monitor)
 
-[Getting started with op5 Trapper](https://kb.op5.com/display/HOWTOs/Getting+started+with+op5+Trapper)
+[Getting started with OP5 Trapper](https://kb.op5.com/display/HOWTOs/Getting+started+with+op5+Trapper)
 
 [Getting started with Bischeck](https://kb.op5.com/display/HOWTOs/Getting+started+with+Bischeck)
 

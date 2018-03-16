@@ -6,18 +6,7 @@
 
 # About
 
-In the op5 Monitor user manual we describe some of the basics with notifications. Let us take a closer look at how it really works.
-
-**Table of Content**
-
--   [About](#how_notifications_work-About)
--   [ When do notifications occur and who gets notified?](#how_notifications_work-Whendonotificationsoccurandwhogetsnotified?)
--   [Notification filters](#how_notifications_work-Notificationfilters)
--   [Notification commands](#how_notifications_work-Notificationcommands)
--   [Notification macros](#how_notifications_work-Notificationmacros)
--   [URL in notification email](#how_notifications_work-URLinnotificationemail)
--   [Changing "from" in notification e-mail](#how_notifications_work-Changing"from"innotificatione-mail)
--   [Additional Resources](#how_notifications_work-AdditionalResources)
+In the OP5 Monitor user manual we describe some of the basics with notifications. Let us take a closer look at how it really works.
 
 #  When do notifications occur and who gets notified?
 
@@ -41,7 +30,7 @@ Additional information on implied inheritance can be found here: <http://www.nae
 
 # Notification filters
 
-When a notification is about to be sent it has to go through a number of filters before op5 Monitor can determine whether a notification really is supposed to be sent or not.
+When a notification is about to be sent it has to go through a number of filters before OP5 Monitor can determine whether a notification really is supposed to be sent or not.
 
  
 

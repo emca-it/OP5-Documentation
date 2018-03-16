@@ -14,7 +14,7 @@
 
 # Introduction to Group Rights for limited visibility
 
-In order to achieve limited visibility for specific users you will need to work with group right permissions. The good news is op5 Monitor has predefined groups with limited permissions already. To view these, simply navigate to "configure -\> assign group rights" and expand the permission-set. 
+In order to achieve limited visibility for specific users you will need to work with group right permissions. The good news is OP5 Monitor has predefined groups with limited permissions already. To view these, simply navigate to "configure -\> assign group rights" and expand the permission-set. 
 
 -   admins
 -   default

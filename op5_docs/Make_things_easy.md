@@ -2,18 +2,7 @@
 
 # About
 
-Making things easier to handle with op5 Monitor.
-
-**Table of Content**
-
--   [About](#Makethingseasy-About)
--   [Cloning objects](#Makethingseasy-Cloningobjects)
-    -   [Cloning from an existing Host](#Makethingseasy-CloningfromanexistingHost)
-    -   [Cloning services](#Makethingseasy-Cloningservices)
--   [Copy objects](#Makethingseasy-Copyobjects)
--   [Propagate settings](#Makethingseasy-Propagatesettings)
-    -   [To propagate a value of a directive](#Makethingseasy-Topropagateavalueofadirective)
--   [Bulk delete](#Makethingseasy-Bulkdelete)
+Making things easier to handle with OP5 Monitor.
 
 # Cloning objects
 
@@ -81,7 +70,7 @@ This approach should apply to the most objects that are possible to copy.
 
 # Propagate settings
 
-To change the same directive on many objects of the same type can be a really time consuming work. This is where the propagate function in op5 Monitor is very handy.
+To change the same directive on many objects of the same type can be a really time consuming work. This is where the propagate function in OP5 Monitor is very handy.
  With the propagate function you can copy the value of a directive from one object to one or many other objects of the same type.
  In the guide below we will use the propagate function to copy the hostgroups setting from one host to a couple of other hosts.
 

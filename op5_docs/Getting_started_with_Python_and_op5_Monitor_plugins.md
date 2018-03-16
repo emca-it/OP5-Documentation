@@ -1,8 +1,8 @@
-# Getting started with Python and op5 Monitor plugins
+# Getting started with Python and OP5 Monitor plugins
 
 ## Intro
 
-Python is by default installed on a op5 Monitor system and is a easy to use programming language, therefore it's very good for writing plugins for op5 Monitor, Naemon or Nagios.
+Python is by default installed on a OP5 Monitor system and is a easy to use programming language, therefore it's very good for writing plugins for OP5 Monitor, Naemon or Nagios.
 This howto introduces some key concepts and shall be seen as an introduction to plugin/extension development in Python.
 
 ## Installation
@@ -27,13 +27,13 @@ I can also recommend [CodeAcademys Python course](http://www.codecademy.com/en/t
 
 Continue to the next step once you feel that you have basic knowledge in Python.
 
-## Developing for op5 Monitor with Python
+## Developing for OP5 Monitor with Python
 
-Developing plugins for op5 Monitor, Naemon or Nagios is straight forward. The different states (Ok, Warning, Critical, Unknown) are set depending on the exit codes (0,1,2,3) of the program and the output to stdout is used for displaying a status message and performance statistics.
+Developing plugins for OP5 Monitor, Naemon or Nagios is straight forward. The different states (Ok, Warning, Critical, Unknown) are set depending on the exit codes (0,1,2,3) of the program and the output to stdout is used for displaying a status message and performance statistics.
 
 ### Development guidelines
 
-At op5 we really appreciate when developers follow the developer guidelines, the developer guidelines can be found over at [monitoring-plugins.com](https://www.monitoring-plugins.org/doc/guidelines.html). In short, having the following options makes the plugin easier to use:
+At OP5 we really appreciate when developers follow the developer guidelines, the developer guidelines can be found over at [monitoring-plugins.com](https://www.monitoring-plugins.org/doc/guidelines.html). In short, having the following options makes the plugin easier to use:
 
 -   -H for hostname
 -   -h for short help
@@ -42,7 +42,7 @@ At op5 we really appreciate when developers follow the developer guidelines, the
 
 ### Exit codes, what you need to know
 
-Exit codes are the backbone of the check plugins and are required to be used with op5 Monitor.
+Exit codes are the backbone of the check plugins and are required to be used with OP5 Monitor.
 One thing to know though is that the exit codes translates to different things if the object that is using the plugins is a host or service, for instance:
 
 Exit Code
@@ -87,7 +87,7 @@ Something went wrong with the supplied commands or the plugins isn't working as 
 
 ### Output, what you need to know
 
-Output from op5 Monitor, Naemon or Nagios plugins are used for displaying a status message and/or performance data which is used for performance or health statistics. See the following example of output:
+Output from OP5 Monitor, Naemon or Nagios plugins are used for displaying a status message and/or performance data which is used for performance or health statistics. See the following example of output:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 OK: I'm plugin output and I found one cat | cats=1;5;10;0;11
@@ -341,7 +341,7 @@ That's about it for the plugin examples. As you can see mostly it's about using 
 
 After going through the above, you should be kind of set to start working with plugins. From now on there's only one way to learn and that's to develop, develop, rethink and refine. Don't forget to use the numerous tools and libraries that Python has for managing data. :-)
 
-We would also like to mention that there's a lot of different libraries for developing plugins and working with configuration in op5 Monitor, Naemon or Nagios. Check out the following sites for more info:
+We would also like to mention that there's a lot of different libraries for developing plugins and working with configuration in OP5 Monitor, Naemon or Nagios. Check out the following sites for more info:
 
 -   <https://pypi.python.org/pypi/nagiosplugin/>
 -   <http://pynag.org>

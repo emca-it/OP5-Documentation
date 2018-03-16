@@ -9,7 +9,7 @@ Defaultroot tells Nagvis what host to start your tree with.
 # Example
 
 Example of how the defaultroot works in NagVis Automap
- In this example we have the following tree in op5 Monitor.
+ In this example we have the following tree in OP5 Monitor.
  ![](attachments/16482342/16678964.png)
  Here the **demo** host is set to **defaultroot** and all of its children are displayed.
  If you set the host **switch1-gbg** as **defaultroot** in Nagvis the automap only display **switch1-gbg** and it's children (**environment-gbg** and **printer-gbg**). The picture below shows how it would look like:*

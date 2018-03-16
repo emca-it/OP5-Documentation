@@ -2,20 +2,9 @@
 
 # About
 
-Merlin is the backend engine for a load balanced and/or distributed setup of op5 Monitor.
-Merlin, or Module for Effortless Redundancy and Load balancing In Nagios, allows the op5 Monitor processes to exchange information directly as an alternative to the standard nagios way using NSCA. 
+Merlin is the backend engine for a load balanced and/or distributed setup of OP5 Monitor.
+Merlin, or Module for Effortless Redundancy and Load balancing In Nagios, allows the OP5 Monitor processes to exchange information directly as an alternative to the standard nagios way using NSCA. 
 Merlin functions as backend for Ninja by adding support for storing the status information in a database, fault tolerance and load balancing. This means that Merlin now is responsible for providing status data and acts as a backend, for the Ninja GUI.
-
- 
-
-**Table of Content**
-
--   [About](#Merlin-About)
--   [Merlin components](#Merlin-Merlincomponents)
-    -   [merlin-mod](#Merlin-merlin-mod)
-    -   [merlind](#Merlin-merlind)
-    -   [merlin database](#Merlin-merlindatabase)
-    -   [Illustration](#Merlin-Illustration)
 
 # Merlin components
 

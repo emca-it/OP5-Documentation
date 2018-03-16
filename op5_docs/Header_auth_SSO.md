@@ -6,12 +6,6 @@ Header Authentication can be used to give single sign on (SSO) access to OP5 Mon
 
 This authentication method should only be used when all requests are made through an authenticating proxy that filters all request headers. Failing to do this will enable any user to send extra headers that can grant admin privileges.
 
-**Table of Contents**
-
--   [Introduction](#Header_auth_SSO-Introduction)
--   [Configuration](#Header_auth_SSO-Configuration)
--   [Permissions](#Header_auth_SSO-Permissions)
-
 # Configuration
 
 It's possible to enable HTTP header authentication by adding a authentication module using the "Header" driver. To configure this module, you need to add the following section to "/etc/op5/auth.yml". Note that "X-Username", "X-Realname", "X-Email", and "X-Groups" are the corresponding and case-insensitive headers. Additionally, you must set the "enable\_auto\_login" option to "true" for header authentication work:

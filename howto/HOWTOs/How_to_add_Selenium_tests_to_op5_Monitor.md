@@ -1,8 +1,8 @@
-# How to add Selenium tests to op5 Monitor
+# How to add Selenium tests to OP5 Monitor
 
 Version
 
-This article was written for version 6.2 of op5 Monitor, it could work on both lower and higher version if nothing else is stated. The op5 Monitor 6.2 appliance was downloaded from [www.op5.com](http://www.op5.com.). This article also assumes that you have installed the op5 license so that you have access to the op5 repos. Articles in the Community-Space are not supported by op5 Support.
+This article was written for version 6.2 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated. The OP5 Monitor 6.2 appliance was downloaded from [www.op5.com](http://www.op5.com.). This article also assumes that you have installed the OP5 license so that you have access to the OP5 repos. Articles in the Community-Space are not supported by OP5 Support.
 
 # Purpose
 
@@ -13,13 +13,13 @@ Selenium automates browsers. It is for automating web applications for testing p
 -   Basic knowledge about Linux systems. 
 -   Basic knowledge about Selenium. Needed to run automated web browser tests.  <http://docs.seleniumhq.org/docs/>
 -   Basic knowledge about Xvfb. Needed to run firefox without a graphical environment. <http://en.wikipedia.org/wiki/Xvfb>
--   Firefox with selenium IDE plugin (not on op5 Monitor). This is used to record and save selenium tests. <http://docs.seleniumhq.org/docs/>
--   Installed op5 license.
+-   Firefox with selenium IDE plugin (not on OP5 Monitor). This is used to record and save selenium tests. <http://docs.seleniumhq.org/docs/>
+-   Installed OP5 license.
 -   Internet access. 
--   SSH and root access to the op5 Monitor system.
--   Ongoing monitoring of the op5 Monitor system's CPU and memory resources. Unlike ordinary service checks, Selenium tests will use a lot of memory and CPU resources.
+-   SSH and root access to the OP5 Monitor system.
+-   Ongoing monitoring of the OP5 Monitor system's CPU and memory resources. Unlike ordinary service checks, Selenium tests will use a lot of memory and CPU resources.
 
-# Install and configure necessary packages on op5 Monitor
+# Install and configure necessary packages on OP5 Monitor
 
 ### Download and install java openjdk-1.8.0.
 
@@ -163,7 +163,7 @@ mkdir /var/log/selenium
 
 ### Download the Python based selenium plugin. 
 
-This plugin is run by op5 Monitor.
+This plugin is run by OP5 Monitor.
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 wget -O check_selenium.tar.gz https://exchange.icinga.org/exchange/check_selenium.py/files/526/check_selenium.tar-gz
@@ -194,7 +194,7 @@ pip install selenium==2.53.1
 
 ### Add xvfb and selenium start at boot.
 
-If for whatever reason you decide to reboot op5 Monitor.
+If for whatever reason you decide to reboot OP5 Monitor.
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 chkconfig --add /etc/init.d/xvfb
@@ -210,19 +210,19 @@ chkconfig --level 2345 selenium on
 /etc/init.d/selenium start
 ```
 
-# How to create test cases used by op5 Monitor
+# How to create test cases used by OP5 Monitor
 
 Download and install the selenium IDE plugin for firefox from <http://release.seleniumhq.org/selenium-ide/2.5.0/selenium-ide-2.5.0.xpi>
 
-You can do this on any machine running firefox in a graphical environment and then move the recordings to the op5 Monitor.
+You can do this on any machine running firefox in a graphical environment and then move the recordings to the OP5 Monitor.
 
 When you have recorded what you want to test go to File -\> Export Test Case As -\> Python 2 / unittest / Remote Control and save the file.
 
-Copy the file to op5 Monitor and to your test\_dir directory, default located at /opt/plugins/custom/selenium/tests/.
+Copy the file to OP5 Monitor and to your test\_dir directory, default located at /opt/plugins/custom/selenium/tests/.
 
-# Configuring op5 Monitor to use the plugin and test case.
+# Configuring OP5 Monitor to use the plugin and test case.
 
-### Add the command on op5 Monitor
+### Add the command on OP5 Monitor
 
 -   Configure -\> Commands
 -   command\_name = check\_selenium
@@ -232,7 +232,7 @@ Copy the file to op5 Monitor and to your test\_dir directory, default located at
 
 ![](attachments/5376778/5734780.png)
 
-### Add the service on op5 Monitor
+### Add the service on OP5 Monitor
 
 -           Configure -\> Edit host monitor -\> Go -\> Services for host monitor 
 -            service description = check\_selenium\_op5 (a description related to what sort of test is performed)
@@ -242,7 +242,7 @@ Copy the file to op5 Monitor and to your test\_dir directory, default located at
 
 ![](attachments/5376778/5734781.png)
 
-### What it looks like in op5 Monitor
+### What it looks like in OP5 Monitor
 
 ![](attachments/5376778/5734782.png)
 

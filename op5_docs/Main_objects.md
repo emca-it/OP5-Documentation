@@ -22,38 +22,16 @@ In Configure you can
 A lot of objects can be cross referenced in the configuration and Configure helps you with this too.
 In most of the listings you will find a small text field called **Filter by regular expression**. Use this to filter out the content you are interested in when viewing the different lists.
 
-**Table of Content**
-
--   [About](#Mainobjects-About)
--   [Required directives](#Mainobjects-Requireddirectives)
--   [Hosts](#Mainobjects-Hosts)
-    -   [Required directives](#Mainobjects-Requireddirectives.1)
--   [Services](#Mainobjects-Services)
-    -   [Required directives](#Mainobjects-Requireddirectives.2)
--   [Contacts](#Mainobjects-Contacts)
-    -   [Required directives](#Mainobjects-Requireddirectives.3)
--   [Local users](#Mainobjects-Localusers)
-    -   [Required directives](#Mainobjects-Requireddirectives.4)
-    -   [Group Rights](#Mainobjects-GroupRights)
--   [Time periods](#Mainobjects-Timeperiods)
-    -   [A time period in detail](#Mainobjects-Atimeperiodindetail)
--   [Commands](#Mainobjects-Commands)
-    -   [Directives](#Mainobjects-Directives)
-    -   [Accessing commands](#Mainobjects-Accessingcommands)
-    -   [Check Command Import](#Mainobjects-CheckCommandImport)
--   [Plugins](#Mainobjects-Plugins)
-    -   [Plugin search](#Mainobjects-Pluginsearch)
-
 # Required directives
 
-All objects have a list of directives that are required when adding a new object. The other directives can be left out. They will then get the op5 Monitor defaults value.
+All objects have a list of directives that are required when adding a new object. The other directives can be left out. They will then get the OP5 Monitor defaults value.
  This does not mean you have to set every directive for every object. One solution is called templates. They make it a lot easier to manage a large set of objects. Read more about templates in [Using templates](Using_templates).
 
 # Hosts
 
 Hosts are one of the central objects in the monitoring logic. Important attributes of hosts are as follows:
 
--   -   Hosts are usually physical or virtual devices on your network (servers, workstations, routers, switches, printers, etc) but it could be practically anything you can reach and monitor from the op5 Monitor server.
+-   -   Hosts are usually physical or virtual devices on your network (servers, workstations, routers, switches, printers, etc) but it could be practically anything you can reach and monitor from the OP5 Monitor server.
     -   Hosts have an address of some kind, IP address or host name.
     -   Hosts does not need a service directly associated to them, the services can be inherited from a hostgroup. A host can also exist without services.
     -   Hosts can have parent/child relationships with other hosts, often representing real-world network connections, which is used in the network reachability logic.
@@ -147,7 +125,7 @@ The table below describes the required directives for the host object
 A contact is used for two purposes:
 
 -   -   to send notifications to
-    -   permissions to view a objects in the monitoring part of op5 Monitor.
+    -   permissions to view a objects in the monitoring part of OP5 Monitor.
 
 A contact is not the same as the login account given access rights to the system.
 
@@ -192,8 +170,8 @@ The table below describes the required directives for the host object
 
 # Local users
 
-Local users are user accounts that makes it possible to login to the op5 Monitor GUI using the default driver. For more information about drivers see [Authentication Integration](Authentication_Integration) chapter
- Local users does not have any thing to do with notifications or the permissions of viewing objects in op5 Monitor.
+Local users are user accounts that makes it possible to login to the OP5 Monitor GUI using the default driver. For more information about drivers see [Authentication Integration](Authentication_Integration) chapter
+ Local users does not have any thing to do with notifications or the permissions of viewing objects in OP5 Monitor.
  Local users can be connected to a contact by giving the username the same name as the id (contact\_name) of a contact.
  A local user can also be created by checking the box "Configure access rights for this contact" when creating a contact.
 
@@ -413,7 +391,7 @@ Here it's possible to utilize the search box to have a look at configured comman
 
 ## Check Command Import
 
-Updating op5 Monitor often brings new functionality, and one of them are new commands that adds functionality in the product. A typical scenario is that a new plugin is added and a number of commands is added to utilize the new plugin.
+Updating OP5 Monitor often brings new functionality, and one of them are new commands that adds functionality in the product. A typical scenario is that a new plugin is added and a number of commands is added to utilize the new plugin.
 
 Accessing this function is done via **Check command import** via the main configuration page
 
@@ -436,18 +414,18 @@ Importing commands is a manual operation since updating existing commands might 
 # Plugins
 
 Plugins are compiled executable or scripts that can be run from a command line to check the status of a host or service.
- There are many plugins included in the op5 Monitor software. A list of the plugins can be found in the [list of included plugins](https://kb.op5.com/display/PLUGINS/Plugins+List).
- If you are looking for a plugin not found in op5 Monitor by default there are several other places to look:
+ There are many plugins included in the OP5 Monitor software. A list of the plugins can be found in the [list of included plugins](https://kb.op5.com/display/PLUGINS/Plugins+List).
+ If you are looking for a plugin not found in OP5 Monitor by default there are several other places to look:
 
--   -   Contact op5 for a specific development
+-   -   Contact OP5 for a specific development
     -   [www.op5.org](http://www.op5.org)
     -   [exchange.nagios.org](http://exchange.nagios.org)
 
-You can use any plugin written for Nagios but you might need to modify them a bit before they work in the op5 Monitor environment.
+You can use any plugin written for Nagios but you might need to modify them a bit before they work in the OP5 Monitor environment.
 
 ## Plugin search
 
-To search the plugins that are shipped with op5 Monitor or added afterwards to to **Plugin Search** on the main configuration page
+To search the plugins that are shipped with OP5 Monitor or added afterwards to to **Plugin Search** on the main configuration page
  ![](attachments/16482406/16679136.png)
  From this page you may
  See the support levels of the plugins and see descriptions of the plugins.

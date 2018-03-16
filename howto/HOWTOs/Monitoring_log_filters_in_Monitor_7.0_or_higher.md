@@ -2,7 +2,7 @@
 
 Version
 
-This article was written for version 7.0 of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 7.0 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
  
 

@@ -1,10 +1,10 @@
-# How to use an SMS gateway via TCP/IP with op5 Appliance System 6 or CentOS 6
+# How to use an SMS gateway via TCP/IP with OP5 Appliance System 6 or CentOS 6
 
-This guide explains how to set up serial communication from op5 Appliance System (6.0 and up, and CentOS 6 and up) to an SMS gateway connected to a Moxa NPort 5110, in order to be able to send SMS notifications in situations where the SMS gateway can’t be directly connected to the op5 system via a serial connection, because, for example, the op5 system is a virtual machine or because there is no cellular network coverage in the server room.
+This guide explains how to set up serial communication from OP5 Appliance System (6.0 and up, and CentOS 6 and up) to an SMS gateway connected to a Moxa NPort 5110, in order to be able to send SMS notifications in situations where the SMS gateway can’t be directly connected to the OP5 system via a serial connection, because, for example, the OP5 system is a virtual machine or because there is no cellular network coverage in the server room.
 
 ## Prerequisites
 
-In this how-to, we’re assuming you’ve got the system set up and working with op5 Monitor installed and have all the prerequisites, i.e. a working SMS gateway connected to the NPort with a SIM card with no PIN inserted.
+In this how-to, we’re assuming you’ve got the system set up and working with OP5 Monitor installed and have all the prerequisites, i.e. a working SMS gateway connected to the NPort with a SIM card with no PIN inserted.
 
 ## Links
 
@@ -18,7 +18,7 @@ Firmware: <http://www.moxa.com/support/sarch_result.aspx?type=soft&prod_id=237&t
 
 ## Network setup
 
-Make sure that your firewall is open for TCP 80, 4001, 4900, 6000 and UDP 4800 on the machine you’re working from. On the op5 system, you will need to have TCP 4001 open to the NPort.
+Make sure that your firewall is open for TCP 80, 4001, 4900, 6000 and UDP 4800 on the machine you’re working from. On the OP5 system, you will need to have TCP 4001 open to the NPort.
 
 <table>
 <colgroup>
@@ -87,9 +87,9 @@ Now that we’re running the latest firmware, we need to change a setting in the
 6.  Click OK and then click OK again. Wait while the configuration is uploaded. You should get a “Configuration is applied ok.” confirmation
 7.  Click OK and close the NPort Administrator software
 
-We are now done configuring the NPort and can continue on to configure the op5 Appliance System (APS).
+We are now done configuring the NPort and can continue on to configure the OP5 Appliance System (APS).
 
-## op5 Appliance System Configuration
+## OP5 Appliance System Configuration
 
 Use your favorite editor (nano, vi, etc) to edit /etc/smsd.conf. Scroll down to the section [GSM1]. Change device= to:
 

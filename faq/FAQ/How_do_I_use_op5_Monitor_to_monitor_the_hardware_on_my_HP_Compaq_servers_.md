@@ -1,10 +1,10 @@
-# How do I use op5 Monitor to monitor the hardware on my HP/Compaq servers?
+# How do I use OP5 Monitor to monitor the hardware on my HP/Compaq servers?
 
 ## Question
 
 * * * * *
 
-How do I use op5 Monitor to monitor the hardware on my HP/Compaq servers?
+How do I use OP5 Monitor to monitor the hardware on my HP/Compaq servers?
 
 ## Answer
 

@@ -10,7 +10,7 @@ The benefit with using management packs is that the monitoring will be more homo
 
 ![](attachments/4653645/5242926.png)
 
-The picture below shows how management packs integrates into op5 monitor.
+The picture below shows how management packs integrates into OP5 Monitor.
 
 #### Creating management packs
 
@@ -57,7 +57,7 @@ Mangement pack ‘linux servers’ is associated with the hostgroup ‘linux’.
 
 #### Activate Management Packs
 
-Management packs that are not created by the user, provided by op5 or a third party, need to be activated.
+Management packs that are not created by the user, provided by OP5 or a third party, need to be activated.
 
 To activate a management pack go to Management Pack Management in the configuration.![](https://www.op5.com/manuals/op5_Monitor_Administrator_Manual/images/manpack_manager.png)
 
@@ -81,7 +81,7 @@ Click on Upload json file to import the management pack.
 
 #### Export Management Packs
 
-Export management packs makes it possible to share your management pack with others or upload it to another op5 Monitor server.
+Export management packs makes it possible to share your management pack with others or upload it to another OP5 Monitor server.
 
 Go to Management Pack Management under configuration.
 

@@ -1,6 +1,6 @@
-# What is the right size of op5 Monitor license?
+# What is the right size of OP5 Monitor license?
 
-There are many variation of how op5 Monitor is deployed and used. This note aims to clarify and help you to plan the right size of your license in order to be compliant. Our primary goal with op5 licensing is to keep it simple and clear so that anyone can calculate what the cost will be, both initially and for future upgrades. 
+There are many variation of how OP5 Monitor is deployed and used. This note aims to clarify and help you to plan the right size of your license in order to be compliant. Our primary goal with OP5 licensing is to keep it simple and clear so that anyone can calculate what the cost will be, both initially and for future upgrades. 
 
 ## The general principle of our pricing are based on two values:
 
@@ -12,7 +12,7 @@ Note - you can always upgrade with more hosts to a subscription at any time duri
 
 ## Definitions:
 
-**A host** – a host as we define it is an object that is presented as a host within op5 Monitor, a host can be a server, network device, something part of a virtual infrastructure or physical infrastructure for example temperature/humidity-sensors or UPS power but has a unique name in op5 Monitor. There can be many logical hosts on a physical device/object you want to monitor, this is handy if you have shared hardware between multiple customers or environments which needs to be separated for reporting, alarms, access-rights and so on.
+**A host** – a host as we define it is an object that is presented as a host within OP5 Monitor, a host can be a server, network device, something part of a virtual infrastructure or physical infrastructure for example temperature/humidity-sensors or UPS power but has a unique name in OP5 Monitor. There can be many logical hosts on a physical device/object you want to monitor, this is handy if you have shared hardware between multiple customers or environments which needs to be separated for reporting, alarms, access-rights and so on.
 
 There are a number of unique values that is directly depending on a host: 
 

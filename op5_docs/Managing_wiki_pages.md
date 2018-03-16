@@ -10,14 +10,6 @@ OP5 Monitor includes a wiki, which can be used for documenting any host or servi
 
 The official Dokuwiki manual can be found here: <http://www.dokuwiki.org/manual>
 
-**Table of Contents**
-
--   [Introduction](#Managingwikipages-Introduction)
--   [Creating a wiki page](#Managingwikipages-Creatingawikipage)
--   [Deleting a wiki page](#Managingwikipages-Deletingawikipage)
-
-<!-- -->
-
 # Creating a wiki page
 
 To create a wiki page for a host or service:

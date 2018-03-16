@@ -1,10 +1,10 @@
-# How do I use Availability Reports in op5 Monitor?
+# How do I use Availability Reports in OP5 Monitor?
 
 ## Question
 
 * * * * *
 
-How do I use Availability Reports in op5 Monitor?
+How do I use Availability Reports in OP5 Monitor?
 
 ## Answer
 

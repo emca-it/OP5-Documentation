@@ -2,9 +2,9 @@
 
 Version
 
-This article was written for version 6.3.2 of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 6.3.2 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 support, and this article in particular is written as a Proof of Concept.
+Articles in the Community-Space are not supported by OP5 support, and this article in particular is written as a Proof of Concept.
 
  
 
@@ -28,7 +28,7 @@ The steps above need to be performed on all peers and pollers that will be invol
 
  
 
-When the scripts are in place, you should create two new *Commands* for delayed host- and service-notifications in op5 Monitor:
+When the scripts are in place, you should create two new *Commands* for delayed host- and service-notifications in OP5 Monitor:
 
 Command
 

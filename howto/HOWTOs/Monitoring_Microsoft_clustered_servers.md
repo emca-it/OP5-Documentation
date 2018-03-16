@@ -1,6 +1,6 @@
 # Monitoring Microsoft clustered servers
 
-Monitoring Microsoft clustered servers requires some extra configuration. This how-to describes how to configure op5 Monitor to monitor drives and win32-services on clustered Windows servers.
+Monitoring Microsoft clustered servers requires some extra configuration. This how-to describes how to configure OP5 Monitor to monitor drives and win32-services on clustered Windows servers.
 
 ## Drives/partitions
 

@@ -4,16 +4,16 @@ Version
 
 This article was written for version 7.0 of Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
 # Introduction
 
-This how-to will show you how to execute a powershell script via the op5 Agent.
+This how-to will show you how to execute a powershell script via the OP5 Agent.
 
 # Prerequisites
 
--   Working installation of op5 Agent 
--   Working installation of op5 Monitor
+-   Working installation of OP5 Agent 
+-   Working installation of OP5 Monitor
 
 # Create powerShell script
 
@@ -31,9 +31,9 @@ This will be placed in the script folder within the agent installation folder, i
 
 Save the script as hello.ps1
 
-# Add the script to op5 Agent
+# Add the script to OP5 Agent
 
-To make the op5 Agent aware of the script and how it should be executed we need to add a handler for it in the agent configuration.
+To make the OP5 Agent aware of the script and how it should be executed we need to add a handler for it in the agent configuration.
 
 Open the file custom.ini located in C:\\Program Files\\op5\\NSClient++\\ and add the following rows
 
@@ -58,11 +58,11 @@ Answer Y on the question.
 
 ![](attachments/12190637/12386438.png)
 
-# Run script from op5 Monitor console
+# Run script from OP5 Monitor console
 
 This step is not necessary, but can be good before continuing just to make sure everything is working before change the configuration.
 
-Log in to op5 Monitor via console or SSH.
+Log in to OP5 Monitor via console or SSH.
 
 Run the following command to test the powershell script
 
@@ -74,7 +74,7 @@ If everything is working you should get the response "Hello World!"
 
 # Adding script to a host
 
-Go to the configuration of a host in op5 Monitor and add a new service.
+Go to the configuration of a host in OP5 Monitor and add a new service.
 
 1.  Enter a Service Description of you choice
 2.  Select *check\_nrpe* as check\_command 

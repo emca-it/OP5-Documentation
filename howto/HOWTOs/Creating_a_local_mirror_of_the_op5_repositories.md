@@ -1,13 +1,13 @@
-# Creating a local mirror of the op5 repositories
+# Creating a local mirror of the OP5 repositories
 
 Version
 
-This article has been tested and verified with op5 Monitor 7.0 and earlier, it could work on both lower and higher versions if nothing else is stated. Running local mirrors of the official repositories is only supported on a best-effort level.
+This article has been tested and verified with OP5 Monitor 7.0 and earlier, it could work on both lower and higher versions if nothing else is stated. Running local mirrors of the official repositories is only supported on a best-effort level.
 
 -   -   [Purpose](#Creatingalocalmirroroftheop5repositories-Purpose)
 -   [Prerequisites ](#Creatingalocalmirroroftheop5repositories-Prerequisites)
 -   [Configuration of the local mirror](#Creatingalocalmirroroftheop5repositories-Configurationofthelocalmirror)
--   [Configuring the op5 Monitor system](#Creatingalocalmirroroftheop5repositories-Configuringtheop5Monitorsystem)
+-   [Configuring the OP5 Monitor system](#Creatingalocalmirroroftheop5repositories-Configuringtheop5Monitorsystem)
 -   [Scheduling repository synchronization](#Creatingalocalmirroroftheop5repositories-Schedulingrepositorysynchronization)
 
 ## Purpose
@@ -87,9 +87,9 @@ Synchronizing the repositories can take some time, depending on your Internet co
 
  
 
-## Configuring the op5 Monitor system
+## Configuring the OP5 Monitor system
 
-8. Reconfigure the repositories on the op5 Monitor server to use the local mirror by changing the "baseurl" setting:
+8. Reconfigure the repositories on the OP5 Monitor server to use the local mirror by changing the "baseurl" setting:
 
 ``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
 # cat /etc/yum.repos.d/op5-release.repo 
@@ -111,7 +111,7 @@ gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-op5%
 ```
 
-Change the "baseurl" setting in all op5 related repositories located in "/etc/yum.repos.d/" 
+Change the "baseurl" setting in all OP5 related repositories located in "/etc/yum.repos.d/" 
 
 9. Clean up all yum cache information with the following command:
 
@@ -121,13 +121,13 @@ Change the "baseurl" setting in all op5 related repositories located in "/etc/yu
 
 ## Scheduling repository synchronization
 
-A tool like cron can be used to schedule synchronization of the op5 repositories.
+A tool like cron can be used to schedule synchronization of the OP5 repositories.
 Below is an example script that can be placed in "/etc/cron.daily" to be executed on a daily basis:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: true; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: true; theme: Confluence"}
 #!/usr/bin/env bash
 
-echo -e "\nStarting op5 repository sync at: $(date)\n"
+echo -e "\nStarting OP5 repository sync at: $(date)\n"
 
 echo "Cleaning up yum cache data"
 yum clean all

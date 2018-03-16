@@ -1,10 +1,10 @@
-# How do I monitor a specific Microsoft windows eventid with op5 Monitor?
+# How do I monitor a specific Microsoft windows eventid with OP5 Monitor?
 
 ## Question
 
 * * * * *
 
-How do I monitor a specific Microsoft windows eventid with op5 Monitor?
+How do I monitor a specific Microsoft windows eventid with OP5 Monitor?
 
 ## Answer
 

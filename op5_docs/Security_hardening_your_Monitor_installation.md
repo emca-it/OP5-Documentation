@@ -167,12 +167,12 @@ Please remember that your remote session will get disconnected and firewalls and
 
 ## About 
 
-As of today, op5 Monitors (internal) authentication system does not support a password policy system. It's recommended to connect op5 Monitor to a directory service (e.g. Microsoft Active Directory) that supports password policy routines.
+As of today, OP5 Monitors (internal) authentication system does not support a password policy system. It's recommended to connect OP5 Monitor to a directory service (e.g. Microsoft Active Directory) that supports password policy routines.
 
 # Audit the plugins you install
 
 ## About 
 
-Plugins in the op5 Monitor system are actually programs and scripts that are executed locally on the host system as the *monitor* user.
+Plugins in the OP5 Monitor system are actually programs and scripts that are executed locally on the host system as the *monitor* user.
 If you use third-party or internally developed plugins you should try to audit the code, verify that argument handling is being properly escaped and similar.
 

@@ -6,18 +6,6 @@ Geomap creates maps to help to visualize the locations of objects and the links 
 
 ![](attachments/16482345/23793030.png)
 
-**Table of Content**
-
--   [About](#UsingGeomap-About)
--   [Geomap](#UsingGeomap-Geomap)
--   [Geomap Options](#UsingGeomap-GeomapOptions)
--   [Geomap Settings](#UsingGeomap-GeomapSettings)
-    -   [Accessing Geomap](#UsingGeomap-AccessingGeomap)
--   [Locations](#UsingGeomap-Locations)
-    -   [Adding a location](#UsingGeomap-Addingalocation)
--   [Links](#UsingGeomap-Links)
-    -   [Adding a link](#UsingGeomap-Addingalink)
-
 # Geomap
 
 The **Geomap** page (Monitor \> Geomap) provides a visualization of object locations and links.

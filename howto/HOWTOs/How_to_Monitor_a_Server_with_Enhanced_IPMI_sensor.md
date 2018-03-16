@@ -13,7 +13,7 @@ The plugin supports IPMI v1.5 and IPMI v2.0. It can check IPMI sensors locally o
 ## Prerequisites
 
 -   Latest plugin package, or the package monitor-plugin-check\_ipmi: "**yum install monitor-plugin-check\_ipmi**"
--   Install the FreeIPMI package on the op5 monitor server, ”**yum install freeipmi**”
+-   Install the FreeIPMI package on the OP5 Monitor server, ”**yum install freeipmi**”
 -   Enable and configure IPMI as described below.
 
 ## How to Enable IPMI Monitoring
@@ -28,7 +28,7 @@ On Dell PowerEdge servers (1950 and R410 at least) the following steps are neede
 4.  Set a username and a password.
 5.  Reboot
 
-**Note:** these steps are not necessary on the op5 Monitor server, only on the systems we want to monitor.
+**Note:** these steps are not necessary on the OP5 Monitor server, only on the systems we want to monitor.
 
 ## Sensor groups that can be monitored
 

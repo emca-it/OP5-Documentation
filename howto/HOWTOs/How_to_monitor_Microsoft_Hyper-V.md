@@ -4,7 +4,7 @@ This article describes how to monitor Microsoft Hyper-V.
 
 ## Prerequisites
 
-For this how-to to work you need the latest op5 NSClient++ installed on your Hyper-V server.
+For this how-to to work you need the latest OP5 NSClient++ installed on your Hyper-V server.
 
 ## Firewall settings
 

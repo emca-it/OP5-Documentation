@@ -6,11 +6,6 @@ The **View Active Config** page (Manage \> View Active Config) displays all of t
 
 The objects can have more attribute columns then can be displayed in the browser window, so expanding the window horizontally might be necessary to see all of the attributes.
 
-**Table of Content**
-
--   [About](#ViewActiveConfig-About)
--   [Overview](#ViewActiveConfig-Overview)
-
 # Overview
 
 There are several parts of the View Active Config page:

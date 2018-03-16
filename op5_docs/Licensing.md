@@ -4,7 +4,7 @@
 
 op5 Monitor include code from many different Open Source projects in addition to the softwares written by op5. The list below includes projects we distribute, grouped by the type of license applicable to the packages.
 
-The op5 Monitor product is an integrated software delivery containing a mix of:
+The OP5 Monitor product is an integrated software delivery containing a mix of:
 
 -   **Permissive licenses**
     -   A permissive license only carry minimal requirements about how the code and/or the resulting software can be redistributed.**

@@ -8,7 +8,7 @@ The driver gets the authenticated username from apache, and adds the group `apac
 
 # Setting up an authentication module that utilizes the Apache driver
 
-After having logged in to op5 Monitor, go to **Configure** and then select **Auth modules**.
+After having logged in to OP5 Monitor, go to **Configure** and then select **Auth modules**.
  Click the **Add new module** tab.
  In the dialogue that appears, name your new module.
  Choose the Apache driver from the dropdown.
@@ -25,7 +25,7 @@ After having logged in to op5 Monitor, go to **Configure** and then select **Aut
 # Users and permissions
 
 The Apache authentication driver utilises similar configuration to the Default driver for group authorization. This means that you will have to set up additional "`Local users`" to resolve group memberships since Apache doesn't have a way to resolve them itself.
- For each user one or more Auth Modules can be specified. This enables the user to log in using the Auth Modules that where chosen but not the others. Just as with ordinary Local users, groups can be specified per user to give it permissions to different parts of op5 monitor.
+ For each user one or more Auth Modules can be specified. This enables the user to log in using the Auth Modules that where chosen but not the others. Just as with ordinary Local users, groups can be specified per user to give it permissions to different parts of OP5 Monior.
  ![](attachments/16482393/16679174.png)
 
 Note that some Auth Modules might not need you to specify a password for the user. This is validated every time you edit your users and passwords needs to be set for every user you have given an Auth Module that depends on username and password to log in.

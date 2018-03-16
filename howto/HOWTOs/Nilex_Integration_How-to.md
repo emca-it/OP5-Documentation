@@ -2,15 +2,15 @@
 
 Version
 
-This article was written for version 5.0 of op5 Monitor, it could work on both lower and higher version if nothing else is stated.
+This article was written for version 5.0 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Information in this article is old and can be obsolete, it will be updated and confirmed with newer versions of op5 Monitor when possible.
+Information in this article is old and can be obsolete, it will be updated and confirmed with newer versions of OP5 Monitor when possible.
 
  
 
 ## Introduction
 
-This integration between op5 Monitor and Nilex helpdesk system makes it possible to receive notifications in Nilex and create a support ticket from the notification.
+This integration between OP5 Monitor and Nilex helpdesk system makes it possible to receive notifications in Nilex and create a support ticket from the notification.
 
  Read more about Nilex here: [http://www.nilex.se](http://www.nilex.se/)
 
@@ -21,7 +21,7 @@ This integration between op5 Monitor and Nilex helpdesk system makes it possible
 To be able to complete this how-to you will need:
 
 -   Administrative access to a working Nilex system
--   Root command line access to a running op5 Monitor
+-   Root command line access to a running OP5 Monitor
 -   Contact Nilex to make sure you have the required api/modules
 
  

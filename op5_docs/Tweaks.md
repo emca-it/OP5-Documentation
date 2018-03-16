@@ -4,12 +4,6 @@
 
 Tweaking your system to improve performance can be a good way to use you hardware more efficient.
 
-**Table of Content**
-
--   [About](#Tweaks-About)
--   [Ramdisk](#Tweaks-Ramdisk)
-    -   [Enable ramdisk](#Tweaks-Enableramdisk)
-
 # Ramdisk
 
 A ramdisk can be enabled for storing spools for performance data and checkresults.

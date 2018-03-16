@@ -1,10 +1,10 @@
-# How do I monitor Microsoft Active Directory with op5 Monitor?
+# How do I monitor Microsoft Active Directory with OP5 Monitor?
 
 ## Question
 
 * * * * *
 
-How do I monitor Microsoft Active Directory with op5 Monitor?
+How do I monitor Microsoft Active Directory with OP5 Monitor?
 
 ## Answer
 

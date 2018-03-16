@@ -1,10 +1,10 @@
-# How do I tune my op5 Monitor configuration?
+# How do I tune my OP5 Monitor configuration?
 
 ## Question
 
 * * * * *
 
-How do I tune my op5 Monitor configuration?
+How do I tune my OP5 Monitor configuration?
 
 ## Answer
 

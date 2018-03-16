@@ -5,13 +5,6 @@
 Every view is automatically refreshed after a certain time. 
 The default Global refresh time for listviews is 90 seconds.
 
-**Table of Content**
-
--   [About](#Refreshtime-About)
--   [Pausing the page refresh](#Refreshtime-Pausingthepagerefresh)
--   [Editing the refresh time](#Refreshtime-Editingtherefreshtime)
--   [Related pages](#Refreshtime-Relatedpages)
-
 # Pausing the page refresh
 
 Click **Settings** in the quickbar of the menu:

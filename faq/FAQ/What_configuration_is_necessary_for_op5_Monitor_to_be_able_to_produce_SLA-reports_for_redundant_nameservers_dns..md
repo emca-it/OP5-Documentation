@@ -1,16 +1,16 @@
-# What configuration is necessary for op5 Monitor to be able to produce SLA-reports for redundant nameservers/dns.
+# What configuration is necessary for OP5 Monitor to be able to produce SLA-reports for redundant nameservers/dns.
 
 ## Question
 
 * * * * *
 
-What configuration is necessary for op5 Monitor to be able to produce SLA-reports for redundant nameservers/dns.
+What configuration is necessary for OP5 Monitor to be able to produce SLA-reports for redundant nameservers/dns.
 
 ## Answer
 
 * * * * *
 
-Since Business Services was introduced in op5 Monitor it is the preferred way of setting up logic for redundancy and/or clustered services.
+Since Business Services was introduced in OP5 Monitor it is the preferred way of setting up logic for redundancy and/or clustered services.
 
 However, the old info below is kept as a reference if Business Services for some reason is unwanted:
 

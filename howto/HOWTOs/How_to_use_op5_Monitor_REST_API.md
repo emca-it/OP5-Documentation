@@ -1,10 +1,10 @@
-# How to use op5 Monitor REST API
+# How to use OP5 Monitor REST API
 
 ## Purpose
 
-The purpose of this document is designed for those who want to get started with developing a communication between your own application and the op5 Monitor REST API.
+The purpose of this document is designed for those who want to get started with developing a communication between your own application and the OP5 Monitor REST API.
 
-The REST API was introduced in op5 Monitor 5.7.0
+The REST API was introduced in OP5 Monitor 5.7.0
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ auth_method:
 
 In particular, the brief code example below will get a list of all services on a specific host and output their states. The desired result is to list services that are in an OK, WARNING, CRITICAL or an UNKNOWN state.
 
-1.  Download and save the file: ([api\_example.php](attachments/688561/4358202.gz))and upload it to a server where you can reach the file with your preferred web browser. Make sure that the server you upload the code to can communicate with the op5 Monitor server you set in the \$host variable.Please note that you are required to change the following variables in the code, since they need to reflect the settings in your environment:
+1.  Download and save the file: ([api\_example.php](attachments/688561/4358202.gz))and upload it to a server where you can reach the file with your preferred web browser. Make sure that the server you upload the code to can communicate with the OP5 Monitor server you set in the \$host variable.Please note that you are required to change the following variables in the code, since they need to reflect the settings in your environment:
     -   \$username = ””
     -   \$password = ””
     -   \$uri = “”
@@ -51,5 +51,5 @@ In particular, the brief code example below will get a list of all services on a
 
 **WRAP UP**
 
-This is a how-to for users who are new to the op5 Monitor API. Hopefully this how-to has kick-started your knowledge in regards to how to use the API to your advantage; and we’d love to see more customers using the API and start integrating your own customized solutions with it.
+This is a how-to for users who are new to the OP5 Monitor API. Hopefully this how-to has kick-started your knowledge in regards to how to use the API to your advantage; and we’d love to see more customers using the API and start integrating your own customized solutions with it.
 

@@ -1,10 +1,10 @@
-# How to monitor your application server with op5 Monitor and JMX4Perl
+# How to monitor your application server with OP5 Monitor and JMX4Perl
 
-In this how-to we will cover how to monitor your application server via [JMX](http://en.wikipedia.org/wiki/Java_Management_Extensions "JMX") with op5 Monitor with the plugin check\_jmx4perl and the agent jolokia. We will also have a glance at monitoring application  servers trough a JMX-proxy for agentless monitoring where agents are not possible to use.
+In this how-to we will cover how to monitor your application server via [JMX](http://en.wikipedia.org/wiki/Java_Management_Extensions "JMX") with OP5 Monitor with the plugin check\_jmx4perl and the agent jolokia. We will also have a glance at monitoring application  servers trough a JMX-proxy for agentless monitoring where agents are not possible to use.
 
 Version disclaimer
 
-This article is written for op5 Appliance System 3.5.2 and op5 Monitor 5.4.3, and should work for versions up to 5.7.3 of op5 Monitor. This article does not apply to op5 Appliance System 6.0 and op5 Monitor 6.0 and later.
+This article is written for OP5 Appliance System 3.5.2 and OP5 Monitor 5.4.3, and should work for versions up to 5.7.3 of OP5 Monitor. This article does not apply to OP5 Appliance System 6.0 and OP5 Monitor 6.0 and later.
 
  
 
@@ -24,7 +24,7 @@ Security configuration:<http://www.jolokia.org/reference/html/agents.html#agent-
 
 ## Disclaimer
 
-This how-to  is not officially supported by op5. It is just a glimpse on how to preform monitoring of application servers with op5 Monitor. And I am not a sysadmin working with application servers all day long, so there may be some glitches here and there. This is not a security document, so it is your responsibility that your system is secure. Please refer to the developers [manual](index "manual") for more information about securing your installation.
+This how-to  is not officially supported by op5. It is just a glimpse on how to preform monitoring of application servers with OP5 Monitor. And I am not a sysadmin working with application servers all day long, so there may be some glitches here and there. This is not a security document, so it is your responsibility that your system is secure. Please refer to the developers [manual](index "manual") for more information about securing your installation.
 
 ## Installation
 
@@ -130,7 +130,7 @@ Now the web-app is deployed, and JBoss will extract it by it self.
 
 To test if the web-app works, browse to: http://:/jolokia/version
 
-or run the following command from your op5 Monitor server:
+or run the following command from your OP5 Monitor server:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 jmx4perl http://:/jolokia
@@ -146,7 +146,7 @@ j4psh http://:/jolokia
 
 -   Copying files
 
-You need to copy the installed check\_jmx4perl and it’s config-files to a directory that op5 monitor can browse:
+You need to copy the installed check\_jmx4perl and it’s config-files to a directory that OP5 Monitor can browse:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 mkdir /opt/plugins/custom/jmx4perl 
@@ -312,7 +312,7 @@ And finally, save the changes.
 
  
 
-First we add host to op5 Monitor with the ip-address of our application server.
+First we add host to OP5 Monitor with the ip-address of our application server.
 
 -   Go to: Configure -\> New Host
 
@@ -395,7 +395,7 @@ check\_jmx4perl\_config\_proxy
 
 \$USER1\$/custom/jmx4perl/check\_jmx4perl -u http://\$ARG1\$:\$ARG2\$/jolokia –target service:jmx:rmi:///jndi/rmi://\$HOSTADDRESS\$:\$ARG3\$/jmxrmi –config \$USER1\$/custom/jmx4perl/config/jmx4perl.cfg –check \$ARG4\$ –warning \$ARG5\$ –critical \$ARG6\$
 
-First we add host to op5 Monitor with the ip-address of our application server.
+First we add host to OP5 Monitor with the ip-address of our application server.
 
 -   Go to: Configure -\> New Host
 

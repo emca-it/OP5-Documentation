@@ -2,7 +2,7 @@
 
 # Introduction
 
-The op5 Monitor backend can easily be configured to be used as a distributed monitoring solution. The distributed model looks like this.
+The OP5 Monitor backend can easily be configured to be used as a distributed monitoring solution. The distributed model looks like this.
 ![](attachments/16482412/17269702.png)
 
 In the distributed monitoring solution:
@@ -11,31 +11,16 @@ In the distributed monitoring solution:
     -   All new configuration is distributed to the pollers.
     -   Each poller node is responsible for its own host group (site).
     -   The master node has all the status information.
-
-**Table of Contents**
-
--   [Introduction](#DistributedMonitoring-Introduction)
--   [Before we start](#DistributedMonitoring-Beforewestart)
-    -   [Prerequisites](#DistributedMonitoring-Prerequisites)
-    -   [Cluster state information](#DistributedMonitoring-monnodestatusClusterstateinformation)
--   [The configuration](#DistributedMonitoring-Theconfiguration)
-    -   [Setting up the new distributed monitoring solution](#DistributedMonitoring-Settingupthenewdistributedmonitoringsolution)
-    -   [Adding a new host group to a poller](#DistributedMonitoring-Addinganewhostgrouptoapoller)
-    -   [Removing a poller](#DistributedMonitoring-Removingapoller)
-    -   [File synchronization](#DistributedMonitoring-Filesynchronization)
-    -   [Notify through master](#DistributedMonitoring-Notifythroughmaster)
--   [More information](#DistributedMonitoring-Moreinformation)
-
 # 
 Before we start
 
 ## Prerequisites
 
-There are a few things you need to take care of before you can start setting up a distributed monitoring solution. You need to make sure you have at least two servers of **the same architecture **(32/64 bit), both running the **same** version of op5 Monitor.
+There are a few things you need to take care of before you can start setting up a distributed monitoring solution. You need to make sure you have at least two servers of **the same architecture **(32/64 bit), both running the **same** version of OP5 Monitor.
 
 More specifically, make sure that:
 
--   -   op5 Monitor version \>=7.2.1 is installed and running on all servers.
+-   -   OP5 Monitor version \>=7.2.1 is installed and running on all servers.
     -   The following TCP ports must be opened on the poller nodes, to allow master nodes to successfully communicate with poller nodes:
         -   22 (SSH), used for distributing configuration from master to poller nodes.
         -   15551 (merlin), used for state communication, such as check results.
@@ -45,7 +30,7 @@ More specifically, make sure that:
 
 ## Cluster state information
 
-In the op5 Monitor system, a tool called *mon* can be found via the command line (accessed via SSH). To view the current cluster state, run the command like this:
+In the OP5 Monitor system, a tool called *mon* can be found via the command line (accessed via SSH). To view the current cluster state, run the command like this:
 
 `mon node status`
 
@@ -68,7 +53,7 @@ The poller will be monitoring a host group named *se-gbg*.
 
 ### Master-side configuration
 
-1.  Make sure that the host group which the poller will be responsible for is already configured, saved and can be found in the status pages of the op5 Monitor web interface. Remember, at the bare minimum, the host group must contain at least one host, with at least one contact and one service.
+1.  Make sure that the host group which the poller will be responsible for is already configured, saved and can be found in the status pages of the OP5 Monitor web interface. Remember, at the bare minimum, the host group must contain at least one host, with at least one contact and one service.
 2.  In case of running a [load balanced setup with peered masters](Load_balanced_monitoring), make sure that all peers are fully connected and synchronized according to [mon node status](#DistributedMonitoring-monnodestatus). The following steps (starting from step 3), should be performed on all masters.
      
 3.  Log onto the master via SSH, as root. OP5 recommends establishing non-root accounts with sudo privileges.
@@ -123,9 +108,9 @@ In case of peered masters, **perform these steps only on *one* of the masters**.
     `service naemon restart `
 2.  Push configuration from the master to the new poller:
     `asmonitor mon oconf push poller01 `
-3.  Restart op5 Monitor on the new poller:
+3.  Restart OP5 Monitor on the new poller:
     `mon node ctrl poller01 mon restart`
-4.  Restart op5 Monitor on all masters:
+4.  Restart OP5 Monitor on all masters:
     `mon node ctrl --self --type=peer mon restart`
 
 ## Adding a new host group to a poller
@@ -167,8 +152,8 @@ In case of peered masters, **perform these steps only on *one* of the masters
 2.  Remove the poller from the configuration on all masters:
     `mon node ctrl --self --type=peer mon node remove poller01`
      
-3.  Restart op5 Monitor on all masters:mon node ctrl --self --type=peer mon restart` `
-4.  Restart op5 Monitor on the poller:
+3.  Restart OP5 Monitor on all masters:mon node ctrl --self --type=peer mon restart` `
+4.  Restart OP5 Monitor on the poller:
     `mon node ctrl poller01 mon restart`
 
 ## File synchronization
@@ -200,7 +185,7 @@ The steps below should be performed on all masters. This will matter most when r
     }
     ```
 
-4.  Restart op5 Monitor:
+4.  Restart OP5 Monitor:
     `mon restart` 
 
 ### Poller-side configuration
@@ -219,7 +204,7 @@ The steps below should be performed on all masters. This will matter most when r
     }
     ```
 
-4.  `Restart op5 Monitor:mon restart`
+4.  `Restart OP5 Monitor:mon restart`
 
 # More information
 

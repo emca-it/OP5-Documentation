@@ -6,9 +6,9 @@ The purpose of this article is to describe how [op5 Monitor](http://www.op5.com
 
 ## Prerequisites
 
--   libvirt drivers need to be installed and running on both the op5 monitor server and on the target XEN host(s).
--   The plugin support several transport protocols but ssh is the preferred and will be used in this How-To. You need to setup a password-less communication for the user ‘monitor’ and the user that you will use for the communication between the op5 monitor server and the target XEN host(s).
--   Update op5 Monitor to get the latest plugin packet containing the check\_libvirt plugin.
+-   libvirt drivers need to be installed and running on both the OP5 Monitor server and on the target XEN host(s).
+-   The plugin support several transport protocols but ssh is the preferred and will be used in this How-To. You need to setup a password-less communication for the user ‘monitor’ and the user that you will use for the communication between the OP5 Monitor server and the target XEN host(s).
+-   Update OP5 Monitor to get the latest plugin packet containing the check\_libvirt plugin.
 
 ## Check commands
 

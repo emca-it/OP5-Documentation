@@ -4,33 +4,6 @@
 
 As you have seen there are a couple of demo maps in the default configuration. They are included so you have something to start with when you are using NagVis for the first time.
 
-**Table of Content**
-
--   [About ](#NagVismaps-About)
--   [Manage backgrounds](#NagVismaps-Managebackgrounds)
-    -   [Add](#NagVismaps-Add)
-    -   [Delete](#NagVismaps-Delete)
--   [Manage maps](#NagVismaps-Managemaps)
-    -   [Add](#NagVismaps-Add.1)
-    -   [Change options](#NagVismaps-Changeoptions)
-    -   [Deleting a map](#NagVismaps-Deletingamap)
-    -   [Renaming a map](#NagVismaps-Renamingamap)
--   [Map object types](#NagVismaps-map-object-tableMapobjecttypes)
--   [Icon objects](#NagVismaps-Iconobjects)
-    -   [Adding a host icon](#NagVismaps-Addingahosticon)
-    -   [Adding a service icon](#NagVismaps-Addingaserviceicon)
--   [Line objects](#NagVismaps-Lineobjects)
-    -   [Adding a line](#NagVismaps-Addingaline)
--   [Graph objects](#NagVismaps-Graphobjects)
--   [ Add a graph](#NagVismaps-Addagraph)
-    -   [Selecting graph source](#NagVismaps-Selectinggraphsource)
-    -   [Selecting graph length](#NagVismaps-Selectinggraphlength)
-    -   [Using multiple options](#NagVismaps-Usingmultipleoptions)
--   [Managing objects](#NagVismaps-Managingobjects)
-    -   [Deleting objects](#NagVismaps-Deletingobjects)
-    -   [Modifying objects](#NagVismaps-Modifyingobjects)
--   [OP5 Monitor: Open Source Network Monitoring](#NagVismaps-OP5Monitor:OpenSourceNetworkMonitoring)
-
 # Manage backgrounds
 
 When you start to create your own maps you will need to have a background image. The background image can be what ever you want.
@@ -174,7 +147,7 @@ If you hover the mouse over an object you will get a summary of how the current 
 
 # Icon objects
 
-As you can see in the table in Map object types the type Icon consists of five different objects. All of them are icons that displays status of a certain object in op5 Monitor. They will change color depending of the status of the corresponding object in op5 Monitor.
+As you can see in the table in Map object types the type Icon consists of five different objects. All of them are icons that displays status of a certain object in OP5 Monitor. They will change color depending of the status of the corresponding object in OP5 Monitor.
 
 ## Adding a host icon
 

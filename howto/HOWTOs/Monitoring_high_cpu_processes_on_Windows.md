@@ -12,8 +12,8 @@ This how-to will guide you to monitor top high cpu processes on Windows using Po
 
 # Prerequisites
 
--   Working installation of op5 Agent 
--   Working installation of op5 Monitor
+-   Working installation of OP5 Agent 
+-   Working installation of OP5 Monitor
 
 # Create Powershell script
 
@@ -54,9 +54,9 @@ This will be placed in the script folder within the agent installation folder, i
 
 Save the script as top\_cpu\_processes.ps1
 
-# Add the script to op5 Agent
+# Add the script to OP5 Agent
 
-To make the op5 Agent aware of the script and how it should be executed we need to add a handler for it in the agent configuration.
+To make the OP5 Agent aware of the script and how it should be executed we need to add a handler for it in the agent configuration.
 
 Open the file custom.ini (or op5.ini) located in C:\\Program Files\\op5\\NSClient++\\ and add the following rows:
 
@@ -84,11 +84,11 @@ Answer Y on the question.
 
  
 
-# Run script from op5 Monitor console
+# Run script from OP5 Monitor console
 
 This step is not necessary, but can be good before continuing just to make sure everything is working before change the configuration.
 
-Log in to op5 Monitor via console or SSH.
+Log in to OP5 Monitor via console or SSH.
 
 Run the following command to test the powershell script
 

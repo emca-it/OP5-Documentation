@@ -1,10 +1,10 @@
-# Is there any sort of logs monitoring? What logs can be monitored without op5 LogServer Extension?
+# Is there any sort of logs monitoring? What logs can be monitored without OP5 LogServer Extension?
 
 ## Question
 
 * * * * *
 
-Is there any sort of logs monitoring? What logs can be monitored without op5 LogServer Extension?
+Is there any sort of logs monitoring? What logs can be monitored without OP5 LogServer Extension?
 
 ## Answer
 

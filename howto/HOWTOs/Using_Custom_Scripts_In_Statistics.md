@@ -1,16 +1,16 @@
 # Using Custom Scripts In Statistics
 
-This article is kept for historical purposes only. op5 Statisitcs is considered to be deprecated software
+This article is kept for historical purposes only. OP5 Statisitcs is considered to be deprecated software
 
  
 
-op5 Statistics comes with a lot of scripts as it is. But there are times when the pre-installed scripts just aren’t enough. This How-To will show you how to add your own script to op5 Statistics and how to create graphs with it. We will be using a simple script as an example and then create all templates needed to make it easy to use.
+op5 Statistics comes with a lot of scripts as it is. But there are times when the pre-installed scripts just aren’t enough. This How-To will show you how to add your own script to OP5 Statistics and how to create graphs with it. We will be using a simple script as an example and then create all templates needed to make it easy to use.
 
-In this How-To we will be using a small Perl script that uses the op5 Monitor plugin called check\_http to graph the response time of a webserver. All commands in this How-To are executed in an ssh connection at the op5 Statistics server.
+In this How-To we will be using a small Perl script that uses the OP5 Monitor plugin called check\_http to graph the response time of a webserver. All commands in this How-To are executed in an ssh connection at the OP5 Statistics server.
 
 # Adding the script
 
-First of all you have to place the script in the scripts directory on the op5 Statistics server. The script we are using here is called:
+First of all you have to place the script in the scripts directory on the OP5 Statistics server. The script we are using here is called:
 
     check_http_responstime.sh
 
@@ -19,7 +19,7 @@ And it looks like this:
     #!/bin/bash
     /opt/plugins/check_http -H $1 | sed -n 's/[^=]*=([0-9.]*).*/1/p'
 
-The script is executing the op5 Monitor plugin *check\_http* and using *sed* to get the responsetime in seconds. Put the script in */opt/statistics/scripts* on your op5 Statistics Server. Remember to make the script executable for all users with:
+The script is executing the OP5 Monitor plugin *check\_http* and using *sed* to get the responsetime in seconds. Put the script in */opt/statistics/scripts* on your OP5 Statistics Server. Remember to make the script executable for all users with:
 
     chmod 755 /opt/statistics/scripts/check_http_responstime.sh
 
@@ -31,7 +31,7 @@ The return data is response time in seconds.
 
 # Adding new Data Input Method
 
-First we have to configure op5 Statistics how to use the new script (check\_http\_responstime.sh) when collecting data. In the main menu in the configuration GUI of op5 Statistics you will find “Data Input Method” in the “Collection Method” section. Click on “Add” just above the listing of existing Data Input Methods. Fill in the following fields:
+First we have to configure OP5 Statistics how to use the new script (check\_http\_responstime.sh) when collecting data. In the main menu in the configuration GUI of OP5 Statistics you will find “Data Input Method” in the “Collection Method” section. Click on “Add” just above the listing of existing Data Input Methods. Fill in the following fields:
 
 Data Input Methods
 
@@ -100,7 +100,7 @@ Explanation:
 -   **Friendly Name:** Just a small description of your Input Field.
 -   **Regular Expression Match:** If you want to require a certain regular expression to be matched against input data, enter it here (ereg format). Not in use now.
 -   **Allow Empty Input:** Checking this box will make it possible to use this script with an empty argument. Not in use now.
--   **Special Type Code:** Making op5 Statistics using the host name variable from the device that will use this later on instead of forcing you to enter one.
+-   **Special Type Code:** Making OP5 Statistics using the host name variable from the device that will use this later on instead of forcing you to enter one.
 
 Click on the “create” button when you are done editing.
 
@@ -127,7 +127,7 @@ Response time in seconds</td>
 
 Explanation
 
--   **Field [Output]:** The name of the output data that op5 Statistics receives from the script in a poll.
+-   **Field [Output]:** The name of the output data that OP5 Statistics receives from the script in a poll.
 -   **Friendly Name:** Just a small description of your Output Field.
 -   **Update RRD File:** Checking this make sure that the data from the script is stored in to the rrd file used by the graphs later on.
 
@@ -135,7 +135,7 @@ Click on the “create” button when you are done editing. Now just click on th
 
 # Adding new Data Template
 
-The data templates are used to build a so called skeleton that makes it easier to change a set of data sources that uses the same Data Template. It’s here you will define how the collected data is supposed to be used. Now we will continue with the creating of the “Data template”. In the main menu in the configuration GUI of op5 Statistics you will find “Data Templates” under the Templates section. Click on “Add” just above the listing of existing Data Templates. We now have three tables with fields to fill in.
+The data templates are used to build a so called skeleton that makes it easier to change a set of data sources that uses the same Data Template. It’s here you will define how the collected data is supposed to be used. Now we will continue with the creating of the “Data template”. In the main menu in the configuration GUI of OP5 Statistics you will find “Data Templates” under the Templates section. Click on “Add” just above the listing of existing Data Templates. We now have three tables with fields to fill in.
 
 <table>
 <colgroup>
@@ -195,11 +195,11 @@ You will also get a new table at the bottom of the page. The table is called “
 
 # **Creating a new Graph Template**
 
-All the settings in the Graph Template is used later on when op5 Statistics is creating the RRD file in witch the data for the graph is being saved.
+All the settings in the Graph Template is used later on when OP5 Statistics is creating the RRD file in witch the data for the graph is being saved.
 
 ## **Add the new Graph Template**
 
-In the main menu in the configuration GUI of op5 Statistics you will find “Graph Templates” under the Templates section.
+In the main menu in the configuration GUI of OP5 Statistics you will find “Graph Templates” under the Templates section.
  Click on “Add” just above the listing of existing Data Templates.
 
 In the new page you will find two tables. Most of the options are left with their default values. We only need to change these three options:
@@ -309,7 +309,7 @@ Now when we are finished with the “Graph Template” we just click on the “S
 # **Create graphs**
 
 The last thing to do is to start creating graphs that uses the templates described above.
- There are several ways to create graphs for a host. We will use one of them. Under the “Management” section in the main menu of op5 Statistics you will find “Devices”. Click on “Devices” to get a list of all devices added to op5 Statistics.
+ There are several ways to create graphs for a host. We will use one of them. Under the “Management” section in the main menu of OP5 Statistics you will find “Devices”. Click on “Devices” to get a list of all devices added to OP5 Statistics.
  In the top table you are able to filter out the type of devices you would like to see or search for a device name. Click on the device you would like to add a new graph to. First we need to associate the newly created “Graph Template” with the device. In the table “Associated Graph Templates” you will find a drop down list:
  Add Graph Template:
 

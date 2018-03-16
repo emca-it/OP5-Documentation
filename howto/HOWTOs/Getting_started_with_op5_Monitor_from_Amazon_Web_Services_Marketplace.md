@@ -1,6 +1,6 @@
-# Getting started with op5 Monitor from Amazon Web Services Marketplace
+# Getting started with OP5 Monitor from Amazon Web Services Marketplace
 
-A very easy way of getting started with op5 Monitor is to deploy a server in the cloud, in this case in the Amazon Web Services cloud.
+A very easy way of getting started with OP5 Monitor is to deploy a server in the cloud, in this case in the Amazon Web Services cloud.
 
 This article aims to get you from the Marketplace all the way through to having a Monitor system configured and monitoring a service.
 
@@ -38,20 +38,20 @@ Let's get started!
     ![](attachments/11632760/11567132.png)
 9.  Close this popup with the X icon in the top-right corner of the popup. This will bring you to this page:
     ![](attachments/11632760/11567133.png)
-10. You now have an instance of op5 Monitor running on the Amazon Web Services Cloud!
+10. You now have an instance of OP5 Monitor running on the Amazon Web Services Cloud!
     In order to be able to log in to your new, fresh instance, click "Manage in AWS Console". This will bring you to a page much like this:
     ![](attachments/11632760/11567134.png)
 11. Here, you have two details that you will need in order to log into your new instance - the **Instance ID**, which in my case is *i-d88a7136*, and the **Public DNS**, which in my case is *ec2-54-165-80-172.compute-1.amazonaws.com*.
     In order to log in to your new instance, copy the Public DNS, open a new tab in your browser and paste it into the address bar, followed by Enter.
     If you want more information on how to use the Amazon Web Services Cloud, [this](http://aws.amazon.com/documentation/gettingstarted/) contains all the information you need to get started. 
 
-# Getting started with op5 Monitor
+# Getting started with OP5 Monitor
 
 1.  When you've pasted the Public DNS into the address bar and pressed Enter, you will be sent to this page:
     ![](attachments/11632760/11567135.png)
-2.   Click the op5 Monitor button, which brings you to this page:
+2.   Click the OP5 Monitor button, which brings you to this page:
     ![](attachments/11632760/17859276.png)
-3.  You will be prompted to create an account with administrator privileges the first time you access op5 Monitor. Input username and password and click Create account, which brings you to this page:
+3.  You will be prompted to create an account with administrator privileges the first time you access OP5 Monitor. Input username and password and click Create account, which brings you to this page:
     ![](attachments/11632760/11567137.png)
 4.  This is the Host Wizard, the first thing you encounter when you log into Monitor (unless you later turn it off by unchecking "Always show this Host Wizard when I login"). Click Next, which brings you to this page:
     ![](attachments/11632760/11567138.png)
@@ -66,13 +66,13 @@ Let's get started!
 8.  Here, I have a choice of either saving my configuration and going on to view the new hosts that I've added, or saving my configuration and going back to adding more hosts through the wizard.
     Me, I'm happy with what I've done, and click "Save Configuration and View Added Hosts", which after some processing brings me to this page:
     ![](attachments/11632760/11567142.png)
-9.  Voila! You have now added your first host and your first service into your very own instance of op5 Monitor, running on the Amazon Web Services Cloud!
+9.  Voila! You have now added your first host and your first service into your very own instance of OP5 Monitor, running on the Amazon Web Services Cloud!
 
  
 
 Further reading
 
-For more information about op5 Monitor and tips about using the various features, here are some links to resources to learn more:
+For more information about OP5 Monitor and tips about using the various features, here are some links to resources to learn more:
 [OP5 Monitor Documentation](https://kb.op5.com/display/DOC)
 [HOWTOs](https://kb.op5.com/display/HOWTOs)
 [FAQs](https://kb.op5.com/display/FAQ) 

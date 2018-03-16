@@ -2,27 +2,14 @@
 
 # About
 
-op5 Monitor can do a lot on its own. But to get the most out of op5 monitor you should use our agents.
+op5 Monitor can do a lot on its own. But to get the most out of OP5 Monitor you should use our agents.
 The following agents are available from the download section in the support section at http://www.op5.com/get-op5-monitor/download/\#Agents-tab.
 
--   -   op5 NSClient++
+-   -   OP5 NSClient++
     -   NRPE
     -   MRTGEXT
     -   Windows syslog Agent
     -   Nagstamon
-
-**Table of Content**
-
--   [About](#MonitoringAgents-About)
--   [Agent Description](#MonitoringAgents-AgentDescription)
-
-# Agent Description
-
-The table describes each agent briefly
-
-**Name**
-
-**Description**
 
 op5 NSClient++
 
@@ -32,20 +19,20 @@ This is the agent used for monitoring Microsoft Windows operating systems.
 -   -   CPU, memory and disk usage 
     -   services, windows events and files
 
-You can also use the built-in NRPE support to create your own commands for op5 NSClient++
+You can also use the built-in NRPE support to create your own commands for OP5 NSClient++
 
 NRPE
 
-This is the most commonly used agent for Linux and Unix systems. NRPE is used to execute plugins on an remote machine and then send the results back to op5 Monitor.
+This is the most commonly used agent for Linux and Unix systems. NRPE is used to execute plugins on an remote machine and then send the results back to OP5 Monitor.
 You may also send arguments to the NRPE daemon on the remote machine to make it a bit more flexible. This must be turned on before you use the feature.
 
 MRTGEXT
 
-MRTGEXT was originally written as an NLM for Novel Netware to obtain values used with the widely known MRTG, but it can also be used to poll values from op5 Monitor.
+MRTGEXT was originally written as an NLM for Novel Netware to obtain values used with the widely known MRTG, but it can also be used to poll values from OP5 Monitor.
 
 op5 Syslog Agent
 
-op5 Syslog Agent runs as a service under Windows. It formats all types of Windows Event log entries into syslog format and sends them to a syslog host (The op5 Monitor server or the op5 LogServer).
+op5 Syslog Agent runs as a service under Windows. It formats all types of Windows Event log entries into syslog format and sends them to a syslog host (The OP5 Monitor server or the OP5 LogServer).
 The agent can also forward plaintext log-files.
 
 Nagstamon

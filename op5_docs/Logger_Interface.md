@@ -4,23 +4,12 @@
 
 # About
 
-In the op5 Logger interface you can:
+In the OP5 Logger interface you can:
 
 -   -   Search messages in database
     -   Search messages in archive
 
 Logger uses filters for selecting the data to show, these are described in the [Filters](Filters) chapter.
-
- 
-
-**Table of Content**
-
--   [About](#LoggerInterface-About)
--   [Logger GUI](#LoggerInterface-LoggerGUI)
-    -   [Filters](#LoggerInterface-Filters)
-    -   [Columns](#LoggerInterface-Columns)
--   [Search archive](#LoggerInterface-Searcharchive)
--   [Related pages](#LoggerInterface-Relatedpages)
 
 # Logger GUI
 

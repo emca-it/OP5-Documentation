@@ -1,4 +1,4 @@
-# op5 Monitor Enterprise version: 7.0.6 (Beta)
+# OP5 Monitor Enterprise version: 7.0.6 (Beta)
 
 **Permissive licenses**
 

@@ -8,7 +8,7 @@ How is it possible to simplify deployment of agents and management of services o
 
 ## Target Audience
 
-This paper is addressed primarily for administrators and personnel working with Network Monitoring Systems like op5 Monitor in large IT infrastructures. The paper could also be of interest for a reader involved or with an interest in system integration, deployment of software and how to simplify the distribution in a time efficient manner. Basic Unix / Linux server administration is recommended.
+This paper is addressed primarily for administrators and personnel working with Network Monitoring Systems like OP5 Monitor in large IT infrastructures. The paper could also be of interest for a reader involved or with an interest in system integration, deployment of software and how to simplify the distribution in a time efficient manner. Basic Unix / Linux server administration is recommended.
 
 ## About Puppet
 

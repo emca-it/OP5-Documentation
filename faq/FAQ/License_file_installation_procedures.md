@@ -26,13 +26,13 @@ The license file is easily installed by following the instructions found below.
 
  
 
-1.  Use your web browser to access your op5 server via its host name or IP address. Click on the menu option called *Configure System* (as can be seen in the image below) once the home page has been loaded.
+1.  Use your web browser to access your OP5 server via its host name or IP address. Click on the menu option called *Configure System* (as can be seen in the image below) once the home page has been loaded.
     ![](attachments/9929498/10191192.png) 
      
-2.  To access the configuration, enter the system's root password and hit the *Login* button. In the op5 Virtual Appliance, the default password is *monitor*.*
+2.  To access the configuration, enter the system's root password and hit the *Login* button. In the OP5 Virtual Appliance, the default password is *monitor*.*
     ![](attachments/9929498/10191193.png) 
      *
-3.  Once successfully logged in, click on the *License Management* option at the right hand side of the page. The screenshot below displays only this single option, but your op5 system might have several additional menu options.
+3.  Once successfully logged in, click on the *License Management* option at the right hand side of the page. The screenshot below displays only this single option, but your OP5 system might have several additional menu options.
     ![](attachments/9929498/10191194.png) 
      
 4.  Now click on the *Choose File* button, and finally select and upload the license file received from op5.

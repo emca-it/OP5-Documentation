@@ -2,24 +2,14 @@
 
 # About
 
-The groups in op5 Monitor is used to group objects of the same type. There are three types of groups in op5 Monitor
+The groups in OP5 Monitor is used to group objects of the same type. There are three types of groups in OP5 Monitor
 
 -   -   host groups
     -   service groups
     -   contact groups
 
-They are all good to use to get things a bit more organized and they have also special functions op5 Monitor.
+They are all good to use to get things a bit more organized and they have also special functions OP5 Monitor.
 The following subsections will give you a brief description about how they can be used.
-
-**Table of Content**
-
--   [About](#Groups-About)
--   [Host groups](#Groups-Hostgroups)
-    -   [Services on Host groups](#Groups-ServicesonHostgroups)
-    -   [Nested host groups](#Groups-Nestedhostgroups)
--   [Service groups](#Groups-Servicegroups)
--   [Contact groups](#Groups-Contactgroups)
-    -   [Permission to host and services](#Groups-Permissiontohostandservices)
 
 # 
 Host groups
@@ -29,7 +19,7 @@ Host groups can be used group hosts together in any way you like.
 -   -   A host can be connected to any number of hosts.
     -   A host group can be connected to an other host group.
 
-There are a few host groups included in the initial setup of op5 Monitor but you can create your own matching your own needs.
+There are a few host groups included in the initial setup of OP5 Monitor but you can create your own matching your own needs.
  There are a infinite ways of using host groups and here are a couple of examples.
  Grouping hosts by
 
@@ -76,11 +66,11 @@ The service groups are used to group services together in the same way as for ho
 
 *We take al those services and place them in a service group called Customer email.*
  *If we get a problem with any of the services in the Customer email group we can easily see that the whole email service has got a problem.*
- The service group in the example above is perfect to use in Service Level Agreement reports (SLA in the op5 Monitor user manual) to make sure we deliver the service as we promised.
+ The service group in the example above is perfect to use in Service Level Agreement reports (SLA in the OP5 Monitor user manual) to make sure we deliver the service as we promised.
 
 # Contact groups
 
-Contact groups are mainly used to setup where to send service and host notifications. It can also be used to setup permissions about who should be able to see what object in the op5 Monitor GUI.
+Contact groups are mainly used to setup where to send service and host notifications. It can also be used to setup permissions about who should be able to see what object in the OP5 Monitor GUI.
  The members of a contact group associated with a certain host and/or service are the one that will get all notifications for that object.
  A Contact group can be populated with a contact or another contact group.
 

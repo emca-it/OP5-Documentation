@@ -10,7 +10,7 @@ What is the easiest way of changing contact groups for different objects in an e
 
 * * * * *
 
-I have checked which methods can be used to help where an existing configuration with many hosts and services is to be changed so that the objects in question use new contact groups. Usually, when configuring a basic op5 system installation, we try to create a good structure for contact groups as early as possible (when scripting the hosts). This is because new services take the host's settings for contact groups. Unfortunately, changing a contact group in the web configuration is not easy because the clone functionality does not have an over-write function yet. Nor is this easy to fix by editing the text files as contact group settings are stored in every individual host and service object. However, it is relatively easy to script this.
+I have checked which methods can be used to help where an existing configuration with many hosts and services is to be changed so that the objects in question use new contact groups. Usually, when configuring a basic OP5 system installation, we try to create a good structure for contact groups as early as possible (when scripting the hosts). This is because new services take the host's settings for contact groups. Unfortunately, changing a contact group in the web configuration is not easy because the clone functionality does not have an over-write function yet. Nor is this easy to fix by editing the text files as contact group settings are stored in every individual host and service object. However, it is relatively easy to script this.
 
 The steps are as follows:
 

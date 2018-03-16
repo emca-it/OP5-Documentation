@@ -21,7 +21,7 @@ We need to make this as clear as possible. Many people reading this Guide may co
 
 # Workflow
 
-Most of the configuration in op5 Monitor is saved in configuration files (text files) in /opt/monitor/etc/. The Configure works with a database and this makes it possible to do changes in the configuration without saving it to file before all configuration is done. The table below describes the workflow:
+Most of the configuration in OP5 Monitor is saved in configuration files (text files) in /opt/monitor/etc/. The Configure works with a database and this makes it possible to do changes in the configuration without saving it to file before all configuration is done. The table below describes the workflow:
 
 **Step**
 

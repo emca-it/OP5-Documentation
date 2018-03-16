@@ -16,7 +16,7 @@ Today wireless networks are a vital part of a business infrastructure side by si
 
 This is a living document and will be updated or reorganized when more content is collected.
 
-This document is a community howto, and is not supported by op5 Support
+This document is a community howto, and is not supported by OP5 Support
 
  
 
@@ -26,13 +26,13 @@ This document is a community howto, and is not supported by op5 Support
 
 WAP – Wireless Access Point
 
-Service – Representation of a point of measure in op5 Monitor
+Service – Representation of a point of measure in OP5 Monitor
 
 Plugin – Small piece of software used by a Check Command to fetch data to a service
 
 Check Command and check command args – The call for execution of a Plugin with certain parameters and settings
 
-op5 Logserver Extension – Centralized logserver used for collecting logs and make them searchable with filters, and to integrate with op5 Monitor
+op5 Logserver Extension – Centralized logserver used for collecting logs and make them searchable with filters, and to integrate with OP5 Monitor
 
 Log filter – Condition based rule to match against incoming logs
 
@@ -49,7 +49,7 @@ Log filter – Condition based rule to match against incoming logs
 -   Connected Clients
 -   Failed Authentications
 
-The most basic is of course to check if the device is online and powered on, for that we use a simple PING-check. In op5 Monitor this is the first check that is automatically  added to every host. This document will not go through this step, please refer to [op5 Monitor Administration Manual.](http://op5.com/manuals/)
+The most basic is of course to check if the device is online and powered on, for that we use a simple PING-check. In OP5 Monitor this is the first check that is automatically  added to every host. This document will not go through this step, please refer to [op5 Monitor Administration Manual.](http://op5.com/manuals/)
 
 ### Interface Monitoring
 
@@ -107,13 +107,13 @@ The plugin check\_cisco\_aironet\_clients used in this example can be found [her
 -   perl-Net-Telnet (Dependency of perl-Net-Telnet-Cisco)
 -   perl-Net-Telnet-Cisco
 
-To install these on op5 Appliance 6 or CentOS 6 you can download the dependencies from here [cisco-aironet-dependencies.tar.gz](attachments/688559/5242977.gz)
+To install these on OP5 Appliance 6 or CentOS 6 you can download the dependencies from here [cisco-aironet-dependencies.tar.gz](attachments/688559/5242977.gz)
 
-Now when you have all the dependencies on your local computer they must be moved to your op5 Monitor server. SCP is my preferred way of moving files to and from \*NIX systems as it is included in the most distributions and has clients for both Windows and Mac.
+Now when you have all the dependencies on your local computer they must be moved to your OP5 Monitor server. SCP is my preferred way of moving files to and from \*NIX systems as it is included in the most distributions and has clients for both Windows and Mac.
 
 My favourite client for windows is WinSCP, that can be found [here](http://winscp.net/eng/download.php).
 
-When these files are on your op5 Monitor server you need to move the plugin file to the correct directory and install the dependencies.
+When these files are on your OP5 Monitor server you need to move the plugin file to the correct directory and install the dependencies.
 
 Login via ssh as root and issue the following commands to do this:
 
@@ -130,7 +130,7 @@ chmod +x /opt/plugins/custom/check_cisco_aironet_clients.pl
 
  
 
-Now when the plugin is in place and the dependencies is installed properly let’s add a check to op5 Monitor to give some data from this check with some nice graphs, and thresholds for warning and critical.
+Now when the plugin is in place and the dependencies is installed properly let’s add a check to OP5 Monitor to give some data from this check with some nice graphs, and thresholds for warning and critical.
 
 Go to the configuration page in the menu, select “Commands” and copy-paste the following:
 
@@ -165,23 +165,23 @@ Now, back to the status page for the host via the searchbox, and you will have s
 
 ### Log Monitoring
 
- A great source of information is the system log of a device, since I have not found any usable counter for SNMP to fetch the data from failed authentication tries, so I will get this from the log of the device, which is forwarded to op5 Logserver for easy monitoring.
+ A great source of information is the system log of a device, since I have not found any usable counter for SNMP to fetch the data from failed authentication tries, so I will get this from the log of the device, which is forwarded to OP5 Logserver for easy monitoring.
 
-This section will not cover the configuration of the WAP. Some of the related configuration of op5 Logserver is listed below. For full documentation on op5 Logserver Extension please refer to the manual that can be found [here](http://op5.com/manuals/).
+This section will not cover the configuration of the WAP. Some of the related configuration of OP5 Logserver is listed below. For full documentation on OP5 Logserver Extension please refer to the manual that can be found [here](http://op5.com/manuals/).
 
-When you have configured your WAP to forward it’s logs and configured your op5 Logserver to communicate with op5 Monitor:
+When you have configured your WAP to forward it’s logs and configured your OP5 Logserver to communicate with OP5 Monitor:
 
 The important settings to set here to preform this task is:
 
--   Rotate database after x hours – This setting is important because it reflects how long back in time you want to search, both in the Logserver gui, and with your checks that will be used in op5 Monitor.
+-   Rotate database after x hours – This setting is important because it reflects how long back in time you want to search, both in the Logserver gui, and with your checks that will be used in OP5 Monitor.
 
--   The monitor host – The address or ip-address of op5 Monitor
+-   The monitor host – The address or ip-address of OP5 Monitor
 -   Use Monitor 5 – Legacy setting, needs to be checked.
--   Host information page : /ninja/index.php/status/service/[host] – this is where the statuspage of hosts in op5 is located, needed to make a smooth integration between Logserver and Monitor. Host Links in logserver is clickable and redirects you to op5 Monitor.
+-   Host information page : /ninja/index.php/status/service/[host] – this is where the statuspage of hosts in OP5 is located, needed to make a smooth integration between Logserver and Monitor. Host Links in logserver is clickable and redirects you to OP5 Monitor.
 
 ![](attachments/688559/5242970.png)
 
-To make this connection between op5 Monitor and logserver we need a couple of filters to use in the check against logserver. I have prepared a few basic ones ready for import
+To make this connection between OP5 Monitor and logserver we need a couple of filters to use in the check against logserver. I have prepared a few basic ones ready for import
 
 -   auth-fail-ap.xml
 -   auth-fail-ap01.xml
@@ -190,7 +190,7 @@ These filters is very simple, and you can modify them for your needs in the “Q
 
 To import the filters, go to “Settings -\> import filter” Select your filter to be imported and press “Import”. Be sure that the filter is marked as “Global”. If not this filter will only be available for the user imported it.
 
-To connect your op5 Monitor to this newly imported logserver filter we need to have a user in Logserver to connect with. This user needs to be in the “Filter Administrators” group to have the sufficient privileges to fetch this data from the filter.
+To connect your OP5 Monitor to this newly imported logserver filter we need to have a user in Logserver to connect with. This user needs to be in the “Filter Administrators” group to have the sufficient privileges to fetch this data from the filter.
 
 Go to: “Settings -\> Users & Groups” Create a new user as show below:
 

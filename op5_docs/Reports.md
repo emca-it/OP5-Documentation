@@ -2,35 +2,13 @@
 
 # About
 
-It shows you the status on your hosts and services right now. The Reporting headline is about letting the user create historical reports from the information that op5 Monitor has collected.
-A monitoring system receives a huge amount of data from your IT environment. op5 Monitor has a powerful, yet easy-to-use, built-in report generator.
+It shows you the status on your hosts and services right now. The Reporting headline is about letting the user create historical reports from the information that OP5 Monitor has collected.
+A monitoring system receives a huge amount of data from your IT environment. OP5 Monitor has a powerful, yet easy-to-use, built-in report generator.
 The reports are generated from the history-logs from all the elements included in the report. 
-
-**Table of Content**
-
--   [About](#Reports-About)
--   [SLA](#Reports-SLA)
-    -   [Creating an SLA report](#Reports-CreatingSLAreportCreatinganSLAreport)
-    -   [The SLA report](#Reports-TheSLAreport)
-    -   [Editing the SLA report settings](#Reports-EditingtheSLAreportsettings)
--   [Availability](#Reports-Availability)
-    -   [Creating an availability report](#Reports-CreatinganavailabilityreportCreatinganavailabilityreport)
-    -   [The Availability report](#Reports-TheAvailabilityreport)
-    -   [Editing the availability report settings](#Reports-Editingtheavailabilityreportsettings)
--   [Save reports](#Reports-SavereportsSavereports)
-    -   [Saving a report](#Reports-Savingareport)
--   [Schedule reports](#Reports-schedule_reportsSchedulereports)
-    -   [Schedule a report from the result page](#Reports-Scheduleareportfromtheresultpage)
-    -   [Schedule a report from the report menu](#Reports-Scheduleareportfromthereportmenu)
--   [Modifying scheduled reports](#Reports-Modifyingscheduledreports)
-    -   [To modify a scheduled report](#Reports-Tomodifyascheduledreport)
--   [Deleting scheduled reports](#Reports-Deletingscheduledreports)
-
- 
 
 # SLA
 
-The reports in op5 Monitor can be mapped against unique Service Level Agreements. This means that you can directly see and follow-up on both your internal and external SLAs.
+The reports in OP5 Monitor can be mapped against unique Service Level Agreements. This means that you can directly see and follow-up on both your internal and external SLAs.
 
 ## Creating an SLA report
 
@@ -60,7 +38,7 @@ The fast and easy way to create an SLA report is to only follow steps 1-3 and th
         Uptime, with difference" will count downtime as uptime, but will also print the difference from counting downtime as the actual state.
     2.  Choose whether you would like to see the alias instead of the host name in the generated report. 
         ![](attachments/16482315/16679227.png)
-    3.  Choose whether to assume the previous state still applies when op5 Monitor isn't running.
+    3.  Choose whether to assume the previous state still applies when OP5 Monitor isn't running.
         ![](attachments/16482315/16679229.png)
     4.  Choose whether you would like to hide specific states for the hosts or services in the report. Note that this option just hides the column and does not recalculate the percentage show in the graph.![](attachments/16482315/16679231.png)
     5.  If this report is based on a Business Service whose top level element has been published as a serviced, it is possible to include the events from the BSM. It will show the underlying checks that triggered alerts in the BSM. If the selected BSM service is not a top level element, no BSM events will be displayed. 
@@ -162,7 +140,7 @@ The fast and easy way to create an availability report is to only follow steps 1
         ![](attachments/16482315/16679245.png)
     4.  Choose whether you would like to see the alias instead of the host name in the generated report.
         ![](attachments/16482315/16679189.png)
-    5.  Choose whether to assume the previous state still applies when op5 Monitor isn't running.
+    5.  Choose whether to assume the previous state still applies when OP5 Monitor isn't running.
         ![](attachments/16482315/16679229.png)
     6.  Choose whether you would like to hide specific states for the hosts or services in the report.
         ![](attachments/16482315/16679231.png)
@@ -291,7 +269,7 @@ Before a report can be scheduled through the menu a report must first be saved.
     ![](attachments/16482315/16679191.png)
 5.  Enter the email addresses of the recipients of the report. To enter multiple addresses, separate them by commas
     ![](attachments/16482315/16679196.png)
-6.  If you would like to save the report as a file, enter a local path of the op5 server. This could be saved to a mounted share on the op5 server.
+6.  If you would like to save the report as a file, enter a local path of the OP5 server. This could be saved to a mounted share on the OP5 server.
     ![](attachments/16482315/16679195.png)
 7.  Click on **Save**.
 

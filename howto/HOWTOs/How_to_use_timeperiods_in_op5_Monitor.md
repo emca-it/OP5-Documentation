@@ -1,4 +1,4 @@
-# How to use timeperiods in op5 Monitor
+# How to use timeperiods in OP5 Monitor
 
 ## **Introduction**
 

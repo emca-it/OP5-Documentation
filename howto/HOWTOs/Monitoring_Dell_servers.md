@@ -2,7 +2,7 @@
 
 ## **Introduction**
 
-Dell server hardware can be remotely monitored via SNMP. The plugin used here comes with the op5 Monitor plugin package as default. To be able to monitor your Dell server you need to have the following installed on the monitored server:
+Dell server hardware can be remotely monitored via SNMP. The plugin used here comes with the OP5 Monitor plugin package as default. To be able to monitor your Dell server you need to have the following installed on the monitored server:
 
 Dell openmanage Server Administrator” (Managed Node), a.k.a ‘OMSA’ \>= 5.1.0
 
@@ -76,7 +76,7 @@ Also the check command needs to be updated. Go to Configure -\> Commands.
 
 ## **Add the service**
 
-When you have confirmed connectivity from your op5 Monitor server to OMSA you need to add one service on the host-object you want to monitor.
+When you have confirmed connectivity from your OP5 Monitor server to OMSA you need to add one service on the host-object you want to monitor.
  The required check-command, if not found in the web-config, can be imported using the function “Check Command Import” which you’ll find under ‘Configure’ -\> ‘Commands’ -\> ‘Related Items:’.
 
 Add the following service:
@@ -122,7 +122,7 @@ Tip
 
 Add a new Dell hardware service group and add your newly created services to the group.
 
-Related article: [Monitoring the hardware of your op5 server](Monitoring_the_hardware_of_your_op5_server)
+Related article: [Monitoring the hardware of your OP5 server](Monitoring_the_hardware_of_your_op5_server)
 
 **
 **
@@ -142,7 +142,7 @@ Related article: [Monitoring the hardware of your op5 server](Monitoring_the_ha
 
  
 
-### [Download op5 Monitor Free](https://www.op5.com/download-op5-monitor/)
+### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
 

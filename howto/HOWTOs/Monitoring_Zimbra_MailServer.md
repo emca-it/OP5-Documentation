@@ -4,7 +4,7 @@ Version
 
 This article was written for version 7.0 of Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
 # Introduction
 
@@ -15,7 +15,7 @@ This how-to will help you monitor Zimbra 8 MailServer. This how-to is tested wit
 Before we start there are a couple of things that needs to be working.
 
 -   Working Zimbra installation 
--   NRPE should be installed on the Zimbra server and allowing connections from the op5 Monitor server.
+-   NRPE should be installed on the Zimbra server and allowing connections from the OP5 Monitor server.
 -   You need root access to the Zimbra server 
 
 # About

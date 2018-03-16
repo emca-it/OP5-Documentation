@@ -42,7 +42,7 @@ When naemon generates the command line for a check, the first operation is to ex
 
 The command line to execute is then, in most cases, executed via the system's shell (such as /bin/sh). In many command line shells, \$ characters marks the beginning of a variable string. Only within single quotes, shell variables are not expanded.
 
-For an even better understanding of this issue, spawn a shell such as a bash. For instance, a simple way to do this is by logging on to your op5 Monitor server via SSH. Then run the commands below.
+For an even better understanding of this issue, spawn a shell such as a bash. For instance, a simple way to do this is by logging on to your OP5 Monitor server via SSH. Then run the commands below.
 `my_var=world`
 `echo Hello "$my_var"`
 `echo Hello '$my_var'`

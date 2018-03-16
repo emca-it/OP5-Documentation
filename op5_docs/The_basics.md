@@ -4,24 +4,9 @@
 
 In The basics section we will take a look at the basic step you need to know when working with **Configure**
 
-**Table of Content**
-
--   [About](#Thebasics-About)
--   [Start working](#Thebasics-Startworking)
-    -   [To start working in Configure](#Thebasics-TostartworkinginConfigure)
--   [Submitting changes](#Thebasics-Submittingchanges)
-    -   [To submit the new configuration to the database](#Thebasics-Tosubmitthenewconfigurationtothedatabase)
--   [Save the changes](#Thebasics-Savethechanges)
-    -   [To save the changes and reload op5 Monitor](#Thebasics-Tosavethechangesandreloadop5Monitor)
-    -   [Permissions](#Thebasics-Permissions)
--   [Undo changes](#Thebasics-Undochanges)
-    -   [To undo the configuration changes.](#Thebasics-Toundotheconfigurationchanges.)
--   [Historical Configuration Changes](#Thebasics-HistoricalConfigurationChanges)
-    -   [Filter config changes](#Thebasics-Filterconfigchanges)
-
 # Start working
 
-There are many ways to jump in to Configure and start working with the configuration of op5 Monitor.
+There are many ways to jump in to Configure and start working with the configuration of OP5 Monitor.
 
 ## To start working in Configure
 
@@ -32,7 +17,7 @@ This will take you to the main menu of Configure.
 
 ### Alternative
 
-Click the **Configure** icon found on many objects in the monitoring part of op5 Monitor ![](attachments/16482408/17269446.png)
+Click the **Configure** icon found on many objects in the monitoring part of OP5 Monitor ![](attachments/16482408/17269446.png)
 
 This will take you directly to the configuration part for the object you clicked on.
 
@@ -51,10 +36,10 @@ Click **Submit** at the bottom of the page
 
 # Save the changes
 
-When you have finished working and consider your new configuration is ready to be used by op5 monitor you need to save the changes in the Configure database to the configuration files.
- This will also make op5 Monitor start using the new configuration.
+When you have finished working and consider your new configuration is ready to be used by OP5 Monitor you need to save the changes in the Configure database to the configuration files.
+ This will also make OP5 Monitor start using the new configuration.
 
-## To save the changes and reload op5 Monitor
+## To save the changes and reload OP5 Monitor
 
 Click **Save** icon at the top of the page.
 ![](attachments/16482408/17269442.png)

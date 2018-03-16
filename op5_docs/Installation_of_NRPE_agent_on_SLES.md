@@ -2,7 +2,7 @@
 
 This article intends to give the reader a brief introduction on how to install and configure the EPEL upstream version of the NRPE agent on SuSE Enterprise Linux 11 and 12.
 
-Historically, op5 has compiled and packaged the NRPE agent for a large number of Linux distributions, but as per Q2 2014 we stopped doing this since it required a lot of maintenance and time. More information on this decision can be found here: <https://www.op5.com/blog/blogs/op5-developers-blog/deprecation-notices-q2-2014/>
+Historically, OP5 has compiled and packaged the NRPE agent for a large number of Linux distributions, but as per Q2 2014 we stopped doing this since it required a lot of maintenance and time. More information on this decision can be found here: <https://www.op5.com/blog/blogs/op5-developers-blog/deprecation-notices-q2-2014/>
 
  
 
@@ -29,7 +29,7 @@ zypper install nagios-nrpe nagios-plugins
 
  
 
-3. Create the standard directory to hold the op5 NRPE commands file:
+3. Create the standard directory to hold the OP5 NRPE commands file:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 mkdir /etc/nrpe.d
@@ -67,7 +67,7 @@ These paths to the plugins should match the paths to the installed plugins in st
 
  
 
-5. Configure the agent to utilize the plugins using commands supported by op5 Monitor host scan. Now edit /**etc/nagios/nrpe.cfg** and add your Monitor server(s) address(es) to the *allowed\_hosts* parameter as a comma-separated list. Also add a line to include the directory holding the op5 NRPE command file in the appropriate sections of /**etc/nagios/nrpe.cfg**:
+5. Configure the agent to utilize the plugins using commands supported by OP5 Monitor host scan. Now edit /**etc/nagios/nrpe.cfg** and add your Monitor server(s) address(es) to the *allowed\_hosts* parameter as a comma-separated list. Also add a line to include the directory holding the OP5 NRPE command file in the appropriate sections of /**etc/nagios/nrpe.cfg**:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 allowed_hosts=127.0.0.1,10.0.0.10,10.0.0.11
@@ -85,7 +85,7 @@ chkconfig nrpe on
 
  
 
-Now you can add the services via the function "Add UNIX client services" when adding a host in op5 Monitor.
+Now you can add the services via the function "Add UNIX client services" when adding a host in OP5 Monitor.
 
  
 

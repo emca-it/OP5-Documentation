@@ -2,18 +2,13 @@
 
 # About
 
-Even though some features are not supported by the op5 Monitor configuration tool you can still use them.
+Even though some features are not supported by the OP5 Monitor configuration tool you can still use them.
 The `hostgroup_name` is one of them.
 What you have to do is to add a separate configuration file not read by the import function in Configure. Then you add your other configuration tricks into that file.
 
-**Table of Content**
-
--   [About](#FeaturesnotsupportedbyConfigure-About)
--   [To add a configuration file not read by Configure](#FeaturesnotsupportedbyConfigure-ToaddaconfigurationfilenotreadbyConfigure)
-
 # To add a configuration file not read by Configure
 
--   -   Open up a ssh connection to the op5 Monitor server and login as root.
+-   -   Open up a ssh connection to the OP5 Monitor server and login as root.
     -   Create the following file with an editor of your choice:
 
             /opt/monitor/op5/nacoma/custom_config.php
@@ -34,9 +29,9 @@ What you have to do is to add a separate configuration file not read by the impo
 
             cfg_file=/opt/monitor/etc/_custom_objects.cfg
 
-    -   Restart op5 Monitor.
+    -   Restart OP5 Monitor.
 
             service monitor restart
 
-Now you may add your objects to the new configuration file and they will not be loaded into Configure. But you can still see the objects using View config as it is described in the op5 Monitor user manual.
+Now you may add your objects to the new configuration file and they will not be loaded into Configure. But you can still see the objects using View config as it is described in the OP5 Monitor user manual.
 

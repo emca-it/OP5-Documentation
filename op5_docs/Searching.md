@@ -16,29 +16,14 @@ op5 Monitor has got a search functionality that makes it easy to find:
 The search is case insensitive. The quick result in search field is limited to maximum 10 result rows per object type.
 In the upper right corner of the GUI you find the search input field:
 
- 
-
-**Table of Content**
-
--   [About](#Searching-About)
--   [Simple search](#Searching-Simplesearch)
--   [Advanced search](#Searching-Advancedsearch)
-    -   [Advanced search examples](#Searching-Advancedsearchexamples)
--   [Notes search](#Searching-Notessearch)
--   [Limiting the number of result objects](#Searching-Limitingthenumberofresultobjects)
--   [Search result](#Searching-Searchresult)
-    -   [Multiple actions](#Searching-Multipleactions)
-    -   [Saving a search](#Searching-Savingasearch)
--   [Related pages](#Searching-Relatedpages)
-
 # Simple search
 
 To perform a simple search
  Enter the search string in the search input field in the top right corner.
- While you are typing your search string op5 Monitor will show you a list of hosts matching the string.
+ While you are typing your search string OP5 Monitor will show you a list of hosts matching the string.
  ![](attachments/16482309/16679033.png)
  If you click on a host in the drop down list you will be redirected to the **Service Status Details For Host** page for the host you clicked on. The same happens if the search found only one object matching your search string.
- op5 Monitor will search for hosts, services, service groups, host groups and notes matching the search string you entered.
+ OP5 Monitor will search for hosts, services, service groups, host groups and notes matching the search string you entered.
  The table below shows a list of in what parts of the object types is used in the search.
 
 <table>

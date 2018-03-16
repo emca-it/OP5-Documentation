@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 #Orginal script from http://blog.schose.net/index.php/archives/135
-#Modifief by Ola Sandstrom, op5 to work with Zimbra 8
+#Modifief by Ola Sandstrom, OP5 to work with Zimbra 8
 
 use strict;
 use English;

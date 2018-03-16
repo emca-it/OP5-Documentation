@@ -2,9 +2,9 @@
 
 Support information
 
-This article was written for version 7.2.9 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated. The Slack integration and it's dependencies are third-party add ons and is not officially supported by op5 AB.  If you need a supported integration between OP5 Monitor and Slack please [contact us!](https://www.op5.com/about/contact-us/)
+This article was written for version 7.2.9 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated. The Slack integration and it's dependencies are third-party add ons and is not officially supported by OP5 AB.  If you need a supported integration between OP5 Monitor and Slack please [contact us!](https://www.op5.com/about/contact-us/)
 
-By integrating Slack into your existing OP5 monitoring solution, you can have OP5 alerts sent directly to your teams Slack channel. See the screenshot below for the end result.
+By integrating Slack into your existing OP5 Monitoring solution, you can have OP5 alerts sent directly to your teams Slack channel. See the screenshot below for the end result.
 
 ## Screenshots
 
@@ -22,7 +22,7 @@ By integrating Slack into your existing OP5 monitoring solution, you can have OP
 3.  Make a note of the Webhook URL, this is your token we will be using later.
     ![](attachments/18317692/18481447.png)
 
-## In op5 Monitor
+## In OP5 Monitor
 
 Now, in order to tie Slack with OP5 Monitor we will need to configure the following:
 

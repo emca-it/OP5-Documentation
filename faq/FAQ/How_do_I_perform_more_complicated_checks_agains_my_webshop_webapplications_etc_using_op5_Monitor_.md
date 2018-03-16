@@ -1,10 +1,10 @@
-# How do I perform more complicated checks agains my webshop, webapplications etc using op5 Monitor?
+# How do I perform more complicated checks agains my webshop, webapplications etc using OP5 Monitor?
 
 ## Question
 
 * * * * *
 
-How do I perform more complicated checks agains my webshop, webapplications etc using op5 Monitor?
+How do I perform more complicated checks agains my webshop, webapplications etc using OP5 Monitor?
 
 ## Answer
 

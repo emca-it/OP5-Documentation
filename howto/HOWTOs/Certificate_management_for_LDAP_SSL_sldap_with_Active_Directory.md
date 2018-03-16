@@ -4,13 +4,13 @@ Version
 
 This article was written for version 7.0 of Monitor, it could work on both lower and higher version if nothing else is stated.
 
-Articles in the Community-Space are not supported by op5 Support.
+Articles in the Community-Space are not supported by OP5 Support.
 
 This how-to will help you use LDAP SSL with AD authentication
 
 -   [Install Active Directory Certificate Services (AD CS)](#CertificatemanagementforLDAPSSL(sldap)withActiveDirectory-InstallActiveDirectoryCertificateServices(ADCS))
--   [Export certificate to op5 Monitor](#CertificatemanagementforLDAPSSL(sldap)withActiveDirectory-Exportcertificatetoop5Monitor)
--   [Import certificate in to op5 Monitor](#CertificatemanagementforLDAPSSL(sldap)withActiveDirectory-Importcertificateintoop5Monitor)
+-   [Export certificate to OP5 Monitor](#CertificatemanagementforLDAPSSL(sldap)withActiveDirectory-Exportcertificatetoop5Monitor)
+-   [Import certificate in to OP5 Monitor](#CertificatemanagementforLDAPSSL(sldap)withActiveDirectory-Importcertificateintoop5Monitor)
 -   [Related information: TLS error -8179:Peer's Certificate issuer is not recognized](#CertificatemanagementforLDAPSSL(sldap)withActiveDirectory-Relatedinformation:TLSerror-8179:Peer'sCertificateissuerisnotrecognized)
 
 # Install Active Directory Certificate Services (AD CS)
@@ -51,9 +51,9 @@ To create a certificate, start with installing the *Active Directory Certificat
 16. Click Next
 17. Click Configure
 
-# Export certificate to op5 Monitor
+# Export certificate to OP5 Monitor
 
-In order for the op5 Monitor server to verify the server's certificate, the public certificate is exported from the Windows server.
+In order for the OP5 Monitor server to verify the server's certificate, the public certificate is exported from the Windows server.
 
 1.  Run the following from the command prompt. 
 
@@ -63,11 +63,11 @@ In order for the op5 Monitor server to verify the server's certificate, the publ
 
      
 
-2.  Copy the exported file (client.cer) to the op5 Monitor server.
+2.  Copy the exported file (client.cer) to the OP5 Monitor server.
 
-# Import certificate in to op5 Monitor
+# Import certificate in to OP5 Monitor
 
-1.  Install the certificate on the op5 Monitor server by running:
+1.  Install the certificate on the OP5 Monitor server by running:
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     certutil -A -d /etc/openldap/certs/ -n ref-win-01 -t C -i /root/client.crt
@@ -107,5 +107,5 @@ The setting TLS\_REQCERT can also be set to the more secure setting "try" and "d
 
 # Related information: TLS error -8179:Peer's Certificate issuer is not recognized
 
-The steps provided in this document can serve to resolve the "8179:Peer's Certificate issuer is not recognized" error. Because it's likely to already have a root certificate for your domain, you can start at step titled "Export certificate to op5 Monitor". Alternatively using the certificates snap-in MMC you can export the root certificate for your domain in der format, saving with .cer extension. Continuing afterward to complete the step "Import certificate in to op5 Monitor" mentioned above.
+The steps provided in this document can serve to resolve the "8179:Peer's Certificate issuer is not recognized" error. Because it's likely to already have a root certificate for your domain, you can start at step titled "Export certificate to OP5 Monitor". Alternatively using the certificates snap-in MMC you can export the root certificate for your domain in der format, saving with .cer extension. Continuing afterward to complete the step "Import certificate in to OP5 Monitor" mentioned above.
 

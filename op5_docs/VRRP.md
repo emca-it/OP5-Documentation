@@ -4,14 +4,6 @@
 
 VRRP can be used in this setup to have one DNS-name and one IP address that is primary linked to one of the master servers and if the primary master for some reason is unavailable VRRP will automatically detect this and send you to the secondary master.
 
-**Table of Content**
-
--   [About](#VRRP-About)
--   [Setup](#VRRP-Setup)
-    -   [On the "primary" master](#VRRP-Onthe"primary"master)
-    -   [On the "secondary" master](#VRRP-Onthe"secondary"master)
--   [Activate VRRP](#VRRP-ActivateVRRP)
-
 # Setup
 
 To enable VRRP on you master servers follow the steps below.

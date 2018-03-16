@@ -1,13 +1,13 @@
-# How to use the op5 Monitor App
+# How to use the OP5 Monitor App
 
 # About our apps
 
-The op5 Monitor App works directly towards the op5 Monitor API and your filter settings (based on your username). This enables you to tailor your app to show the list-views you set up in Monitor. For more information on list views, see links at bottom of this page. 
+The OP5 Monitor App works directly towards the OP5 Monitor API and your filter settings (based on your username). This enables you to tailor your app to show the list-views you set up in Monitor. For more information on list views, see links at bottom of this page. 
 
 ## System requirements
 
--   op5 Monitor 6.3 or higher
--   API access on op5 Monitor
+-   OP5 Monitor 6.3 or higher
+-   API access on OP5 Monitor
     -   API "can\_submit\_commands" access if you want to be able to "acknowledge" events in the app.
 -   Android 4.x or iOS 7
 -   Our mobile app:
@@ -44,7 +44,7 @@ Note: Advanced users can use another port if needed. Useful if a port forwardin
 
 ## Add user credentials
 
-Enter the user credentials to access your op5 Monitor APIs. An example (feel free to use for testing) is:
+Enter the user credentials to access your OP5 Monitor APIs. An example (feel free to use for testing) is:
 
 login: <demo@op5.com>
 
@@ -54,12 +54,12 @@ password: MonitorDemo123
 
 ![](attachments/9929159/11141151.png)
 
-Note: When using op5 demo site as demo user, the user has limited access so it is not possible to create own filters, acknowledge problems and so on.
-If you have added an auth module to op5 Monitor, such as LDAP. Login with username\$name-of-auth-module as your username. Both are case sensitive.
+Note: When using OP5 demo site as demo user, the user has limited access so it is not possible to create own filters, acknowledge problems and so on.
+If you have added an auth module to OP5 Monitor, such as LDAP. Login with username\$name-of-auth-module as your username. Both are case sensitive.
 
 ## Start screen
 
-The start screen shows an overview of hosts and services. Below can the filters defined in the op5 Monitor system be seen.
+The start screen shows an overview of hosts and services. Below can the filters defined in the OP5 Monitor system be seen.
 
 The rotating arrows are the the refresh button.
 
@@ -81,8 +81,8 @@ Top left there is a meny with the possibility to do different actions:
 
 -   Home, get back to start
 -   All the filters
--   Feedback, send feedback to op5 from the op5 Monitor app
--   About, information about op5 and op5 knowledgebase
+-   Feedback, send feedback to OP5 from the OP5 Monitor app
+-   About, information about OP5 and OP5 knowledgebase
 -   Logout
 
  
@@ -125,7 +125,7 @@ To acknowledge a host or service problem. Pick the problem and choose top right 
 
 ## Feedback
 
-If you want to send feedback to op5 about the app, use the feedback function in the app. If you want op5 to contact you, enter your emailadress and check the “should op5 contact you?” checkbox
+If you want to send feedback to OP5 about the app, use the feedback function in the app. If you want OP5 to contact you, enter your emailadress and check the “should OP5 contact you?” checkbox
 
 ![Screenshot\_2014-06-24-14-02-21.png](https://lh6.googleusercontent.com/63yFW_UNdIZEQYWb_P8w6d63B19LBJxMpGv8XCTG6lYo7jM0w5xNFlJv8YX7DqGDBRnl7i6IRug5g2ScT9FFGq8dF1Mhcw9C3hOuvQfDak-7Q1kAMnBh54pKpLMDoFPFcA) 
 
@@ -141,7 +141,7 @@ If you want to send feedback to op5 about the app, use the feedback function in 
 
 # Advanced usage
 
-This chapter describes some hints for more advanced users, it requires that  the user is allowed to create filters and has basic knowledge of how to use op5 Monitor.
+This chapter describes some hints for more advanced users, it requires that  the user is allowed to create filters and has basic knowledge of how to use OP5 Monitor.
 
 ## Create filters
 
@@ -149,7 +149,7 @@ The get a list of all hosts, create a filter named: All hosts and has the synt
 
 The get a list of all services, create a filter named: All services and has the syntax [services] all
 
-To read more about filters, see op5 knowledge base Filters
+To read more about filters, see OP5 knowledge base Filters
 
  
 

@@ -5,13 +5,6 @@
 Handlers and bindings are managed by a tool called 'traped' (TRAPper EDitor) which is located in /opt/trapper/bin. It takes a command as its first argument, then additional arguments optionally.
 Command line syntax:
 
- 
-
-**Table of Content**
-
--   [About](#UsingCommandLineTools-About)
--   [Commands](#UsingCommandLineTools-Commands)
-
 # Commands
 
 ### traped list modules
