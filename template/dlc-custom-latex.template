@@ -1,0 +1,174 @@
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+$if(fontfamily)$
+\usepackage{$fontfamily$}
+$else$
+\usepackage{lmodern}
+$endif$
+\usepackage[$if(lang)$$lang$$endif$]{babel}
+\usepackage[$geometry$]{geometry}
+% Start default packages from the pandoc latex template
+$if(linestretch)$
+\usepackage{setspace}
+\setstretch{$linestretch$}
+$endif$
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+$if(euro)$
+  \usepackage{eurosym}
+$endif$
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+$if(mainfont)$
+    \setmainfont{$mainfont$}
+$endif$
+$if(sansfont)$
+    \setsansfont{$sansfont$}
+$endif$
+$if(monofont)$
+    \setmonofont[Mapping=tex-ansi]{$monofont$}
+$endif$
+$if(mathfont)$
+    \setmathfont(Digits,Latin,Greek){$mathfont$}
+$endif$
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+$if(listings)$
+\usepackage{listings}
+$endif$
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+% End default packages from the pandoc latex template
+$if(tables)$
+\usepackage{longtable,booktabs}
+$endif$
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\usepackage[unicode=true]{hyperref}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[normalem]{ulem}
+% avoid problems with \sout in headers with hyperref:
+\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+$if(numbersections)$
+\setcounter{secnumdepth}{5}
+$else$
+\setcounter{secnumdepth}{0}
+$endif$
+\usepackage{datetime}
+\usepackage[$if(lang)$$lang$$endif$]{isodate}
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage{eso-pic}
+\usepackage{fancyhdr}
+\newlength{\bgwidth}
+\newlength{\bgheight}
+% Setting the width and height for the background image
+\setlength{\bgwidth}{\paperwidth-1.25in}
+\setlength{\bgheight}{\paperheight-1.75in}
+
+\newcommand\BackgroundPic{%
+	\put(0,50){%
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\centering
+			\includegraphics[width=\bgwidth,height=\bgheight]{$title_background$}%
+		}
+	}
+}
+
+\date{\today}
+\definecolor{op5-teal}{RGB}{97,167,187}
+\pagestyle{fancy}
+\lhead{\includegraphics[height=30px]{$op5_logo$}}
+\rhead{\includegraphics[height=30px]{$client_logo$}}
+\lfoot{\today}
+\cfoot{$title$ v$version$}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.0pt}
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+% Start of document content
+\begin{document}
+\cleanlookdateon
+\AddToShipoutPicture*{\BackgroundPic}
+\begin{titlepage}
+  \newgeometry{$title_geometry$}
+	\centering
+	\begin{figure}[!htb]
+		\minipage{0.5\textwidth}
+			\includegraphics[height=30px]{$op5_logo$}
+		\endminipage\hfill
+		\minipage{0.5\textwidth}
+			\raggedleft
+			\includegraphics[height=30px]{$client_logo$}
+		\endminipage\hfill
+	\end{figure}
+	\raggedright
+	\vspace{2.5in}
+	{\scshape
+		\fboxsep=0.4in
+		\colorbox{op5-teal}{
+			\begin{minipage}{3in}
+				\raggedright
+				\Huge\textbf{\color{white}$title$}
+			\end{minipage}
+		}
+	\par}
+	\vspace{2.9in}
+	\raggedleft
+	\fboxsep=0.25in
+	{\scshape
+	\colorbox{op5-teal}{\begin{minipage}{1.52in}
+		\raggedright
+		\vspace{0.15in}
+		\small\color{white}Created by $author$\par
+		\vspace{0.1in}
+		\scriptsize\color{white} Last Modified:\par
+		\today\par
+		\vspace{1.5in}
+		\normalsize\color{white}v$version$\par
+	\end{minipage}}
+	\par}
+	\vfill
+\end{titlepage}
+\newpage
+\restoregeometry
+$for(include-before)$
+$include-before$
+$endfor$
+\tableofcontents
+\newpage
+
+$body$
+
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document}
