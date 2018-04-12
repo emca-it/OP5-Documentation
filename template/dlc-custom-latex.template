@@ -84,6 +84,7 @@ $endif$
 \usepackage{calc}
 \usepackage{eso-pic}
 \usepackage{fancyhdr}
+\usepackage{tocloft}
 \newlength{\bgwidth}
 \newlength{\bgheight}
 % Setting the width and height for the background image
@@ -107,7 +108,10 @@ $endif$
 \lfoot{\today}
 \cfoot{$title$ v$version$}
 \rfoot{\thepage}
-\renewcommand{\headrulewidth}{0.0pt}
+% Increasing the space in the Section and Subsection numbering areas.
+\addtolength{\cftsecnumwidth}{2em}
+\addtolength{\cftsubsecnumwidth}{1.5em}
+\addtolength{\cftsubsubsecnumwidth}{1.5em}
 
 $for(header-includes)$
 $header-includes$
