@@ -1,6 +1,6 @@
 # Op5Client
 
-Client for connecting nativly to the Op5 Nortbound API
+Client for connecting natively to the OP5 Nortbound API
 
 
 
