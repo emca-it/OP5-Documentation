@@ -3,11 +3,9 @@ site_url: https://nsclient.org
 repo_url: https://github.com/mickem/nscp
 repo_name: GitHub
 edit_uri: blob/master/docs/docs
-theme:
-    name: 'material'
-    custom_dir: 'custom_theme/'
+theme: 'material'
+theme_dir: 'custom_theme'
 copyright: "NSClient++ is released under a GPLv2 license"
-dev_addr: '127.0.0.1:8901'
 extra_css: 
   - pygments.css
   - custom.css
@@ -38,6 +36,21 @@ pages:
     - Configuration: settings.md
     - WEB UI: web.md
     - FAQ: faq.md
+  - About:
+    - Documentation: about/index.md
+    - Whats New: 
+      - History: about/whatsnew/index.md
+      - 0.4.0: about/whatsnew/0.4.0.md
+      - 0.4.1: about/whatsnew/0.4.1.md
+      - 0.4.2: about/whatsnew/0.4.2.md
+      - 0.4.3: about/whatsnew/0.4.3.md
+      - 0.4.4: about/whatsnew/0.4.4.md
+      - 0.5.0: about/whatsnew/0.5.0.md
+      - 0.5.1: about/whatsnew/0.5.1.md
+      - 0.5.2: about/whatsnew/0.5.2.md
+    - Building NSClient++: about/build.md
+    - Reporting Bugs: about/reporting-bugs.md
+    - License: about/license.md
   - Tutorial: tutorial/index.md
   - Howto:
     - Checking things: howto/checks.md
@@ -46,6 +59,7 @@ pages:
     - Running commands: howto/run_commands.md
     - NRPE: howto/nrpe.md
     - NSCA: howto/nsca.md
+    - Migrate from 0.3: howto/03x_migration.md
   - Reference:
     - Reference: reference/index.md
     - Check commands:
@@ -88,6 +102,16 @@ pages:
     - Overview: extending/index.md
     - Python Scripts: extending/python.md
     - Zip Modules: extending/zip-modules.md
+  - API:
+    - REST:
+      - Introduction: api/rest/index.md
+      - Info: api/rest/info.md
+      - Modules: api/rest/modules.md
+      - Queries: api/rest/queries.md
+      - Scripts: api/rest/scripts.md
+      - Logs: api/rest/logs.md
+      - Legacy API: api/rest/legacy.md
+    - Plugin API: api/plugin.md
 
 markdown_extensions:
   - admonition

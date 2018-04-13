@@ -2,7 +2,7 @@
 
 ## How it works
 
-![nsclient](images/normal-nrpe.png)
+![nsclient](tutorial/images/normal-nrpe.png)
 
 NSClient++ (nscp) is an agent that must be deployed on servers to be monitored.
 It eliminates the need for SNMP. It goes far beyond so-called agentless approaches, such as WMI, by allowing execution of scripts and programs locally and returning results.
@@ -15,8 +15,8 @@ To facilitate NSClient++ support a series of protocols:
 
 | Protocol | Paradigm | Comments                                                                              |
 |----------|----------|---------------------------------------------------------------------------------------|
-| NRPE     | Active   | Protocol used by OP5 to speak with agent like NSClient++                              |
-| NSCA     | Passive  | Protocol used with OP5 so agent can speak to Nagios (reverse way of communication)    |
+| NRPE     | Active   | Protocol used by Nagios to speak with agent like NSClient++                           |
+| NSCA     | Passive  | Protocol used with Nagios so agent can speak to Nagios (reverse way of communication) |
 | REST     | Multiple | NSClient++ own protocol (still under development)                                     |
 | check_mk | Active   | Protocol utilized by the check_mk monitoring system                                   |
 | Syslog   | Passive  | Protocol primarily designed for submitting log records                                |
@@ -24,7 +24,7 @@ To facilitate NSClient++ support a series of protocols:
 | Collectd | Passive  | Real-time graphing                                                                    |
 | SMTP     | Passive  | Communicate with NSClient++ through mails. More of a toy currently                    |
 
-In this document we will cover NRPE and NSCA, as well as show how to integrate these protocols with OP5.
+In this document we will cover NRPE and NSCA, as well as show how it is integrated with Nagios.
 If you have other protocols or monitoring solutions the general concepts can be easily adapted to any of the other supported protocols.
 
 NSClient++ allows many ways to check your system:
@@ -37,14 +37,14 @@ NSClient++ allows many ways to check your system:
 
 But you can also extend it with custom scripts:
 
-*   PowerShell scripts
+*   powershell scripts
 *   VB Scripts (.VBS)
 *   Executable files
-*   Windows batch files (.BAT)
+*   Batch (.BAT) files
 
 ### Requirements
 
-To use NSClient++ you need a monitoring system deployed in your network. Many people use OP5. Strictly speaking, NSClient++ is designed to work with any monitoring tool which can execute external scripts or support any of the standard protocols.
+To use NSClient++ you need a monitoring system deployed in your network. Many people use Nagios, Icinga, Neteye, or OP5. Strictly speaking, NSClient++ is designed to work with any monitoring tool which can execute external scripts or support any of the standard protocols.
 
 When it comes to supported operating systems, NSClient++ was originally designed to run only on Windows. Since version 0.4.1 is can be used on Linux as well.
 Currently, most modules are Windows-only. Thus the benefits on other operating systems are limited.
@@ -63,7 +63,7 @@ NSClient++ should run on the following operating systems:
 NSClient++ has official packages for:
 
 -   Debian
--   CentOS and Red Hat Enterprise
+-   Centos/Redhat
 
 ## Configuration
 
@@ -82,7 +82,7 @@ But for the reminder of this tutorial we only consider ini files since it is the
 
 NSClient++ config file is in the well-known INI Format. To edit these you can use any text editor, such as Notepad. Using advanced editors, such as [Notepad++](https://notepad-plus-plus.org/), you can also use such preferable features as syntax highlighting and indentation.
 
-![elevated](images/notepad-administrator.png)
+![elevated](/tutorial/images/notepad-administrator.png)
 
 Also note that from Windows Vista onward, INI files reside in a protected space. This means you will need to launch the editor as an administrator to edit them.
 
@@ -217,13 +217,13 @@ A file gets transferred. In our case the end result is that a monitoring result 
 ### NRPE Server
 
 !!! note
-    This module is used by the check_nrpe on OP5.
+    This module is used by the check_nrpe on Nagios.
 
 !!! danger
-    Since the default check_nrpe command is very insecure, as it uses unreliable encryption. Since version 0.4.3, NSClient++ has shipped with this disabled.
-    Thus it wont work with the legacy check_nrpe unless you enable the **insecure mode**.
+    Since the default check_nrpe command is very insecure (uses unreliable encryption) NSClient++ since 0.4.3 ships with this disabled.
+    Thus it wont work with the legacy check_nrpe unless you enable the **insecure mode**
 
-All you need to configure is who is allowed to connect as well as how to handle arguments.
+All you need to configure is who is allowed to connect as well how to handle arguments.
 For security reasons arguments are not allowed the idea is that a "dumb" monitoring agent is less dangerous then one which can be controlled remotely.
 The drawback to not allowing argument is that you need to configure **everything** in nsclient.ini on every single host which can obviously be cumbersome.
 The other option is to allow arguments but **it is important to consider the security implications** before doing so.
@@ -244,14 +244,12 @@ allow nasty characters = true
 ;port = 5666</p>
 ```
 
-<!---
 TODO: Add information about secure mode!
--->
 
 ### NSCA Client
 
 !!! note
-    This is used by NSCA server on Nagios. This is not as common for OP5.
+    This is used by NSCA server on Nagios.
 
 Another way to configure monitoring is to use what is commonly referred to as *passive monitoring*.
 This means that NSClient++ will periodically phone home when it has something to report much like SNMP traps.
@@ -272,11 +270,9 @@ password = Password_Which_Must_Be_Identical_On_NSCA_Server_On_Nagios
 timeout = 90
 ```
 
-<!---
 ## Checking things
 
 TODO: Add information about basic checks here!
--->
 
 ### External scripts
 
@@ -325,14 +321,11 @@ check_updates=check_updates.vbs $ARG1$ $ARG2$
 check_eventlog
 ```
 
-<!---
-
 TODO: Extend this section
 
 ## Installation
 
 TODO: Add section about automating installs and central config
--->
 
 ## Security
 
@@ -347,11 +340,11 @@ Needed right will depend on what you want to monitor, but as a basis, you will n
 -   Log on as a service grant. Granted when you set the account, but should be applied through GPO to remain consistent.
 
 
-'Power users' group is a no-go. It still exists but does nothing on releases from Vista onward. On XP and 2003, it nearly means admin rights, which is contrary to the target.
+Power users group is a no go, it still there but does nothing on vista and upper. On XP and 2003, it nearly means admin right, which is contrary to the target.
 
-Using a domain account is also useful when monitoring specific applications, such as SharePoint or IIS.
+Using a domain account is also useful for specific monitoring, like for SharePoint.
 
-You can use [Process Monitor](http://technet.microsoft.com/en-us/sysinternals/bb896645.aspx) to get access-denied logs.
+You can use `Process monitor <http://technet.microsoft.com/en-us/sysinternals/bb896645.aspx>` to get access denied logs.
 
 ### Securing communication
 
@@ -363,7 +356,7 @@ You can restrict hosts allowed to speak to NSClient++ from the config file. This
 
 ### Extending NSClient++
 
-NSClient++ is designed to be open-ended and allow you to customize it in any way you desire. This extensibility is a core feature.
+NSClient++ is designed to be open ended and allow you to customize it in any way you design thus extensibility is a core feature.
 
 -   ExternalScripts responds to queries and are executed by the operating system and the results are returned as-is.
     This is generally the simplest way to extend NSClient++ as you can utilize whatever infrastructure or skill set you already have.
@@ -375,4 +368,3 @@ NSClient++ is designed to be open-ended and allow you to customize it in any way
     This allows you to write components on top of the large dot-net ecosystem.
 -   Modules are native plugins which can extend NSClient++ in pretty much any way possible.
     This is probably the most complicated way but gives you the most power and control.
-

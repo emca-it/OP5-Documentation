@@ -1,0 +1,33 @@
+Here are the pages we will provide to DLC. I have revised 'mkdocs.yml' for the NSClient section and used 'mkdocs' to confirm rendering results. I was also able to get missing screen shots to show up.
+
+÷: section title, not a page
+†: changed as of 2018 April 12
+
+    ÷Manual
+        †NSClient++ (index)
+        †Getting Started
+        Theory
+        Checking Things
+        Installing NSClient++
+        Configuration
+        WEB UI
+        †FAQ
+    †Tutorial
+    ÷Howto
+        Checking things
+        Performance Counters
+        External scripts
+        Running commands
+        †NRPE
+        NSCA
+    ÷Reference
+        †Reference
+        ÷Check commands [lots of pages, not worth editing]
+        ÷Clients & Servers
+            †Op5Client
+        Helper modules
+    ÷Extending
+        Overview
+        Python Scripts
+        Zip Modules
+
