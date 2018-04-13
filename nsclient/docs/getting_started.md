@@ -1,6 +1,6 @@
 # Getting started with NSClient++
 
-This is a hands on guide to getting started with NSClient++.
+This is a hands-on guide to getting started with NSClient++.
 We will start with a clean slate and work our way in small easy to follow steps towards a fully functional monitoring solution.
 
 For the sake of simplicity this will be based on a Windows version.
@@ -21,7 +21,7 @@ net stop nscp
 ```
 
 
-Since much of what NSClient++ does requires "elevated privileged" you should always run NSClient++ in a "Administrator command prompt".
+Since much of what NSClient++ does requires "elevated privileges" you should always run NSClient++ in a "Administrator command prompt".
 
 ![elevated](images/elevated.png)
 
@@ -170,9 +170,9 @@ The command to for this is: `nscp settings --generate ini --add-defaults --load-
 
 The "--add-missing" will force NSClient++ to add all missing keys to the settings store.
 
-So lets go ahead and run this command and see what our nsclient.ini file looks like.
+So let's go ahead and run this command and see what our nsclient.ini file looks like.
 If you open up the file you will be pleasantly (or not) surprised it has very few options.
-The reason for this is the modular nature of NSClient++ with a clean install there are no modules configured so we only get configuration options for the "core program" which really has very little in the way of configuration.
+The reason for this is the modular nature of NSClient++. A clean install has no modules configured, so we only get configuration options for the "core program" which really has very little in the way of configuration.
 
 Now if we regret this option we can remove all the keys which have the default value by running:  `nscp settings --generate ini --remove-defaults --load-all`
 
@@ -204,9 +204,9 @@ As always open up the config file and see what was added.
 
 So now that we have a module loaded lets move on to actually using the module.
 The best (and most ignored) way to work with NSClient++ is to use the "test mode".
-Test mode provides you with two things.
+Test mode provides you with two things:
 
-1.  A real-time debug log of what NSClient++ does
+1.  A real-time debug log of what NSClient++ does;
 2.  A way to run commands quickly and easily and see the debug log at the same time.
 
 To start test mode you run the following command: `nscp test`
@@ -265,17 +265,19 @@ For more details on working with check commands see the [checks page](howto/chec
 
 ## Getting Connected
 
-Now that we have a sense of how to check our data we shall start connecting our self with the outside world so our monitoring agent can connect and see if we are actually working properly.
+Now that we have a sense of how to check our data, we shall start connecting with the outside world. This way our monitoring agent can see whether we are actually working properly.
 
+Please refer to the NSClient++ agent installation documentation in the OP5 Admin Guide for these details.
+
+<!---
 **TODO**
 
 ## Getting scheduled
 
 **TODO**
+-->
 
 ## Getting to the end
 
-**TODO**
-
-SO now we have walked through the basics of setting up NSClient++ some of this requires Windows some requires 0.4.1 and some requires manual work.
-Most of this  can be automated and/or configured from the installer but I think it is better to understand what actually happens and I hope this gives a sense of how NSClient++ works and how you can use NSClient++.
+So now we have walked through the basics of setting up NSClient++. Some of these steps require Windows; some require at least version 0.4.1; and some require manual work.
+Most of this can be automated or configured from the installer. but I think it is better to understand what actually happens and I hope this gives a sense of how NSClient++ works and how you can use NSClient++.

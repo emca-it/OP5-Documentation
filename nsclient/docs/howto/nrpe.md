@@ -3,7 +3,7 @@
 ![nrpe](images/nagios-active-nrpe.png)
 
 NRPE is the most common way to connect to NSClient.
-NRPE works much like NRPE for unix (if you are familiar with it) and in short you can say it relays a plugin request to a remote server.
+NRPE works much like NRPE for Unix (if you are familiar with it) and in short you can say it relays a plugin request to a remote server.
 NRPE acts like a simple transport layer allowing remote execution. The difference between regular NRPE and NSClient++ is that NSClient++ has built-in checks.
 So with NSClient++ you get a lot of ready-to-use checks that wont require you to have scripts.
 But if you choose you can disable all "modules" and stick with a pure NRPE installation and only external scripts.
@@ -16,20 +16,20 @@ For those not familiar with NRPE (Nagios Remote Plugin Execution) here is a quic
 
 NRPE works much like SSH or telnet etc. It relays a command and awaits the result. In the above diagram what happens is:
 
-1.  Nagios executes check_nrpe with the proper arguments.
+1.  OP5 executes check_nrpe with the proper arguments.
 2.  NSClient++ receives the command to be executed
 3.  NSClient++ will execute the command and get a result on the form of <status>, <message> and optionally <performance data>
-4.  NSClient++ sends the result back to Nagios
-5.  Nagios gets the result from check_nrpe (and uses it much like any other plugin)
+4.  NSClient++ sends the result back to OP5
+5.  OP5 gets the result from check_nrpe (and uses it much like any other plugin)
 
 So in essence NRPE is merely a transport mechanism to send the result of a check command over the network.
 
-## Nagios command line
+## OP5 command line
 
 ![nrpe-2](images/nagios-active-nrpe-002.png)
 
-NRPE require you to install a special plug-in on your Nagios server called NRPE.
-The unix-side of NRPE consists of a server and a client on Nagios you only need the client so you can skip any "servers" or what not that it want to start when you install it.
+NRPE requires you to install a special plugin on your OP5 server called NRPE. OP5 includes this with the VM.
+The Unix side of NRPE consists of a server and a client on OP5 you only need the client so you can skip any "servers" or what not that it want to start when you install it.
 
 The client is (generally) called check_nrpe and works like so:
 
@@ -68,8 +68,8 @@ This is set either under the `/settings/default` section (globally) or under the
 If you when you configured NSClient above set this globally you are already set to go. If not the key you need to change is the `allowed hosts`.
 There is no password for NRPE.
 
--   `allowed hosts` = A list of addresses that is allowed to ask questions (i.e. your Nagios ip).
-  The result should look like this (assuming your Nagios server ip address is 10.0.0.2):
+-   `allowed hosts` = A list of addresses that is allowed to ask questions (i.e. your OP5 ip).
+  The result should look like this (assuming your OP5 server ip address is 10.0.0.2):
 
 ```
 [/settings/default]
@@ -87,7 +87,7 @@ net start nscp
 ```
 
 Now feel free to try the command line agent again and hopefully things should work out perfectly.
-Run the following command from your Nagios server.
+Run the following command from your OP5 server.
 
 ```
 ./check_nrpe -H 10.0.0.1
@@ -129,7 +129,7 @@ l NSClient++.cpp(402) Using settings from: INI-file
 l NSClient++.cpp(403) Enter command to inject or exit to terminate...
 ```
 
-Now you can run the command again from Nagios like so:
+Now you can run the command again from OP5 like so:
 
 ```
 ./check_nrpe -H 10.0.0.1
@@ -166,7 +166,7 @@ So in this section we shall cover the basics and first off are some of the confi
 *   `ssl`
     If this is true we will use SSL encryption on the transport. **Notice** this flag has to be the same on both ends or   you will end up with strange errors. The flag is set on check_nrpe with the -n option (if you use -n no SSL will be   used).
 *   `allow arguments`
-    Since arguments can be potentially dangerous (it allows your users to control the execution) there is a flag (which   defaults to off) to enable arguments. So if you plan on configure NSClient++ from the Nagios end you need to enable   this. **But be warned this is a security issue you need to think about**. If you do not want to allow arguments you   can instead configure all checks in the nsclient.ini file and just execute the aliases from Nagios.
+    Since arguments can be potentially dangerous (it allows your users to control the execution) there is a flag (which   defaults to off) to enable arguments. So if you plan on configure NSClient++ from the OP5 end you need to enable   this. **But be warned this is a security issue you need to think about**. If you do not want to allow arguments you   can instead configure all checks in the nsclient.ini file and just execute the aliases from Nagios.
     One important issue with the `allow arguments` is that there are more then one! *Yes, more then one!*
     The reason for this is that you can allow arguments from NRPE and you can allow arguments for external scripts (it is   not the same option) which might seem a bit confusing at first.
     But actually quite nice. Using arguments for external scripts can potentially be more dangerous than allowing them   from NRPE (internal commands).
@@ -199,7 +199,7 @@ Here we shall start out with the basic ones and for details on the rest check ou
 | CheckSystem          | Handles many system checks                                        | check_cpu, check_memory etc |
 | CheckDisk            | Handles Disk related checks                                       | check_drivesize             |
 | CheckExternalScripts | Handles aliases (which is what we will use) and external scripts. | N/A                         |
-| NRPEServer           | Listens and responds to incoming requests from Nagios via NRPE    | N/A                         |
+| NRPEServer           | Listens and responds to incoming requests from OP5 via NRPE    | N/A                         |
 | ...                  | There are a lot more modules                                      | ...                         |
 
 The finished modules section from the INI file will look like so:
@@ -212,9 +212,9 @@ CheckExternalScripts=enabled
 NRPEServer=enabled
 ```
 
-Now we have done some basic setup of NSClient++ and we can continue to try using it a bit more before we continue with configuring Nagios.
+Now we have done some basic setup of NSClient++ and we can continue to try using it a bit more before we continue with configuring OP5.
 
-## Nagios command line (revisited)
+## OP5 command line (revisited)
 
 ![nrpe-2](images/nagios-active-nrpe-002.png)
 
@@ -247,9 +247,9 @@ CPU Load ok.|'20m average'=11%;80;90; '10s average'=7%;80;90; '4 average'=10%;80
 
 And that is as hard as it gets all you need to do is figure out which arguments you want to use for the command and stack them all in a long line.
 
-## Nagios configuration
+## OP5 configuration
 
-Nagios configuration is in itself a whole chapter and this is just a quick peek on how you can do things. First off there are a few concepts to understand:
+OP5 configuration is in itself a whole chapter and this is just a quick peek on how you can do things. First off there are a few concepts to understand:
 
 *   templates are the same as the corresponding item but they have a flag register = 0 which prevents them from being listed
 *   services are essentially checks (is check CPU)
@@ -278,7 +278,7 @@ define host{
     register              0 ; DONT REGISTER THIS - ITS A TEMPLATE
 }
 ```
-Notice that the tpl-windows-servers template definition is inheriting default values from the generic-host template, which is defined in the sample localhost.cfg file that gets installed when you follow the Nagios quick-start installation guide.
+Notice that the tpl-windows-servers template definition is inheriting default values from the generic-host template, which is defined in the sample localhost.cfg file that gets installed when you follow the OP5 quick-start installation guide.
 
 ### Host definition
 

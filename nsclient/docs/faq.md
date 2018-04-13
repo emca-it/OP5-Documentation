@@ -4,9 +4,7 @@
 
 ### 1.1 I am having problems where do I start?
 
-NSCP has a built-in "test and debug" mode that you can activate with the following command `nscp test`
-
-What this does is two things.
+NSCP has a built-in "test and debug" mode that you can activate with the following command `nscp test`. This does two things:
 
 1.  it starts the daemon as "usual" with the same configuration and such.
 2.  it enables debug logging and logs to the console.
@@ -25,7 +23,7 @@ The MSI is the preferred way to install NSClient++ and will work much better the
 - Second thing to check is whether the servers' performance counters working?
   Sometimes the performance counters end up broken and need to be rebuilt there is a command to validate performance counters: `nscp sys --validate`
 
-For details: Microsoft KB: [http://support.microsoft.com/kb/300956](http://support.microsoft.com/kb/300956) essentially you need to use the `lodctr /R` command.
+For details, see [Microsoft Knowledge Article 300956](http://support.microsoft.com/kb/300956). essentially you need to use the `lodctr /R` command.
 
 ### 1.4 Bind failed
 
@@ -163,7 +161,7 @@ In general, I do NOT fix issues in several years old versions.
 
 ### 3.2 I use version 0.4.0 or 0.4.1
 
-1.  Good idea to upgrade to 0.5.0 and see if the issue has been resolved but please report this anyway so I can (if possible) fix it for 0.4.1.
+It would be a good idea to upgrade to 0.5.0 and see if the issue has been resolved. Please report such bugs anyway, so I can fix them for 0.4.1 if that is possible.
 
 ## 4. Network
 
@@ -276,14 +274,14 @@ instead please try using level which is more accurate. This is less relevant in 
 
 ### 7.1 What is insecure mode?
 
-The NRPE protocol is broken it is using some strange encryption protocols which are (to our knowledge) rather insecure.
-To work around this in 0.4.x we introduced real SSL support as well as certificate based authentication. This became the default in 0.4.3.
+The NRPE protocol is broken. It uses some strange encryption protocols which are (to our knowledge) rather insecure.
+To work around this in 0.4.x we introduced real SSL support as well as certificate-based authentication. This became the default in 0.4.3.
 
-To allow old "legacy" `check_nrpe` connect to NSClient++ you need to enable *insecure mode* which can be done in multiple ways.
+To allow "legacy" `check_nrpe` connections to NSClient++, you need to enable *insecure mode* which can be done in multiple ways:
 
-1.  In the MSI installer there is an option to select insecure mode
-2.  From command line you can run the `nscp nrpe install --insecure`
-3.  You can manually set the option in your config file
+1.  In the MSI installer there is an option to select insecure mode;
+2.  From command line you can run the `nscp nrpe install --insecure`;
+3.  You can manually set the option in your config file.
 
 All these options will result in the following configuration:
 
@@ -300,6 +298,6 @@ insecure = true
 If you instead opt to use the more secure standard SSL approach used in NSClient++ you can easily install NSClient++ on a Linux system as well.
 
 
-## 8. My question is not here?
+## 8. My question is not here.
 
 Please ask in the forums and I will try to answer your question.
