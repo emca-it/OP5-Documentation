@@ -1,0 +1,19 @@
+---
+title: "Documentation of DLC"
+version: 1.1.0
+author: "OP5, Inc."
+toc: yes
+tocdepth: yes
+toc-depth: 3
+numbersections: yes
+indent: yes
+geometry: top=1.25in,headheight=2.5in,bottom=1in,left=0.75in,right=1in
+title_geometry: top=0.4in,bottom=0.25in,left=0.25in,right=0.3in,headheight=2.5in
+fontsize: 11pt
+papersize: letter
+documentclass: article
+lang: english
+title_background: /Users/ryanquinn/Documents/code/op5/docpipeline/images/op5-datacenter.png
+op5_logo: /Users/ryanquinn/Documents/code/op5/docpipeline/images/op5-logo.png
+client_logo: /Users/ryanquinn/Documents/code/op5/docpipeline/images/duquesne-light-company.png
+---

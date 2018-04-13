@@ -51,7 +51,6 @@ case "$1" in
 		exit 12
 esac
 
-#for file in $(find $2 -maxdepth 1 -type f -name "*.$1")
 for file in $(find $2 -type f -name "*.$1")
 do
 	printf "File path: $file\n"
@@ -65,5 +64,5 @@ do
     	filename_new="$CLIENT$DELIM$filename$DELIM$DATE$DELIMEXT$EXT"
     	mkdir -p $3/$EXT
 	printf "Converting $file to $3/$EXT/$filename_new\n"
-    	pandoc -f $type -t docx -sS "$2/$file" -o "$3/$EXT/$filename_new"
+    	pandoc -f $type -t $EXT -sS "$file" -o "$3/$EXT/$filename_new"
 done

@@ -161,7 +161,7 @@ In general, I do NOT fix issues in several years old versions.
 
 ### 3.2 I use version 0.4.0 or 0.4.1
 
-1. It would be a good idea to upgrade to 0.5.0 and see if the issue has been resolved. Please report such bugs anyway, so I can fix them for 0.4.1 if that is possible.
+It would be a good idea to upgrade to 0.5.0 and see if the issue has been resolved. Please report such bugs anyway, so I can fix them for 0.4.1 if that is possible.
 
 ## 4. Network
 
