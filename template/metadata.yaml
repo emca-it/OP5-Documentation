@@ -13,7 +13,7 @@ fontsize: 11pt
 papersize: letter
 documentclass: article
 lang: english
-title_background: /Users/ryanquinn/Documents/code/op5/docpipeline/images/op5-datacenter.png
-op5_logo: /Users/ryanquinn/Documents/code/op5/docpipeline/images/op5-logo.png
-client_logo: /Users/ryanquinn/Documents/code/op5/docpipeline/images/duquesne-light-company.png
+title_background: ../images/op5-datacenter.png
+op5_logo: ../images/op5-logo.png
+client_logo: ../images/duquesne-light-company.png
 ---
