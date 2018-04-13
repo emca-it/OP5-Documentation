@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_EVENT_HANDLERS<br>
 
-
 #### Command Format:
 
 `ENABLE_EVENT_HANDLERS;`
@@ -29,6 +28,3 @@ Enables host and service event handlers on a program-wide basis.
 
 printf "[%lu] ENABLE_EVENT_HANDLERS;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

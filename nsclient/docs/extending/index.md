@@ -3,7 +3,6 @@
 NSClient++ can be extended in multiple ways.
 The easy choice is adding external scripts which are simply scripts which are executed as is by NSClient++ but if you do not fany easy choices you can also go hard-core and write your own custom Moules in C++. Here I will list the various options and some simple pros and cons.
 
-
 ## External scripts
 
 External scripts are script you write in any language of choice.
@@ -89,7 +88,6 @@ This is how al lthe built-in functionality is written.
 **Cons:**
 
 - Requires you to compile the modules meaning modifications are hard.
-
 
 ## Zip modules
 

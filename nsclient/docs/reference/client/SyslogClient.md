@@ -2,9 +2,6 @@
 
 Forward information as syslog messages to a syslog server
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the SyslogClient module.
@@ -17,19 +14,11 @@ A list of all available queries (check commands)
 |---------------------------------|-------------------------------------------------|
 | [submit_syslog](#submit_syslog) | Submit information to the remote syslog server. |
 
-
-
-
 ### submit_syslog
 
 Submit information to the remote syslog server.
 
-
 * [Command-line Arguments](#submit_syslog_options)
-
-
-
-
 
 <a name="submit_syslog_help"/>
 <a name="submit_syslog_help-pb"/>
@@ -62,7 +51,6 @@ Submit information to the remote syslog server.
 <a name="submit_syslog_options"/>
 #### Command-line Arguments
 
-
 | Option            | Default Value | Description                                                                           |
 |-------------------|---------------|---------------------------------------------------------------------------------------|
 | help              | N/A           | Show help screen (this screen)                                                        |
@@ -94,14 +82,7 @@ Submit information to the remote syslog server.
 | tag template      |               | Tag template (TODO)                                                                   |
 | message template  |               | Message template (TODO)                                                               |
 
-
-
-
-
-
 ## Configuration
-
-
 
 | Path / Section                                                | Description               |
 |---------------------------------------------------------------|---------------------------|
@@ -109,21 +90,14 @@ Submit information to the remote syslog server.
 | [/settings/syslog/client/handlers](#client-handler-section)   | CLIENT HANDLER SECTION    |
 | [/settings/syslog/client/targets](#remote-target-definitions) | REMOTE TARGET DEFINITIONS |
 
-
-
 ### SYSLOG CLIENT SECTION <a id="/settings/syslog/client"/>
 
 Section for SYSLOG passive check module.
-
-
-
 
 | Key                   | Default Value | Description |
 |-----------------------|---------------|-------------|
 | [channel](#channel)   | syslog        | CHANNEL     |
 | [hostname](#hostname) | auto          | HOSTNAME    |
-
-
 
 ```ini
 # Section for SYSLOG passive check module.
@@ -133,17 +107,9 @@ hostname=auto
 
 ```
 
-
-
-
-
 #### CHANNEL <a id="/settings/syslog/client/channel"></a>
 
 The channel to listen to.
-
-
-
-
 
 | Key            | Description                                         |
 |----------------|-----------------------------------------------------|
@@ -152,7 +118,6 @@ The channel to listen to.
 | Default value: | `syslog`                                            |
 | Used by:       | SyslogClient                                        |
 
-
 **Sample:**
 
 ```
@@ -160,8 +125,6 @@ The channel to listen to.
 # CHANNEL
 channel=syslog
 ```
-
-
 
 #### HOSTNAME <a id="/settings/syslog/client/hostname"></a>
 
@@ -177,18 +140,12 @@ ${domain}	Domainname
 ${domain_lc}	Domainname in lowercase
 ${domain_uc}	Domainname in uppercase
 
-
-
-
-
-
 | Key            | Description                                         |
 |----------------|-----------------------------------------------------|
 | Path:          | [/settings/syslog/client](#/settings/syslog/client) |
 | Key:           | hostname                                            |
 | Default value: | `auto`                                              |
 | Used by:       | SyslogClient                                        |
-
 
 **Sample:**
 
@@ -198,29 +155,15 @@ ${domain_uc}	Domainname in uppercase
 hostname=auto
 ```
 
-
 ### CLIENT HANDLER SECTION <a id="/settings/syslog/client/handlers"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
-
-
-
-
-
 
 ### REMOTE TARGET DEFINITIONS <a id="/settings/syslog/client/targets"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key     | Default Value | Description    |
 |---------|---------------|----------------|
@@ -229,7 +172,6 @@ This is a section of objects. This means that you will create objects below this
 | port    |               | TARGET PORT    |
 | retries | 3             | RETRIES        |
 | timeout | 30            | TIMEOUT        |
-
 
 **Sample:**
 
@@ -243,9 +185,3 @@ retries=3
 timeout=30
 
 ```
-
-
-
-
-
-

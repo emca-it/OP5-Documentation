@@ -4,21 +4,21 @@ Version
 
 This article has been tested and verified with OP5 Monitor 7.0 and earlier, it could work on both lower and higher versions if nothing else is stated. Running local mirrors of the official repositories is only supported on a best-effort level.
 
--   -   [Purpose](#Creatingalocalmirroroftheop5repositories-Purpose)
--   [Prerequisites ](#Creatingalocalmirroroftheop5repositories-Prerequisites)
--   [Configuration of the local mirror](#Creatingalocalmirroroftheop5repositories-Configurationofthelocalmirror)
--   [Configuring the OP5 Monitor system](#Creatingalocalmirroroftheop5repositories-Configuringtheop5Monitorsystem)
--   [Scheduling repository synchronization](#Creatingalocalmirroroftheop5repositories-Schedulingrepositorysynchronization)
+- [Purpose](#Creatingalocalmirroroftheop5repositories-Purpose)
+- [Prerequisites ](#Creatingalocalmirroroftheop5repositories-Prerequisites)
+- [Configuration of the local mirror](#Creatingalocalmirroroftheop5repositories-Configurationofthelocalmirror)
+- [Configuring the OP5 Monitor system](#Creatingalocalmirroroftheop5repositories-Configuringtheop5Monitorsystem)
+- [Scheduling repository synchronization](#Creatingalocalmirroroftheop5repositories-Schedulingrepositorysynchronization)
 
 ## Purpose
 
 This how-to is aimed towards the users who wants to create a local mirror of the *op5* repositories instead of fetching them via the Internet directly.
 It may be need to be modified to work with different versions of *op5 Monitor*, *op5 Appliance System* and *CentOS*.
 
-## Prerequisites 
+## Prerequisites
 
--   A server running *op5 Monitor* or the *op5 Appliance System* with a valid license
--   A server running the 64 bit version of CentOS 6.x for hosting of the local mirror with 4 GB of free disk space
+- A server running *op5 Monitor* or the *op5 Appliance System* with a valid license
+- A server running the 64 bit version of CentOS 6.x for hosting of the local mirror with 4 GB of free disk space
 
 ## Configuration of the local mirror
 
@@ -28,15 +28,11 @@ It may be need to be modified to work with different versions of *op5 Monitor*, 
 # yum update -y
 ```
 
- 
-
 2. Install the packages "yum-utils" and "createrepo"
 
 ``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
 # yum install -y yum-utils createrepo
 ```
-
- 
 
 3. Copy the repository configuration files and verification keys from the *op5 Monitor* system to the mirror host:
 
@@ -47,15 +43,11 @@ It may be need to be modified to work with different versions of *op5 Monitor*, 
 
 This step may need to be executed again if new repositories are added by *op5*
 
- 
-
 4. Verify that the repositories has been installed correctly:
 
 ``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
 $ yum repolist
 ```
-
- 
 
 5. Install and enable *Apache httpd* to serve our repository mirror:
 
@@ -77,23 +69,19 @@ $ cd /var/www/html/repos
 
 Synchronizing the repositories can take some time, depending on your Internet connection - this is a good time for a coffee break!
 
- 
-
 7. Create metadata for the locally synchronized repositories:
 
 ``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
 # for REPO in $(find /var/www/html/repos -iname "op5-*" -type d); do createrepo ${REPO}; done
 ```
 
- 
-
 ## Configuring the OP5 Monitor system
 
 8. Reconfigure the repositories on the OP5 Monitor server to use the local mirror by changing the "baseurl" setting:
 
 ``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
-# cat /etc/yum.repos.d/op5-release.repo 
- 
+# cat /etc/yum.repos.d/op5-release.repo
+
 [op5-monitor-base]
 
 name=op5 Monitor Base
@@ -111,7 +99,7 @@ gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-op5%
 ```
 
-Change the "baseurl" setting in all OP5 related repositories located in "/etc/yum.repos.d/" 
+Change the "baseurl" setting in all OP5 related repositories located in "/etc/yum.repos.d/"
 
 9. Clean up all yum cache information with the following command:
 

@@ -2,9 +2,6 @@
 
 NSCA client can be used both from command line and from queries to submit passive checks via NSCA
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the NSCAClient module.
@@ -17,19 +14,11 @@ A list of all available queries (check commands)
 |-----------------------------|-----------------------------------------------|
 | [submit_nsca](#submit_nsca) | Submit information to the remote NSCA server. |
 
-
-
-
 ### submit_nsca
 
 Submit information to the remote NSCA server.
 
-
 * [Command-line Arguments](#submit_nsca_options)
-
-
-
-
 
 <a name="submit_nsca_help"/>
 <a name="submit_nsca_help-pb"/>
@@ -63,7 +52,6 @@ Submit information to the remote NSCA server.
 <a name="submit_nsca_time-offset"/>
 <a name="submit_nsca_options"/>
 #### Command-line Arguments
-
 
 | Option                                | Default Value | Description                                                                                                                                                               |
 |---------------------------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -100,8 +88,6 @@ Submit information to the remote NSCA server.
 | password                              |               | Password                                                                                                                                                                  |
 | time-offset                           |               |                                                                                                                                                                           |
 
-
-
 <h5 id="submit_nsca_ssl">ssl:</h5>
 
 Initial an ssl handshake with the server.
@@ -128,13 +114,7 @@ aes = AES
 serpent = Serpent
 gost = GOST
 
-
-
-
-
 ## Configuration
-
-
 
 | Path / Section                                              | Description               |
 |-------------------------------------------------------------|---------------------------|
@@ -142,22 +122,15 @@ gost = GOST
 | [/settings/NSCA/client/handlers](#client-handler-section)   | CLIENT HANDLER SECTION    |
 | [/settings/NSCA/client/targets](#remote-target-definitions) | REMOTE TARGET DEFINITIONS |
 
-
-
 ### NSCA CLIENT SECTION <a id="/settings/NSCA/client"/>
 
 Section for NSCA passive check module.
-
-
-
 
 | Key                             | Default Value | Description        |
 |---------------------------------|---------------|--------------------|
 | [channel](#channel)             | NSCA          | CHANNEL            |
 | [encoding](#nsca-data-encoding) |               | NSCA DATA ENCODING |
 | [hostname](#hostname)           | auto          | HOSTNAME           |
-
-
 
 ```ini
 # Section for NSCA passive check module.
@@ -167,17 +140,9 @@ hostname=auto
 
 ```
 
-
-
-
-
 #### CHANNEL <a id="/settings/NSCA/client/channel"></a>
 
 The channel to listen to.
-
-
-
-
 
 | Key            | Description                                     |
 |----------------|-------------------------------------------------|
@@ -185,7 +150,6 @@ The channel to listen to.
 | Key:           | channel                                         |
 | Default value: | `NSCA`                                          |
 | Used by:       | NSCAClient                                      |
-
 
 **Sample:**
 
@@ -195,16 +159,7 @@ The channel to listen to.
 channel=NSCA
 ```
 
-
-
 #### NSCA DATA ENCODING <a id="/settings/NSCA/client/encoding"></a>
-
-
-
-
-
-
-
 
 | Key            | Description                                     |
 |----------------|-------------------------------------------------|
@@ -214,7 +169,6 @@ channel=NSCA
 | Default value: | _N/A_                                           |
 | Used by:       | NSCAClient                                      |
 
-
 **Sample:**
 
 ```
@@ -222,8 +176,6 @@ channel=NSCA
 # NSCA DATA ENCODING
 encoding=
 ```
-
-
 
 #### HOSTNAME <a id="/settings/NSCA/client/hostname"></a>
 
@@ -239,18 +191,12 @@ ${domain}	Domainname
 ${domain_lc}	Domainname in lowercase
 ${domain_uc}	Domainname in uppercase
 
-
-
-
-
-
 | Key            | Description                                     |
 |----------------|-------------------------------------------------|
 | Path:          | [/settings/NSCA/client](#/settings/NSCA/client) |
 | Key:           | hostname                                        |
 | Default value: | `auto`                                          |
 | Used by:       | NSCAClient                                      |
-
 
 **Sample:**
 
@@ -260,29 +206,15 @@ ${domain_uc}	Domainname in uppercase
 hostname=auto
 ```
 
-
 ### CLIENT HANDLER SECTION <a id="/settings/NSCA/client/handlers"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
-
-
-
-
-
 
 ### REMOTE TARGET DEFINITIONS <a id="/settings/NSCA/client/targets"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key                | Default Value | Description           |
 |--------------------|---------------|-----------------------|
@@ -304,7 +236,6 @@ This is a section of objects. This means that you will create objects below this
 | timeout            | 30            | TIMEOUT               |
 | use ssl            |               | ENABLE SSL ENCRYPTION |
 | verify mode        |               | VERIFY MODE           |
-
 
 **Sample:**
 
@@ -331,9 +262,3 @@ timeout=30
 #verify mode=...
 
 ```
-
-
-
-
-
-

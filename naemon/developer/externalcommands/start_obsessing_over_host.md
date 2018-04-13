@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - START_OBSESSING_OVER_HOST<br>
 
-
 #### Command Format:
 
 `START_OBSESSING_OVER_HOST;host_name`
@@ -29,6 +28,3 @@ Enables processing of host checks via the OCHP command for the specified host.
 
 printf "[%lu] START_OBSESSING_OVER_HOST;host1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

@@ -16,11 +16,11 @@ For those not familiar with NRPE (Nagios Remote Plugin Execution) here is a quic
 
 NRPE works much like SSH or telnet etc. It relays a command and awaits the result. In the above diagram what happens is:
 
-1.  OP5 executes check_nrpe with the proper arguments.
-2.  NSClient++ receives the command to be executed
-3.  NSClient++ will execute the command and get a result on the form of <status>, <message> and optionally <performance data>
-4.  NSClient++ sends the result back to OP5
-5.  OP5 gets the result from check_nrpe (and uses it much like any other plugin)
+1. OP5 executes check_nrpe with the proper arguments.
+2. NSClient++ receives the command to be executed
+3. NSClient++ will execute the command and get a result on the form of <status>, <message> and optionally <performance data>
+4. NSClient++ sends the result back to OP5
+5. OP5 gets the result from check_nrpe (and uses it much like any other plugin)
 
 So in essence NRPE is merely a transport mechanism to send the result of a check command over the network.
 
@@ -68,7 +68,7 @@ This is set either under the `/settings/default` section (globally) or under the
 If you when you configured NSClient above set this globally you are already set to go. If not the key you need to change is the `allowed hosts`.
 There is no password for NRPE.
 
--   `allowed hosts` = A list of addresses that is allowed to ask questions (i.e. your OP5 ip).
+- `allowed hosts` = A list of addresses that is allowed to ask questions (i.e. your OP5 ip).
   The result should look like this (assuming your OP5 server ip address is 10.0.0.2):
 
 ```

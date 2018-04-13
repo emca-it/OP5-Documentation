@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - SCHEDULE_HOST_SVC_DOWNTIME<br>
 
-
 #### Command Format:
 
 `SCHEDULE_HOST_SVC_DOWNTIME;host_name;start_time;end_time;fixed;trigger_id;duration;author;comment`
@@ -29,6 +28,3 @@ Schedules downtime for all services associated with a particular host. If the 'f
 
 printf "[%lu] SCHEDULE_HOST_SVC_DOWNTIME;host1;1478648441;1478638441;1;0;3600;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

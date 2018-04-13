@@ -1,13 +1,13 @@
 # Configure a Linux server for SNMP monitoring
 
--   [Introduction and addition of user](#ConfigureaLinuxserverforSNMPmonitoring-Introductionandadditionofuser)
-    -   [SNMPv3 user](#ConfigureaLinuxserverforSNMPmonitoring-SNMPv3user)
-    -   [SNMPv2c user](#ConfigureaLinuxserverforSNMPmonitoring-SNMPv2cuser)
-    -   [Disable SNMPv1 user](#ConfigureaLinuxserverforSNMPmonitoring-DisableSNMPv1user)
--   [Extend the SNMP daemon to run local scripts and plugins](#ConfigureaLinuxserverforSNMPmonitoring-ExtendtheSNMPdaemontorunlocalscriptsandplugins)
-    -   [Scripts](#ConfigureaLinuxserverforSNMPmonitoring-Scripts)
-    -   [Plugins (binary file)](#ConfigureaLinuxserverforSNMPmonitoring-Plugins(binaryfile))
--   [OP5 Monitor: Open Source Network Monitoring](#ConfigureaLinuxserverforSNMPmonitoring-OP5Monitor:OpenSourceNetworkMonitoring)
+- [Introduction and addition of user](#ConfigureaLinuxserverforSNMPmonitoring-Introductionandadditionofuser)
+  - [SNMPv3 user](#ConfigureaLinuxserverforSNMPmonitoring-SNMPv3user)
+  - [SNMPv2c user](#ConfigureaLinuxserverforSNMPmonitoring-SNMPv2cuser)
+  - [Disable SNMPv1 user](#ConfigureaLinuxserverforSNMPmonitoring-DisableSNMPv1user)
+- [Extend the SNMP daemon to run local scripts and plugins](#ConfigureaLinuxserverforSNMPmonitoring-ExtendtheSNMPdaemontorunlocalscriptsandplugins)
+  - [Scripts](#ConfigureaLinuxserverforSNMPmonitoring-Scripts)
+  - [Plugins (binary file)](#ConfigureaLinuxserverforSNMPmonitoring-Plugins(binaryfile))
+- [OP5 Monitor: Open Source Network Monitoring](#ConfigureaLinuxserverforSNMPmonitoring-OP5Monitor:OpenSourceNetworkMonitoring)
 
 # Introduction and addition of user
 
@@ -15,38 +15,37 @@ If you want to use SNMP to monitor your Linux- and UNIX-servers, it's imperative
 
 Most people will want to use SNMP version 3 in the "authenticated and privacy protected" mode, commonly abbreviated as authPriv, but other methods are also covered in this section.Please note that the SNMP protocol version 1 and 2c is un-encrypted, so someone capable of reading traffic flows in your network will be able to read values (including community names) from queries and responses sent to and from the SNMP-monitored device.SNMP version 1 has limits in both performance and the datatypes it offers that makes it highly unsuitable for monitoring, so we strongly advise against using it.
 
-SNMP version 3 and 2c both provide the same data and although version 3 has a slight performance overhead because it encrypts the traffic, the ease of management of using the same protocol across the network makes a very strong case for using only SNMP version 3. 
- 
+SNMP version 3 and 2c both provide the same data and although version 3 has a slight performance overhead because it encrypts the traffic, the ease of management of using the same protocol across the network makes a very strong case for using only SNMP version 3.
 
--   This HOW-TO assumes that net-snmp is installed on the server that should be monitored.
--   The servers that should be monitored needs to be reachable on port 161, TCP and UDP.
--   The snmp daemon's configuration file is commonly found at /etc/snmp/snmpd.conf but some operating systems put it in other places.
--   Safe passwords that are still easy to work with can be constructed of a few words strung together, like "horse.eats.bananas"
--   It's often a good idea to avoid shell meta-characters in passwords and community names. The most common problematic ones are **\$\~!;?\*()[]\\"'**
--   Remember to restart snmpd after reconfiguring it.
+- This HOW-TO assumes that net-snmp is installed on the server that should be monitored.
+- The servers that should be monitored needs to be reachable on port 161, TCP and UDP.
+- The snmp daemon's configuration file is commonly found at /etc/snmp/snmpd.conf but some operating systems put it in other places.
+- Safe passwords that are still easy to work with can be constructed of a few words strung together, like "horse.eats.bananas"
+- It's often a good idea to avoid shell meta-characters in passwords and community names. The most common problematic ones are **\$\~!;?\*()[]\\"'**
+- Remember to restart snmpd after reconfiguring it.
 
 ## SNMPv3 user
 
 SNMP version 3 has three separate options for security and privacy (called security level, or secLevel for short);
 
--   **noAuthNoPriv** (no authentication, no privacy)
--   **authNoPriv** (authentication but no privacy)
--   **authPriv** (authentication and privacy)
+- **noAuthNoPriv** (no authentication, no privacy)
+- **authNoPriv** (authentication but no privacy)
+- **authPriv** (authentication and privacy)
 
 SNMPv3 provides two different authentication mechanisms:
 
--   **md5 - **is now mostly supported for backward compatibility
--   **sha1** - is a much stronger cryptographic algorithm that is also faster to compute, there's no reason to use md5.
+- **md5 - **is now mostly supported for backward compatibility
+- **sha1** - is a much stronger cryptographic algorithm that is also faster to compute, there's no reason to use md5.
 
 SNMPv3 also provides two different encryption algorithms:
 
--   **DES** - has known security issues and provides weak encryption, so it should be avoided
--   AES - use whenever possible
+- **DES** - has known security issues and provides weak encryption, so it should be avoided
+- AES - use whenever possible
 
 To add a new SNMP v3 user you need to edit two files:
 
--   `/var/lib/net-snmp/snmpd.conf` (createuser commands goes here)
--   `/etc/snmp/snmpd.conf` (access configuration goes here)
+- `/var/lib/net-snmp/snmpd.conf` (createuser commands goes here)
+- `/etc/snmp/snmpd.conf` (access configuration goes here)
 
 Don't forget to change the usernames and passwords (**authPass** and **privPass** in the example below) to secure ones of your own choosing.
 
@@ -123,7 +122,7 @@ rouser   auth_md5_aes   priv      .1
 ```
 
 If you choose to use SNMP version 3, you should disable unencrypted access to the server to prevent unauthorized access.
-In order to do that, comment out all lines starting with **com2sec** or **access**, as well as all lines starting with **rocommunity** or **rwcommunity** from your snmpd configuration file. 
+In order to do that, comment out all lines starting with **com2sec** or **access**, as well as all lines starting with **rocommunity** or **rwcommunity** from your snmpd configuration file.
 
 ## SNMPv2c user
 
@@ -258,7 +257,7 @@ And you should be able to find the following:
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 NET-SNMP-EXTEND-MIB::nsExtendCommand."check_load" = STRING: /tmp/check_load
 NET-SNMP-EXTEND-MIB::nsExtendArgs."check_load" = STRING: -w1,2,3 -c4,5,6
-NET-SNMP-EXTEND-MIB::nsExtendOutputFull."check_load" = STRING: OK - load average: 0.00, 0.00, 0.00|load1=0.000;1.000;4.000;0; load5=0.000;2.000;5.000;0; load15=0.000;3.000;6.000;0; 
+NET-SNMP-EXTEND-MIB::nsExtendOutputFull."check_load" = STRING: OK - load average: 0.00, 0.00, 0.00|load1=0.000;1.000;4.000;0; load5=0.000;2.000;5.000;0; load15=0.000;3.000;6.000;0;
 NET-SNMP-EXTEND-MIB::nsExtendResult."check_load" = INTEGER: 0
 ```
 
@@ -272,7 +271,4 @@ The result should be an OK/WARNING/CRITICAL/UNKNOWN check result with the output
 
 # OP5 Monitor: Open Source Network Monitoring
 
-[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free. 
-
- 
-
+[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free.

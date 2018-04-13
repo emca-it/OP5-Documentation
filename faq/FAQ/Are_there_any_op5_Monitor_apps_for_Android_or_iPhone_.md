@@ -14,4 +14,3 @@ Yes, the official OP5 Monitor app can be installed from *[Google Play](https://p
 If you are using a different platform or an old version of OP5 Monitor you might still be able to use one of the unsupported legacy apps designed for Nagios, this is however *not* recommended for security reasons.
 
 For information about getting started with our apps [go here!](https://kb.op5.com/display/HOWTOs/How+to+use+the+op5+Monitor+App)
-

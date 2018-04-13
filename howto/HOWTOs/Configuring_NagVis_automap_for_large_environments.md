@@ -27,11 +27,6 @@ You should can also change the "width" and "height" options to reconfigure the s
 
 ![](attachments/12190102/12386380.png)
 
- 
-
 This should render a cleaner and more spread out map with your hosts and their relationships
 
 ![](attachments/12190102/12386381.png)
-
- 
-

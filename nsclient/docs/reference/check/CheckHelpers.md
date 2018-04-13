@@ -2,9 +2,6 @@
 
 Various helper function to extend other checks.
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the CheckHelpers module.
@@ -30,11 +27,9 @@ A list of all available queries (check commands)
 | [render_perf](#render_perf)                     | Run a check and render the performance data as output message.                      |
 | [xform_perf](#xform_perf)                       | Run a check and transform the performance data in various (currently one) way.      |
 
-
 **List of command aliases:**
 
 A list of all short hand aliases for queries (check commands)
-
 
 | Command             | Description                               |
 |---------------------|-------------------------------------------|
@@ -49,17 +44,11 @@ A list of all short hand aliases for queries (check commands)
 | negate              | Alias for: :query:`check_negate`          |
 | timeout             | Alias for: :query:`check_timeout`         |
 
-
 ### check_always_critical
 
 Run another check and regardless of its return code return CRITICAL.
 
-
 * [Command-line Arguments](#check_always_critical_options)
-
-
-
-
 
 <a name="check_always_critical_help"/>
 <a name="check_always_critical_help-pb"/>
@@ -68,7 +57,6 @@ Run another check and regardless of its return code return CRITICAL.
 <a name="check_always_critical_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                   |
 |--------------|---------------|-----------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                |
@@ -76,19 +64,11 @@ Run another check and regardless of its return code return CRITICAL.
 | show-default | N/A           | Show default values for a given command       |
 | help-short   | N/A           | Show help screen (short format).              |
 
-
-
-
 ### check_always_ok
 
 Run another check and regardless of its return code return OK.
 
-
 * [Command-line Arguments](#check_always_ok_options)
-
-
-
-
 
 <a name="check_always_ok_help"/>
 <a name="check_always_ok_help-pb"/>
@@ -97,7 +77,6 @@ Run another check and regardless of its return code return OK.
 <a name="check_always_ok_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                   |
 |--------------|---------------|-----------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                |
@@ -105,19 +84,11 @@ Run another check and regardless of its return code return OK.
 | show-default | N/A           | Show default values for a given command       |
 | help-short   | N/A           | Show help screen (short format).              |
 
-
-
-
 ### check_always_warning
 
 Run another check and regardless of its return code return WARNING.
 
-
 * [Command-line Arguments](#check_always_warning_options)
-
-
-
-
 
 <a name="check_always_warning_help"/>
 <a name="check_always_warning_help-pb"/>
@@ -126,7 +97,6 @@ Run another check and regardless of its return code return WARNING.
 <a name="check_always_warning_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                   |
 |--------------|---------------|-----------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                |
@@ -134,19 +104,11 @@ Run another check and regardless of its return code return WARNING.
 | show-default | N/A           | Show default values for a given command       |
 | help-short   | N/A           | Show help screen (short format).              |
 
-
-
-
 ### check_and_forward
 
 Run a check and forward the result as a passive check.
 
-
 * [Command-line Arguments](#check_and_forward_options)
-
-
-
-
 
 <a name="check_and_forward_help"/>
 <a name="check_and_forward_help-pb"/>
@@ -158,7 +120,6 @@ Run a check and forward the result as a passive check.
 <a name="check_and_forward_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                   |
 |--------------|---------------|-----------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                |
@@ -169,19 +130,11 @@ Run a check and forward the result as a passive check.
 | command      |               | Commands to run (can be used multiple times)  |
 | arguments    |               | List of arguments (for wrapped command)       |
 
-
-
-
 ### check_critical
 
 Just return CRITICAL (anything passed along will be used as a message).
 
-
 * [Command-line Arguments](#check_critical_options)
-
-
-
-
 
 <a name="check_critical_help"/>
 <a name="check_critical_help-pb"/>
@@ -189,7 +142,6 @@ Just return CRITICAL (anything passed along will be used as a message).
 <a name="check_critical_help-short"/>
 <a name="check_critical_options"/>
 #### Command-line Arguments
-
 
 | Option                             | Default Value | Description                                   |
 |------------------------------------|---------------|-----------------------------------------------|
@@ -199,25 +151,17 @@ Just return CRITICAL (anything passed along will be used as a message).
 | help-short                         | N/A           | Show help screen (short format).              |
 | [message](#check_critical_message) | No message    | Message to return                             |
 
-
-
 <h5 id="check_critical_message">message:</h5>
 
 Message to return
 
 *Default Value:* `No message`
 
-
 ### check_multi
 
 Run more then one check and return the worst state.
 
-
 * [Command-line Arguments](#check_multi_options)
-
-
-
-
 
 <a name="check_multi_help"/>
 <a name="check_multi_help-pb"/>
@@ -229,7 +173,6 @@ Run more then one check and return the worst state.
 <a name="check_multi_suffix"/>
 <a name="check_multi_options"/>
 #### Command-line Arguments
-
 
 | Option                              | Default Value | Description                                   |
 |-------------------------------------|---------------|-----------------------------------------------|
@@ -243,25 +186,17 @@ Run more then one check and return the worst state.
 | prefix                              |               | Message prefix                                |
 | suffix                              |               | Message suffix                                |
 
-
-
 <h5 id="check_multi_separator">separator:</h5>
 
 Separator between messages
 
 *Default Value:* `, `
 
-
 ### check_negate
 
 Run a check and alter the return status codes according to arguments.
 
-
 * [Command-line Arguments](#check_negate_options)
-
-
-
-
 
 <a name="check_negate_help"/>
 <a name="check_negate_help-pb"/>
@@ -276,7 +211,6 @@ Run a check and alter the return status codes according to arguments.
 <a name="check_negate_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                   |
 |--------------|---------------|-----------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                |
@@ -290,19 +224,11 @@ Run a check and alter the return status codes according to arguments.
 | command      |               | Wrapped command to execute                    |
 | arguments    |               | List of arguments (for wrapped command)       |
 
-
-
-
 ### check_ok
 
 Just return OK (anything passed along will be used as a message).
 
-
 * [Command-line Arguments](#check_ok_options)
-
-
-
-
 
 <a name="check_ok_help"/>
 <a name="check_ok_help-pb"/>
@@ -310,7 +236,6 @@ Just return OK (anything passed along will be used as a message).
 <a name="check_ok_help-short"/>
 <a name="check_ok_options"/>
 #### Command-line Arguments
-
 
 | Option                       | Default Value | Description                                   |
 |------------------------------|---------------|-----------------------------------------------|
@@ -320,25 +245,17 @@ Just return OK (anything passed along will be used as a message).
 | help-short                   | N/A           | Show help screen (short format).              |
 | [message](#check_ok_message) | No message    | Message to return                             |
 
-
-
 <h5 id="check_ok_message">message:</h5>
 
 Message to return
 
 *Default Value:* `No message`
 
-
 ### check_timeout
 
 Run a check and timeout after a given amount of time if the check has not returned.
 
-
 * [Command-line Arguments](#check_timeout_options)
-
-
-
-
 
 <a name="check_timeout_help"/>
 <a name="check_timeout_help-pb"/>
@@ -351,7 +268,6 @@ Run a check and timeout after a given amount of time if the check has not return
 <a name="check_timeout_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                   |
 |--------------|---------------|-----------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                |
@@ -363,19 +279,11 @@ Run a check and timeout after a given amount of time if the check has not return
 | arguments    |               | List of arguments (for wrapped command)       |
 | return       |               | The return status                             |
 
-
-
-
 ### check_version
 
 Just return the NSClient++ version.
 
-
 * [Command-line Arguments](#check_version_options)
-
-
-
-
 
 <a name="check_version_help"/>
 <a name="check_version_help-pb"/>
@@ -384,7 +292,6 @@ Just return the NSClient++ version.
 <a name="check_version_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                   |
 |--------------|---------------|-----------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                |
@@ -392,19 +299,11 @@ Just return the NSClient++ version.
 | show-default | N/A           | Show default values for a given command       |
 | help-short   | N/A           | Show help screen (short format).              |
 
-
-
-
 ### check_warning
 
 Just return WARNING (anything passed along will be used as a message).
 
-
 * [Command-line Arguments](#check_warning_options)
-
-
-
-
 
 <a name="check_warning_help"/>
 <a name="check_warning_help-pb"/>
@@ -412,7 +311,6 @@ Just return WARNING (anything passed along will be used as a message).
 <a name="check_warning_help-short"/>
 <a name="check_warning_options"/>
 #### Command-line Arguments
-
 
 | Option                            | Default Value | Description                                   |
 |-----------------------------------|---------------|-----------------------------------------------|
@@ -422,25 +320,17 @@ Just return WARNING (anything passed along will be used as a message).
 | help-short                        | N/A           | Show help screen (short format).              |
 | [message](#check_warning_message) | No message    | Message to return                             |
 
-
-
 <h5 id="check_warning_message">message:</h5>
 
 Message to return
 
 *Default Value:* `No message`
 
-
 ### filter_perf
 
 Run a check and filter performance data.
 
-
 * [Command-line Arguments](#filter_perf_options)
-
-
-
-
 
 <a name="filter_perf_help"/>
 <a name="filter_perf_help-pb"/>
@@ -450,7 +340,6 @@ Run a check and filter performance data.
 <a name="filter_perf_arguments"/>
 <a name="filter_perf_options"/>
 #### Command-line Arguments
-
 
 | Option                      | Default Value | Description                                                 |
 |-----------------------------|---------------|-------------------------------------------------------------|
@@ -462,8 +351,6 @@ Run a check and filter performance data.
 | [limit](#filter_perf_limit) | 0             | The maximum number of items to return (0 returns all items) |
 | command                     |               | Wrapped command to execute                                  |
 | arguments                   |               | List of arguments (for wrapped command)                     |
-
-
 
 <h5 id="filter_perf_sort">sort:</h5>
 
@@ -477,18 +364,12 @@ The maximum number of items to return (0 returns all items)
 
 *Default Value:* `0`
 
-
 ### render_perf
 
 Run a check and render the performance data as output message.
 
-
 * [Command-line Arguments](#render_perf_options)
 * [Filter keywords](#render_perf_filter_keys)
-
-
-
-
 
 <a name="render_perf_warn"/>
 <a name="render_perf_crit"/>
@@ -504,7 +385,6 @@ Run a check and render the performance data as output message.
 <a name="render_perf_remove-perf"/>
 <a name="render_perf_options"/>
 #### Command-line Arguments
-
 
 | Option                                      | Default Value                                          | Description                                                                                                      |
 |---------------------------------------------|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -533,35 +413,26 @@ Run a check and render the performance data as output message.
 | arguments                                   |                                                        | List of arguments (for wrapped command)                                                                          |
 | remove-perf                                 | N/A                                                    | List of arguments (for wrapped command)                                                                          |
 
-
-
 <h5 id="render_perf_filter">filter:</h5>
 
 Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
 <h5 id="render_perf_warning">warning:</h5>
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
-
-
 
 <h5 id="render_perf_critical">critical:</h5>
 
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
-
 <h5 id="render_perf_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="render_perf_empty-state">empty-state:</h5>
 
@@ -574,7 +445,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="render_perf_top-syntax">top-syntax:</h5>
 
@@ -590,12 +460,10 @@ ok syntax.
 DEPRECATED! This is the syntax for when an ok result is returned.
 This value will not be used if your syntax contains %(list) or %(count).
 
-
 <h5 id="render_perf_empty-syntax">empty-syntax:</h5>
 
 Empty syntax.
 DEPRECATED! This is the syntax for when nothing matches the filter.
-
 
 <h5 id="render_perf_detail-syntax">detail-syntax:</h5>
 
@@ -614,10 +482,8 @@ This is the syntax for the base names of the performance data.
 
 *Default Value:* `%(key)`
 
-
 <a name="render_perf_filter_keys"/>
 #### Filter keywords
-
 
 | Option        | Description                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -643,17 +509,11 @@ This is the syntax for the base names of the performance data.
 | warn_count    | Number of items matched the warning criteria. Common option for all checks.                                  |
 | warn_list     | A list of all items which matched the warning criteria. Common option for all checks.                        |
 
-
 ### xform_perf
 
 Run a check and transform the performance data in various (currently one) way.
 
-
 * [Command-line Arguments](#xform_perf_options)
-
-
-
-
 
 <a name="xform_perf_help"/>
 <a name="xform_perf_help-pb"/>
@@ -667,7 +527,6 @@ Run a check and transform the performance data in various (currently one) way.
 <a name="xform_perf_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                                                 |
 |--------------|---------------|-----------------------------------------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                                              |
@@ -679,9 +538,3 @@ Run a check and transform the performance data in various (currently one) way.
 | mode         |               | Transformation mode: extract to fetch data or minmax to add missing min/max |
 | field        |               | Field to work with (value, warn, crit, max, min)                            |
 | replace      |               | Replace expression for the alias                                            |
-
-
-
-
-
-

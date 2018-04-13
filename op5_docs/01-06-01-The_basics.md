@@ -29,7 +29,7 @@ When you have made any changes to an object you have to submit it to the Configu
 
 Click **Submit** at the bottom of the page
  ![](attachments/16482408/17269457.png)
- As soon as the data has been saved, the configuration starting page will tell you that there is unsaved data in the Configure database. Each object type you made changes to, is decorated with a small yellow badge that informs you about the number of changed objects. 
+ As soon as the data has been saved, the configuration starting page will tell you that there is unsaved data in the Configure database. Each object type you made changes to, is decorated with a small yellow badge that informs you about the number of changed objects.
 
 ![](attachments/16482408/23793047.png)
  Continue work until your work is done for this time.
@@ -52,8 +52,6 @@ Click **Save** icon at the top of the page.
  When done click **Yes, save** to write all the changes to disk.
  Now the preflight check is preformed and the data is saved to the configuration files.
  ![](attachments/16482408/17269450.png)
-
- 
 
 If two users with the same permissions are editing the same host all configuration regarding the host or service will be saved.
 
@@ -92,9 +90,8 @@ To filter the configuration changes select **Toggle filter bar
 ** ![](attachments/16482408/17269452.png)
 By using the filter bar it is possible to filter on the following:
 
--   -   User
-    -   Object Name
-    -   Time
+- User
+  - Object Name
+  - Time
 
 ![](attachments/16482408/17269459.png)
-

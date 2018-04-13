@@ -6,7 +6,7 @@ edit_uri: blob/master/docs/docs
 theme: 'material'
 theme_dir: 'custom_theme'
 copyright: "NSClient++ is released under a GPLv2 license"
-extra_css: 
+extra_css:
   - pygments.css
   - custom.css
 extra:
@@ -38,7 +38,7 @@ pages:
     - FAQ: faq.md
   - About:
     - Documentation: about/index.md
-    - Whats New: 
+    - Whats New:
       - History: about/whatsnew/index.md
       - 0.4.0: about/whatsnew/0.4.0.md
       - 0.4.1: about/whatsnew/0.4.1.md
@@ -119,4 +119,4 @@ markdown_extensions:
   - smarty
   - sane_lists
   - toc(permalink=true)
-  
+ 

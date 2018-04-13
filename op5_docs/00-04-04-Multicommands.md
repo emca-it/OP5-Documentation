@@ -8,32 +8,32 @@ In lists of objects (such as host and service list views) that have commands you
 
 # Multiple host commands list
 
--   Schedule downtime
--   Cancel Scheduled downtime
--   Acknowledge
--   Remove problem acknowledgement
--   Disable host notifications
--   Enable host notifications
--   Disable notifications for all services
--   Disable Active checks
--   Enable Active checks
--   Reschedule host check
--   Add host comment
--   Delete host
+- Schedule downtime
+- Cancel Scheduled downtime
+- Acknowledge
+- Remove problem acknowledgement
+- Disable host notifications
+- Enable host notifications
+- Disable notifications for all services
+- Disable Active checks
+- Enable Active checks
+- Reschedule host check
+- Add host comment
+- Delete host
 
 # Multiple service commands list
 
--   Schedule downtime
--   Cancel Scheduled downtime
--   Acknowledge
--   Remove problem acknowledgement
--   Disable service notifications
--   Enable service notifications
--   Disable Active checks
--   Enable Active checks
--   Reschedule service check
--   Add service comment
--   Delete Service(s)
+- Schedule downtime
+- Cancel Scheduled downtime
+- Acknowledge
+- Remove problem acknowledgement
+- Disable service notifications
+- Enable service notifications
+- Disable Active checks
+- Enable Active checks
+- Reschedule service check
+- Add service comment
+- Delete Service(s)
 
 # Example
 
@@ -54,9 +54,6 @@ The multi action menu is located on top of every listview, on the far right side
  Chose **Acknowledge Problem** in the **Multi action** menu.
  ![](attachments/16482308/18481409.png)
 
- 
-
 Type in a comment and click **Submit**.
 
 ![](attachments/16482308/18481411.png)
-

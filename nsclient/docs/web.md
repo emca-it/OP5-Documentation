@@ -6,7 +6,6 @@ The `Home` screen greets you with a metrics overview.
 
 ![API Home](images/api_web_home.png)
 
-
 ## Modules
 
 You can list all (enabled) modules.
@@ -24,7 +23,6 @@ You can list and select queries provided by this module.
 Selecting the query jumps to the `Queries` tab and allows you to run the query immediately.
 
 ![API Modules CheckDisk Queries check_drivesize](images/api_web_modules_checkdisk_queries_check_drivesize.png)
-
 
 ## Settings
 

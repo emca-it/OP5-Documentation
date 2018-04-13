@@ -10,9 +10,9 @@ The first thing you will see when you login to OP5 Monitor is a dashboard and it
 
 In a dashboard you may:
 
--   Add new widgets and set them up as required
--   Move these widgets around within the layout
--   Remove widgets
+- Add new widgets and set them up as required
+- Move these widgets around within the layout
+- Remove widgets
 
 All changes you make with the widgets are saved per dashboard.
 
@@ -46,22 +46,22 @@ Displays a NagVis map of any kind in a widget box on your dashboard.
 
 There are many more widgets available that display a wide array of data and status information such as, when running OP5 Monitor you can play around with them as much as you like and simply remove them from the dashboard if they do not suit your needs.
 
--   -   Unacknowledged Service Problems
-    -   Scheduled Downtime
-    -   Acknowledged Service Problems
-    -   Disabled Checks
-    -   Services
-    -   Host Performance
-    -   Merlin Node Status
-    -   Acknowledged Problems
-    -   Monitoring Performance
-    -   Hosts
-    -   Network Health
-    -   Monitoring Features
-    -   Unhandled Problems
-    -   Business Processes
-    -   Network Outages
-    -   Geomap
+- Unacknowledged Service Problems
+  - Scheduled Downtime
+  - Acknowledged Service Problems
+  - Disabled Checks
+  - Services
+  - Host Performance
+  - Merlin Node Status
+  - Acknowledged Problems
+  - Monitoring Performance
+  - Hosts
+  - Network Health
+  - Monitoring Features
+  - Unhandled Problems
+  - Business Processes
+  - Network Outages
+  - Geomap
 
 # Widget parts
 
@@ -70,11 +70,11 @@ Below you see an example of what a widget can look like:
 ![](attachments/16482313/18481253.png)
  The following list describes the parts of a widget shown in the picture above.
 
-1.  Widget header
-2.  Minimize/Maximize widget content
-3.  Edit setting for widget
-4.  Remove widget from dashboard
-5.  Widget content
+1. Widget header
+2. Minimize/Maximize widget content
+3. Edit setting for widget
+4. Remove widget from dashboard
+5. Widget content
 
 ## Setting widget title
 
@@ -111,4 +111,3 @@ To remove a widget from the dashboard simply click the close button in its heade
 You may move around the widgets shown in the dashboard within the confines of the dashboards layout. Just grab a hold of it by clicking on the top bar and holding down the mouse button and move it to the position you like to place it in.
 
 When you hover a section where you can drop the widget, a gray area will show where the widget will be placed.
-

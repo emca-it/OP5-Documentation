@@ -37,10 +37,9 @@ Underline
 
 Headings of different levels
 
-    ==== Headline Level 3 ====  === Headline Level 4 ===  == Headline Level 5 == 
+    ==== Headline Level 3 ====  === Headline Level 4 ===  == Headline Level 5 ==
 
  Note:
  An article with 3 or more headings automatically creates a table of contents.
 
  For more information about formatting text please go to <https://www.dokuwiki.org/wiki:syntax>. More information about how to use the dokuwiki in OP5 Monitor can be found in [OP5 Monitor Administrator Manual](op5_Monitor_Administrator_Manual) or at <http://docuwiki.net/>
-

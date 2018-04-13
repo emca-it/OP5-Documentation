@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_CUSTOM_CONTACT_VAR<br>
 
-
 #### Command Format:
 
 `CHANGE_CUSTOM_CONTACT_VAR;contact_name;varname;varvalue`
@@ -29,6 +28,3 @@ Changes the value of a custom contact variable.
 
 printf "[%lu] CHANGE_CUSTOM_CONTACT_VAR;naemonadmin;_SOMEVAR;some new value\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

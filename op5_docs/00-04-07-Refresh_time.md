@@ -2,7 +2,7 @@
 
 # About
 
-Every view is automatically refreshed after a certain time. 
+Every view is automatically refreshed after a certain time.
 The default Global refresh time for listviews is 90 seconds.
 
 # Pausing the page refresh
@@ -23,13 +23,8 @@ Click on the **Settings** icon in the quickbar menu:
  Refresh will be valid as long as you are navigating on "list views" only. Go to host or service extinfo, configure or any other non "list view" page and then the refresh is back to default.
  The new refresh time will be your new default meaning that the next time you go to a listview or next time you login the listview will have your last refresh time.
 
- 
-
 * * * * *
-
- 
 
 # Related pages
 
 Error rendering macro 'sv-contentbylabel' : null
-

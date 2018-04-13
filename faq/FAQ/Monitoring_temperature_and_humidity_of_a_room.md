@@ -16,9 +16,4 @@ op5 Provides a starterpack for temperature and humidity monitoring with the foll
 
 More information about the device: <http://www.sensatronics.com/temperature-monitors/model-em1-temperature-humidity-monitor/>
 
- 
-
 Datasheet can be found here: [op5\_Environmental\_Module.pdf](attachments/5374507/5734453.pdf)
-
- 
-

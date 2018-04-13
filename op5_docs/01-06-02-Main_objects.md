@@ -7,17 +7,17 @@ The configuration is based on objects. There are several types of objects, each 
 Each object consists of a object name and a couple of variables that needs to be configured.
 For example on a host object you configure
 
--   -   host name
-    -   address
-    -   notifications
-    -   active checks
-    -   etc.
+- host name
+  - address
+  - notifications
+  - active checks
+  - etc.
 
 In Configure you can
 
--   -   add new objects
-    -   modify existing objects
-    -   remove existing objects.
+- add new objects
+  - modify existing objects
+  - remove existing objects.
 
 A lot of objects can be cross referenced in the configuration and Configure helps you with this too.
 In most of the listings you will find a small text field called **Filter by regular expression**. Use this to filter out the content you are interested in when viewing the different lists.
@@ -31,23 +31,23 @@ All objects have a list of directives that are required when adding a new object
 
 Hosts are one of the central objects in the monitoring logic. Important attributes of hosts are as follows:
 
--   -   Hosts are usually physical or virtual devices on your network (servers, workstations, routers, switches, printers, etc) but it could be practically anything you can reach and monitor from the OP5 Monitor server.
-    -   Hosts have an address of some kind, IP address or host name.
-    -   Hosts does not need a service directly associated to them, the services can be inherited from a hostgroup. A host can also exist without services.
-    -   Hosts can have parent/child relationships with other hosts, often representing real-world network connections, which is used in the network reachability logic.
+- Hosts are usually physical or virtual devices on your network (servers, workstations, routers, switches, printers, etc) but it could be practically anything you can reach and monitor from the OP5 Monitor server.
+  - Hosts have an address of some kind, IP address or host name.
+  - Hosts does not need a service directly associated to them, the services can be inherited from a hostgroup. A host can also exist without services.
+  - Hosts can have parent/child relationships with other hosts, often representing real-world network connections, which is used in the network reachability logic.
 
 ## Required directives
 
 The following directives are required for a host object.
 
--   -   -   host\_name
-        -   address
-        -   max\_check\_attempts
-        -   check\_period
-        -   contacts
-        -   contact\_groups
-        -   notification\_interval
-        -   notification\_period
+- host\_name
+  - address
+  - max\_check\_attempts
+  - check\_period
+  - contacts
+  - contact\_groups
+  - notification\_interval
+  - notification\_period
 
 The table below describes the required directives for the host object
 
@@ -77,25 +77,25 @@ The table below describes the required directives for the host object
 A service can be practically any thing that you can measure and monitor on a host. It is almost only your imagination and programming skills that sets the limit for what you can monitor with a service.
  A service
 
--   -   must be connected to a host
-    -   can check things by tcp, agents, snmp etc.
-    -   use a check command ([Commands](#Mainobjects-Commands)) to communicate with the plugin ([Plugins](Plugins)) that gets all the data.
+- must be connected to a host
+  - can check things by tcp, agents, snmp etc.
+  - use a check command ([Commands](#Mainobjects-Commands)) to communicate with the plugin ([Plugins](Plugins)) that gets all the data.
 
 ## Required directives
 
 The following directives are required for a service object.
 
--   -   -   host\_name
-        -   service\_description
-        -   check\_command
-        -   max\_check\_attempts
-        -   check\_interval
-        -   retry\_interval
-        -   check\_period
-        -   notification\_interval
-        -   notification\_period
-        -   contacts
-        -   contact\_groups
+- host\_name
+  - service\_description
+  - check\_command
+  - max\_check\_attempts
+  - check\_interval
+  - retry\_interval
+  - check\_period
+  - notification\_interval
+  - notification\_period
+  - contacts
+  - contact\_groups
 
 The table below describes the required directives for the host object
 
@@ -124,8 +124,8 @@ The table below describes the required directives for the host object
 
 A contact is used for two purposes:
 
--   -   to send notifications to
-    -   permissions to view a objects in the monitoring part of OP5 Monitor.
+- to send notifications to
+  - permissions to view a objects in the monitoring part of OP5 Monitor.
 
 A contact is not the same as the login account given access rights to the system.
 
@@ -133,19 +133,17 @@ A contact is not the same as the login account given access rights to the system
 
 The following directives are required for a service object.
 
--   -   -   contact\_name
-        -   host\_notifications\_enabled
-        -   service\_notifications\_enabled
-        -   host\_notification\_period
-        -   service\_notification\_period
-        -   host\_notification\_options
-        -   service\_notification\_options
-        -   host\_notification\_commands
-        -   service\_notification\_commands
+- contact\_name
+  - host\_notifications\_enabled
+  - service\_notifications\_enabled
+  - host\_notification\_period
+  - service\_notification\_period
+  - host\_notification\_options
+  - service\_notification\_options
+  - host\_notification\_commands
+  - service\_notification\_commands
 
 The table below describes the required directives for the host object
-
- 
 
 <table>
 <colgroup>
@@ -179,14 +177,10 @@ Local users are user accounts that makes it possible to login to the OP5 Monitor
 
 The following directives are required for a access rights object.
 
--   -   username
-    -   password
+- username
+  - password
 
 The table below describes the required directives for the host object.
-
- 
-
- 
 
 <table>
 <colgroup>
@@ -209,8 +203,6 @@ The table below describes the required directives for the host object.
 </tbody>
 </table>
 
- 
-
 ## Group Rights
 
 Group rights determents the permission the user will have. For more information about group right, see [Authorization](Authorization).
@@ -220,8 +212,8 @@ Group rights determents the permission the user will have. For more information 
 Time periods is time defining objects that span over a week. You can define included time for each day of the week in the time period definition.
  You can also:
 
--   use already defined time periods as excludes
--   add exceptions based on dates and ranges of days
+- use already defined time periods as excludes
+- add exceptions based on dates and ranges of days
 
 The time period objects are used at many places in the configuration. Most noticeably are in the contact objects where the time periods defines when notifications should be sent out.
  You can also use time periods to define when a service or a host should be monitored or when you are creating reports.
@@ -230,8 +222,6 @@ The time period objects are used at many places in the configuration. Most notic
 
 The following tables describes the directives of a time period and how to use them.
  The table below describes the first part of directives of a time period.
-
- 
 
 <table>
 <colgroup>
@@ -251,8 +241,6 @@ The following tables describes the directives of a time period and how to use th
  Depending on what kind of exception type you have chosen you will get different settings choices. The two lists below describes them all.
  The table below describes the exception part of a time period.
 
- 
-
 <table>
 <colgroup>
 <col width="50%" />
@@ -268,11 +256,7 @@ The following tables describes the directives of a time period and how to use th
 </tbody>
 </table>
 
- 
-
  The table below describes exception by **Date**:
-
- 
 
 **Directive/option**
 
@@ -298,9 +282,9 @@ Frequency
 
 How often the exception is repeated. Valid values are positive integers greater than one. E.g:
 
--   Date range "2012-01-01 - 2012-12-31 / 5" means every fifth day of 2012.
--   Day range "1 monday march - 3 sunday may / 3" means every third day between the first monday and the third sunday every month.
--   Date range "2012-06-01 / 14" means every 14th day from first of june 2012. Note that this exception has no end.
+- Date range "2012-01-01 - 2012-12-31 / 5" means every fifth day of 2012.
+- Day range "1 monday march - 3 sunday may / 3" means every third day between the first monday and the third sunday every month.
+- Date range "2012-06-01 / 14" means every 14th day from first of june 2012. Note that this exception has no end.
 
 Hours
 
@@ -308,8 +292,6 @@ Which time to include for this exception. You can define multiple times by separ
  00:00-01:00,03:00-06:00
 
  The table below describes exception by **Day**:
-
- 
 
 **Directive/option**
 
@@ -335,9 +317,9 @@ Frequency
 
 How often the exception is repeated. Valid values are positive integers greater than one. E.g:
 
--   Date range "2012-01-01 - 2012-12-31 / 5" means every fifth day of 2012.
--   Day range "1 monday march - 3 sunday may / 3" means every third day between the first monday and the third sunday every month.
--   Date range "2012-06-01 / 14" means every 14th day from first of june 2012. Note that this exception has no end.
+- Date range "2012-01-01 - 2012-12-31 / 5" means every fifth day of 2012.
+- Day range "1 monday march - 3 sunday may / 3" means every third day between the first monday and the third sunday every month.
+- Date range "2012-06-01 / 14" means every 14th day from first of june 2012. Note that this exception has no end.
 
 Hours
 
@@ -348,10 +330,10 @@ Which time to include for this exception. You can define multiple times by separ
 
 A command is exactly what it sounds like. It can use macros and arguments. Mostly they are used with services but they can actually be used as
 
--   -   service or host check command
-    -   notification command
-    -   event handler
-    -   obsession
+- service or host check command
+  - notification command
+  - event handler
+  - obsession
 
 The most common exposure to commands would be check commands for services or hosts, in particular when new commands are added during upgrades or when commands are updated when upgraded.
 
@@ -359,10 +341,8 @@ The most common exposure to commands would be check commands for services or hos
 
 A command has got only two directives
 
--   -   -   command\_name
-        -   command\_line
-
- 
+- command\_name
+  - command\_line
 
 <table>
 <colgroup>
@@ -403,13 +383,7 @@ If new commands are available they will be listed in the upper section of the sc
 
 In this particular case, all new commands are imported, and there are two modified commands available. Importing these commands would overwrite a by the administrator configured setting, thus I select to not do so.
 
- 
-
 Importing commands is a manual operation since updating existing commands might be destructive.
-
- 
-
- 
 
 # Plugins
 
@@ -417,9 +391,9 @@ Plugins are compiled executable or scripts that can be run from a command line t
  There are many plugins included in the OP5 Monitor software. A list of the plugins can be found in the [list of included plugins](https://kb.op5.com/display/PLUGINS/Plugins+List).
  If you are looking for a plugin not found in OP5 Monitor by default there are several other places to look:
 
--   -   Contact OP5 for a specific development
-    -   [www.op5.org](http://www.op5.org)
-    -   [exchange.nagios.org](http://exchange.nagios.org)
+- Contact OP5 for a specific development
+  - [www.op5.org](http://www.op5.org)
+  - [exchange.nagios.org](http://exchange.nagios.org)
 
 You can use any plugin written for Nagios but you might need to modify them a bit before they work in the OP5 Monitor environment.
 
@@ -431,4 +405,3 @@ To search the plugins that are shipped with OP5 Monitor or added afterwards to t
  See the support levels of the plugins and see descriptions of the plugins.
  The support levels are described in [Plugin Support Levels](plugin_support_levels).
 ![](attachments/16482406/16679135.png)
-

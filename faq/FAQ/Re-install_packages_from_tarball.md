@@ -4,8 +4,6 @@
 
 * * * * *
 
- 
-
 You can use the unpacked tarball directory as a repo with the config file created when you ran install.sh the first time.
 Go to the install directory:
 
@@ -24,10 +22,3 @@ Then, when you are standing in that directory, run the following, all on one lin
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # yum -c op5-yum.conf --disablerepo=*op5* --enablerepo=*install* reinstall @op5-monitor
 ```
-
- 
-
- 
-
- 
-

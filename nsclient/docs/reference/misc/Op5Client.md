@@ -2,28 +2,16 @@
 
 Client for connecting natively to the OP5 Nortbound API
 
-
-
-
-
-
 ## Configuration
-
-
 
 | Path / Section                                | Description          |
 |-----------------------------------------------|----------------------|
 | [/settings/op5](#op5-configuration)           | Op5 Configuration    |
 | [/settings/op5/checks](#op5-passive-commands) | Op5 passive Commands |
 
-
-
 ### Op5 Configuration <a id="/settings/op5"/>
 
 Section for the Op5 server
-
-
-
 
 | Key                                       | Default Value | Description            |
 |-------------------------------------------|---------------|------------------------|
@@ -38,8 +26,6 @@ Section for the Op5 server
 | [server](#op5-base-url)                   |               | Op5 base url           |
 | [user](#op5-user)                         |               | Op5 user               |
 
-
-
 ```ini
 # Section for the Op5 server
 [/settings/op5]
@@ -51,17 +37,9 @@ remove=false
 
 ```
 
-
-
-
-
 #### CHANNEL <a id="/settings/op5/channel"></a>
 
 The channel to listen to.
-
-
-
-
 
 | Key            | Description                     |
 |----------------|---------------------------------|
@@ -69,7 +47,6 @@ The channel to listen to.
 | Key:           | channel                         |
 | Default value: | `op5`                           |
 | Used by:       | Op5Client                       |
-
 
 **Sample:**
 
@@ -79,16 +56,9 @@ The channel to listen to.
 channel=op5
 ```
 
-
-
 #### Contact groups <a id="/settings/op5/contactgroups"></a>
 
 A coma separated list of contact groups to add to this host when registering it in monitor
-
-
-
-
-
 
 | Key            | Description                     |
 |----------------|---------------------------------|
@@ -96,7 +66,6 @@ A coma separated list of contact groups to add to this host when registering it 
 | Key:           | contactgroups                   |
 | Default value: | _N/A_                           |
 | Used by:       | Op5Client                       |
-
 
 **Sample:**
 
@@ -106,15 +75,9 @@ A coma separated list of contact groups to add to this host when registering it 
 contactgroups=
 ```
 
-
-
 #### Install default checks <a id="/settings/op5/default checks"></a>
 
 Set to false to disable default checks
-
-
-
-
 
 | Key            | Description                     |
 |----------------|---------------------------------|
@@ -122,7 +85,6 @@ Set to false to disable default checks
 | Key:           | default checks                  |
 | Default value: | `true`                          |
 | Used by:       | Op5Client                       |
-
 
 **Sample:**
 
@@ -132,16 +94,9 @@ Set to false to disable default checks
 default checks=true
 ```
 
-
-
 #### Host groups <a id="/settings/op5/hostgroups"></a>
 
 A coma separated list of host groups to add to this host when registering it in monitor
-
-
-
-
-
 
 | Key            | Description                     |
 |----------------|---------------------------------|
@@ -150,7 +105,6 @@ A coma separated list of host groups to add to this host when registering it in 
 | Default value: | _N/A_                           |
 | Used by:       | Op5Client                       |
 
-
 **Sample:**
 
 ```
@@ -158,8 +112,6 @@ A coma separated list of host groups to add to this host when registering it in 
 # Host groups
 hostgroups=
 ```
-
-
 
 #### HOSTNAME <a id="/settings/op5/hostname"></a>
 
@@ -175,18 +127,12 @@ ${domain}	Domainname
 ${domain_lc}	Domainname in lowercase
 ${domain_uc}	Domainname in uppercase
 
-
-
-
-
-
 | Key            | Description                     |
 |----------------|---------------------------------|
 | Path:          | [/settings/op5](#/settings/op5) |
 | Key:           | hostname                        |
 | Default value: | `auto`                          |
 | Used by:       | Op5Client                       |
-
 
 **Sample:**
 
@@ -196,15 +142,9 @@ ${domain_uc}	Domainname in uppercase
 hostname=auto
 ```
 
-
-
 #### Check interval <a id="/settings/op5/interval"></a>
 
 How often to submit passive check results you can use an optional suffix to denote time (s, m, h)
-
-
-
-
 
 | Key            | Description                     |
 |----------------|---------------------------------|
@@ -212,7 +152,6 @@ How often to submit passive check results you can use an optional suffix to deno
 | Key:           | interval                        |
 | Default value: | `5m`                            |
 | Used by:       | Op5Client                       |
-
 
 **Sample:**
 
@@ -222,16 +161,9 @@ How often to submit passive check results you can use an optional suffix to deno
 interval=5m
 ```
 
-
-
 #### Op5 password <a id="/settings/op5/password"></a>
 
 The password for the user to authenticate as
-
-
-
-
-
 
 | Key            | Description                     |
 |----------------|---------------------------------|
@@ -239,7 +171,6 @@ The password for the user to authenticate as
 | Key:           | password                        |
 | Default value: | _N/A_                           |
 | Used by:       | Op5Client                       |
-
 
 **Sample:**
 
@@ -249,15 +180,9 @@ The password for the user to authenticate as
 password=
 ```
 
-
-
 #### Remove checks on exit <a id="/settings/op5/remove"></a>
 
 If we should remove all checks when NSClient++ shuts down (for truly elastic scenarios)
-
-
-
-
 
 | Key            | Description                     |
 |----------------|---------------------------------|
@@ -265,7 +190,6 @@ If we should remove all checks when NSClient++ shuts down (for truly elastic sce
 | Key:           | remove                          |
 | Default value: | `false`                         |
 | Used by:       | Op5Client                       |
-
 
 **Sample:**
 
@@ -275,16 +199,9 @@ If we should remove all checks when NSClient++ shuts down (for truly elastic sce
 remove=false
 ```
 
-
-
 #### Op5 base url <a id="/settings/op5/server"></a>
 
 The OP5 base url i.e. the url of the Op5 monitor REST API for instance https://monitor.mycompany.com
-
-
-
-
-
 
 | Key            | Description                     |
 |----------------|---------------------------------|
@@ -292,7 +209,6 @@ The OP5 base url i.e. the url of the Op5 monitor REST API for instance https://m
 | Key:           | server                          |
 | Default value: | _N/A_                           |
 | Used by:       | Op5Client                       |
-
 
 **Sample:**
 
@@ -302,16 +218,9 @@ The OP5 base url i.e. the url of the Op5 monitor REST API for instance https://m
 server=
 ```
 
-
-
 #### Op5 user <a id="/settings/op5/user"></a>
 
 The user to authenticate as
-
-
-
-
-
 
 | Key            | Description                     |
 |----------------|---------------------------------|
@@ -319,7 +228,6 @@ The user to authenticate as
 | Key:           | user                            |
 | Default value: | _N/A_                           |
 | Used by:       | Op5Client                       |
-
 
 **Sample:**
 
@@ -329,16 +237,6 @@ The user to authenticate as
 user=
 ```
 
-
 ### Op5 passive Commands <a id="/settings/op5/checks"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
-
-
-
-
-
-

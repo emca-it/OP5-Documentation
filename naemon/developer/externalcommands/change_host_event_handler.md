@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_HOST_EVENT_HANDLER<br>
 
-
 #### Command Format:
 
 `CHANGE_HOST_EVENT_HANDLER;host_name;event_handler_command`
@@ -29,6 +28,3 @@ Changes the event handler command for a particular host to be that specified by 
 
 printf "[%lu] CHANGE_HOST_EVENT_HANDLER;host1;restart_service\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

@@ -93,7 +93,6 @@ curl -k -i -u admin https://localhost:8443/api/v1/scripts/ext?all=true
 In this example, the `ext` value is provided for the `:runtime` parameter in the path while `true` is passed in the query string for the `:all` parameter.
 Reserved characters by the HTTP protocol must be [URL-encoded](https://en.wikipedia.org/wiki/Percent-encoding) as query string, e.g. a space character becomes `%20`.
 
-
 For `POST`, `PUT`, and `DELETE` requests, parameters not included in the URL should be encoded as JSON with a `Content-Type of 'application/json'`:
 
 ```
@@ -356,7 +355,6 @@ The documentation prefers `python -m json.tool` as Python is available nearly ev
 
 Future versions of NSClient++ might set additional fields.
 Your application should gracefully handle fields it is not familiar with, for example by ignoring them.
-
 
 ## Legacy API
 

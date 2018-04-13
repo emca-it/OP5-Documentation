@@ -14,8 +14,6 @@ How do I troubleshoot the [GSM Modem / GSM Gateway / GSM Terminal](https://kb.op
 
 Connect the modem directly to the OP5 Monitor server instead of using a Ethernet over Serial solution. This will guarantee that notifications can be sent even if the local network goes down.
 
- 
-
 **Troubleshooting Steps:**
 
 1. Try to manually send yourself an SMS:
@@ -26,8 +24,6 @@ root@monitor:~# smssend 46733333333 'Test'
 
 Replace 46 with your country code. It may take a couple of minutes for the text message to reach your phone.
 
- 
-
 2. Check that the SMS daemon is running. You should get the following output with one or two random PID numbers at the end:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
@@ -35,11 +31,7 @@ root@monitor:~# service smsd status
 smsd is running with pid: 2550 2544
 ```
 
- 
-
 3. Check how often the modem LED is blinking. Please read the "Overview of LED Operating Status" below for details.
-
- 
 
 4. Check the SMS daemon log for error messages by running:
 
@@ -53,9 +45,9 @@ The command above might find an error line like this:
 
 This could be three different problems:
 
--   The GSM signal is too weak.
--   The SIM card is missing.
--   The PIN code is incorrect or isn't configured.
+- The GSM signal is too weak.
+- The SIM card is missing.
+- The PIN code is incorrect or isn't configured.
 
 5. If the server is a brand new OP5 Appliance machine from Dell, the COM1 port may be redirected to iDRAC.
 
@@ -90,8 +82,6 @@ External Serial Connector : Serial Device 1
 Failsafe Baud Rate : 115200
 Remote Terminal Type : VT100/VT220
 Redirection After Boot : Enabled
-
- 
 
 **Overview of LED Operating Status for Siemens MC35i / Cinterion TC65:**
 
@@ -140,4 +130,3 @@ Blinking once every second</td>
 </table>
 
 6. Go through our [guide for how to test your modem using Minicom](HowTo_test_SMS-Modem_using_minicom).
-

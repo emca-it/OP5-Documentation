@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_NOTIFICATIONS<br>
 
-
 #### Command Format:
 
 `ENABLE_NOTIFICATIONS;`
@@ -29,6 +28,3 @@ Enables host and service notifications on a program-wide basis.
 
 printf "[%lu] ENABLE_NOTIFICATIONS;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

@@ -6,8 +6,6 @@ This article was written for version 7.0 of OP5 Monitor, it could work on both l
 
 Articles in the Community-Space are not supported by OP5 Support.
 
- 
-
 # Introduction
 
 During investigations of issues, application and system logs are often a powerful tool to help determine the root cause of a problem.
@@ -24,16 +22,14 @@ To add a custom table column, hover over the configuration menu and select "My A
 Scroll down to "Table Services" and replace the content of the column configuration with:
 
 ``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
-default, "Log messages"=link( "listview?q=%5Blog_messages%5D" 
-+ "%20(rtime%20>%20" 
-+ urlencode(last_state_change-1800) 
-+ "%20and%20rtime%20<%20" 
-+ urlencode(last_state_change+1800) 
-+ ")%20and%20(ip%20~~%20\"" + urlencode(host.address) + "\"%20or%20host%20~~%20\"" 
+default, "Log messages"=link( "listview?q=%5Blog_messages%5D"
++ "%20(rtime%20>%20"
++ urlencode(last_state_change-1800)
++ "%20and%20rtime%20<%20"
++ urlencode(last_state_change+1800)
++ ")%20and%20(ip%20~~%20\"" + urlencode(host.address) + "\"%20or%20host%20~~%20\""
 + urlencode(host.name) +"\")", "Related logs")
 ```
-
- 
 
 The configuration above adds an extra column to the services table with encoded links to the following filter query:
 
@@ -45,15 +41,9 @@ The configuration above adds an extra column to the services table with encoded 
 
 The query filters for all log messages received 30 minutes before and after the service changed state from a host with the matching host address or host name.
 
- 
-
- 
-
 The configuration looks something like this in the user interface:
 
 ![](attachments/10944553/11141126.png)
-
- 
 
 # Usage
 
@@ -65,12 +55,3 @@ Click the "Related logs" link for the service you want to investigate:
 This brings you to a list view that hopefully helps you understand the root cause of the problem:
 
 ![](attachments/10944553/11141123.png)
-
- 
-
- 
-
- 
-
- 
-

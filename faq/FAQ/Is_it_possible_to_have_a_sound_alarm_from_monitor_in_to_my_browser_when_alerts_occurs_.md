@@ -17,4 +17,3 @@ If your web browser has the required plugins, you don't need to configure anythi
 /opt/monitor/op5/nagvis\_ls/share/userfiles/sounds/std\_error.mp3
 /opt/monitor/op5/nagvis\_ls/share/userfiles/sounds/std\_unreachable.mp3
 /opt/monitor/op5/nagvis\_ls/share/userfiles/sounds/std\_warning.mp3
-

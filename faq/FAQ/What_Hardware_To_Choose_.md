@@ -62,13 +62,12 @@ Optional|
 
 ## Our recommendations
 
--   OP5 Entry System; For companies with up to 300 actively monitored Monitored Devices
--   OP5 Standard System: For companies with up to 2000 monitored Monitored Devices
--   OP5 Large System: For companies with over 2000 monitored Monitored Devices
+- OP5 Entry System; For companies with up to 300 actively monitored Monitored Devices
+- OP5 Standard System: For companies with up to 2000 monitored Monitored Devices
+- OP5 Large System: For companies with over 2000 monitored Monitored Devices
 
 The choice of system is dependent on the size of the IT environment you wish to monitor, such as the number of ”checks” you want to perform per host and your need for redundancy. We have customers in all sizes, monitoring everything between twenty devices up to customers with thousands of monitored devices and hundreds of thousands of checks. Do not hesitate to [contact us](http://www.op5.com/about/contact-us/ "Contact us") if you are uncertain and we will come back to you with an answer.
 
 ## Upgrading, Scaling and Redundancy
 
 All the systems support redundancy and load balancing. This allows for a system design with several OP5 Monitor systems configured together.
-

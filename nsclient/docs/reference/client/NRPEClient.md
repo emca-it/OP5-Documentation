@@ -2,9 +2,6 @@
 
 NRPE client can be used both from command line and from queries to check remote systes via NRPE as well as configure the NRPE server
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the NRPEClient module.
@@ -21,19 +18,11 @@ A list of all available queries (check commands)
 | [nrpe_query](#nrpe_query)     | Request remote information via NRPE.                                           |
 | [submit_nrpe](#submit_nrpe)   | Submit information to remote host via NRPE. (Most likely you want nrpe_query). |
 
-
-
-
 ### check_nrpe
 
 Request remote information via NRPE.
 
-
 * [Command-line Arguments](#check_nrpe_options)
-
-
-
-
 
 <a name="check_nrpe_help"/>
 <a name="check_nrpe_help-pb"/>
@@ -64,7 +53,6 @@ Request remote information via NRPE.
 <a name="check_nrpe_buffer-length"/>
 <a name="check_nrpe_options"/>
 #### Command-line Arguments
-
 
 | Option                 | Default Value | Description                                                                                                                                                               |
 |------------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -97,25 +85,17 @@ Request remote information via NRPE.
 | payload-length         |               | Length of payload (has to be same as on the server)                                                                                                                       |
 | buffer-length          |               | Length of payload to/from the NRPE agent. This is a hard specific value so you have to "configure" (read recompile) your NRPE agent to use the same value for it to work. |
 
-
-
 <h5 id="check_nrpe_ssl">ssl:</h5>
 
 Initial an ssl handshake with the server.
 
 *Default Value:* `1`
 
-
 ### exec_nrpe
 
 Execute remote script via NRPE. (Most likely you want nrpe_query).
 
-
 * [Command-line Arguments](#exec_nrpe_options)
-
-
-
-
 
 <a name="exec_nrpe_help"/>
 <a name="exec_nrpe_help-pb"/>
@@ -146,7 +126,6 @@ Execute remote script via NRPE. (Most likely you want nrpe_query).
 <a name="exec_nrpe_buffer-length"/>
 <a name="exec_nrpe_options"/>
 #### Command-line Arguments
-
 
 | Option                | Default Value | Description                                                                                                                                                               |
 |-----------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -179,48 +158,31 @@ Execute remote script via NRPE. (Most likely you want nrpe_query).
 | payload-length        |               | Length of payload (has to be same as on the server)                                                                                                                       |
 | buffer-length         |               | Length of payload to/from the NRPE agent. This is a hard specific value so you have to "configure" (read recompile) your NRPE agent to use the same value for it to work. |
 
-
-
 <h5 id="exec_nrpe_ssl">ssl:</h5>
 
 Initial an ssl handshake with the server.
 
 *Default Value:* `1`
 
-
 ### nrpe_forward
 
 Forward the request as-is to remote host via NRPE.
 
-
 * [Command-line Arguments](#nrpe_forward_options)
-
-
-
-
 
 <a name="nrpe_forward_*"/>
 <a name="nrpe_forward_options"/>
 #### Command-line Arguments
 
-
 | Option | Default Value | Description |
 |--------|---------------|-------------|
 | *      |               |             |
-
-
-
 
 ### nrpe_query
 
 Request remote information via NRPE.
 
-
 * [Command-line Arguments](#nrpe_query_options)
-
-
-
-
 
 <a name="nrpe_query_help"/>
 <a name="nrpe_query_help-pb"/>
@@ -251,7 +213,6 @@ Request remote information via NRPE.
 <a name="nrpe_query_buffer-length"/>
 <a name="nrpe_query_options"/>
 #### Command-line Arguments
-
 
 | Option                 | Default Value | Description                                                                                                                                                               |
 |------------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -284,25 +245,17 @@ Request remote information via NRPE.
 | payload-length         |               | Length of payload (has to be same as on the server)                                                                                                                       |
 | buffer-length          |               | Length of payload to/from the NRPE agent. This is a hard specific value so you have to "configure" (read recompile) your NRPE agent to use the same value for it to work. |
 
-
-
 <h5 id="nrpe_query_ssl">ssl:</h5>
 
 Initial an ssl handshake with the server.
 
 *Default Value:* `1`
 
-
 ### submit_nrpe
 
 Submit information to remote host via NRPE. (Most likely you want nrpe_query).
 
-
 * [Command-line Arguments](#submit_nrpe_options)
-
-
-
-
 
 <a name="submit_nrpe_help"/>
 <a name="submit_nrpe_help-pb"/>
@@ -335,7 +288,6 @@ Submit information to remote host via NRPE. (Most likely you want nrpe_query).
 <a name="submit_nrpe_buffer-length"/>
 <a name="submit_nrpe_options"/>
 #### Command-line Arguments
-
 
 | Option                  | Default Value | Description                                                                                                                                                               |
 |-------------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -370,20 +322,13 @@ Submit information to remote host via NRPE. (Most likely you want nrpe_query).
 | payload-length          |               | Length of payload (has to be same as on the server)                                                                                                                       |
 | buffer-length           |               | Length of payload to/from the NRPE agent. This is a hard specific value so you have to "configure" (read recompile) your NRPE agent to use the same value for it to work. |
 
-
-
 <h5 id="submit_nrpe_ssl">ssl:</h5>
 
 Initial an ssl handshake with the server.
 
 *Default Value:* `1`
 
-
-
-
 ## Configuration
-
-
 
 | Path / Section                                              | Description               |
 |-------------------------------------------------------------|---------------------------|
@@ -391,20 +336,13 @@ Initial an ssl handshake with the server.
 | [/settings/NRPE/client/handlers](#client-handler-section)   | CLIENT HANDLER SECTION    |
 | [/settings/NRPE/client/targets](#remote-target-definitions) | REMOTE TARGET DEFINITIONS |
 
-
-
 ### NRPE CLIENT SECTION <a id="/settings/NRPE/client"/>
 
 Section for NRPE active/passive check module.
 
-
-
-
 | Key                 | Default Value | Description |
 |---------------------|---------------|-------------|
 | [channel](#channel) | NRPE          | CHANNEL     |
-
-
 
 ```ini
 # Section for NRPE active/passive check module.
@@ -413,17 +351,9 @@ channel=NRPE
 
 ```
 
-
-
-
-
 #### CHANNEL <a id="/settings/NRPE/client/channel"></a>
 
 The channel to listen to.
-
-
-
-
 
 | Key            | Description                                     |
 |----------------|-------------------------------------------------|
@@ -431,7 +361,6 @@ The channel to listen to.
 | Key:           | channel                                         |
 | Default value: | `NRPE`                                          |
 | Used by:       | NRPEClient                                      |
-
 
 **Sample:**
 
@@ -441,29 +370,15 @@ The channel to listen to.
 channel=NRPE
 ```
 
-
 ### CLIENT HANDLER SECTION <a id="/settings/NRPE/client/handlers"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
-
-
-
-
-
 
 ### REMOTE TARGET DEFINITIONS <a id="/settings/NRPE/client/targets"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key                | Default Value | Description           |
 |--------------------|---------------|-----------------------|
@@ -482,7 +397,6 @@ This is a section of objects. This means that you will create objects below this
 | timeout            | 30            | TIMEOUT               |
 | use ssl            |               | ENABLE SSL ENCRYPTION |
 | verify mode        |               | VERIFY MODE           |
-
 
 **Sample:**
 
@@ -506,9 +420,3 @@ timeout=30
 #verify mode=...
 
 ```
-
-
-
-
-
-

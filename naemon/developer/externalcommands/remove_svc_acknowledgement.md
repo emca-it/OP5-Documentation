@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - REMOVE_SVC_ACKNOWLEDGEMENT<br>
 
-
 #### Command Format:
 
 `REMOVE_SVC_ACKNOWLEDGEMENT;host_name;service_description`
@@ -29,6 +28,3 @@ This removes the problem acknowledgement for a particular service. Once the ackn
 
 printf "[%lu] REMOVE_SVC_ACKNOWLEDGEMENT;host1;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

@@ -25,7 +25,6 @@ Filter by Category: <select onchange="_update_cmd_filter(this.value)">
     <option value="process">Core process</option>
 </select>
 
-
 <h5 class='commands host'><a href='acknowledge_host_problem.html'>ACKNOWLEDGE_HOST_PROBLEM</a></h5>
 <h5 class='commands service'><a href='acknowledge_svc_problem.html'>ACKNOWLEDGE_SVC_PROBLEM</a></h5>
 <h5 class='commands comment host'><a href='add_host_comment.html'>ADD_HOST_COMMENT</a></h5>
@@ -186,8 +185,6 @@ Filter by Category: <select onchange="_update_cmd_filter(this.value)">
 <h5 class='commands service'><a href='stop_obsessing_over_svc.html'>STOP_OBSESSING_OVER_SVC</a></h5>
 <h5 class='commands process'><a href='stop_obsessing_over_svc_checks.html'>STOP_OBSESSING_OVER_SVC_CHECKS</a></h5>
 
-
-
 <script type="text/javascript">
 <!--
 function _update_cmd_filter(val) {
@@ -201,4 +198,3 @@ function _update_cmd_filter(val) {
 }
 -->
 </script>
-

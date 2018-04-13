@@ -7,9 +7,9 @@ This is a great way to start learning OP5 Trapper and to verify that traps are g
 
 # Prerequisites
 
--   OP5 Monitor version 6.3 or later, including a license allowing Trapper.
--   A host in Monitor set up with the same address as the source of your test traps (localhost in the example below).
--   A service in Monitor named *Trap Dump* on the host described above.
+- OP5 Monitor version 6.3 or later, including a license allowing Trapper.
+- A host in Monitor set up with the same address as the source of your test traps (localhost in the example below).
+- A service in Monitor named *Trap Dump* on the host described above.
 
 # Instructions
 
@@ -30,16 +30,14 @@ Once the handler has been uploaded, go to "Matchers" and then "New Matcher". We
 
 Go to "Subservices" and then "Trigger test trap". Now enter these values:
 
--   **Uptime:** 1
--   **Trap OID:** .1.3.6.1.4.1.637.64.0.10.1.2
--   **Trap contents**
-    -   **OID:** .1.3.6.1.4.1.637.64.0.10.1.2
-    -   **Type:** Integer
-    -   **Value:** 2
+- **Uptime:** 1
+- **Trap OID:** .1.3.6.1.4.1.637.64.0.10.1.2
+- **Trap contents**
+  - **OID:** .1.3.6.1.4.1.637.64.0.10.1.2
+  - **Type:** Integer
+  - **Value:** 2
 
 ![](attachments/6193568/6422592.png)
-
- 
 
 ### 4 - Watch your traps appear in the list view.
 ![](attachments/6193568/6422593.png)
@@ -50,12 +48,7 @@ If you have root shell access to the host system running OP5 Monitor, you can ru
 
 `tail -f /var/log/messages | grep trapper-collector`
 
- 
-
 ### Read more...
 
--   [How to configure OP5 Trapper Extension (Cisco handler) (Advanced)](How_to_configure_op5_Trapper_Extension_Cisco_handler_) 
--   [Trapper manual](https://kb.op5.com/display/DOC/op5+Trapper+Manual)
-
- 
-
+- [How to configure OP5 Trapper Extension (Cisco handler) (Advanced)](How_to_configure_op5_Trapper_Extension_Cisco_handler_)
+- [Trapper manual](https://kb.op5.com/display/DOC/op5+Trapper+Manual)

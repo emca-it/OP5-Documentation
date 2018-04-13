@@ -75,8 +75,3 @@ check_snmp_printer</td>
 </tr>
 </tbody>
 </table>
-
- 
-
- 
-

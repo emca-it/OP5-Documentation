@@ -57,13 +57,12 @@ NSClient++ should run on the following operating systems:
 *   Linux: Debian, Centos and Ubuntu (and possibly others as well)
 *   Win32, x64 as well as various Linux hardware as well.
 
-
 #### Linux:
 
 NSClient++ has official packages for:
 
--   Debian
--   CentOS and Red Hat Enterprise
+- Debian
+- CentOS and Red Hat Enterprise
 
 ## Configuration
 
@@ -91,14 +90,13 @@ Sections
 Like in all INI, section start with a name between "[]". The first section is `[/modules]`.
 In general NSClient++ has a hierarchical settings structure much like a file-system. This means that everything under /settings is related to settings and so on and so forth.
 
--   Sections do not have an explicit end. When a new section start, the previous one end.
--   Sections can be empty
--   Sections generally starts with either (if they don't, you probably have an older version): `/modules` or `/settings/`
+- Sections do not have an explicit end. When a new section start, the previous one end.
+- Sections can be empty
+- Sections generally starts with either (if they don't, you probably have an older version): `/modules` or `/settings/`
 
 ```
 [/modules]
 ...
-
 
 [/settings/...]
 ...
@@ -108,7 +106,7 @@ In general NSClient++ has a hierarchical settings structure much like a file-sys
 
 Comments are line starting by a semi-colon ";"
 
--   This is a comment, which appears in green on notepad++. Colors helps me a lot!
+- This is a comment, which appears in green on notepad++. Colors helps me a lot!
 
 #### Values
 
@@ -146,7 +144,6 @@ nrpe3 = NRPEServer
 
 !!! note
     Modules in bold below are commonly used with Nagios.
-
 
 | Module                 | Has Config | Requires Config | Comment                                                                                                                                                |
 |------------------------|------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -231,7 +228,6 @@ The other option is to allow arguments but **it is important to consider the sec
 For a detailed guide on how to setup NRPE with NSClient++ step by step including debugging and testing see [debugging nrpe](../howto/nrpe.md).
 
 A less restrictive configuration is shown here where we have **allowed** all kinds of arguments for simplicity.
-
 
 !!! danger
     This has security implications!
@@ -343,9 +339,8 @@ This is simple (no access denied issue), but may lead to security issue if a bre
 As with others solutions, like Microsoft SCOM, you can restrict NSClient++ power by using a Windows account.
 
 Needed right will depend on what you want to monitor, but as a basis, you will need an account:
--   Member of the local Windows group Performance Monitor Users. Needed to collect performance counters
--   Log on as a service grant. Granted when you set the account, but should be applied through GPO to remain consistent.
-
+- Member of the local Windows group Performance Monitor Users. Needed to collect performance counters
+- Log on as a service grant. Granted when you set the account, but should be applied through GPO to remain consistent.
 
 'Power users' group is a no-go. It still exists but does nothing on releases from Vista onward. On XP and 2003, it nearly means admin rights, which is contrary to the target.
 
@@ -365,14 +360,13 @@ You can restrict hosts allowed to speak to NSClient++ from the config file. This
 
 NSClient++ is designed to be open-ended and allow you to customize it in any way you desire. This extensibility is a core feature.
 
--   ExternalScripts responds to queries and are executed by the operating system and the results are returned as-is.
+- ExternalScripts responds to queries and are executed by the operating system and the results are returned as-is.
     This is generally the simplest way to extend NSClient++ as you can utilize whatever infrastructure or skill set you already have.
--   LuaScripts are internal scripts which runs inside NSClient++ and performs various tasks and/or responds to queries.
+- LuaScripts are internal scripts which runs inside NSClient++ and performs various tasks and/or responds to queries.
     This is the best option if you want to allow the script to run on any platform with as little infrastructure as possible.
--   PythonScripts are internal scripts which runs inside NSClient++ and performs various tasks and/or responds to queries.
+- PythonScripts are internal scripts which runs inside NSClient++ and performs various tasks and/or responds to queries.
     Python is an easy and powerful language but it requires you to also install python which is often not possible on server hardware.
--   .Net modules similar to Native modules below but written on the dot-net platform.
+- .Net modules similar to Native modules below but written on the dot-net platform.
     This allows you to write components on top of the large dot-net ecosystem.
--   Modules are native plugins which can extend NSClient++ in pretty much any way possible.
+- Modules are native plugins which can extend NSClient++ in pretty much any way possible.
     This is probably the most complicated way but gives you the most power and control.
-

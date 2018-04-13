@@ -2,8 +2,6 @@
 
 This article is kept for historical purposes only. OP5 Statisitcs is considered to be deprecated software
 
- 
-
 op5 Statistics comes with a lot of scripts as it is. But there are times when the pre-installed scripts just aren’t enough. This How-To will show you how to add your own script to OP5 Statistics and how to create graphs with it. We will be using a simple script as an example and then create all templates needed to make it easy to use.
 
 In this How-To we will be using a small Perl script that uses the OP5 Monitor plugin called check\_http to graph the response time of a webserver. All commands in this How-To are executed in an ssh connection at the OP5 Statistics server.
@@ -96,11 +94,11 @@ Hostname or IP address</td>
 
 Explanation:
 
--   **Field [Input]:** Here you will find the arguments added in the “Input String” when you started to create the Data Method.
--   **Friendly Name:** Just a small description of your Input Field.
--   **Regular Expression Match:** If you want to require a certain regular expression to be matched against input data, enter it here (ereg format). Not in use now.
--   **Allow Empty Input:** Checking this box will make it possible to use this script with an empty argument. Not in use now.
--   **Special Type Code:** Making OP5 Statistics using the host name variable from the device that will use this later on instead of forcing you to enter one.
+- **Field [Input]:** Here you will find the arguments added in the “Input String” when you started to create the Data Method.
+- **Friendly Name:** Just a small description of your Input Field.
+- **Regular Expression Match:** If you want to require a certain regular expression to be matched against input data, enter it here (ereg format). Not in use now.
+- **Allow Empty Input:** Checking this box will make it possible to use this script with an empty argument. Not in use now.
+- **Special Type Code:** Making OP5 Statistics using the host name variable from the device that will use this later on instead of forcing you to enter one.
 
 Click on the “create” button when you are done editing.
 
@@ -127,9 +125,9 @@ Response time in seconds</td>
 
 Explanation
 
--   **Field [Output]:** The name of the output data that OP5 Statistics receives from the script in a poll.
--   **Friendly Name:** Just a small description of your Output Field.
--   **Update RRD File:** Checking this make sure that the data from the script is stored in to the rrd file used by the graphs later on.
+- **Field [Output]:** The name of the output data that OP5 Statistics receives from the script in a poll.
+- **Friendly Name:** Just a small description of your Output Field.
+- **Update RRD File:** Checking this make sure that the data from the script is stored in to the rrd file used by the graphs later on.
 
 Click on the “create” button when you are done editing. Now just click on the “Save” button at the right bottom of the page and your Data Input Method “Get Response Time” is ready to use.
 
@@ -167,11 +165,11 @@ Choose Get HTTP Respons Time</td>
 
 Explanation
 
--   **Name:** |host\_description| is used so the host description will be used later on in the graphs. It makes sure the data source is distinguish for different devices.
--   **Data Input Method:** The Data Input Method used to collect the data.
--   **Associated RRA’s:** Round Robin Archives, which stores the data for a specific frequency in the RRD file
--   **Step:** Interval between pollings, in seconds
--   **Data Source Active:** If you un-check this the data source will be inactive and not in use.
+- **Name:** |host\_description| is used so the host description will be used later on in the graphs. It makes sure the data source is distinguish for different devices.
+- **Data Input Method:** The Data Input Method used to collect the data.
+- **Associated RRA’s:** Round Robin Archives, which stores the data for a specific frequency in the RRD file
+- **Step:** Interval between pollings, in seconds
+- **Data Source Active:** If you un-check this the data source will be inactive and not in use.
 
 <table>
 <colgroup>
@@ -204,9 +202,9 @@ In the main menu in the configuration GUI of OP5 Statistics you will find “Gra
 
 In the new page you will find two tables. Most of the options are left with their default values. We only need to change these three options:
 
--   Name
--   Title
--   Vertical Label
+- Name
+- Title
+- Vertical Label
 
 The table below shows you the values of all the options on the first page.
 
@@ -222,8 +220,6 @@ Get HTTP Response Time</td>
 </tr>
 </tbody>
 </table>
-
- 
 
 Graph Template
 
@@ -244,12 +240,12 @@ Choose png</td>
 
 Explanation:
 
--   **Image Format:** Choose what format the graph images are supposed to be in.
--   **Height:** The height of the graph images
--   **Width:** The width of the graph images
--   **Auto Scale:** Check this if you want the graph to be auto scaled.
--   **Auto Scale Options:** How the auto scale function is going to be used.
--   **Vertical Label:** The vertical label shown in the graph image.
+- **Image Format:** Choose what format the graph images are supposed to be in.
+- **Height:** The height of the graph images
+- **Width:** The width of the graph images
+- **Auto Scale:** Check this if you want the graph to be auto scaled.
+- **Auto Scale Options:** How the auto scale function is going to be used.
+- **Vertical Label:** The vertical label shown in the graph image.
 
 After filling in the options click on the “Create” -button. After a successful creation of the Graph Template you will see a page with two new tables and the one you just saw.
 
@@ -319,8 +315,3 @@ Now you will see that we have a associated graph template which is not being gra
  Check the unused one in the check-box to the right and click on the “Create” -button.
 
 “+ Created graph: example.org – Get HTTP Response time” is displayed on the top of the page and you may click on “\*Edit this host” to go back to the host options again. Click on the “Save” -button and you are done with creating the graphs.
-
- 
-
- 
-

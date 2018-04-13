@@ -6,10 +6,9 @@
 
 NSCP has a built-in "test and debug" mode that you can activate with the following command `nscp test`. This does two things:
 
-1.  it starts the daemon as "usual" with the same configuration and such.
-2.  it enables debug logging and logs to the console.
+1. it starts the daemon as "usual" with the same configuration and such.
+2. it enables debug logging and logs to the console.
     This makes it quite easy to see what is going on and why things go wrong.
-
 
 ### 1.2 MSI or ZIP installation?
 
@@ -29,8 +28,8 @@ For details, see [Microsoft Knowledge Article 300956](http://support.microsoft.c
 
 Usually this is due to running more then once instance of NSClient++ or possibly running another program that uses the same port.
 
--   Make sure you don't have any other instance NSClient++ started.
--   Check if the port is in use (`netstat -a` look for LISTENING)
+- Make sure you don't have any other instance NSClient++ started.
+- Check if the port is in use (`netstat -a` look for LISTENING)
 
 ### 1.5 EventlogBuffer is too small
 
@@ -129,8 +128,8 @@ This is a security measure inherited from the regular NRPE client.
 The following characters are considered harmful: \|\`&><'\"\\[]{}
 To work around this you have two options.
 
-1.  You can enable it
-2.  You can switch most commands to not use nasty characters
+1. You can enable it
+2. You can switch most commands to not use nasty characters
 
 To enable this in the NRPE server you can add the following:
 
@@ -150,7 +149,6 @@ To not use nasty characters you can replace man y of them in built-in commands:
 | <          | lt          |
 | '          | str(...)    |
 | ${..}      | %(..)       |
-
 
 ## 3. Versions
 
@@ -245,8 +243,8 @@ In 0.4.2 we introduced a new set of commands which were more generic and similar
 The previous ones are only for compatibility and will eventually be removed from NSClient++.
 Currently they are about 90% compatible which means some things will not work as before and some commands are not even present anymore.
 
-1.  Personally, I think that the benefits of using the new commands is worth the effort required to convert to them. Should you have a specific command using the old syntax which no longer works, please let me know and I will see about adding support for it.
-2.  `check_nt`
+1. Personally, I think that the benefits of using the new commands is worth the effort required to convert to them. Should you have a specific command using the old syntax which no longer works, please let me know and I will see about adding support for it.
+2. `check_nt`
 
 ### 5.3 I use check_nt and...
 
@@ -279,9 +277,9 @@ To work around this in 0.4.x we introduced real SSL support as well as certifica
 
 To allow "legacy" `check_nrpe` connections to NSClient++, you need to enable *insecure mode* which can be done in multiple ways:
 
-1.  In the MSI installer there is an option to select insecure mode;
-2.  From command line you can run the `nscp nrpe install --insecure`;
-3.  You can manually set the option in your config file.
+1. In the MSI installer there is an option to select insecure mode;
+2. From command line you can run the `nscp nrpe install --insecure`;
+3. You can manually set the option in your config file.
 
 All these options will result in the following configuration:
 
@@ -296,7 +294,6 @@ insecure = true
 ```
 
 If you instead opt to use the more secure standard SSL approach used in NSClient++ you can easily install NSClient++ on a Linux system as well.
-
 
 ## 8. My question is not here.
 

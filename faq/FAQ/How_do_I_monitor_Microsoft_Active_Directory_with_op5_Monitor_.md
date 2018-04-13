@@ -11,4 +11,3 @@ How do I monitor Microsoft Active Directory with OP5 Monitor?
 * * * * *
 
 The [Monitoring Microsoft Active Directory](https://kb.op5.com/display/HOWTOs/Monitoring+Microsoft+Active+Directory) describes how this can be done.
-

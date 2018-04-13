@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - REMOVE_HOST_ACKNOWLEDGEMENT<br>
 
-
 #### Command Format:
 
 `REMOVE_HOST_ACKNOWLEDGEMENT;host_name`
@@ -29,6 +28,3 @@ This removes the problem acknowledgement for a particular host. Once the acknowl
 
 printf "[%lu] REMOVE_HOST_ACKNOWLEDGEMENT;host1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

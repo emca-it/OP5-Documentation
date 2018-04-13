@@ -10,8 +10,6 @@ It will cover the different components of the product and how they interact with
 *![](attachments/16482360/17269437.png)
 This illustration is a simplified version of the components relationships*
 
- 
-
 # Components
 
 Below are descriptions of the most critical components included in OP5 Monitor:
@@ -29,26 +27,26 @@ but can easily be extended to support other applications, thanks to it's compati
 
 ### Additional information
 
--   [Plugins included in OP5 Monitor](.How_op5_Monitor_works_under_the_hood_v7.3.0)
--   HOW-TO: [Developing your own check plugin](.How_op5_Monitor_works_under_the_hood_v7.3.0)
--   HOW-TO: [Installing third-party plugins](https://kb.op5.com/display/HOWTOs/Installing+third-party+plugins)
--   Blog post: [op5 on Naemon, Nagios and the future](https://www.op5.com/blog/news/op5-naemon-nagios-future/)
--   [The Naemon project website](http://www.naemon.org/) (external)
+- [Plugins included in OP5 Monitor](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- HOW-TO: [Developing your own check plugin](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- HOW-TO: [Installing third-party plugins](https://kb.op5.com/display/HOWTOs/Installing+third-party+plugins)
+- Blog post: [op5 on Naemon, Nagios and the future](https://www.op5.com/blog/news/op5-naemon-nagios-future/)
+- [The Naemon project website](http://www.naemon.org/) (external)
 
 ## Merlin -
 
 Merlin is the software component in Monitor responsible for load balancing/high availability and distributed monitoring.
-It takes care of tasks like splitting configuration for pollers, making sure checks get spread out over peers and synchronizing object states. 
+It takes care of tasks like splitting configuration for pollers, making sure checks get spread out over peers and synchronizing object states.
 
 It consists of two parts - a Naemon module and a system daemon.
 Merlin uses a custom protocol for exchanging state information and utilizes SSH for configuration management.
 
 ### Additional information
 
--   [Merlin community space](.How_op5_Monitor_works_under_the_hood_v7.3.0)
--   [Distributed monitoring documentation](.How_op5_Monitor_works_under_the_hood_v7.3.0)
--   [Load balanced monitoring documentation](.How_op5_Monitor_works_under_the_hood_v7.3.0)
--   [Merlin work flow and design](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- [Merlin community space](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- [Distributed monitoring documentation](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- [Load balanced monitoring documentation](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- [Merlin work flow and design](.How_op5_Monitor_works_under_the_hood_v7.3.0)
 
 ## Livestatus -
 
@@ -59,8 +57,8 @@ Livestatus is used by many components inside Monitor, but can also be queried th
 
 ### Additional information
 
--   [Livestatus community space](.How_op5_Monitor_works_under_the_hood_v7.3.0)
--   [Documentation for the original version of MK Livestatus](https://mathias-kettner.de/checkmk_livestatus.html) (external)
+- [Livestatus community space](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- [Documentation for the original version of MK Livestatus](https://mathias-kettner.de/checkmk_livestatus.html) (external)
 
 ## Logger -
 
@@ -71,10 +69,10 @@ The logs can be viewed and searched in Ninja or queried through the HTTP API.
 
 ### Additional information
 
--   [Logger documentation](.How_op5_Monitor_works_under_the_hood_v7.3.0)
--   HOW-TO: [Monitoring log filters in Monitor 7.0 or higher ](.How_op5_Monitor_works_under_the_hood_v7.3.0)
--   HOW-TO: [Using Logger and custom columns for root cause analysis](https://kb.op5.com/display/HOWTOs/Using+Logger+and+custom+columns+for+root+cause+analysis)
--   [Documentation for syslog-ng OSE](index) (external)
+- [Logger documentation](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- HOW-TO: [Monitoring log filters in Monitor 7.0 or higher ](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- HOW-TO: [Using Logger and custom columns for root cause analysis](https://kb.op5.com/display/HOWTOs/Using+Logger+and+custom+columns+for+root+cause+analysis)
+- [Documentation for syslog-ng OSE](index) (external)
 
 ## Trapper -
 
@@ -88,9 +86,9 @@ Trapper can be managed in Ninja or via the command line tool "traped".
 
 ### Additional information
 
--   [Trapper documentation](op5_Trapper_Manual)
--   HOW-TO: [Getting started with OP5 Trapper](https://kb.op5.com/display/HOWTOs/Getting+started+with+op5+Trapper)
--   [Manual page for snmptrapd configuration](http://www.net-snmp.org/docs/man/snmptrapd.conf.html) (external)
+- [Trapper documentation](op5_Trapper_Manual)
+- HOW-TO: [Getting started with OP5 Trapper](https://kb.op5.com/display/HOWTOs/Getting+started+with+op5+Trapper)
+- [Manual page for snmptrapd configuration](http://www.net-snmp.org/docs/man/snmptrapd.conf.html) (external)
 
 ## Synergy -
 
@@ -99,16 +97,16 @@ analyze information from hosts and services in Naemon to determine a high level 
 
 It queries the Livestatus database for status information and runs a set of user defined rules to determine the state of a business object.
 The business object can be "materialized" as service on a host, which will result in Synergy sending passive check results to Naemon.
-This allows you to include the business objects in reports and configure alerting/event handlers for them. 
+This allows you to include the business objects in reports and configure alerting/event handlers for them.
 
 Synergy can be configured in Ninja under "Business Services" or with configuration files.
 
 ### Additional information
 
--   [Business Services documentation](.How_op5_Monitor_works_under_the_hood_v7.3.0)
--   [Business Service monitoring manual](.How_op5_Monitor_works_under_the_hood_v7.3.0)
--   HOW-TO: [4 steps to turn on simple BSM in your system](https://kb.op5.com/display/HOWTOs/4+steps+to+turn+on+simple+BSM+in+your+system)
--   Webinar: [Introduction to Business Services Management in OP5 Monitor](https://youtu.be/w5l_URdQKUs)
+- [Business Services documentation](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- [Business Service monitoring manual](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- HOW-TO: [4 steps to turn on simple BSM in your system](https://kb.op5.com/display/HOWTOs/4+steps+to+turn+on+simple+BSM+in+your+system)
+- Webinar: [Introduction to Business Services Management in OP5 Monitor](https://youtu.be/w5l_URdQKUs)
 
 ## Ninja -
 
@@ -118,7 +116,7 @@ search for log patterns, configure business services, generate reports and simil
 
 ### Additional information
 
--   [Ninja community space](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- [Ninja community space](.How_op5_Monitor_works_under_the_hood_v7.3.0)
 
 ## Nacoma -
 
@@ -132,8 +130,8 @@ It's currently embedded inside Ninja and works as the back-end for object config
 
 ### Additional information
 
--   [Configuration tool documentation](.How_op5_Monitor_works_under_the_hood_v7.3.0)
--   [Power-user tools and features in Nacoma](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- [Configuration tool documentation](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- [Power-user tools and features in Nacoma](.How_op5_Monitor_works_under_the_hood_v7.3.0)
 
 ## HTTP API -
 
@@ -144,10 +142,5 @@ The HTTP API is a great tool for build integrations with third-party systems lik
 
 ### Additional information
 
--   [HTTP API documentation](.How_op5_Monitor_works_under_the_hood_v7.3.0)
--   HOW-TO: [Submitting status updates through the HTTP API](https://kb.op5.com/display/HOWTOs/Submitting+status+updates+through+the+HTTP+API)
-
- 
-
- 
-
+- [HTTP API documentation](.How_op5_Monitor_works_under_the_hood_v7.3.0)
+- HOW-TO: [Submitting status updates through the HTTP API](https://kb.op5.com/display/HOWTOs/Submitting+status+updates+through+the+HTTP+API)

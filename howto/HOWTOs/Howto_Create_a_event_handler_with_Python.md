@@ -20,8 +20,8 @@ The event handler is defined as a command and can use the built in *Naemon* or [
 
 First off, we need to create the event handler. In steps, it will do the following:
 
-1.  Take arguments of the current state, kind of state (hard or soft), name and check attempt.
-2.  If it's a softstate, the current attempt is the first and it's a critical alert.
+1. Take arguments of the current state, kind of state (hard or soft), name and check attempt.
+2. If it's a softstate, the current attempt is the first and it's a critical alert.
     1.  Increase memory using an API.
 
 The above would look somehow like this in Python: ([Download](attachments/11633113/11567179.py))
@@ -91,8 +91,6 @@ parser.add_argument("--host-name", help='The host name, use $HOSTNAME$', require
 args = parser.parse_args()
 ```
 
- 
-
 As always, try to utilize argparse when using arguments. It makes things alot easier. In short we are importing the argparse module and adding the arguments we need.
 
 ``` {.py data-syntaxhighlighter-params="brush: py; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: py; gutter: false; theme: Confluence"}
@@ -107,8 +105,6 @@ def notifySysAdmin(aAdmin, aMessage):
     return 0
 ```
 
- 
-
 This is a example function for upgrading memory, but for now and while we are testing, it just prints to stdout.
 
 ``` {.py data-syntaxhighlighter-params="brush: py; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: py; gutter: false; theme: Confluence"}
@@ -116,7 +112,4 @@ if args.service_attempt == 1 and args.service_state == "CRITICAL" and args.servi
     increaseEsxGuestMemory(args.host_name, "512 mb")
 ```
 
- 
-
 This is the place where we decide what to do, depending on if it's a hard or soft state and what type of error we recieve.
-

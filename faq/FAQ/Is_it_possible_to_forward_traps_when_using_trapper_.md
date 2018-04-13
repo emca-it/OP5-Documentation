@@ -4,7 +4,7 @@
 
 * * * * *
 
-Is it possible to forward traps received by trapper in OP5 Monitor? I want to send all incoming traps to a second destination. 
+Is it possible to forward traps received by trapper in OP5 Monitor? I want to send all incoming traps to a second destination.
 
 ## Answer
 
@@ -18,5 +18,4 @@ Yes, all you need to do is add a config option for this in the config file for c
 forward default yourdestinationserver
 ```
 
-Trapper will still process and handle all traps locally as usual but also forward the traps as well. 
-
+Trapper will still process and handle all traps locally as usual but also forward the traps as well.

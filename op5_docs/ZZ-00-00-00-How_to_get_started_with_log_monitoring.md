@@ -22,11 +22,11 @@ Logs contain early warning signs. Informational events about resource or license
 
 ## **Secure your business!**
 
--   Make use of the application logs of your main production systems to improve performance.
--   Guarantee your customers their transactions are logged and recorded.
--   Minimize downtime in case of network intrusion.
--   Verify that you don’t have unauthorized access to corporate information.
--   Make sure to monitor your logs to receive notifications and alarms and to be responsive.
+- Make use of the application logs of your main production systems to improve performance.
+- Guarantee your customers their transactions are logged and recorded.
+- Minimize downtime in case of network intrusion.
+- Verify that you don’t have unauthorized access to corporate information.
+- Make sure to monitor your logs to receive notifications and alarms and to be responsive.
 
 The work of actually tuning parameters, having proper logging in applications, exterminating compromised systems and scheduling access-reports can be delegated to “system owners” in the organization.
 
@@ -34,8 +34,8 @@ The work of actually tuning parameters, having proper logging in applications, e
 
 When planning how to perform logging, filtering, archiving and perhaps filter monitoring for your entire network, start by putting together two things:
 
--   A summary of your own organizations and your customers *general* demands on transaction logging, system logging, archiving/rotation, access-logging, reporting and monitoring.
--   A check list table where rows are each production system, and columns are “tasks”, or type of logging/reporting/monitoring to add (see table below).
+- A summary of your own organizations and your customers *general* demands on transaction logging, system logging, archiving/rotation, access-logging, reporting and monitoring.
+- A check list table where rows are each production system, and columns are “tasks”, or type of logging/reporting/monitoring to add (see table below).
 
 Split the work that lies ahead into three to ten stages and populate each stage with one to three tasks (types of logging to add). Plan for a test- and adjustment-period of a least a week between the end of one stage and the start of the next. The test- and adjustment-periods are needed to be able to remedy errors in your IT-environment that has been discovered in each stage, and to confirm that filters and report-types are correctly configured/adjusted. Plan for follow-up meetings with department managers at the end of the stages.
 
@@ -43,16 +43,14 @@ Split the work that lies ahead into three to ten stages and populate each stage 
 
 Please observe that you should exclude at least two things in your check-list-matrix:
 
--   Logging from system where you already have *specialized* tools for analysis and archiving (like checkpoint secure client log viewer and web-server-statistics tools like AWstats). There is no point in centralizing logs where specialized tools are already in use. It will make firewall log filtering and web statistics generation less easy, while adding unnecessary load on the LogServer.
--   Excessive/unnecessary logging (like debug-logging from development systems). Don’t centralize and record info that has no value for others. Developers are likely to enable debug-logging and verbose logging where ever available. These logs will just produce unnecessary load without adding value for others.
+- Logging from system where you already have *specialized* tools for analysis and archiving (like checkpoint secure client log viewer and web-server-statistics tools like AWstats). There is no point in centralizing logs where specialized tools are already in use. It will make firewall log filtering and web statistics generation less easy, while adding unnecessary load on the LogServer.
+- Excessive/unnecessary logging (like debug-logging from development systems). Don’t centralize and record info that has no value for others. Developers are likely to enable debug-logging and verbose logging where ever available. These logs will just produce unnecessary load without adding value for others.
 
 **Order of importance**
 
 Below is a list of tasks (logserver configuration and types of logging to set up), listed in order of importance. How important it is to add logging of different types is of course specific for each organization, but the list below can be a good starting-point.
 
 In short you start by making sure your system logs are all available in a central location and finish up by adding scheduled reports and monitoring of log filters matching on “bad signs” (early warnings) in your logs.
-
- 
 
 Task /service-type
 
@@ -113,8 +111,3 @@ monitored filters
 Adding automatic monitoring of specific filters in order to trigger notifications containing number of hits or excerpts of actual log message text.
 
 any
-
- 
-
- 
-

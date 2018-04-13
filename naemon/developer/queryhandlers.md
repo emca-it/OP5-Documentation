@@ -53,7 +53,6 @@ them to mean "print me some text telling me at least the basics
 of how to use this query handler".
 {{ site.end }}
 
-
 ### Syntax
 The query language is remarkably simple (although each handler may
 implement its own parsers that handle and do pretty much whatever
@@ -93,7 +92,6 @@ Ask the help handler to list registered handlers:
 #help list
 ```
 
-
 ### In-core query handlers
 There are a few in-core query handlers.
 
@@ -108,7 +106,6 @@ help output, like so:
 ```
 @core help
 ```
-
 
 #### The echo service
 As I'm sure you've already guessed, the echo service just prints the
@@ -129,7 +126,6 @@ It can be addressed as such:
 The nerd radio is subscribed in fuller detail at <a href="nerd.html">nerd</a>, but its
 worth knowing that it's a core part of Naemon and that it will
 always be available.
-
 
 #### Worker process manager
 The worker process manager lets you register workers that can help out

@@ -49,7 +49,6 @@ check_service exclude=nfoo "filter=name not like 'nscp'"
 L        cli CRITICAL: CRITICAL: ...
 ```
 
-
 Default check **via NRPE**::
 
 ```

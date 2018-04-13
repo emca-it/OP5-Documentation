@@ -12,13 +12,9 @@ First off we need to change the firewall settings to allow ICMP ping.
 
 Open cmd on the Windows server and execute:
 
- 
-
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 netsh advfirewall firewall add rule name="ICMPv4 Inbound" dir=in action=allow enable=yes profile=any localip=any remoteip=any protocol=icmpv4:8,any interfacetype=any edge=yes
 ```
-
- 
 
     Another way is to do the host-check with check_nt_clientversion instead which fetches the version of NSClient++ instead of checking ICMP Ping.
 
@@ -26,18 +22,18 @@ netsh advfirewall firewall add rule name="ICMPv4 Inbound" dir=in action=allow en
 
 First of all we need to monitor the OS as usual:
 
--   Disk Usage
--   CPU
--   Memory (see below)
--   Swap
+- Disk Usage
+- CPU
+- Memory (see below)
+- Swap
 
 ## Services
 
 The following Windows services needs to be monitored. Note that all services may not be used depending on the functions that you are using in your Hyper-V environment.
 
--   Hyper-V Image Management Service (vhdsvc)
--   Hyper-V Virtual Machine Management (vmms)
--   Hyper-V Networking Management Service (nvspwmi)
+- Hyper-V Image Management Service (vhdsvc)
+- Hyper-V Virtual Machine Management (vmms)
+- Hyper-V Networking Management Service (nvspwmi)
 
 ## Performance Counters
 
@@ -59,9 +55,9 @@ These performance counters will give a you good monitoring of your hypervisor. T
 
 **Comment**: System disk + disks with guest needs to be monitored.
 
--   1ms to 15ms = Healthy
--   15ms to 25ms = Warning or Monitor
--   26ms or greater = Critical, performance will be adversely affected
+- 1ms to 15ms = Healthy
+- 15ms to 25ms = Warning or Monitor
+- 26ms or greater = Critical, performance will be adversely affected
 
 ### check\_perf\_avg\_disk\_write
 
@@ -71,9 +67,9 @@ These performance counters will give a you good monitoring of your hypervisor. T
 
 **Comment**: System disk + disks with guest needs to be monitored, the example is for C:, copy the check and replace C: with the guest disk.
 
--   1ms to 15ms = Healthy
--   15ms to 25ms = Warning or Monitor
--   26ms or greater = Critical, performance will be adversely affected
+- 1ms to 15ms = Healthy
+- 15ms to 25ms = Warning or Monitor
+- 26ms or greater = Critical, performance will be adversely affected
 
 ### check\_perf\_nic\_queue
 
@@ -91,9 +87,9 @@ These performance counters will give a you good monitoring of your hypervisor. T
 
 ****Comment: ****
 
--   Less than 500 = Healthy
--   500 – 1000 = Monitor or Caution
--   Greater than 1000 = Critical, performance will be adversely affected
+- Less than 500 = Healthy
+- 500 – 1000 = Monitor or Caution
+- Greater than 1000 = Critical, performance will be adversely affected
 
 ### check\_nrpe\_win\_memory\_physical
 
@@ -103,14 +99,12 @@ These performance counters will give a you good monitoring of your hypervisor. T
 
 **Comment:** This check command is not in the default setup and has to be created. The check returns the amount of available physical memory in percentage.
 
--   50% of free memory available or more = Healthy
--   25% of free memory available = Monitor
--   10% of free memory available = Warning
--   Less than 5% of free memory available = Critical, performance will be adversely affected
+- 50% of free memory available or more = Healthy
+- 25% of free memory available = Monitor
+- 10% of free memory available = Warning
+- Less than 5% of free memory available = Critical, performance will be adversely affected
 
 ### check\_perf\_hyperv\_hypervisor\_runtime
-
- 
 
 **Command**: check\_nrpe\_win\_counter
 
@@ -123,6 +117,3 @@ These performance counters will give a you good monitoring of your hypervisor. T
 [Microsoft Hyper-V Monitoring](http://technet.microsoft.com/en-us/library/cc768535%28BTS.10%29.aspx "microsoft hyper-v monitoring link")
 
 [More from MS](http://blogs.msdn.com/b/tvoellm/archive/2009/04/23/monitoring-hyper-v-performance.aspx "microsoft blog on monitoring hyper-v") about monitoring Hyper-V
-
- 
-

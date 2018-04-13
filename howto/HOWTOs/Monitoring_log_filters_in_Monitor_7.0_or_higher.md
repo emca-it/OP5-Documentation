@@ -4,8 +4,6 @@ Version
 
 This article was written for version 7.0 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
- 
-
 # Introduction
 
 Since version 7.0 of *op5 Monitor*, the log server functionality has been integrated in the main product and can be accessed from Monitor's GUI and HTTP API .
@@ -13,8 +11,8 @@ In this how-to we will use the *check\_op5\_filter* plugin and look at some diff
 
 # Prerequisites
 
--   *op5 Monitor* version 7.0 or higher
--   A dedicated user with adequate permissions to query the API log messages
+- *op5 Monitor* version 7.0 or higher
+- A dedicated user with adequate permissions to query the API log messages
 
 # Building filter queries
 
@@ -22,8 +20,6 @@ In the following examples we will use filter queries to extract a list of object
 If you need help creating queries you can use the graphical filter builder found in the top right corner of any list view:
 
 ![](attachments/9929405/10191087.png)
-
- 
 
 # Using the check plugin
 
@@ -80,13 +76,9 @@ Supports threshold ranges.
 Critical threshold.
 Supports threshold ranges.
 
- 
-
 A configured service can look something like this in the graphical configuration utility:
 
 ![](attachments/9929405/10191351.png)
-
- 
 
 # Examples
 
@@ -123,13 +115,11 @@ count
 
 15
 
- 
-
 If the critical threshold was exceeded, it would look something like this in the service detail:
 
 ![](attachments/9929405/10191089.png)
 
-## 
+##
 Monitoring web server access logs
 
 This example is similar to the previous one, except we use threshold ranges to define our warning and critical limits.
@@ -163,20 +153,14 @@ count
 
 100:4000
 
- 
-
 If the warning threshold was outside the specified range, it would look something like this in the service detail:
 
 ![](attachments/9929405/10191090.png)
-
- 
 
 ## Monitoring a pre-defined filter
 
 In this example we will monitor a pre-defined filter called "Failed logins last 10 minutes", created and saved in the web UI.
 We also set alert thresholds for the number of failed logins - 3 for warning alerts and 5 for critical alerts:
-
- 
 
 \$ARG1\$
 
@@ -206,13 +190,9 @@ count
 
 5
 
- 
-
 If the warning threshold was exceeded, it would look something like this in the service detail:
 
 ![](attachments/9929405/10191352.png)
-
- 
 
 Saved filters are only available to the user who created them, unless you select the option "Make Global" in the filter query builder.
 
@@ -233,4 +213,3 @@ You may need to set
 *verify=disable*
 
 in */etc/python/cert-verification.cfg*
-

@@ -45,6 +45,3 @@ check\_oracle.pl depends on Oracle Instant Client and a user with sufficient acc
 - invalid transactions
 
 The plugin supports placing authentication credentials in an auth-file and can handle hostname as input instead of using a .ora-file for SID-lookups. Further information is available in our how-to ["check\_oracle with Oracle Instant Client".](http://www.op5.com/how-to/check_oracle-with-oracle-instant-client/)
-
- 
-

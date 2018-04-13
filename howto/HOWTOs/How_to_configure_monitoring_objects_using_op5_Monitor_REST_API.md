@@ -6,30 +6,26 @@ This article was written for version 7.2 of OP5 Monitor, it could work on both l
 
 Articles in the Community-Space are not supported by OP5 Support.
 
- 
-
--   [About the document](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Aboutthedocument)
--   [About the examples](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Abouttheexamples)
--   [Changes](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Changes)
-    -   [View changes](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Viewchanges)
-    -   [Reset/delete changes](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Reset/deletechanges)
-    -   [Save](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Save)
--   [Add a host](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Addahost)
--   [Add a service](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Addaservice)
--   [Add a host group or service group](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Addahostgrouporservicegroup)
--   [Add a template](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Addatemplate)
--   [Add a contact](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Addacontact)
--   [Add a contact group](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Addacontactgroup)
--   [Change settings on an object](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Changesettingsonanobject)
--   [Configuration errors](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Configurationerrors)
+- [About the document](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Aboutthedocument)
+- [About the examples](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Abouttheexamples)
+- [Changes](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Changes)
+  - [View changes](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Viewchanges)
+  - [Reset/delete changes](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Reset/deletechanges)
+  - [Save](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Save)
+- [Add a host](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Addahost)
+- [Add a service](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Addaservice)
+- [Add a host group or service group](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Addahostgrouporservicegroup)
+- [Add a template](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Addatemplate)
+- [Add a contact](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Addacontact)
+- [Add a contact group](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Addacontactgroup)
+- [Change settings on an object](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Changesettingsonanobject)
+- [Configuration errors](#Howtoconfiguremonitoringobjectsusingop5MonitorRESTAPI-Configurationerrors)
 
 # About the document
 
 In this documentation I will show you how to work with objects configuration through our REST-API. The examples are made with the command line command '`curl`'. Of course this can be made with script languages like python, perl etc as well but that is not covered here.
 
 If you have a locally created SSL certificate for the monitor webserver you need to use '`--insecure`' so '`curl`' does not try to verify the certificate.
-
- 
 
 As you can see in the document almost all settings for the objects have the same name as they do in the GUI. For more information about the specific object types please look in the reference manual:
 <https://your-monitor-server/api/help/config/>
@@ -76,8 +72,6 @@ If you for some reasons decide that you do not want to keep the changes not expo
 **The result:**
 
     "Changes reverted"
-
- 
 
 This is the same as if you clicked "Undo" in the GUI.
 
@@ -156,14 +150,12 @@ The result:
         "template": "default-host-template"
     }
 
- 
-
 There are a couple of settings which are required. This means that you need to set them either explicitly on the object or in the template. If you have setup your template with:
 
--   max\_check\_attempts
--   notification\_interval
--   notification\_options
--   notification\_period
+- max\_check\_attempts
+- notification\_interval
+- notification\_options
+- notification\_period
 
 Then you can skip them in the add-host command and just execute it like this:
 
@@ -245,12 +237,9 @@ The result:
         "template": "default-service"
     }
 
- 
-
 If you have added the required settings in your template you could use a much shorter and simpler command line like this:
 
     $ curl -H 'content-type: application/json' -d '{"file_id": "etc/services.cfg", "check_command": "check_ping", "check_command_args": "100,20%!500,60%", "host_name": "test-01", "service_description": "PING", "template": "default-service"}' "https://$MONITOR_SERVER/api/config/service" -u "$MONITOR_USER:$MONITOR_PASSWORD"
-     
 
 The result will be the same as above. The default values will be added where you set your own in the first example.
 
@@ -277,8 +266,6 @@ A host group can be added without any members but it might be a good idea to do 
         "register": true
     }
 
- 
-
 The same goes for the service groups but with other options:
 
     $ curl -H 'content-type: application/json' -d '{"file_id": "etc/servicegroups.cfg", "servicegroup_name": "ping_services", "members": ["test-01;PING", "test-02;PING"]}' "https://$MONITOR_SERVER/api/config/servicegroup" -u "$MONITOR_USER:$MONITOR_PASSWORD"
@@ -299,8 +286,6 @@ The same goes for the service groups but with other options:
         "servicegroup_members": [],
         "servicegroup_name": "ping_services"
     }
-
- 
 
 More details can be found in the reference manual:
 <https://your-monitor-server/api/help/config/hostgroup>
@@ -377,13 +362,11 @@ Here is an example command for adding a new host template:
         "template": "default-host-template"
     }
 
- 
-
 The only thing you need to change is the path and of course use the correct settings for the objects. The paths:
 
--   Host templates: <https://your-monitor-server/api/config/host_template>
--   Service templates: <https://your-monitor-server/api/config/service_template>
--   Contact templates: <https://your-monitor-server/api/config/contact_template>
+- Host templates: <https://your-monitor-server/api/config/host_template>
+- Service templates: <https://your-monitor-server/api/config/service_template>
+- Contact templates: <https://your-monitor-server/api/config/contact_template>
 
 The settings are the same as for a normal object of the same type.
 
@@ -399,8 +382,6 @@ Contacts have a few settings that are required. With all those settings included
     $ curl -H 'content-type: application/json' -d '{"file_id": "etc/contacts.cfg", "alias": "Contact 01", "contact_name": "contact-01", "host_notification_options": ["d","r"], "host_notification_period": "24x7", "service_notification_options": ["c", "w", "u", "r"], "service_notification_period": "24x7"}' "https://$MONITOR_SERVER/api/config/contact" -u "$MONITOR_USER:$MONITOR_PASSWORD"
 
 **The result:**
-
- 
 
     {
         "address1": "",
@@ -441,8 +422,6 @@ Contacts have a few settings that are required. With all those settings included
         "template": "default-contact"
     }
 
- 
-
 Most of the required settings as well as the others can be set in a contact template instead and then you do not need to set all the above on each single contact.
 
 More details can be found in the reference manual:
@@ -467,8 +446,6 @@ The result:
         ],
         "register": true
     }
-
- 
 
 Note that "alias" is required here.
 
@@ -500,8 +477,6 @@ In the example we will change the name of one contact group. The group test\_con
         "register": true
     }
 
- 
-
 # Configuration errors
 
 If you send in a malformed request to the API using json data the response form the server will be an error message formated as json data.
@@ -513,16 +488,9 @@ Let's say you have tried to change an object that does not exists. Then you will
         "full_error": "Object not found"
     }
 
- 
-
 This is error will be returned if you are not allowed to login:
 
     {
         "error": "Unauthorized",
         "full_error":"You need to login to access this page"
     }
-
- 
-
- 
-

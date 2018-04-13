@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_RETRY_HOST_CHECK_INTERVAL<br>
 
-
 #### Command Format:
 
 `CHANGE_RETRY_HOST_CHECK_INTERVAL;host_name;check_interval`
@@ -29,6 +28,3 @@ Changes the retry check interval for a particular host.
 
 printf "[%lu] CHANGE_RETRY_HOST_CHECK_INTERVAL;host1;10\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

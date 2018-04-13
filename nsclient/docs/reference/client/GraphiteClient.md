@@ -2,9 +2,6 @@
 
 Graphite client can be used to submit graph data to a graphite graphing system
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the GraphiteClient module.
@@ -17,19 +14,11 @@ A list of all available queries (check commands)
 |-------------------------------------|---------------------------------------------------|
 | [submit_graphite](#submit_graphite) | Submit information to the remote Graphite server. |
 
-
-
-
 ### submit_graphite
 
 Submit information to the remote Graphite server.
 
-
 * [Command-line Arguments](#submit_graphite_options)
-
-
-
-
 
 <a name="submit_graphite_help"/>
 <a name="submit_graphite_help-pb"/>
@@ -54,7 +43,6 @@ Submit information to the remote Graphite server.
 <a name="submit_graphite_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                                                           |
 |--------------|---------------|---------------------------------------------------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                                                        |
@@ -78,14 +66,7 @@ Submit information to the remote Graphite server.
 | batch        |               | Add multiple records using the separator format is: command|result|message            |
 | path         |               |                                                                                       |
 
-
-
-
-
-
 ## Configuration
-
-
 
 | Path / Section                                                  | Description               |
 |-----------------------------------------------------------------|---------------------------|
@@ -93,21 +74,14 @@ Submit information to the remote Graphite server.
 | [/settings/graphite/client/handlers](#client-handler-section)   | CLIENT HANDLER SECTION    |
 | [/settings/graphite/client/targets](#remote-target-definitions) | REMOTE TARGET DEFINITIONS |
 
-
-
 ### GRAPHITE CLIENT SECTION <a id="/settings/graphite/client"/>
 
 Section for graphite passive check module.
-
-
-
 
 | Key                   | Default Value | Description |
 |-----------------------|---------------|-------------|
 | [channel](#channel)   | GRAPHITE      | CHANNEL     |
 | [hostname](#hostname) | auto          | HOSTNAME    |
-
-
 
 ```ini
 # Section for graphite passive check module.
@@ -117,17 +91,9 @@ hostname=auto
 
 ```
 
-
-
-
-
 #### CHANNEL <a id="/settings/graphite/client/channel"></a>
 
 The channel to listen to.
-
-
-
-
 
 | Key            | Description                                             |
 |----------------|---------------------------------------------------------|
@@ -136,7 +102,6 @@ The channel to listen to.
 | Default value: | `GRAPHITE`                                              |
 | Used by:       | GraphiteClient                                          |
 
-
 **Sample:**
 
 ```
@@ -144,8 +109,6 @@ The channel to listen to.
 # CHANNEL
 channel=GRAPHITE
 ```
-
-
 
 #### HOSTNAME <a id="/settings/graphite/client/hostname"></a>
 
@@ -161,18 +124,12 @@ ${domain}	Domainname
 ${domain_lc}	Domainname in lowercase
 ${domain_uc}	Domainname in uppercase
 
-
-
-
-
-
 | Key            | Description                                             |
 |----------------|---------------------------------------------------------|
 | Path:          | [/settings/graphite/client](#/settings/graphite/client) |
 | Key:           | hostname                                                |
 | Default value: | `auto`                                                  |
 | Used by:       | GraphiteClient                                          |
-
 
 **Sample:**
 
@@ -182,29 +139,15 @@ ${domain_uc}	Domainname in uppercase
 hostname=auto
 ```
 
-
 ### CLIENT HANDLER SECTION <a id="/settings/graphite/client/handlers"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
-
-
-
-
-
 
 ### REMOTE TARGET DEFINITIONS <a id="/settings/graphite/client/targets"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key           | Default Value | Description      |
 |---------------|---------------|------------------|
@@ -217,7 +160,6 @@ This is a section of objects. This means that you will create objects below this
 | send status   |               | SEND STATUS      |
 | status path   |               | PATH FOR STATUS  |
 | timeout       | 30            | TIMEOUT          |
-
 
 **Sample:**
 
@@ -235,9 +177,3 @@ retries=3
 timeout=30
 
 ```
-
-
-
-
-
-

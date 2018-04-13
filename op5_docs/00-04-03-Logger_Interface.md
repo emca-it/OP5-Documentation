@@ -1,13 +1,11 @@
 # Logger Interface
 
- 
-
 # About
 
 In the OP5 Logger interface you can:
 
--   -   Search messages in database
-    -   Search messages in archive
+- Search messages in database
+  - Search messages in archive
 
 Logger uses filters for selecting the data to show, these are described in the [Filters](Filters) chapter.
 
@@ -78,7 +76,7 @@ The columns in Logger can be modified in the same way as the rest of the listvie
 
 To perform a search in the archived logs go to Logger in the monitoring menu.
 
-1.  1.  Create a filter or leave the filter blank to search for all messages
+1. 1.  Create a filter or leave the filter blank to search for all messages
     2.  Click on **Run query on Archive **in the upper right corner
         ![](attachments/16482334/16679009.png)
     3.  Select a start and stop time
@@ -87,15 +85,8 @@ To perform a search in the archived logs go to Logger in the monitoring menu.
 
 This will create a report on the specified filter.
 
- 
-
 * * * * *
-
- 
 
 # Related pages
 
 Error rendering macro 'sv-contentbylabel' : null
-
- 
-

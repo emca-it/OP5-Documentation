@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - PROCESS_SERVICE_CHECK_RESULT<br>
 
-
 #### Command Format:
 
 `PROCESS_SERVICE_CHECK_RESULT;host_name;service_description;status_code;plugin_output`
@@ -29,6 +28,3 @@ This is used to submit a passive check result for a particular service. The 'sta
 
 printf "[%lu] PROCESS_SERVICE_CHECK_RESULT;host1;service1;0;This is an example plugin output.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

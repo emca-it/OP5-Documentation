@@ -4,8 +4,6 @@ This how-to covers how to monitor and graph a Windows performance counter in OP5
 
 op5 Statistics is considered deprecated software and is not supported.
 
- 
-
 ## **Monitoring the performance counter**
 
 In perfmon, select a performance counter that you want to monitor and/or graph. In this example we monitor and graph the following performance counter:
@@ -137,8 +135,3 @@ finally ‘save’ your new Graph Template
 
 11. Wait and see. Within 15 min (3 polls) you should be able to se current values in your graph. The AREA should also begin to plot after 15 min.**
 **
-
- 
-
- 
-

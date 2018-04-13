@@ -16,10 +16,9 @@ Technet has a huge list of the performance counters for Exchange with descriptio
 
 Here you will find counters for these exchange functions:
 
--   Common Counters
--   Virtualization Counters
--   Client Access Counters (CAS Server)
--   Mailbox Servers (MBX Server)
--   Transport Server Counters (TS)
--   Unified Messaging counters
-
+- Common Counters
+- Virtualization Counters
+- Client Access Counters (CAS Server)
+- Mailbox Servers (MBX Server)
+- Transport Server Counters (TS)
+- Unified Messaging counters

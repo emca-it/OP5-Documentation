@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ACKNOWLEDGE_SVC_PROBLEM<br>
 
-
 #### Command Format:
 
 `ACKNOWLEDGE_SVC_PROBLEM;host_name;service_description;sticky;notify;persistent;author;comment`
@@ -29,6 +28,3 @@ Allows you to acknowledge the current problem for the specified service. By ackn
 
 printf "[%lu] ACKNOWLEDGE_SVC_PROBLEM;host1;service1;1;1;1;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

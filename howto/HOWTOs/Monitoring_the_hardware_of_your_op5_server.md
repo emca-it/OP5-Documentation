@@ -2,15 +2,15 @@
 
 This how-to describes how to monitor the local hardware of you OP5 server. The method described in this white-paper applies to the following models:
 
--   PE-860 (a.k.a “entry”, fourth generation)
--   PE-1950 (a.k.a “standard” and “large”, fourth generation)
--   PE-1950-III (a.k.a. “standard” and “large”, fifth generation)
--   PE-R410 (a.k.a. “Standard and large” sixth generation)
--   PE-R210 (a.k.a “Entry” sixth generation)
+- PE-860 (a.k.a “entry”, fourth generation)
+- PE-1950 (a.k.a “standard” and “large”, fourth generation)
+- PE-1950-III (a.k.a. “standard” and “large”, fifth generation)
+- PE-R410 (a.k.a. “Standard and large” sixth generation)
+- PE-R210 (a.k.a “Entry” sixth generation)
 
 The method described in this white-paper does not apply to:
 
--   PE-sc1425 (a.k.a “entry”, third generation)
+- PE-sc1425 (a.k.a “entry”, third generation)
 
 ## **History**
 
@@ -40,8 +40,6 @@ To perform a full install (including the OMSA web-gui) issue the following comma
 Auto-start the service on boot:
 
     # /opt/dell/srvadmin/sbin/srvadmin-services.sh enable
-
-     
 
 The package tog-pegasus may conflict with the packages listed above and can safely be removed:
 
@@ -100,11 +98,7 @@ action\_url:
 
 https://\$HOSTADDRESS\$:1311/
 
- 
-
-## **Known issues
-**
+## **Known issues**
 
 If you are upgrading to APS 6.4 we recommend that you read this blog post posted by our support team.
 [Dell OpenManage checks stops working after upgrading to APS 6.4](http://www.op5.com/blog/support-news/known-issues/dell-openmanage-checks-stops-working-after-upgrading-to-aps-6-4/)
-

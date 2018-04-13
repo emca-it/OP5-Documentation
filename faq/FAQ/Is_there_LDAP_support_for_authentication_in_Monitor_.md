@@ -11,4 +11,3 @@ Is there LDAP support for authentication in Monitor?
 * * * * *
 
 Yes, there is support for several LDAP-servers in OP5 Monitor
-

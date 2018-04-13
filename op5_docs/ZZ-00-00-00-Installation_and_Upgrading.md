@@ -20,6 +20,3 @@ Guide covering the whole deployment-process of a new system including filling ou
 </tr>
 </tbody>
 </table>
-
- 
-

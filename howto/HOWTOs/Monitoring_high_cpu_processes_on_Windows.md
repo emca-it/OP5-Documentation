@@ -12,8 +12,8 @@ This how-to will guide you to monitor top high cpu processes on Windows using Po
 
 # Prerequisites
 
--   Working installation of OP5 Agent 
--   Working installation of OP5 Monitor
+- Working installation of OP5 Agent
+- Working installation of OP5 Monitor
 
 # Create Powershell script
 
@@ -65,7 +65,7 @@ Open the file custom.ini (or op5.ini) located in C:\\Program Files\\op5\\NSClie
 top_cpu_proceses = cmd /c echo scripts\custom\top_cpu_processes.ps1 ; exit($lastexitcode) | powershell.exe -command -
 ```
 
-# 
+#
 Set ExecutionPolicy
 
 Due to restrictions in powershell we are not allowed to run this file without changing the execution policy for powershell scripts.
@@ -81,8 +81,6 @@ PS C:\Windows\system32> Set-ExecutionPolicy unrestricted
 Answer Y on the question.
 
 ![](attachments/12190637/12386438.png)
-
- 
 
 # Run script from OP5 Monitor console
 
@@ -104,9 +102,8 @@ Processes with high CPU: dwm(6.23%) syntpenh(1.56%) svchost(1.56%) svchost(1.56%
 
 Go to the configuration of a host in OP5 Monitor and add a new service.
 
-1.  Enter a Service Description of you choice
-2.  Select *check\_nrpe* as check\_command 
-3.  Enter *top\_cpu\_processes* as check\_command\_args
+1. Enter a Service Description of you choice
+2. Select *check\_nrpe* as check\_command
+3. Enter *top\_cpu\_processes* as check\_command\_args
     ![](attachments/19761464/20054179.png)
-4.  Save the configuration.
-
+4. Save the configuration.

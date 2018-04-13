@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_HOSTGROUP_PASSIVE_SVC_CHECKS<br>
 
-
 #### Command Format:
 
 `ENABLE_HOSTGROUP_PASSIVE_SVC_CHECKS;hostgroup_name`
@@ -29,6 +28,3 @@ Enables passive checks for all services associated with hosts in a particular ho
 
 printf "[%lu] ENABLE_HOSTGROUP_PASSIVE_SVC_CHECKS;hostgroup1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

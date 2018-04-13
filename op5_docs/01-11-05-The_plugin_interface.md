@@ -4,9 +4,9 @@
 
 A plugin is a small executable that takes optional command line parameters as input and
 
-1.  Performs a test
-2.  Reports a diagnostic message on stdout (will be shown in the web GUI)
-3.  Returns an exit code.
+1. Performs a test
+2. Reports a diagnostic message on stdout (will be shown in the web GUI)
+3. Returns an exit code.
 
 # Example
 
@@ -27,8 +27,8 @@ Connection refused
  Then we check port 143/tcp on the same host and that port is not open, hence the result is Critical - exit code 2.
  The result output is actually built upon two parts divided by a | sign (pipe). The text on the
 
--   -   left hand side of the | is the status information
-    -   right hand side of the | is the performance data.
+- left hand side of the | is the status information
+  - right hand side of the | is the performance data.
 
 The performance data is not mandatory but you need it if you want your plugin to be able to produce graphs for you in OP5 Monitor.
 
@@ -63,19 +63,19 @@ UOM
 
 Can be any of:
 
--   no unit assuming an integer as a value
--   s - seconds (also us, ms)
--   % - percentage.
--   B- Bytes (also KB, MB, GB and TB)
--   c - A continuous counter like bytes transmitted on an interface.
+- no unit assuming an integer as a value
+- s - seconds (also us, ms)
+- % - percentage.
+- B- Bytes (also KB, MB, GB and TB)
+- c - A continuous counter like bytes transmitted on an interface.
 
 warn, crit, min, max
 
--   Can all be null and trailing unfilled semicolons can be dropped.
--   min and max is not needed if UOM is %.
--   value, warn, crit, min and max must be of the same UOM.
+- Can all be null and trailing unfilled semicolons can be dropped.
+- min and max is not needed if UOM is %.
+- value, warn, crit, min and max must be of the same UOM.
 
-# Example 2 
+# Example 2
 
 Performance data output:
  `time=0.218901s;;;0.000000 size=42236B;;;0`
@@ -108,4 +108,3 @@ The return code is the one that OP5 Monitor uses to determine what state the ser
 </tr>
 </tbody>
 </table>
-

@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_PERFORMANCE_DATA<br>
 
-
 #### Command Format:
 
 `ENABLE_PERFORMANCE_DATA;`
@@ -29,6 +28,3 @@ Enables the processing of host and service performance data on a program-wide ba
 
 printf "[%lu] ENABLE_PERFORMANCE_DATA;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

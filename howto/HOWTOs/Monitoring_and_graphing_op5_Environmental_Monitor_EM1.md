@@ -6,9 +6,9 @@ The Sensatronics model EM1 is part of the OP5 Environment Starter Packs and sold
 
 ## **Prerequisites**
 
--   OP5 Monitor installed correctly
--   Sensatronics EM1 set up in accordance with the OP5 Environment module manual or the accompanying Sensatronics Model EM1 Environmental Monitor Quick Start Guide.
--   HTTP network access from the OP5 server to the environmental monitor.
+- OP5 Monitor installed correctly
+- Sensatronics EM1 set up in accordance with the OP5 Environment module manual or the accompanying Sensatronics Model EM1 Environmental Monitor Quick Start Guide.
+- HTTP network access from the OP5 server to the environmental monitor.
 
 ## **Configuring OP5 Monitor**
 
@@ -42,8 +42,6 @@ Add services for temperature and/or humidity, examples follows below:
 
 (Thresholds support ranges and decimal points)
 
- 
-
     service_description: Humidity – Server
 
     check_command: check_em1_humidity
@@ -52,11 +50,7 @@ Add services for temperature and/or humidity, examples follows below:
 
 ## **Configuring OP5 Statistics**
 
- 
-
 op5 Statistics is deprecated, this part of the article is kept for historical purpose only.
-
- 
 
 Add a new device (or export it from Monitor using ‘Configure’ -\> ‘Export hosts to Statistics’), an example follows below:
 
@@ -73,6 +67,3 @@ Verify connectivity to your new device by looking at the SNMP Information in top
 Create graphs for your new device by clicking ‘Create Graphs for this Host’, selecting the Graph Templates you want to use and clicking ‘create’. Set the appropriate sensor unit number and click ‘create’ again. Verify that the graphs were created successfully by looking at the top of the page.
 
 Add your device or individual graphs to a Graph Tree by clicking ‘Graph Trees’, selecting the tree and branch were you want the graphs to be located, clicking ‘Add’, selecting Tree item type ‘Host’ or ‘Graph’, selecting the host/graph you want to add and clicking ‘create’. Your newly added graph should be displaying data within 15 minutes (3 poller cycles).
-
- 
-

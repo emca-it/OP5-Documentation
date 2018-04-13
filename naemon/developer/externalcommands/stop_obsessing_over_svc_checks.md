@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - STOP_OBSESSING_OVER_SVC_CHECKS<br>
 
-
 #### Command Format:
 
 `STOP_OBSESSING_OVER_SVC_CHECKS;`
@@ -29,6 +28,3 @@ Disables processing of service checks via the OCSP command on a program-wide bas
 
 printf "[%lu] STOP_OBSESSING_OVER_SVC_CHECKS;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

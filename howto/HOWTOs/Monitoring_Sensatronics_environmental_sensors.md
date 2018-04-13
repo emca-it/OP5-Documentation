@@ -8,10 +8,10 @@ Many of the following steps can be used for other *Sensatronics* products, but b
 
 # Prerequisites
 
--   Sensatronics EM2 environmental monitor with included accessories
--   Computer with serial port or USB-to-serial converter
--   Terminal emulator like Minicom, HyperTerminal or similar for serial access
--   Needle-nose pliers are recommended for mounting of probe connections
+- Sensatronics EM2 environmental monitor with included accessories
+- Computer with serial port or USB-to-serial converter
+- Terminal emulator like Minicom, HyperTerminal or similar for serial access
+- Needle-nose pliers are recommended for mounting of probe connections
 
 # Instructions
 
@@ -24,15 +24,15 @@ In this example we are using the combined humidity and temperature probe in comb
 
 ## IP, hostname and SNMP configuration
 
-1.   Connect the serial cable to a serial port or converter and connect the power to device
-2.   Launch a terminal emulator like Mincom or HyperTerminal
-3.   Connect to the device with the following settings:
+1. Connect the serial cable to a serial port or converter and connect the power to device
+2. Launch a terminal emulator like Mincom or HyperTerminal
+3. Connect to the device with the following settings:
 
--   -    BPS: 9600
-    -    Data Bits: 8
-    -    Parity: None
-    -    Stop Bits: 1
-    -    Flow Control: None
+-  BPS: 9600
+  -  Data Bits: 8
+  -  Parity: None
+  -  Stop Bits: 1
+  -  Flow Control: None
 
 Use the keyboard to configure IP Address (A), Hostname (B), SNMP Community and Temperature Units (C).Make sure to set "Temperature Units" to your desired measurement system, since this will be used for thresholds and graphing.If you need more help please consult the product manual found on the Sensatronic website.
 
@@ -127,11 +127,8 @@ Note on thresholds
 In the examples above we configure upper warning and critical thresholds, but double valued thresholds can also be used.
 If you would configure the warning threshold to be 10:40 and the critical threshold to be -5:66 the plugin will change status accordingly when the values goes outside of the defined limits.
 
- 
-
 # Graphing
 
 The *check\_em1* plugin also generates performance data which can be used for graphing - here is an example from one of our server rooms:
 
 ![](attachments/9929232/10191077.png)
-

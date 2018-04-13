@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_FLAP_DETECTION<br>
 
-
 #### Command Format:
 
 `ENABLE_FLAP_DETECTION;`
@@ -29,6 +28,3 @@ Enables host and service flap detection on a program-wide basis.
 
 printf "[%lu] ENABLE_FLAP_DETECTION;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

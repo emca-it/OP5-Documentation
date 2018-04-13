@@ -13,7 +13,6 @@ or not yet written. For the latter, see [](#)
 
 Read [Why A Fork](/project.html) on the projects page.
 
-
 #### How Can I Help?
 
 Help is much appreciated and possible in many ways. Details can be found on
@@ -88,7 +87,6 @@ By typing `bt` you will get the desired backtrace:
 Now go to the [naemon issues](https://github.com/naemon/naemon/issues) page and file a
 new bug after having a look if this hasn't been reported yet.
 
-
 ### Thruk
 
 ### Livestatus
@@ -115,7 +113,6 @@ Small changes like typos can be corrected and submitted directly on [github][git
 Just navigation to the page you want to change and send a pull request via the online editor of github.
 Read more about the [online editor][githubedithelp]...
 
-
 ##### Larger Changes
 Larger changes should be tested and reviewed locally before submitting them. Also
 it's good practice to talk to a team member before spending large amounts of time
@@ -123,7 +120,6 @@ in things we eventually won't accept for whatever reasons.
 The [developer guide](/documentation/developer/website.html) contains instructions on
 how to run a local Jekyll server.
 When done, just submit a normal pull request.
-
 
 [markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 [bootstrap]: http://getbootstrap.com/css/

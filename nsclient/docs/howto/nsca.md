@@ -14,10 +14,10 @@ If you compare the above image with the one used with NRPE you will notice that 
 
 As I stated initially NSCA is "sort of the reverse" of NRPE and the diagram above illustrates the process by which Nagios receives the check results.
 
-1.  NSClient++ decides it is time to run checks
-2.  NSClient++ gathers all results
-3.  NSClient++ connect to NSCA (server) and sends all results
-4.  NSClient++ goes back to sleep
+1. NSClient++ decides it is time to run checks
+2. NSClient++ gathers all results
+3. NSClient++ connect to NSCA (server) and sends all results
+4. NSClient++ goes back to sleep
 
 For regular checks this might seem like a firewall versus configuration question but when it comes to **real time monitoring** it have a bigger impact as you can get the error much quicker since there is no polling interval involved hence you gain the ability to react to problems faster.
 
@@ -30,9 +30,9 @@ We need (in the regular check case) a scheduler who runs the checks as well as t
 Depending on your scenario you can replace (or extend) the `Scheduler` with various real-time able modules such as `CheckLogFile` and `CheckEventLog`.
 The internals of NSClient++ when it comes to passive checks is depicted here.
 
-1.  The normal process is for the scheduler to execute the commands (using the normal check modules).
-2.  Send the results to NSCA channel (NSCAClient)
-3.  Send the message to the central NSCA server
+1. The normal process is for the scheduler to execute the commands (using the normal check modules).
+2. Send the results to NSCA channel (NSCAClient)
+3. Send the message to the central NSCA server
 
 The channel sits in between the sender (Scheduler) and the recipient (NSCAClient).
 You can think of the channel as a queue or mail box.

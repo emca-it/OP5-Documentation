@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_HOST_FRESHNESS_CHECKS<br>
 
-
 #### Command Format:
 
 `DISABLE_HOST_FRESHNESS_CHECKS;`
@@ -29,6 +28,3 @@ Disables freshness checks of all hosts on a program-wide basis.
 
 printf "[%lu] DISABLE_HOST_FRESHNESS_CHECKS;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

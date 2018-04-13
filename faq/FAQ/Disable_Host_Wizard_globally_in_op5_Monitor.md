@@ -4,8 +4,6 @@
 
 * * * * *
 
- 
-
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # mkdir -p /opt/monitor/op5/ninja/modules/wizard/config/custom
 # cp -a /opt/monitor/op5/ninja/modules/wizard/config/wizard.php /opt/monitor/op5/ninja/modules/wizard/config/custom
@@ -16,10 +14,3 @@
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 $config['display_at_start'] = 0;
 ```
-
- 
-
- 
-
- 
-

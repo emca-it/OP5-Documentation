@@ -18,14 +18,14 @@ Deploying OP5 Monitor correctly should result in monitoring and getting useful a
 
 Before you begin setting up a monitoring platform, we recommend that you collect whatever resources you need. This list need not be comprehensive, but should encompass:
 
--   Objects --
-    -   hosts -- objects to monitor;
-    -   services -- the commands that give host status information;
-    -   contacts -- users and teams that will get alerts;
--   third-party tools that will provide or receive status;
--   login accounts to manage OP5 Monitor;
--   reports you expect managers and others to read;
--   the initial logical structure for grouping objects.
+- Objects --
+  - hosts -- objects to monitor;
+  - services -- the commands that give host status information;
+  - contacts -- users and teams that will get alerts;
+- third-party tools that will provide or receive status;
+- login accounts to manage OP5 Monitor;
+- reports you expect managers and others to read;
+- the initial logical structure for grouping objects.
 
 The below sections include some details about each of these areas, along with best practice considerations.
 
@@ -37,19 +37,19 @@ Objects in OP5 Monitor include hosts, services, and contacts.
 
 We suggest developing a list of specific hosts to monitor before the implementation. Your list should include the following:
 
--   -   Hostname as a fully qualified domain name (FQDN) -- e.g.: 'server1.domain.com';
-    -   IP address;
-    -   Alias – usually the shortname for the host or its specialization, such as 'Server1-ABC-Customer';
-    -   Categories, such as Type, Location, and Function.
+- Hostname as a fully qualified domain name (FQDN) -- e.g.: 'server1.domain.com';
+  - IP address;
+  - Alias – usually the shortname for the host or its specialization, such as 'Server1-ABC-Customer';
+  - Categories, such as Type, Location, and Function.
 
 Later in this document, we will present additional groupings to consider. Keep revisiting your categories and their order of importance as you build your list of hosts.
 
 There are a number of methods for adding hosts in bulk. Explore each of these methods to determine which is the best fit for your environment. Take the time to note any additional requirements that may make such organizing more obvious to your sites or teams:
 
--   -   [Use an Import Script](Host-import_via_Excel_with_service_objects_cloning_and_auto-detection_of_disks)
-    -   Network Scans and Periodic Discovery – see [Managing Objects](https://kb.op5.com/display/DOC/Managing+objects)
-    -   API – We include the REST API documentation with the OP5 Monitor server's web pages. Visit https://{\$op5monhost}/api , replacing '{\$op5monhost}' with the FQDN for the OP5 Monitor.
-    -   **For Devops and rapidly changing environments** –
+- [Use an Import Script](Host-import_via_Excel_with_service_objects_cloning_and_auto-detection_of_disks)
+  - Network Scans and Periodic Discovery – see [Managing Objects](https://kb.op5.com/display/DOC/Managing+objects)
+  - API – We include the REST API documentation with the OP5 Monitor server's web pages. Visit https://{\$op5monhost}/api , replacing '{\$op5monhost}' with the FQDN for the OP5 Monitor.
+  - **For Devops and rapidly changing environments** –
 
             As of version 7.3, we suggest adding or removing hosts in groups of 100 to 500. That group limit will depend on the performance of the hardware hosting your OP5 server. Note also that host deletion is far more resource-intense than host creation.
 
@@ -99,25 +99,25 @@ Here are some suggestions to determine which types of groups will suit you:
 
 These can be specific to servers, switches, hardware with only IP addresses:
 
--   -   Distribution - broken down by the local poller(s) which will monitor the devices
-    -   Geographic - building, municipality, state or province, country
-    -   Make - Juniper, Cisco, Dell, EMC, NetApp
-    -   Model - EX2200-POE24P, ISR4331-SEC-K9
-    -   Job - Edge\_Services, DNS\_Resolvers, Web\_Servers
+- Distribution - broken down by the local poller(s) which will monitor the devices
+  - Geographic - building, municipality, state or province, country
+  - Make - Juniper, Cisco, Dell, EMC, NetApp
+  - Model - EX2200-POE24P, ISR4331-SEC-K9
+  - Job - Edge\_Services, DNS\_Resolvers, Web\_Servers
 
 ### Service groups
 
 Specific to services which run on the hosts
 
--   -   CPU | Memory | Disk or Volume Usage - these are common utilization groups
-    -   Named Services, such as node.js, IIS, Apache, nginx, Citrix, OpenStack-Nova, OpenStack-Keystone, VMware vCenter
+- CPU | Memory | Disk or Volume Usage - these are common utilization groups
+  - Named Services, such as node.js, IIS, Apache, nginx, Citrix, OpenStack-Nova, OpenStack-Keystone, VMware vCenter
 
 ### Contact groups
 
 We provide contact groups to avoid the problem of of assigning individual people or alert methods per host or service. This gives you another nest of groups: people or phone lines can belong to multiple contact groups. One of the most powerful features of contacts and contact groups are the individual configuration options, such as:
 
--   -   notification periods -- when alerts can be sent
-    -   notification options -- which type of alerts to send, such as email or SMS
+- notification periods -- when alerts can be sent
+  - notification options -- which type of alerts to send, such as email or SMS
 
 You can discover more about groups from this article describing [Groups in OP5 Monitor](https://kb.op5.com/display/DOC/Groups).
 
@@ -152,4 +152,3 @@ Backup OP5 Monitor frequently. One can get a full backup of an OP5 Monitor using
 #### Configuration Management
 
 In mission critical environments, we highly recommend tracking changes to Naemon configuration files. We also suggest automating such tracking by pushing changes to a version-controlled repository, such as Git or BitBucket. While this may happen several times per day, the records will reveal the times of changes as well as what changed. This would be pivotal in case one morning's changes need to be reviewed or backed out. The configuration files are also small enough that multiple daily check-ins would be worth the storage.
-

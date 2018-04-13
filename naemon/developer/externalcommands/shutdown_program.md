@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - SHUTDOWN_PROGRAM<br>
 
-
 #### Command Format:
 
 `SHUTDOWN_PROGRAM;`
@@ -29,6 +28,3 @@ Shuts down the Naemon process.
 
 printf "[%lu] SHUTDOWN_PROGRAM;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

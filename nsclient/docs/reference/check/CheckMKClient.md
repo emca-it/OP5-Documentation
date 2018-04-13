@@ -2,9 +2,6 @@
 
 check_mk client can be used both from command line and from queries to check remote systems via check_mk.
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the CheckMKClient module.
@@ -17,19 +14,11 @@ A list of all available queries (check commands)
 |-----------------------------------|------------------------------------------|
 | [check_mk_query](#check_mk_query) | Request remote information via check_mk. |
 
-
-
-
 ### check_mk_query
 
 Request remote information via check_mk.
 
-
 * [Command-line Arguments](#check_mk_query_options)
-
-
-
-
 
 <a name="check_mk_query_help"/>
 <a name="check_mk_query_help-pb"/>
@@ -57,7 +46,6 @@ Request remote information via check_mk.
 <a name="check_mk_query_allowed-ciphers"/>
 <a name="check_mk_query_options"/>
 #### Command-line Arguments
-
 
 | Option                     | Default Value | Description                                                                           |
 |----------------------------|---------------|---------------------------------------------------------------------------------------|
@@ -87,20 +75,13 @@ Request remote information via check_mk.
 | allowed-ciphers            |               | Client certificate format                                                             |
 | [ssl](#check_mk_query_ssl) | 1             | Initial an ssl handshake with the server.                                             |
 
-
-
 <h5 id="check_mk_query_ssl">ssl:</h5>
 
 Initial an ssl handshake with the server.
 
 *Default Value:* `1`
 
-
-
-
 ## Configuration
-
-
 
 | Path / Section                                                  | Description               |
 |-----------------------------------------------------------------|---------------------------|
@@ -109,20 +90,13 @@ Initial an ssl handshake with the server.
 | [/settings/check_mk/client/scripts](#remote-target-definitions) | REMOTE TARGET DEFINITIONS |
 | [/settings/check_mk/client/targets](#remote-target-definitions) | REMOTE TARGET DEFINITIONS |
 
-
-
 ### CHECK MK CLIENT SECTION <a id="/settings/check_mk/client"/>
 
 Section for check_mk active/passive check module.
 
-
-
-
 | Key                 | Default Value | Description |
 |---------------------|---------------|-------------|
 | [channel](#channel) | CheckMK       | CHANNEL     |
-
-
 
 ```ini
 # Section for check_mk active/passive check module.
@@ -131,17 +105,9 @@ channel=CheckMK
 
 ```
 
-
-
-
-
 #### CHANNEL <a id="/settings/check_mk/client/channel"></a>
 
 The channel to listen to.
-
-
-
-
 
 | Key            | Description                                             |
 |----------------|---------------------------------------------------------|
@@ -149,7 +115,6 @@ The channel to listen to.
 | Key:           | channel                                                 |
 | Default value: | `CheckMK`                                               |
 | Used by:       | CheckMKClient                                           |
-
 
 **Sample:**
 
@@ -159,41 +124,19 @@ The channel to listen to.
 channel=CheckMK
 ```
 
-
 ### CLIENT HANDLER SECTION <a id="/settings/check_mk/client/handlers"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
-
-
-
-
-
 
 ### REMOTE TARGET DEFINITIONS <a id="/settings/check_mk/client/scripts"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
-
-
-
-
-
 
 ### REMOTE TARGET DEFINITIONS <a id="/settings/check_mk/client/targets"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key     | Default Value | Description    |
 |---------|---------------|----------------|
@@ -202,7 +145,6 @@ This is a section of objects. This means that you will create objects below this
 | port    |               | TARGET PORT    |
 | retries | 3             | RETRIES        |
 | timeout | 30            | TIMEOUT        |
-
 
 **Sample:**
 
@@ -216,9 +158,3 @@ retries=3
 timeout=30
 
 ```
-
-
-
-
-
-

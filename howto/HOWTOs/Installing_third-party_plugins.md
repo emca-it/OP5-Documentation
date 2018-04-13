@@ -15,8 +15,6 @@ Developing your own plugins is [really straight forward](https://kb.op5.com/disp
 
 In this how-to we will look at installing a check plugin, cover solutions to common problems and give some general recommendations for using third-party plugins.
 
- 
-
 Support information
 
 Installing and using third-party plugins **is not** supported by OP5 AB.
@@ -24,10 +22,10 @@ If you need help installing, configuring or developing custom plugins, please co
 
 # Prerequisites
 
--   Basic UNIX/Linux knowledge
--   Shell access to the host running *op5 Monitor*
--   A SSH and SFTP client like *[WinSCP](http://winscp.net/eng/download.php)*
--   Basic understanding of service configuration in *op5 Monitor*
+- Basic UNIX/Linux knowledge
+- Shell access to the host running *op5 Monitor*
+- A SSH and SFTP client like *[WinSCP](http://winscp.net/eng/download.php)*
+- Basic understanding of service configuration in *op5 Monitor*
 
 # Installation
 
@@ -56,8 +54,6 @@ do this by executing "chmod 755 /opt/plugins/custom/check\_example.py":
 
 ![](attachments/12189713/12386311.png)
 
- 
-
 # Configuration
 
 The plugin needs to be configured as a "command" to be used with *op5 Monitor*.
@@ -79,8 +75,6 @@ The check plugin is now ready to be used by services:
 ![](attachments/12189713/12386314.png)
 *Service configuration*
 
- 
-
 ![](attachments/12189713/12386315.png)
 *Service status in list view*
 
@@ -99,6 +93,3 @@ This problem can usually be solved by running the following *sed* command:
 
 ![](attachments/12189713/12386310.png)*
 Executing the same command with WinSCP*
-
- 
-

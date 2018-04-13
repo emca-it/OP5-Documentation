@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_ALL_NOTIFICATIONS_BEYOND_HOST<br>
 
-
 #### Command Format:
 
 `ENABLE_ALL_NOTIFICATIONS_BEYOND_HOST;host_name`
@@ -29,6 +28,3 @@ Enables notifications for all hosts and services 'beyond' (e.g. on all child hos
 
 printf "[%lu] ENABLE_ALL_NOTIFICATIONS_BEYOND_HOST;host1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

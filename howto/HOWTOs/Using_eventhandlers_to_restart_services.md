@@ -122,7 +122,6 @@ When you have saved your new “command” you edit the host where you want to u
 Click the Advanced-link and set the parameter "`event_handler"` to “`restart_windows_service`” and Save your configuration.
 
 You should now have a working event handler.
- 
 
 As of version 7.1.6, event handlers are executed on all peers in a load balanced/high availability setup.
 If you use peering and event handlers, make sure to implement logic in your scripts to prevent execution by more than one peer.
@@ -156,11 +155,7 @@ Change your previously configured command definition in `custom.INI` to:
 
     restart_service="C:\Program Files\OP5\op5_NSClient++scripts\restartservice.bat" $ARG1$
 
- 
-
 Please note that we add `$ARG1$` /and/ change the name of the command
-
- 
 
 Restart the NSClient++-service to load the changes.
 
@@ -227,9 +222,4 @@ You should now have a working configuration we’re you can supply as an eventha
 
 # OP5 Monitor: Open Source Network Monitoring
 
-[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free. 
-
- 
-
- 
-
+[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free.

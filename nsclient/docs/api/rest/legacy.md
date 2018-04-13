@@ -183,7 +183,6 @@ $ curl -k -s -H 'password: icinga' 'https://nsclient1.localdomain:8443/query/che
 }
 ```
 
-
 ### CheckNSCP Module
 
 #### /query/check_nscp
@@ -472,9 +471,7 @@ $ curl -k -s -H 'password: icinga' 'https://nsclient1.localdomain:8443/query/che
 }
 ```
 
-
 #### /query/check_uptime
-
 
 Check the host's uptime.
 
@@ -508,8 +505,6 @@ $ curl -k -s -H 'password: icinga' 'https://nsclient1.localdomain:8443/query/che
     ]
 }
 ```
-
-
 
 ## Settings Endpoint
 

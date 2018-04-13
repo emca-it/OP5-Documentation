@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - SAVE_STATE_INFORMATION<br>
 
-
 #### Command Format:
 
 `SAVE_STATE_INFORMATION;`
@@ -29,6 +28,3 @@ Causes Naemon to save all current monitoring status information to the state ret
 
 printf "[%lu] SAVE_STATE_INFORMATION;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

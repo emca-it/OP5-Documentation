@@ -14,8 +14,6 @@ A security flaw was discovered in the Nagios CGI's, among them the functions for
 
 It is still possible to view alarms and get notifications in Nagstamon and Iphone/Android apps.
 
- 
-
 ## Comments:
 
 <table>
@@ -32,5 +30,3 @@ It is still possible to view alarms and get notifications in Nagstamon and Iphon
 </tr>
 </tbody>
 </table>
-
-

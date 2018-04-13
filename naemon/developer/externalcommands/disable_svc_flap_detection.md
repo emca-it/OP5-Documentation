@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_SVC_FLAP_DETECTION<br>
 
-
 #### Command Format:
 
 `DISABLE_SVC_FLAP_DETECTION;host_name;service_description`
@@ -29,6 +28,3 @@ Disables flap detection for the specified service.
 
 printf "[%lu] DISABLE_SVC_FLAP_DETECTION;host1;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

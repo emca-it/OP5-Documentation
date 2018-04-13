@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_MAX_HOST_CHECK_ATTEMPTS<br>
 
-
 #### Command Format:
 
 `CHANGE_MAX_HOST_CHECK_ATTEMPTS;host_name;check_attempts`
@@ -29,6 +28,3 @@ Changes the maximum number of check attempts (retries) for a particular host.
 
 printf "[%lu] CHANGE_MAX_HOST_CHECK_ATTEMPTS;host1;10\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

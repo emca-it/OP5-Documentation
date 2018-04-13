@@ -6,18 +6,14 @@ You can use OP5 Monitor to query OP5 LogServer on how many matches a filter retu
 
 Before you begin you need to have OP5 Monitor and OP5 LogServer configured and up and running.
 
--   OP5 Monitor
-    -   Updated to latest release
--   OP5 LogServer
-    -   Updated to latest release
-    -   A user created with access to the filters you will use
-    -   One or more working filters
-
- 
+- OP5 Monitor
+  - Updated to latest release
+- OP5 LogServer
+  - Updated to latest release
+  - A user created with access to the filters you will use
+  - One or more working filters
 
 *Avoid spaces in your filtername*
-
- 
 
 ## Monitor check-commands
 
@@ -40,8 +36,6 @@ check\_logserver\_host\_filter
 \$USER1\$/check\_ls\_log -r \<logserverhost\> -l \<user\> -p \<password\> -f "\$ARG1\$" -H “\$ARG2\$” -i \$ARG3\$ -w \$ARG4\$ -c \$ARG5\$
 
 *\<user\> and \<password\> must be a valid user/password in OP5 Logserver.*
-
- 
 
 ## Service example
 
@@ -78,8 +72,3 @@ check\_logserver\_host\_filter
 
 \<hostname\>!\<filter\>!\<interval\>!\<warn\>!\<crit\>
 **Ex:** linuxserver01!Failed\_Logins!20!2!9
-
- 
-
- 
-

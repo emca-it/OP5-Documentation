@@ -33,7 +33,7 @@ if ($opt_h) {
 
 $opt_z = shift unless ($opt_z);
 
-# Check that binary exists 
+# Check that binary exists
 unless (-e $opt_z) {
         print "CRITICAL: ZMStatus not found - $opt_z\n";
         exit 2;
@@ -63,9 +63,9 @@ if (( @failed_services == 0 ) && ($i > 5)) {
         foreach my $service (@failed_services) {
                 print $service . " ";
         }
-        print "not running"; 
+        print "not running";
         exit 2; # Error
-}        
+}       
 
 sub print_usage () {
         print "Usage:\n";

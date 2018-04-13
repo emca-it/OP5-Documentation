@@ -21,11 +21,11 @@ For better viewing the following screenshot has been divided in to two pieces.
 Business Object
  List all the Business service objects. An object can be one of the following items
 
--   -   Group
-    -   Service
-    -   Host.
-    -   Random value
-    -   Constant value
+- Group
+  - Service
+  - Host.
+  - Random value
+  - Constant value
 
 2
 
@@ -39,12 +39,12 @@ Actions
  A list of action buttons.
  Click the icons to
 
--   -   Look up service/host in OP5 Monitor
-    -   Go to the configuration for the host or service
-    -   Add sub element, only available on groups
-    -   Edit object
-    -   Remove object
-    -   Clone object, only available on groups
+- Look up service/host in OP5 Monitor
+  - Go to the configuration for the host or service
+  - Add sub element, only available on groups
+  - Edit object
+  - Remove object
+  - Clone object, only available on groups
 
 4
 
@@ -61,4 +61,3 @@ Duration
 
 Status Information
  Displays in what state the current group is in. For hosts and services the output from the OP5 Monitor check is displayed.
-

@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_HOSTGROUP_HOST_NOTIFICATIONS<br>
 
-
 #### Command Format:
 
 `DISABLE_HOSTGROUP_HOST_NOTIFICATIONS;hostgroup_name`
@@ -29,6 +28,3 @@ Disables notifications for all hosts in a particular hostgroup. This does not di
 
 printf "[%lu] DISABLE_HOSTGROUP_HOST_NOTIFICATIONS;hostgroup1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

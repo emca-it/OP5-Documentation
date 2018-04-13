@@ -29,8 +29,8 @@ These cannot be set using the short format.
 
 There are two ways to use arguments.
 
-1.  Hardcoded into the command
-2.  Allowing argument-pass through
+1. Hardcoded into the command
+2. Allowing argument-pass through
 
 The first option (hard-coding them) is obviously the more secure option as a third party cannot provide his or her own arguments.
 But it adds to the maintenance burden as whenever you want to change an option you need to update the NSClient++ configuration (something which can be costly if you have many servers).
@@ -71,7 +71,7 @@ Another use case of external scripts is to have event handlers which starts prog
 This is trickier then it sounds because all commands have a timeout and once that is reach they are killed.
 NSClient++ exits it also terminates all running script thus your "fix" will not be very long.
 
-To work around this you need to start the program without the control of NSClient++ (fork). 
+To work around this you need to start the program without the control of NSClient++ (fork).
 To do this you need to set capture output to false like so:
 
 ```
@@ -84,5 +84,5 @@ The draw back to this is that the script cannot return any output neither messag
 
 !!! danger
     A word of warning using "start" or other similar measure to try to start a program in a regular script will cause a rather nasty unexpected issue with NSClient++ due to how handles are inherited in Windows.
-    Starting a background process in a script will end up blocking the port and forcing a restart of the server. 
+    Starting a background process in a script will end up blocking the port and forcing a restart of the server.
     Thus `capture output = false` method is preferred.

@@ -2,9 +2,6 @@
 
 Check status of your scheduled jobs.
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the CheckTaskSched module.
@@ -18,9 +15,6 @@ A list of all available queries (check commands)
 | [check_tasksched](#check_tasksched) | Check status of scheduled jobs.   |
 | [checktasksched](#checktasksched)   | Legacy version of check_tasksched |
 
-
-
-
 ### check_tasksched
 
 Check status of scheduled jobs.
@@ -29,7 +23,6 @@ Check status of scheduled jobs.
 
 * [Command-line Arguments](#check_tasksched_options)
 * [Filter keywords](#check_tasksched_filter_keys)
-
 
 <a name="check_tasksched_samples"/>
 #### Sample Commands
@@ -42,8 +35,6 @@ Default check **via NRPE**::
 check_nrpe --host 192.168.56.103 --command check_tasksched
 /test: 1 != 0|'test'=1;0;0
 ```
-
-
 
 <a name="check_tasksched_warn"/>
 <a name="check_tasksched_crit"/>
@@ -64,7 +55,6 @@ check_nrpe --host 192.168.56.103 --command check_tasksched
 <a name="check_tasksched_hidden"/>
 <a name="check_tasksched_options"/>
 #### Command-line Arguments
-
 
 | Option                                          | Default Value                         | Description                                                                                                                            |
 |-------------------------------------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
@@ -97,8 +87,6 @@ check_nrpe --host 192.168.56.103 --command check_tasksched
 | recursive                                       |                                       | Recurse sub folder (defaults to true).                                                                                                 |
 | hidden                                          |                                       | Look for hidden tasks.                                                                                                                 |
 
-
-
 <h5 id="check_tasksched_filter">filter:</h5>
 
 Filter which marks interesting items.
@@ -112,7 +100,6 @@ They do not denote warning or critical state instead it defines which items are 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
 
-
 *Default Value:* `exit_code != 0`
 
 <h5 id="check_tasksched_critical">critical:</h5>
@@ -120,15 +107,12 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
 *Default Value:* `exit_code < 0`
 
 <h5 id="check_tasksched_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_tasksched_empty-state">empty-state:</h5>
 
@@ -141,7 +125,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_tasksched_top-syntax">top-syntax:</h5>
 
@@ -182,10 +165,8 @@ This is the syntax for the base names of the performance data.
 
 *Default Value:* `${title}`
 
-
 <a name="check_tasksched_filter_keys"/>
 #### Filter keywords
-
 
 | Option               | Description                                                                                                  |
 |----------------------|--------------------------------------------------------------------------------------------------------------|
@@ -217,17 +198,11 @@ This is the syntax for the base names of the performance data.
 | warn_list            | A list of all items which matched the warning criteria. Common option for all checks.                        |
 | working_directory    | Retrieves the working directory of the task.                                                                 |
 
-
 ### checktasksched
 
 Legacy version of check_tasksched
 
-
 * [Command-line Arguments](#checktasksched_options)
-
-
-
-
 
 <a name="checktasksched_help"/>
 <a name="checktasksched_help-pb"/>
@@ -248,7 +223,6 @@ Legacy version of check_tasksched
 <a name="checktasksched_options"/>
 #### Command-line Arguments
 
-
 | Option        | Default Value | Description                                                     |
 |---------------|---------------|-----------------------------------------------------------------|
 | help          | N/A           | Show help screen (this screen)                                  |
@@ -267,9 +241,3 @@ Legacy version of check_tasksched
 | master-syntax |               | Master Syntax (same as top-syntax in the check_tasksched check) |
 | filter        |               | Filter (same as filter in the check_tasksched check)            |
 | debug         | N/A           | Filter (same as filter in the check_tasksched check)            |
-
-
-
-
-
-

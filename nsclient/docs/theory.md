@@ -6,11 +6,11 @@ NSClient++ was designed to be open-ended meaning not restrict you in favor of al
 So before you start tinkering with NSClient++ it is important to first decide what you want to achieve.
 The key decisions you have to make are related to (in no particular order):
 
--   Settings
+- Settings
     Where do you want to store your settings?
--   Protocols
+- Protocols
     Which protocols do you need
--   Commands
+- Commands
     Which are right for you?
 
 This section will go through the various categories one by one and give you some hints and ideas on how to proceed.

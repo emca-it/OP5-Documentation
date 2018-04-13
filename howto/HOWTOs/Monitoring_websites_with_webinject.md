@@ -10,15 +10,11 @@ With WebInject, you can actually try out the entire login process, evaluate that
 
 There are a few things you need to be able to start working with WebInject
 
--   SSH access to your OP5 Monitor server
--   A web browser pointing at the page you will test
--   Basic Linux knowledge is preferred
+- SSH access to your OP5 Monitor server
+- A web browser pointing at the page you will test
+- Basic Linux knowledge is preferred
 
 In all examples and guides we assume you are logged in on the OP5 Monitor server by ssh and that you know how to handle a text editor in Linux.
-
- 
-
- 
 
 ## **How it works**
 
@@ -26,14 +22,12 @@ WebInject is a standalone application that performs tests and logs its results t
 
 It takes two input files, both written in xml,
 
--   config file.
--   testcase file.
+- config file.
+- testcase file.
 
 It returns its output on STDOUT – either in standalone mode when it will print an extensive report – or in plug-in mode when it will print a short format suitable for monitor
 
 In OP5 Monitor you will find WebInject installed in:
-
- 
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 /opt/plugins/webinject
@@ -52,8 +46,8 @@ In OP5 Monitor you will find WebInject installed in:
 
 You may have as many configuration files as you like. But in this how-to we will stick to two files:
 
--   config.xml
--   devel-config.xml
+- config.xml
+- devel-config.xml
 
 There are a lot of things you may set in the configuration files but in this how-to we will only focus on the following settings:
 
@@ -73,27 +67,23 @@ This setting is used to enable output formatting that is compatible for use with
 
 The following example shows how a config.xmlmight look like:
 
- 
-
 ``` {.xml data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: xml; gutter: false; theme: Confluence"}
 <globalhttplog>onfail</globalhttplog>
 <globaltimeout>10</globaltimeout>
 <reporttype>nagios</reporttype>
 ```
 
- 
-
 **Creating the configuration files**
 
 To create the configuration file config.xmlyou need to :
 
-1.  Create the following file
+1. Create the following file
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     /opt/plugins/webinject/config.xml
     ```
 
-2.  Open up
+2. Open up
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     /opt/plugins/webinject/config.xml
@@ -101,9 +91,7 @@ To create the configuration file config.xmlyou need to :
 
     in a text editor.
 
-3.  Add the following data to config.xml:
-
-     
+3. Add the following data to config.xml:
 
     ``` {.xml data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: xml; gutter: false; theme: Confluence"}
     <globalhttplog>onfail</globalhttplog>
@@ -111,17 +99,17 @@ To create the configuration file config.xmlyou need to :
     <reporttype>nagios</reporttype>
     ```
 
-4.  Save the file and exit the editor.
+4. Save the file and exit the editor.
 
 To create the configuration file devel-config.xmlyou need to :
 
-1.  Create the following file
+1. Create the following file
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     /opt/plugins/webinject/devel-config.xml
     ```
 
-2.  Open up
+2. Open up
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     /opt/plugins/webinject/devel-config.xml
@@ -129,16 +117,14 @@ To create the configuration file devel-config.xmlyou need to :
 
     in a text editor.
 
-3.  Add the following data to devel-config.xml:
-
-     
+3. Add the following data to devel-config.xml:
 
     ``` {.xml data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: xml; gutter: false; theme: Confluence"}
     <globalhttplog>yes</globalhttplog>
     <globaltimeout>20</globaltimeout>
     ```
 
-4.  Save the file and exit the editor.
+4. Save the file and exit the editor.
 
 ## **The test cases**
 
@@ -159,8 +145,6 @@ A very simple example of a test case file may look like this:
 </testcases>
 ```
 
- 
-
 The following list will explain the parts of the test case file:
 
     repeat="1"
@@ -174,8 +158,6 @@ The id of the case and sets the order all cases will be executed.
     url="http://myserver/test/test.html"
 
 The URL we will test this case against.
-
- 
 
 There are a lot of parameters you can use in a test case with WebInject but we will only use a few of them in this how-to.
 
@@ -217,13 +199,13 @@ This is the data (body) of the request to be sent to the server. This is only us
 
 Now we shall create a real example where we will:
 
--   Test if we can display a login page (in this case our demo environment)
--   Test if we can authorize with the supplied username and password (can we actually authorize with the service) 
--   Test if we can get access with the supplied username and password (are we permitted to access the service)
+- Test if we can display a login page (in this case our demo environment)
+- Test if we can authorize with the supplied username and password (can we actually authorize with the service)
+- Test if we can get access with the supplied username and password (are we permitted to access the service)
 
 To create the test case
 
--   Create a test case containing three cases that looks like this:
+- Create a test case containing three cases that looks like this:
     /opt/plugins/webinject/testcases/test.xml
 
 ``` {.html/xml data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: html/xml; gutter: false; theme: Confluence"}
@@ -256,17 +238,11 @@ To create the test case
 </testcases>
 ```
 
- 
-
- 
-
-1.  Save the file:
+1. Save the file:
 
         /opt/plugins/webinject/testcases/test.xml
 
-     
-
-2.  Test your test case like this (remember to use the devel-config.xmlfile)
+2. Test your test case like this (remember to use the devel-config.xmlfile)
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 /opt/plugins/webinject/webinject.pl -c devel-config.xml testcases/test.xml
@@ -277,41 +253,39 @@ The result should look something like this:
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 Starting WebInject Engine...
 -------------------------------------------------------
-Test:  testcases/test.xml - 1 
-Verify : "Username" 
-Verify Response Code: "200" 
-Passed Positive Verification 
-Passed HTTP Response Code Verification 
-TEST CASE PASSED 
-Response Time = 0.123 sec 
-------------------------------------------------------- 
-Test:  testcases/test.xml - 2 
-Verify Negative: "Authorization failed" 
-Verify Response Code: "302" 
-Passed Negative Verification 
-Passed HTTP Response Code Verification 
-TEST CASE PASSED 
-Response Time = 0.045 sec 
-------------------------------------------------------- 
-Test:  testcases/test.xml - 3 
-Verify Negative: "Denied access" 
-Verify Response Code: "302" 
-Passed Negative Verification 
-Passed HTTP Response Code Verification 
-TEST CASE PASSED 
-Response Time = 0.045 sec 
-------------------------------------------------------- 
-    
+Test:  testcases/test.xml - 1
+Verify : "Username"
+Verify Response Code: "200"
+Passed Positive Verification
+Passed HTTP Response Code Verification
+TEST CASE PASSED
+Response Time = 0.123 sec
+-------------------------------------------------------
+Test:  testcases/test.xml - 2
+Verify Negative: "Authorization failed"
+Verify Response Code: "302"
+Passed Negative Verification
+Passed HTTP Response Code Verification
+TEST CASE PASSED
+Response Time = 0.045 sec
+-------------------------------------------------------
+Test:  testcases/test.xml - 3
+Verify Negative: "Denied access"
+Verify Response Code: "302"
+Passed Negative Verification
+Passed HTTP Response Code Verification
+TEST CASE PASSED
+Response Time = 0.045 sec
+-------------------------------------------------------
+
 Start Time: Wed Jun 26 12:42:12 2013
 Total Run Time: 0.276 seconds
 Test Cases Run: 3
 Test Cases Passed: 3
-Test Cases Failed: 0 
+Test Cases Failed: 0
 Verifications Passed: 6
 Verifications Failed: 0
 ```
-
- 
 
 When you get a result without any failed cases you are ready to add the test to OP5 Monitor.
 
@@ -319,8 +293,8 @@ When you get a result without any failed cases you are ready to add the test to 
 
 To add a WebInject service to OP5 Monitor:
 
-1.  Open up the host (www.example.org in this case) and chose “Add new service”.
-2.  Set at least the following options:
+1. Open up the host (www.example.org in this case) and chose “Add new service”.
+2. Set at least the following options:
 
 Option
 
@@ -338,7 +312,7 @@ check\_command\_args
 
 test.xml
 
-1.  Click “Apply” and then “Save”.
+1. Click “Apply” and then “Save”.
 
 ## **More information**
 
@@ -347,13 +321,8 @@ WebInject can do a lot more than what we have seen here in this how-to. For more
 
 # OP5 Monitor: Open Source Network Monitoring
 
-[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free. 
-
- 
+[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free.
 
 ### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
-
- 
-

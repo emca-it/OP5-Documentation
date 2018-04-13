@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_SVC_EVENT_HANDLER<br>
 
-
 #### Command Format:
 
 `CHANGE_SVC_EVENT_HANDLER;host_name;service_description;event_handler_command`
@@ -29,6 +28,3 @@ Changes the event handler command for a particular service to be that specified 
 
 printf "[%lu] CHANGE_SVC_EVENT_HANDLER;host1;service1;restart_service\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

@@ -11,13 +11,13 @@ ELSE()
     SET(DEFINEARG "/paths:module-path=%(base-path)/modules")
   ENDIF()
   ADD_CUSTOM_TARGET(generate_doc_sources
-    COMMAND ${CMAKE_BINARY_DIR}/nscp client 
-      --module PythonScript 
-      --no-stderr 
-      --settings dummy 
-      --load-all 
-      --log error 
-      --log oneline 
+    COMMAND ${CMAKE_BINARY_DIR}/nscp client
+      --module PythonScript
+      --no-stderr
+      --settings dummy
+      --load-all
+      --log error
+      --log oneline
       --define "\"${DEFINEARG}\""
       -- execute --script scripts/python/docs.py --input docs --output docs
     WORKING_DIRECTORY ${BUILD_ROOT_FOLDER}

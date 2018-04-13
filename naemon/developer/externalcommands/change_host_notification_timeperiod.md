@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_HOST_NOTIFICATION_TIMEPERIOD<br>
 
-
 #### Command Format:
 
 `CHANGE_HOST_NOTIFICATION_TIMEPERIOD;host_name;notification_timeperiod`
@@ -29,6 +28,3 @@ Changes the host notification timeperiod to what is specified by the 'notificati
 
 printf "[%lu] CHANGE_HOST_NOTIFICATION_TIMEPERIOD;host1;24x7\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_SERVICE_FRESHNESS_CHECKS<br>
 
-
 #### Command Format:
 
 `ENABLE_SERVICE_FRESHNESS_CHECKS;`
@@ -29,6 +28,3 @@ Enables freshness checks of all services on a program-wide basis. Individual ser
 
 printf "[%lu] ENABLE_SERVICE_FRESHNESS_CHECKS;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

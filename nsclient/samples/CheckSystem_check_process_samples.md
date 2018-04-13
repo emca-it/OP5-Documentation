@@ -3,7 +3,7 @@
 ```
 check_process
 SetPoint.exe=hung
-Performance data: 'taskhost.exe'=1;1;0 'dwm.exe'=1;1;0 'explorer.exe'=1;1;0 ... 'chrome.exe'=1;1;0 'vcpkgsrv.exe'=1;1;0 'vcpkgsrv.exe'=1;1;0 
+Performance data: 'taskhost.exe'=1;1;0 'dwm.exe'=1;1;0 'explorer.exe'=1;1;0 ... 'chrome.exe'=1;1;0 'vcpkgsrv.exe'=1;1;0 'vcpkgsrv.exe'=1;1;0
 ```
 
 Default check **via NRPE**::
@@ -43,4 +43,3 @@ List all processes which use **more then 200m virtual memory** Default check **v
 check_nrpe --host 192.168.56.103 --command check_process --arguments "filter=virtual > 200m"
 OK all processes are ok.|'csrss.exe state'=1;0;0 'svchost.exe state'=1;0;0 'AvastSvc.exe state'=1;0;0 ...
 ```
-

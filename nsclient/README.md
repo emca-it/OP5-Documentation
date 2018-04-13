@@ -98,4 +98,3 @@ mkdocs serve
 ```
 
 Changes on the chapter layout can be done inside the `mkdocs.yml` file in the main tree.
-

@@ -14,9 +14,9 @@ The setup
 
 The test setup consisted of three machines:
 
--   ps-dev, a virtual machine running Monitor, for collecting data
--   fnord-perf-std, a G7 Standard appliance
--   fnord-perf-large, a G7 Large appliance 
+- ps-dev, a virtual machine running Monitor, for collecting data
+- fnord-perf-std, a G7 Standard appliance
+- fnord-perf-large, a G7 Large appliance
 
 The G7 Standard is a Dell PowerEdge R420 with one Intel Xeon E5-2420 and 16 GB of memory, with a Dell PERC H310 hardware RAID card running RAID1 on two 300GB 15kRPM SAS drives.
 
@@ -32,7 +32,7 @@ The configuration was generated with the “mon test dist” command. Commands u
 
     mon test dist --confgen-only --hosts=100 --services-per-host=100 --masters=2 --poller-groups=1
 
- 
+
 
 We then took the config for the peer group “master” only, and modified shared.cfg to use the custom check plugin. We then created a subdirectory to nagios’ etc directory, and pointed cfg\_dir there in nagios.cfg.
 
@@ -48,11 +48,11 @@ As you can see from the configs, the Large appliance uses a config with 100.000 
 
 The plugin we wrote simulates a standard plugin that asks for something, waits for a response and then outputs data and performance data. It works like this:
 
-1.  Generate a random value between 0 and 10.
-2.  If the value is between 0 and 7, sleep for a random time between 0 and 15 seconds, and then return OK, with the random value and random sleep values as performance data.
-3.  If the value is 8, sleep for a random time between 0 and 15 seconds, and then return WARNING, with the random value and random sleep values as performance data.
-4.  If the value is 9, sleep for a random time between 0 and 15 seconds, and then return CRITICAL, with the random value and random sleep values as performance data.
-5.  If the value is 10, sleep for a random time between 0 and 15 seconds, and then return UNKNOWN, with the random value and random sleep values as performance data.
+1. Generate a random value between 0 and 10.
+2. If the value is between 0 and 7, sleep for a random time between 0 and 15 seconds, and then return OK, with the random value and random sleep values as performance data.
+3. If the value is 8, sleep for a random time between 0 and 15 seconds, and then return WARNING, with the random value and random sleep values as performance data.
+4. If the value is 9, sleep for a random time between 0 and 15 seconds, and then return CRITICAL, with the random value and random sleep values as performance data.
+5. If the value is 10, sleep for a random time between 0 and 15 seconds, and then return UNKNOWN, with the random value and random sleep values as performance data.
 
 This, of course generates many, many more state changes than a normal system would ever see, but we wanted to set up a “worst possible scenario” while still being somewhat realistic in regards to the kind of ratio between results one would see in real life.
 
@@ -64,7 +64,7 @@ We will let the fancy graphs speak for themselves. These are over a one week per
 
 ![](https://lh5.googleusercontent.com/zuN973LL1XzDrH-KhOyoFn9-aPeHHLE7ixx9S-1fdnvAVbdQ3hE23vzDgXJzqtDAqV6jXapElSOk0BwSUdQgZCn842gOv2DGTuB7RPSVEGyJY6-bH6zkGKRMGQ)
 
-![](https://lh6.googleusercontent.com/KNi2-vKAyxajkrD9UHau6o_03_tSG9tqwdljEeru0NUaM25TKivbDGwiXwGyRiM1-7OYe_bhuFHUahpLnYGQxaOIjJAh-pk_rh1snISWdrkcmABGlnWzYMn6NA) 
+![](https://lh6.googleusercontent.com/KNi2-vKAyxajkrD9UHau6o_03_tSG9tqwdljEeru0NUaM25TKivbDGwiXwGyRiM1-7OYe_bhuFHUahpLnYGQxaOIjJAh-pk_rh1snISWdrkcmABGlnWzYMn6NA)
 
 As you can see, we stay comfortably at an average of just over 11% CPU load, and memory usage never exceeding 5.13GB (of the Standard appliance’s 16GB), which means there is lots of room for the real-world load. 15 minute load peaked at 2.25 (on 12 cores/Hyperthreads). Check latencies were 0.86 seconds max and 0.003 seconds avg.
 
@@ -76,7 +76,7 @@ A bonnie++ storage benchmark for the Standard appliance is in appendix B, for ra
 
 ![](https://lh6.googleusercontent.com/2dRn9EvIEtiTGzCn4yb_isz0RGbGzN-UvbDDKeG2_7CMTIgZj9X7E85EmXCkxWRrNL70D42UqEywVyDBziC0G04lxg8SXV7IeH05BLjeHCjYtesRNtXI1_Wgfg)
 
-![](https://lh5.googleusercontent.com/z6E3rRdM0-Ms4_F1QW36drIfacjgWsa-siAbhxRpsKlAWA1iuyVDIxerz7DBplO-EfKkOzmTqZ_pQC6Wg7-AHY3HuUqfDBVleI5elYPTGylPG0RyCgBvOOox0A) 
+![](https://lh5.googleusercontent.com/z6E3rRdM0-Ms4_F1QW36drIfacjgWsa-siAbhxRpsKlAWA1iuyVDIxerz7DBplO-EfKkOzmTqZ_pQC6Wg7-AHY3HuUqfDBVleI5elYPTGylPG0RyCgBvOOox0A)
 
  Again, we’re very comfortable at an average load of a little less than 15%, and memory usage peaking at 9.43GB of the Large appliance’s 24GB. 15 minute load peaked at 3.89 (on 24 cores/Hyperthreads). Check latencies were 0.8 seconds max and 0.002 seconds avg.
 
@@ -104,7 +104,7 @@ We hope you, dear reader, have a better understanding of the scaling of OP5 Moni
 
 Dell DPACK is a performance analytics tool to analyze primarily storage performance, but with some other metrics included. It can be found here:
 
-<http://www.dell.com/Learn/us/en/04/campaigns/dell-performance-analysis-collection-kit-dpack?c=us&l=en&s=bsd> 
+<http://www.dell.com/Learn/us/en/04/campaigns/dell-performance-analysis-collection-kit-dpack?c=us&l=en&s=bsd>
 
 The DPACK reports can be found in the same tarball as the configuration and other data:
 
@@ -114,11 +114,11 @@ The DPACK reports can be found in the same tarball as the configuration and othe
 
 bonnie++ is a hard drive and file system speed benchmark. It can be found here:
 
-<http://www.coker.com.au/bonnie++/> 
+<http://www.coker.com.au/bonnie++/>
 
 For the G7 Standard, bonnie++ was run with the following parameters and resulting data:
 
-    [root@r19-standard ~]# bonnie++ -d ./bonnie-temp/ -s 32g -m standard -f -b -u root       
+    [root@r19-standard ~]# bonnie++ -d ./bonnie-temp/ -s 32g -m standard -f -b -u root
 
     Using uid:0, gid:0.
 

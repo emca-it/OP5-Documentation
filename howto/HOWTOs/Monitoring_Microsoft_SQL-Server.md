@@ -6,10 +6,10 @@ Microsoft SQL Server is one of the most used databases today. Because it often h
 
 The suggested configuration components for monitoring Microsoft SQL Server are:
 
--   basic checks on the server like CPU, memory, disc usage, swap usage etc.
--   advanced checks of the operating system by checking several performance counters in the operating system
--   queries to databases
--   checking backup jobs.
+- basic checks on the server like CPU, memory, disc usage, swap usage etc.
+- advanced checks of the operating system by checking several performance counters in the operating system
+- queries to databases
+- checking backup jobs.
 
 ## **Check commands**
 
@@ -49,8 +49,6 @@ check\_mssql\_query\_count
 
 check\_mssql\_query\_reponstime
 
- 
-
 ## **Description of the commands**
 
 In the table below you will get a description of the so called performance check\_commands used to monitor a Microsoft SQL Server.
@@ -63,27 +61,27 @@ check\_mssql\_db\_file\_size
  and
  check\_mssql\_log\_file\_size
 
--   Disk usage is something we always need to check. With this check\_command you will be able to monitor the size of the data and log files size.
--   If you use ‘\_total’ as \$ARG1\$ you will get the sum of all data or log files.
--   Warning and Critical is meassured in KB.
+- Disk usage is something we always need to check. With this check\_command you will be able to monitor the size of the data and log files size.
+- If you use ‘\_total’ as \$ARG1\$ you will get the sum of all data or log files.
+- Warning and Critical is meassured in KB.
 
 check\_nt\_memory\_page\_per\_sec
 
--   This counter will measure pages per second that is fetched from RAM to the harddrive or vice versa.
--   Normally this value should be 0
--   Values between 1 to 20 should not be a problem but as usual everything is relative
--   Values over 20 during a longer time period mostly means that you need to add more RAM to the server
+- This counter will measure pages per second that is fetched from RAM to the harddrive or vice versa.
+- Normally this value should be 0
+- Values between 1 to 20 should not be a problem but as usual everything is relative
+- Values over 20 during a longer time period mostly means that you need to add more RAM to the server
 
 check\_nt\_physical\_disk\_time
 
--   This counter measures how busy a physical array is, not any logical partition or an individual disc in the array.
--   It will give you a pretty good knowledge about how busy your disk array is.
--   The value should not be over 55% on the server. If it is over 55% during several 10 minutes periods over 24 hours it will be an indication of I/O problems on the server
+- This counter measures how busy a physical array is, not any logical partition or an individual disc in the array.
+- It will give you a pretty good knowledge about how busy your disk array is.
+- The value should not be over 55% on the server. If it is over 55% during several 10 minutes periods over 24 hours it will be an indication of I/O problems on the server
 
 check\_mssql\_num\_deadlocks
 
--   Deadlocks appear when two processes, who has locked one “pieces of data” each, both try to lock the same “new piece” of data at the same time. Every involved process will be waiting indefinitely for the other process to release the lock. Microsoft SQL Server will detect and kill one of the processes which means that one process will loose data
--   OP5 Monitor will send a Critical alert as soon as one deadlock appears
+- Deadlocks appear when two processes, who has locked one “pieces of data” each, both try to lock the same “new piece” of data at the same time. Every involved process will be waiting indefinitely for the other process to release the lock. Microsoft SQL Server will detect and kill one of the processes which means that one process will loose data
+- OP5 Monitor will send a Critical alert as soon as one deadlock appears
 
 check\_mssql\_num\_user\_connections
 
@@ -91,11 +89,9 @@ If the number of connections at the same time is too high you might run in to pr
 
 check\_mssql\_cache\_hit\_ratio
 
--   Buffer Cache Hit Ratio counter indicates of how often your Microsoft SQL Server goes to the Buffer instead of the harddrive when searching for data.
--   The value should be over 90 %
--   We may only use either Warning och Critical here so in the default config we have chosen Critical.
-
- 
+- Buffer Cache Hit Ratio counter indicates of how often your Microsoft SQL Server goes to the Buffer instead of the harddrive when searching for data.
+- The value should be over 90 %
+- We may only use either Warning och Critical here so in the default config we have chosen Critical.
 
 The table below describes the check\_command you may use when monitoring Microsoft SQL Server by queries
 
@@ -105,14 +101,14 @@ description
 
 check\_mssql\_backup\_job
 
--   The check\_command is one way to monitor the backup internal backup jobs of your Microsoft SQL Server.
+- The check\_command is one way to monitor the backup internal backup jobs of your Microsoft SQL Server.
      State OK will be true if the string “The job succeeded.” is found in the query made to the msdb database
--   State Critical will be returned if the string “The job succeeded” is not found or if the last backup job is older than 24 hours
+- State Critical will be returned if the string “The job succeeded” is not found or if the last backup job is older than 24 hours
 
 check\_mssql\_query\_string\_regex
 
--   The check\_command takes a given query and will search for a given search string in the result set and alert if not found.
--   You may use regular expressions when searching for a string in the first cell in the first row of the result.
+- The check\_command takes a given query and will search for a given search string in the result set and alert if not found.
+- You may use regular expressions when searching for a string in the first cell in the first row of the result.
 
 check\_mssql\_query\_count
 
@@ -221,8 +217,3 @@ Use the “Test this service” button for the services to see if they work. Onc
 ## **Monitoring a cluster**
 
 It is not unusual that a Microsoft SQL Server is running in a clustered environment. Of cource we can monitor your Microsoft SQL Server in that kind of environment to. Please read the how-to about [Monitoring Microsoft clustered servers](Monitoring_Microsoft_clustered_servers).
-
- 
-
- 
-

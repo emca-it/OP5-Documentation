@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_CONTACT_HOST_NOTIFICATION_TIMEPERIOD<br>
 
-
 #### Command Format:
 
 `CHANGE_CONTACT_HOST_NOTIFICATION_TIMEPERIOD;contact_name;notification_timeperiod`
@@ -29,6 +28,3 @@ Changes the host notification timeperiod for a particular contact to what is spe
 
 printf "[%lu] CHANGE_CONTACT_HOST_NOTIFICATION_TIMEPERIOD;naemonadmin;24x7\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

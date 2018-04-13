@@ -4,20 +4,18 @@ Disclamer
 
 This is an unsupported plugin. More information about the bischeck plugin can be found at the [bischeck github page](https://github.com/thenodon/bischeck) or at the [bischeck.org](http://www.bischeck.org/).
 
- 
-
 ## Prerequisites
 
 A OP5 Monitor installation with Bischeck installed. For information on how to install this addon, please read: [Installing Bischeck](Installing_Bischeck)
 
-## 
+##
 Getting started with Bischeck and OP5 Monitor
 
 Until version 6.1 of OP5 Monitor all monitoring was limited to static thresholds, like the classic 90% utilization for a file system. In many business cases static thresholds are not enough since they only provide a limited granularity as to when an alarm should be triggered. In the file system example it can be equally important to have a threshold for the speed of growth of the utilization. This means that we need to be able to define a threshold by calculating a utilization delta over a period of time. With Bischeck Adaptive and dynamic thresholds we can:
 
--   Define different threshold depending on the time of the day, day of the week or month
+- Define different threshold depending on the time of the day, day of the week or month
 
--   Calculate thresholds based on historical data using mathematical functions like average, max, sum, etc
+- Calculate thresholds based on historical data using mathematical functions like average, max, sum, etc
 
 All this, and much more, can be done with Bischeck. Bischeck integrates with OP5 Monitor over standard API like Livestatus and NSCA.
 
@@ -38,51 +36,49 @@ Let's start with the core configuration file bischeck.xml. In this configuration
 <bischeck>
 <host>
 <name>moon</name>
- 
+
 <service>
 <name>net</name>
 <schedule>15M</schedule>
 <sendserver>true</sendserver>
 <url>livestatus://localhost:6557</url>
 <driver></driver>
- 
+
 <serviceitem>
 <name>in</name>
 <execstatement>{"host":"moon","service":"IF 2: eth0 traffic","query":"perfdata","label":"in_traffic"}</execstatement>
 <thresholdclass>Twenty4HourThreshold</thresholdclass>
 <serviceitemclass>LivestatusServiceItem</serviceitemclass>
 </serviceitem>
- 
+
 <serviceitem>
 <name>out</name>
 <execstatement>{"host":"moon","service":"IF2: eth0 traffic","query":"perfdata","label":"out_traffic"}</execstatement>
 <thresholdclass>Twenty4HourThreshold</thresholdclass>
 <serviceitemclass>LivestatusServiceItem</serviceitemclass>
 </serviceitem>
- 
+
 </service>
- 
+
 <service>
 <name>totalTraffic</name>
 <schedule>moon-net</schedule>
 <sendserver>true</sendserver>
 <url>bischeck://cache</url>
 <driver></driver>
- 
+
 <serviceitem>
 <name>total</name>
 <execstatement>moon-net-in[0]+moon-net-out[0]</execstatement>
 <thresholdclass>Twenty4HourThreshold</thresholdclass>
 <serviceitemclass>CalculateOnCache</serviceitemclass>
 </serviceitem>
- 
+
 </service>
- 
+
 </host>
 </bischeck>
 ```
-
- 
 
 In Bischeck we have three main configuration concepts that define what to monitor; host, service and serviceitem. The host and service name must be equivalent to what is configured in OP5 Monitor as a passive service.
 
@@ -105,7 +101,7 @@ For this serviceitem we define that we will use a threshold class called Twenty4
     version="1.0" encoding="UTF-8"
     standalone="yes"?>
 <twenty4threshold>
- 
+
 <servicedef>
 <hostname>moon</hostname>
 <servicename>net</servicename>
@@ -117,7 +113,7 @@ For this serviceitem we define that we will use a threshold class called Twenty4
 <hoursIDREF>1</hoursIDREF>
 </period>
 </servicedef>
- 
+
 <servicedef>
 <hostname>moon</hostname>
 <servicename>net</servicename>
@@ -129,7 +125,7 @@ For this serviceitem we define that we will use a threshold class called Twenty4
 <hoursIDREF>2</hoursIDREF>
 </period>
 </servicedef>
- 
+
 <servicedef>
 <hostname>moon</hostname>
 <servicename>totalTraffic</servicename>
@@ -141,7 +137,7 @@ For this serviceitem we define that we will use a threshold class called Twenty4
 <hoursIDREF>3</hoursIDREF>
 </period>
 </servicedef>
- 
+
 <hours
     hoursID="1">
 <hourinterval>
@@ -150,7 +146,7 @@ For this serviceitem we define that we will use a threshold class called Twenty4
 <threshold>avg(moon-net-in[-169H:-168H])</threshold>
 </hourinterval>
 </hours>
- 
+
 <hours
     hoursID="2">
 <hourinterval>
@@ -159,7 +155,7 @@ For this serviceitem we define that we will use a threshold class called Twenty4
 <threshold>avg(moon-net-in[-169H:-168H])</threshold>
 </hourinterval>
 </hours>
- 
+
 <hours
     hoursID="3">
 <hourinterval>
@@ -169,11 +165,9 @@ For this serviceitem we define that we will use a threshold class called Twenty4
 <from>07:00</from> <to>23:00</to> <threshold>80</threshold>
 </hourinterval>
 </hours>
- 
+
 </twenty4threshold>
 ```
-
- 
 
 For the Twenty4HourThreshold class we define thresholds for each host, service and serviceitem that will have some kind of threshold. These entries are called servicedef. For each service definition one or many periods can be defined to configure different settings for a combination of calendar items like month, week, day in month and day in week. If a period do not have any calendar definitions it will use the default period.
 
@@ -193,18 +187,18 @@ Now we have two new services, moon-net and moon-totalTraffic that we need to int
 
 Bischeck is an incredible tool for bringing adaptive thresholds into OP5 Monitor. This advanced feature does require some configuration, and is meant for the intermediate user. Be sure these last few steps are done in your installation. They are inferred in the body of this article, however for completeness we have included them as steps here.
 
-1.  Configure a check\_command (Manage \> Configure \> Check Commands) as a placeholder. 
+1. Configure a check\_command (Manage \> Configure \> Check Commands) as a placeholder.
     1.  Name: check\_bischeck
     2.  Command: \$USER1\$/check\_dummy 2 "The bischeck service is not sending metrics, must be stale."
 
-2.  Configure a Service Check. Using the example scenario the check command should match the Bischeck configuration, for example "net" within the host "moon". Your server can be one already added to OP5 Monitor, or a newly configured server just containing Bischeck Service Checks.
+2. Configure a Service Check. Using the example scenario the check command should match the Bischeck configuration, for example "net" within the host "moon". Your server can be one already added to OP5 Monitor, or a newly configured server just containing Bischeck Service Checks.
     1.  Within the Service Check configuration verify:
         1.  active\_checks\_enabled NO
         2.  passive\_checks\_enabled YES
         3.  We would also suggest: check\_freshness YES
         4.  And freshness\_threshold set to the number of seconds configured within bischeck.xml for the "schedule" part of the particular service definition.
 
-3.  Add a Bischeck friendly graph template, be sure to name it check\_bischeck:
+3. Add a Bischeck friendly graph template, be sure to name it check\_bischeck:
     1.  A great start is this graph from Urban Lagerström, provided by the Bischeck How To's: [Plot Interval Based Threshold With Extended Warning And Critical Data With PHP4Nagios](https://kb.op5.com/www.bischeck.org/?p=956)
     2.  Alternatively you can find the Graphs mentioned in documentation but not provided within the tar, at [the Git repo.](https://github.com/thenodon/bischeck/tree/master/src/main/php/php4nagios/templates.)
     3.  Upload to /opt/monitor/op5/pnp/templates, and create a symbolic link in templates.dist pointing to the template in the templates-folder. This will insure your plugin will remain, throughout future updates to OP5.
@@ -225,5 +219,3 @@ Hopefully this example gave you some ideas as to how Bischeck can be used togeth
 </tr>
 </tbody>
 </table>
-
-

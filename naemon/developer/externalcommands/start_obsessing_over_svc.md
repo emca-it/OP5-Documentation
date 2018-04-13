@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - START_OBSESSING_OVER_SVC<br>
 
-
 #### Command Format:
 
 `START_OBSESSING_OVER_SVC;host_name;service_description`
@@ -29,6 +28,3 @@ Enables processing of service checks via the OCSP command for the specified serv
 
 printf "[%lu] START_OBSESSING_OVER_SVC;host1;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

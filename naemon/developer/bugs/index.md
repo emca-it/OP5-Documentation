@@ -24,7 +24,6 @@ Open new issues on our Github issue tracker
  * [Naemon Core](https://github.com/naemon/naemon-core/issues?state=open)
  * [Naemon Suite](https://github.com/naemon/naemon/issues?state=open)
 
-
 <table class='table sortable table-condensed table-hover'>
 <thead>
 <tr>
@@ -124,7 +123,5 @@ Open new issues on our Github issue tracker
 </tbody>
 </table>
 
-
 <script src="/js/moment.min.js"></script>
 <script src="/js/bootstrap-sortable.js"></script>
-

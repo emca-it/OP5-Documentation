@@ -12,7 +12,7 @@ Is easy you can find the documentation hosted on github: [here](https://github.c
 
 ## Contributors to the NSClient++ Documentation
 
-Many people have contributed to the NSClient++ project, and the NSClient++ documentation.  
+Many people have contributed to the NSClient++ project, and the NSClient++ documentation.
 
 It is only with the input and contributions of the NSClient++ community
 that NSClient++ has such wonderful documentation -- Thank You!

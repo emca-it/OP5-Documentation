@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DEL_HOST_COMMENT<br>
 
-
 #### Command Format:
 
 `DEL_HOST_COMMENT;comment_id`
@@ -29,6 +28,3 @@ This command is used to delete a specific host comment.
 
 printf "[%lu] DEL_HOST_COMMENT;1234\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

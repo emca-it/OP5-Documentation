@@ -23,7 +23,6 @@ After the initial installation, start the server with the following command:
   %> GEM_HOME=.gem ./.gem/bin/jekyll serve --watch
 ```
 
-
 #### OSX
 
 On OSX we use <a href="http://brew.sh">brew</a> to install ruby 1.9:

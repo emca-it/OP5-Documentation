@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_HOST_CHECK_COMMAND<br>
 
-
 #### Command Format:
 
 `CHANGE_HOST_CHECK_COMMAND;host_name;check_command`
@@ -29,6 +28,3 @@ Changes the check command for a particular host to be that specified by the 'che
 
 printf "[%lu] CHANGE_HOST_CHECK_COMMAND;host1;check_ping\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

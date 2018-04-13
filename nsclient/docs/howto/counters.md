@@ -75,15 +75,14 @@ To get help you can run: `nscp sys -- --help`
 | --counter arg      | Specify which counter to work with                                                                          |
 | --filter arg       | Specify a filter to match (substring matching)                                                              |
 
-
 This tool can do:
 
--   List default/configured counters
--   List other counters
--   Validate the default/configured counters
--   Validate other counters
--   Convert names to indexes and vice versa
--   List instance, and what not for a given counter.
+- List default/configured counters
+- List other counters
+- Validate the default/configured counters
+- Validate other counters
+- Convert names to indexes and vice versa
+- List instance, and what not for a given counter.
 
 The first thing to do when you run into issues is to validate the default counters:
 

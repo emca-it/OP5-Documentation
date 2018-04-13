@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_PASSIVE_HOST_CHECKS<br>
 
-
 #### Command Format:
 
 `DISABLE_PASSIVE_HOST_CHECKS;host_name`
@@ -29,6 +28,3 @@ Disables acceptance and processing of passive host checks for the specified host
 
 printf "[%lu] DISABLE_PASSIVE_HOST_CHECKS;host1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

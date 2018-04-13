@@ -2,14 +2,7 @@
 
 A server that listens for incoming HTTP connection and processes incoming requests. It provides both a WEB UI as well as a REST API in addition to simplifying configuration of WEB Server module.
 
-
-
-
-
-
 ## Configuration
-
-
 
 | Path / Section                       | Description |
 |--------------------------------------|-------------|
@@ -18,14 +11,7 @@ A server that listens for incoming HTTP connection and processes incoming reques
 | [/settings/WEB/server/roles](#roles) | Roles       |
 | [/settings/WEB/server/users](#users) | Users       |
 
-
-
 ### /settings/default <a id="/settings/default"/>
-
-
-
-
-
 
 | Key                                         | Default Value | Description           |
 |---------------------------------------------|---------------|-----------------------|
@@ -39,10 +25,8 @@ A server that listens for incoming HTTP connection and processes incoming reques
 | [thread pool](#thread-pool)                 | 10            | THREAD POOL           |
 | [timeout](#timeout)                         | 30            | TIMEOUT               |
 
-
-
 ```ini
-# 
+#
 [/settings/default]
 allowed hosts=127.0.0.1
 cache allowed hosts=true
@@ -53,17 +37,9 @@ timeout=30
 
 ```
 
-
-
-
-
 #### ALLOWED HOSTS <a id="/settings/default/allowed hosts"></a>
 
 A comma separated list of allowed hosts. You can use netmasks (/ syntax) or * to create ranges.
-
-
-
-
 
 | Key            | Description                                                      |
 |----------------|------------------------------------------------------------------|
@@ -71,7 +47,6 @@ A comma separated list of allowed hosts. You can use netmasks (/ syntax) or * to
 | Key:           | allowed hosts                                                    |
 | Default value: | `127.0.0.1`                                                      |
 | Used by:       | CheckMKServer, NRPEServer, NSCAServer, NSClientServer, WEBServer |
-
 
 **Sample:**
 
@@ -81,16 +56,9 @@ A comma separated list of allowed hosts. You can use netmasks (/ syntax) or * to
 allowed hosts=127.0.0.1
 ```
 
-
-
 #### BIND TO ADDRESS <a id="/settings/default/bind to"></a>
 
 Allows you to bind server to a specific local address. This has to be a dotted ip address not a host name. Leaving this blank will bind to all available IP addresses.
-
-
-
-
-
 
 | Key            | Description                                                      |
 |----------------|------------------------------------------------------------------|
@@ -98,7 +66,6 @@ Allows you to bind server to a specific local address. This has to be a dotted i
 | Key:           | bind to                                                          |
 | Default value: | _N/A_                                                            |
 | Used by:       | CheckMKServer, NRPEServer, NSCAServer, NSClientServer, WEBServer |
-
 
 **Sample:**
 
@@ -108,15 +75,9 @@ Allows you to bind server to a specific local address. This has to be a dotted i
 bind to=
 ```
 
-
-
 #### CACHE ALLOWED HOSTS <a id="/settings/default/cache allowed hosts"></a>
 
 If host names (DNS entries) should be cached, improves speed and security somewhat but won't allow you to have dynamic IPs for your Nagios server.
-
-
-
-
 
 | Key            | Description                                                      |
 |----------------|------------------------------------------------------------------|
@@ -124,7 +85,6 @@ If host names (DNS entries) should be cached, improves speed and security somewh
 | Key:           | cache allowed hosts                                              |
 | Default value: | `true`                                                           |
 | Used by:       | CheckMKServer, NRPEServer, NSCAServer, NSClientServer, WEBServer |
-
 
 **Sample:**
 
@@ -134,16 +94,7 @@ If host names (DNS entries) should be cached, improves speed and security somewh
 cache allowed hosts=true
 ```
 
-
-
 #### NRPE PAYLOAD ENCODING <a id="/settings/default/encoding"></a>
-
-
-
-
-
-
-
 
 | Key            | Description                                                      |
 |----------------|------------------------------------------------------------------|
@@ -153,7 +104,6 @@ cache allowed hosts=true
 | Default value: | _N/A_                                                            |
 | Used by:       | CheckMKServer, NRPEServer, NSCAServer, NSClientServer, WEBServer |
 
-
 **Sample:**
 
 ```
@@ -162,15 +112,9 @@ cache allowed hosts=true
 encoding=
 ```
 
-
-
 #### INBOX <a id="/settings/default/inbox"></a>
 
 The default channel to post incoming messages on
-
-
-
-
 
 | Key            | Description                                                      |
 |----------------|------------------------------------------------------------------|
@@ -178,7 +122,6 @@ The default channel to post incoming messages on
 | Key:           | inbox                                                            |
 | Default value: | `inbox`                                                          |
 | Used by:       | CheckMKServer, NRPEServer, NSCAServer, NSClientServer, WEBServer |
-
 
 **Sample:**
 
@@ -188,16 +131,9 @@ The default channel to post incoming messages on
 inbox=inbox
 ```
 
-
-
 #### PASSWORD <a id="/settings/default/password"></a>
 
 Password used to authenticate against server
-
-
-
-
-
 
 | Key            | Description                                                      |
 |----------------|------------------------------------------------------------------|
@@ -205,7 +141,6 @@ Password used to authenticate against server
 | Key:           | password                                                         |
 | Default value: | _N/A_                                                            |
 | Used by:       | CheckMKServer, NRPEServer, NSCAServer, NSClientServer, WEBServer |
-
 
 **Sample:**
 
@@ -215,15 +150,9 @@ Password used to authenticate against server
 password=
 ```
 
-
-
 #### LISTEN QUEUE <a id="/settings/default/socket queue size"></a>
 
 Number of sockets to queue before starting to refuse new incoming connections. This can be used to tweak the amount of simultaneous sockets that the server accepts.
-
-
-
-
 
 | Key            | Description                                                      |
 |----------------|------------------------------------------------------------------|
@@ -233,7 +162,6 @@ Number of sockets to queue before starting to refuse new incoming connections. T
 | Default value: | `0`                                                              |
 | Used by:       | CheckMKServer, NRPEServer, NSCAServer, NSClientServer, WEBServer |
 
-
 **Sample:**
 
 ```
@@ -242,15 +170,7 @@ Number of sockets to queue before starting to refuse new incoming connections. T
 socket queue size=0
 ```
 
-
-
 #### THREAD POOL <a id="/settings/default/thread pool"></a>
-
-
-
-
-
-
 
 | Key            | Description                                                      |
 |----------------|------------------------------------------------------------------|
@@ -260,7 +180,6 @@ socket queue size=0
 | Default value: | `10`                                                             |
 | Used by:       | CheckMKServer, NRPEServer, NSCAServer, NSClientServer, WEBServer |
 
-
 **Sample:**
 
 ```
@@ -269,15 +188,9 @@ socket queue size=0
 thread pool=10
 ```
 
-
-
 #### TIMEOUT <a id="/settings/default/timeout"></a>
 
 Timeout when reading packets on incoming sockets. If the data has not arrived within this time we will bail out.
-
-
-
-
 
 | Key            | Description                                                      |
 |----------------|------------------------------------------------------------------|
@@ -285,7 +198,6 @@ Timeout when reading packets on incoming sockets. If the data has not arrived wi
 | Key:           | timeout                                                          |
 | Default value: | `30`                                                             |
 | Used by:       | CheckMKServer, NRPEServer, NSCAServer, NSClientServer, WEBServer |
-
 
 **Sample:**
 
@@ -295,13 +207,9 @@ Timeout when reading packets on incoming sockets. If the data has not arrived wi
 timeout=30
 ```
 
-
 ### Web server <a id="/settings/WEB/server"/>
 
 Section for WEB (WEBServer.dll) (check_WEB) protocol options.
-
-
-
 
 | Key                                         | Default Value                       | Description         |
 |---------------------------------------------|-------------------------------------|---------------------|
@@ -311,8 +219,6 @@ Section for WEB (WEBServer.dll) (check_WEB) protocol options.
 | [password](#password)                       |                                     | PASSWORD            |
 | [port](#port-number)                        | 8443                                | PORT NUMBER         |
 | [threads](#number-of-threads)               | 10                                  | NUMBER OF THREADS   |
-
-
 
 ```ini
 # Section for WEB (WEBServer.dll) (check_WEB) protocol options.
@@ -325,17 +231,9 @@ threads=10
 
 ```
 
-
-
-
-
 #### ALLOWED HOSTS <a id="/settings/WEB/server/allowed hosts"></a>
 
 A comma separated list of allowed hosts. You can use netmasks (/ syntax) or * to create ranges. parent for this key is found under: /settings/default this is marked as advanced in favor of the parent.
-
-
-
-
 
 | Key            | Description                                   |
 |----------------|-----------------------------------------------|
@@ -345,7 +243,6 @@ A comma separated list of allowed hosts. You can use netmasks (/ syntax) or * to
 | Default value: | `127.0.0.1`                                   |
 | Used by:       | WEBServer                                     |
 
-
 **Sample:**
 
 ```
@@ -354,15 +251,9 @@ A comma separated list of allowed hosts. You can use netmasks (/ syntax) or * to
 allowed hosts=127.0.0.1
 ```
 
-
-
 #### CACHE ALLOWED HOSTS <a id="/settings/WEB/server/cache allowed hosts"></a>
 
 If host names (DNS entries) should be cached, improves speed and security somewhat but won't allow you to have dynamic IPs for your Nagios server. parent for this key is found under: /settings/default this is marked as advanced in favor of the parent.
-
-
-
-
 
 | Key            | Description                                   |
 |----------------|-----------------------------------------------|
@@ -372,7 +263,6 @@ If host names (DNS entries) should be cached, improves speed and security somewh
 | Default value: | `true`                                        |
 | Used by:       | WEBServer                                     |
 
-
 **Sample:**
 
 ```
@@ -381,15 +271,9 @@ If host names (DNS entries) should be cached, improves speed and security somewh
 cache allowed hosts=true
 ```
 
-
-
 #### CERTIFICATE <a id="/settings/WEB/server/certificate"></a>
 
 Ssl certificate to use for the ssl server
-
-
-
-
 
 | Key            | Description                                   |
 |----------------|-----------------------------------------------|
@@ -397,7 +281,6 @@ Ssl certificate to use for the ssl server
 | Key:           | certificate                                   |
 | Default value: | `${certificate-path}/certificate.pem`         |
 | Used by:       | WEBServer                                     |
-
 
 **Sample:**
 
@@ -407,16 +290,9 @@ Ssl certificate to use for the ssl server
 certificate=${certificate-path}/certificate.pem
 ```
 
-
-
 #### PASSWORD <a id="/settings/WEB/server/password"></a>
 
 Password used to authenticate against server parent for this key is found under: /settings/default this is marked as advanced in favor of the parent.
-
-
-
-
-
 
 | Key            | Description                                   |
 |----------------|-----------------------------------------------|
@@ -426,7 +302,6 @@ Password used to authenticate against server parent for this key is found under:
 | Default value: | _N/A_                                         |
 | Used by:       | WEBServer                                     |
 
-
 **Sample:**
 
 ```
@@ -435,15 +310,9 @@ Password used to authenticate against server parent for this key is found under:
 password=
 ```
 
-
-
 #### PORT NUMBER <a id="/settings/WEB/server/port"></a>
 
 Port to use for WEB server.
-
-
-
-
 
 | Key            | Description                                   |
 |----------------|-----------------------------------------------|
@@ -451,7 +320,6 @@ Port to use for WEB server.
 | Key:           | port                                          |
 | Default value: | `8443`                                        |
 | Used by:       | WEBServer                                     |
-
 
 **Sample:**
 
@@ -461,15 +329,9 @@ Port to use for WEB server.
 port=8443
 ```
 
-
-
 #### NUMBER OF THREADS <a id="/settings/WEB/server/threads"></a>
 
 The number of threads in the sever response pool.
-
-
-
-
 
 | Key            | Description                                   |
 |----------------|-----------------------------------------------|
@@ -477,7 +339,6 @@ The number of threads in the sever response pool.
 | Key:           | threads                                       |
 | Default value: | `10`                                          |
 | Used by:       | WEBServer                                     |
-
 
 **Sample:**
 
@@ -487,16 +348,9 @@ The number of threads in the sever response pool.
 threads=10
 ```
 
-
 ### Roles <a id="/settings/WEB/server/roles"/>
 
 A list of roles and with coma separated list of access rights.
-
-
-
-
-
-
 
 ```ini
 # A list of roles and with coma separated list of access rights.
@@ -504,19 +358,13 @@ A list of roles and with coma separated list of access rights.
 
 ```
 
-
-
-
 ### Users <a id="/settings/WEB/server/users"/>
 
 Users which can access the REST API
 
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key         | Default Value | Description |
 |-------------|---------------|-------------|
@@ -525,7 +373,6 @@ This is a section of objects. This means that you will create objects below this
 | parent      | default       | PARENT      |
 | password    |               | PASSWORD    |
 | role        |               | ROLE        |
-
 
 **Sample:**
 
@@ -539,9 +386,3 @@ parent=default
 #role=...
 
 ```
-
-
-
-
-
-

@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - SCHEDULE_FORCED_SVC_CHECK<br>
 
-
 #### Command Format:
 
 `SCHEDULE_FORCED_SVC_CHECK;host_name;service_description;check_time`
@@ -29,6 +28,3 @@ Schedules a forced active check of a particular service at 'check_time'. The 'ch
 
 printf "[%lu] SCHEDULE_FORCED_SVC_CHECK;host1;service1;1478648441\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

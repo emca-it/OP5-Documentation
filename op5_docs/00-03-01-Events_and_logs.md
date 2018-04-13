@@ -11,24 +11,24 @@ One useful report in OP5 Monitor is the Top alert producers report. This report 
 
 ### Create a Top alert producers report
 
-1.  Click Alert summary in the main menu.
+1. Click Alert summary in the main menu.
 
     ![](attachments/16482316/16678946.png)
 
-2.  Select custom report mode.
+2. Select custom report mode.
     ![](attachments/16482316/16678947.png)
-3.  Select all hostgroups.
+3. Select all hostgroups.
     ![](attachments/16482316/16678948.png)
-4.  Select Report period Since this is the first time we generate this report we use the last 31 days. When you use this on, for example, weekly basis you could use the last 7 days. ![](attachments/16482316/16678945.png)
-5.   Select Summary type and set it to Top alert producers.
+4. Select Report period Since this is the first time we generate this report we use the last 31 days. When you use this on, for example, weekly basis you could use the last 7 days. ![](attachments/16482316/16678945.png)
+5.  Select Summary type and set it to Top alert producers.
     ![](attachments/16482316/16678949.png)
-6.  Leave the Alert Types with the default value.
+6. Leave the Alert Types with the default value.
     ![](attachments/16482316/16678952.png)
-7.  Choose Hard states for State Types, we are only interested in the real problems.
+7. Choose Hard states for State Types, we are only interested in the real problems.
      ![](attachments/16482316/16678950.png)
-8.  Choose only problems sate for both hosts and services.
-    ![](attachments/16482316/16678954.png) 
-9.  Set the number of items to show in the resulting report. If you have a large environment with a lots of host you might want to increase the number of shown items.![](attachments/16482316/16678951.png)
+8. Choose only problems sate for both hosts and services.
+    ![](attachments/16482316/16678954.png)
+9. Set the number of items to show in the resulting report. If you have a large environment with a lots of host you might want to increase the number of shown items.![](attachments/16482316/16678951.png)
 10. Click on **Show Report**.
 
 ## Top alert producers result
@@ -43,12 +43,10 @@ Alert summary reports are useful from time to time. So when you have created a n
 
 ### To save an Alert summary report.
 
- 
-
-1.  Create an Alert summary report like you did in [Creating a Top alert producers report](#Eventsandlogs-Creatingtopalertproducersreport), show the report then:
-2.  Click **Save report**.
+1. Create an Alert summary report like you did in [Creating a Top alert producers report](#Eventsandlogs-Creatingtopalertproducersreport), show the report then:
+2. Click **Save report**.
     ![](attachments/16482316/16678955.png)
-3.  Enter a name for the report and click **Create Summary Report**.
+3. Enter a name for the report and click **Create Summary Report**.
 
 ## Scheduling an Alert summary report
 
@@ -56,14 +54,12 @@ For the exact same reason as it is to schedule an availability report or a SLA r
 
 ### To schedule an alert summary report
 
-1.  Create an Alert summary report like you did in [Creating top alert producers report](#Eventsandlogs-Creatingtopalertproducersreport) and save the report.
-2.  Click the plus icon at the right top of the page
+1. Create an Alert summary report like you did in [Creating top alert producers report](#Eventsandlogs-Creatingtopalertproducersreport) and save the report.
+2. Click the plus icon at the right top of the page
     ![](attachments/16482316/16678953.png)
-3.  Follow the instructions in [Schedule reports](Reports_16482315.html#Reports-schedule_reports), just select "Alert summary report" as report type.
+3. Follow the instructions in [Schedule reports](Reports_16482315.html#Reports-schedule_reports), just select "Alert summary report" as report type.
      ![](attachments/16482316/16678958.png)
-4.  Click **Save**.
-
- 
+4. Click **Save**.
 
 # Trends
 
@@ -71,11 +67,9 @@ Trends display a graphic view of status on a host or a service during a selected
 
 ## Creating a trend report
 
- 
-
-1.  Click **Include trends graph**.
+1. Click **Include trends graph**.
     ![](attachments/16482316/16678957.png)
-2.  The trends will be shown in the report.
+2. The trends will be shown in the report.
     ![](attachments/16482316/16679215.png)
 
 # Event log
@@ -99,10 +93,8 @@ As you can see in the picture below everything except for **Initial and logrotat
 
 The event log view is divided into two parts
 
--   filtering
--   logs
-
- 
+- filtering
+- logs
 
 In the filtering you can change what type of events you like to show and also between what dates you would like to view logs for.
  The logs are grouped by hours to make it a bit easier to find what you are looking for.
@@ -115,9 +107,9 @@ The alert history view is a view for all alerts that has been detected by the sy
 
 In the OP5 Monitor alert history you can
 
--   -   view every alert that took place in OP5 Monitor
-    -   filter out any kind of alerts you do not want to see
-    -   set the start and end time of the alerts you like to view.
+- view every alert that took place in OP5 Monitor
+  - filter out any kind of alerts you do not want to see
+  - set the start and end time of the alerts you like to view.
 
 ### To view the alert history
 
@@ -132,4 +124,3 @@ The list can be long. Try applying a filter to it by using the filter options. Y
  ![](attachments/16482316/16679218.png)
  By checking the check box **Show all** it is possible to filter the view on hostgroups, hosts, services and servicegroups as well.
  Select the checkbox **Include full output** to get the status information from the check in the alert histry as well.
-

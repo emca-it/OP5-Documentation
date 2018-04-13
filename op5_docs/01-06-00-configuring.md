@@ -4,8 +4,8 @@
 
 There are two supported ways to change the configuration of your OP5 Monitor:
 
--   Using the web UI OP5 Monitor configuration tool;
--   Using the REST API.
+- Using the web UI OP5 Monitor configuration tool;
+- Using the REST API.
 
 We will discuss the API as a configuration tool in a later chapter. This chapter will take a look at how to use the OP5 Monitor Configuration tool, which henceforth we will call **Configure**.
 
@@ -35,8 +35,8 @@ You (as an admin) open Configure.
 
 This triggers Livestatus to compare the config files and the Nacoma database content:
 
--   If the config file are newer than any Nacoma content, Livestatus will import the changes to Nacoma before opening the Configure page.
--   If the config files are not newer than Nacoma content, then Configure opens right up.
+- If the config file are newer than any Nacoma content, Livestatus will import the changes to Nacoma before opening the Configure page.
+- If the config files are not newer than Nacoma content, then Configure opens right up.
 
 3
 
@@ -58,8 +58,8 @@ Once you finish editing the configuration objects for a session, save the Config
 
 Livestatus runs a pre-flight check to verify the configuration changes before exporting them to the configuration files:
 
--   If this check fails, the admin sees an error message and nothing gets exported.
--   Otherwise, Livestatus exports the configuration in the database to the config files.
+- If this check fails, the admin sees an error message and nothing gets exported.
+- Otherwise, Livestatus exports the configuration in the database to the config files.
 
 8
 
@@ -68,4 +68,3 @@ Naemon, the main engine of OP5 Monitor, restarts. It also runs a verification ("
 9
 
 Naemon triggers Merlin to synchronize with pollers and peers.
-

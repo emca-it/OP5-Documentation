@@ -33,4 +33,3 @@ Dec 08, 2017</td>
 </table>
 
 [Find more results](/dosearchsite.action?queryString=labelText:(kb-how-to-article)+AND+spacekey:(HOWTOs)&type=page,blog)
-

@@ -12,11 +12,11 @@ This guide makes a few assumptions. The first assumption being OP5 Monitor is in
 
 ### Prerequisite List:
 
--   OP5 Monitor setup and ready
--   URL of OP5 Monitor
--   Web Browser
--   Access to the OP5 Monitor web page
--   Account credentials with permissions to log into OP5 Monitor
+- OP5 Monitor setup and ready
+- URL of OP5 Monitor
+- Web Browser
+- Access to the OP5 Monitor web page
+- Account credentials with permissions to log into OP5 Monitor
 
 ## More information
 
@@ -24,39 +24,38 @@ If more in-depth information is needed, check out the [OP5 Monitor Administratio
 
 * * * * *
 
--   [First Contact](First_Contact)
-    -   [Getting Logged In](Getting_Logged_In)
-    -   [My Account](My_account)
--   [Managing OP5 Monitor](Configuration)
-    -   [Backup/Restore](Backup_and_Restore)
-    -   [View Active Config](View_Active_Config)
--   [Monitoring](Monitoring)
-    -   [Business Service Monitoring](Business_Service_Monitoring)
-    -   [Dokuwiki](Dokuwiki)
-    -   [Host and Service Groups](Host_and_Service_Groups)
-    -   [Hosts and services](Hosts_and_services)
-    -   [Monitoring Agents](Monitoring_Agents)
-    -   [Parenting](Parenting)
-    -   [Problem handling](Problem_handling)
-    -   [NagVis](NagVis)
-        -   [Automap](Automap)
-        -   [Configure NagVis](Configure_NagVis)
-        -   [NagVis maps](NagVis_maps)
-        -   [Rotation pools](Rotation_pools)
-    -   [Viewing Graphs](Viewing_Graphs)
-    -   [Using Geomap](Using_Geomap)
--   [Reporting](Reporting)
-    -   [Events and logs](Events_and_logs)
-    -   [Reports](Reports)
--   [The GUI](The_GUI)
-    -   [Filters](Filters)
-    -   [Listviews](Listviews)
-    -   [Logger Interface](Logger_Interface)
-    -   [Multicommands](Multiple_host_and_service_commands)
-    -   [Navigation](Navigation)
-    -   [Quick Action Menu](Quick_Action_Menu)
-    -   [Refresh time](Refresh_time)
-    -   [Searching](Searching)
-    -   [Dashboards](Tactical_overview)
-    -   [Widgets](Widgets)
-
+- [First Contact](First_Contact)
+  - [Getting Logged In](Getting_Logged_In)
+  - [My Account](My_account)
+- [Managing OP5 Monitor](Configuration)
+  - [Backup/Restore](Backup_and_Restore)
+  - [View Active Config](View_Active_Config)
+- [Monitoring](Monitoring)
+  - [Business Service Monitoring](Business_Service_Monitoring)
+  - [Dokuwiki](Dokuwiki)
+  - [Host and Service Groups](Host_and_Service_Groups)
+  - [Hosts and services](Hosts_and_services)
+  - [Monitoring Agents](Monitoring_Agents)
+  - [Parenting](Parenting)
+  - [Problem handling](Problem_handling)
+  - [NagVis](NagVis)
+  - [Automap](Automap)
+  - [Configure NagVis](Configure_NagVis)
+  - [NagVis maps](NagVis_maps)
+  - [Rotation pools](Rotation_pools)
+  - [Viewing Graphs](Viewing_Graphs)
+  - [Using Geomap](Using_Geomap)
+- [Reporting](Reporting)
+  - [Events and logs](Events_and_logs)
+  - [Reports](Reports)
+- [The GUI](The_GUI)
+  - [Filters](Filters)
+  - [Listviews](Listviews)
+  - [Logger Interface](Logger_Interface)
+  - [Multicommands](Multiple_host_and_service_commands)
+  - [Navigation](Navigation)
+  - [Quick Action Menu](Quick_Action_Menu)
+  - [Refresh time](Refresh_time)
+  - [Searching](Searching)
+  - [Dashboards](Tactical_overview)
+  - [Widgets](Widgets)

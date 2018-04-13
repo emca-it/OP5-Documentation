@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - SCHEDULE_SVC_CHECK<br>
 
-
 #### Command Format:
 
 `SCHEDULE_SVC_CHECK;host_name;service_description;check_time`
@@ -29,6 +28,3 @@ Schedules the next active check of a specified service at 'check_time'. The 'che
 
 printf "[%lu] SCHEDULE_SVC_CHECK;host1;service1;1478648441\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

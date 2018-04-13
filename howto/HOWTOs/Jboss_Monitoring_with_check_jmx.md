@@ -9,7 +9,6 @@ Java Management Extensions (JMX) is a [Java](http://en.wikipedia.org/wiki/Java_
 JMX exposes a set of ‘Managed bean’ (MBean) wich represents a resource running in the Java Virtual Machine.
 
 The JMX implementation of a java application server typically exposes resource usage statistics (memory, threads used etc) and lots of other statistics/metrics. Apart from generic information the application server vendor also provide MBeans specific for the application server in question.
- 
 
 Standard JMX using RMI is no longer available in JBoss AS as of version 7.1
 
@@ -22,10 +21,6 @@ The `check_jmx` plugin enables you to monitor the values of any MBean attribut
 The JMX agent need to be enabled at the application server that is being monitored. The agent must be configured to allow remote connections over RMI ((Java) Remote Method Invocation). Refer to the application server documentation for details on how to set this up.
 
 It is also possible to run the checks in this how-to with a username and password to increase security, this how-to will not cover that. Please refer to your application servers manual how to set that up.
-
- 
-
- 
 
 ## Installation
 
@@ -110,19 +105,14 @@ This is just an example of some parameters that you can monitor with check\_jmx,
 
 The developers site: <http://snippets.syabru.ch/nagios-jmx-plugin/>
 
-JMX4Perl How-to: [How to monitor your application server with OP5 Monitor and JMX4Perl](How_to_monitor_your_application_server_with_op5_Monitor_and_JMX4Perl) 
+JMX4Perl How-to: [How to monitor your application server with OP5 Monitor and JMX4Perl](How_to_monitor_your_application_server_with_op5_Monitor_and_JMX4Perl)
 
 JMX on wikipedia: <http://en.wikipedia.org/wiki/JMX>
 
 # OP5 Monitor: Open Source Network Monitoring
 
-[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free. 
-
- 
+[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free.
 
 ### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
-
- 
-

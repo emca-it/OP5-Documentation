@@ -8,9 +8,9 @@ This image file contains all dependencies required to upgrade OP5 Monitor to the
 
 # Prerequisites
 
--   A [op5 Appliance system](https://kb.op5.com/display/APSDOC/op5+Appliance+System) installation.
--   General knowledge of common Linux command line tools
--   Iso image file of the version of OP5 Monitor you want to upgrade too available in the OP5 Monitor servers file system
+- A [op5 Appliance system](https://kb.op5.com/display/APSDOC/op5+Appliance+System) installation.
+- General knowledge of common Linux command line tools
+- Iso image file of the version of OP5 Monitor you want to upgrade too available in the OP5 Monitor servers file system
 
 # Upgrade procedure
 
@@ -36,9 +36,4 @@ You will now get a summary of all packages that will be updated or installed for
 
 The upgrade process will take a coulple of minutes, go get some coffee or tea.
 
- 
-
 Your system is now updated to the version specified in the filename of the ISO-image file.
-
- 
-

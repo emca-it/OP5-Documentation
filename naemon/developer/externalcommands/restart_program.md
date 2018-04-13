@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - RESTART_PROGRAM<br>
 
-
 #### Command Format:
 
 `RESTART_PROGRAM;`
@@ -29,6 +28,3 @@ Restarts the Naemon process.
 
 printf "[%lu] RESTART_PROGRAM;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

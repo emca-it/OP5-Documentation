@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ACKNOWLEDGE_HOST_PROBLEM<br>
 
-
 #### Command Format:
 
 `ACKNOWLEDGE_HOST_PROBLEM;host_name;sticky;notify;persistent;author;comment`
@@ -29,6 +28,3 @@ Allows you to acknowledge the current problem for the specified host. By acknowl
 
 printf "[%lu] ACKNOWLEDGE_HOST_PROBLEM;host1;1;1;1;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

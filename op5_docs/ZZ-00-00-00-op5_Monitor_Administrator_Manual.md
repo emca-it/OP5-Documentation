@@ -4,10 +4,10 @@
 
 This guide will help make the most of an OP5 Monitor server configuration. This includes:
 
--    maximizing physical and virtual hardware resources
--    optimizing performance of the member applications (including the web server and API)
--    configuration agent and agentless target (host) setups
--    integrating with a variety of other tools
+-  maximizing physical and virtual hardware resources
+-  optimizing performance of the member applications (including the web server and API)
+-  configuration agent and agentless target (host) setups
+-  integrating with a variety of other tools
 
 # What these pages offer you
 
@@ -28,4 +28,3 @@ Later in this Guide we will present Livestatus, which parses the configuration f
 We need to make this as clear as possible. Many people reading this Guide may come from Nagios administration, where editing the configuration files and creating new files are commonplace. We beg of you to leave these files alone. Please let our complex of miniature databases serve your higher goals.
 
 We will discuss the API and our Configure web page as our configuration tool in later chapters.
-

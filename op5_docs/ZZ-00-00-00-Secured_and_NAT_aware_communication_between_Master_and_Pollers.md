@@ -2,7 +2,7 @@
 
 # Intro
 
-The master/poller setup in OP5 Monitor requires that the poller system is directly reachable from the master OP5 Monitor system in order to push configurations and send commands to the poller. Of course, there is a way to set up the poller to instead of getting its configuration pushed actively ask the master for configuration changes periodically, but this is a suboptimal setup, as there will always be a delay until new configuration changes will be taken over by the poller. So, in order to make the poller system directly available by the master a simple OpenVPN setup is the best recommended way. 
+The master/poller setup in OP5 Monitor requires that the poller system is directly reachable from the master OP5 Monitor system in order to push configurations and send commands to the poller. Of course, there is a way to set up the poller to instead of getting its configuration pushed actively ask the master for configuration changes periodically, but this is a suboptimal setup, as there will always be a delay until new configuration changes will be taken over by the poller. So, in order to make the poller system directly available by the master a simple OpenVPN setup is the best recommended way.
 
 Also, if you use your master/poller setup through insecure networks like over the Internet, it is also recommended to use OpenVPN to secure the connection between the master and the poller(s).
 
@@ -40,9 +40,9 @@ poller-02
 
 # Certificates and the Certificate Authority
 
-In order to authenticate against each other and prove their identities, x509 certificates are used to secure the communication between the VPN nodes. It would be possible to use certificates bought from and signed by an official Certificate Authority, but this is not necessary. We will set up our own certificate authoriy to easily generate trusted certificates for all of our VPN nodes. This can be easily achieved by using easy-rsa. 
+In order to authenticate against each other and prove their identities, x509 certificates are used to secure the communication between the VPN nodes. It would be possible to use certificates bought from and signed by an official Certificate Authority, but this is not necessary. We will set up our own certificate authoriy to easily generate trusted certificates for all of our VPN nodes. This can be easily achieved by using easy-rsa.
 
-Generally, it is also possible to set up OpenVPN to use Preshared Secrets (=Passwords), but as soon as you want to have more than a one-to-one connection (like in this case) certificates are obligatory. 
+Generally, it is also possible to set up OpenVPN to use Preshared Secrets (=Passwords), but as soon as you want to have more than a one-to-one connection (like in this case) certificates are obligatory.
 
 ## Easy-rsa Installation
 
@@ -95,7 +95,7 @@ Now that the basics are set up, we can start building the Certificate Authority.
 source vars      # this reads the variables set up in the previous step
 ./clean-all      # clean the certificates directory (only do this when getting started with a brand new CA)
 ./build-ca       # this builds the CA itself
- 
+
 # output of ./build-ca looks something like this:
 Generating a 2048 bit RSA private key
 ..................................+++
@@ -117,7 +117,7 @@ Organizational Unit Name (eg, section) [IT infrastructure]:
 Common Name (eg, your name or your server's hostname) [op5 AB CA]:
 Name [EasyRSA]:
 Email Address [vpnadmin@op5.com]:
- 
+
 ```
 
 ## Build Diffie Hellman key
@@ -136,7 +136,7 @@ As the next step, build the certificate pair (private key and public certificate
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 ./build-key-server master   # this generates the certificates for the server called "master"
- 
+
 # the output looks something like this
 Generating a 2048 bit RSA private key
 ..................................+++
@@ -234,8 +234,6 @@ cert keys/master.crt
 key keys/master.key  # This file should be kept secret
 ```
 
- 
-
 In case you want to use other IP addresses as drawn in the picture above, you will have to edit the configuration file a bit. Relevant lines in the file are the following ones. Within the server.conf file, all configuration parameters are well commented, so it should be easy to modify them accordingly.
 
 **Relevant config lines for IP address ranges**
@@ -249,7 +247,7 @@ In case you want to use other IP addresses as drawn in the picture above, you wi
 # on 10.8.0.1. Comment this line out if you are
 # ethernet bridging. See the man page for more info.
 server 10.8.0.0 255.255.255.0
- 
+
 # EXAMPLE: Suppose you want to give
 # Thelonious a fixed VPN IP address of 10.9.0.1.
 # First uncomment out these lines:
@@ -257,7 +255,7 @@ client-config-dir ccd
 route 10.9.0.0 255.255.255.0
 # Then add this line to ccd/Thelonious:
 #   ifconfig-push 10.9.0.1 10.9.0.2
- 
+
 ```
 
 ### Client-Config-Directory
@@ -338,9 +336,9 @@ mkdir /etc/openvpn/keys
 
 Copy the following files from the master's easy-rsa keys directory to the poller's /etc/openvpn/keys directory (I recommend using scp for this):
 
--   ca.crt
--   poller-01.crt
--   poller-01.key
+- ca.crt
+- poller-01.crt
+- poller-01.key
 
 For poller-02, use poller-02.crt and poller-02.key respectively.
 
@@ -366,7 +364,7 @@ Now you can start openvpn from command line to see all the connection messages.
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 cd /etc/openvpn
 openvpn client.conf
- 
+
 # output will look like this
 Tue Jan 12 18:08:14 2016 OpenVPN 2.3.2 x86_64-redhat-linux-gnu [SSL (OpenSSL)] [LZO] [EPOLL] [PKCS11] [eurephia] [MH] [IPv6] built on Jan 15 2014
 Tue Jan 12 18:08:14 2016 Socket Buffers: R=[124928->131072] S=[124928->131072]
@@ -454,4 +452,3 @@ Now that your network communication layer is set up correctly, you can proceed w
 **Content by label**
 
 There is no content with the specified labels
-

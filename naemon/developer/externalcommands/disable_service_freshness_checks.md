@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_SERVICE_FRESHNESS_CHECKS<br>
 
-
 #### Command Format:
 
 `DISABLE_SERVICE_FRESHNESS_CHECKS;`
@@ -29,6 +28,3 @@ Disables freshness checks of all services on a program-wide basis.
 
 printf "[%lu] DISABLE_SERVICE_FRESHNESS_CHECKS;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

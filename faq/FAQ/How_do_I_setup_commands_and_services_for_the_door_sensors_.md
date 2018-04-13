@@ -25,4 +25,3 @@ The following configuration will generate a CRITICAL alert if the door is open a
 **max\_check\_attempts:** 1
 
 Please verify by browsing the environmental module that the values from the probe are above 100 when the door is closed and below 100 when it's open.
-

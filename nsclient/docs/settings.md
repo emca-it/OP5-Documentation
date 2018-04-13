@@ -55,25 +55,23 @@ key3=This values comes from baseline.ini
 
 in the above example the values of /test keyx will be:
 
--   key1=This values comes from nsclient.ini
--   key2=This values comes from client.ini
--   key3=This values comes from baseline.ini
+- key1=This values comes from nsclient.ini
+- key2=This values comes from client.ini
+- key3=This values comes from baseline.ini
 
 This can be very useful to distribute a baseline configuration for a company or monitoring product.
 Then all "machine specific customization" would go into the nsclient.ini config where as client.ini would be reserved for the clients global config. And finally baseline.ini would be monitoring tool specific configuration.
-
 
 ## Settings stores
 
 Settings are historically stored in an ini file but you can store settings in many other locations as well.
 While the most obvious one to use is the registry there are other options as well.
 
--   ini files
--   old ini files
--   registry
--   dummy
--   http (ini files over http)
-
+- ini files
+- old ini files
+- registry
+- dummy
+- http (ini files over http)
 
 ### Ini settings
 

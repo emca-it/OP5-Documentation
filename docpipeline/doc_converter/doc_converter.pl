@@ -3,16 +3,16 @@
 #
 #         FILE: doc_converter.pl
 #
-#        USAGE: ./doc_converter.pl  
+#        USAGE: ./doc_converter.pl 
 #
-#  DESCRIPTION: 
+#  DESCRIPTION:
 #
 #      OPTIONS: ---
 # REQUIREMENTS: ---
 #         BUGS: ---
 #        NOTES: ---
-#       AUTHOR: YOUR NAME (), 
-# ORGANIZATION: 
+#       AUTHOR: YOUR NAME (),
+# ORGANIZATION:
 #      VERSION: 1.0
 #      CREATED: 03/19/2018 10:00:21
 #     REVISION: ---

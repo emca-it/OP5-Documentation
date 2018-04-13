@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - SET_SVC_NOTIFICATION_NUMBER<br>
 
-
 #### Command Format:
 
 `SET_SVC_NOTIFICATION_NUMBER;host_name;service_description;notification_number`
@@ -29,6 +28,3 @@ Sets the current notification number for a particular service. A value of 0 indi
 
 printf "[%lu] SET_SVC_NOTIFICATION_NUMBER;host1;service1;0\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

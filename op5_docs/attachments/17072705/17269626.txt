@@ -77,11 +77,11 @@ This will take some time and create a large file 'OP5-System-backup.tar.gz'
 
 Copy this file to another computer. You can do this using ftp or scp.
 
-NOTE: The tar command might produce two kind of error messages that safely 
+NOTE: The tar command might produce two kind of error messages that safely
 can be ignored.
-1, Every 'socket ignored' error mesage is irrelevant. 
+1, Every 'socket ignored' error mesage is irrelevant.
 2, 'File changed as we read it' regarding log files is ok and can be
-overlooked. 
+overlooked.
 If you have any of the error messages mentioned above you will get the following
 message when the backup is finished.
 'tar: Error exit delayed from previous errors'
@@ -174,11 +174,11 @@ configured IP-adress.
 
 Install your license key
 ------------------
-If you have a current service&support-agreement you can request a license via 
-e-mail from support@op5.se. (A license request form will soon be published on 
+If you have a current service&support-agreement you can request a license via
+e-mail from support@op5.se. (A license request form will soon be published on
 support.op5.com)
 
-To install the license, tranfer the file to your server and install it using the 
+To install the license, tranfer the file to your server and install it using the
 terminal command 'op5license-install', se example below:
 
 [root@testserver ~]# op5license-install my_organisation.xml
@@ -186,7 +186,7 @@ terminal command 'op5license-install', se example below:
 
 Fully update your system
 ------------------
-With the license-key installaed you can initialize an update-process with the 
-command "yum update". To install the packages that are listed, answer Yes to the 
+With the license-key installaed you can initialize an update-process with the
+command "yum update". To install the packages that are listed, answer Yes to the
 prompted question.
 

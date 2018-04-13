@@ -11,4 +11,3 @@ Which database is used internally by the system?
 * * * * *
 
 MySQL and mk\_livestatus
-

@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - SCHEDULE_AND_PROPAGATE_TRIGGERED_HOST_DOWNTIME<br>
 
-
 #### Command Format:
 
 `SCHEDULE_AND_PROPAGATE_TRIGGERED_HOST_DOWNTIME;host_name;start_time;end_time;fixed;trigger_id;duration;author;comment`
@@ -29,6 +28,3 @@ Schedules downtime for a specified host and all of its children (hosts). If the 
 
 printf "[%lu] SCHEDULE_AND_PROPAGATE_TRIGGERED_HOST_DOWNTIME;host1;1478648441;1478638441;1;0;3600;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

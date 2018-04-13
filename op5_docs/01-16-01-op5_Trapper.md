@@ -14,7 +14,7 @@ Throughout the manual we may use the terms 'trap' from SNMP v1 and 'notification
 
 This is an overview of the screens and steps to create a Trapper trap. The sections after this will cover more of the details. The important part is that you need at least one handler before you can create any matchers -- in other words, you need a Lua script to handle incoming SNMP data before the matchers can act on the data.
 
-1.  Create a new Lua snippet with your favorite text editor and set values for the desired parameters. You can make this a normal text file, and the contents can be as simple as the one line in this example. We provide more advanced examples in the upcoming [handlers section]([OP5 Trapper](#op5Trapper-Handlers)):
+1. Create a new Lua snippet with your favorite text editor and set values for the desired parameters. You can make this a normal text file, and the contents can be as simple as the one line in this example. We provide more advanced examples in the upcoming [handlers section]([OP5 Trapper](#op5Trapper-Handlers)):
 
     **matcher example**
 
@@ -22,7 +22,7 @@ This is an overview of the screens and steps to create a Trapper trap. The secti
     result.state = STATE.WARNING
     ```
 
-2.  Upload the handler --
+2. Upload the handler --
 
     1.  From the TAC, go to "Monitor -\> Trapper", then click on the Handlers button in the Listview banner. You can also use the URL "https://{your.op5.svr}/monitor/index.php/listview?q=%5Btrap\_handlers%5D%20all\#", replacing "{your.op5.svr}" with your Monitor's FQDN;
         ![](attachments/16482424/23793076.png)
@@ -35,7 +35,7 @@ This is an overview of the screens and steps to create a Trapper trap. The secti
 
     4.  Click on Upload handler to start the upload.
 
-3.  Create a new matcher --
+3. Create a new matcher --
 
     1.  Click on the **Matchers** button to get the Matchers listview;
 
@@ -51,7 +51,7 @@ This is an overview of the screens and steps to create a Trapper trap. The secti
 
     5.  Click on **Create matcher**.
 
-4.  Test the new matcher or handler --
+4. Test the new matcher or handler --
 
     1.  Click on the **Subservices** button;
 
@@ -100,9 +100,9 @@ Status information.
 
 Updates a passive service check even if there is no state change. It is recommended to enable this feature if the notification text might change even though the state remains the same. The available options are:
 
--   NOTIFY.ALWAYS
+- NOTIFY.ALWAYS
 
--   NOTIFY.NEW_STATE
+- NOTIFY.NEW_STATE
 
 `result.service`
 
@@ -112,11 +112,11 @@ Service description; should match an existing service in order to be mapped to t
 
 Sets the event state. The available states are:
 
--   STATE.OK
+- STATE.OK
 
--   STATE.WARNING
+- STATE.WARNING
 
--   STATE.CRITICAL
+- STATE.CRITICAL
 
 This parameter is mandatory!
 
@@ -144,19 +144,19 @@ Day
 
 The number of a day in a week, starting from Sunday:
 
-1.  Sunday
+1. Sunday
 
-2.  Monday
+2. Monday
 
-3.  Tuesday
+3. Tuesday
 
-4.  Wednesday
+4. Wednesday
 
-5.  Thursday
+5. Thursday
 
-6.  Friday
+6. Friday
 
-7.  Saturday
+7. Saturday
 
 `trap.fields`
 
@@ -293,7 +293,7 @@ Please note that comments in Lua have the following syntax:
 -- This is a one-line comment.
 -- Here is another one-line comment.
 
---[[ 
+--[[
 In contrast, this is
 a multi-line comment as
 a bare-bone haiku.
@@ -304,14 +304,13 @@ a bare-bone haiku.
 
 In addition to result.state the following parameters are also mandatory:
 
--   result.service - The service in trapper must have the exact same name as the service on the node. A specific script might be needed if the node name shows up as an IP address in trapper.
--   result.message
+- result.service - The service in trapper must have the exact same name as the service on the node. A specific script might be needed if the node name shows up as an IP address in trapper.
+- result.message
 
 A service must either already exist on the host that generates the traps or it needs to be created if the traps should be visible outside trapper:
 
--   service\_description: Must exactly map the value used for result.service.
--   check\_command = bizproc\_pas
--   active\_checks\_enabled = No
--   passive\_checks\_enabled = Yes
--   max\_check\_attempts = 1
-
+- service\_description: Must exactly map the value used for result.service.
+- check\_command = bizproc\_pas
+- active\_checks\_enabled = No
+- passive\_checks\_enabled = Yes
+- max\_check\_attempts = 1

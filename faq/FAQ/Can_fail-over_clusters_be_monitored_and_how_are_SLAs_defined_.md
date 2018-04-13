@@ -11,4 +11,3 @@
 * * * * *
 
  Yes, we can monitor fail-over clusters. SLAs are defined for individual hosts or as a Business Service for better flexibility.
-

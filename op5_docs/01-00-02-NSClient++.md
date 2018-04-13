@@ -117,4 +117,3 @@ NRPE handlers provide a way to execute any custom plugin or check command on the
 Or the simplified syntax:
 
 `my_custom=c:\mycustomdir\my_prog.exe`
-

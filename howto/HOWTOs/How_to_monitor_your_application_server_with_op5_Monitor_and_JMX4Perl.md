@@ -6,8 +6,6 @@ Version disclaimer
 
 This article is written for OP5 Appliance System 3.5.2 and OP5 Monitor 5.4.3, and should work for versions up to 5.7.3 of OP5 Monitor. This article does not apply to OP5 Appliance System 6.0 and OP5 Monitor 6.0 and later.
 
- 
-
 ## Prerequisites
 
  In this example the community version of Jboss 6 is used as the server of choice.  Make sure that you have Perl, gcc and make installed, and the necessary ports opened in your firewall. Basic UNIX/Linux knowledge is needed.
@@ -28,23 +26,17 @@ This how-to  is not officially supported by op5. It is just a glimpse on how to
 
 ## Installation
 
- 
-
 If you run a distributed and/or Load Balanced setup, you will need to install the plugin on all systems that are running jmx-checks.
 
  When using a agentless approach these steps only applies for the server that is acting as proxy.
 
- 
-
--   Download JMX4Perl
+- Download JMX4Perl
 
 You can fetch the latest version from: <http://search.cpan.org/dist/jmx4perl/>
 
--   Extract the file:
+- Extract the file:
 
 <!-- -->
-
-     
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 tar xvzf jmx4perl*.tar.gz
@@ -52,13 +44,11 @@ cd jmx4perl-Configuration
 perl Build.PL
 ```
 
- 
-
 This command will most likely complain about the following dependencies: CBuilder, ParseXS and Module-Build.
 
 Install them via rpm as described below. We have collected these RPM’s on our download site for your convenience.
 
--   Download and unpack the attached dependency package [here](attachments/688604/5242978.gz)
+- Download and unpack the attached dependency package [here](attachments/688604/5242978.gz)
 
 **Download and unpack**
 
@@ -66,13 +56,13 @@ Install them via rpm as described below. We have collected these RPM’s on our 
  tar xvzf jmx4perl_dependencies.tar.gz
 ```
 
--   Installation
+- Installation
 
 **Installation**
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
-rpm -Uvh perl-ExtUtils-ParseXS*.rpm 
-rpm -Uvh perl-ExtUtils-CBuilder*.rpm 
+rpm -Uvh perl-ExtUtils-ParseXS*.rpm
+rpm -Uvh perl-ExtUtils-CBuilder*.rpm
 rpm -Uvh perl-Module-Build*.rpm
 ```
 
@@ -80,17 +70,17 @@ Now it’s time to choose which components to install from the jmx4perl-package.
 
 The required components are jmx4perl, and check\_jmx4perl, although we recommend to install “j4psh” which is a JMX-shell that you can connect to JBoss and browse around the MBeans.
 
--   Re-run Build.pl
+- Re-run Build.pl
 
 **Build.PL**
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
-perl Build.PL 
+perl Build.PL
 Install 'jmx4perl' ? (y/n) [y ]y
 Install 'check_jmx4perl' ? (y/n) [y ]y
 Install 'cacti_jmx4perl' ? (y/n) [y ]n
-Install 'j4psh' ? (y/n) [y ]y 
-Use Term::ReadLine::Gnu ? (y/n) [n ]n 
+Install 'j4psh' ? (y/n) [y ]y
+Use Term::ReadLine::Gnu ? (y/n) [n ]n
 Install 'jolokia' ? (y/n) [y ]n
 ```
 
@@ -101,9 +91,9 @@ Run the following commands:
 **Build**
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
-./Build installdeps 
-./Build 
-./Build test 
+./Build installdeps
+./Build
+./Build test
 ./Build install
 ```
 
@@ -120,9 +110,9 @@ Next we will need to deploy the webapp “jolokia” in our Application server. 
 **jolokia**
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
-ssh root@jboss-server 
-wget <link to jolokia-war*.war> 
-mv jolokia-war-0.91.war jolokia.war 
+ssh root@jboss-server
+wget <link to jolokia-war*.war>
+mv jolokia-war-0.91.war jolokia.war
 cp jolokia.war /home/jboss/jboss-6.0.0.Final/server/default/deploy
 ```
 
@@ -144,21 +134,21 @@ You can also connect with j4psh-shell to the server and browse around the MBeans
 j4psh http://:/jolokia
 ```
 
--   Copying files
+- Copying files
 
 You need to copy the installed check\_jmx4perl and it’s config-files to a directory that OP5 Monitor can browse:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
-mkdir /opt/plugins/custom/jmx4perl 
+mkdir /opt/plugins/custom/jmx4perl
 cp /usr/bin/check_jmx4perl /opt/plugins/custom/jmx4perl/
 ```
 
--   Test check\_jmx4perl
+- Test check\_jmx4perl
 
 Now we can try to do a check in command-line using this example:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
-cd /opt/plugins/custom/jmx4perl/ 
+cd /opt/plugins/custom/jmx4perl/
 ./check_jmx4perl -u http://:/jolokia --alias MEMORY_HEAP_USED --base MEMORY_HEAP_MAX --warning 80 --critical 90
 ```
 
@@ -173,11 +163,11 @@ OK - [MEMORY_HEAP_USED] : In range 23.82% (123159632 / 517013504) | [MEMORY_HEAP
 First copy all the default configs to your created “jmx4perl” folder in /opt/plugins/custom/jmx4perl/
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
-cd /root/jmx4perl-0.95 jmx4perl-0.95/ 
+cd /root/jmx4perl-0.95 jmx4perl-0.95/
 cp -R config/ /opt/plugins/custom/jmx4perl/
 ```
 
--   One config to rule them all
+- One config to rule them all
 
 In this example we will create one config that includes all the others to make changes more simple to maintain and to shorten the check commands.
 
@@ -220,23 +210,19 @@ Check j4p_memory_heap
 Check j4p_thread_count
 ```
 
- 
-
 These files contains the variables set in “check\_command\_args” for the check commands that we will create.
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
-cd /opt/plugins/custom/jmx4perl/config/ 
+cd /opt/plugins/custom/jmx4perl/config/
 ls
 common.cfg jboss.cfg jetty.cfg jmx4perl.cfg memory.cfg threads.cfg tomcat.cfg
 ```
-
- 
 
 I will go trough: memory.cfg, thread.cfg and some possibilities to customize your jboss.cfg.
 
 Please have a look in the config files for further explanation of the options.
 
--   memory.cfg
+- memory.cfg
 
 Command variable
 
@@ -254,7 +240,7 @@ memory\_pool\_base
 
 Memory pool checks, specific to a Sun/Oracle JVM.
 
--   threads.cfg
+- threads.cfg
 
 Command name
 
@@ -274,7 +260,7 @@ Find deadlocked Threads
 
 ## Check commands
 
--   Using agents
+- Using agents
 
 First we create check commands to be used with agents. You can read the pros and cons for the different usages of jolokia at:
 
@@ -284,7 +270,7 @@ When using config-files we minimize the number of check commands to a bare minim
 
 One for static checks and one for an incremental check that shows how much a value has changed in a given time period.
 
--   Go to: Configure -\> Commands
+- Go to: Configure -\> Commands
 
 Create a new check command with the following values:
 
@@ -296,7 +282,7 @@ check\_jmx4perl\_config
 
 \$USER1\$/custom/jmx4perl/check\_jmx4perl -u http://\$HOSTADDRESS\$:\$ARG1\$/jolokia –config \$USER1\$/custom/jmx4perl/config/jmx4perl.cfg –check \$ARG2\$ –warning \$ARG3\$ –critical \$ARG4\$
 
--   Click “Apply Changes”
+- Click “Apply Changes”
 
 And the same procedure for the incremental check:
 
@@ -310,21 +296,19 @@ check\_jmx4perl\_config\_delta
 
 And finally, save the changes.
 
- 
-
 First we add host to OP5 Monitor with the ip-address of our application server.
 
--   Go to: Configure -\> New Host
+- Go to: Configure -\> New Host
 
 Fill in the configuration information: host name, alias, address etc.
 
--   Click “Scan host for services” -\> Click “Continue to step 3″
+- Click “Scan host for services” -\> Click “Continue to step 3″
 
--   Next, click “Services for”
+- Next, click “Services for”
 
 Select the check command that you just created, and fill in the following arguments:
 
--   Go to the host -\> Services -\> Add new service
+- Go to the host -\> Services -\> Add new service
 
 The separators of check\_command\_args are: "**!**"
 
@@ -340,7 +324,7 @@ check\_jmx4perl\_config
 
 8080!memory\_heap!70!90
 
--   Click “Apply Changes”
+- Click “Apply Changes”
 
 And Save applied changes
 
@@ -368,14 +352,10 @@ This was default on my installation of Jboss6 and i won’t expand it any furthe
 
 RMI test:
 
- 
-
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 cd /opt/plugins/custom/jmx4perl
 ./check_jmx4perl -u http://:/jolokia --target service:jmx:rmi:///jndi/rmi://:port/jmxrmi --config config/jmx4perl.cfg --check memory_heap --warning 80 --critical 90
 ```
-
- 
 
 If this works you should get something like this in return:
 
@@ -385,7 +365,7 @@ OK - Heap-Memory: 25.79% used (127.18 MB / 493.06 MB) | Heap=133359304B;41361080
 
 Now we will create a check command using config-files as explained earlier.
 
--   Check command:
+- Check command:
 
 **command\_name**
 
@@ -397,11 +377,11 @@ check\_jmx4perl\_config\_proxy
 
 First we add host to OP5 Monitor with the ip-address of our application server.
 
--   Go to: Configure -\> New Host
+- Go to: Configure -\> New Host
 
 Fill in the configuration information: host name, alias, address etc. Click “Scan host for services” -\> Click “Continue to step 3″
 
--   Next, click “Services for”
+- Next, click “Services for”
 
 Select the check command that you just created, and fill in the following params:
 
@@ -429,7 +409,7 @@ What you want to monitor in your environment is your call, this is just a glance
 
 This part shows some custom options that are not covered with the default configuration and is entirely optional. I just want to show examples for custom checks that you can create and include in your configs according to your needs. I found these values using the “j4psh” shell and browsing around the MBeans and editing jboss.cfg according to the MBean names and creating check commands for these:
 
--   jboss.cfg
+- jboss.cfg
 
 **Command Name**
 
@@ -481,6 +461,3 @@ Rate how often connections are created per minute
     Name = Connection creation rate
 
 You can of course create additional config files with your specific needs and include them in “jmx4perl.cfg”
-
- 
-

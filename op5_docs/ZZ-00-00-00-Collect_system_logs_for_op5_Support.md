@@ -4,17 +4,17 @@ This how-to will describe how to prepare and collect log data for naemon (nagios
 
 Doing this is often helpful in regards to decreasing the time to resolution for your support case, and it's especially useful in case you contact OP5 Support regarding issues related to:
 
--   Notifications
--   Check execution
--   Peers (load balanced setups)
--   Pollers (distributed setups)
+- Notifications
+- Check execution
+- Peers (load balanced setups)
+- Pollers (distributed setups)
 
 # Instructions
 
-1.  Log on as root to all your OP5 Monitor nodes (masters, peers and pollers) via SSH, and [make sure that the "op5 community" package repository and the "support tools" are installed.
+1. Log on as root to all your OP5 Monitor nodes (masters, peers and pollers) via SSH, and [make sure that the "op5 community" package repository and the "support tools" are installed.
      ](https://kb.op5.com/display/FAQ/Installing+the+op5+community+repository+and+support+tools)
 
-2.  Log on as root to *one *of your OP5 Monitor *master* nodes via SSH (if you only have a single server, then that's the one), and execute the following command:
+2. Log on as root to *one *of your OP5 Monitor *master* nodes via SSH (if you only have a single server, then that's the one), and execute the following command:
 
     ``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
     mon sop collect-logs
@@ -65,6 +65,5 @@ Doing this is often helpful in regards to decreasing the time to resolution for 
     [13:25:56] All done!
     ```
 
-3.  As can be seen in the output above, the file */tmp/op5logcollect.1461324223.6124.6AQ6LG/op5-monitor-logs\_2016-04-22\_13.23.43.tgz *was created.
+3. As can be seen in the output above, the file */tmp/op5logcollect.1461324223.6124.6AQ6LG/op5-monitor-logs\_2016-04-22\_13.23.43.tgz *was created.
     Either download this file using scp/sftp (WinSCP is a nice tool if you're using Windows) and then attach to your support ticket, or send the file directly to OP5 by scp via the OP5 Monitor server command line (ask OP5 Support for instructions).
-

@@ -13,7 +13,7 @@
 export CLASSPATH=/opt/plugins/custom/selenium
 if [ ! -d "/var/log/selenium" ]; then
 	mkdir -p /var/log/selenium;
-fi 
+fi
 
 case "${1:-''}" in
 'start')

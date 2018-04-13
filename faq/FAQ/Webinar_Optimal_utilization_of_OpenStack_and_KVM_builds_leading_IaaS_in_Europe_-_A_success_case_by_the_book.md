@@ -1,12 +1,8 @@
 # Webinar: Optimal utilization of OpenStack and KVM builds leading IaaS in Europe - A success case by the book
 
- 
-
 ### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
-
- 
 
 #### These are the questions we received during the webinar via our online chat.
 
@@ -36,11 +32,6 @@ A: For sure! There are simple ways like through VPN today. But we do see layer 
 
 If you want to get in touch with City Network you can visit City Network website and contact them via phone or email.
 
- 
-
 ### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
-
- 
-

@@ -20,4 +20,3 @@ Default check **via NRPE**:
 check_nrpe --host 192.168.56.103 --command check_os_version
 Windows 2012 (6.2.9200)|'version'=62;50;50
 ```
-

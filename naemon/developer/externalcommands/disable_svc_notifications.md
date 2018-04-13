@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_SVC_NOTIFICATIONS<br>
 
-
 #### Command Format:
 
 `DISABLE_SVC_NOTIFICATIONS;host_name;service_description`
@@ -29,6 +28,3 @@ Disables notifications for a particular service.
 
 printf "[%lu] DISABLE_SVC_NOTIFICATIONS;host1;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

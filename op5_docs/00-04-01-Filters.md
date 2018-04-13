@@ -2,7 +2,7 @@
 
 # About
 
-Filters can be used to filter out content in OP5 Monitor. They can be based on names, states, comments or other information. 
+Filters can be used to filter out content in OP5 Monitor. They can be based on names, states, comments or other information.
 Filters can be applied on listviews. All listview content is based on filters, so for example when viewing a host and its services the view is based on a filter that can be manipulated.
 
 # Edit filter
@@ -18,15 +18,15 @@ You can either edit the filter manually or graphically. When editing a filter gr
 There are many different filter categories to choose from, depending on what type of information you want to consume.
 You can base your filter on sources like
 
--   Hosts
--   Services 
--   Contacts
--   Hostgroups
--   Servicegroups 
--   Syslog messages
--   Traps
--   Downtimes
--   Notifications
+- Hosts
+- Services
+- Contacts
+- Hostgroups
+- Servicegroups
+- Syslog messages
+- Traps
+- Downtimes
+- Notifications
 
 # Filter Groups
 
@@ -43,18 +43,18 @@ When filtering on fields with either time or date it is possible to use relative
 
 Some examples that can be used are
 
--   now
--   yesterday
--   today
--   this week
--   2 hours ago
--   one month ago
--   16:30:00 
+- now
+- yesterday
+- today
+- this week
+- 2 hours ago
+- one month ago
+- 16:30:00
 
 These can also be used in combination, for example
 
--   last week + 1 hour
--   yesterday 16:30:00
+- last week + 1 hour
+- yesterday 16:30:00
 
 # Examples
 
@@ -93,7 +93,7 @@ To save a filter, you need to enter a name and click on **save filter** in the
 
 ![](attachments/16482332/18481377.png)
 To make the filter global, accessible for everyone, select **Make global** before you save the filter.
-Save filters are accessible from the main menu of the type the filter was defined as (i.e. host filter are located under Monitoring -\> Hosts). 
+Save filters are accessible from the main menu of the type the filter was defined as (i.e. host filter are located under Monitoring -\> Hosts).
 
 ![](attachments/16482332/18481378.png)
 
@@ -104,8 +104,6 @@ Remove a saved filter by selecting **Manage filters** from the Manage -\> Manag
 ![](attachments/16482332/18481379.png)
 Use the delete icon behind the filter that you would like to remove.
 ![](attachments/16482332/18481385.png)
-
- 
 
 # Related pages
 

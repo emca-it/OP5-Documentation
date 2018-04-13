@@ -1,8 +1,8 @@
 # Nagios Remote Plugin Executor (NRPE)
 
-## About 
+## About
 
-The Nagios Remote Plugin Executor (NRPE) is an agent for Linux/Unix-like systems used to execute Nagios compatible plugins on systems external to the OP5 Monitor server, or it can be used to run active checks on systems OP5 Monitor cannot reach. NRPE also allows the checks to be offload to a separate host, which frees up resources on the OP5 Monitor host. 
+The Nagios Remote Plugin Executor (NRPE) is an agent for Linux/Unix-like systems used to execute Nagios compatible plugins on systems external to the OP5 Monitor server, or it can be used to run active checks on systems OP5 Monitor cannot reach. NRPE also allows the checks to be offload to a separate host, which frees up resources on the OP5 Monitor host.
 
 ## Overview
 
@@ -20,10 +20,10 @@ There can be up to three parts when using NRPE.
 
 [Note: The remote services need to be accessible to the *NRPE bastion host*. This could mean the service is publicly available, or it could mean the services is only available to select hosts.]
 
-NRPE has two types of checks: 
+NRPE has two types of checks:
 
-* Direct 
-* Indirect 
+* Direct
+* Indirect
 
 *Direct* checks will run against the *NRPE host*, and they can report on local resources and services. *Direct* checks can report in more detail since they have greater access to the system then *Indirect* checks do.
 
@@ -35,13 +35,13 @@ NRPE has two types of checks:
 
 1. Login to the server via SSH.
 2. Install the EPEL package.
-    * CentOS 6/7   
-        
+    * CentOS 6/7
+
         ```
         yum install epel-release
         ```
     * Red Hat Enterprise Linux 6 (RHEL6) (Enable `optional` repository subscription first.)
-        
+
         ```
         yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
         ```
@@ -51,7 +51,7 @@ NRPE has two types of checks:
         yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
         ```
 3. Install NRPE and a basic set of plugins.
-    
+
     ```
     yum install nrpe \
                 nagios-plugins-users \
@@ -75,23 +75,23 @@ NRPE has two types of checks:
         ```
 5. Next, start the NRPE service.
     * RHEL/CentOS 7+
-    
+
         ```
         systemctl start nrpe
         ```
     * RHEL/CentOS 6
-    
+
         ```
         service nrpe start
         ```
-6. Finally, open the NRPE port in the firewall to allow traffic through. 
+6. Finally, open the NRPE port in the firewall to allow traffic through.
 
     [Warning: There maybe multiple firewalls between OP5 Monitor and the NRPE host. There could be a firewall on the NRPE host, and there could be firewall devices on the network. All of the firewalls will need to be configured to allow NRPE traffic to pass.]
-    
+
     [Note: By default, NRPE listens on port 5666, but the port can be changed in the `nrpe.cfg` file.]
-    
+
     Instructions for opening the NRPE port on the default firewall in RHEL and CentOS are below.
-    
+
     * RHEL/CentOS 7+
 
         ```
@@ -99,7 +99,7 @@ NRPE has two types of checks:
         firewall-cmd --reload
         ```
     * RHEL/CentOS 6
-    
+
         ```
         iptables -I INPUT -p tcp -m tcp --dport 5666 -j ACCEPT
         service iptables save
@@ -112,21 +112,21 @@ NRPE has two types of checks:
 
     ```
     vim /etc/nagios/nrpe.cfg
-    
+
     allowed_hosts=<ip_address>,<ip_address>,127.0.0.1,::1
     dont_blame_nrpe=1
     ```
-    * `allowed_hosts` is a comma separated list of IP addresses, hostnames, or network ranges which are able to access the NRPE client. When run under the systemd init system (RHEL/CentOS 7+), inetd, or xinetd, this option has no affect. 
-    
+    * `allowed_hosts` is a comma separated list of IP addresses, hostnames, or network ranges which are able to access the NRPE client. When run under the systemd init system (RHEL/CentOS 7+), inetd, or xinetd, this option has no affect.
+
         [Note: The list cannot contain whitespace. `1.1.3.4, 1.1.3.5` will fail, but `2.2.3.4,2.2.3.5` will work.]
-    
+
     * `dont_blame_nrpe` being set to `1` allows OP5 Monitor to send arguments to NRPE.
 
 3. Create `op5_commands.cfg` file and create several direct checks.
-    
+
     ```
     vim /etc/nrpe.d/op5_commands.cfg
-    
+
         command[users]=/usr/lib64/nagios/plugins/check_users -w 5 -c 10
         command[load]=/usr/lib64/nagios/plugins/check_load -w 15,10,5 -c 30,25,20
         command[check_load]=/usr/lib64/nagios/plugins/check_load -w 15,10,5 -c 30,25,20
@@ -143,7 +143,7 @@ NRPE has two types of checks:
     ```
 4. Restart the NRPE service to activate the new configuration.
     * RHEL/CentOS 7+
-    
+
         ```
         systemctl restart nrpe
         ```

@@ -367,4 +367,3 @@ Gives user access to modify Logger configuration
 ### Logger Schedule Archive Search
 
 Gives user access to schedule Logger searches in archived logs
-

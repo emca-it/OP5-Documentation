@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DEL_ALL_HOST_COMMENTS<br>
 
-
 #### Command Format:
 
 `DEL_ALL_HOST_COMMENTS;host_name`
@@ -29,6 +28,3 @@ Deletes all comments associated with a particular host.
 
 printf "[%lu] DEL_ALL_HOST_COMMENTS;host1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

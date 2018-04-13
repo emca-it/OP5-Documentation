@@ -14,7 +14,4 @@ I get an error message saying "Unable to open input kickstart file: Could not op
 
 The only thing that need to be changed from a standard VM is the network adapter. Use a legacy network adapter.
 
- 
-
 ![](attachments/7176449/7471145.png)
-

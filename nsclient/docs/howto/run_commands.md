@@ -69,7 +69,6 @@ Normally when we use the scheduler we use it for passive monitoring i.e. when we
 This means we normally send the result to the NSCA client but here we need to redirect the result elsewhere.
 A few options comes to mind.
 
-
 *   noop
     Send the result nowhere (discard it)
 *   file

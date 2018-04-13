@@ -6,8 +6,6 @@ This article was written for version 7.3.4 of Monitor, it could work on both low
 
 Articles in the Community-Space are not supported by OP5 Support.
 
- 
-
 All local user passwords are stored in /etc/op5/auth\_users.yml, and they are listed as blocks like these. The string "\$1\$VGn0CdSG\$AMJjvHoF8M2nSy8SiPrW70" is a hash of the password "monitor":
 
     monitor:
@@ -18,7 +16,7 @@ All local user passwords are stored in /etc/op5/auth\_users.yml, and they are li
         - "admins"
       password_algo: "crypt"
       modules:
-        - "Default" 
+        - "Default"
 
 The monitor command that changes the local users, including their passwords, is "/usr/bin/op5-manage-users". Running 'op5-manage-users' without any arguments prints its syntax help:
 
@@ -39,7 +37,7 @@ The monitor command that changes the local users, including their passwords, is 
 Here is an syntax example for creating a new Monitor user, 'gord':
 
     monitor:
-    /usr/bin/op5-manage-users --update --username=gord --realname="Wheat King" --modules=Default --password=100thMeridian --group=admins 
+    /usr/bin/op5-manage-users --update --username=gord --realname="Wheat King" --modules=Default --password=100thMeridian --group=admins
 
 Here is the resulting content in 'auth\_users.yml':
 
@@ -52,16 +50,14 @@ Here is the resulting content in 'auth\_users.yml':
       modules:
         - "Default"
       groups:
-        - "admins" 
-
- 
+        - "admins"
 
 ### Important Caveats --
 
--   'op5-manage-users' does not append; it only overwrites every entry for the user. For example, attempting to change only the group of the user created earlier:
+- 'op5-manage-users' does not append; it only overwrites every entry for the user. For example, attempting to change only the group of the user created earlier:
 
         monitor:
-            op5-manage-users --update --username=gord --group=limited_edit 
+            op5-manage-users --update --username=gord --group=limited_edit
 
     ...leads to this being the entire entry for the user. The password and all other entries have been removed:
 
@@ -69,9 +65,9 @@ Here is the resulting content in 'auth\_users.yml':
         gord:
           username: "gord"
           groups:
-            - "limited_edit" 
+            - "limited_edit"
 
--   Changing the variable order in the command will move the user's real name to the bottom of the file entry. For example, this will run successfully:
+- Changing the variable order in the command will move the user's real name to the bottom of the file entry. For example, this will run successfully:
 
         monitor:
         op5-manage-users --update --username=jfriday --realname="Sgt. Joe Friday" --group=admins --password=Badge714 --modules=Default
@@ -87,6 +83,4 @@ Here is the resulting content in 'auth\_users.yml':
             - "Default"
           groups:
             - "admins"
-          realname: "Sgt. Joe Friday" 
-
-
+          realname: "Sgt. Joe Friday"

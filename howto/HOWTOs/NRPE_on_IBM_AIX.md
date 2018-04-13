@@ -1,13 +1,13 @@
 # NRPE on IBM AIX
 
--   [Introduction](#NRPEonIBMAIX-Introduction)
--   [Installation](#NRPEonIBMAIX-Installation)
-    -   [Download and install packages](#NRPEonIBMAIX-Downloadandinstallpackages)
-    -   [Configure NRPE](#NRPEonIBMAIX-ConfigureNRPE)
-        -   [Create a nrpe.cfg file](#NRPEonIBMAIX-Createanrpe.cfgfile)
-        -   [Create a commands configuration](#NRPEonIBMAIX-Createacommandsconfiguration)
-        -   [Restart NRPE to load new settings](#NRPEonIBMAIX-RestartNRPEtoloadnewsettings)
-        -   [Make NRPE start at boot by linking it to run-level 2](#NRPEonIBMAIX-MakeNRPEstartatbootbylinkingittorun-level2)
+- [Introduction](#NRPEonIBMAIX-Introduction)
+- [Installation](#NRPEonIBMAIX-Installation)
+  - [Download and install packages](#NRPEonIBMAIX-Downloadandinstallpackages)
+  - [Configure NRPE](#NRPEonIBMAIX-ConfigureNRPE)
+  - [Create a nrpe.cfg file](#NRPEonIBMAIX-Createanrpe.cfgfile)
+  - [Create a commands configuration](#NRPEonIBMAIX-Createacommandsconfiguration)
+  - [Restart NRPE to load new settings](#NRPEonIBMAIX-RestartNRPEtoloadnewsettings)
+  - [Make NRPE start at boot by linking it to run-level 2](#NRPEonIBMAIX-MakeNRPEstartatbootbylinkingittorun-level2)
 
 # Introduction
 
@@ -41,7 +41,7 @@ Example content for op5\_commands.cfg:
     command[load]=/usr/libexec/nagios/check_load -w 2,3,4 -c 4,5,6command[users]=/usr/libexec/nagios/check_users -w 5 -c 10command[swap]=/usr/libexec/nagios/check_swap -w 20% -c 10%command[root_disk]=/usr/libexec/nagios/check_disk -w 20% -c 10% -p / -mcommand[procs_zombie]=/usr/libexec/nagios/check_procs -w 5 -c 10 -s Zcommand[procs_total]=/usr/libexec/nagios/check_procs -w 150 -c 200command[procs_init]=/usr/libexec/nagios/check_procs -w 1: -c 1:2 -C init
 
 Example content for op5\_commands.cfg (with arguments allowed):
-To use this you need to set *dont\_blame\_nrpe=1* in nrpe.cfg. 
+To use this you need to set *dont\_blame\_nrpe=1* in nrpe.cfg.
 
     command[load]=/usr/libexec/nagios/check_load -w $ARG1$ -c $ARG2$command[users]=/usr/libexec/nagios/check_users -w $ARG1$ -c $ARG2$command[swap]=/usr/libexec/nagios/check_swap -w $ARG1$ -c $ARG2$command[disk]=/usr/libexec/nagios/check_disk -w $ARG1$ -c $ARG2$ -p $ARG3$ –mcommand[procs_zombie]=/usr/libexec/nagios/check_procs -w $ARG1$ -c $ARG2$ -s Zcommand[procs_total]=/usr/libexec/nagios/check_procs -w $ARG1$ -c $ARG2$command[procs_name]=/usr/libexec/nagios/check_procs -w $ARG1$ -c $ARG2$ -C $ARG3$
 
@@ -53,9 +53,4 @@ To use this you need to set *dont\_blame\_nrpe=1* in nrpe.cfg. 
 
     cd /etc/rc.d/rc2.d/ln -s ../init.d/nrpe S99nrpe
 
- 
-
 Host can now be added to OP5 Monitor and be monitored with check\_nrpe service-checks.
-
- 
-

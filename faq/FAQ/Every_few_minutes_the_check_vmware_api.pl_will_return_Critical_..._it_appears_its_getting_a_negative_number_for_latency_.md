@@ -35,5 +35,3 @@ This problem can be fixed by collecting multiple samples of the data, described 
 </tr>
 </tbody>
 </table>
-
-

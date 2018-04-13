@@ -20,6 +20,3 @@ When acknowledging a problem via SMS you can use two different approaches.
  service ack: 'serviceack;host-name;service-description;comment'.
 
 Make sure contact is updated with proper mobile('Pager field in contacts form') number.
-
- 
-

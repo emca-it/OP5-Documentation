@@ -2,9 +2,6 @@
 
 *DO NOT USE* This module is usefull except for debugging purpouses and outright dangerous as it allows someone remotley to crash your client!
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the CauseCrashes module.
@@ -17,16 +14,13 @@ A list of all available queries (check commands)
 |-------------------------------|------------------------------------------------------------------------------|
 | [crash_client](#crash_client) | Raise a fatal exception (zero pointer reference) and cause NSClient++ crash. |
 
-
 **List of command aliases:**
 
 A list of all short hand aliases for queries (check commands)
 
-
 | Command     | Description                      |
 |-------------|----------------------------------|
 | crashclient | Alias for: :query:`crash_client` |
-
 
 ### crash_client
 
@@ -35,7 +29,6 @@ Raise a fatal exception (zero pointer reference) and cause NSClient++ crash.
 * [Samples](#crash_client_samples)
 
 * [Command-line Arguments](#crash_client_options)
-
 
 <a name="crash_client_samples"/>
 #### Sample Commands
@@ -69,7 +62,6 @@ crashclient
 
 This will cause NSClient++ to crash so please dont do this.
 
-
 <a name="crash_client_help"/>
 <a name="crash_client_help-pb"/>
 <a name="crash_client_show-default"/>
@@ -77,16 +69,9 @@ This will cause NSClient++ to crash so please dont do this.
 <a name="crash_client_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                   |
 |--------------|---------------|-----------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                |
 | help-pb      | N/A           | Show help screen as a protocol buffer payload |
 | show-default | N/A           | Show default values for a given command       |
 | help-short   | N/A           | Show help screen (short format).              |
-
-
-
-
-
-

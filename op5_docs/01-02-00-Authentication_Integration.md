@@ -6,9 +6,9 @@ Authentication drivers handle OP5 Monitor's authentication system. Each driver h
 
 An authentication driver can rely on either:
 
--       Local storage (Driver Default);
--       Apache authentication (Driver apache);
--       An external system for managing users (Driver LDAP).
+-     Local storage (Driver Default);
+-     Apache authentication (Driver apache);
+-     An external system for managing users (Driver LDAP).
 
 We can configure the authentication system using the **Auth Modules** option in Configure:
 ![](attachments/16482389/16679133.png)
@@ -16,8 +16,7 @@ We store the configuration for the authentication system in '`/etc/op5/auth.yml`
 
 **Child Pages**
 
--   [Apache](Apache)
--   [Default](Default)
--   [Header Authentication Method, or SSO (single sign on)](Header_auth_SSO)
--   [LDAP and Active Directory](LDAP_and_Active_Directory)
-
+- [Apache](Apache)
+- [Default](Default)
+- [Header Authentication Method, or SSO (single sign on)](Header_auth_SSO)
+- [LDAP and Active Directory](LDAP_and_Active_Directory)

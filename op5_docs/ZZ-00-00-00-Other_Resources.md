@@ -14,6 +14,3 @@ CentOS is an Enterprise-class Linux Distribution derived from sources freely pro
 </tr>
 </tbody>
 </table>
-
- 
-

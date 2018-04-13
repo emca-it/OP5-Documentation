@@ -149,6 +149,3 @@ In case a trap with oid .1.2.3.4.5 comes - test1 will be processed first, then t
 ```
 
 In case a trap with oid .1.2.3.4.5 comes - test2 will be processed first, then test1
-
- 
-

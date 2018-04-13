@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - SCHEDULE_HOST_CHECK<br>
 
-
 #### Command Format:
 
 `SCHEDULE_HOST_CHECK;host_name;check_time`
@@ -29,6 +28,3 @@ Schedules the next active check of a particular host at 'check_time'. The 'check
 
 printf "[%lu] SCHEDULE_HOST_CHECK;host1;1478648441\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

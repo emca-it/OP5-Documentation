@@ -1,9 +1,9 @@
 # Fetching CSV reports over HTTP
 
--   [Authentication](https://kb.op5.com/display/HOWTOs/Fetching+CSV+reports+over+HTTP#FetchingCSVreportsoverHTTP-Authentication)
--   [Report parameters](https://kb.op5.com/display/HOWTOs/Fetching+CSV+reports+over+HTTP#FetchingCSVreportsoverHTTP-Reportparameters)
--   [Caveats](https://kb.op5.com/display/HOWTOs/Fetching+CSV+reports+over+HTTP#FetchingCSVreportsoverHTTP-Caveats)
--   [References](https://kb.op5.com/display/HOWTOs/Fetching+CSV+reports+over+HTTP#FetchingCSVreportsoverHTTP-References)
+- [Authentication](https://kb.op5.com/display/HOWTOs/Fetching+CSV+reports+over+HTTP#FetchingCSVreportsoverHTTP-Authentication)
+- [Report parameters](https://kb.op5.com/display/HOWTOs/Fetching+CSV+reports+over+HTTP#FetchingCSVreportsoverHTTP-Reportparameters)
+- [Caveats](https://kb.op5.com/display/HOWTOs/Fetching+CSV+reports+over+HTTP#FetchingCSVreportsoverHTTP-Caveats)
+- [References](https://kb.op5.com/display/HOWTOs/Fetching+CSV+reports+over+HTTP#FetchingCSVreportsoverHTTP-References)
 
 The OP5 Monitor HTTP API provides access to report data, delivering the E in the [ETL model](http://en.wikipedia.org/wiki/Extract,_transform,_load) for customers interested in performing their own report analysis in a data warehouse solution. In some cases, custom analysis is not required and in those cases the data in the standard OP5 Monitor reports often provides the necessary information. OP5 Monitor does not provide an API for getting existing reports so this solution is not guaranteed to work in the future, but they can be fetched over HTTP with a little work. To do this, two steps are required: authentication and setting parameters.
 
@@ -11,8 +11,8 @@ The OP5 Monitor HTTP API provides access to report data, delivering the E in the
 
 Note: Authenticating using GET parameters can be a security risk, since the username and password will be part of the URL and therefore can be exposed in various places such as the address bar of the web browser, web server log files and saved bookmarks.
 
-1.  Create the file /opt/monitor/op5/ninja/application/config/custom/auth.php with the following contents (make sure you keep your old settings if you have customized other authentication settings)
-2.  Add the following:
+1. Create the file /opt/monitor/op5/ninja/application/config/custom/auth.php with the following contents (make sure you keep your old settings if you have customized other authentication settings)
+2. Add the following:
 
         <?php defined('SYSPATH') OR die('No direct access allowed.');
 
@@ -78,5 +78,3 @@ This page was created based on the information provided in <https://bugs.op5.co
 </tr>
 </tbody>
 </table>
-
-

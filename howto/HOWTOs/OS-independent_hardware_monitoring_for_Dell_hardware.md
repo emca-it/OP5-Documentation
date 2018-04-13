@@ -10,17 +10,15 @@ When Dell servers are used to run VMware you lose the opportunity to Monitor the
 
 Using this approach it is possible to Monitor:
 
--   raid
--   fan status
--   intrusion sensor
--   power supplies
--   ambient temp
--   voltage
+- raid
+- fan status
+- intrusion sensor
+- power supplies
+- ambient temp
+- voltage
 
-1.  Make sure the DRAC-cards have IP-addresses assigned and that the cards are accessible over the network from the OP5 Monitor server
-2.  Make sure you have enabled LAN access to the BMC in BIOS setup
-3.  Monitor the hardware using the Dell BMC IPMI plugins linked below.
+1. Make sure the DRAC-cards have IP-addresses assigned and that the cards are accessible over the network from the OP5 Monitor server
+2. Make sure you have enabled LAN access to the BMC in BIOS setup
+3. Monitor the hardware using the Dell BMC IPMI plugins linked below.
 
 <http://exchange.nagios.org/directory/Plugins/Hardware/Server-Hardware/Dell/Dell-BMC-IPMI-Checks/details>
-
-

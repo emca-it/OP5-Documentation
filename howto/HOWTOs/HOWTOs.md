@@ -1,34 +1,12 @@
 # HOWTOs
 
- 
-
 ![](attachments/688465/11567152.jpg)
 
-## Welcome to our HOWTO-space. 
+## Welcome to our HOWTO-space.
 
 If you are new here you should start off by taking a look at our **[Getting started page](Getting_started)**. When you are ready for the next step head back here to find useful HOWTOs like [Monitoring VMware ESX, ESXi, vSphere and vCenter Server](Monitoring_VMware_ESX_ESXi_vSphere_and_vCenter_Server) or maybe to be inspired by what others have been looking at as you can see in the "Popular articles"-section below and give it a try if you haven't already?
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
 Search
-
- 
-
- 
-
- 
 
 ## Popular pages
 
@@ -39,15 +17,6 @@ Search
 
 No popular content.
 
- 
-
- 
-
 ### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
-
- 
-
- 
-

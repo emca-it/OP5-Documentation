@@ -1,6 +1,6 @@
 # Monitoring Linux/Unix servers via SNMP
 
-For some servers it's unsuitable to install a specific agent that allows retrieval of information such as memory usage, system load and disk usage. Fortunately, many such servers come with the net-snmp software either pre-packaged or pre-installed. This article explains how to utilize SNMP to monitor such servers. Note that the information given here should work on all SNMP-enabled servers, but Microsoft recommends against using it on Windows boxen, so this article will focus on Linux/Unix servers. 
+For some servers it's unsuitable to install a specific agent that allows retrieval of information such as memory usage, system load and disk usage. Fortunately, many such servers come with the net-snmp software either pre-packaged or pre-installed. This article explains how to utilize SNMP to monitor such servers. Note that the information given here should work on all SNMP-enabled servers, but Microsoft recommends against using it on Windows boxen, so this article will focus on Linux/Unix servers.
 
 ## 1 - Configure the host's SNMP daemon
 
@@ -14,10 +14,10 @@ This step is explained in great detail in the manual pages detailing how to use 
 
 The server-specific SNMP based checks primarily relate to checking things such as **cpu load**, **memory** **utilization**, **disk utilization** and **processes**. These are the areas we primarily recommend checking.
 
--   CPU - Malfunctioning or suboptimally configured software tends to utilize inordinate amounts of CPU
--   Memory - Running out of memory can cause system and/or process crashes
--   Disk usage - Full disks spell trouble on most servers
--   Processes - A computer without processes is worse than useless. Make sure yours are running.
+- CPU - Malfunctioning or suboptimally configured software tends to utilize inordinate amounts of CPU
+- Memory - Running out of memory can cause system and/or process crashes
+- Disk usage - Full disks spell trouble on most servers
+- Processes - A computer without processes is worse than useless. Make sure yours are running.
 
 Using the OP5 Monitor Configuration Tool, you have the option to add new services to a host. How to do so is explained in the manual for the [configuring](https://kb.op5.com/display/DOC/configuring). Briefly though; A check-command is used to create a particular check. The complete list of server-specific unix/linux checkcommands as of 2015-08-16 is listed below. There are other SNMP based checks that can be performed against servers, but some of them are vendor specific (such as chassis temperature etc), and some of them are explained elsewhere or have great tool support in the configuration tool (such as network traffic checks).
 
@@ -59,8 +59,6 @@ community!1!2
 ```
 
 Note that we don't recommend using SNMP v2c, since it doesn't allow for strong authentication or encryption of the traffic.
-
- 
 
 ## Choose what to monitor
 
@@ -117,18 +115,15 @@ check_snmp_procs_syslog_v2
 check_snmp_procs_syslog_v3
 ```
 
- 
-
 ## Related articles
 
--   Page:
+- Page:
     [Getting started with OP5 Monitor](/display/HOWTOs/Getting+started+with+op5+Monitor)
--   Page:
+- Page:
     [Monitoring Dell servers](/display/HOWTOs/Monitoring+Dell+servers)
--   Page:
+- Page:
     [Configure a Linux server for SNMP monitoring](/display/HOWTOs/Configure+a+Linux+server+for+SNMP+monitoring)
--   Page:
+- Page:
     [How to configure OP5 Trapper Extension (Cisco handler)](../HOWTOs/How_to_configure_op5_Trapper_Extension_Cisco_handler_)
--   Page:
+- Page:
     [Migrate Monitor 7 from EL6 to EL7](/display/HOWTOs/Migrate+Monitor+7+from+EL6+to+EL7)
-

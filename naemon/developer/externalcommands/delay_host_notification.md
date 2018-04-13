@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DELAY_HOST_NOTIFICATION<br>
 
-
 #### Command Format:
 
 `DELAY_HOST_NOTIFICATION;host_name;notification_time`
@@ -29,6 +28,3 @@ Delays the next notification for a parciular service until 'notification_time'. 
 
 printf "[%lu] DELAY_HOST_NOTIFICATION;host1;1478638441\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

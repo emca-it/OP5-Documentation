@@ -4,18 +4,18 @@ Version
 
 This article was written for version 0.4.4 of NSClient++. Versions 0.3.x and earlier of NSClient++ did not rely on the Windows Registry as heavily, so these notes would not apply. These instructions should work on later versions unless otherwise noted.
 
--   [About the document](#HandlingNSClient++settingsintheWindowsRegistry-Aboutthedocument)
--   [Changed settings location](#HandlingNSClient++settingsintheWindowsRegistry-Changedsettingslocation)
--   [Getting started](#HandlingNSClient++settingsintheWindowsRegistry-Gettingstarted)
--   [Allowed hosts](#HandlingNSClient++settingsintheWindowsRegistry-AllowedhostsAllowed_hosts)
--   [Logging](#HandlingNSClient++settingsintheWindowsRegistry-Logging)
-    -   [Changing log file](#HandlingNSClient++settingsintheWindowsRegistry-Changinglogfile)
-    -   [Turning on debug mode](#HandlingNSClient++settingsintheWindowsRegistry-Turningondebugmode)
-    -   [Log file size](#HandlingNSClient++settingsintheWindowsRegistry-Logfilesize)
--   [Modules](#HandlingNSClient++settingsintheWindowsRegistry-Modules)
--   [External scripts](#HandlingNSClient++settingsintheWindowsRegistry-Externalscripts)
--   [Restarting the NSClient++ service](#HandlingNSClient++settingsintheWindowsRegistry-RestartingtheNSClient++service)
--   [More information](#HandlingNSClient++settingsintheWindowsRegistry-Moreinformation)
+- [About the document](#HandlingNSClient++settingsintheWindowsRegistry-Aboutthedocument)
+- [Changed settings location](#HandlingNSClient++settingsintheWindowsRegistry-Changedsettingslocation)
+- [Getting started](#HandlingNSClient++settingsintheWindowsRegistry-Gettingstarted)
+- [Allowed hosts](#HandlingNSClient++settingsintheWindowsRegistry-AllowedhostsAllowed_hosts)
+- [Logging](#HandlingNSClient++settingsintheWindowsRegistry-Logging)
+  - [Changing log file](#HandlingNSClient++settingsintheWindowsRegistry-Changinglogfile)
+  - [Turning on debug mode](#HandlingNSClient++settingsintheWindowsRegistry-Turningondebugmode)
+  - [Log file size](#HandlingNSClient++settingsintheWindowsRegistry-Logfilesize)
+- [Modules](#HandlingNSClient++settingsintheWindowsRegistry-Modules)
+- [External scripts](#HandlingNSClient++settingsintheWindowsRegistry-Externalscripts)
+- [Restarting the NSClient++ service](#HandlingNSClient++settingsintheWindowsRegistry-RestartingtheNSClient++service)
+- [More information](#HandlingNSClient++settingsintheWindowsRegistry-Moreinformation)
 
 # About the document
 
@@ -95,12 +95,12 @@ All settings for external scrips shall be set under:
 
 Let's say you have written a custom power shell script and want to use it as an external script. The script is called `check_something.ps1`.
 
-1.  Create the following folder:
+1. Create the following folder:
     `C:\Program Files\NSClient++\scripts\my_scripts`
-     
-2.  Put the script into the folder you created above
-     
-3.  Then put a string value under `[HKEY_LOCAL_MACHINE\SOFTWARE\NSClient++\settings\external scripts\scripts]` that looks like this:
+
+2. Put the script into the folder you created above
+
+3. Then put a string value under `[HKEY_LOCAL_MACHINE\SOFTWARE\NSClient++\settings\external scripts\scripts]` that looks like this:
     **String name:** `check_something`
     **String Value:** `cmd /c echo scripts\my_scripts\check_something.ps1; exit $LastExitCode | powershell.exe -command -`
 
@@ -131,4 +131,3 @@ For more settings in NSClient++, please take a look at the official NSClient++ s
 **Settings –** <http://docs.nsclient.org/0.4.4/manual/settings.html>
 **Checks –** <http://docs.nsclient.org/0.4.4/manual/checks.html>
 **Scripts –** <http://docs.nsclient.org/0.4.4/howto/external_scripts.html#writing-scripts>
-

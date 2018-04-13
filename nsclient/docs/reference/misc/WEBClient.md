@@ -9,7 +9,6 @@ WEB client can be used both from command line and from queries to check remote s
 **Queries (Overview)**:
 
 1. list of all available queries (check commands)
-   
 
 <dl>
   <dt> : class : contentstable </dt>
@@ -23,7 +22,7 @@ WEB client can be used both from command line and from queries to check remote s
     <p>:query:`web_submit` | Submit information to remote host via WEB.</p>
   </dd>
 </dl>
-**Commands (Overview)**: 
+**Commands (Overview)**:
 
 **TODO:** Add a list of all external commands (this is not check commands)
 
@@ -97,7 +96,6 @@ Sample keys:
 ## Queries ##
 
 1. quick reference for all available queries (check commands) in the WEBClient module.
-   
 
 ### :query:`web_exec` ###
 

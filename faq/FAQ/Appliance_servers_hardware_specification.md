@@ -2,14 +2,14 @@
 
 Specifications may change without prior notice. Our ambition is to update this page as soon as possible when changes are made to keep specifications current and correct.
 
--   -   [Generation 8](#Applianceservershardwarespecification-Generation8)
-    -   [Entry server](#Applianceservershardwarespecification-Entryserver)
-    -   [Standard server](#Applianceservershardwarespecification-Standardserver)
-    -   [Large server](#Applianceservershardwarespecification-Largeserver)
--   [Generation 7](#Applianceservershardwarespecification-Generation7)
-    -   [Entry server](#Applianceservershardwarespecification-Entryserver.1)
-    -   [Standard server](#Applianceservershardwarespecification-Standardserver.1)
-    -   [Large server](#Applianceservershardwarespecification-Largeserver.1)
+- [Generation 8](#Applianceservershardwarespecification-Generation8)
+  - [Entry server](#Applianceservershardwarespecification-Entryserver)
+  - [Standard server](#Applianceservershardwarespecification-Standardserver)
+  - [Large server](#Applianceservershardwarespecification-Largeserver)
+- [Generation 7](#Applianceservershardwarespecification-Generation7)
+  - [Entry server](#Applianceservershardwarespecification-Entryserver.1)
+  - [Standard server](#Applianceservershardwarespecification-Standardserver.1)
+  - [Large server](#Applianceservershardwarespecification-Largeserver.1)
 
 ## **Generation 8**
 
@@ -142,4 +142,3 @@ ReadyRails Sliding Rack Rails with Cable Management Arm
 RAID 10 for H710p, H710, H310 Controllers
 
 iDRAC7 Enterprise
-

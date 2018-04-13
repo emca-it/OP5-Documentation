@@ -16,8 +16,6 @@ Puppet is a Configuration Management System used to automate distribution of res
 
 ### [Continue reading...](attachments/7176499/7471202.pdf)
 
- 
-
 ### Authors
 
 Robin Jonsson & Simon Blixt
@@ -25,4 +23,3 @@ Robin Jonsson & Simon Blixt
 ### Project page
 
 https://github.com/jesajah/RoSi
-

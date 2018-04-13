@@ -22,12 +22,12 @@ op5-backup support local or ftp/sftp backup. Local backup can be done to a mount
 
 A full backup will back up the following (if installed):
 
--   op5-system
--   op5-monitor
--   op5-plugins
--   Docuwiki
--   Logserver
--   Trapper
+- op5-system
+- op5-monitor
+- op5-plugins
+- Docuwiki
+- Logserver
+- Trapper
 
 To run a full backup of your OP5 server type in the console:
 
@@ -82,8 +82,6 @@ op5-backup -m charch – -op5-system
 
 A change arch backup will convert all graphs, in a large installation with a lot of history this can take up to a couple of hours.
 
- 
-
 # Restoring a backup
 
 # To restore a full backup type:
@@ -118,4 +116,3 @@ rm <backup-file>
 ```
 
 Or if the file is stored on a network share, you can browse the network share from any computer to delete the file.
-

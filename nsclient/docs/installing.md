@@ -27,20 +27,18 @@ For details on the configuration options check the [the reference documentation]
 
 ## Windows Firewall
 
-1.  Windows firewall exception for NRPE and check_nt is installed (optionally) by the installer.
+1. Windows firewall exception for NRPE and check_nt is installed (optionally) by the installer.
     If you have another firewall then the built-in one you might have to manually add exceptions to all incoming traffic if you which to use check_nrpe and/or check_nt.
-2.  External Firewall (optional)
-
+2. External Firewall (optional)
 
 Firewall configuration should be pretty straight forward:
 
--   If you use NRPEServer (check_nrpe, NRPEListener) you need the NRPE port open (usually 5666) from the Nagios server towards the client.
--   If you use the NSClientServer (check_nt, NSClientListener) you need the (modified) NSClient port open (usually 12489) from the Nagios server towards the client.
--   If you use the NSCA Module (passive checks) you need the NSCA port open from the client towards the Nagios server.
+- If you use NRPEServer (check_nrpe, NRPEListener) you need the NRPE port open (usually 5666) from the Nagios server towards the client.
+- If you use the NSClientServer (check_nt, NSClientListener) you need the (modified) NSClient port open (usually 12489) from the Nagios server towards the client.
+- If you use the NSCA Module (passive checks) you need the NSCA port open from the client towards the Nagios server.
     client:* -> Nagios:5667
--   Also be aware that ports are configurable so if you override the defaults you obviously need to update the firewall rules accordingly.
--   There a multitude of other protocol which you can also use with NSClient++ (including, NRPE, NSCA, Syslog, SMTP, etc etc) so please review what your firewall setup in conjunction with you NSClient++ design.
-
+- Also be aware that ports are configurable so if you override the defaults you obviously need to update the firewall rules accordingly.
+- There a multitude of other protocol which you can also use with NSClient++ (including, NRPE, NSCA, Syslog, SMTP, etc etc) so please review what your firewall setup in conjunction with you NSClient++ design.
 
 | Protocol   | Source | Source port | Destination   | Destination port | Comment                                                        |
 |------------|--------|-------------|---------------|------------------|----------------------------------------------------------------|
@@ -49,9 +47,9 @@ Firewall configuration should be pretty straight forward:
 | NSCA       | client | <all>       | Nagios        | 5667             | The client initiates a call to the Nagios server on port 5667  |
 | NRPE-proxy | client | <all>       | remote-client | 5666             | The client initiates a call to the remote client on port 5666  |
 
--   **Nagios** is the IP/host of the main monitoring server
--   client is the Windows computer where you have installed NSClient++
--   remote-client is the "other" client you want to check from NSClient++ (using NSClient++ as a proxy)
+- **Nagios** is the IP/host of the main monitoring server
+- client is the Windows computer where you have installed NSClient++
+- remote-client is the "other" client you want to check from NSClient++ (using NSClient++ as a proxy)
 
 All these ports can be changed so be sure to check your nsclient.ini for your ports.
 
@@ -159,9 +157,9 @@ msiexec /i NSClient++.msi OP5_SERVER=https://op5.com OP5_USER=monitor OP5_PASSWO
 
 As NSClient++ uninstalls it self if you install there are two options for running multiple NSClient++ on a machine.
 
-1.  You can add multiple services for the same installation
-2.  You can install NSClient++_Secondary binary to get two instance on the same machine
-3.  You can manually install NSClient++ (allows any number of installs)
+1. You can add multiple services for the same installation
+2. You can install NSClient++_Secondary binary to get two instance on the same machine
+3. You can manually install NSClient++ (allows any number of installs)
 
 To add multiple service you need to first create the services: `nscp service --install --name nscp2`
 

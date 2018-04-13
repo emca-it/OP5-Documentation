@@ -6,19 +6,19 @@ This article was written for *version 7.3.20* of OP5 Monitor or later and *requi
 
 Articles in the Community-Space are not supported by OP5 Support.
 
--   [Introduction](#SendingmetricstoGrafana-Introduction)
--   [Before you start](#SendingmetricstoGrafana-Beforeyoustart)
-    -   [OP5 Grafana guidelines](#SendingmetricstoGrafana-OP5Grafanaguidelines)
-    -   [OP5 Grafana prerequisites](#SendingmetricstoGrafana-OP5Grafanaprerequisites)
--   [Installation](#SendingmetricstoGrafana-Installation)
-    -   [Installing Grafana](#SendingmetricstoGrafana-InstallingGrafana)
-    -   [Installing InfluxDB](#SendingmetricstoGrafana-InstallingInfluxDB)
-    -   [Installing NagFlux](#SendingmetricstoGrafana-InstallingNagFlux)
--   [Configuration](#SendingmetricstoGrafana-Configuration)
--   [Logging in to Grafana Web GUI](#SendingmetricstoGrafana-LoggingintoGrafanaWebGUI)
-    -   [Add a new Data Source to Grafana](#SendingmetricstoGrafana-AddanewDataSourcetoGrafana)
--   [Create your first Grafana dashboard](#SendingmetricstoGrafana-CreateyourfirstGrafanadashboard)
--   [FAQ](#SendingmetricstoGrafana-FAQ)
+- [Introduction](#SendingmetricstoGrafana-Introduction)
+- [Before you start](#SendingmetricstoGrafana-Beforeyoustart)
+  - [OP5 Grafana guidelines](#SendingmetricstoGrafana-OP5Grafanaguidelines)
+  - [OP5 Grafana prerequisites](#SendingmetricstoGrafana-OP5Grafanaprerequisites)
+- [Installation](#SendingmetricstoGrafana-Installation)
+  - [Installing Grafana](#SendingmetricstoGrafana-InstallingGrafana)
+  - [Installing InfluxDB](#SendingmetricstoGrafana-InstallingInfluxDB)
+  - [Installing NagFlux](#SendingmetricstoGrafana-InstallingNagFlux)
+- [Configuration](#SendingmetricstoGrafana-Configuration)
+- [Logging in to Grafana Web GUI](#SendingmetricstoGrafana-LoggingintoGrafanaWebGUI)
+  - [Add a new Data Source to Grafana](#SendingmetricstoGrafana-AddanewDataSourcetoGrafana)
+- [Create your first Grafana dashboard](#SendingmetricstoGrafana-CreateyourfirstGrafanadashboard)
+- [FAQ](#SendingmetricstoGrafana-FAQ)
 
 # Introduction
 
@@ -28,17 +28,17 @@ Metrics ("performance data") are a fundamental part of OP5 Monitor. Collecting a
 
 ## OP5 Grafana guidelines
 
--   OP5 recommends that Grafana and InfluxDB is running on a separate server. And not on the same server as OP5 Monitor runs.
+- OP5 recommends that Grafana and InfluxDB is running on a separate server. And not on the same server as OP5 Monitor runs.
     This is mainly due to performance reasons, so that Grafana runs as smoothly as possible, without disturbing your monitoring
--   OP5 recommends that the Grafana service is running on CentOS or Red Hat Enterprise Linux (EL) version 7
+- OP5 recommends that the Grafana service is running on CentOS or Red Hat Enterprise Linux (EL) version 7
 
 ## OP5 Grafana prerequisites
 
 Make sure the following is in place
 
--   OP5 Monitor installed and running (version 7.3.20 or higher and on CentOS/RedHat 7)
--   Grafana and [InfluxDB](https://portal.influxdata.com/downloads) (version 1.2.0 or higher) is installed and running - on a dedicated server (below refered to as the "visualisation server")
--   SSH- and root-access to your server
+- OP5 Monitor installed and running (version 7.3.20 or higher and on CentOS/RedHat 7)
+- Grafana and [InfluxDB](https://portal.influxdata.com/downloads) (version 1.2.0 or higher) is installed and running - on a dedicated server (below refered to as the "visualisation server")
+- SSH- and root-access to your server
 
 # Installation
 
@@ -106,7 +106,7 @@ yum install golang git
 # Install and build nagflux binary
 go get -u github.com/griesbacher/nagflux
 go build github.com/griesbacher/nagflux
- 
+
 # Copy the nagflux binary and create the folders we need
 cp nagflux /usr/bin/
 mkdir /etc/nagflux
@@ -127,24 +127,24 @@ FieldSeparator = "&"
 BufferSize = 1000
 FileBufferSize = 65536
 DefaultTarget = "all"
- 
+
 [Log]
 LogFile = "/var/log/nagflux/nagflux.log"
 MinSeverity = "INFO"
- 
+
 [InfluxDBGlobal]
 CreateDatabaseIfNotExists = true
 NastyString = ""
 NastyStringToReplace = ""
 HostcheckAlias = "hostcheck"
- 
+
 [InfluxDB "<influx_database_name>"]
 Enabled = true
 Version = 1.0
 Address = "http://<influxdb_host_ip>:8086"
 Arguments = "precision=ms&db=<influx_database_name>&u=admin&p=admin"
 StopPullingDataIfDown = true
- 
+
 [Livestatus]
 #tcp or file
 Type = "file"
@@ -153,20 +153,20 @@ Address = "/opt/monitor/var/rw/live"
 MinutesToWait = 3
 Version = ""
 EOF
- 
+
 # Create service file
 cat <<EOF | sudo tee /etc/systemd/system/nagflux.service
 [Unit]
 Description=A connector which transforms performancedata from Nagios/Icinga(2)/Naemon to InfluxDB/Elasticsearch
 Documentation=https://github.com/Griesbacher/nagflux
 After=network-online.target
- 
+
 [Service]
 User=root
 Group=root
 ExecStart=/usr/bin/nagflux -configPath /etc/nagflux/config.gcfg
 Restart=on-failure
- 
+
 [Install]
 WantedBy=multi-user.target
 Alias=nagflux.service
@@ -201,8 +201,7 @@ mon restart
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # To run in existing instance
 nagflux -configPath /etc/nagflux/config.gcfg &
- 
- 
+
 # To run as a service
 systemctl daemon-reload
 systemctl enable nagflux
@@ -311,7 +310,7 @@ The result should look something like this:
 
 ![](attachments/23792419/23792613.png)
 
-To finalize this, hit the save icon. ![Grafana save icon](attachments/23792419/23792609.png "Grafana save icon") 
+To finalize this, hit the save icon. ![Grafana save icon](attachments/23792419/23792609.png "Grafana save icon")
 Give your dashboard a name and your first dashboard is now ready, and found under the Grafana home page.
 
 # FAQ
@@ -343,4 +342,3 @@ Please get in touch with us to get OP5 professional services to tailor it for yo
 **We are using the Naemon InfluxDB Broker Module, is this still a working solution?**
 
 The naemon influxdb broker is no longer functional and is therefore deprecated in favour for the solution in this article.
-

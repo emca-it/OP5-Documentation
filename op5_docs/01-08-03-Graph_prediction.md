@@ -1,6 +1,6 @@
 # Graph prediction
 
-# About 
+# About
 
 A graph prediction plots a line across the graph to predict when it will cross the thresholds.
 ![](attachments/16482348/16679163.png)
@@ -12,4 +12,3 @@ The graph prediction is not used by default. To enable graph prediction you have
  Select the template **lslprediction-label** and click on **submit**.
 ![](attachments/16482348/16679164.png)
  This will change the layout of your graphs.
-

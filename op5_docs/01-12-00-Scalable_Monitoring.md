@@ -1,4 +1,3 @@
 # Scalable Monitoring
 
 **Scalable Monitoring**
-

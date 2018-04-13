@@ -35,10 +35,10 @@ Developing plugins for OP5 Monitor, Naemon or Nagios is straight forward. The di
 
 At OP5 we really appreciate when developers follow the developer guidelines, the developer guidelines can be found over at [monitoring-plugins.com](https://www.monitoring-plugins.org/doc/guidelines.html). In short, having the following options makes the plugin easier to use:
 
--   -H for hostname
--   -h for short help
--   --help for long help output
--   -v for verbose mode and -vv for very verbose mode
+- -H for hostname
+- -h for short help
+- --help for long help output
+- -v for verbose mode and -vv for very verbose mode
 
 ### Exit codes, what you need to know
 
@@ -104,8 +104,6 @@ For more info see the [Development Guidelines](https://www.monitoring-plugins.or
 
 Read through this code, try to understand what it does. There's explanations below for reference. ([Download](attachments/11632752/11567123.py))
 
- 
-
 ``` {.py data-syntaxhighlighter-params="brush: py; gutter: true; theme: Confluence" data-theme="Confluence" style="brush: py; gutter: true; theme: Confluence"}
 !/usr/bin/env python
 state = "OK"
@@ -157,8 +155,6 @@ This is where the "magic" happens, we are now checking our state and depending o
 #### Second Example: Dead Simple Plugin with Arguments
 
 Here's a bit more advanced example with argument parsing, it looks kind of like the first example but with some user input. Go through the code and see if you understand what it does, explanations is found below the code. ([Download](attachments/11632752/11567122.py))
-
- 
 
 ``` {.py data-syntaxhighlighter-params="brush: py; gutter: true; theme: Confluence" data-theme="Confluence" style="brush: py; gutter: true; theme: Confluence"}
 #!/usr/bin/env python
@@ -343,6 +339,5 @@ After going through the above, you should be kind of set to start working with p
 
 We would also like to mention that there's a lot of different libraries for developing plugins and working with configuration in OP5 Monitor, Naemon or Nagios. Check out the following sites for more info:
 
--   <https://pypi.python.org/pypi/nagiosplugin/>
--   <http://pynag.org>
-
+- <https://pypi.python.org/pypi/nagiosplugin/>
+- <http://pynag.org>

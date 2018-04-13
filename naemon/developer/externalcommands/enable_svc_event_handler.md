@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_SVC_EVENT_HANDLER<br>
 
-
 #### Command Format:
 
 `ENABLE_SVC_EVENT_HANDLER;host_name;service_description`
@@ -29,6 +28,3 @@ Enables the event handler for the specified service.
 
 printf "[%lu] ENABLE_SVC_EVENT_HANDLER;host1;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

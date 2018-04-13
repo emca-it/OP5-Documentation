@@ -28,7 +28,4 @@ check\_env\_stats.py: <https://exchange.nagios.org/directory/Plugins/Hardware/E
 
 This plugin provides temperature logs combined with the SNMP-location (in performance data format) and hence is very usefull when it comes to graphing and keeping an eye on the temperature in all the small dusty locations where you might have had to place your network equipment. The plugin has been successfully tested on cisco-2811 and beyond.
 
- 
-
 check\_snmp\_env is since OP5 Monitor 6.1 included and supported. More information about the plugin and the support level can be found [here](https://kb.op5.com/display/PLUGINS/check_snmp_env).
-

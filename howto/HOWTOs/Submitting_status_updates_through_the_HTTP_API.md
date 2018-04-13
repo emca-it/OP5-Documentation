@@ -15,20 +15,20 @@ In this how-to we will look at updating a service via the command line utility *
 
 # Prerequisites
 
--   Basic Linux/UNIX knowledge
--   Knowledge of service configuration in *op5 Monitor*
--   A *op5 Monitor* user with permission to submit commands
--   Shell access to a system with the *cURL* utility installed
+- Basic Linux/UNIX knowledge
+- Knowledge of service configuration in *op5 Monitor*
+- A *op5 Monitor* user with permission to submit commands
+- Shell access to a system with the *cURL* utility installed
 
 # Privilege Recommendations
 
 It is a very good idea to create a dedicated group with only the minimum required privileges for each major type of API request, then create a user for each group. This makes it easier to control how much damage could be done by a script or process calling the API. Each group will need any particular API privileges, as well as all the usual privileges to do a task in the web browser. Here are a couple examples, with a screen shot of both afterward:
 
-1.  Querying hosts -- this is a read-only task. Thus:
+1. Querying hosts -- this is a read-only task. Thus:
     1.  API Command
     2.  Host View All
 
-2.  Changing services -- this will write changes, so it will require:
+2. Changing services -- this will write changes, so it will require:
     1.  API Command
     2.  Service View All
     3.  Service Edit All
@@ -42,8 +42,6 @@ The "check\_freshness" option can be enabled to run a check command (like "check
 
 *Runs the check actively if it hasn't been updated during the last hour.*
 
- 
-
 # Usage examples
 
 ## Submitting service status updates with cURL
@@ -53,9 +51,9 @@ Using *cURL* for this purpose is a great fit, since it's installed or available 
 
 The command below will do the following:
 
-1.  Log in to the HTTP API with the user "status\_update" and the password "mysecret"
-2.  Update a service called "Example service" on the host "example\_host\_1"
-3.  Set the status message to "Example issue has occurred" and the service status to "CRITICAL".
+1. Log in to the HTTP API with the user "status\_update" and the password "mysecret"
+2. Update a service called "Example service" on the host "example\_host\_1"
+3. Set the status message to "Example issue has occurred" and the service status to "CRITICAL".
     More information about "plugin interface" and status codes can be found [here
     ](https://kb.op5.com/display/DOC/The+plugin+interface)
 
@@ -69,7 +67,7 @@ $ curl -u 'status_update:mysecret' -H 'content-type: application/json' \
 After executing the command above, you should hopefully retrieve the following message:
 
 ``` {.js data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: js; gutter: false; theme: Confluence"}
-{"result":"Successfully submitted PROCESS_SERVICE_CHECK_RESULT"}% 
+{"result":"Successfully submitted PROCESS_SERVICE_CHECK_RESULT"}%
 ```
 
 If not, verify that you have entered the correct user name and password, have been given adequate permissions and the the service/host name is spelled/capitalized correctly.
@@ -78,8 +76,6 @@ When self-signed SSL certificates are used on the *op5 Monitor* server, you must
 The service should now be updated in OP5 Monitor:
 
 ![](attachments/12189807/12386341.png)
-
- 
 
 ## Including service status updates in a backup script
 
@@ -143,4 +139,3 @@ else
 
 fi
 ```
-

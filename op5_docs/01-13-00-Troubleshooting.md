@@ -140,11 +140,9 @@ Notice
 
 -
 
- 
-
 SMS
 
-- 
+-
 
 /etc/smsd.conf
 
@@ -158,18 +156,10 @@ Only available if smart\_logging is enabled. Smart\_logging creates a separate l
 
 Syslog
 
- 
-
 /etc/syslog-ng/syslog-ng.conf
 
 /dev/console
 /var/log/messages/var/log/secure/var/log/maillog/var/log/spooler/var/log/boot.log/var/log/cron/var/log/kern
-
- 
-
- 
-
- 
 
 Distribution and Load Balancing
 
@@ -381,4 +371,3 @@ Restart synergy and syslog-ng:
     service synergy restartservice syslog-ng restart
 
 Remember to restore the original settings and restart the services when you no longer need to troubleshoot.
-

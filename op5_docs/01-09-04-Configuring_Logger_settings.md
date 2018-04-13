@@ -1,6 +1,6 @@
 # Configuring Logger settings
 
-# About 
+# About
 
 The Logger configuration page allows you to tweak storage settings, log rotation and similar.
 
@@ -11,13 +11,13 @@ To access the Logger configuration go to the configuration page and click on **L
 
 In Logger configuration you can configure
 
--   -   Database retention
-    -   Log archive 
+- Database retention
+  - Log archive
 
 ## Database retention
 
 Logs are rotated out from the database when they reach a certain age.
-This can be configured using the **Keep in database** option. 
+This can be configured using the **Keep in database** option.
 
 ![](attachments/16482382/16679127.png)
 
@@ -35,16 +35,13 @@ We recommend to configure a remote storage for the archive, both for security re
 
 Things to consider when log archive is turned on:
 
--   When log archive is turned on, the archive search feature will utilize the text files instead of the database.
--   Archived files are **not** rotated automatically. A retention / clean up policy must be put in place to clear out old log files.
--   Archive logging starts when the feature is turned on. This means that the archive search feature will only show messages starting when archive logging was turned on.
--   If archiving is turned off, existing files are kept on disk.
+- When log archive is turned on, the archive search feature will utilize the text files instead of the database.
+- Archived files are **not** rotated automatically. A retention / clean up policy must be put in place to clear out old log files.
+- Archive logging starts when the feature is turned on. This means that the archive search feature will only show messages starting when archive logging was turned on.
+- If archiving is turned off, existing files are kept on disk.
 
 Since the archive will not automatically be rotated logs will be stored indefinitely.
 
 # Log Monitoring
 
 If you want to learn about monitoring log patterns, see the "[Monitoring log filters in OP5 Monitor 7.0 or later](https://kb.op5.com/display/HOWTOs/Monitoring+log+filters+in+Monitor+7.0+or+higher)"
-
- 
-

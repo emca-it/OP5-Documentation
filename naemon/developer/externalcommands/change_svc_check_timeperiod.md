@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_SVC_CHECK_TIMEPERIOD<br>
 
-
 #### Command Format:
 
 `CHANGE_SVC_CHECK_TIMEPERIOD;host_name;service_description;check_timeperiod`
@@ -29,6 +28,3 @@ Changes the check timeperiod for a particular service to what is specified by th
 
 printf "[%lu] CHANGE_SVC_CHECK_TIMEPERIOD;host1;service1;24x7\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

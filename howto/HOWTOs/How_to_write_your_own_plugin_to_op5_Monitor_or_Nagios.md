@@ -8,18 +8,12 @@ However, if you can not find a suitable plugin anywhere you might have to write 
 
 ## Prerequisites
 
--   Scripting/Programming knowledge
--   Root-privileges  on the host system running OP5 Monitor
-
- 
-
- 
+- Scripting/Programming knowledge
+- Root-privileges  on the host system running OP5 Monitor
 
 ### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
-
- 
 
 ## Accessing and editing files
 
@@ -39,9 +33,9 @@ Most of the plugins are installed by default in /opt/plugins/ which is also what
 
 A plugin is a small executable that takes optional command line parameters as input and
 
--   Performs a test
--   Reports a diagnostic message to stdout (will be shown in the web gui)
--   Returns an exit code of 0, 1, 2 or 3 for OK, Warning, Critical or Unknown
+- Performs a test
+- Reports a diagnostic message to stdout (will be shown in the web gui)
+- Returns an exit code of 0, 1, 2 or 3 for OK, Warning, Critical or Unknown
 
 ### Example
 
@@ -107,15 +101,13 @@ Scroll to the bottom of the page to add a new command. Call it something that ma
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left">command_name: 
+<td align="left">command_name:
 check_local_helloworld</td>
 <td align="left">command_line:
  $USER1$/custom/helloworld</td>
 </tr>
 </tbody>
 </table>
-
- 
 
 Then select Apply changes and save configuration.
 
@@ -158,13 +150,11 @@ else
     # If the script reaches this point then the test passed
     # Print an OK message
     echo $STORAGEPATH exists
-    # Exit with status OK   
+    # Exit with status OK
     exit 0
 
 fi
 ```
-
- 
 
 Now add a check\_command like this using the OP5 Monitor web gui:
 
@@ -175,15 +165,13 @@ Now add a check\_command like this using the OP5 Monitor web gui:
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left">command_name: 
+<td align="left">command_name:
 check_op5-backup</td>
 <td align="left">command_line:
  $USER1$/custom/check_op5-backup</td>
 </tr>
 </tbody>
 </table>
-
- 
 
 Enter the service configuration for your monitor server, and add a service with check\_op5-backup as the check\_command.
 
@@ -193,16 +181,11 @@ Save configuration and try it out!
 
 Since many people find examples an easy way of learning, the following links provides an example of a really simple plugin written in both Perl and C. The plugin takes one argument, a filename, and returns OK if the file exists and CRITICAL if it does not. They also include timeout-handling.
 
-In order to use the perl example you only need the copy the file into the /opt/plugins directory of the monitor-server. In order to compile the C-version, you need to rebuild the plugins-package from source. The source can be found at the [Monitoring-plugins website](https://www.monitoring-plugins.org/). 
+In order to use the perl example you only need the copy the file into the /opt/plugins directory of the monitor-server. In order to compile the C-version, you need to rebuild the plugins-package from source. The source can be found at the [Monitoring-plugins website](https://www.monitoring-plugins.org/).
 
--   [Perl Example](#)
--   [C example](#)
-
- 
+- [Perl Example](#)
+- [C example](#)
 
 ### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
-
- 
-

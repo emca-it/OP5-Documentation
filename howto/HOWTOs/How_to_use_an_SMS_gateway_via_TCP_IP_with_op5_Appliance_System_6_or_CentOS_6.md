@@ -79,13 +79,13 @@ Select your NPort in the list, right-click it and press “Upgrade Firmware”. 
 
 Now that we’re running the latest firmware, we need to change a setting in the NPort to be able to talk to it the way we want.
 
-1.  Right-click the NPort again, but this time choose “Configure”
-2.  Click the tab “Operating Mode”
-3.  Check the checkbox “Modify”
-4.  Select port 1, and click “Settings”.
-5.  Change “Operating Mode” to “TCP Server Mode”
-6.  Click OK and then click OK again. Wait while the configuration is uploaded. You should get a “Configuration is applied ok.” confirmation
-7.  Click OK and close the NPort Administrator software
+1. Right-click the NPort again, but this time choose “Configure”
+2. Click the tab “Operating Mode”
+3. Check the checkbox “Modify”
+4. Select port 1, and click “Settings”.
+5. Change “Operating Mode” to “TCP Server Mode”
+6. Click OK and then click OK again. Wait while the configuration is uploaded. You should get a “Configuration is applied ok.” confirmation
+7. Click OK and close the NPort Administrator software
 
 We are now done configuring the NPort and can continue on to configure the OP5 Appliance System (APS).
 
@@ -125,27 +125,24 @@ If you are using peers and/or pollers that should notify though the same Moxa yo
 
 ### Via Telnet
 
-1.  Connect via telnet to your Moxa
-2.  Press **4** for Operating settings
-3.  Press **1 **for Port 1
-4.  Press **4** for Max connections
-5.  Enter the max number of connections
-6.  Press any key to continue
-7.  Press **m** to go back to main menu
-8.  Press **s **Save/Restart. Note that this will restart your device!
+1. Connect via telnet to your Moxa
+2. Press **4** for Operating settings
+3. Press **1 **for Port 1
+4. Press **4** for Max connections
+5. Enter the max number of connections
+6. Press any key to continue
+7. Press **m** to go back to main menu
+8. Press **s **Save/Restart. Note that this will restart your device!
 
 ### Via Web-UI
 
-1.  Browse to the IP of your Moxa
-2.  Expand **Operating Settings**
-3.  Select **Port 1**
-4.  Change the number of **Max Connection**
-5.  Click on **Save/Restart** in the menu. Note that this will restart your device!
-    ![](attachments/688553/16155451.png) 
-
- 
+1. Browse to the IP of your Moxa
+2. Expand **Operating Settings**
+3. Select **Port 1**
+4. Change the number of **Max Connection**
+5. Click on **Save/Restart** in the menu. Note that this will restart your device!
+    ![](attachments/688553/16155451.png)
 
 **Congratulations!**
 
 You are now sending your SMS notifications to your SMS gateway via TCP/IP!
-

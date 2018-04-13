@@ -22,5 +22,3 @@ The main parts of OP5 Monitor is located in /opt/monitor in the file system.
 </tr>
 </tbody>
 </table>
-
-

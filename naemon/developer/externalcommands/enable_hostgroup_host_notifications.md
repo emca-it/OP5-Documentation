@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_HOSTGROUP_HOST_NOTIFICATIONS<br>
 
-
 #### Command Format:
 
 `ENABLE_HOSTGROUP_HOST_NOTIFICATIONS;hostgroup_name`
@@ -29,6 +28,3 @@ Enables notifications for all hosts in a particular hostgroup. This does not ena
 
 printf "[%lu] ENABLE_HOSTGROUP_HOST_NOTIFICATIONS;hostgroup1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

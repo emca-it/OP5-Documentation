@@ -6,30 +6,30 @@ This article was written for version 7.3.18 of OP5 Monitor on EL7, it could work
 
 Articles in the Community-Space are not supported by OP5 Support.
 
-This article describes how to add SAML based SSO authentication to OP5 Monitor using Apache auth adapter and mod\_auth\_mellon. The Identity Provider (IdP) used in this example is Okta. 
+This article describes how to add SAML based SSO authentication to OP5 Monitor using Apache auth adapter and mod\_auth\_mellon. The Identity Provider (IdP) used in this example is Okta.
 
 ## Step-by-step guide
 
 Create Okta Account:
 
-1.  Go to <https://www.okta.com/start-with-okta/> and create a free developer account. You should get an email containing details of your account including the associated subdomain e.g. [https://dev-xxxxxx.oktapreview.com](https://dev-292660.oktapreview.com/)
-2.  Login to your [https://dev-xxxxxx.oktapreview.com](https://dev-292660.oktapreview.com/) and switch to Admin view.
-3.  Follow this [guide](https://developer.okta.com/standards/SAML/setting_up_a_saml_application_in_okta) to set up a SAML application in Okta, and make sure you replace the following parameters:
+1. Go to <https://www.okta.com/start-with-okta/> and create a free developer account. You should get an email containing details of your account including the associated subdomain e.g. [https://dev-xxxxxx.oktapreview.com](https://dev-292660.oktapreview.com/)
+2. Login to your [https://dev-xxxxxx.oktapreview.com](https://dev-292660.oktapreview.com/) and switch to Admin view.
+3. Follow this [guide](https://developer.okta.com/standards/SAML/setting_up_a_saml_application_in_okta) to set up a SAML application in Okta, and make sure you replace the following parameters:
     1.  Single Sign On URL = https:///mellon/postResponse
     2.  Audience URI (SP Entity ID) = https:///mellon/metadata
 
-4.  Save the downloaded metadata file somewhere safe. You will need it later.
+4. Save the downloaded metadata file somewhere safe. You will need it later.
 
 Configure authentication adapter in Monitor
 
-1.  Create Apache auth driver in Manage/Configure/Authentication Modules.
-2.  Select the created apache driver in the Common tab and enable auto login.
-3.  Create **apache\_auth\_user** group in Manage/Configure/Group Rights with the same permission as the existing **admins** group.
+1. Create Apache auth driver in Manage/Configure/Authentication Modules.
+2. Select the created apache driver in the Common tab and enable auto login.
+3. Create **apache\_auth\_user** group in Manage/Configure/Group Rights with the same permission as the existing **admins** group.
 
 Configure mod\_auth\_mellon module to Apache in Monitor:
 
-1.  SSH to your Monitor machine.
-2.  Install mod\_auth\_mellon: 
+1. SSH to your Monitor machine.
+2. Install mod\_auth\_mellon:
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     yum install mod_auth_mellon
@@ -51,7 +51,7 @@ Configure mod\_auth\_mellon module to Apache in Monitor:
 
     This should overwrite the previously installed module, but keep all the config files intact.
 
-3.  Create a folder that will store mellon configuration and execute a mellon script:
+3. Create a folder that will store mellon configuration and execute a mellon script:
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     mkdir /etc/httpd/mellon
@@ -60,14 +60,14 @@ Configure mod\_auth\_mellon module to Apache in Monitor:
     /root/mod_auth_mellon/mellon_create_metadata.sh op5_okta_<random_id> https://<monitor_ip>/mellon
     ```
 
-4.  Copy the downloaded from Okta metadata file to /etc/httpd/mellon
-5.  Change ownership of the files:
+4. Copy the downloaded from Okta metadata file to /etc/httpd/mellon
+5. Change ownership of the files:
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     chown monitor:apache /etc/httpd/mellon/*
     ```
 
-6.  Edit the /etc/httpd/conf.d/auth\_mellon.conf file and add the following configuration:
+6. Edit the /etc/httpd/conf.d/auth\_mellon.conf file and add the following configuration:
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     MellonCacheSize 100
@@ -100,13 +100,13 @@ Configure mod\_auth\_mellon module to Apache in Monitor:
 
     Make sure you set correct values for MellonSPPrivateKeyFile, MellonSPCertFile and MellonRedirectDomains.
 
-7.  Restart apache:
+7. Restart apache:
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     systemctl restart httpd
     ```
 
-8.  Navigate to https://\<monitor\_ip\>/monitor. You should be redirected to the Okta login page.
+8. Navigate to https://\<monitor\_ip\>/monitor. You should be redirected to the Okta login page.
 
 ## Resources
 
@@ -130,15 +130,13 @@ Configure mod\_auth\_mellon module to Apache in Monitor:
 
 ## Related articles
 
--   Page:
+- Page:
     [Alerting and troubleshooting in general](/display/SUPPORT/Alerting+and+troubleshooting+in+general)
--   Page:
+- Page:
     [Generate xml license files](/display/SUPPORT/Generate+xml+license+files)
--   Page:
+- Page:
     [Troubleshooting high memory usage](/display/SUPPORT/Troubleshooting+high+memory+usage)
--   Page:
+- Page:
     [Prettify XML in VIM](/display/SUPPORT/Prettify+XML+in+VIM)
--   Page:
+- Page:
     [Pinpoint host and service execution time](/display/SUPPORT/Pinpoint+host+and+service+execution+time)
-
-

@@ -3,7 +3,7 @@
 # description: Xvfb, run X in a virtual X-Window system without graphical environment
 # processname: Xvfb
 # Thanks to Dan Straw
-# http://www.danstraw.com/ 
+# http://www.danstraw.com/
 
 XVFB=/usr/bin/Xvfb
 XVFBARGS=":99 -nolisten tcp -fbdir /var/run"

@@ -2,9 +2,6 @@
 
 File for checking log files and various other forms of updating text files
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the CheckLogFile module.
@@ -17,28 +14,20 @@ A list of all available queries (check commands)
 |---------------------------------|-------------------------------------------------------------------------|
 | [check_logfile](#check_logfile) | Check for errors in log file or generic pattern matching in text files. |
 
-
 **List of command aliases:**
 
 A list of all short hand aliases for queries (check commands)
-
 
 | Command      | Description                       |
 |--------------|-----------------------------------|
 | checklogfile | Alias for: :query:`check_logfile` |
 
-
 ### check_logfile
 
 Check for errors in log file or generic pattern matching in text files.
 
-
 * [Command-line Arguments](#check_logfile_options)
 * [Filter keywords](#check_logfile_filter_keys)
-
-
-
-
 
 <a name="check_logfile_warn"/>
 <a name="check_logfile_crit"/>
@@ -53,7 +42,6 @@ Check for errors in log file or generic pattern matching in text files.
 <a name="check_logfile_files"/>
 <a name="check_logfile_options"/>
 #### Command-line Arguments
-
 
 | Option                                        | Default Value                       | Description                                                                                                      |
 |-----------------------------------------------|-------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -83,35 +71,26 @@ Check for errors in log file or generic pattern matching in text files.
 | [file](#check_logfile_file)                   |                                     | File to read (can be specified multiple times to check multiple files.                                           |
 | files                                         |                                     | A comma separated list of files to scan (same as file except a list)                                             |
 
-
-
 <h5 id="check_logfile_filter">filter:</h5>
 
 Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
 <h5 id="check_logfile_warning">warning:</h5>
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
-
-
 
 <h5 id="check_logfile_critical">critical:</h5>
 
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
-
 <h5 id="check_logfile_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_logfile_empty-state">empty-state:</h5>
 
@@ -124,7 +103,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_logfile_top-syntax">top-syntax:</h5>
 
@@ -139,7 +117,6 @@ To add a keyword to the message you can use two syntaxes either ${keyword} or %(
 ok syntax.
 DEPRECATED! This is the syntax for when an ok result is returned.
 This value will not be used if your syntax contains %(list) or %(count).
-
 
 <h5 id="check_logfile_empty-syntax">empty-syntax:</h5>
 
@@ -182,11 +159,8 @@ File to read (can be specified multiple times to check multiple files.
 Notice that specifying multiple files will create an aggregate set it will not check each file individually.
 In other words if one file contains an error the entire check will result in error or if you check the count it is the global count which is used.
 
-
-
 <a name="check_logfile_filter_keys"/>
 #### Filter keywords
-
 
 | Option        | Description                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -217,32 +191,20 @@ In other words if one file contains an error the entire check will result in err
 | warn_count    | Number of items matched the warning criteria. Common option for all checks.                                  |
 | warn_list     | A list of all items which matched the warning criteria. Common option for all checks.                        |
 
-
-
-
 ## Configuration
-
-
 
 | Path / Section                                           | Description         |
 |----------------------------------------------------------|---------------------|
 | [/settings/logfile/real-time](#real-time-filtering)      | Real-time filtering |
 | [/settings/logfile/real-time/checks](#real-time-filters) | Real-time filters   |
 
-
-
 ### Real-time filtering <a id="/settings/logfile/real-time"/>
 
 A set of options to configure the real time checks
 
-
-
-
 | Key                   | Default Value | Description |
 |-----------------------|---------------|-------------|
 | [enabled](#real-time) | false         | Real time   |
-
-
 
 ```ini
 # A set of options to configure the real time checks
@@ -251,17 +213,9 @@ enabled=false
 
 ```
 
-
-
-
-
 #### Real time <a id="/settings/logfile/real-time/enabled"></a>
 
 Spawns a background thread which waits for file changes.
-
-
-
-
 
 | Key            | Description                                                 |
 |----------------|-------------------------------------------------------------|
@@ -269,7 +223,6 @@ Spawns a background thread which waits for file changes.
 | Key:           | enabled                                                     |
 | Default value: | `false`                                                     |
 | Used by:       | CheckLogFile                                                |
-
 
 **Sample:**
 
@@ -279,17 +232,13 @@ Spawns a background thread which waits for file changes.
 enabled=false
 ```
 
-
 ### Real-time filters <a id="/settings/logfile/real-time/checks"/>
 
 A set of filters to use in real-time mode
 
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key              | Default Value             | Description      |
 |------------------|---------------------------|------------------|
@@ -317,7 +266,6 @@ This is a section of objects. This means that you will create objects below this
 | target id        |                           | TARGET ID        |
 | top syntax       |                           | SYNTAX           |
 | warning          |                           | WARNING FILTER   |
-
 
 **Sample:**
 
@@ -350,9 +298,3 @@ silent period=false
 #warning=...
 
 ```
-
-
-
-
-
-

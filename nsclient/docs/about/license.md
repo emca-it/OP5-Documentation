@@ -6,7 +6,6 @@
 Everyone is permitted to copy and distribute verbatim copies of this license
 document, but changing it is not allowed.
 
-
 ## Preamble
 
 The licenses for most software are designed to take away your freedom to share
@@ -53,7 +52,6 @@ use or not licensed at all.
 
 The precise terms and conditions for copying, distribution and modification
 follow.
-
 
 ## Terms And Conditions For Copying, Distribution And Modification
 
@@ -237,7 +235,6 @@ write to the Free Software Foundation; we sometimes make exceptions for this.
 Our decision will be guided by the two goals of preserving the free status of
 all derivatives of our free software and of promoting the sharing and reuse of
 software generally.
-
 
 ## No Warranty
 

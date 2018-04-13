@@ -12,8 +12,6 @@ I want to use "\$" as input to a check\_command in check\_command\_args, how can
 
 This can be done by encapsulating the argument containing "\$" in double quotes:  "", and escape the sign \$ with another one so the input is not interpreted as a variable.
 
- 
-
 See the example below with the plugin "[check\_oracle](https://kb.op5.com/display/PLUGINS/check_oracle)":
 
 Function
@@ -33,5 +31,5 @@ oracle-01!user!password!select 1 from v\\\$\$database where 'value123' = 'value1
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 _USER1_/check_oracle -l "oracle-01" -u "user" -p "password" -o QUERY -a "select 1 from v\$database where 'value123' = 'value123'" -w 2 -c 3
 Result code: OK
-OK - Query returned:  1|result=1;2;3 
+OK - Query returned:  1|result=1;2;3
 ```

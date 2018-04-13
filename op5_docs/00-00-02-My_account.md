@@ -10,8 +10,8 @@ From here, the account password can be changed, the pagination behavior changed,
 
 There are two parts to the **My Account** page.
 
--   Change Password link (Red box in the screenshot)
--   Settings list (Blue box in the screenshot)
+- Change Password link (Red box in the screenshot)
+- Settings list (Blue box in the screenshot)
 
 The Change Password link opens the **Change Password** page where the password for the current account can be set.
 
@@ -19,8 +19,8 @@ The *Settings* list is where various user accessible settings can be tuned or e
 
 # Accessing the My Account Page
 
-1.  Hover over the account avatar/account name on the left hand side of the OP5 Monitor Toolbar to reveal a drop down menu.
-2.  Click on *My Account* from the drop down menu to open the **My Account** page. (Red box in the screenshot.)
+1. Hover over the account avatar/account name on the left hand side of the OP5 Monitor Toolbar to reveal a drop down menu.
+2. Click on *My Account* from the drop down menu to open the **My Account** page. (Red box in the screenshot.)
     ![](attachments/16482337/23792988.png)
 
 # Changing account password
@@ -39,11 +39,11 @@ The *Settings* list is where various user accessible settings can be tuned or e
 
 5. Click on the Change Password button to set the new password.
 
--   A green banner will be displayed if successful.
+- A green banner will be displayed if successful.
 
 ![](attachments/16482337/23792986.png)
 
--   A red banner will be displayed indicating the problem if unsuccessful.
+- A red banner will be displayed indicating the problem if unsuccessful.
 
 ![](attachments/16482337/23792984.png)
 
@@ -64,4 +64,3 @@ The *Pagination* section controls the number of items displayed per page.
 Sets the maximum number of items to display per screen.|Pagination Step
 
 Sets the default value of the pagination drop-down menu.|
-

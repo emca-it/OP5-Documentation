@@ -20,13 +20,11 @@ To do this we first need to shutdown the service.
 net stop nscp
 ```
 
-
 Since much of what NSClient++ does requires "elevated privileges" you should always run NSClient++ in a "Administrator command prompt".
 
 ![elevated](images/elevated.png)
 
 Now change directory to where you installed NSClient++ and run nscp without any arguments like so:
-
 
 ```
 cd to/your/nsclient++/folder</dt>
@@ -88,7 +86,6 @@ They are merely a glorified way to save yourself some typing for instance `nscp 
 | test     | The best way to diagnose and find errors with your configuration and setup.                                       |
 | web      | Configure the web server                                                                                          |
 | wmi      | Run WMI queries from command line                                                                                 |
-
 
 ## Getting setup!
 
@@ -206,8 +203,8 @@ So now that we have a module loaded lets move on to actually using the module.
 The best (and most ignored) way to work with NSClient++ is to use the "test mode".
 Test mode provides you with two things:
 
-1.  A real-time debug log of what NSClient++ does;
-2.  A way to run commands quickly and easily and see the debug log at the same time.
+1. A real-time debug log of what NSClient++ does;
+2. A way to run commands quickly and easily and see the debug log at the same time.
 
 To start test mode you run the following command: `nscp test`
 

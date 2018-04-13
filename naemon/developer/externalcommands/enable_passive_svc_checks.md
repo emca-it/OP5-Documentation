@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_PASSIVE_SVC_CHECKS<br>
 
-
 #### Command Format:
 
 `ENABLE_PASSIVE_SVC_CHECKS;host_name;service_description`
@@ -29,6 +28,3 @@ Enables passive checks for the specified service.
 
 printf "[%lu] ENABLE_PASSIVE_SVC_CHECKS;host1;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

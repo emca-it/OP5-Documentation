@@ -19,4 +19,3 @@ Default check **via NRPE**::
 check_nrpe --host 192.168.56.103 --command check_uptime
 uptime: -0:3, boot: 2013-sep-08 18:41:06 (UCT)|'uptime'=1378665666;1378579481;1378622681
 ```
-

@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_NOTIFICATIONS<br>
 
-
 #### Command Format:
 
 `DISABLE_NOTIFICATIONS;`
@@ -29,6 +28,3 @@ Disables host and service notifications on a program-wide basis.
 
 printf "[%lu] DISABLE_NOTIFICATIONS;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

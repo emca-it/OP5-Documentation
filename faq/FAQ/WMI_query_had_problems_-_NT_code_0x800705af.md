@@ -35,4 +35,3 @@ Looking at the process list in the Windows system, it can be determined that the
 **A simple restart of the Windows server *temporarily* resolves the issue**, or possibly by restarting the *Windows Management Instrumentation* (Winmgmt) service.
 
 More information and a hotfix can be found at this [page](http://support.microsoft.com/kb/981314).
-

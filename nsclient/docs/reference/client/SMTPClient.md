@@ -2,9 +2,6 @@
 
 SMTP client can be used both from command line and from queries to check remote systes via SMTP
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the SMTPClient module.
@@ -17,19 +14,11 @@ A list of all available queries (check commands)
 |-----------------------------|-----------------------------------------------|
 | [submit_smtp](#submit_smtp) | Submit information to the remote SMTP server. |
 
-
-
-
 ### submit_smtp
 
 Submit information to the remote SMTP server.
 
-
 * [Command-line Arguments](#submit_smtp_options)
-
-
-
-
 
 <a name="submit_smtp_help"/>
 <a name="submit_smtp_help-pb"/>
@@ -58,7 +47,6 @@ Submit information to the remote SMTP server.
 <a name="submit_smtp_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                                                           |
 |--------------|---------------|---------------------------------------------------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                                                        |
@@ -86,14 +74,7 @@ Submit information to the remote SMTP server.
 | source-host  |               | Source/sender host name (default is auto which means use the name of the actual host) |
 | sender-host  |               | Source/sender host name (default is auto which means use the name of the actual host) |
 
-
-
-
-
-
 ## Configuration
-
-
 
 | Path / Section                                              | Description               |
 |-------------------------------------------------------------|---------------------------|
@@ -101,20 +82,13 @@ Submit information to the remote SMTP server.
 | [/settings/SMTP/client/handlers](#client-handler-section)   | CLIENT HANDLER SECTION    |
 | [/settings/SMTP/client/targets](#remote-target-definitions) | REMOTE TARGET DEFINITIONS |
 
-
-
 ### SMTP CLIENT SECTION <a id="/settings/SMTP/client"/>
 
 Section for SMTP passive check module.
 
-
-
-
 | Key                 | Default Value | Description |
 |---------------------|---------------|-------------|
 | [channel](#channel) | SMTP          | CHANNEL     |
-
-
 
 ```ini
 # Section for SMTP passive check module.
@@ -123,17 +97,9 @@ channel=SMTP
 
 ```
 
-
-
-
-
 #### CHANNEL <a id="/settings/SMTP/client/channel"></a>
 
 The channel to listen to.
-
-
-
-
 
 | Key            | Description                                     |
 |----------------|-------------------------------------------------|
@@ -141,7 +107,6 @@ The channel to listen to.
 | Key:           | channel                                         |
 | Default value: | `SMTP`                                          |
 | Used by:       | SMTPClient                                      |
-
 
 **Sample:**
 
@@ -151,29 +116,15 @@ The channel to listen to.
 channel=SMTP
 ```
 
-
 ### CLIENT HANDLER SECTION <a id="/settings/SMTP/client/handlers"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
-
-
-
-
-
 
 ### REMOTE TARGET DEFINITIONS <a id="/settings/SMTP/client/targets"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key     | Default Value | Description    |
 |---------|---------------|----------------|
@@ -182,7 +133,6 @@ This is a section of objects. This means that you will create objects below this
 | port    |               | TARGET PORT    |
 | retries | 3             | RETRIES        |
 | timeout | 30            | TIMEOUT        |
-
 
 **Sample:**
 
@@ -196,9 +146,3 @@ retries=3
 timeout=30
 
 ```
-
-
-
-
-
-

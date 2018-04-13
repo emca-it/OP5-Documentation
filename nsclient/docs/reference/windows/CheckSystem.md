@@ -2,9 +2,6 @@
 
 Various system related checks, such as CPU load, process state, service state memory usage and PDH counters.
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the CheckSystem module.
@@ -31,16 +28,13 @@ A list of all available queries (check commands)
 | [checkservicestate](#checkservicestate) | Legacy version of check_service                                               |
 | [checkuptime](#checkuptime)             | Legacy version of check_uptime                                                |
 
-
 **List of command aliases:**
 
 A list of all short hand aliases for queries (check commands)
 
-
 | Command       | Description                   |
 |---------------|-------------------------------|
 | check_counter | Alias for: :query:`check_pdh` |
-
 
 ### check_cpu
 
@@ -54,7 +48,6 @@ The filter keywords can also be used to create the bound expressions for the war
 
 * [Command-line Arguments](#check_cpu_options)
 * [Filter keywords](#check_cpu_filter_keys)
-
 
 <a name="check_cpu_samples"/>
 #### Sample Commands
@@ -92,8 +85,6 @@ check_nscp --host 192.168.56.103 --command check_cpu
 CPU Load ok|'total 5m'=16%;80;90 'total 1m'=13%;80;90 'total 5s'=13%;80;90
 ```
 
-
-
 <a name="check_cpu_warn"/>
 <a name="check_cpu_crit"/>
 <a name="check_cpu_debug"/>
@@ -106,7 +97,6 @@ CPU Load ok|'total 5m'=16%;80;90 'total 1m'=13%;80;90 'total 5s'=13%;80;90
 <a name="check_cpu_time"/>
 <a name="check_cpu_options"/>
 #### Command-line Arguments
-
 
 | Option                                    | Default Value              | Description                                                                                                      |
 |-------------------------------------------|----------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -132,8 +122,6 @@ CPU Load ok|'total 5m'=16%;80;90 'total 1m'=13%;80;90 'total 5s'=13%;80;90
 | [perf-syntax](#check_cpu_perf-syntax)     | ${core} ${time}            | Performance alias syntax.                                                                                        |
 | time                                      |                            | The time to check                                                                                                |
 
-
-
 <h5 id="check_cpu_filter">filter:</h5>
 
 Filter which marks interesting items.
@@ -147,7 +135,6 @@ They do not denote warning or critical state instead it defines which items are 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
 
-
 *Default Value:* `load > 80`
 
 <h5 id="check_cpu_critical">critical:</h5>
@@ -155,15 +142,12 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
 *Default Value:* `load > 90`
 
 <h5 id="check_cpu_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_cpu_empty-state">empty-state:</h5>
 
@@ -176,7 +160,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_cpu_top-syntax">top-syntax:</h5>
 
@@ -199,7 +182,6 @@ This value will not be used if your syntax contains %(list) or %(count).
 Empty syntax.
 DEPRECATED! This is the syntax for when nothing matches the filter.
 
-
 <h5 id="check_cpu_detail-syntax">detail-syntax:</h5>
 
 Detail level syntax.
@@ -216,10 +198,8 @@ This is the syntax for the base names of the performance data.
 
 *Default Value:* `${core} ${time}`
 
-
 <a name="check_cpu_filter_keys"/>
 #### Filter keywords
-
 
 | Option        | Description                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -243,7 +223,6 @@ This is the syntax for the base names of the performance data.
 | warn_count    | Number of items matched the warning criteria. Common option for all checks.                                  |
 | warn_list     | A list of all items which matched the warning criteria. Common option for all checks.                        |
 
-
 ### check_memory
 
 Check free/used memory on the system.
@@ -252,7 +231,6 @@ Check free/used memory on the system.
 
 * [Command-line Arguments](#check_memory_options)
 * [Filter keywords](#check_memory_filter_keys)
-
 
 <a name="check_memory_samples"/>
 #### Sample Commands
@@ -268,7 +246,6 @@ OK memory within bounds.
 ```
 
 Using --show-all **to show the result**:
-
 
 ```
 check_memory "warn=free < 20%" "crit=free < 10G" --show-all
@@ -301,8 +278,6 @@ page = 8.05G, physical = 7.85G
 'page free'=15G;4;2 'page free %'=66%;19;9 'physical free'=4G;2;1 'physical free %'=34%;19;9
 ```
 
-
-
 <a name="check_memory_warn"/>
 <a name="check_memory_crit"/>
 <a name="check_memory_debug"/>
@@ -315,7 +290,6 @@ page = 8.05G, physical = 7.85G
 <a name="check_memory_type"/>
 <a name="check_memory_options"/>
 #### Command-line Arguments
-
 
 | Option                                       | Default Value      | Description                                                                                                      |
 |----------------------------------------------|--------------------|------------------------------------------------------------------------------------------------------------------|
@@ -341,20 +315,16 @@ page = 8.05G, physical = 7.85G
 | [perf-syntax](#check_memory_perf-syntax)     | ${type}            | Performance alias syntax.                                                                                        |
 | type                                         |                    | The type of memory to check (physical = Physical memory (RAM), committed = total memory (RAM+PAGE)               |
 
-
-
 <h5 id="check_memory_filter">filter:</h5>
 
 Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
 <h5 id="check_memory_warning">warning:</h5>
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
-
 
 *Default Value:* `used > 80%`
 
@@ -363,15 +333,12 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
 *Default Value:* `used > 90%`
 
 <h5 id="check_memory_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_memory_empty-state">empty-state:</h5>
 
@@ -384,7 +351,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_memory_top-syntax">top-syntax:</h5>
 
@@ -400,12 +366,10 @@ ok syntax.
 DEPRECATED! This is the syntax for when an ok result is returned.
 This value will not be used if your syntax contains %(list) or %(count).
 
-
 <h5 id="check_memory_empty-syntax">empty-syntax:</h5>
 
 Empty syntax.
 DEPRECATED! This is the syntax for when nothing matches the filter.
-
 
 <h5 id="check_memory_detail-syntax">detail-syntax:</h5>
 
@@ -423,10 +387,8 @@ This is the syntax for the base names of the performance data.
 
 *Default Value:* `${type}`
 
-
 <a name="check_memory_filter_keys"/>
 #### Filter keywords
-
 
 | Option        | Description                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -450,18 +412,12 @@ This is the syntax for the base names of the performance data.
 | warn_count    | Number of items matched the warning criteria. Common option for all checks.                                  |
 | warn_list     | A list of all items which matched the warning criteria. Common option for all checks.                        |
 
-
 ### check_network
 
 Check network interface status.
 
-
 * [Command-line Arguments](#check_network_options)
 * [Filter keywords](#check_network_filter_keys)
-
-
-
-
 
 <a name="check_network_warn"/>
 <a name="check_network_crit"/>
@@ -474,7 +430,6 @@ Check network interface status.
 <a name="check_network_help-short"/>
 <a name="check_network_options"/>
 #### Command-line Arguments
-
 
 | Option                                        | Default Value                          | Description                                                                                                      |
 |-----------------------------------------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -499,20 +454,16 @@ Check network interface status.
 | [detail-syntax](#check_network_detail-syntax) | ${name} >${sent} <${received} bps      | Detail level syntax.                                                                                             |
 | [perf-syntax](#check_network_perf-syntax)     | ${name}                                | Performance alias syntax.                                                                                        |
 
-
-
 <h5 id="check_network_filter">filter:</h5>
 
 Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
 <h5 id="check_network_warning">warning:</h5>
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
-
 
 *Default Value:* `total > 10000`
 
@@ -521,15 +472,12 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
 *Default Value:* `total > 100000`
 
 <h5 id="check_network_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_network_empty-state">empty-state:</h5>
 
@@ -542,7 +490,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_network_top-syntax">top-syntax:</h5>
 
@@ -565,7 +512,6 @@ This value will not be used if your syntax contains %(list) or %(count).
 Empty syntax.
 DEPRECATED! This is the syntax for when nothing matches the filter.
 
-
 <h5 id="check_network_detail-syntax">detail-syntax:</h5>
 
 Detail level syntax.
@@ -582,10 +528,8 @@ This is the syntax for the base names of the performance data.
 
 *Default Value:* `${name}`
 
-
 <a name="check_network_filter_keys"/>
 #### Filter keywords
-
 
 | Option            | Description                                                                                                  |
 |-------------------|--------------------------------------------------------------------------------------------------------------|
@@ -610,7 +554,6 @@ This is the syntax for the base names of the performance data.
 | warn_count        | Number of items matched the warning criteria. Common option for all checks.                                  |
 | warn_list         | A list of all items which matched the warning criteria. Common option for all checks.                        |
 
-
 ### check_os_version
 
 Check the version of the underlaying OS.
@@ -619,7 +562,6 @@ Check the version of the underlaying OS.
 
 * [Command-line Arguments](#check_os_version_options)
 * [Filter keywords](#check_os_version_filter_keys)
-
 
 <a name="check_os_version_samples"/>
 #### Sample Commands
@@ -649,9 +591,6 @@ check_nrpe --host 192.168.56.103 --command check_os_version
 Windows 2012 (6.2.9200)|'version'=62;50;50
 ```
 
-
-
-
 <a name="check_os_version_warn"/>
 <a name="check_os_version_crit"/>
 <a name="check_os_version_debug"/>
@@ -663,7 +602,6 @@ Windows 2012 (6.2.9200)|'version'=62;50;50
 <a name="check_os_version_help-short"/>
 <a name="check_os_version_options"/>
 #### Command-line Arguments
-
 
 | Option                                           | Default Value                           | Description                                                                                                      |
 |--------------------------------------------------|-----------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -688,20 +626,16 @@ Windows 2012 (6.2.9200)|'version'=62;50;50
 | [detail-syntax](#check_os_version_detail-syntax) | ${version} (${major}.${minor}.${build}) | Detail level syntax.                                                                                             |
 | [perf-syntax](#check_os_version_perf-syntax)     | version                                 | Performance alias syntax.                                                                                        |
 
-
-
 <h5 id="check_os_version_filter">filter:</h5>
 
 Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
 <h5 id="check_os_version_warning">warning:</h5>
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
-
 
 *Default Value:* `version <= 50`
 
@@ -710,15 +644,12 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
 *Default Value:* `version <= 50`
 
 <h5 id="check_os_version_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_os_version_empty-state">empty-state:</h5>
 
@@ -731,7 +662,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_os_version_top-syntax">top-syntax:</h5>
 
@@ -747,12 +677,10 @@ ok syntax.
 DEPRECATED! This is the syntax for when an ok result is returned.
 This value will not be used if your syntax contains %(list) or %(count).
 
-
 <h5 id="check_os_version_empty-syntax">empty-syntax:</h5>
 
 Empty syntax.
 DEPRECATED! This is the syntax for when nothing matches the filter.
-
 
 <h5 id="check_os_version_detail-syntax">detail-syntax:</h5>
 
@@ -770,10 +698,8 @@ This is the syntax for the base names of the performance data.
 
 *Default Value:* `version`
 
-
 <a name="check_os_version_filter_keys"/>
 #### Filter keywords
-
 
 | Option        | Description                                                                                                                                                                                                                                                           |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -796,7 +722,6 @@ This is the syntax for the base names of the performance data.
 | warn_count    | Number of items matched the warning criteria. Common option for all checks.                                                                                                                                                                                           |
 | warn_list     | A list of all items which matched the warning criteria. Common option for all checks.                                                                                                                                                                                 |
 
-
 ### check_pagefile
 
 Check the size of the system pagefile(s).
@@ -805,7 +730,6 @@ Check the size of the system pagefile(s).
 
 * [Command-line Arguments](#check_pagefile_options)
 * [Filter keywords](#check_pagefile_filter_keys)
-
 
 <a name="check_pagefile_samples"/>
 #### Sample Commands
@@ -853,8 +777,6 @@ check_pagefile help
 ...
 ```
 
-
-
 <a name="check_pagefile_warn"/>
 <a name="check_pagefile_crit"/>
 <a name="check_pagefile_debug"/>
@@ -866,7 +788,6 @@ check_pagefile help
 <a name="check_pagefile_help-short"/>
 <a name="check_pagefile_options"/>
 #### Command-line Arguments
-
 
 | Option                                         | Default Value             | Description                                                                                                      |
 |------------------------------------------------|---------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -891,20 +812,16 @@ check_pagefile help
 | [detail-syntax](#check_pagefile_detail-syntax) | ${name} ${used} (${size}) | Detail level syntax.                                                                                             |
 | [perf-syntax](#check_pagefile_perf-syntax)     | ${name}                   | Performance alias syntax.                                                                                        |
 
-
-
 <h5 id="check_pagefile_filter">filter:</h5>
 
 Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
 <h5 id="check_pagefile_warning">warning:</h5>
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
-
 
 *Default Value:* `used > 60%`
 
@@ -913,15 +830,12 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
 *Default Value:* `used > 80%`
 
 <h5 id="check_pagefile_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_pagefile_empty-state">empty-state:</h5>
 
@@ -934,7 +848,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_pagefile_top-syntax">top-syntax:</h5>
 
@@ -950,12 +863,10 @@ ok syntax.
 DEPRECATED! This is the syntax for when an ok result is returned.
 This value will not be used if your syntax contains %(list) or %(count).
 
-
 <h5 id="check_pagefile_empty-syntax">empty-syntax:</h5>
 
 Empty syntax.
 DEPRECATED! This is the syntax for when nothing matches the filter.
-
 
 <h5 id="check_pagefile_detail-syntax">detail-syntax:</h5>
 
@@ -973,10 +884,8 @@ This is the syntax for the base names of the performance data.
 
 *Default Value:* `${name}`
 
-
 <a name="check_pagefile_filter_keys"/>
 #### Filter keywords
-
 
 | Option        | Description                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -1000,7 +909,6 @@ This is the syntax for the base names of the performance data.
 | warn_count    | Number of items matched the warning criteria. Common option for all checks.                                  |
 | warn_list     | A list of all items which matched the warning criteria. Common option for all checks.                        |
 
-
 ### check_pdh
 
 Check the value of a performance (PDH) counter on the local or remote system.
@@ -1010,7 +918,6 @@ The counters can also be added and polled periodcally to get average values. Per
 
 * [Command-line Arguments](#check_pdh_options)
 * [Filter keywords](#check_pdh_filter_keys)
-
 
 <a name="check_pdh_samples"/>
 #### Sample Commands
@@ -1085,8 +992,6 @@ L     client OK: \\MIME-LAPTOP\Processor(0)\% processortid = 100, \\MIME-LAPTOP\
     L     client  Performance data: '\Processor(*)\% processortid_0'=100;0;0 '\Processor(*)\% processortid_1'=100;0;0 '\Processor(*)\% processortid_2'=100;0;0 '\Processor(*)\% processortid_3'=100;0;0 '\Processor(*)\% processortid_4'=100;0;0 '\Processor(*)\% processortid_5'=100;0;0 '\Processor(*)\% processortid_6'=100;0;0 '\Processor(*)\% processortid_7'=100;0;0 '\Processor(*)\% processortid__Total'=100;0;0
 ```
 
-
-
 <a name="check_pdh_warn"/>
 <a name="check_pdh_crit"/>
 <a name="check_pdh_debug"/>
@@ -1106,7 +1011,6 @@ L     client OK: \\MIME-LAPTOP\Processor(0)\% processortid = 100, \\MIME-LAPTOP\
 <a name="check_pdh_ignore-errors"/>
 <a name="check_pdh_options"/>
 #### Command-line Arguments
-
 
 | Option                                    | Default Value       | Description                                                                                                                          |
 |-------------------------------------------|---------------------|--------------------------------------------------------------------------------------------------------------------------------------|
@@ -1140,35 +1044,26 @@ L     client OK: \\MIME-LAPTOP\Processor(0)\% processortid = 100, \\MIME-LAPTOP\
 | [type](#check_pdh_type)                   | large               | Format of value (double, long, large)                                                                                                |
 | ignore-errors                             | N/A                 | If we should ignore errors when checking counters, for instance missing counters or invalid counters will return 0 instead of errors |
 
-
-
 <h5 id="check_pdh_filter">filter:</h5>
 
 Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
 <h5 id="check_pdh_warning">warning:</h5>
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
-
-
 
 <h5 id="check_pdh_critical">critical:</h5>
 
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
-
 <h5 id="check_pdh_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_pdh_empty-state">empty-state:</h5>
 
@@ -1181,7 +1076,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_pdh_top-syntax">top-syntax:</h5>
 
@@ -1197,12 +1091,10 @@ ok syntax.
 DEPRECATED! This is the syntax for when an ok result is returned.
 This value will not be used if your syntax contains %(list) or %(count).
 
-
 <h5 id="check_pdh_empty-syntax">empty-syntax:</h5>
 
 Empty syntax.
 DEPRECATED! This is the syntax for when nothing matches the filter.
-
 
 <h5 id="check_pdh_detail-syntax">detail-syntax:</h5>
 
@@ -1226,10 +1118,8 @@ Format of value (double, long, large)
 
 *Default Value:* `large`
 
-
 <a name="check_pdh_filter_keys"/>
 #### Filter keywords
-
 
 | Option        | Description                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -1253,7 +1143,6 @@ Format of value (double, long, large)
 | warn_count    | Number of items matched the warning criteria. Common option for all checks.                                  |
 | warn_list     | A list of all items which matched the warning criteria. Common option for all checks.                        |
 
-
 ### check_process
 
 Check state/metrics of one or more of the processes running on the computer.
@@ -1262,7 +1151,6 @@ Check state/metrics of one or more of the processes running on the computer.
 
 * [Command-line Arguments](#check_process_options)
 * [Filter keywords](#check_process_filter_keys)
-
 
 <a name="check_process_samples"/>
 #### Sample Commands
@@ -1274,7 +1162,7 @@ _To edit these sample please edit [this page](https://github.com/mickem/nscp-doc
 ```
 check_process
 SetPoint.exe=hung
-Performance data: 'taskhost.exe'=1;1;0 'dwm.exe'=1;1;0 'explorer.exe'=1;1;0 ... 'chrome.exe'=1;1;0 'vcpkgsrv.exe'=1;1;0 'vcpkgsrv.exe'=1;1;0 
+Performance data: 'taskhost.exe'=1;1;0 'dwm.exe'=1;1;0 'explorer.exe'=1;1;0 ... 'chrome.exe'=1;1;0 'vcpkgsrv.exe'=1;1;0 'vcpkgsrv.exe'=1;1;0
 ```
 
 Default check **via NRPE**::
@@ -1315,9 +1203,6 @@ check_nrpe --host 192.168.56.103 --command check_process --arguments "filter=vir
 OK all processes are ok.|'csrss.exe state'=1;0;0 'svchost.exe state'=1;0;0 'AvastSvc.exe state'=1;0;0 ...
 ```
 
-
-
-
 <a name="check_process_warn"/>
 <a name="check_process_crit"/>
 <a name="check_process_debug"/>
@@ -1334,7 +1219,6 @@ OK all processes are ok.|'csrss.exe state'=1;0;0 'svchost.exe state'=1;0;0 'Avas
 <a name="check_process_total"/>
 <a name="check_process_options"/>
 #### Command-line Arguments
-
 
 | Option                                        | Default Value                    | Description                                                                                                      |
 |-----------------------------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -1365,8 +1249,6 @@ OK all processes are ok.|'csrss.exe state'=1;0;0 'svchost.exe state'=1;0;0 'Avas
 | scan-unreadable                               |                                  | If unreadable processes should be included (will not have information)                                           |
 | total                                         | N/A                              | Include the total of all matching files                                                                          |
 
-
-
 <h5 id="check_process_filter">filter:</h5>
 
 Filter which marks interesting items.
@@ -1380,7 +1262,6 @@ They do not denote warning or critical state instead it defines which items are 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
 
-
 *Default Value:* `state not in ('started')`
 
 <h5 id="check_process_critical">critical:</h5>
@@ -1388,15 +1269,12 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
 *Default Value:* `state = 'stopped', count = 0`
 
 <h5 id="check_process_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_process_empty-state">empty-state:</h5>
 
@@ -1409,7 +1287,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_process_top-syntax">top-syntax:</h5>
 
@@ -1455,11 +1332,8 @@ This is the syntax for the base names of the performance data.
 Calculate delta over one elapsed second.
 This call will measure values and then sleep for 2 second and then measure again calculating deltas.
 
-
-
 <a name="check_process_filter_keys"/>
 #### Filter keywords
-
 
 | Option           | Description                                                                                                  |
 |------------------|--------------------------------------------------------------------------------------------------------------|
@@ -1502,7 +1376,6 @@ This call will measure values and then sleep for 2 second and then measure again
 | warn_list        | A list of all items which matched the warning criteria. Common option for all checks.                        |
 | working_set      | Working set in bytes                                                                                         |
 
-
 ### check_service
 
 Check the state of one or more of the computer services.
@@ -1511,7 +1384,6 @@ Check the state of one or more of the computer services.
 
 * [Command-line Arguments](#check_service_options)
 * [Filter keywords](#check_service_filter_keys)
-
 
 <a name="check_service_samples"/>
 #### Sample Commands
@@ -1569,7 +1441,6 @@ check_service exclude=nfoo "filter=name not like 'nscp'"
 L        cli CRITICAL: CRITICAL: ...
 ```
 
-
 Default check **via NRPE**::
 
 ```
@@ -1582,8 +1453,6 @@ WARNING: DPS=stopped (auto), MSDTC=stopped (auto), sppsvc=stopped (auto), UALSVC
 ```
 check_service service=nscp "crit=state = 'started'" warn=none
 ```
-
-
 
 <a name="check_service_warn"/>
 <a name="check_service_crit"/>
@@ -1605,7 +1474,6 @@ check_service service=nscp "crit=state = 'started'" warn=none
 <a name="check_service_only-user"/>
 <a name="check_service_options"/>
 #### Command-line Arguments
-
 
 | Option                                        | Default Value                                   | Description                                                                                                                                           |
 |-----------------------------------------------|-------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1641,20 +1509,16 @@ check_service service=nscp "crit=state = 'started'" warn=none
 | only-system                                   | N/A                                             | Set filter to classification = 'system'                                                                                                               |
 | only-user                                     | N/A                                             | Set filter to classification = 'user'                                                                                                                 |
 
-
-
 <h5 id="check_service_filter">filter:</h5>
 
 Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
 <h5 id="check_service_warning">warning:</h5>
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
-
 
 *Default Value:* `not state_is_perfect()`
 
@@ -1663,15 +1527,12 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
 *Default Value:* `not state_is_ok()`
 
 <h5 id="check_service_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_service_empty-state">empty-state:</h5>
 
@@ -1684,7 +1545,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_service_top-syntax">top-syntax:</h5>
 
@@ -1737,10 +1597,8 @@ The types of services to enumerate available states are active, inactive or all
 
 *Default Value:* `all`
 
-
 <a name="check_service_filter_keys"/>
 #### Filter keywords
-
 
 | Option             | Description                                                                                                  |
 |--------------------|--------------------------------------------------------------------------------------------------------------|
@@ -1770,7 +1628,6 @@ The types of services to enumerate available states are active, inactive or all
 | warn_count         | Number of items matched the warning criteria. Common option for all checks.                                  |
 | warn_list          | A list of all items which matched the warning criteria. Common option for all checks.                        |
 
-
 ### check_uptime
 
 Check time since last server re-boot.
@@ -1779,7 +1636,6 @@ Check time since last server re-boot.
 
 * [Command-line Arguments](#check_uptime_options)
 * [Filter keywords](#check_uptime_filter_keys)
-
 
 <a name="check_uptime_samples"/>
 #### Sample Commands
@@ -1808,9 +1664,6 @@ check_nrpe --host 192.168.56.103 --command check_uptime
 uptime: -0:3, boot: 2013-sep-08 18:41:06 (UCT)|'uptime'=1378665666;1378579481;1378622681
 ```
 
-
-
-
 <a name="check_uptime_warn"/>
 <a name="check_uptime_crit"/>
 <a name="check_uptime_debug"/>
@@ -1822,7 +1675,6 @@ uptime: -0:3, boot: 2013-sep-08 18:41:06 (UCT)|'uptime'=1378665666;1378579481;13
 <a name="check_uptime_help-short"/>
 <a name="check_uptime_options"/>
 #### Command-line Arguments
-
 
 | Option                                       | Default Value                           | Description                                                                                                      |
 |----------------------------------------------|-----------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -1847,20 +1699,16 @@ uptime: -0:3, boot: 2013-sep-08 18:41:06 (UCT)|'uptime'=1378665666;1378579481;13
 | [detail-syntax](#check_uptime_detail-syntax) | uptime: ${uptime}h, boot: ${boot} (UTC) | Detail level syntax.                                                                                             |
 | [perf-syntax](#check_uptime_perf-syntax)     | uptime                                  | Performance alias syntax.                                                                                        |
 
-
-
 <h5 id="check_uptime_filter">filter:</h5>
 
 Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
 <h5 id="check_uptime_warning">warning:</h5>
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
-
 
 *Default Value:* `uptime < 2d`
 
@@ -1869,15 +1717,12 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
 *Default Value:* `uptime < 1d`
 
 <h5 id="check_uptime_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_uptime_empty-state">empty-state:</h5>
 
@@ -1890,7 +1735,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_uptime_top-syntax">top-syntax:</h5>
 
@@ -1906,12 +1750,10 @@ ok syntax.
 DEPRECATED! This is the syntax for when an ok result is returned.
 This value will not be used if your syntax contains %(list) or %(count).
 
-
 <h5 id="check_uptime_empty-syntax">empty-syntax:</h5>
 
 Empty syntax.
 DEPRECATED! This is the syntax for when nothing matches the filter.
-
 
 <h5 id="check_uptime_detail-syntax">detail-syntax:</h5>
 
@@ -1929,10 +1771,8 @@ This is the syntax for the base names of the performance data.
 
 *Default Value:* `uptime`
 
-
 <a name="check_uptime_filter_keys"/>
 #### Filter keywords
-
 
 | Option        | Description                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -1952,17 +1792,11 @@ This is the syntax for the base names of the performance data.
 | warn_count    | Number of items matched the warning criteria. Common option for all checks.                                  |
 | warn_list     | A list of all items which matched the warning criteria. Common option for all checks.                        |
 
-
 ### checkcounter
 
 Legacy version of check_pdh
 
-
 * [Command-line Arguments](#checkcounter_options)
-
-
-
-
 
 <a name="checkcounter_help"/>
 <a name="checkcounter_help-pb"/>
@@ -1975,7 +1809,6 @@ Legacy version of check_pdh
 <a name="checkcounter_MinCrit"/>
 <a name="checkcounter_options"/>
 #### Command-line Arguments
-
 
 | Option                           | Default Value | Description                                                                                           |
 |----------------------------------|---------------|-------------------------------------------------------------------------------------------------------|
@@ -1990,25 +1823,17 @@ Legacy version of check_pdh
 | MinWarn                          |               | Minimum value before a warning is returned.                                                           |
 | MinCrit                          |               | Minimum value before a critical is returned.                                                          |
 
-
-
 <h5 id="checkcounter_ShowAll">ShowAll:</h5>
 
 Configures display format (if set shows all items not only failures, if set to long shows all cores).
 
 *Default Value:* `short`
 
-
 ### checkcpu
 
 Legacy version of check_cpu
 
-
 * [Command-line Arguments](#checkcpu_options)
-
-
-
-
 
 <a name="checkcpu_help"/>
 <a name="checkcpu_help-pb"/>
@@ -2023,7 +1848,6 @@ Legacy version of check_cpu
 <a name="checkcpu_crit"/>
 <a name="checkcpu_options"/>
 #### Command-line Arguments
-
 
 | Option                       | Default Value | Description                                                                                           |
 |------------------------------|---------------|-------------------------------------------------------------------------------------------------------|
@@ -2040,25 +1864,17 @@ Legacy version of check_cpu
 | warn                         |               | Maximum value before a warning is returned.                                                           |
 | crit                         |               | Maximum value before a critical is returned.                                                          |
 
-
-
 <h5 id="checkcpu_ShowAll">ShowAll:</h5>
 
 Configures display format (if set shows all items not only failures, if set to long shows all cores).
 
 *Default Value:* `short`
 
-
 ### checkmem
 
 Legacy version of check_mem
 
-
 * [Command-line Arguments](#checkmem_options)
-
-
-
-
 
 <a name="checkmem_help"/>
 <a name="checkmem_help-pb"/>
@@ -2073,7 +1889,6 @@ Legacy version of check_mem
 <a name="checkmem_crit"/>
 <a name="checkmem_options"/>
 #### Command-line Arguments
-
 
 | Option                       | Default Value | Description                                                                                           |
 |------------------------------|---------------|-------------------------------------------------------------------------------------------------------|
@@ -2090,25 +1905,17 @@ Legacy version of check_mem
 | warn                         |               | Maximum value before a warning is returned.                                                           |
 | crit                         |               | Maximum value before a critical is returned.                                                          |
 
-
-
 <h5 id="checkmem_ShowAll">ShowAll:</h5>
 
 Configures display format (if set shows all items not only failures, if set to long shows all cores).
 
 *Default Value:* `short`
 
-
 ### checkprocstate
 
 Legacy version of check_process
 
-
 * [Command-line Arguments](#checkprocstate_options)
-
-
-
-
 
 <a name="checkprocstate_help"/>
 <a name="checkprocstate_help-pb"/>
@@ -2120,7 +1927,6 @@ Legacy version of check_process
 <a name="checkprocstate_MinCritCount"/>
 <a name="checkprocstate_options"/>
 #### Command-line Arguments
-
 
 | Option                             | Default Value | Description                                                                                           |
 |------------------------------------|---------------|-------------------------------------------------------------------------------------------------------|
@@ -2134,25 +1940,17 @@ Legacy version of check_process
 | MinWarnCount                       |               | Minimum value before a warning is returned.                                                           |
 | MinCritCount                       |               | Minimum value before a critical is returned.                                                          |
 
-
-
 <h5 id="checkprocstate_ShowAll">ShowAll:</h5>
 
 Configures display format (if set shows all items not only failures, if set to long shows all cores).
 
 *Default Value:* `short`
 
-
 ### checkservicestate
 
 Legacy version of check_service
 
-
 * [Command-line Arguments](#checkservicestate_options)
-
-
-
-
 
 <a name="checkservicestate_help"/>
 <a name="checkservicestate_help-pb"/>
@@ -2161,7 +1959,6 @@ Legacy version of check_service
 <a name="checkservicestate_exclude"/>
 <a name="checkservicestate_options"/>
 #### Command-line Arguments
-
 
 | Option                                  | Default Value | Description                                                                                           |
 |-----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------|
@@ -2172,8 +1969,6 @@ Legacy version of check_service
 | [CheckAll](#checkservicestate_CheckAll) | true          | Check all services.                                                                                   |
 | exclude                                 |               | Exclude services                                                                                      |
 | [ShowAll](#checkservicestate_ShowAll)   | short         | Configures display format (if set shows all items not only failures, if set to long shows all cores). |
-
-
 
 <h5 id="checkservicestate_CheckAll">CheckAll:</h5>
 
@@ -2187,17 +1982,11 @@ Configures display format (if set shows all items not only failures, if set to l
 
 *Default Value:* `short`
 
-
 ### checkuptime
 
 Legacy version of check_uptime
 
-
 * [Command-line Arguments](#checkuptime_options)
-
-
-
-
 
 <a name="checkuptime_help"/>
 <a name="checkuptime_help-pb"/>
@@ -2211,7 +2000,6 @@ Legacy version of check_uptime
 <a name="checkuptime_crit"/>
 <a name="checkuptime_options"/>
 #### Command-line Arguments
-
 
 | Option                          | Default Value | Description                                                                                           |
 |---------------------------------|---------------|-------------------------------------------------------------------------------------------------------|
@@ -2227,20 +2015,13 @@ Legacy version of check_uptime
 | warn                            |               | Maximum value before a warning is returned.                                                           |
 | crit                            |               | Maximum value before a critical is returned.                                                          |
 
-
-
 <h5 id="checkuptime_ShowAll">ShowAll:</h5>
 
 Configures display format (if set shows all items not only failures, if set to long shows all cores).
 
 *Default Value:* `short`
 
-
-
-
 ## Configuration
-
-
 
 | Path / Section                                                          | Description              |
 |-------------------------------------------------------------------------|--------------------------|
@@ -2251,22 +2032,15 @@ Configures display format (if set shows all items not only failures, if set to l
 | [/settings/system/windows/real-time/memory](#realtime-memory-filters)   | Realtime memory filters  |
 | [/settings/system/windows/real-time/process](#realtime-process-filters) | Realtime process filters |
 
-
-
 ### Windows system <a id="/settings/system/windows"/>
 
 Section for system checks and system settings
-
-
-
 
 | Key                                           | Default Value | Description              |
 |-----------------------------------------------|---------------|--------------------------|
 | [default buffer length](#default-buffer-time) | 1h            | Default buffer time      |
 | [disable](#disable-automatic-checks)          |               | Disable automatic checks |
 | [subsystem](#pdh-subsystem)                   | default       | PDH subsystem            |
-
-
 
 ```ini
 # Section for system checks and system settings
@@ -2276,17 +2050,9 @@ subsystem=default
 
 ```
 
-
-
-
-
 #### Default buffer time <a id="/settings/system/windows/default buffer length"></a>
 
 Used to define the default size of range buffer checks (ie. CPU).
-
-
-
-
 
 | Key            | Description                                           |
 |----------------|-------------------------------------------------------|
@@ -2294,7 +2060,6 @@ Used to define the default size of range buffer checks (ie. CPU).
 | Key:           | default buffer length                                 |
 | Default value: | `1h`                                                  |
 | Used by:       | CheckSystem                                           |
-
 
 **Sample:**
 
@@ -2304,16 +2069,9 @@ Used to define the default size of range buffer checks (ie. CPU).
 default buffer length=1h
 ```
 
-
-
 #### Disable automatic checks <a id="/settings/system/windows/disable"></a>
 
 A comma separated list of checks to disable in the collector: cpu,handles,network,metrics,pdh. Please note disabling these will mean part of NSClient++ will no longer function as expected.
-
-
-
-
-
 
 | Key            | Description                                           |
 |----------------|-------------------------------------------------------|
@@ -2323,7 +2081,6 @@ A comma separated list of checks to disable in the collector: cpu,handles,networ
 | Default value: | _N/A_                                                 |
 | Used by:       | CheckSystem                                           |
 
-
 **Sample:**
 
 ```
@@ -2332,16 +2089,10 @@ A comma separated list of checks to disable in the collector: cpu,handles,networ
 disable=
 ```
 
-
-
 #### PDH subsystem <a id="/settings/system/windows/subsystem"></a>
 
 Set which pdh subsystem to use.
 Currently default and thread-safe are supported where thread-safe is slower but required if you have some problematic counters.
-
-
-
-
 
 | Key            | Description                                           |
 |----------------|-------------------------------------------------------|
@@ -2351,7 +2102,6 @@ Currently default and thread-safe are supported where thread-safe is slower but 
 | Default value: | `default`                                             |
 | Used by:       | CheckSystem                                           |
 
-
 **Sample:**
 
 ```
@@ -2360,17 +2110,13 @@ Currently default and thread-safe are supported where thread-safe is slower but 
 subsystem=default
 ```
 
-
 ### PDH Counters <a id="/settings/system/windows/counters"/>
 
 Add counters to check
 
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key                 | Default Value | Description         |
 |---------------------|---------------|---------------------|
@@ -2383,7 +2129,6 @@ This is a section of objects. This means that you will create objects below this
 | is template         | false         | IS TEMPLATE         |
 | parent              | default       | PARENT              |
 | type                |               | COUNTER TYPE        |
-
 
 **Sample:**
 
@@ -2402,28 +2147,17 @@ parent=default
 
 ```
 
-
-
 **Known instances:**
 
 *  disk_queue_length
-
-
-
-
-
-
 
 ### Legacy generic filters <a id="/settings/system/windows/real-time/checks"/>
 
 A set of filters to use in real-time mode
 
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key           | Default Value             | Description     |
 |---------------|---------------------------|-----------------|
@@ -2449,7 +2183,6 @@ This is a section of objects. This means that you will create objects below this
 | times         |                           | FILES           |
 | top syntax    |                           | SYNTAX          |
 | warning       |                           | WARNING FILTER  |
-
 
 **Sample:**
 
@@ -2481,21 +2214,13 @@ silent period=false
 
 ```
 
-
-
-
-
-
 ### Realtime cpu filters <a id="/settings/system/windows/real-time/cpu"/>
 
 A set of filters to use in real-time mode
 
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key           | Default Value             | Description     |
 |---------------|---------------------------|-----------------|
@@ -2519,7 +2244,6 @@ This is a section of objects. This means that you will create objects below this
 | time          |                           | TIME            |
 | top syntax    |                           | SYNTAX          |
 | warning       |                           | WARNING FILTER  |
-
 
 **Sample:**
 
@@ -2549,21 +2273,13 @@ silent period=false
 
 ```
 
-
-
-
-
-
 ### Realtime memory filters <a id="/settings/system/windows/real-time/memory"/>
 
 A set of filters to use in real-time mode
 
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key           | Default Value             | Description     |
 |---------------|---------------------------|-----------------|
@@ -2587,7 +2303,6 @@ This is a section of objects. This means that you will create objects below this
 | top syntax    |                           | SYNTAX          |
 | type          |                           | MEMORY TYPE     |
 | warning       |                           | WARNING FILTER  |
-
 
 **Sample:**
 
@@ -2617,21 +2332,13 @@ silent period=false
 
 ```
 
-
-
-
-
-
 ### Realtime process filters <a id="/settings/system/windows/real-time/process"/>
 
 A set of filters to use in real-time mode
 
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key           | Default Value             | Description     |
 |---------------|---------------------------|-----------------|
@@ -2655,7 +2362,6 @@ This is a section of objects. This means that you will create objects below this
 | target id     |                           | TARGET ID       |
 | top syntax    |                           | SYNTAX          |
 | warning       |                           | WARNING FILTER  |
-
 
 **Sample:**
 
@@ -2684,9 +2390,3 @@ silent period=false
 #warning=...
 
 ```
-
-
-
-
-
-

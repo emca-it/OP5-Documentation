@@ -2,8 +2,6 @@
 
 This document describes how to integrate OP5 Monitor to BMC Proactive Net Performance Management (BPPM) using BMC Impact Poster (msend). It requires configuration to be added on the receiving end and these steps are not covered in this how-to
 
- 
-
 ## **Files needed**
 
 Attachment: [msend](attachments/688567/1310727) is installed in /opt/plugins/custom
@@ -13,8 +11,6 @@ Attachment: [monitor\_msendwrapper.pl](attachments/688567/1310726.pl) is insta
 ## **Commands**
 
 The commands needed in OP5 Monitor are added to /opt/monitor/etc/misccommands.cfg:
-
- 
 
 **/opt/monitor/etc/misccommands.cfg**
 
@@ -64,4 +60,3 @@ To be able to use the full functionality of msend capabilities such as buffering
 ## **Other documentation resources**
 
 <http://www.op5.com/manuals/> contain all nescessary information on how to configure commands, contacts and what/when to notify on events and much more.
-

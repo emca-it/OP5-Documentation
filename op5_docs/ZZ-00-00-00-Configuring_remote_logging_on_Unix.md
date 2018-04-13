@@ -62,18 +62,18 @@ source s_all {
     unix-stream("/dev/log");
     # messages from the kernel
     file("/proc/kmsg" log_prefix("kernel: "));
-}; 
+};
 
 # define the destination log host
 destination d_loghost {
     tcp("172.16.32.64" port(514));
-}; 
+};
 
 # send everything to the log host
-log { 
-    source(s_all); 
-    destination(d_loghost); 
-}; 
+log {
+    source(s_all);
+    destination(d_loghost);
+};
 ```
 
 # Sending text files to Logger
@@ -87,4 +87,3 @@ Some applications do not send their logs to syslog, but store them in a file on 
 You can use a command like the one above for your application, and make sure it is executed upon reboot. On many systems this can be done by placing the command in */etc/rc.local*.
 
 If you are running *syslog-ng*, you can avoid the above workaround. Instead, simply define a log source (see the example above under "messages from the kernel" for how to define a file as a log source) and add another log section with that source.
-

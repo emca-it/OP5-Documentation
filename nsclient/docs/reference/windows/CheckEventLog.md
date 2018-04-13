@@ -2,9 +2,6 @@
 
 Check for errors and warnings in the event log.
 
-
-
-
 ## Samples
 
 _Feel free to add more samples [on this page](https://github.com/mickem/nscp/blob/master/docs/samples/CheckEventLog_samples.md)_
@@ -212,20 +209,12 @@ A list of all available queries (check commands)
 | [check_eventlog](#check_eventlog) | Check for errors in the event log. |
 | [checkeventlog](#checkeventlog)   | Legacy version of check_eventlog   |
 
-
-
-
 ### check_eventlog
 
 Check for errors in the event log.
 
-
 * [Command-line Arguments](#check_eventlog_options)
 * [Filter keywords](#check_eventlog_filter_keys)
-
-
-
-
 
 <a name="check_eventlog_warn"/>
 <a name="check_eventlog_crit"/>
@@ -240,7 +229,6 @@ Check for errors in the event log.
 <a name="check_eventlog_truncate-message"/>
 <a name="check_eventlog_options"/>
 #### Command-line Arguments
-
 
 | Option                                         | Default Value                                  | Description                                                                                                      |
 |------------------------------------------------|------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -271,8 +259,6 @@ Check for errors in the event log.
 | truncate-message                               |                                                | Maximum length of message for each event log message text.                                                       |
 | [unique](#check_eventlog_unique)               | 1                                              | Shorthand for setting default unique index: ${log}-${source}-${id}.                                              |
 
-
-
 <h5 id="check_eventlog_filter">filter:</h5>
 
 Filter which marks interesting items.
@@ -286,7 +272,6 @@ They do not denote warning or critical state instead it defines which items are 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
 
-
 *Default Value:* `level = 'warning', problem_count > 0`
 
 <h5 id="check_eventlog_critical">critical:</h5>
@@ -294,15 +279,12 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
 *Default Value:* `level in ('error', 'critical')`
 
 <h5 id="check_eventlog_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_eventlog_empty-state">empty-state:</h5>
 
@@ -322,7 +304,6 @@ TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
 
 Unique syntax.
 Used to filter unique items (counted will still increase but messages will not repeated)
-
 
 <h5 id="check_eventlog_top-syntax">top-syntax:</h5>
 
@@ -368,12 +349,10 @@ This is the syntax for the base names of the performance data.
 File to read (can be specified multiple times to check multiple files.
 Notice that specifying multiple files will create an aggregate set you will not check each file individually.In other words if one file contains an error the entire check will result in error.
 
-
 <h5 id="check_eventlog_scan-range">scan-range:</h5>
 
 Date range to scan.
 A negative value scans backward (historical events) and a positive value scans forwards (future events). This is the approximate dates to search through this speeds up searching a lot but there is no guarantee messages are ordered.
-
 
 <h5 id="check_eventlog_unique">unique:</h5>
 
@@ -381,10 +360,8 @@ Shorthand for setting default unique index: ${log}-${source}-${id}.
 
 *Default Value:* `1`
 
-
 <a name="check_eventlog_filter_keys"/>
 #### Filter keywords
-
 
 | Option        | Description                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -419,17 +396,11 @@ Shorthand for setting default unique index: ${log}-${source}-${id}.
 | written       | When the message was written to file                                                                         |
 | xml           | Get event as XML message.                                                                                    |
 
-
 ### checkeventlog
 
 Legacy version of check_eventlog
 
-
 * [Command-line Arguments](#checkeventlog_options)
-
-
-
-
 
 <a name="checkeventlog_help"/>
 <a name="checkeventlog_help-pb"/>
@@ -447,7 +418,6 @@ Legacy version of check_eventlog
 <a name="checkeventlog_scan-range"/>
 <a name="checkeventlog_options"/>
 #### Command-line Arguments
-
 
 | Option                                      | Default Value       | Description                                   |
 |---------------------------------------------|---------------------|-----------------------------------------------|
@@ -471,8 +441,6 @@ Legacy version of check_eventlog
 | [top-syntax](#checkeventlog_top-syntax)     | ${list}             | The top level syntax string                   |
 | scan-range                                  |                     | TODO                                          |
 
-
-
 <h5 id="checkeventlog_debug">debug:</h5>
 
 The file to check
@@ -486,8 +454,6 @@ Deprecated and has no meaning
 *Default Value:* `1`
 
 <h5 id="checkeventlog_unique">unique:</h5>
-
-
 
 *Default Value:* `1`
 
@@ -503,12 +469,7 @@ The top level syntax string
 
 *Default Value:* `${list}`
 
-
-
-
 ## Configuration
-
-
 
 | Path / Section                                             | Description            |
 |------------------------------------------------------------|------------------------|
@@ -516,14 +477,9 @@ The top level syntax string
 | [/settings/eventlog/real-time](#real-time-monitoring)      | Real-time monitoring   |
 | [/settings/eventlog/real-time/filters](#real-time-filters) | Real-time filters      |
 
-
-
 ### Eventlog configuration <a id="/settings/eventlog"/>
 
 Section for the EventLog Checker (CheckEventLog.dll).
-
-
-
 
 | Key                           | Default Value | Description  |
 |-------------------------------|---------------|--------------|
@@ -531,8 +487,6 @@ Section for the EventLog Checker (CheckEventLog.dll).
 | [debug](#debug)               | false         | DEBUG        |
 | [lookup names](#lookup-names) | true          | LOOKUP NAMES |
 | [syntax](#syntax)             |               | SYNTAX       |
-
-
 
 ```ini
 # Section for the EventLog Checker (CheckEventLog.dll).
@@ -543,17 +497,9 @@ lookup names=true
 
 ```
 
-
-
-
-
 #### BUFFER_SIZE <a id="/settings/eventlog/buffer size"></a>
 
 The size of the buffer to use when getting messages this affects the speed and maximum size of messages you can recieve.
-
-
-
-
 
 | Key            | Description                               |
 |----------------|-------------------------------------------|
@@ -561,7 +507,6 @@ The size of the buffer to use when getting messages this affects the speed and m
 | Key:           | buffer size                               |
 | Default value: | `131072`                                  |
 | Used by:       | CheckEventLog                             |
-
 
 **Sample:**
 
@@ -571,15 +516,9 @@ The size of the buffer to use when getting messages this affects the speed and m
 buffer size=131072
 ```
 
-
-
 #### DEBUG <a id="/settings/eventlog/debug"></a>
 
 Log more information when filtering (useful to detect issues with filters) not useful in production as it is a bit of a resource hog.
-
-
-
-
 
 | Key            | Description                               |
 |----------------|-------------------------------------------|
@@ -587,7 +526,6 @@ Log more information when filtering (useful to detect issues with filters) not u
 | Key:           | debug                                     |
 | Default value: | `false`                                   |
 | Used by:       | CheckEventLog                             |
-
 
 **Sample:**
 
@@ -597,15 +535,9 @@ Log more information when filtering (useful to detect issues with filters) not u
 debug=false
 ```
 
-
-
 #### LOOKUP NAMES <a id="/settings/eventlog/lookup names"></a>
 
 Lookup the names of eventlog files
-
-
-
-
 
 | Key            | Description                               |
 |----------------|-------------------------------------------|
@@ -613,7 +545,6 @@ Lookup the names of eventlog files
 | Key:           | lookup names                              |
 | Default value: | `true`                                    |
 | Used by:       | CheckEventLog                             |
-
 
 **Sample:**
 
@@ -623,16 +554,9 @@ Lookup the names of eventlog files
 lookup names=true
 ```
 
-
-
 #### SYNTAX <a id="/settings/eventlog/syntax"></a>
 
 Set this to use a specific syntax string for all commands (that don't specify one).
-
-
-
-
-
 
 | Key            | Description                               |
 |----------------|-------------------------------------------|
@@ -640,7 +564,6 @@ Set this to use a specific syntax string for all commands (that don't specify on
 | Key:           | syntax                                    |
 | Default value: | _N/A_                                     |
 | Used by:       | CheckEventLog                             |
-
 
 **Sample:**
 
@@ -650,13 +573,9 @@ Set this to use a specific syntax string for all commands (that don't specify on
 syntax=
 ```
 
-
 ### Real-time monitoring <a id="/settings/eventlog/real-time"/>
 
 A set of options to configure the real time checks
-
-
-
 
 | Key                            | Default Value      | Description        |
 |--------------------------------|--------------------|--------------------|
@@ -664,8 +583,6 @@ A set of options to configure the real time checks
 | [enabled](#real-time-checking) | false              | REAL TIME CHECKING |
 | [log](#logs-to-check)          | application,system | LOGS TO CHECK      |
 | [startup age](#startup-age)    | 30m                | STARTUP AGE        |
-
-
 
 ```ini
 # A set of options to configure the real time checks
@@ -677,17 +594,9 @@ startup age=30m
 
 ```
 
-
-
-
-
 #### DEBUG <a id="/settings/eventlog/real-time/debug"></a>
 
 Log missed records (useful to detect issues with filters) not useful in production as it is a bit of a resource hog.
-
-
-
-
 
 | Key            | Description                                                   |
 |----------------|---------------------------------------------------------------|
@@ -695,7 +604,6 @@ Log missed records (useful to detect issues with filters) not useful in producti
 | Key:           | debug                                                         |
 | Default value: | `false`                                                       |
 | Used by:       | CheckEventLog                                                 |
-
 
 **Sample:**
 
@@ -705,15 +613,9 @@ Log missed records (useful to detect issues with filters) not useful in producti
 debug=false
 ```
 
-
-
 #### REAL TIME CHECKING <a id="/settings/eventlog/real-time/enabled"></a>
 
 Spawns a background thread which detects issues and reports them back instantly.
-
-
-
-
 
 | Key            | Description                                                   |
 |----------------|---------------------------------------------------------------|
@@ -721,7 +623,6 @@ Spawns a background thread which detects issues and reports them back instantly.
 | Key:           | enabled                                                       |
 | Default value: | `false`                                                       |
 | Used by:       | CheckEventLog                                                 |
-
 
 **Sample:**
 
@@ -731,15 +632,9 @@ Spawns a background thread which detects issues and reports them back instantly.
 enabled=false
 ```
 
-
-
 #### LOGS TO CHECK <a id="/settings/eventlog/real-time/log"></a>
 
 Comma separated list of logs to check
-
-
-
-
 
 | Key            | Description                                                   |
 |----------------|---------------------------------------------------------------|
@@ -747,7 +642,6 @@ Comma separated list of logs to check
 | Key:           | log                                                           |
 | Default value: | `application,system`                                          |
 | Used by:       | CheckEventLog                                                 |
-
 
 **Sample:**
 
@@ -757,15 +651,9 @@ Comma separated list of logs to check
 log=application,system
 ```
 
-
-
 #### STARTUP AGE <a id="/settings/eventlog/real-time/startup age"></a>
 
 The initial age to scan when starting NSClient++
-
-
-
-
 
 | Key            | Description                                                   |
 |----------------|---------------------------------------------------------------|
@@ -773,7 +661,6 @@ The initial age to scan when starting NSClient++
 | Key:           | startup age                                                   |
 | Default value: | `30m`                                                         |
 | Used by:       | CheckEventLog                                                 |
-
 
 **Sample:**
 
@@ -783,17 +670,13 @@ The initial age to scan when starting NSClient++
 startup age=30m
 ```
 
-
 ### Real-time filters <a id="/settings/eventlog/real-time/filters"/>
 
 A set of filters to use in real-time mode
 
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key           | Default Value             | Description     |
 |---------------|---------------------------|-----------------|
@@ -819,7 +702,6 @@ This is a section of objects. This means that you will create objects below this
 | top syntax    |                           | SYNTAX          |
 | truncate      |                           | Truncate        |
 | warning       |                           | WARNING FILTER  |
-
 
 **Sample:**
 
@@ -850,9 +732,3 @@ silent period=false
 #warning=...
 
 ```
-
-
-
-
-
-

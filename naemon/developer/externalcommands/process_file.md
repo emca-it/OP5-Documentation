@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - PROCESS_FILE<br>
 
-
 #### Command Format:
 
 `PROCESS_FILE;file_name;delete`
@@ -29,6 +28,3 @@ Directs Naemon to process all external commands that are found in the file speci
 
 printf "[%lu] PROCESS_FILE;/tmp/even_mode_commands.txt;1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

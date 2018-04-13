@@ -14,9 +14,9 @@ to create our own *syslog* messages and send them to our *op5 Monitor* server.
 
 # Prerequisites
 
--   Shell access to a Linux system
--   Remote logging configured - read [this](http://LÄNkA%20HEREEE) manual page for more information
--   The *logger* command line utility
+- Shell access to a Linux system
+- Remote logging configured - read [this](http://LÄNkA%20HEREEE) manual page for more information
+- The *logger* command line utility
 
 # Example
 
@@ -28,13 +28,6 @@ $ logger -i -t "service_abc" -p "daemon.warning" "Memory allocation failed"
 
 The *-i* argument includes the process ID in the message, *-t* sets the ident and *-p* sets the syslog priority based on the provided [facility](http://en.wikipedia.org/wiki/Syslog#Facility_levels) and [severity levels](http://en.wikipedia.org/wiki/Syslog#Severity_levels).
 
- 
-
 When the command above is executed it should result in something like this in the "Log messages" view:
 
 ![](attachments/10944528/11141121.png)
-
- 
-
- 
-

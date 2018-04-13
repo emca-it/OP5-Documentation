@@ -121,8 +121,3 @@ Collect/centralize and archive Eventlogs/syslogs and application-logs. Monitor f
 op5 Monitor + LogServer extension
 
 check\_ls\_log, check\_log2
-
- 
-
- 
-

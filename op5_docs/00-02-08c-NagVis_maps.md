@@ -1,6 +1,6 @@
 # NagVis maps
 
-# About 
+# About
 
 As you have seen there are a couple of demo maps in the default configuration. They are included so you have something to start with when you are using NagVis for the first time.
 
@@ -9,38 +9,30 @@ As you have seen there are a couple of demo maps in the default configuration. T
 When you start to create your own maps you will need to have a background image. The background image can be what ever you want.
 The following image types are supported:
 
--   jpeg (jpg)
--   png
--   gif
+- jpeg (jpg)
+- png
+- gif
 
 ## Add
 
 ### To add a new background image
 
-1.  Go to nagvis in the monitoring menu.
-2.  Go to the menu on top and select **Options -\> Manage** **Backgrounds
+1. Go to nagvis in the monitoring menu.
+2. Go to the menu on top and select **Options -\> Manage** **Backgrounds
     ![](attachments/16482343/16678968.png)**
-3.  Click on **Choose File** in the **Upload background image** and choose the image to upload.
+3. Click on **Choose File** in the **Upload background image** and choose the image to upload.
     ![](attachments/16482343/16678973.png)
-4.  Click **Upload**. Now your background image is ready to use.
-
- 
-
- 
+4. Click **Upload**. Now your background image is ready to use.
 
 ## Delete
 
 ### To delete a background image
 
-1.  Go to Nagvis in the monitoring menu.
-2.  Go to the menu on top and select **Options -\> Manage** **Backgrounds**
+1. Go to Nagvis in the monitoring menu.
+2. Go to the menu on top and select **Options -\> Manage** **Backgrounds**
     ![](attachments/16482343/16678974.png)
-3.  Under **Delete background image** choose the background image you like to remove and click **Delete**.
+3. Under **Delete background image** choose the background image you like to remove and click **Delete**.
     ![](attachments/16482343/16678971.png)
-
- 
-
- 
 
 # Manage maps
 
@@ -48,11 +40,9 @@ The following image types are supported:
 
 ### To add a new map
 
- 
-
-1.  Go to the menu on top and select **Options** **-\> Manage Maps**
+1. Go to the menu on top and select **Options** **-\> Manage Maps**
     ![](attachments/16482343/16678977.png)
-2.  Now fill in the following fields:
+2. Now fill in the following fields:
     ![](attachments/16482343/16678972.png)
 
     <table>
@@ -70,8 +60,7 @@ The following image types are supported:
     </tbody>
     </table>
 
-3.  Click on the **Create** button and your map is created and ready to be filled with objects.
-     
+3. Click on the **Create** button and your map is created and ready to be filled with objects.
 
 This will be the name of the map and used both in URLs and it will be the name of the configuration file in the file system
 
@@ -81,43 +70,41 @@ Since the **Add new map** window is pretty limited you probably want to change s
 
 ### To find the Option window for your map.
 
-1.  Go to the map that you would like to change.
-2.  Go to the menu on top and select **Edit Map -\> Map Options**
+1. Go to the map that you would like to change.
+2. Go to the menu on top and select **Edit Map -\> Map Options**
     ![](attachments/16482343/16678978.png)
 
 The number of options is large. For more information about the options please read more in the official NagVis Manual at:
 [http://www.nagvis.org/documentation](http://www.nagvis.org/documentation+)
 
- 
-
 ## Deleting a map
 
 ### To delete a map
 
-1.  Select **Options -\> Manage** **Maps from the menu on top**
+1. Select **Options -\> Manage** **Maps from the menu on top**
     ![](attachments/16482343/16678982.png)
-2.  Under **Delete map** choose the map you like to remove and click **Delete**.
+2. Under **Delete map** choose the map you like to remove and click **Delete**.
     ![](attachments/16482343/16678976.png)
-3.  Click **Ok** in the pop-up question to deleted the map.
+3. Click **Ok** in the pop-up question to deleted the map.
 
 ## Renaming a map
 
 ### To rename a map
 
-1.  Go to the top menu and choose **Options** -\> **Manage Maps**
+1. Go to the top menu and choose **Options** -\> **Manage Maps**
     ![](attachments/16482343/16678975.png)
-2.  Select the map you like to rename.
+2. Select the map you like to rename.
     ![](attachments/16482343/16678980.png)
-3.  Type the new name in the **New name** text field and click **Rename**.
-4.  Click **Ok** in the pop-up dialog that shows up and the map will be renamed.
+3. Type the new name in the **New name** text field and click **Rename**.
+4. Click **Ok** in the pop-up dialog that shows up and the map will be renamed.
 
 # Map object types
 
 A map can have three types of objects. See the list of objects below:
 
--   Icon
--   Line
--   Special
+- Icon
+- Line
+- Special
 
 Each object type consist of a number of objects that may be used in a map. The table below briefly describes what objects each type includes:
 
@@ -153,26 +140,26 @@ As you can see in the table in Map object types the type Icon consists of five d
 
 ### To add a host icon
 
-1.  Go to the menu on top and select **Edit** **Map** -\> **Add Icon** -\> **Host**
+1. Go to the menu on top and select **Edit** **Map** -\> **Add Icon** -\> **Host**
     ![](attachments/16482343/16678981.png)
-2.  You will now get a mouse pointer looking like a cross:
+2. You will now get a mouse pointer looking like a cross:
     ![](attachments/16482343/16678985.png)
     Click on the map where you like to add your host.
-3.  A box with the host options is now shown.
+3. A box with the host options is now shown.
     ![](attachments/16482343/16678979.png)
     The options marked with bold text are mandatory. So the host name is the only one you have to change for now.
-4.  Click **Save** and your object is saved on the map.
+4. Click **Save** and your object is saved on the map.
 
 ## Adding a service icon
 
-1.  Go the menu on top and select **Edit** **Map** -\> **Add Icon** -\> **Service**
+1. Go the menu on top and select **Edit** **Map** -\> **Add Icon** -\> **Service**
     ![](attachments/16482343/16678986.png)
-2.  You will now get a mouse pointer looking like a cross:
+2. You will now get a mouse pointer looking like a cross:
     ![](attachments/16482343/16678985.png)
-3.  Click on the map where you like to add your service.
+3. Click on the map where you like to add your service.
     ![](attachments/16482343/16678990.png)
     First select the host of the service, then select the service.
-4.  Click **Save** and your object is saved on the map.
+4. Click **Save** and your object is saved on the map.
 
 # Line objects
 
@@ -184,24 +171,22 @@ Here we will add a line between two hosts and connect it to a switch-port Bandwi
 
 ### To add a line
 
-1.  Go to the menu on top and chose: **Edit Map** -\> **Add Line** -\> **Service**
+1. Go to the menu on top and chose: **Edit Map** -\> **Add Line** -\> **Service**
     ![](attachments/16482343/16678983.png)
-2.  Place the line between your objects like this.
+2. Place the line between your objects like this.
     ![](attachments/16482343/16678984.png)
     1.  Click on the host icon you like to start your line from.
     2.  Drag the mouse to the other host you like to connect the line to.
     3.  Click where you like to end the line.
 
-3.  A box with the line options is now shown.
+3. A box with the line options is now shown.
     ![](attachments/16482343/16678988.png)
     The options marked with bold text and **line type** are mandatory. So the host name, service descriptions and line type the only one you have to change for now.
-4.  Select line\_type. The line type "-%\>
+4. Select line\_type. The line type "-%\>
 
     The line type "-%+BW\>\<%+BW-" is used for showing both percentage and Bandwidth. This line does not work with the standard traffic check.
 
-5.   Click **Save** and your object is saved on the map. Note that the percentage is not viewable in configuration mode.
-
- 
+5.  Click **Save** and your object is saved on the map. Note that the percentage is not viewable in configuration mode.
 
 # Graph objects
 
@@ -209,19 +194,17 @@ Here we will add a line between two hosts and connect it to a switch-port Bandwi
 
 To add a graph to a Nagvis map works in the same way as creating a service object.
 
-1.  Go the menu on top and select **Edit** **Map** -\> **Add Icon** -\> **Service**
+1. Go the menu on top and select **Edit** **Map** -\> **Add Icon** -\> **Service**
     ![](attachments/16482343/16678986.png)
-2.  You will now get a mouse pointer looking like a cross:
+2. You will now get a mouse pointer looking like a cross:
     ![](attachments/16482343/16678985.png)
     Click on the map where you like to add your service.
-3.  On the service dialog add the service as usage but change the following values:
+3. On the service dialog add the service as usage but change the following values:
     Set **view\_type** to **gadget**
     Set **gadget\_url** to **pnp\_graph.php**
-    Set **gadget\_typ** to **HTML Code** 
+    Set **gadget\_typ** to **HTML Code**
     ![](attachments/16482343/16678989.png)
-4.  Click on **Save** to add the graph to the nagvis map.
-
- 
+4. Click on **Save** to add the graph to the nagvis map.
 
 ## Selecting graph source
 
@@ -250,29 +233,28 @@ For example if you would like to view a package loss graph for the last year use
 
 ### To delete an object
 
-1.  Open the map in which the object is located.
-2.  Right click on the object icon and the following dialog is shown
+1. Open the map in which the object is located.
+2. Right click on the object icon and the following dialog is shown
     ![](attachments/16482343/16678927.png)
-3.  Click **Unlock** to enter edit mode for that object
-4.  Right click on the object again and select **Delete**.
+3. Click **Unlock** to enter edit mode for that object
+4. Right click on the object again and select **Delete**.
     ![](attachments/16482343/16678931.png)
-5.  Lock the object again to exit edit mode. Right click on the object and select **Lock
+5. Lock the object again to exit edit mode. Right click on the object and select **Lock
     ** ![](attachments/16482343/16678930.png)
 
 ## Modifying objects
 
 ### To modify an object
 
-1.  Open the map in which the object is located.
-2.  Right click on the object icon and the following dialog is shown
+1. Open the map in which the object is located.
+2. Right click on the object icon and the following dialog is shown
     ![](attachments/16482343/16678927.png)
-3.  Click **Unlock** to enter edit mode for that object
-4.  Right click on the object again and select **Modify object**.
+3. Click **Unlock** to enter edit mode for that object
+4. Right click on the object again and select **Modify object**.
     ![](attachments/16482343/16678929.png)
-5.  Lock the object again to exit edit mode. Right click on the object and select **Lock**
+5. Lock the object again to exit edit mode. Right click on the object and select **Lock**
     ![](attachments/16482343/16678932.png)
 
     # OP5 Monitor: Open Source Network Monitoring
 
-    [OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free. 
-
+    [OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free.

@@ -1,6 +1,6 @@
 # Automap
 
-# About 
+# About
 
 When you take a look at the Automap for the first time you will see the complete tree, including all your hosts. If you only like to see one part of the tree you have to change the following configuration setting:
 `defaultroot`
@@ -21,14 +21,9 @@ This is done when you have one of the maps in Edit mode. There is no Edit mode o
 
 ## To set defaultroot.
 
-1.  Open Nagvis.
-2.  Go to the top menu and choose: **Option -\> General Configuration**
+1. Open Nagvis.
+2. Go to the top menu and choose: **Option -\> General Configuration**
     ![](attachments/16482342/16678969.png)
-3.  In the **Automap** section and type in the complete host name in the "defaultroot" text box:
+3. In the **Automap** section and type in the complete host name in the "defaultroot" text box:
     ![](attachments/16482342/16678967.png)
-4.  Click **Save** and the new setting has been saved.
-
-
-
-
-
+4. Click **Save** and the new setting has been saved.

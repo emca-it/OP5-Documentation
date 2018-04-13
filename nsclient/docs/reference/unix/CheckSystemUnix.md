@@ -2,8 +2,6 @@
 
 Various system related checks, such as CPU load, process state and memory.
 
-
-
 **List of commands:**
 
 A list of all available queries (check commands)
@@ -13,12 +11,6 @@ A list of all available queries (check commands)
 | [check_memory](#check_memory)         | Check free/used memory on the system.    |
 | [check_os_version](#check_os_version) | Check the version of the underlaying OS. |
 | [check_uptime](#check_uptime)         | Check time since last server re-boot.    |
-
-
-
-
-
-
 
 ## Queries
 
@@ -32,7 +24,6 @@ Check free/used memory on the system.
 
 * [Command-line Arguments](#check_memory_options)
 * [Filter keywords](#check_memory_filter_keys)
-
 
 <a name="check_memory_samples"/>
 #### Sample Commands
@@ -48,7 +39,6 @@ OK memory within bounds.
 ```
 
 Using --show-all **to show the result**:
-
 
 ```
 check_memory "warn=free < 20%" "crit=free < 10G" --show-all
@@ -69,8 +59,6 @@ Default check **via NRPE**::
 check_nrpe --host 192.168.56.103 --command check_memory
 OK memory within bounds.|'page'=531G;3;3;0;3 'page %'=12%;79;89;0;100 'physical'=530G;1;1;0;1 'physical %'=25%;79;89;0;100
 ```
-
-
 
 <a name="check_memory_warn"/>
 
@@ -94,7 +82,6 @@ OK memory within bounds.|'page'=531G;3;3;0;3 'page %'=12%;79;89;0;100 'physical'
 
 <a name="check_memory_options"/>
 #### Command-line Arguments
-
 
 | Option                                       | Default Value      | Description                                                                                                      |
 |----------------------------------------------|--------------------|------------------------------------------------------------------------------------------------------------------|
@@ -120,8 +107,6 @@ OK memory within bounds.|'page'=531G;3;3;0;3 'page %'=12%;79;89;0;100 'physical'
 | [perf-syntax](#check_memory_perf-syntax)     | ${type}            | Performance alias syntax.                                                                                        |
 | type                                         |                    | The type of memory to check (physical = Physical memory (RAM), committed = total memory (RAM+PAGE)               |
 
-
-
 <a name="check_memory_filter"/>
 **filter:**
 
@@ -129,21 +114,13 @@ Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
-
-
-
 <a name="check_memory_warning"/>
 **warning:**
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
 
-
-
 *Deafult Value:* | `used > 80%`
-
-
 
 <a name="check_memory_critical"/>
 **critical:**
@@ -151,11 +128,7 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
-
 *Deafult Value:* | `used > 90%`
-
-
 
 <a name="check_memory_ok"/>
 **ok:**
@@ -163,31 +136,19 @@ If anything matches this filter the return status will be escalated to critical.
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
 
-
-
-
-
-
 <a name="check_memory_empty-state"/>
 **empty-state:**
 
 Return status to use when nothing matched filter.
 If no filter is specified this will never happen unless the file is empty.
 
-
 *Deafult Value:* | `ignored`
-
-
 
 <a name="check_memory_perf-config"/>
 **perf-config:**
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
-
-
-
 
 <a name="check_memory_top-syntax"/>
 **top-syntax:**
@@ -196,10 +157,7 @@ Top level syntax.
 Used to format the message to return can include text as well as special keywords which will include information from the checks.
 To add a keyword to the message you can use two syntaxes either ${keyword} or %(keyword) (there is no difference between them apart from ${} can be difficult to excpae on linux).
 
-
 *Deafult Value:* | `${status}: ${list}`
-
-
 
 <a name="check_memory_ok-syntax"/>
 **ok-syntax:**
@@ -208,19 +166,11 @@ ok syntax.
 DEPRECATED! This is the syntax for when an ok result is returned.
 This value will not be used if your syntax contains %(list) or %(count).
 
-
-
-
-
 <a name="check_memory_empty-syntax"/>
 **empty-syntax:**
 
 Empty syntax.
 DEPRECATED! This is the syntax for when nothing matches the filter.
-
-
-
-
 
 <a name="check_memory_detail-syntax"/>
 **detail-syntax:**
@@ -230,10 +180,7 @@ Used to format each resulting item in the message.
 %(list) will be replaced with all the items formated by this syntax string in the top-syntax.
 To add a keyword to the message you can use two syntaxes either ${keyword} or %(keyword) (there is no difference between them apart from ${} can be difficult to excpae on linux).
 
-
 *Deafult Value:* | `${type} = ${used}`
-
-
 
 <a name="check_memory_perf-syntax"/>
 **perf-syntax:**
@@ -241,15 +188,10 @@ To add a keyword to the message you can use two syntaxes either ${keyword} or %(
 Performance alias syntax.
 This is the syntax for the base names of the performance data.
 
-
 *Deafult Value:* | `${type}`
-
-
-
 
 <a name="check_memory_filter_keys"/>
 #### Filter keywords
-
 
 | Option                                       | Description                                                                                                  |
 |----------------------------------------------|--------------------------------------------------------------------------------------------------------------|
@@ -271,18 +213,12 @@ This is the syntax for the base names of the performance data.
 | [warn_count](#check_memory_warn_count)       | Number of items matched the warning criteria. Common option for all checks.                                  |
 | [warn_list](#check_memory_warn_list)         | A list of all items which matched the warning criteria. Common option for all checks.                        |
 
-
 ### check_os_version
 
 Check the version of the underlaying OS.
 
-
 * [Command-line Arguments](#check_os_version_options)
 * [Filter keywords](#check_os_version_filter_keys)
-
-
-
-
 
 <a name="check_os_version_warn"/>
 
@@ -304,7 +240,6 @@ Check the version of the underlaying OS.
 
 <a name="check_os_version_options"/>
 #### Command-line Arguments
-
 
 | Option                                           | Default Value                           | Description                                                                                                      |
 |--------------------------------------------------|-----------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -329,8 +264,6 @@ Check the version of the underlaying OS.
 | [detail-syntax](#check_os_version_detail-syntax) | ${version} (${major}.${minor}.${build}) | Detail level syntax.                                                                                             |
 | [perf-syntax](#check_os_version_perf-syntax)     | version                                 | Performance alias syntax.                                                                                        |
 
-
-
 <a name="check_os_version_filter"/>
 **filter:**
 
@@ -338,21 +271,13 @@ Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
-
-
-
 <a name="check_os_version_warning"/>
 **warning:**
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
 
-
-
 *Deafult Value:* | `version > 50`
-
-
 
 <a name="check_os_version_critical"/>
 **critical:**
@@ -360,11 +285,7 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
-
 *Deafult Value:* | `version > 50`
-
-
 
 <a name="check_os_version_ok"/>
 **ok:**
@@ -372,31 +293,19 @@ If anything matches this filter the return status will be escalated to critical.
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
 
-
-
-
-
-
 <a name="check_os_version_empty-state"/>
 **empty-state:**
 
 Return status to use when nothing matched filter.
 If no filter is specified this will never happen unless the file is empty.
 
-
 *Deafult Value:* | `ignored`
-
-
 
 <a name="check_os_version_perf-config"/>
 **perf-config:**
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
-
-
-
 
 <a name="check_os_version_top-syntax"/>
 **top-syntax:**
@@ -405,10 +314,7 @@ Top level syntax.
 Used to format the message to return can include text as well as special keywords which will include information from the checks.
 To add a keyword to the message you can use two syntaxes either ${keyword} or %(keyword) (there is no difference between them apart from ${} can be difficult to excpae on linux).
 
-
 *Deafult Value:* | `${status}: ${list}`
-
-
 
 <a name="check_os_version_ok-syntax"/>
 **ok-syntax:**
@@ -417,19 +323,11 @@ ok syntax.
 DEPRECATED! This is the syntax for when an ok result is returned.
 This value will not be used if your syntax contains %(list) or %(count).
 
-
-
-
-
 <a name="check_os_version_empty-syntax"/>
 **empty-syntax:**
 
 Empty syntax.
 DEPRECATED! This is the syntax for when nothing matches the filter.
-
-
-
-
 
 <a name="check_os_version_detail-syntax"/>
 **detail-syntax:**
@@ -439,10 +337,7 @@ Used to format each resulting item in the message.
 %(list) will be replaced with all the items formated by this syntax string in the top-syntax.
 To add a keyword to the message you can use two syntaxes either ${keyword} or %(keyword) (there is no difference between them apart from ${} can be difficult to excpae on linux).
 
-
 *Deafult Value:* | `${version} (${major}.${minor}.${build})`
-
-
 
 <a name="check_os_version_perf-syntax"/>
 **perf-syntax:**
@@ -450,15 +345,10 @@ To add a keyword to the message you can use two syntaxes either ${keyword} or %(
 Performance alias syntax.
 This is the syntax for the base names of the performance data.
 
-
 *Deafult Value:* | `version`
-
-
-
 
 <a name="check_os_version_filter_keys"/>
 #### Filter keywords
-
 
 | Option                                             | Description                                                                                                  |
 |----------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
@@ -483,18 +373,12 @@ This is the syntax for the base names of the performance data.
 | [warn_count](#check_os_version_warn_count)         | Number of items matched the warning criteria. Common option for all checks.                                  |
 | [warn_list](#check_os_version_warn_list)           | A list of all items which matched the warning criteria. Common option for all checks.                        |
 
-
 ### check_uptime
 
 Check time since last server re-boot.
 
-
 * [Command-line Arguments](#check_uptime_options)
 * [Filter keywords](#check_uptime_filter_keys)
-
-
-
-
 
 <a name="check_uptime_warn"/>
 
@@ -516,7 +400,6 @@ Check time since last server re-boot.
 
 <a name="check_uptime_options"/>
 #### Command-line Arguments
-
 
 | Option                                       | Default Value                           | Description                                                                                                      |
 |----------------------------------------------|-----------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -541,8 +424,6 @@ Check time since last server re-boot.
 | [detail-syntax](#check_uptime_detail-syntax) | uptime: ${uptime}h, boot: ${boot} (UTC) | Detail level syntax.                                                                                             |
 | [perf-syntax](#check_uptime_perf-syntax)     | uptime                                  | Performance alias syntax.                                                                                        |
 
-
-
 <a name="check_uptime_filter"/>
 **filter:**
 
@@ -550,21 +431,13 @@ Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
-
-
-
 <a name="check_uptime_warning"/>
 **warning:**
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
 
-
-
 *Deafult Value:* | `uptime < 2d`
-
-
 
 <a name="check_uptime_critical"/>
 **critical:**
@@ -572,11 +445,7 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
-
 *Deafult Value:* | `uptime < 1d`
-
-
 
 <a name="check_uptime_ok"/>
 **ok:**
@@ -584,31 +453,19 @@ If anything matches this filter the return status will be escalated to critical.
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
 
-
-
-
-
-
 <a name="check_uptime_empty-state"/>
 **empty-state:**
 
 Return status to use when nothing matched filter.
 If no filter is specified this will never happen unless the file is empty.
 
-
 *Deafult Value:* | `ignored`
-
-
 
 <a name="check_uptime_perf-config"/>
 **perf-config:**
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
-
-
-
 
 <a name="check_uptime_top-syntax"/>
 **top-syntax:**
@@ -617,10 +474,7 @@ Top level syntax.
 Used to format the message to return can include text as well as special keywords which will include information from the checks.
 To add a keyword to the message you can use two syntaxes either ${keyword} or %(keyword) (there is no difference between them apart from ${} can be difficult to excpae on linux).
 
-
 *Deafult Value:* | `${status}: ${list}`
-
-
 
 <a name="check_uptime_ok-syntax"/>
 **ok-syntax:**
@@ -629,19 +483,11 @@ ok syntax.
 DEPRECATED! This is the syntax for when an ok result is returned.
 This value will not be used if your syntax contains %(list) or %(count).
 
-
-
-
-
 <a name="check_uptime_empty-syntax"/>
 **empty-syntax:**
 
 Empty syntax.
 DEPRECATED! This is the syntax for when nothing matches the filter.
-
-
-
-
 
 <a name="check_uptime_detail-syntax"/>
 **detail-syntax:**
@@ -651,10 +497,7 @@ Used to format each resulting item in the message.
 %(list) will be replaced with all the items formated by this syntax string in the top-syntax.
 To add a keyword to the message you can use two syntaxes either ${keyword} or %(keyword) (there is no difference between them apart from ${} can be difficult to excpae on linux).
 
-
 *Deafult Value:* | `uptime: ${uptime}h, boot: ${boot} (UTC)`
-
-
 
 <a name="check_uptime_perf-syntax"/>
 **perf-syntax:**
@@ -662,15 +505,10 @@ To add a keyword to the message you can use two syntaxes either ${keyword} or %(
 Performance alias syntax.
 This is the syntax for the base names of the performance data.
 
-
 *Deafult Value:* | `uptime`
-
-
-
 
 <a name="check_uptime_filter_keys"/>
 #### Filter keywords
-
 
 | Option                                       | Description                                                                                                  |
 |----------------------------------------------|--------------------------------------------------------------------------------------------------------------|
@@ -689,7 +527,3 @@ This is the syntax for the base names of the performance data.
 | [uptime](#check_uptime_uptime)               | Time since last boot                                                                                         |
 | [warn_count](#check_uptime_warn_count)       | Number of items matched the warning criteria. Common option for all checks.                                  |
 | [warn_list](#check_uptime_warn_list)         | A list of all items which matched the warning criteria. Common option for all checks.                        |
-
-
-
-

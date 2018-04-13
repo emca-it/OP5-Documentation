@@ -1,12 +1,12 @@
 # How to succeed with wireless monitoring
 
--   -   [Preamble](#Howtosucceedwithwirelessmonitoring-Preamble)
--   [Terminology](#Howtosucceedwithwirelessmonitoring-Terminology)
--   [Implementation](#Howtosucceedwithwirelessmonitoring-Implementation)
--   [Monitoring](#Howtosucceedwithwirelessmonitoring-Monitoring)
-    -   [Interface Monitoring](#Howtosucceedwithwirelessmonitoring-InterfaceMonitoring)
-    -   [Connected Clients](#Howtosucceedwithwirelessmonitoring-ConnectedClients)
-    -   [Log Monitoring](#Howtosucceedwithwirelessmonitoring-LogMonitoring)
+- [Preamble](#Howtosucceedwithwirelessmonitoring-Preamble)
+- [Terminology](#Howtosucceedwithwirelessmonitoring-Terminology)
+- [Implementation](#Howtosucceedwithwirelessmonitoring-Implementation)
+- [Monitoring](#Howtosucceedwithwirelessmonitoring-Monitoring)
+  - [Interface Monitoring](#Howtosucceedwithwirelessmonitoring-InterfaceMonitoring)
+  - [Connected Clients](#Howtosucceedwithwirelessmonitoring-ConnectedClients)
+  - [Log Monitoring](#Howtosucceedwithwirelessmonitoring-LogMonitoring)
 
 ## Preamble
 
@@ -17,8 +17,6 @@ Today wireless networks are a vital part of a business infrastructure side by si
 This is a living document and will be updated or reorganized when more content is collected.
 
 This document is a community howto, and is not supported by OP5 Support
-
- 
 
 ## Terminology
 
@@ -44,10 +42,10 @@ Log filter – Condition based rule to match against incoming logs
 
  This section will go through some monitoring that can be easily implemented  on a wireless access point to ensure its operational status. There is a lot of measurements that can be done and this text will only cover the baseline with the following parameters:
 
--   Ping
--   Interface status, errors and traffic (Physical and radio)
--   Connected Clients
--   Failed Authentications
+- Ping
+- Interface status, errors and traffic (Physical and radio)
+- Connected Clients
+- Failed Authentications
 
 The most basic is of course to check if the device is online and powered on, for that we use a simple PING-check. In OP5 Monitor this is the first check that is automatically  added to every host. This document will not go through this step, please refer to [op5 Monitor Administration Manual.](http://op5.com/manuals/)
 
@@ -103,9 +101,9 @@ In this example we use Cisco Aironet 1040 that has a max amount connected client
 
 The plugin check\_cisco\_aironet\_clients used in this example can be found [here](http://exchange.nagios.org/directory/Plugins/Network-Connections%2C-Stats-and-Bandwidth/check_cisco_aironet_clients/details). It is created in perl and should run on any linux distribution with the right dependencies installed, as listed below:
 
--   perl-Net-MAC
--   perl-Net-Telnet (Dependency of perl-Net-Telnet-Cisco)
--   perl-Net-Telnet-Cisco
+- perl-Net-MAC
+- perl-Net-Telnet (Dependency of perl-Net-Telnet-Cisco)
+- perl-Net-Telnet-Cisco
 
 To install these on OP5 Appliance 6 or CentOS 6 you can download the dependencies from here [cisco-aironet-dependencies.tar.gz](attachments/688559/5242977.gz)
 
@@ -124,11 +122,9 @@ perl-Net-Telnet-3.03-2.el6.rfx.noarch.rpm
 perl-Net-Telnet-Cisco-1.10-1.2.el6.rf.noarch.rpm
 
 rpm -ivh perl-Net-*
-mv check_cisco_aironet_clients.pl /opt/plugins/custom 
+mv check_cisco_aironet_clients.pl /opt/plugins/custom
 chmod +x /opt/plugins/custom/check_cisco_aironet_clients.pl
 ```
-
- 
 
 Now when the plugin is in place and the dependencies is installed properly let’s add a check to OP5 Monitor to give some data from this check with some nice graphs, and thresholds for warning and critical.
 
@@ -150,10 +146,10 @@ Press “Services for host” ![](attachments/688559/5242973.png) to get to the
 
 Fill in the following values:
 
--   service\_description: Connected Clients
--   check\_command: check\_cisco\_aironet\_clients
--   check\_command\_args: user!password!warn!crit
-    -   This should be your username, password, warning and critical thresholds. As mentioned before the max clients for this device is 25 simultaneous clients. You should change this to what your device supports.
+- service\_description: Connected Clients
+- check\_command: check\_cisco\_aironet\_clients
+- check\_command\_args: user!password!warn!crit
+  - This should be your username, password, warning and critical thresholds. As mentioned before the max clients for this device is 25 simultaneous clients. You should change this to what your device supports.
 
 ![](attachments/688559/5242972.png)
 
@@ -173,18 +169,18 @@ When you have configured your WAP to forward it’s logs and configured your OP5
 
 The important settings to set here to preform this task is:
 
--   Rotate database after x hours – This setting is important because it reflects how long back in time you want to search, both in the Logserver gui, and with your checks that will be used in OP5 Monitor.
+- Rotate database after x hours – This setting is important because it reflects how long back in time you want to search, both in the Logserver gui, and with your checks that will be used in OP5 Monitor.
 
--   The monitor host – The address or ip-address of OP5 Monitor
--   Use Monitor 5 – Legacy setting, needs to be checked.
--   Host information page : /ninja/index.php/status/service/[host] – this is where the statuspage of hosts in OP5 is located, needed to make a smooth integration between Logserver and Monitor. Host Links in logserver is clickable and redirects you to OP5 Monitor.
+- The monitor host – The address or ip-address of OP5 Monitor
+- Use Monitor 5 – Legacy setting, needs to be checked.
+- Host information page : /ninja/index.php/status/service/[host] – this is where the statuspage of hosts in OP5 is located, needed to make a smooth integration between Logserver and Monitor. Host Links in logserver is clickable and redirects you to OP5 Monitor.
 
 ![](attachments/688559/5242970.png)
 
 To make this connection between OP5 Monitor and logserver we need a couple of filters to use in the check against logserver. I have prepared a few basic ones ready for import
 
--   auth-fail-ap.xml
--   auth-fail-ap01.xml
+- auth-fail-ap.xml
+- auth-fail-ap01.xml
 
 These filters is very simple, and you can modify them for your needs in the “Query Builder” in logserver. They can be fetched from [here](attachments/688559/5242975.gz). Unpack this tar.gz-file on your computer and you will have two filters mentioned above ready for import.
 
@@ -233,4 +229,3 @@ When the above settings is configured, press “Submit” – \> the “floppy�
 Navigate to your host to see the status of your new check.
 
 ![](attachments/688559/5242967.png)
-

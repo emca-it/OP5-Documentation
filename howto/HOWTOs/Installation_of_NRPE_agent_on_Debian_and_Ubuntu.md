@@ -4,21 +4,15 @@ This article intends to give the reader a brief introduction on how to install a
 
 Historically, OP5 has compiled and packaged the NRPE agent for a large number of Linux distributions, but as per Q2 2014 we stopped doing this since it required a lot of maintenance and time. More information on this decision can be found here: <https://www.op5.com/blog/blogs/op5-developers-blog/deprecation-notices-q2-2014/>
 
- 
-
 Note that this article is intended for Debian 6, 7, 8 and Ubuntu 16.04 **client hosts**, and that these steps never should be performed on an OP5 Monitor server.
 
 ## Step-by-step guide
-
- 
 
 1. Install the NRPE package together with plugins:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # apt-get install nagios-nrpe-server nagios-plugins-basic
 ```
-
- 
 
 2. Create a new file called **/etc/nagios/nrpe.d/op5\_commands.cfg** containing the following information:
 
@@ -48,15 +42,11 @@ command[proc_rsyslogd]=/usr/lib/nagios/plugins/check_procs -w 1: -c 1:2 -C rsysl
 
 These paths to the plugins should match the paths to the installed plugins in step 1.
 
- 
-
 3. Now edit /**etc/nagios/nrpe.cfg** and add your Monitor server(s) address(es) to the *allowed\_hosts* parameter as a comma-separated list in the appropriate section:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 allowed_hosts=127.0.0.1,10.0.0.10,10.0.0.11
 ```
-
- 
 
 4. Restart the nrpe agent on the host:
 
@@ -64,15 +54,9 @@ allowed_hosts=127.0.0.1,10.0.0.10,10.0.0.11
 # /etc/init.d/nagios-nrpe-server restart
 ```
 
- 
-
 Now you can add the services via the function "Add UNIX client services" when adding a host in OP5 Monitor.
 
- 
-
 If the host is behind a firewall, or you have enabled firewall software on the host, you need to open for incoming traffic on TCP port 5666.
-
- 
 
 # Linux server monitoring with SNMPv3
 
@@ -80,18 +64,17 @@ An alternative path as we recommend today is to use the SNMP (v3) protocol to mo
 
 # OP5 Monitor: Open Source Network Monitoring
 
-[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free. 
+[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free.
 
 ## Related articles
 
--   Page:
+- Page:
     [Using eventhandlers to restart services](/display/HOWTOs/Using+eventhandlers+to+restart+services)
--   Page:
+- Page:
     [Monitoring Dell servers](/display/HOWTOs/Monitoring+Dell+servers)
--   Page:
+- Page:
     [Installation of NRPE agent on SLES](/display/HOWTOs/Installation+of+NRPE+agent+on+SLES)
--   Page:
+- Page:
     [Running plugins with NRPE as root or another user](/display/HOWTOs/Running+plugins+with+NRPE+as+root+or+another+user)
--   Page:
+- Page:
     [Installation of NRPE agent on Debian and Ubuntu](/display/HOWTOs/Installation+of+NRPE+agent+on+Debian+and+Ubuntu)
-

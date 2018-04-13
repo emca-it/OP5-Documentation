@@ -8,8 +8,6 @@ Technical and api documentation for Naemon.
 
 ## Table of Contents
 
-
-
 ### Core
 
 <a href="build.html">Build Naemon From Scratch</a>
@@ -17,8 +15,6 @@ Technical and api documentation for Naemon.
 <a href="workers.html">Worker Processes</a>
 
 <a href="bugs/">List of Open Bugs in Nagios 4 compared to Naemon</a>
-
-
 
 ### API
 
@@ -30,8 +26,6 @@ Technical and api documentation for Naemon.
 
 <a href="/documentation/developer/externalcommands/">External Commands</a>
 
-
-
 ### Naemon Plugins
 
 <a href="/documentation/usersguide/pluginapi.html">Plugin API</a>
@@ -39,7 +33,6 @@ Technical and api documentation for Naemon.
 <a href="/documentation/usersguide/epnplugins.html">Developing Plugins For Use With Embedded Perl</a>
 
 <a href="https://www.monitoring-plugins.org/doc/guidelines.html">Monitoring Plugins Developer Guidelines</a>
-
 
 ### Documentation / Website
 

@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - READ_STATE_INFORMATION<br>
 
-
 #### Command Format:
 
 `READ_STATE_INFORMATION;`
@@ -29,6 +28,3 @@ Causes Naemon to load all current monitoring status information from the state r
 
 printf "[%lu] READ_STATE_INFORMATION;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

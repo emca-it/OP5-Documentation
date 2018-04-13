@@ -31,11 +31,9 @@ cd download
 
 {{ site.info }}The language is optional. Common languages are 'bash', 'c' or 'perl'.{{ site.end }}
 
-
 ### Alerts
 Alerts are used in the text to highlight something specific. It could be success,
 informational, warning or danger. See code snippets below
-
 
 #### Success or Hints
 
@@ -45,7 +43,6 @@ informational, warning or danger. See code snippets below
 &#123;&#123; site.hint &#125;&#125;Some useful hint.&#123;&#123; site.end &#125;&#125;
 </pre>
 
-
 #### Information
 
 {{ site.info }}Informational Alert{{ site.end }}
@@ -54,7 +51,6 @@ informational, warning or danger. See code snippets below
 &#123;&#123; site.info &#125;&#125;Informational Alert&#123;&#123; site.end &#125;&#125;
 </pre>
 
-
 #### Warning
 
 {{ site.warn }}It's not possible to use Markdown inside a html block. Don't forget that &lt;table&gt;...&lt;/table&gt; are inside a html block as well{{ site.end }}
@@ -62,7 +58,6 @@ informational, warning or danger. See code snippets below
 <pre>
 &#123;&#123; site.warn &#125;&#125;It's not possible to use Markdown inside a html block...&#123;&#123; site.end &#125;&#125;
 </pre>
-
 
 #### Danger
 

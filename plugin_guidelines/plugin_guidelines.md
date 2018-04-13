@@ -154,7 +154,7 @@ It is up to third party programs to convert the Monitoring Plugins performance d
 
 ### Translations
 
-If possible, use translation tools for all output to respect the user's language settings. See [Translations for developers](#translations-for-developers) for guidelines for the core plugins. 
+If possible, use translation tools for all output to respect the user's language settings. See [Translations for developers](#translations-for-developers) for guidelines for the core plugins.
 
 ## System Commands and Auxiliary Files
 
@@ -190,7 +190,7 @@ Perl plugins are coded a little more defensively than other plugins because of e
 * To use utils.pm, you need to provide a full path to the module in order for it to work.
 
     e.g.
-    
+
     ```
     use lib "/usr/local/nagios/libexec";
     use utils qw(...);
@@ -203,7 +203,7 @@ Perl plugins are coded a little more defensively than other plugins because of e
 * Do not use global variables in named subroutines. This is bad practice anyway, but with ePN the compiler will report an error "<global_var> will not stay shared ..". Values used by subroutines should be passed in the argument list.
 * If writing to a file (perhaps recording performance data) explicitly close it. The plugin never calls exit; that is caught by `p1.pl`, so output streams are never closed.
 * As in Section 5 all plugins need to monitor their runtime, specially if they are using network resources. Use of the alarm is recommended noting that some Perl modules (eg LWP) manage timers, so that an alarm set by a plugin using such a module is overwritten by the module. (workarounds are cunning (TM) or using the module timer) Plugins may import a default time out (`$TIMEOUT`) from utils.pm.
-* Perl plugins should import `%ERRORS` from utils.pm and then `exit $ERRORS{'OK'}` rather than `exit 0`. 
+* Perl plugins should import `%ERRORS` from utils.pm and then `exit $ERRORS{'OK'}` rather than `exit 0`.
 
 ## Runtime Timeouts
 
@@ -274,7 +274,7 @@ Old style was to do things like `-ct` for critical time and `-cv` for critical v
 * lists are expressed with commas, so Jacob's `check_nmap` uses constructs like `-p 1000,1010,1050:1060,2000`
 * If possible when writing lists, use tokens to make the list easy to remember and non-order dependent - so check_disk uses `-c 10000,10%` so that it is clear which is the percentage and which is the KB values (note that due to my own lack of foresight, that used to be `-c 10000:10%` but such constructs should all be changed for consistency, though providing reverse compatibility is fairly easy).
 
-As always, comments are welcome - making this consistent without a host of long options was quite a hassle, and I would suspect that there are flaws in this strategy. 
+As always, comments are welcome - making this consistent without a host of long options was quite a hassle, and I would suspect that there are flaws in this strategy.
 
 ## Test cases
 
@@ -316,7 +316,7 @@ You should also avoid using the type `bool` and its values `true` and `false`. I
 
 If you have copied a routine from another source, make sure the license from your source allows this. Add a comment referencing the `ACKNOWLEDGEMENTS` file, where you can put more detail about the source.
 
-For contributed code, do not add any named credits in the source code - contributors should be added into the `THANKS.in` file instead. 
+For contributed code, do not add any named credits in the source code - contributors should be added into the `THANKS.in` file instead.
 
 ### Commit Messages
 
@@ -324,7 +324,7 @@ If the change is due to a contribution, please quote the contributor's name and,
 
 If you have a change that is useful for noting in the next release, please update the `NEWS` file.
 
-All commits will be written to a ChangeLog at release time. 
+All commits will be written to a ChangeLog at release time.
 
 ### Translations for developers
 
@@ -359,13 +359,13 @@ Plugins that have been contributed to the project and distributed with the Monit
 
 If patches or bugs are raised to a contributed plugin, we will start communications with the original contributor, but seek to remove the plugin from our distribution.
 
-The aim is to distribute only code that the Monitoring Plugins team are responsible for. 
+The aim is to distribute only code that the Monitoring Plugins team are responsible for.
 
 ### New plugins
 
 If you would like others to use your plugins, please add it to the official 3rd party plugin repository, Monitoring Exchange.
 
-We are not accepting requests for inclusion of plugins into our distribution at the moment, but when we do, these are the minimum requirements: 
+We are not accepting requests for inclusion of plugins into our distribution at the moment, but when we do, these are the minimum requirements:
 
 * Include copyright and license information in all files. Copyright must be solely granted to the Monitoring Plugins Development Team
 * The standard command options are supported (`--help`, `--version`, `--timeout`, `--warning`, `--critical`)
@@ -374,4 +374,3 @@ We are not accepting requests for inclusion of plugins into our distribution at 
 * It should also follow code format guidelines, and use functions from utils (perl or c or sh) rather than using its own
 * Includes patches to `configure.in` if required (via the `EXTRAS` list if it will only work on some platforms)
 * If possible, please submit a test harness. Documentation on sample tests coming soon
-

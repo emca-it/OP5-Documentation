@@ -1,36 +1,12 @@
 # FAQ Home
 
- 
-
 ![](attachments/thumbnails/688465/11567152)
 
-## Welcome to our FAQ-space. 
+## Welcome to our FAQ-space.
 
 Here we will continuously publish new articles about frequently asked questions and throw in a few tips and tricks we believe would be of great value for our community and customers.
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
 Search
-
- 
-
- 
-
- 
 
 ## Popular pages
 
@@ -42,21 +18,6 @@ Search
 |:--|
 |Page: [How do i setup OP5 Monitor to dial a contact when something happens outside workinghours?](/pages/viewpage.action?pageId=688416)|Page: [How do I monitor SNMP traps with OP5 Monitor?](../FAQ/How_do_I_monitor_SNMP_traps_with_OP5_Monitor_)|
 
- 
-
- 
-
- 
-
 ### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
-
- 
-
- 
-
- 
-
- 
-

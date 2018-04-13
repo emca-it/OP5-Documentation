@@ -12,8 +12,6 @@ How do I use ssh: links from my Windows Browser?
 
 First you'll need to teach Windows about the SSH protocol. Create file called ssh.reg with this content:
 
- 
-
 ``` {.plain data-syntaxhighlighter-params="brush: plain; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: plain; gutter: false; theme: Confluence"}
 REGEDIT4
 
@@ -35,8 +33,6 @@ REGEDIT4
 Run this file to add the information to the Windows Registry. You probably need to reboot for this to take effect.
 
 For Firefox you'll need to enter this in **about:config**
-
- 
 
 ``` {.plain data-syntaxhighlighter-params="brush: plain; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: plain; gutter: false; theme: Confluence"}
 network.protocol-handler.app.ssh  STRING "C:\Program Files\Putty"

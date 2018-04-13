@@ -10,12 +10,12 @@ If there is a problem with your RAID the output will tell you the problem, for e
 
 # Prerequisite
 
-1.  HP ACU CLI must be installed, download and install this from HP.
+1. HP ACU CLI must be installed, download and install this from HP.
 
 ## Step-by-step guide
 
-1.  Download the script [check\_smartarray.vbs](attachments/12189909/12386356.vbs) to your OP5 Agent script folder, C:\\Program Files\\op5\\NSClient++\\scripts
-2.  Edit custom.ini, located in C:\\Program Files\\op5\\NSClient++\\
+1. Download the script [check\_smartarray.vbs](attachments/12189909/12386356.vbs) to your OP5 Agent script folder, C:\\Program Files\\op5\\NSClient++\\scripts
+2. Edit custom.ini, located in C:\\Program Files\\op5\\NSClient++\\
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     [NRPE Handlers]
@@ -24,17 +24,17 @@ If there is a problem with your RAID the output will tell you the problem, for e
 
     Note that you might need to change the path to hpacucli.exe.
 
-3.  Save the file and restart the OP5 NSClient++ windows service.
-4.  Go to OP5 Monitor -\> Configure -\> Commands
-5.  Create a new check command with the following settings:
+3. Save the file and restart the OP5 NSClient++ windows service.
+4. Go to OP5 Monitor -\> Configure -\> Commands
+5. Create a new check command with the following settings:
     **command\_name:** check\_hp\_raid
     **command\_line:** \$USER1\$/check\_nrpe -H \$HOSTADDRESS\$ -t 30 -c check\_raid
     ![](attachments/12189909/12386357.png)
-6.  Click on Submit.
-7.  Select your HP Server in the configuration and add a new service
+6. Click on Submit.
+7. Select your HP Server in the configuration and add a new service
     service\_description: RAID Statuscheck\_command: check\_hp\_raid
     ![](attachments/12189909/12386358.png)
-8.  Click on Submit and save your configuration.
+8. Click on Submit and save your configuration.
 
 This is how it might look when there is a problem with your RAID
 
@@ -42,14 +42,13 @@ This is how it might look when there is a problem with your RAID
 
 ## Related articles
 
--   Page:
+- Page:
     [Setting up Selenium Server on Microsoft Windows](/display/HOWTOs/Setting+up+Selenium+Server+on+Microsoft+Windows)
--   Page:
+- Page:
     [Handling NSClient++ settings in the Windows Registry](../HOWTOs/Handling_NSClient++_settings_in_the_Windows_Registry)
--   Page:
+- Page:
     [Monitoring Dell servers](/display/HOWTOs/Monitoring+Dell+servers)
--   Page:
+- Page:
     [Agentless Monitoring of Windows using WMI](/display/HOWTOs/Agentless+Monitoring+of+Windows+using+WMI)
--   Page:
+- Page:
     [Monitoring the hardware of your OP5 server](/display/HOWTOs/Monitoring+the+hardware+of+your+op5+server)
-

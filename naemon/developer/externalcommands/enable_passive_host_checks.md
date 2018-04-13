@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_PASSIVE_HOST_CHECKS<br>
 
-
 #### Command Format:
 
 `ENABLE_PASSIVE_HOST_CHECKS;host_name`
@@ -29,6 +28,3 @@ Enables acceptance and processing of passive host checks for the specified host.
 
 printf "[%lu] ENABLE_PASSIVE_HOST_CHECKS;host1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

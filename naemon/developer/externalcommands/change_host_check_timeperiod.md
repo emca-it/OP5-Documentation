@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_HOST_CHECK_TIMEPERIOD<br>
 
-
 #### Command Format:
 
 `CHANGE_HOST_CHECK_TIMEPERIOD;host_name;timeperiod`
@@ -29,6 +28,3 @@ Changes the valid check period for the specified host.
 
 printf "[%lu] CHANGE_HOST_CHECK_TIMEPERIOD;host1;24x7\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

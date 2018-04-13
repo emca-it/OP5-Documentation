@@ -2,17 +2,15 @@
 
 Microsoft Active Directory is used to share user list, provide single sign on and other central features in large Microsoft based workstation and server networks. Active Directory is Microsoft’s implementation of existing business standards such as LDAP, Kerberos and DNS. The purpose of this article is to provide a step by step guide on how to integrate OP5 Monitor authentication with Active Directory.
 
- 
-
 This is a legacy document and does not apply to OP5 Monitor 6.0 or later versions. Please read: [Active Directory Integration How-To](Active_Directory_Integration_How-To) for OP5 Monitor 6.0.
 
 ## Prerequisites
 
 To be able to complete this how-to you will need:
 
--   OP5 Monitor 5.7 or below.
--   Administrator access to a working Active Directory environment.
--   Root command line access to a running OP5 Monitor.
+- OP5 Monitor 5.7 or below.
+- Administrator access to a working Active Directory environment.
+- Root command line access to a running OP5 Monitor.
 
 ## This will be done
 
@@ -22,8 +20,8 @@ Make OP5 Monitor security system use Active Directory as its authentication sour
 
 Before configuring OP5 Monitor, we need to set up a user OP5 Monitor can use to read authentication data from Active Directory, and an Admin group for the OP5 Monitor itself.
 
--   Create a normal user, for example op5auth.
--   Create a global group for admin rights to OP5 Monitor, for example op5admins.
+- Create a normal user, for example op5auth.
+- Create a global group for admin rights to OP5 Monitor, for example op5admins.
 
 ## Configure OP5 Monitor
 
@@ -37,20 +35,18 @@ Now a series of questions will be asked, answer yes to the first question about 
 
 Below are the rest of the questions and answers provided for our lab environment.
 
--   LDAP Server 192.168.1.97
--   LDAP Search base dc=op5,dc=com
--   Where are your user DN:s? cn=Users,dc=op5,dc=com
--   In what subtree are your groups located? cn=Users,dc=op5,dc=com
--   Group for admin access op5admins
--   Username for the server to connect to AD <with%C2%A0op5auth@op5.com>
--   Enter bind password op5auth’s password
--   Finally, accept the change to your authentication config.
+- LDAP Server 192.168.1.97
+- LDAP Search base dc=op5,dc=com
+- Where are your user DN:s? cn=Users,dc=op5,dc=com
+- In what subtree are your groups located? cn=Users,dc=op5,dc=com
+- Group for admin access op5admins
+- Username for the server to connect to AD <with%C2%A0op5auth@op5.com>
+- Enter bind password op5auth’s password
+- Finally, accept the change to your authentication config.
 
 Make sure the configuration file looks ok.
 
     [root@monitor01 ~]# cat /etc/httpd/conf.d/op5ldapauth.conf
-
-      
 
     AuthzLDAPServer 192.168.1.97
 
@@ -58,9 +54,9 @@ Make sure the configuration file looks ok.
 
     AuthzLDAPGroupBase cn=Users,dc=op5,dc=com
 
-    AuthzLDAPUserKey sAMAccountName  
+    AuthzLDAPUserKey sAMAccountName
 
-    AuthzLDAPBindDN op5auth@op5.com  
+    AuthzLDAPBindDN op5auth@op5.com
 
     AuthzLDAPBindPassword l4bp4SSw0rD
 
@@ -85,8 +81,3 @@ You also need to edit /opt/op5sys/etc/ldapserver and make sure the values for L
     LDAP_GROUP=ou=op5 Operators,dc=op5,dc=com
 
     LDAP_USERS=ou=op5 Operators,dc=op5,dc=com
-
- 
-
- 
-

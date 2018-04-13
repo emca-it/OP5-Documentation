@@ -11,6 +11,3 @@
 * * * * *
 
 The video tutorial "How to Use SLA Reports" on our [youtube channel](http://www.youtube.com/user/op5video) will walk you through it step by step.
-
- 
-

@@ -18,13 +18,9 @@ sudo apt-get install nagios-nrpe-server nagios-plugins libsys-statistics-linux-p
 
 When the dependencies are met the plugin can be copied to the folder `/usr/lib/nagios/plugins` and executed via the nrpe agent.
 
- 
-
 Some example commands that can be configured on the Ubuntu/Debian host and called from OP5 Monitor with the name of the command[name] via the check\_command "check\_nrpe".
 
 Thresholds are just examples and should be adjusted to reflect the configuration of the server.
-
- 
 
 **linux-stats.cfg**
 
@@ -43,11 +39,6 @@ command[check_procs]=/usr/lib/nagios/plugins/check_linux_stats.pl -P -w 1000 -c 
 command[check_net_eth0]=/usr/lib/nagios/plugins/check_linux_stats.pl -N -w 1000000 -c 1500000 -p eth0 -s 5
 # Check socket usage
 command[check_socket]=/usr/lib/nagios/plugins/check_linux_stats.pl -S -w 1000 -c 1200
-# Check uptime 
+# Check uptime
 command[check_uptime]=/usr/lib/nagios/plugins/check_linux_stats.pl -U -w 5
 ```
-
- 
-
- 
-

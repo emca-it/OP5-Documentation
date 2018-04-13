@@ -8,22 +8,22 @@ Articles in the Community Space are not supported by OP5 Support.
 
 # Table of contents
 
--   [Table of contents](#SecurityhardeningyourMonitorinstallation-Tableofcontents)
--   [About](#SecurityhardeningyourMonitorinstallation-About)
--   [Prerequisites](#SecurityhardeningyourMonitorinstallation-Prerequisites)
--   [Disable TRACE](#SecurityhardeningyourMonitorinstallation-DisableTRACE)
--   [Disable weak encryption ciphers and older SSL versions](#SecurityhardeningyourMonitorinstallation-DisableweakencryptionciphersandolderSSLversions)
--   [Minimize server tokens](#SecurityhardeningyourMonitorinstallation-Minimizeservertokens)
--   [Disable PHP easter eggs](#SecurityhardeningyourMonitorinstallation-DisablePHPeastereggs)
--   [Set X-FRAME-OPTIONS](#SecurityhardeningyourMonitorinstallation-SetX-FRAME-OPTIONS)
--   [Disable mysql networking support](#SecurityhardeningyourMonitorinstallation-Disablemysqlnetworkingsupport)
--   [Install SSL certificates from a trusted CA](#SecurityhardeningyourMonitorinstallation-InstallSSLcertificatesfromatrustedCA)
--   [Configure a firewall on the host system](#SecurityhardeningyourMonitorinstallation-Configureafirewallonthehostsystem)
--   [Disable passive check information on services that don't need it](#SecurityhardeningyourMonitorinstallation-Disablepassivecheckinformationonservicesthatdon'tneedit)
--   [Configure sudo for privileges separation](#SecurityhardeningyourMonitorinstallation-Configuresudoforprivilegesseparation)
--   [Configure a different port for SSH access](#SecurityhardeningyourMonitorinstallation-ConfigureadifferentportforSSHaccess)
--   [Develop a password policy](#SecurityhardeningyourMonitorinstallation-Developapasswordpolicy)
--   [Audit the plugins you install](#SecurityhardeningyourMonitorinstallation-Auditthepluginsyouinstall)
+- [Table of contents](#SecurityhardeningyourMonitorinstallation-Tableofcontents)
+- [About](#SecurityhardeningyourMonitorinstallation-About)
+- [Prerequisites](#SecurityhardeningyourMonitorinstallation-Prerequisites)
+- [Disable TRACE](#SecurityhardeningyourMonitorinstallation-DisableTRACE)
+- [Disable weak encryption ciphers and older SSL versions](#SecurityhardeningyourMonitorinstallation-DisableweakencryptionciphersandolderSSLversions)
+- [Minimize server tokens](#SecurityhardeningyourMonitorinstallation-Minimizeservertokens)
+- [Disable PHP easter eggs](#SecurityhardeningyourMonitorinstallation-DisablePHPeastereggs)
+- [Set X-FRAME-OPTIONS](#SecurityhardeningyourMonitorinstallation-SetX-FRAME-OPTIONS)
+- [Disable mysql networking support](#SecurityhardeningyourMonitorinstallation-Disablemysqlnetworkingsupport)
+- [Install SSL certificates from a trusted CA](#SecurityhardeningyourMonitorinstallation-InstallSSLcertificatesfromatrustedCA)
+- [Configure a firewall on the host system](#SecurityhardeningyourMonitorinstallation-Configureafirewallonthehostsystem)
+- [Disable passive check information on services that don't need it](#SecurityhardeningyourMonitorinstallation-Disablepassivecheckinformationonservicesthatdon'tneedit)
+- [Configure sudo for privileges separation](#SecurityhardeningyourMonitorinstallation-Configuresudoforprivilegesseparation)
+- [Configure a different port for SSH access](#SecurityhardeningyourMonitorinstallation-ConfigureadifferentportforSSHaccess)
+- [Develop a password policy](#SecurityhardeningyourMonitorinstallation-Developapasswordpolicy)
+- [Audit the plugins you install](#SecurityhardeningyourMonitorinstallation-Auditthepluginsyouinstall)
 
 # About
 
@@ -33,8 +33,8 @@ Please preserve notes of any hardening steps that you perform on your Monitor se
 
 # Prerequisites
 
--   Basic Linux and/or UNIX knowledge
--   Apache (httpd) configuration skills
+- Basic Linux and/or UNIX knowledge
+- Apache (httpd) configuration skills
 
 # Disable TRACE
 
@@ -58,10 +58,10 @@ Edit the file '/etc/httpd/conf.d/ssl.conf' to replace the existing SSLCipherSuit
 
 # Minimize server tokens
 
-## About 
+## About
 
 ServerTokens display information about the web server version, the host system and various other things.
-Disabling [ServerTokens](http://httpd.apache.org/docs/2.2/mod/core.html#servertokens) makes it harder for an attacker to gain information about the system running Monitor. 
+Disabling [ServerTokens](http://httpd.apache.org/docs/2.2/mod/core.html#servertokens) makes it harder for an attacker to gain information about the system running Monitor.
 
 ## How-to
 
@@ -77,7 +77,7 @@ This does not mitigate any known attacks, but can limit the amount of informatio
 
 This easter egg will show a picture if you add for example the following string to the end of the URL ?=PHPE9568F36-D428-11d2-A769-00AA001ACF42
 
-Here is the pictures that can be shown: 
+Here is the pictures that can be shown:
 
 ## How-to
 
@@ -101,7 +101,7 @@ to the [mysqld] section of /etc/my.cnf
 
 # Install SSL certificates from a trusted CA
 
-## About 
+## About
 
 op5 Monitor ships with a self signed certificate for HTTPS, it's recommended to either install this CA on your computers or install a new certificate that's signed by a trusted CA.
 
@@ -111,7 +111,7 @@ Read the "SSL Certificate" paragraph in the server configuration chapter of the 
 
 # Configure a firewall on the host system
 
-## About 
+## About
 
 The Monitor installer currently disables the built in Linux firewall, iptables. A list of ports used by Monitor and LogServer can be found in chapter in the "*[Installation preparation guide](http://www.op5.com/manuals/extras/op5_installation_preparation_guide.pdf)*", paragraph 3.5**
 **
@@ -120,11 +120,9 @@ The Monitor installer currently disables the built in Linux firewall, iptables. 
 
 Insert desired rules in the iptables configuration file, /etc/sysconfig/iptables, and reload the firewall
 
- 
-
 # Disable passive check information on services that don't need it
 
-## About 
+## About
 
 The standard behavior in Monitor is that all services will accept passive check information.
 This could result in tampered check results if an attacker would get access to a host which is trusted to submit passive results via NSCA or similar.
@@ -135,11 +133,9 @@ Select the *"Stop accepting passive checks for this service"* on the status deta
 
 ![](attachments/6193759/10191069.png)
 
- 
-
 # Configure sudo for privileges separation
 
-## About 
+## About
 
 If multiple users need shell-access to the host system and root-privileges, the *sudo* utility is recommended for traceability and credential separation.
 
@@ -147,7 +143,7 @@ You can find more information about configuring *sudo* [here](http://www.cyberci
 
 # Configure a different port for SSH access
 
-## About 
+## About
 
 Changing the default port for SSH access to host system might protect/obscure you from automated network scanners and brute-force scripts.
 
@@ -165,14 +161,13 @@ Please remember that your remote session will get disconnected and firewalls and
 
 # Develop a password policy
 
-## About 
+## About
 
 As of today, OP5 Monitors (internal) authentication system does not support a password policy system. It's recommended to connect OP5 Monitor to a directory service (e.g. Microsoft Active Directory) that supports password policy routines.
 
 # Audit the plugins you install
 
-## About 
+## About
 
 Plugins in the OP5 Monitor system are actually programs and scripts that are executed locally on the host system as the *monitor* user.
 If you use third-party or internally developed plugins you should try to audit the code, verify that argument handling is being properly escaped and similar.
-

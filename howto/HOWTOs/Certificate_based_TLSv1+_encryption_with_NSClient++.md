@@ -6,8 +6,6 @@ This article was written for version 0.4.4 of NSClient++. Versions 0.3.x and ear
 
 Articles in the Community-Space are not supported by OP5 Support.
 
- 
-
 As per default encrypted communication with NRPE & NSClient++ is using ADH cipher ([Anonymous Diffie Hellman](https://wiki.openssl.org/index.php/Diffie_Hellman#Diffie-Hellman_in_SSL.2FTLS)) and a static predefined 512bit DH key.
 To achieve a more secure encryption method with a better cipher, ability to disable SSLv2 & SSLv3, we need to create certificates, reconfigure the agent and upgrade check\_nrpe used for NRPE checks in OP5 Monitor.
 
@@ -78,13 +76,13 @@ UNDEFINED KEY
 
 Here's a quick explanation about each setting.
 
--   allowed cipher - Here we change from only allowing ADH to allow all ciphers except ADH and some other insecure cipher methods, and then sort the ciphers based on strength with @STRENGTH.
--   ca - Point to the ca-certificate, \${certificate-path} is by default pointing to  **C:\\Program Files\\NSClient++\\security**.
--   certificate - Point to the client certificate.
--   certificate key - Point to the private key that belongs to the client certificate.
--   dh - Since we're going to stop using ADH with a static DH key, we simply remove this option.
--   insecure - this setting is used because of legacy NRPE, since the next step is to upgrade and replace check\_nrpe we change this to **false**
--   ssl options - Here I'm adding no-sslv2 & no-sslv3 to disable the possibility to use these since they're considered to be insecure. Now we're only allowing TLSv1+
+- allowed cipher - Here we change from only allowing ADH to allow all ciphers except ADH and some other insecure cipher methods, and then sort the ciphers based on strength with @STRENGTH.
+- ca - Point to the ca-certificate, \${certificate-path} is by default pointing to  **C:\\Program Files\\NSClient++\\security**.
+- certificate - Point to the client certificate.
+- certificate key - Point to the private key that belongs to the client certificate.
+- dh - Since we're going to stop using ADH with a static DH key, we simply remove this option.
+- insecure - this setting is used because of legacy NRPE, since the next step is to upgrade and replace check\_nrpe we change this to **false**
+- ssl options - Here I'm adding no-sslv2 & no-sslv3 to disable the possibility to use these since they're considered to be insecure. Now we're only allowing TLSv1+
 
 *Don't forget to restart the NSClient++ service after the changes are done, or else they won't take effect.*
 
@@ -109,18 +107,14 @@ Next thing is to configure and compile check\_nrpe. The compiled binary will be
 cd nrpe-3.0.1
 ./configure --enable-command-args
 make check\_nrpe
-cp src/check\_nrpe /opt/plugins/custom/check\_nrpe\_v3 
-
- 
+cp src/check\_nrpe /opt/plugins/custom/check\_nrpe\_v3
 
 It's not possible to just replace the existing check\_nrpe without changing / creating new checks. The reason is the -s flag that's used in all the default OP5 check\_nrpe command checks, which forces encryption, now has a different purpose in version 3.0+.
-I recommend that you create new custom command checks because the default ones shipped with OP5 Monitor might be reset & overwritten during an update. 
+I recommend that you create new custom command checks because the default ones shipped with OP5 Monitor might be reset & overwritten during an update.
 
 To give an example, below check for CPU usage on Windows, I've only removed the -s flag from the original check command. This will work against your new NSClient++ setup, using TLSv1+ without ADH cipher.
 
 ./check\_nrpe\_v3 -H HOSTNAME/IP -c CheckCPU -a ShowAll=long MaxWarn=80% MaxCrit=90%
-
- 
 
 And that's it, you're done and are now using a proper encrypted TLS connection between your OP5 Monitor and the monitored host. Compared to the legacy check\_nrpe there are several new options and possibilities to specify settings for the encryption and even certificate based authentication.
 
@@ -131,15 +125,11 @@ Last Modified: 09-08-2016
 License: GPL v2 with exemptions (-l for more info)
 SSL/TLS Available: OpenSSL 0.9.6 or higher required
 
- 
-
 Usage: check\_nrpe -H \<host\> [-2] [-4] [-6] [-n] [-u] [-V] [-l] [-d \<dhopt\>]
  [-P \<size\>] [-S \<ssl version\>] [-L \<cipherlist\>] [-C \<clientcert\>]
  [-K \<key\>] [-A \<ca-certificate\>] [-s \<logopts\>] [-b \<bindaddr\>]
  [-f \<cfg-file\>] [-p \<port\>] [-t \<interval\>:\<state\>]
  [-c \<command\>] [-a \<arglist...\>]
-
- 
 
 Options:
 
@@ -174,16 +164,12 @@ Options:
  separated by a space. If provided, this must be the last
  option supplied on the command line.
 
- 
-
 NEW TIMEOUT SYNTAX
  -t \<interval\>:\<state\>
  \<interval\> = Number of seconds before connection times out (default=10)
  \<state\> = Check state to exit with in the event of a timeout (default=CRITICAL)
  Timeout state must be a valid state name (case-insensitive) or integer:
  (OK, WARNING, CRITICAL, UNKNOWN) or integer (0-3)
-
- 
 
 Note:
 This plugin requires that you have the NRPE daemon running on the remote host.
@@ -193,6 +179,3 @@ with the [command] option you are specifying here. Upon receipt of the
 send the plugin output and return code back to \*this\* plugin. This allows you
 to execute plugins on remote hosts and 'fake' the results to make Nagios think
 the plugin is being run locally.
-
- 
-

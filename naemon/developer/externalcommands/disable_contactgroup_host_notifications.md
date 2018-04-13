@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_CONTACTGROUP_HOST_NOTIFICATIONS<br>
 
-
 #### Command Format:
 
 `DISABLE_CONTACTGROUP_HOST_NOTIFICATIONS;contactgroup_name`
@@ -29,6 +28,3 @@ Disables host notifications for all contacts in a particular contactgroup.
 
 printf "[%lu] DISABLE_CONTACTGROUP_HOST_NOTIFICATIONS;contactgroup1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

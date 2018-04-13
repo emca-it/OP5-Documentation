@@ -2,9 +2,6 @@
 
 Network related check such as check_ping.
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the CheckNet module.
@@ -17,20 +14,12 @@ A list of all available queries (check commands)
 |---------------------------|-----------------------------------------|
 | [check_ping](#check_ping) | Ping another host and check the result. |
 
-
-
-
 ### check_ping
 
 Ping another host and check the result.
 
-
 * [Command-line Arguments](#check_ping_options)
 * [Filter keywords](#check_ping_filter_keys)
-
-
-
-
 
 <a name="check_ping_warn"/>
 <a name="check_ping_crit"/>
@@ -46,7 +35,6 @@ Ping another host and check the result.
 <a name="check_ping_hosts"/>
 <a name="check_ping_options"/>
 #### Command-line Arguments
-
 
 | Option                                     | Default Value                                     | Description                                                                                                      |
 |--------------------------------------------|---------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -76,20 +64,16 @@ Ping another host and check the result.
 | [count](#check_ping_count)                 | 1                                                 | Number of packets to send.                                                                                       |
 | [timeout](#check_ping_timeout)             | 500                                               | Timeout in milliseconds.                                                                                         |
 
-
-
 <h5 id="check_ping_filter">filter:</h5>
 
 Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
 <h5 id="check_ping_warning">warning:</h5>
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
-
 
 *Default Value:* `time > 60 or loss > 5%`
 
@@ -98,15 +82,12 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
 *Default Value:* `time > 100 or loss > 10%`
 
 <h5 id="check_ping_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_ping_empty-state">empty-state:</h5>
 
@@ -119,7 +100,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_ping_top-syntax">top-syntax:</h5>
 
@@ -172,10 +152,8 @@ Timeout in milliseconds.
 
 *Default Value:* `500`
 
-
 <a name="check_ping_filter_keys"/>
 #### Filter keywords
-
 
 | Option        | Description                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -199,7 +177,3 @@ Timeout in milliseconds.
 | total         | Total number of items. Common option for all checks.                                                         |
 | warn_count    | Number of items matched the warning criteria. Common option for all checks.                                  |
 | warn_list     | A list of all items which matched the warning criteria. Common option for all checks.                        |
-
-
-
-

@@ -23,11 +23,11 @@ Page links
 
 Quick links to other information about the host
 
--   -   Status detail list all services on this host.
-    -   Alert history show the alert log if the host.
-    -   Alert histogram show a graphical view, or trend, of the problems on the host.
-    -   Availability report of the host.
-    -   Notifications shows all notifications that has been sent out about this host.
+- Status detail list all services on this host.
+  - Alert history show the alert log if the host.
+  - Alert histogram show a graphical view, or trend, of the problems on the host.
+  - Availability report of the host.
+  - Notifications shows all notifications that has been sent out about this host.
 
 2
 
@@ -35,12 +35,12 @@ Host information header
 
 Displays brief information about the host and its surroundings like
 
--   -   Host name and address.
-    -   Parent host.
-    -   Hostgroup membership
-    -   Extra actions and notes.
-    -   Links to configure and graphs.
-    -   Host notifications.
+- Host name and address.
+  - Parent host.
+  - Hostgroup membership
+  - Extra actions and notes.
+  - Links to configure and graphs.
+  - Host notifications.
 
 3
 
@@ -48,10 +48,10 @@ Host state information
 
 Here you can see status information for the host like
 
--   Current status.
--   Current attempt.
--   Last state changes and notification.
--   What is enabled or not on this host.
+- Current status.
+- Current attempt.
+- Last state changes and notification.
+- What is enabled or not on this host.
 
 4
 
@@ -65,8 +65,6 @@ Comments
 
 Manually added comments and comments from the system are shown here.
 
- 
-
 # Page links
 
 The page links gives you a couple of shortcuts to more information about this host and its services.
@@ -78,12 +76,12 @@ Here you will get a short summary of the host.
 ![](attachments/16482322/16679307.png)
  The host header information contains
 
--   -   the host address.
-    -   the parent host.
-    -   what host groups it's member of.
-    -   what group will get the notifications for this host.
-    -   links to extra service actions, service notes and the performance graphs.
-    -   a link to the object in the configuration GUI.
+- the host address.
+  - the parent host.
+  - what host groups it's member of.
+  - what group will get the notifications for this host.
+  - links to extra service actions, service notes and the performance graphs.
+  - a link to the object in the configuration GUI.
 
 # Host state information
 
@@ -94,14 +92,14 @@ In this view you get all kind of status information about the host. This is the 
 
 The host commands part gives you a various commands to handle the host. Here you can
 
--   -   locate the host in a status map
-    -   add a host comment
-    -   re-schedule the next check for this host
-    -   disable and enable active and passive checks
-    -   disable and enable notifications
-    -   schedule downtime
-    -   disable and enable event handlers.
-    -   send custom notifications
+- locate the host in a status map
+  - add a host comment
+  - re-schedule the next check for this host
+  - disable and enable active and passive checks
+  - disable and enable notifications
+  - schedule downtime
+  - disable and enable event handlers.
+  - send custom notifications
 
 ![](attachments/16482322/16679310.png)
 
@@ -109,13 +107,13 @@ The host commands part gives you a various commands to handle the host. Here you
 
 There are two types of comments:
 
--   automatically added
--   manually added
+- automatically added
+- manually added
 
 Automatically added comments can be:
 
--   acknowledged comments
--   scheduled downtime comments
+- acknowledged comments
+- scheduled downtime comments
 
 As a manually added comment you can type in almost anything you like.
  ![](attachments/16482322/16679309.png)
@@ -140,13 +138,13 @@ Page links
 
 Quick links to other information about the service and the host it is connected to.
 
--   Information for this host.
--   Status details for the host.
--   Status detail list all services on this host.
--   Alert history show the alert log if the service.
--   Alert histogram show a graphical view, or trend, of the problems on the service.
--   Availability report of the service.
--   Notifications shows all notifications that has been sent out about this service.
+- Information for this host.
+- Status details for the host.
+- Status detail list all services on this host.
+- Alert history show the alert log if the service.
+- Alert histogram show a graphical view, or trend, of the problems on the service.
+- Availability report of the service.
+- Notifications shows all notifications that has been sent out about this service.
 
 2
 
@@ -154,10 +152,10 @@ Service information header
 
 Displays brief information about the service, host and its surroundings like
 
--   Host name and address.
--   What service groups the service belongs to.
--   Extra actions and notes.
--   Links to configuration and graphs.
+- Host name and address.
+- What service groups the service belongs to.
+- Extra actions and notes.
+- Links to configuration and graphs.
 
 3
 
@@ -165,10 +163,10 @@ Service state information
 
 Here you can see status information for the service like
 
--   Current status.
--   Current attempt.
--   Last state changes and notification.
--   What is enabled or not on this service.
+- Current status.
+- Current attempt.
+- Last state changes and notification.
+- What is enabled or not on this service.
 
 4
 
@@ -195,12 +193,12 @@ Here you will get a short summary of the service.
 ![](attachments/16482322/16679253.png)
  Here you may see things like
 
--   -   What host it belongs to.
-    -   The service groups it is a member of.
-    -   What contact groups that will get the notifications.
-    -   Service notes.
-    -   Links to extra service actions, service notes and performance graphs.
-    -   A link to the object in the configuration GUI.
+- What host it belongs to.
+  - The service groups it is a member of.
+  - What contact groups that will get the notifications.
+  - Service notes.
+  - Links to extra service actions, service notes and performance graphs.
+  - A link to the object in the configuration GUI.
 
 # Service state information
 
@@ -211,13 +209,13 @@ In this view you get all kind of status information about the host. This is the 
 
 The service commands part gives you a various commands to handle the service. Here you can
 
--   -   Disable and enable active and passive checks
-    -   Reschedule the service check
-    -   Disable and enable notifications
-    -   Schedule downtime
-    -   Disable and enable event handlers.
-    -   Submit a service comment
-    -   Send custom notification
+- Disable and enable active and passive checks
+  - Reschedule the service check
+  - Disable and enable notifications
+  - Schedule downtime
+  - Disable and enable event handlers.
+  - Submit a service comment
+  - Send custom notification
 
 ![](attachments/16482322/16679251.png)
 
@@ -225,13 +223,12 @@ The service commands part gives you a various commands to handle the service. He
 
 There are two types of comments:
 
--   -   Automatically added
-    -   Manually added
-    -   Automatically added comments can be
-    -   acknowledged comments
-    -   scheduled downtime comments
+- Automatically added
+  - Manually added
+  - Automatically added comments can be
+  - acknowledged comments
+  - scheduled downtime comments
 
 As a manually added comment you can type in almost anything you like.
  ![](attachments/16482322/16679252.png)
  Comments are designed to be short texts. If you would like to add documentation, longer descriptions and so on you should consider using the [Dokuwiki](Dokuwiki) that is included in OP5 Monitor.
-

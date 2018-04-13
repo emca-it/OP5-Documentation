@@ -128,28 +128,28 @@ For instance for `check_cpu` we have.
 
 Check related keywords:
 
--   core
--   core_id
--   idle
--   kernel
--   load
--   time
+- core
+- core_id
+- idle
+- kernel
+- load
+- time
 
 Generic keywords:
 
--   count
--   total
--   ok_count
--   warn_count
--   crit_count
--   problem_count
--   list
--   ok_list
--   warn_list
--   crit_list
--   problem_list
--   detail_list
--   status
+- count
+- total
+- ok_count
+- warn_count
+- crit_count
+- problem_count
+- list
+- ok_list
+- warn_list
+- crit_list
+- problem_list
+- detail_list
+- status
 
 The check related keywords are always unique where as the generic ones are there for all checks and usually work on the data set (aggregation).
 One other thing to know about keywords are that they are typed and there is coercion.
@@ -177,9 +177,9 @@ The last common topic we will discuss is syntax.
 Syntax is responsible for the message which is used in the check result. Thus it has no effect at all on the actual check result but nice messages makes problem easier to understand.
 The syntax configuration is split up into three main keywords:
 
--   top-syntax
--   detail-syntax
--   ok-syntax
+- top-syntax
+- detail-syntax
+- ok-syntax
 
 The top-syntax defines the overall message whereas the detail-syntax defines how each entry is formatted.
 The actual values are similar to what we saw before in the filter and warning/critical thresholds.
@@ -226,7 +226,6 @@ By default when we run a check only values which are bad are included in the mes
 For instance if the CPU load had been above the warning threshold we would have seen the value included in the message.
 Now show-all is not magical it only modifies the top-syntax replacing `%(problem_list)` with `%(list)`.
 This is something you could have achieved yourself but show-all makes it simpler as well as makes intent much clearer.
-
 
 ## Performance data
 
@@ -338,12 +337,12 @@ Now this is not what we expected: right?
 Why did the 5:ages get back? End even worse why were they renamed "c:".
 The reason for this is simple. Selection is done on multiple levels. We match (in the following order)
 
-1.  `prefix.object.suffix`
-2.  `prefix.object`
-3.  `object.suffix`
-4.  `prefix`
-5.  `suffix`
-6.  `object`
+1. `prefix.object.suffix`
+2. `prefix.object`
+3. `object.suffix`
+4. `prefix`
+5. `suffix`
+6. `object`
 
 So what are the various suffixes and prefixes?
 Well in the case of `check_drivesize` they are:

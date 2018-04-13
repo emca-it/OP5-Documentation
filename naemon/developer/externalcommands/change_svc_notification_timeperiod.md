@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_SVC_NOTIFICATION_TIMEPERIOD<br>
 
-
 #### Command Format:
 
 `CHANGE_SVC_NOTIFICATION_TIMEPERIOD;host_name;service_description;notification_timeperiod`
@@ -29,6 +28,3 @@ Changes the service notification timeperiod to what is specified by the 'notific
 
 printf "[%lu] CHANGE_SVC_NOTIFICATION_TIMEPERIOD;host1;service1;24x7\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

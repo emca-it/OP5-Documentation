@@ -11,15 +11,15 @@ A listview is divided into two parts - the first is a top banner that contains a
 
 The following views, or tables, uses listviews:
 
--   Hosts
--   Services
--   Hostgroups
--   Servicegroups
--   Comments
--   Scheduled Downtimes
--   Contacts
--   Notifications
--   Saved filters
+- Hosts
+- Services
+- Hostgroups
+- Servicegroups
+- Comments
+- Scheduled Downtimes
+- Contacts
+- Notifications
+- Saved filters
 
 # Columns
 
@@ -195,7 +195,7 @@ To change which columns to show in a table, you change the text "default" to a l
 </tbody>
 </table>
 
-### Log Messages 
+### Log Messages
 
 This is used by Logger.
 
@@ -247,11 +247,8 @@ List views support POSIX extended regular expressions as supported by MK Livesta
 
 Full list of columns that can be used in the filter language can be found on the page [Listview filter columns](https://kb.op5.com/display/GUI/Listview+filter+columns)
 
- 
-
 * * * * *
 
 ## Related pages
 
 Error rendering macro 'sv-contentbylabel' : null
-

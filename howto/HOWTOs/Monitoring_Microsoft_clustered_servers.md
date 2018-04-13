@@ -39,8 +39,3 @@ check_nt_service</td>
 </tr>
 </tbody>
 </table>
-
- 
-
- 
-

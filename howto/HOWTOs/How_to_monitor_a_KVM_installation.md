@@ -4,25 +4,25 @@ The purpose of this article is to describe how [op5 Monitor](http://www.op5.com/
 
 **Host specific **parameters**:**
 
--   Storage pool list
--   Storage pool volume usage
--   Running VM's
+- Storage pool list
+- Storage pool volume usage
+- Running VM's
 
 **VM specific **parameters**:**
 
--   CPU Usage
--   Memory Usage
--   Disk I/O
--   Network I/O
+- CPU Usage
+- Memory Usage
+- Disk I/O
+- Network I/O
 
 ## Prerequisites
 
--   Libvirt drivers need to be installed on both the OP5 Monitor server and on the target KVM host(s).
--   The plugin support several transport protocols. In this guideline we will explain how to use the SSH and TLS features.
-    -   If you want use SSH, you need to setup a key-based authentication for the *monitor* user on the OP5 Monitor server and the *root* user on the target KVM host (libvirt is usually running as root).
-    -   If you want use TLS  as communication protocol then you will need to generate client and server certificates. Please follow the [libvirt.org how-to](http://wiki.libvirt.org/page/TLSCreateCACert) for that. Be careful and follow all the steps in that how-to before you continue. Notice that the KVM host server is the *server* and the OP5 Monitor server is the *client* for the TLS communication.
--   All servers can be resolved in the DNS.
--   Update OP5 Monitor to get the latest plugin pack.
+- Libvirt drivers need to be installed on both the OP5 Monitor server and on the target KVM host(s).
+- The plugin support several transport protocols. In this guideline we will explain how to use the SSH and TLS features.
+  - If you want use SSH, you need to setup a key-based authentication for the *monitor* user on the OP5 Monitor server and the *root* user on the target KVM host (libvirt is usually running as root).
+  - If you want use TLS  as communication protocol then you will need to generate client and server certificates. Please follow the [libvirt.org how-to](http://wiki.libvirt.org/page/TLSCreateCACert) for that. Be careful and follow all the steps in that how-to before you continue. Notice that the KVM host server is the *server* and the OP5 Monitor server is the *client* for the TLS communication.
+- All servers can be resolved in the DNS.
+- Update OP5 Monitor to get the latest plugin pack.
 
 ## Check commands
 
@@ -177,4 +177,3 @@ root
 This plugin and these check\_command has been successfully tested on CentOS/RHEL v.5.5 and 6.x with KVM 2.x.
 
 More information about libvirt can be found at: [www.libvirt.org](http://www.libvirt.org/ "libvirt")
-

@@ -27,4 +27,3 @@ This service will now check for event-id 18456 in the Application log and warn y
 The complete documentation for CheckEventLog can be found here:
 
 <http://nsclient.org/nscp/wiki/CheckEventLog/check_eventlog>
-

@@ -38,8 +38,6 @@ alias
 
 address
 
- 
-
 template
 
 default-host-template (can be changed in the Settings page)
@@ -69,8 +67,6 @@ host\_name
 @
 
 service\_description
-
- 
 
 check\_command\_args
 
@@ -147,8 +143,3 @@ Immediately after job creation, or later at the job details page click on the �
 In OP5 Monitor the new service will look like in the diagram below.
 
 ![netrounds service in OP5 Monitor](attachments/688669/5242984.jpeg)
-
- 
-
- 
-

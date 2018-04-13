@@ -155,9 +155,6 @@ It's primarily intended to give sane defaults about how many jobs we
 can run, so we (in theory) can tell Naemon that we're swamped in case
 we run out of file descriptors or child processes.
 
-
-
-
 #### Requests
 A complete request looks like this (with C-style format codes
 replaced with actual values):
@@ -289,4 +286,3 @@ Step 4, Worker:
 ```
 
 Steps 3 and 4 in this chain repeat indefinitely.
-

@@ -19,7 +19,6 @@ ext | CheckExternalScripts | Any script which ix executed on command line       
 lua | LUAScripts           | Scripts written in the Lua language which is executed inside NSClient++ | Missing
 py  | PythonScripts        | Scripts written in the Python language running inside NSClient++        | Complete
 
-
 ## Security
 
 As a security mechanism only scripts residing in the configured `script root` folder is showed.
@@ -74,8 +73,6 @@ curl -s -k -u admin https://localhost:8443/api/v1/scripts |python -m json.tool
 ]
 ```
 
-
-
 ## List Scripts
 
 The API lists all available commands/scripts for a given runtime.
@@ -91,7 +88,6 @@ Privilege | scripts.lists.:runtime
 Key | Value        | Description
 ----|--------------|-----------------------------------------------------
 all | true / false | If all scripts should be listed (not activated ones)
-
 
 ### Request
 

@@ -11,4 +11,3 @@ How do I monitor Microsoft Windows performance counters, with OP5 Monitor?
 * * * * *
 
 The Monitoring and graphing Windows performance counters howto describes how this is done.
-

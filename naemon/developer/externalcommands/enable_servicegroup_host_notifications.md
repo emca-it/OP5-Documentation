@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_SERVICEGROUP_HOST_NOTIFICATIONS<br>
 
-
 #### Command Format:
 
 `ENABLE_SERVICEGROUP_HOST_NOTIFICATIONS;servicegroup_name`
@@ -29,6 +28,3 @@ Enables notifications for all hosts that have services that are members of a par
 
 printf "[%lu] ENABLE_SERVICEGROUP_HOST_NOTIFICATIONS;servicegroup1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

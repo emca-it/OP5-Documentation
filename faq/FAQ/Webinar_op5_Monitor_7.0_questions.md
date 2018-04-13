@@ -4,15 +4,9 @@
 
 You can download the presentation deck from our webinar: ***["What's new in OP5 Monitor 7.0" right here!](attachments/11632712/11567119.pdf)***
 
- 
-
 ### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
-
- 
-
- 
 
 #### Q1: So what happen to Logserver Product and what does it mean for Licensing using Logger in OP5 Monitor?
 
@@ -54,7 +48,7 @@ A: We do have an ongoing investigation to fix these issues. I hope that we have 
 
 A: There is no automatic import tool to migrate OP5 Logserver filters to OP5 Logger. The smart filter capabilities in OP5 Logger do use the same syntax as all other filters in OP5 Monitor so it is rather simple to manually convert them. We suggest you contact OP5 Professional Services to assure the best way way for your particular filters.
 
-#### Q10: Does the Logger cost extra, do we need an additional license? 
+#### Q10: Does the Logger cost extra, do we need an additional license?
 
 A: The Logger is an integrated feature in OP5 Monitor Enterprise+, so if you are running that version today it will be no additional cost. If you are running OP5 Monitor Enterprise (no plus) you will get the Logger functionality when upgrading to v7.0, however it will be limited to collect logs only from ”local host” i.e. the OP5 Monitor system. That enables you to test it etc. If you want to be able to collect logs from all over, you need to upgrade your system from OP5 Monitor Enterprise to Monitor Enterprise+, this will also give you Trapper.
 
@@ -114,7 +108,7 @@ A: The OP5 Mobile App works on 6.3 and later. Today that is 6.3.x and 7.0.
 
 A:  nsclient++ is developed outside op5, The latest version is 4.2
 
-#### Q23: Any changes to Nagvis or new module for it? 
+#### Q23: Any changes to Nagvis or new module for it?
 
 A: No not for the moment. Do you have any input of how you want it to work we highly appreciate your input.
 
@@ -122,13 +116,6 @@ A: No not for the moment. Do you have any input of how you want it to work we hi
 
 A: In many cases there is a possibility to use an IDS system that can log if there is suspicions traffic. By using OP5 Logger you can achieve monitoring of DDOS attacks.
 
- 
-
- 
-
 ### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
-
- 
-

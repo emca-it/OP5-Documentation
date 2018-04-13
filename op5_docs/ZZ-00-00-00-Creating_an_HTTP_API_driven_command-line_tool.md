@@ -12,10 +12,6 @@ The current HTTP API command support will become deprecated though remain functi
 
 We are in the process of revising the command API structure into a better substitute.
 
- 
-
- 
-
 ## About
 
 This how-to was made for you to learn how to build your own tool for executing remote commands against the HTTP API, you may download the finished script directly and utilize it as you wish without warranty or support, we do highly recommend you to read through the guide to gain the knowledge of maintaining and extending the script. To follow this guide it is recommended that you have a basic grasp of Linux and PHP.
@@ -40,34 +36,32 @@ This theoretical command that we will put into practice during this guide will l
 op5remote result host;service 0 "This service is a-okay"
 ```
 
--   [About](#CreatinganHTTPAPIdrivencommand-linetool-About)
-    -   [Why use the HTTP API when we have NSCA available?](#CreatinganHTTPAPIdrivencommand-linetool-WhyusetheHTTPAPIwhenwehaveNSCAavailable?)
--   [Command line](#CreatinganHTTPAPIdrivencommand-linetool-Commandline)
--   [Creating a tool for the job](#CreatinganHTTPAPIdrivencommand-linetool-Creatingatoolforthejob)
-    -   [Error handling](#CreatinganHTTPAPIdrivencommand-linetool-Errorhandling)
--   [Generalizing](#CreatinganHTTPAPIdrivencommand-linetool-Generalizing)
-    -   [Extending](#CreatinganHTTPAPIdrivencommand-linetool-Extending)
--   [Installation](#CreatinganHTTPAPIdrivencommand-linetool-Installation)
--   [Summary](#CreatinganHTTPAPIdrivencommand-linetool-Summary)
-    -   [Acknowledge hosts](#CreatinganHTTPAPIdrivencommand-linetool-Acknowledgehosts)
-    -   [Acknowledge services](#CreatinganHTTPAPIdrivencommand-linetool-Acknowledgeservices)
-    -   [Submit passive host results](#CreatinganHTTPAPIdrivencommand-linetool-Submitpassivehostresults)
-    -   [Submit passive service results](#CreatinganHTTPAPIdrivencommand-linetool-Submitpassiveserviceresults)
--   [The finished tool](#CreatinganHTTPAPIdrivencommand-linetool-Thefinishedtool)
+- [About](#CreatinganHTTPAPIdrivencommand-linetool-About)
+  - [Why use the HTTP API when we have NSCA available?](#CreatinganHTTPAPIdrivencommand-linetool-WhyusetheHTTPAPIwhenwehaveNSCAavailable?)
+- [Command line](#CreatinganHTTPAPIdrivencommand-linetool-Commandline)
+- [Creating a tool for the job](#CreatinganHTTPAPIdrivencommand-linetool-Creatingatoolforthejob)
+  - [Error handling](#CreatinganHTTPAPIdrivencommand-linetool-Errorhandling)
+- [Generalizing](#CreatinganHTTPAPIdrivencommand-linetool-Generalizing)
+  - [Extending](#CreatinganHTTPAPIdrivencommand-linetool-Extending)
+- [Installation](#CreatinganHTTPAPIdrivencommand-linetool-Installation)
+- [Summary](#CreatinganHTTPAPIdrivencommand-linetool-Summary)
+  - [Acknowledge hosts](#CreatinganHTTPAPIdrivencommand-linetool-Acknowledgehosts)
+  - [Acknowledge services](#CreatinganHTTPAPIdrivencommand-linetool-Acknowledgeservices)
+  - [Submit passive host results](#CreatinganHTTPAPIdrivencommand-linetool-Submitpassivehostresults)
+  - [Submit passive service results](#CreatinganHTTPAPIdrivencommand-linetool-Submitpassiveserviceresults)
+- [The finished tool](#CreatinganHTTPAPIdrivencommand-linetool-Thefinishedtool)
 
 ## Command line
 
 To start of this article we will check what is required to submit a passive check result using HTTP API over the command line. For information about this follow these steps:
 
-1.  Navigate to "**\<your monitor host\>/api**"
-2.  Log in
-3.  Click "**Command**" in the left-side menu
-4.  Then "**PROCESS\_SERVICE\_CHECK\_RESULT**"
+1. Navigate to "**\<your monitor host\>/api**"
+2. Log in
+3. Click "**Command**" in the left-side menu
+4. Then "**PROCESS\_SERVICE\_CHECK\_RESULT**"
     1.  (or navigate directly to "/api/help/command/**PROCESS\_SERVICE\_CHECK\_RESULT**")
 
 This will show you the HTTP API help page for submitting a passive check result for services (see image), looking down at the page you are supplied with multiple examples but we will look at the command line cURL example which looks like the following command
-
- 
 
 ![](attachments/14648649/14778467.png)
 
@@ -107,7 +101,7 @@ This script is unsupported by op5, if you find errors it should be reported as s
  * output "OK: Everything is fine and dandy".
  */
 
-// To keep static information separated and easily accessible when customizing the 
+// To keep static information separated and easily accessible when customizing the
 // script for a new host or user we set monitor host, user and password here.
 define('MONITOR_HOST', '<your monitor host>');
 define('MONITOR_USER', '<your monitor user>');
@@ -210,7 +204,7 @@ $host = $key[0];
 // for setting values or defaults, in simple terms think of them as
 // (if) ? then : else, in this case if $key[1] isset, assign that to
 // $service else assign false to service, since no service description
-// was supplied. 
+// was supplied.
 $service = (isset($key[1])) ? $key[1] : false;
 /**
  * Validate that status_code and plugin_output are set, if status_code is not an
@@ -533,8 +527,3 @@ This script is unsupported by op5, if you find errors it should be reported as s
 op5 Remote Source
 
 Download: [op5remote.tar.gz](attachments/14648649/14778471.gz)
-
- 
-
- 
-

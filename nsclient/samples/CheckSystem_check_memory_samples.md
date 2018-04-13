@@ -8,7 +8,6 @@ OK memory within bounds.
 
 Using --show-all **to show the result**:
 
-
 ```
 check_memory "warn=free < 20%" "crit=free < 10G" --show-all
 page = 8.05G, physical = 7.85G

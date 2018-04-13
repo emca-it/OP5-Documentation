@@ -4,9 +4,9 @@
 
 OP5 Monitor comes with a REST API. It lets you configure, get status information, and get report data by issuing regular HTTP requests. The workflow should be familiar to anyone that has used a REST API:
 
--   You visit a URI;
--   This triggers the OP5 Monitor web server to get Naemon query handle or another aspect of OP5 to give or take information;
--   The web server replies with Monitor's results.
+- You visit a URI;
+- This triggers the OP5 Monitor web server to get Naemon query handle or another aspect of OP5 to give or take information;
+- The web server replies with Monitor's results.
 
 The response can be formatted as HTML, JSON, or XML.
 
@@ -14,7 +14,7 @@ For more information about the REST API go to [API help page](https://demo%40op
 
 This document does not attempt to replace those pages, as they are kept updated with each API improvement. Instead we want this to give a better idea of how each subsection can help you, how to find what you need more quickly by understanding the subsections.
 
-Note also that there is still a section for Status API. This has been obsolete since OP5 Monitor version 6.3, replaced by the Filter queries (which get their data more directly from the databases). We will remove this section in an upcoming release. 
+Note also that there is still a section for Status API. This has been obsolete since OP5 Monitor version 6.3, replaced by the Filter queries (which get their data more directly from the databases). We will remove this section in an upcoming release.
 
 # HTTP Filter API
 
@@ -27,14 +27,14 @@ There are two sections within the filter API: filter and count --
 By using filter you will get the whole list of object within the filter.
 
 Example: To view hosts that are not OK --
-`https://{your.op5.monitor}/api/filter/query?query=[hosts]%20state!=0&columns=name,state,acknowledged,has_been_checked` 
+`https://{your.op5.monitor}/api/filter/query?query=[hosts]%20state!=0&columns=name,state,acknowledged,has_been_checked`
 
 ## Count
 
 Count will return the count of objects in the filter search.
 
 Example: To get a count of the objects using the same query as above --
-`https://{your.op5.monitor}/api/filter/count?query=[hosts]%20state!=0&columns=name,state,acknowledged,has_been_checked` 
+`https://{your.op5.monitor}/api/filter/count?query=[hosts]%20state!=0&columns=name,state,acknowledged,has_been_checked`
 
 This is an example of how a query might look like, in this example we will fetch hosts that are down, not acknowledged and not in scheduled downtime
  https://demo.op5.com/api/filter/query?query=[hosts] state != 0 and acknowledged = 0 and scheduled\_downtime\_depth = 0
@@ -80,7 +80,7 @@ curl_setopt($a_handle, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($a_handle, CURLOPT_POSTFIELDS, $data);
 curl_setopt($a_handle, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 curl_setopt($a_handle, CURLOPT_SSL_VERIFYPEER, false);
-$host = curl_exec($a_handle); 
+$host = curl_exec($a_handle);
 $data = json_encode(array(
 'check_command' => 'check_ping',
 'service_description' => 'ping',
@@ -128,5 +128,3 @@ or:
 
 The dollar sign ('\$') requires single quoting depending on the environment (in bash, it will always need to be quoted). The first way of calling the API will still work, provided that you want to authenticate against the default driver. To select a different default authentication driver, use the **Configure -\> Auth Modules** section in the GUI.**
 **
-
-

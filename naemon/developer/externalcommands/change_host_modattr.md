@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_HOST_MODATTR<br>
 
-
 #### Command Format:
 
 `CHANGE_HOST_MODATTR;host_name;value`
@@ -29,6 +28,3 @@ This command changes the modified attributes value for the specified host. Modif
 
 printf "[%lu] CHANGE_HOST_MODATTR;host1;0\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

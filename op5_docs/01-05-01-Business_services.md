@@ -2,7 +2,7 @@
 
 # About
 
-A business object is a group that can be populated with hosts and services from hosts and host groups. 
+A business object is a group that can be populated with hosts and services from hosts and host groups.
 It is also possible to add sub-groups that can have their own rule-set.
 
 # Creating a new group
@@ -159,4 +159,3 @@ When creating a SLA or Availability report out of a BSM top level element that h
  ![](attachments/16482357/16679151.png)
  When the report is generated the event will be included in the report.
  ![](attachments/16482357/16679154.png)
-

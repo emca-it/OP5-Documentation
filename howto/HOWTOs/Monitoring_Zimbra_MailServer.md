@@ -14,9 +14,9 @@ This how-to will help you monitor Zimbra 8 MailServer. This how-to is tested wit
 
 Before we start there are a couple of things that needs to be working.
 
--   Working Zimbra installation 
--   NRPE should be installed on the Zimbra server and allowing connections from the OP5 Monitor server.
--   You need root access to the Zimbra server 
+- Working Zimbra installation
+- NRPE should be installed on the Zimbra server and allowing connections from the OP5 Monitor server.
+- You need root access to the Zimbra server
 
 # About
 
@@ -26,9 +26,9 @@ This how-to require a plugin to be installed on the server and special sudo perm
 
 # Installing plugin
 
-1.  Copy [this script](attachments/12190176/12386383.pl) to the folder /opt/plugins/custom on your Zimbra server.
-2.  Change the permissions to 755 on the script.
-3.  Modify the sudo permissions with the command *vimudo*
+1. Copy [this script](attachments/12190176/12386383.pl) to the folder /opt/plugins/custom on your Zimbra server.
+2. Change the permissions to 755 on the script.
+3. Modify the sudo permissions with the command *vimudo*
     1.  Add the following lines to the configuration
 
         ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
@@ -36,7 +36,7 @@ This how-to require a plugin to be installed on the server and special sudo perm
         nobody ALL=NOPASSWD:/opt/plugins/custom/check_zmstatus.pl
         ```
 
-        This will allow the zimbra user to execute the zmcontrol command. 
+        This will allow the zimbra user to execute the zmcontrol command.
 
     2.  Save the configuration
 
@@ -68,7 +68,7 @@ Edit the file /opt/plugins/utils.pm on the Zimbra server, change the line
 $PATH_TO_MAILQ   = "";
 ```
 
-to 
+to
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 $PATH_TO_MAILQ   = "/opt/zimbra/postfix-2.11.1.2z/sbin/mailq";
@@ -76,11 +76,10 @@ $PATH_TO_MAILQ   = "/opt/zimbra/postfix-2.11.1.2z/sbin/mailq";
 
 Verify the path so that that it corresponds with your Zimbra installation.
 
-This will allow the plugin check\_mailq to find the path to you mail queue folder. 
+This will allow the plugin check\_mailq to find the path to you mail queue folder.
 
 # Add Management Pack
 
-In [this Management Pack](attachments/12190176/12386385.json) all services are defined. Add the management pack using Management pack manager under Configure.  
+In [this Management Pack](attachments/12190176/12386385.json) all services are defined. Add the management pack using Management pack manager under Configure.
 
 Depending on the services you make available on you Mailserver some services perhaps needs modification.
-

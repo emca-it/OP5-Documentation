@@ -22,13 +22,11 @@ $username = "<op5 username>"
 $password = "<op5 password>"
 $host = @{
     "host_name" = "<hostname>"
-    "address" = "<ip of host>" 
+    "address" = "<ip of host>"
 }
 $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $username,$password)))
 Invoke-RestMethod -Method Post -Uri "$endpoint" -Body (ConvertTo-Json $host) -Headers @{Authorization=("Basic {0}" -f $base64AuthInfo)} -ContentType "application/json"
 ```
-
- 
 
 ## GET request
 
@@ -44,9 +42,6 @@ $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0
 Invoke-RestMethod -Method Get -Uri "$endpoint" -Headers @{Authorization=("Basic {0}" -f $base64AuthInfo)}
 ```
 
- 
-
 Note:
 
 The invidivual code blocks above are intended to be saved in files and then executed over powershell.
-

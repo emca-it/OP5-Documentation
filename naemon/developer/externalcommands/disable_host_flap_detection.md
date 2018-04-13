@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_HOST_FLAP_DETECTION<br>
 
-
 #### Command Format:
 
 `DISABLE_HOST_FLAP_DETECTION;host_name`
@@ -29,6 +28,3 @@ Disables flap detection for the specified host.
 
 printf "[%lu] DISABLE_HOST_FLAP_DETECTION;host1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

@@ -6,8 +6,6 @@
 
 Why do I get package conflicts with the NRPE package when installing or upgrading OP5 Monitor on Red Hat Enterprise Linux 6?
 
- 
-
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 Error: Package: op5-monitor-2016.d.1-op5.1.el6.noarch
     (@op5-monitor-updates)
@@ -42,7 +40,7 @@ The most probable cause is that the Epel-repository is enabled on the host syste
 /etc/yum.repos.d/epel.repo
 ```
 
-1.  Change the setting enabled=1 to enabled=0 on all positions in the file:
+1. Change the setting enabled=1 to enabled=0 on all positions in the file:
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     [epel]
@@ -52,14 +50,11 @@ The most probable cause is that the Epel-repository is enabled on the host syste
     failovermethod=priority
     enabled=0
     gpgcheck=1
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7   
+    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
     ```
 
-2.  Save the file and clear the yum cache and initiate the installation or upgrade again:
+2. Save the file and clear the yum cache and initiate the installation or upgrade again:
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
     # yum clean all
     ```
-
- 
-

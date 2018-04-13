@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_SVC_FLAP_DETECTION<br>
 
-
 #### Command Format:
 
 `ENABLE_SVC_FLAP_DETECTION;host_name;service_description`
@@ -29,6 +28,3 @@ Enables flap detection for the specified service. In order for the flap detectio
 
 printf "[%lu] ENABLE_SVC_FLAP_DETECTION;host1;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

@@ -23,4 +23,3 @@ The steps are as follows:
 4. Write scripts to process hosts.cfg and services.cfg and remove the settings for contact groups as well as change templates. (All services in services.cfg are grouped by host.)
 
 In this way, it will, in the future, be easy to change the configuration by changing the contact group in the host and service templates instead of individual host and service objects.
-

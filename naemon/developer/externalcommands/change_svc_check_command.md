@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_SVC_CHECK_COMMAND<br>
 
-
 #### Command Format:
 
 `CHANGE_SVC_CHECK_COMMAND;host_name;service_description;check_command`
@@ -29,6 +28,3 @@ Changes the check command for a particular service to be that specified by the '
 
 printf "[%lu] CHANGE_SVC_CHECK_COMMAND;host1;service1;check_ping\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

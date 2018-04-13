@@ -11,6 +11,3 @@ Can OP5 Monitor my SAN?
 * * * * *
 
 Yes, almost all SAN solutions is possible to monitor, normally by using SNMP.
-
- 
-

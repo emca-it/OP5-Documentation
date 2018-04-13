@@ -9,8 +9,6 @@ CheckDisk can check various file and disk related things.
     But as long as NSClient++ can access the share you can still check it as you specify the UNC path.
     In other words the following will **NOT** work: `check_drivesize drive=m:` But the following will: `check_drivesize drive=\\myserver\\mydrive`
 
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the CheckDisk module.
@@ -26,9 +24,6 @@ A list of all available queries (check commands)
 | [checkdrivesize](#checkdrivesize)   | Legacy version of check_drivesize                 |
 | [checkfiles](#checkfiles)           | Legacy version of check_drivesize                 |
 
-
-
-
 ### check_drivesize
 
 Check the size (free-space) of a drive or volume.
@@ -37,7 +32,6 @@ Check the size (free-space) of a drive or volume.
 
 * [Command-line Arguments](#check_drivesize_options)
 * [Filter keywords](#check_drivesize_filter_keys)
-
 
 <a name="check_drivesize_samples"/>
 #### Sample Commands
@@ -99,7 +93,6 @@ L     client OK: All drives ok
 L     client  Performance data: 'C:\ free'=18GB;0;2;0;223 'C:\ free %'=8%;0;0;0;100 'D:\ free'=18GB;0;4;0;465 'D:\ free %'=3%;0;0;0;100 'M:\ free'=83GB;0;27;0;2746 'M:\ free %'=3%;0;0;0;100
 ```
 
-
 To check **all fixed and network drives but ignore C and F**::
 
 ```
@@ -114,8 +107,6 @@ Default via NRPE:
 check_nrpe --host 192.168.56.103 --command check_drivesize
 C:\: 205GB/223GB used, D:\: 448GB/466GB used, M:\: 2.6TB/2.68TB used|'C:\ used'=204GB;44;22;0;223 'C:\ used %'=91%;19;9;0;100 'D:\ used'=447GB;93;46;0;465...
 ```
-
-
 
 <a name="check_drivesize_warn"/>
 <a name="check_drivesize_crit"/>
@@ -132,7 +123,6 @@ C:\: 205GB/223GB used, D:\: 448GB/466GB used, M:\: 2.6TB/2.68TB used|'C:\ used'=
 <a name="check_drivesize_total"/>
 <a name="check_drivesize_options"/>
 #### Command-line Arguments
-
 
 | Option                                                  | Default Value                          | Description                                                                                                      |
 |---------------------------------------------------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -163,8 +153,6 @@ C:\: 205GB/223GB used, D:\: 448GB/466GB used, M:\: 2.6TB/2.68TB used|'C:\ used'=
 | exclude                                                 |                                        | A list of drives not to check                                                                                    |
 | total                                                   | N/A                                    | Include the total of all matching drives                                                                         |
 
-
-
 <h5 id="check_drivesize_filter">filter:</h5>
 
 Filter which marks interesting items.
@@ -178,7 +166,6 @@ They do not denote warning or critical state instead it defines which items are 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
 
-
 *Default Value:* `used > 80%`
 
 <h5 id="check_drivesize_critical">critical:</h5>
@@ -186,15 +173,12 @@ If anything matches this filter the return status will be escalated to warning.
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
 *Default Value:* `used > 90%`
 
 <h5 id="check_drivesize_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_drivesize_empty-state">empty-state:</h5>
 
@@ -207,7 +191,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_drivesize_top-syntax">top-syntax:</h5>
 
@@ -253,17 +236,13 @@ This is the syntax for the base names of the performance data.
 The drives to check.
 Multiple options can be used to check more then one drive or wildcards can be used to indicate multiple drives to check. Examples: drive=c, drive=d:, drive=*, drive=all-volumes, drive=all-drives
 
-
 <h5 id="check_drivesize_ignore-unreadable">ignore-unreadable:</h5>
 
 DEPRECATED (manually set filter instead) Ignore drives which are not reachable by the current user.
 For instance Microsoft Office creates a drive which cannot be read by normal users.
 
-
-
 <a name="check_drivesize_filter_keys"/>
 #### Filter keywords
-
 
 | Option         | Description                                                                                                  |
 |----------------|--------------------------------------------------------------------------------------------------------------|
@@ -309,7 +288,6 @@ For instance Microsoft Office creates a drive which cannot be read by normal use
 | warn_list      | A list of all items which matched the warning criteria. Common option for all checks.                        |
 | writable       | 1 (true) if drive is writable                                                                                |
 
-
 ### check_files
 
 Check various aspects of a file and/or folder.
@@ -318,7 +296,6 @@ Check various aspects of a file and/or folder.
 
 * [Command-line Arguments](#check_files_options)
 * [Filter keywords](#check_files_filter_keys)
-
 
 <a name="check_files_samples"/>
 #### Sample Commands
@@ -361,8 +338,6 @@ L        cli WARNING: WARNING: 1/6 files (AsChkDev.txt: 29738)
 L        cli  Performance data: 'AsChkDev.txt size'=29.04101KB;20;0 'AsDCDVer.txt size'=0.02246KB;20;0 'AsHDIVer.txt size'=0.02734KB;20;0 'AsPEToolVer.txt size'=0.08789KB;20;0 'AsToolCDVer.txt size'=0.05273KB;20;0 'csup.txt size'=0.00976KB;20;0
 ```
 
-
-
 <a name="check_files_warn"/>
 <a name="check_files_crit"/>
 <a name="check_files_debug"/>
@@ -377,7 +352,6 @@ L        cli  Performance data: 'AsChkDev.txt size'=29.04101KB;20;0 'AsDCDVer.tx
 <a name="check_files_max-depth"/>
 <a name="check_files_options"/>
 #### Command-line Arguments
-
 
 | Option                                      | Default Value                                                | Description                                                                                                      |
 |---------------------------------------------|--------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -408,35 +382,26 @@ L        cli  Performance data: 'AsChkDev.txt size'=29.04101KB;20;0 'AsDCDVer.tx
 | max-depth                                   |                                                              | Maximum depth to recurse                                                                                         |
 | [total](#check_files_total)                 | filter                                                       | Include the total of either (filter) all files matching the filter or (all) all files regardless of the filter   |
 
-
-
 <h5 id="check_files_filter">filter:</h5>
 
 Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
 <h5 id="check_files_warning">warning:</h5>
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
-
-
 
 <h5 id="check_files_critical">critical:</h5>
 
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
-
 <h5 id="check_files_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_files_empty-state">empty-state:</h5>
 
@@ -449,7 +414,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_files_top-syntax">top-syntax:</h5>
 
@@ -495,7 +459,6 @@ This is the syntax for the base names of the performance data.
 The path to search for files under.
 Notice that specifying multiple path will create an aggregate set you will not check each path individually.In other words if one path contains an error the entire check will result in error.
 
-
 <h5 id="check_files_pattern">pattern:</h5>
 
 The pattern of files to search for (works like a filter but is faster and can be combined with a filter).
@@ -508,10 +471,8 @@ Include the total of either (filter) all files matching the filter or (all) all 
 
 *Default Value:* `filter`
 
-
 <a name="check_files_filter_keys"/>
 #### Filter keywords
-
 
 | Option        | Description                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -548,17 +509,11 @@ Include the total of either (filter) all files matching the filter or (all) all 
 | written_l     | When file was last written  to (local time)                                                                  |
 | written_u     | When file was last written  to (UTC)                                                                         |
 
-
 ### checkdrivesize
 
 Legacy version of check_drivesize
 
-
 * [Command-line Arguments](#checkdrivesize_options)
-
-
-
-
 
 <a name="checkdrivesize_help"/>
 <a name="checkdrivesize_help-pb"/>
@@ -581,7 +536,6 @@ Legacy version of check_drivesize
 <a name="checkdrivesize_MinCritUsed"/>
 <a name="checkdrivesize_options"/>
 #### Command-line Arguments
-
 
 | Option                                           | Default Value | Description                                                                                                                |
 |--------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -608,8 +562,6 @@ Legacy version of check_drivesize
 | MinWarnUsed                                      |               | Minimum value before a warning is returned.                                                                                |
 | MinCritUsed                                      |               | Minimum value before a critical is returned.                                                                               |
 
-
-
 <h5 id="checkdrivesize_CheckAll">CheckAll:</h5>
 
 Checks all drives.
@@ -628,17 +580,11 @@ Configures display format (if set shows all items not only failures, if set to l
 
 *Default Value:* `short`
 
-
 ### checkfiles
 
 Legacy version of check_drivesize
 
-
 * [Command-line Arguments](#checkfiles_options)
-
-
-
-
 
 <a name="checkfiles_help"/>
 <a name="checkfiles_help-pb"/>
@@ -661,7 +607,6 @@ Legacy version of check_drivesize
 <a name="checkfiles_options"/>
 #### Command-line Arguments
 
-
 | Option        | Default Value | Description                                         |
 |---------------|---------------|-----------------------------------------------------|
 | help          | N/A           | Show help screen (this screen)                      |
@@ -682,9 +627,3 @@ Legacy version of check_drivesize
 | MaxCrit       |               | Maximum value before a critical is returned.        |
 | MinWarn       |               | Minimum value before a warning is returned.         |
 | MinCrit       |               | Minimum value before a critical is returned.        |
-
-
-
-
-
-

@@ -24,14 +24,13 @@ Which basically means "There are 126408 bytes in the receive queue for the daemo
 
 ## Related articles
 
--   Page:
+- Page:
     [How to configure OP5 Trapper Extension (Cisco handler)](../HOWTOs/How_to_configure_op5_Trapper_Extension_Cisco_handler_)
--   Page:
+- Page:
     [Getting started with OP5 Trapper](/display/HOWTOs/Getting+started+with+op5+Trapper)
--   Page:
+- Page:
     [Sending results using query handler](/display/HOWTOs/Sending+results+using+query+handler)
--   Page:
+- Page:
     [Troubleshooting trapper](/display/HOWTOs/Troubleshooting+trapper)
--   Page:
+- Page:
     [IBM Director handler for Trapper](/display/HOWTOs/IBM+Director+handler+for+Trapper)
-

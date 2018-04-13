@@ -2,8 +2,6 @@
 
 This article remains for historical reference, to handle traps in later versions of OP5 Monitor see: [op5 Trapper Home](https://kb.op5.com/display/DOC/op5+Trapper)
 
- 
-
 Virtually all networked equipment can be monitored with SNMP. When you know a specific value that you want to check, you use check\_snmp and specify the OID for that value.
 
 Sometimes, though, you want to look into the SNMP traps that the host sends – these are often a compilation of possible faults initially selected by the manufacturer, and as such they often provide important details about the hardware or software health.
@@ -16,9 +14,9 @@ This article describes how to set up the general support for SNMP traps. If you 
 
 In order to monitor SNMP traps sent from a host you need to arrange the following:
 
--   Enable SNMP traps to be sent to the monitor server from the monitored host
--   Make sure that no firewalls block the SNMP traps ( 162/udp )
--   Create one or more services in OP5 Monitor web GUI to search the trap logs
+- Enable SNMP traps to be sent to the monitor server from the monitored host
+- Make sure that no firewalls block the SNMP traps ( 162/udp )
+- Create one or more services in OP5 Monitor web GUI to search the trap logs
 
 # Configuring the monitored host
 
@@ -49,6 +47,3 @@ That means that the default behavior of doing three attempts before sending a no
 You might also want to have a larger time span between checks, so that a potential problem persists longer than 5 minutes. Typically 15 minutes is a good value.
 
 You are now ready to apply changes and save configuration and test it out.
-
- 
-

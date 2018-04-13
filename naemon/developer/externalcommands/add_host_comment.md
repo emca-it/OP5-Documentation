@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ADD_HOST_COMMENT<br>
 
-
 #### Command Format:
 
 `ADD_HOST_COMMENT;host_name;persistent;author;comment`
@@ -29,6 +28,3 @@ This command is used to add a comment for the specified host.  If you work with 
 
 printf "[%lu] ADD_HOST_COMMENT;host1;1;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

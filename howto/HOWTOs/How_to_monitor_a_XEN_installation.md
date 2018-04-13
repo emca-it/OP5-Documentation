@@ -6,9 +6,9 @@ The purpose of this article is to describe how [op5 Monitor](http://www.op5.com
 
 ## Prerequisites
 
--   libvirt drivers need to be installed and running on both the OP5 Monitor server and on the target XEN host(s).
--   The plugin support several transport protocols but ssh is the preferred and will be used in this How-To. You need to setup a password-less communication for the user ‘monitor’ and the user that you will use for the communication between the OP5 Monitor server and the target XEN host(s).
--   Update OP5 Monitor to get the latest plugin packet containing the check\_libvirt plugin.
+- libvirt drivers need to be installed and running on both the OP5 Monitor server and on the target XEN host(s).
+- The plugin support several transport protocols but ssh is the preferred and will be used in this How-To. You need to setup a password-less communication for the user ‘monitor’ and the user that you will use for the communication between the OP5 Monitor server and the target XEN host(s).
+- Update OP5 Monitor to get the latest plugin packet containing the check\_libvirt plugin.
 
 ## Check commands
 
@@ -160,10 +160,9 @@ root
 
 ## Remarks
 
--   These check command has been tested on CentOS v5.5 and XEN v3.0 installation. It should work with other installations but some minor changes may be needed.
--   Critrix XEN server does not support libvirt. More information about Citrix XEN can be found here: [How to monitor a Citrix XenServer Cluster](How_to_monitor_a_Citrix_XenServer_Cluster)
+- These check command has been tested on CentOS v5.5 and XEN v3.0 installation. It should work with other installations but some minor changes may be needed.
+- Critrix XEN server does not support libvirt. More information about Citrix XEN can be found here: [How to monitor a Citrix XenServer Cluster](How_to_monitor_a_Citrix_XenServer_Cluster)
 
 ## Read more
 
  <http://www.libvirt.org/drvxen.html>
-

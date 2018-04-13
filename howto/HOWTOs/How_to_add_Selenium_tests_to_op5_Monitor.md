@@ -10,14 +10,14 @@ Selenium automates browsers. It is for automating web applications for testing p
 
 # Prerequisites
 
--   Basic knowledge about Linux systems. 
--   Basic knowledge about Selenium. Needed to run automated web browser tests.  <http://docs.seleniumhq.org/docs/>
--   Basic knowledge about Xvfb. Needed to run firefox without a graphical environment. <http://en.wikipedia.org/wiki/Xvfb>
--   Firefox with selenium IDE plugin (not on OP5 Monitor). This is used to record and save selenium tests. <http://docs.seleniumhq.org/docs/>
--   Installed OP5 license.
--   Internet access. 
--   SSH and root access to the OP5 Monitor system.
--   Ongoing monitoring of the OP5 Monitor system's CPU and memory resources. Unlike ordinary service checks, Selenium tests will use a lot of memory and CPU resources.
+- Basic knowledge about Linux systems.
+- Basic knowledge about Selenium. Needed to run automated web browser tests.  <http://docs.seleniumhq.org/docs/>
+- Basic knowledge about Xvfb. Needed to run firefox without a graphical environment. <http://en.wikipedia.org/wiki/Xvfb>
+- Firefox with selenium IDE plugin (not on OP5 Monitor). This is used to record and save selenium tests. <http://docs.seleniumhq.org/docs/>
+- Installed OP5 license.
+- Internet access.
+- SSH and root access to the OP5 Monitor system.
+- Ongoing monitoring of the OP5 Monitor system's CPU and memory resources. Unlike ordinary service checks, Selenium tests will use a lot of memory and CPU resources.
 
 # Install and configure necessary packages on OP5 Monitor
 
@@ -42,13 +42,9 @@ curl https://selenium-release.storage.googleapis.com/2.53/selenium-server-standa
 
 You do not need a graphical to run selenium test when using Xvfb.
 
- 
-
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 yum install -y xorg-x11-server-Xvfb
 ```
-
- 
 
 ### Download and install Firefox.
 
@@ -106,8 +102,6 @@ esac
 exit 0
 ```
 
- 
-
 **selenium**  Expand source
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: true; theme: Confluence; collapse: true" data-theme="Confluence" style="brush: bash; gutter: true; theme: Confluence; collapse: true"}
@@ -161,7 +155,7 @@ chmod 755 /etc/init.d/xvfb
 mkdir /var/log/selenium
 ```
 
-### Download the Python based selenium plugin. 
+### Download the Python based selenium plugin.
 
 This plugin is run by OP5 Monitor.
 
@@ -224,21 +218,21 @@ Copy the file to OP5 Monitor and to your test\_dir directory, default located at
 
 ### Add the command on OP5 Monitor
 
--   Configure -\> Commands
--   command\_name = check\_selenium
--   command\_line = \$USER1\$/custom/check\_selenium.py  -s \$ARG1\$ -w \$ARG2\$  -c \$ARG3\$ 
+- Configure -\> Commands
+- command\_name = check\_selenium
+- command\_line = \$USER1\$/custom/check\_selenium.py  -s \$ARG1\$ -w \$ARG2\$  -c \$ARG3\$
 
--   Submit and then save the configuration.
+- Submit and then save the configuration.
 
 ![](attachments/5376778/5734780.png)
 
 ### Add the service on OP5 Monitor
 
--           Configure -\> Edit host monitor -\> Go -\> Services for host monitor 
--            service description = check\_selenium\_op5 (a description related to what sort of test is performed)
--            check\_command = check\_selenium
--            check\_command\_args = script\_name!sec-warn!sec-crit
--            Submit and then save the configuration.
+-         Configure -\> Edit host monitor -\> Go -\> Services for host monitor
+-          service description = check\_selenium\_op5 (a description related to what sort of test is performed)
+-          check\_command = check\_selenium
+-          check\_command\_args = script\_name!sec-warn!sec-crit
+-          Submit and then save the configuration.
 
 ![](attachments/5376778/5734781.png)
 
@@ -255,6 +249,3 @@ If you have trouble getting the headless browser (i.e. Firefox) to work, try typ
 If your monitor servers has a proxy but your tests are to a system that needs to bypass the proxy, try prepending you manual check command in shell with http\_proxy="" , if that works, add the following line (after imports) to your check\_selenium.py
 
     os.environ["http_proxy"] = ""
-
- 
-

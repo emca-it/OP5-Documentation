@@ -6,27 +6,25 @@ Disclaimer
 
 * * * * *
 
-This mini how-to will show you how to monitor some basic parameters on a Microsoft Biztalk environment. 
+This mini how-to will show you how to monitor some basic parameters on a Microsoft Biztalk environment.
 
 ### The plugins mentioned in this mini-howto will let you monitor the following in Biztalk:
 
--   Ports
--   Send ports
--   Queues
--   Location
--   Orchestration
--   Cluster host instance process
--   Spool size
--   Msdtc process
+- Ports
+- Send ports
+- Queues
+- Location
+- Orchestration
+- Cluster host instance process
+- Spool size
+- Msdtc process
 
 In addition to this it's also possible to monitor Biztalk related metrics and performance counters using NSClient++ and check\_nrpe. Example of how to work with this plugin and performance counter can be found in the end of this how-to.
 
 ### **Command definitions to get you started with Biztalk monitoring using our check\_biztalk plugin:
 **
 
--   Monitoring BizTalk ports
-
- 
+- Monitoring BizTalk ports
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 define command{
@@ -35,9 +33,7 @@ command_line $USER1$/check_biztalk -U $USER11$ -P $USER12$ -H $HOSTADDRESS$ -w 
 }
 ```
 
- 
-
--   Command for monitoring Biztalk queues
+- Command for monitoring Biztalk queues
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 define command{
@@ -46,10 +42,7 @@ command_line $USER1$/check_biztalk -U $USER11$ -P $USER12$ -H $HOSTADDRESS$ -
 }
 ```
 
- 
-
--   Specific receive location(s) to check, comma-separated
-     
+- Specific receive location(s) to check, comma-separated
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 define command{
@@ -58,10 +51,7 @@ command_line $USER1$/check_biztalk -U $USER11$ -P $USER12$ -H $HOSTADDRESS$ -
 }
 ```
 
- 
-
--   Biztalk orchestration monitoring command
-     
+- Biztalk orchestration monitoring command
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 define command{
@@ -70,10 +60,7 @@ command_line $USER1$/check_biztalk -U $USER11$ -P $USER12$ -H $HOSTADDRESS$ -o
 }
 ```
 
- 
-
--   Monitoring of sendports
-     
+- Monitoring of sendports
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 define command{
@@ -85,9 +72,7 @@ command_line                   $USER1$/check_biztalk -U $USER1
 ### **Command definitions for the check\_biztalk\_cluster\_host\_instance plugin
 **
 
--   Cluster instances running
-
- 
+- Cluster instances running
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 define command{
@@ -98,10 +83,7 @@ command_line $USER1$/custom/check_biztalk_cluster_host_instance $ARG1$
 
 ### **Command definition for the check\_biztalk\_msdtc plugin**
 
--   Check the active instance running
-     
-
- 
+- Check the active instance running
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 define command{
@@ -110,13 +92,10 @@ command_line $USER1$/custom/check_biztalk_msdtc $ARG1$
 }
 ```
 
- 
-
 ### **Command definition for performance counters using check\_nrpe and NSClient++
 **
 
--   Checks the spool size of Message Box
-     
+- Checks the spool size of Message Box
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 define command{
@@ -129,9 +108,4 @@ Note:
 
 Note: For more performance counters related to Biztalk, please visit [Microsoft Technet](http://msdn.microsoft.com/en-us/library/aa578394.aspx "Biztalk Performance Counter").
 
- 
-
- 
-
 REV 2, 2012-05-07
-

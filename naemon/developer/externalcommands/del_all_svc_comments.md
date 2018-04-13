@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DEL_ALL_SVC_COMMENTS<br>
 
-
 #### Command Format:
 
 `DEL_ALL_SVC_COMMENTS;host_name;service_description`
@@ -29,6 +28,3 @@ Deletes all comments associated with a particular service.
 
 printf "[%lu] DEL_ALL_SVC_COMMENTS;host1;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

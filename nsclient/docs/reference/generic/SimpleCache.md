@@ -2,9 +2,6 @@
 
 Stores status updates and allows for active checks to retrieve them
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the SimpleCache module.
@@ -18,27 +15,19 @@ A list of all available queries (check commands)
 | [check_cache](#check_cache) | Fetch results from the cache. |
 | [list_cache](#list_cache)   | List all keys in the cache.   |
 
-
 **List of command aliases:**
 
 A list of all short hand aliases for queries (check commands)
-
 
 | Command    | Description                     |
 |------------|---------------------------------|
 | checkcache | Alias for: :query:`check_cache` |
 
-
 ### check_cache
 
 Fetch results from the cache.
 
-
 * [Command-line Arguments](#check_cache_options)
-
-
-
-
 
 <a name="check_cache_help"/>
 <a name="check_cache_help-pb"/>
@@ -51,7 +40,6 @@ Fetch results from the cache.
 <a name="check_cache_alias"/>
 <a name="check_cache_options"/>
 #### Command-line Arguments
-
 
 | Option                                        | Default Value   | Description                                             |
 |-----------------------------------------------|-----------------|---------------------------------------------------------|
@@ -67,8 +55,6 @@ Fetch results from the cache.
 | [not-found-msg](#check_cache_not-found-msg)   | Entry not found | The message to display when a message is not found      |
 | [not-found-code](#check_cache_not-found-code) | unknown         | The return status to return when a message is not found |
 
-
-
 <h5 id="check_cache_not-found-msg">not-found-msg:</h5>
 
 The message to display when a message is not found
@@ -81,17 +67,11 @@ The return status to return when a message is not found
 
 *Default Value:* `unknown`
 
-
 ### list_cache
 
 List all keys in the cache.
 
-
 * [Command-line Arguments](#list_cache_options)
-
-
-
-
 
 <a name="list_cache_help"/>
 <a name="list_cache_help-pb"/>
@@ -100,7 +80,6 @@ List all keys in the cache.
 <a name="list_cache_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                   |
 |--------------|---------------|-----------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                |
@@ -108,34 +87,20 @@ List all keys in the cache.
 | show-default | N/A           | Show default values for a given command       |
 | help-short   | N/A           | Show help screen (short format).              |
 
-
-
-
-
-
 ## Configuration
-
-
 
 | Path / Section            | Description |
 |---------------------------|-------------|
 | [/settings/cache](#cache) | CACHE       |
 
-
-
 ### CACHE <a id="/settings/cache"/>
 
 Section for simple cache module (SimpleCache.dll).
-
-
-
 
 | Key                                   | Default Value       | Description         |
 |---------------------------------------|---------------------|---------------------|
 | [channel](#channel)                   | CACHE               | CHANNEL             |
 | [primary index](#primary-cache-index) | ${alias-or-command} | PRIMARY CACHE INDEX |
-
-
 
 ```ini
 # Section for simple cache module (SimpleCache.dll).
@@ -145,17 +110,9 @@ primary index=${alias-or-command}
 
 ```
 
-
-
-
-
 #### CHANNEL <a id="/settings/cache/channel"></a>
 
 The channel to listen to.
-
-
-
-
 
 | Key            | Description                         |
 |----------------|-------------------------------------|
@@ -163,7 +120,6 @@ The channel to listen to.
 | Key:           | channel                             |
 | Default value: | `CACHE`                             |
 | Used by:       | SimpleCache                         |
-
 
 **Sample:**
 
@@ -173,16 +129,10 @@ The channel to listen to.
 channel=CACHE
 ```
 
-
-
 #### PRIMARY CACHE INDEX <a id="/settings/cache/primary index"></a>
 
 Set this to the value you want to use as unique key for the cache.
 Can be any arbitrary string as well as include any of the following special keywords:${command} = The command name, ${host} the host, ${channel} the recieving channel, ${alias} the alias for the command, ${alias-or-command} = alias if set otherweise command, ${message} = the message data (no escape), ${result} = The result status (number).
-
-
-
-
 
 | Key            | Description                         |
 |----------------|-------------------------------------|
@@ -191,7 +141,6 @@ Can be any arbitrary string as well as include any of the following special keyw
 | Default value: | `${alias-or-command}`               |
 | Used by:       | SimpleCache                         |
 
-
 **Sample:**
 
 ```
@@ -199,5 +148,3 @@ Can be any arbitrary string as well as include any of the following special keyw
 # PRIMARY CACHE INDEX
 primary index=${alias-or-command}
 ```
-
-

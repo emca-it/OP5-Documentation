@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_SERVICEGROUP_HOST_CHECKS<br>
 
-
 #### Command Format:
 
 `DISABLE_SERVICEGROUP_HOST_CHECKS;servicegroup_name`
@@ -29,6 +28,3 @@ Disables active checks for all hosts that have services that are members of a pa
 
 printf "[%lu] DISABLE_SERVICEGROUP_HOST_CHECKS;servicegroup1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

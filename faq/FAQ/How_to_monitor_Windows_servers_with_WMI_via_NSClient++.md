@@ -21,15 +21,15 @@ When we are making changes to the NSClient++ configuration we shall make them in
 
 To configure NSClient++,
 
-1.  Open up custom.ini in Notepad
-2.  Add the following lines to custom.ini 
+1. Open up custom.ini in Notepad
+2. Add the following lines to custom.ini
     [NRPE]
 
         allow_arguments=1
 
         allow_nasty_meta_chars=1
 
-3.  Restart the NSClient++ service
+3. Restart the NSClient++ service
 
 ## **Adding a check\_command to OP5 Monitor**
 
@@ -37,9 +37,9 @@ Now we will add a new check\_command to OP5 Monitor. This check\_command will le
 
 To add check\_command to OP5 Monitor:
 
-1.  Open up Configure in OP5 Monitor
-2.  Click “Commands”
-3.  Add a new check\_command with the following settings
+1. Open up Configure in OP5 Monitor
+2. Click “Commands”
+3. Add a new check\_command with the following settings
 
 Option
 
@@ -60,8 +60,8 @@ command\_line
 
 To add a new service to OP5 Monitor:
 
-1.  Open up the host you like to monitor and chose “Add new service”.
-2.  Set at least the following options:
+1. Open up the host you like to monitor and chose “Add new service”.
+2. Set at least the following options:
 
     Option
 
@@ -79,7 +79,4 @@ To add a new service to OP5 Monitor:
 
     1!2
 
-3.  Click “Apply” and then “Save”.
-
- 
-
+3. Click “Apply” and then “Save”.

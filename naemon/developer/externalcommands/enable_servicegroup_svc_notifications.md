@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_SERVICEGROUP_SVC_NOTIFICATIONS<br>
 
-
 #### Command Format:
 
 `ENABLE_SERVICEGROUP_SVC_NOTIFICATIONS;servicegroup_name`
@@ -29,6 +28,3 @@ Enables notifications for all services that are members of a particular serviceg
 
 printf "[%lu] ENABLE_SERVICEGROUP_SVC_NOTIFICATIONS;servicegroup1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

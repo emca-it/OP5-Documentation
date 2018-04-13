@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_ALL_NOTIFICATIONS_BEYOND_HOST<br>
 
-
 #### Command Format:
 
 `DISABLE_ALL_NOTIFICATIONS_BEYOND_HOST;host_name`
@@ -29,6 +28,3 @@ Disables notifications for all hosts and services 'beyond' (e.g. on all child ho
 
 printf "[%lu] DISABLE_ALL_NOTIFICATIONS_BEYOND_HOST;host1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

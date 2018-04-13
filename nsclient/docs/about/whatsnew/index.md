@@ -14,9 +14,9 @@ Old version of the documentation can be found here:
 
 ## 0.5.2
 
--   New REST Api
--   Much improved documentation
--   Numerous bugfixes and minor enhancements
+- New REST Api
+- Much improved documentation
+- Numerous bugfixes and minor enhancements
 
 [For more details see Whats new in 0.5.2](0.5.2)
 
@@ -24,10 +24,10 @@ Old version of the documentation can be found here:
 
 The main goals of the 0.5.1 was to add event subsystem and make fix bugs/issues. In addition to this the installer has been rewritten as well as the documentation.
 
--   Event subsystem
--   New documentation
--   New installer
--   Numerous bugfixes and minor enhancements
+- Event subsystem
+- New documentation
+- New installer
+- Numerous bugfixes and minor enhancements
 
 [For more details see Whats new in 0.5.1](0.5.1)
 
@@ -35,12 +35,12 @@ The main goals of the 0.5.1 was to add event subsystem and make fix bugs/issues.
 
 The main goals of the 0.5.0 is t make NSClient++ easier to use and more future proof.
 
--   New and improved WebUI
--   Metrics support
--   Improved clients and better support for graphite et.al.
--   Fixed count in filters which was not working before
--   Added floating point number support to filters
--   Numerous bugfixes and minor enhancements
+- New and improved WebUI
+- Metrics support
+- Improved clients and better support for graphite et.al.
+- Fixed count in filters which was not working before
+- Added floating point number support to filters
+- Numerous bugfixes and minor enhancements
 
 [For more details see Whats new in 0.5.0](0.5.0)
 
@@ -48,7 +48,7 @@ The main goals of the 0.5.0 is t make NSClient++ easier to use and more future p
 
 The main goals of the 0.4.4 was to get the new installer out.
 
--   New installer
+- New installer
 
 [For more details see Whats new in 0.4.4](0.4.4)
 
@@ -56,12 +56,12 @@ The main goals of the 0.4.4 was to get the new installer out.
 
 The main goals of the 0.4.3 was stability and fix all outstanding issues and annoyances and any new issues from 0.4.2.
 
--   Enhanced Usability
--   Bug-fixes
--   WEB UI
--   REST Support
--   Deprecated insecure legacy `check_nrpe` SSL
--   Linux Packages
+- Enhanced Usability
+- Bug-fixes
+- WEB UI
+- REST Support
+- Deprecated insecure legacy `check_nrpe` SSL
+- Linux Packages
 
 [For more details see Whats new in 0.4.3](0.4.3)
 
@@ -71,10 +71,10 @@ The main goal of the 0.4.2 update is to create a new modern check subsystem.
 
 This means all checks will get:
 
--   help command line options to get help
--   proper documentation
--   the same or similar syntax
--   "real-time" options in many instances
+- help command line options to get help
+- proper documentation
+- the same or similar syntax
+- "real-time" options in many instances
 
 [For more details see Whats new in 0.4.2](0.4.2)
 

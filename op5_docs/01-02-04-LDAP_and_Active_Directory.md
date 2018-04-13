@@ -8,8 +8,8 @@ Before we start
 
 This documentation assumes that you have:
 
--   -   Administrator access to the domain
-    -   Basic knowledge about LDAP structure
+- Administrator access to the domain
+  - Basic knowledge about LDAP structure
 
 # Prepare your domain
 
@@ -136,4 +136,3 @@ To test if the system can bind using "Bind DN" and "Bind Secret", go to Assign G
 For more information and help setting up an AD connection, please read our [Active Directory Integration How-To](https://kb.op5.com/display/HOWTOs/Active+Directory+Integration+How-To)
 
 For information on how to use LDAP SSL (SLADP) see [Certificate management for LDAP SSL (sldap) with Active Directory](https://kb.op5.com/display/HOWTOs/Certificate+management+for+LDAP+SSL+%28sldap%29+with+Active+Directory)
-

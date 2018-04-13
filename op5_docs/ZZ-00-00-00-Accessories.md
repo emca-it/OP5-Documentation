@@ -20,4 +20,3 @@ The Model E Temperature Monitor is available with four or sixteen temperature se
 </tr>
 </tbody>
 </table>
-

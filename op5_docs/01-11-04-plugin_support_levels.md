@@ -53,4 +53,3 @@ OP5 has concluded that this plugin can no longer be supported. It may have been 
 none
 
 OP5 does not support this plugin.
-

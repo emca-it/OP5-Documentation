@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_SVC_MODATTR<br>
 
-
 #### Command Format:
 
 `CHANGE_SVC_MODATTR;host_name;host_name;service_description;value`
@@ -29,6 +28,3 @@ This command changes the modified attributes value for the specified service. Mo
 
 printf "[%lu] CHANGE_SVC_MODATTR;host1;host1;service1;0\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

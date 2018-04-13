@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DEL_SVC_DOWNTIME<br>
 
-
 #### Command Format:
 
 `DEL_SVC_DOWNTIME;downtime_id`
@@ -29,6 +28,3 @@ Deletes the service downtime entry that has an ID number matching the 'downtime_
 
 printf "[%lu] DEL_SVC_DOWNTIME;1234\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

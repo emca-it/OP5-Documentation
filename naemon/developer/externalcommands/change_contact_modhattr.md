@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_CONTACT_MODHATTR<br>
 
-
 #### Command Format:
 
 `CHANGE_CONTACT_MODHATTR;contact_name;value`
@@ -29,6 +28,3 @@ This command changes the modified host attributes value for the specified contac
 
 printf "[%lu] CHANGE_CONTACT_MODHATTR;naemonadmin;0\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

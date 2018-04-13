@@ -2,9 +2,6 @@
 
 Check status via WMI
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the CheckWMI module.
@@ -17,16 +14,13 @@ A list of all available queries (check commands)
 |-------------------------|------------------------------------------------------------------------|
 | [check_wmi](#check_wmi) | Check a set of WMI values and return rows which are matching criteria. |
 
-
 **List of command aliases:**
 
 A list of all short hand aliases for queries (check commands)
 
-
 | Command  | Description                   |
 |----------|-------------------------------|
 | checkwmi | Alias for: :query:`check_wmi` |
-
 
 ### check_wmi
 
@@ -36,7 +30,6 @@ Check a set of WMI values and return rows which are matching criteria.
 
 * [Command-line Arguments](#check_wmi_options)
 * [Filter keywords](#check_wmi_filter_keys)
-
 
 <a name="check_wmi_samples"/>
 #### Sample Commands
@@ -88,9 +81,6 @@ L        cli OK: You have build 10240
 L        cli  Performance data: 'BuildNumber'=10240;9600;8000
 ```
 
-
-
-
 <a name="check_wmi_warn"/>
 <a name="check_wmi_crit"/>
 <a name="check_wmi_debug"/>
@@ -106,7 +96,6 @@ L        cli  Performance data: 'BuildNumber'=10240;9600;8000
 <a name="check_wmi_query"/>
 <a name="check_wmi_options"/>
 #### Command-line Arguments
-
 
 | Option                                    | Default Value | Description                                                                                                      |
 |-------------------------------------------|---------------|------------------------------------------------------------------------------------------------------------------|
@@ -136,35 +125,26 @@ L        cli  Performance data: 'BuildNumber'=10240;9600;8000
 | [namespace](#check_wmi_namespace)         | root\cimv2    | The WMI root namespace to bind to.                                                                               |
 | query                                     |               | The WMI query to execute.                                                                                        |
 
-
-
 <h5 id="check_wmi_filter">filter:</h5>
 
 Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
 <h5 id="check_wmi_warning">warning:</h5>
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
-
-
 
 <h5 id="check_wmi_critical">critical:</h5>
 
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
-
 <h5 id="check_wmi_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_wmi_empty-state">empty-state:</h5>
 
@@ -177,7 +157,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_wmi_top-syntax">top-syntax:</h5>
 
@@ -193,12 +172,10 @@ ok syntax.
 DEPRECATED! This is the syntax for when an ok result is returned.
 This value will not be used if your syntax contains %(list) or %(count).
 
-
 <h5 id="check_wmi_empty-syntax">empty-syntax:</h5>
 
 Empty syntax.
 DEPRECATED! This is the syntax for when nothing matches the filter.
-
 
 <h5 id="check_wmi_detail-syntax">detail-syntax:</h5>
 
@@ -214,17 +191,14 @@ To add a keyword to the message you can use two syntaxes either ${keyword} or %(
 Performance alias syntax.
 This is the syntax for the base names of the performance data.
 
-
 <h5 id="check_wmi_namespace">namespace:</h5>
 
 The WMI root namespace to bind to.
 
 *Default Value:* `root\cimv2`
 
-
 <a name="check_wmi_filter_keys"/>
 #### Filter keywords
-
 
 | Option        | Description                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -242,28 +216,14 @@ The WMI root namespace to bind to.
 | warn_count    | Number of items matched the warning criteria. Common option for all checks.                                  |
 | warn_list     | A list of all items which matched the warning criteria. Common option for all checks.                        |
 
-
-
-
 ## Configuration
-
-
 
 | Path / Section                            | Description         |
 |-------------------------------------------|---------------------|
 | [/settings/targets](#target-list-section) | TARGET LIST SECTION |
 
-
-
 ### TARGET LIST SECTION <a id="/settings/targets"/>
 
 A list of available remote target systems
 
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
-
-
-
-
-
-

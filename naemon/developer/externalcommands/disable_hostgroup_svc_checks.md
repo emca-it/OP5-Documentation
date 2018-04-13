@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_HOSTGROUP_SVC_CHECKS<br>
 
-
 #### Command Format:
 
 `DISABLE_HOSTGROUP_SVC_CHECKS;hostgroup_name`
@@ -29,6 +28,3 @@ Disables active checks for all services associated with hosts in a particular ho
 
 printf "[%lu] DISABLE_HOSTGROUP_SVC_CHECKS;hostgroup1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

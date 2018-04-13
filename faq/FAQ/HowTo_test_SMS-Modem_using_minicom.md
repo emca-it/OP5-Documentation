@@ -10,13 +10,7 @@ How do I test my SMS-Modem using a terminal emulator such as Minicom?
 
 * * * * *
 
- 
-
- 
-
 Jump to step 5 to skip Minicom configuration.
-
- 
 
 1. Use the built in logs to identify the different serial ports on your system.
 
@@ -68,8 +62,6 @@ ATI
 SIEMENS MC35i REVISION 01.03
 ```
 
- 
-
 Type: AT+CREG? to get network status:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
@@ -77,7 +69,7 @@ AT+CREG?
 +CREG: 0,1
 ```
 
-+CREG: \<mode\>,\<stat\>[,\<Lac\>,\<Ci\>[,\<AcT\>]] 
++CREG: \<mode\>,\<stat\>[,\<Lac\>,\<Ci\>[,\<AcT\>]]
 
 where
 \<stat\>
@@ -95,8 +87,6 @@ where:
 2 UTRAN
 Note: \<Lac\>, and \<Ci\> and \<AcT\> are reported only if \<mode\>=2 and the
 mobile is registered on some network cell.
-
- 
 
 Type: AT+CPIN? to get SIM PIN status:
 
@@ -126,8 +116,6 @@ PH-SP PUK - ME is waiting service provider personalization unblocking password 
 PH-CORP PIN - ME is waiting corporate personalization password to be given
 PH-CORP PUK -ME iswaiting corporate personalization unblocking password to be given
 
- 
-
 Type: AT+CSQ to get signal strength:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
@@ -154,8 +142,6 @@ where
 7 - more than 12.8%
 99 - not known or not detectable
 
- 
-
 6. Exit Minicom:
 
 CTRL-A then Z then X, you should see "Resetting modem"
@@ -180,5 +166,4 @@ Signal strength will be reported insmsd.logif verbosity is increased to 7 in /et
 
 # OP5 Monitor: Open Source Network Monitoring
 
-[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free. 
-
+[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free.

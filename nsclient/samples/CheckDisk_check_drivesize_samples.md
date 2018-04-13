@@ -53,7 +53,6 @@ L     client OK: All drives ok
 L     client  Performance data: 'C:\ free'=18GB;0;2;0;223 'C:\ free %'=8%;0;0;0;100 'D:\ free'=18GB;0;4;0;465 'D:\ free %'=3%;0;0;0;100 'M:\ free'=83GB;0;27;0;2746 'M:\ free %'=3%;0;0;0;100
 ```
 
-
 To check **all fixed and network drives but ignore C and F**::
 
 ```

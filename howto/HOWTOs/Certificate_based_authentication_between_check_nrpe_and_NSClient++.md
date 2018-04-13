@@ -6,23 +6,21 @@ This article was written for version 0.4.4 of NSClient++. Versions 0.3.x and ear
 
 Articles in the Community-Space are not supported by OP5 Support.
 
- 
-
 If you already followed the HOWTO [Certificate based TLSv1+ encryption with NSClient++](Certificate_based_TLSv1+_encryption_with_NSClient++), adding a further security step (certificate authentication) is a breeze.
 
 Equivalent setup is possible with NRPE \>= 3.0.x instead of NSClient++ on the monitored host side.
 
 With this there's 3 options of certificate authentication.
 
-1.  Authenticate the OP5 Monitor client (check\_nrpe) - **verify mode - peer-client** with NSClient++
-2.  Authenticate the monitored host  (NSClient++) -  **-A /path/to/my\_CA\_cert.pem **with check\_nrpe
-3.  Authenticate both ways
+1. Authenticate the OP5 Monitor client (check\_nrpe) - **verify mode - peer-client** with NSClient++
+2. Authenticate the monitored host  (NSClient++) -  **-A /path/to/my\_CA\_cert.pem **with check\_nrpe
+3. Authenticate both ways
 
 ## Requisites
 
--   NSClient++ 0.4.x or newer
--   check\_nrpe 3.0.x or newer
--   CA certificate and client certificates generated based on this CA (see [Create a self-signed CA & client certificate with OpenSSL](Create_a_self-signed_CA_client_certificate_with_OpenSSL))
+- NSClient++ 0.4.x or newer
+- check\_nrpe 3.0.x or newer
+- CA certificate and client certificates generated based on this CA (see [Create a self-signed CA & client certificate with OpenSSL](Create_a_self-signed_CA_client_certificate_with_OpenSSL))
 
 ## NSClient++
 
@@ -72,4 +70,3 @@ To take this one step further, we can verify the certificate on the host with NS
 ./check\_nrpe\_v3 -H HOSTNAME/IP -A /path/to/my\_CA\_cert.pem -C /path/to/my\_client\_cert.pem -K /path/to/my\_client\_key.key -c CheckCPU -a ShowAll=long MaxWarn=80% MaxCrit=90%
 
 This will be the equivalent of **verify mode** option **peer-cert** in NSClient++, if the client certificate & key from NSClient++ doesn't match the CA certificate, the handshake fails and connection is dropped.
-

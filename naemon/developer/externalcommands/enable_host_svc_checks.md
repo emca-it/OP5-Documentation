@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_HOST_SVC_CHECKS<br>
 
-
 #### Command Format:
 
 `ENABLE_HOST_SVC_CHECKS;host_name`
@@ -29,6 +28,3 @@ Enables active checks of all services on the specified host.
 
 printf "[%lu] ENABLE_HOST_SVC_CHECKS;host1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

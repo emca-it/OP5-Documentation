@@ -15,4 +15,3 @@ It should be noted the options below are highly dependent on the permissions giv
 The **Configure** page (Manage \> Configure) is the central location for links to pages which control different aspects of OP5 Monitor. From here, hosts can be added, host or services groups can be created, and graphs can be edited or combined, to name a few options.
 ![](attachments/16482339/23792993.png)
 More in-depth discussion of the **Configure** page can be found in the [OP5 Monitor Admin Guide](op5_Monitor_Administrator_Manual)
-

@@ -1,2 +1,1 @@
--   [FAQ](FAQ/index)
-
+- [FAQ](FAQ/index)

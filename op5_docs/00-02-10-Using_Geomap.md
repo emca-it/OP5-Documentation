@@ -14,8 +14,8 @@ The **Geomap** page (Monitor \> Geomap) provides a visualization of object locat
 
 There are two main parts of Geomap:
 
--   Geomap options menu
--   Map area
+- Geomap options menu
+- Map area
 
 The *Geomap options* menu is located in the right hand side of the OP5 Monitor toolbar, and clicking on it will open a drop down menu with links to set the mode and open Geomap settings.
 
@@ -25,9 +25,9 @@ The *Map area* takes up the lower part of the page, and it works like most mapp
 
 There are three entries in the *Geomap options* menu:
 
--   Edit mode
--   View mode (Default mode)
--   Settings
+- Edit mode
+- View mode (Default mode)
+- Settings
 
 *Edit mode* allows locations and links to be added to the map or removed from the map. Locations do need to exist before links can be created. *Edit mode* also allows has a search bar which allows locations to be located via search term.
 
@@ -45,9 +45,9 @@ There are two basic settings, *Provider* and *Geomap refresh rate*, and a thir
 
 There are three geographic data service providers available in Geomap:
 
--   Google Maps (Default)
--   CloudMade
--   OpenStreetMap
+- Google Maps (Default)
+- CloudMade
+- OpenStreetMap
 
 Google Maps is the default geographic data service for Geomap. Out of the box OP5 Monitor will use data from Google Maps, and an API key can be entered into the *Google Maps API Key* field to allow utilization of addition features of the Google Maps API.
 
@@ -61,18 +61,18 @@ Real-time information on a Geomap client requires the client to have Internet ac
 
 ## Accessing Geomap
 
-1.  Hover over the *Monitor* menu entry in the OP5 Monitor Toolbar to expand it.
+1. Hover over the *Monitor* menu entry in the OP5 Monitor Toolbar to expand it.
     ![](attachments/16482345/23793029.png)
-2.  Click on the *Geomap* link to open the **Geomap Page**. (Red box in the screenshot)
+2. Click on the *Geomap* link to open the **Geomap Page**. (Red box in the screenshot)
 
 # Locations
 
 Before Geomap is useful you have to add locations to the map. Each location can be associated with an object. The following object types can be used:
 
--   -   Host
-    -   Service
-    -   Host Group
-    -   Service Group
+- Host
+  - Service
+  - Host Group
+  - Service Group
 
 ## Adding a location
 
@@ -80,21 +80,15 @@ Here we will add a new location. First we need to locate where on the map we wan
 
 ### To add the location
 
-1.  Open up the Geomap from the monitoring menu.
-2.  Click on edit in the upper left corner, just above the map.
+1. Open up the Geomap from the monitoring menu.
+2. Click on edit in the upper left corner, just above the map.
     ![](attachments/16482345/16678936.png)
-3.  Double click on the map to place your location
-4.  A bubble will appear on the location, select 'Add location':
+3. Double click on the map to place your location
+4. A bubble will appear on the location, select 'Add location':
     ![](attachments/16482345/16678938.png)
     Enter the variables for this locations and select type, then the object you want to link to this location. You can also enter the exact latitude and longitude here:
     ![](attachments/16482345/16678939.png)
-5.  Click on **Save** to create the location.
-
- 
-
- 
-
- 
+5. Click on **Save** to create the location.
 
 # Links
 
@@ -104,28 +98,25 @@ When you have added a couple of locations to your Geomap you might want to add a
 
 Here we will use two locations called:
 
--   Gothenburg
--   Stockholm
+- Gothenburg
+- Stockholm
 
 The locations listed above are associated with one host each.
  Now we will add a link between the two locations and associate it with a service that will symbolize the link between the both locations.
 
 ### To add the link
 
-1.  Open up the **Geomap** from the menu. Click on **Edit** above the map:
+1. Open up the **Geomap** from the menu. Click on **Edit** above the map:
     ![](attachments/16482345/16678940.png)
-2.  Click on one of the locations that you want to link together and select **Link**:
+2. Click on one of the locations that you want to link together and select **Link**:
     ![](attachments/16482345/16678942.png)
-3.  Choose the second location and select **Link** in the bubble on that location. This will create grey line between the two locations.
+3. Choose the second location and select **Link** in the bubble on that location. This will create grey line between the two locations.
     ![](attachments/16482345/16678944.png)
-4.  Click on the grey line. Click on **Edit** in the pop-up bubble.
+4. Click on the grey line. Click on **Edit** in the pop-up bubble.
     1.  Enter a description.
     2.  Select a type.
     3.  Select the object you want the link to represent.
 
-5.  Click **Save** to save your link.
-
- 
+5. Click **Save** to save your link.
 
                          ![](attachments/16482345/16678943.png)
-

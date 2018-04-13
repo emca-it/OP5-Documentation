@@ -6,25 +6,19 @@ This article was written for version 5.0 of OP5 Monitor, it could work on both l
 
 Information in this article is old and can be obsolete, it will be updated and confirmed with newer versions of OP5 Monitor when possible.
 
- 
-
 ## Introduction
 
 This integration between OP5 Monitor and Nilex helpdesk system makes it possible to receive notifications in Nilex and create a support ticket from the notification.
 
  Read more about Nilex here: [http://www.nilex.se](http://www.nilex.se/)
 
- 
-
 ## Prerequisites
 
 To be able to complete this how-to you will need:
 
--   Administrative access to a working Nilex system
--   Root command line access to a running OP5 Monitor
--   Contact Nilex to make sure you have the required api/modules
-
- 
+- Administrative access to a working Nilex system
+- Root command line access to a running OP5 Monitor
+- Contact Nilex to make sure you have the required api/modules
 
 ## Create Nilex contact
 
@@ -47,8 +41,6 @@ is the unique id from Nilex. The file must be placed in the directory
 **/opt/monitor/op5/notify/extra\_host\_vars/nilex** and it must be named
 host\_id. You will most likely have to create this directory.
 
- 
-
 ## Configure notifications
 
 Most of our customers only wish to receive acknowledgement notifications to
@@ -56,8 +48,6 @@ their trouble-ticket system and use it as a logbook of what went wrong and
 how they fixed it. For this purpose, you’ll need to create a directory named
 **/opt/monitor/op5/notify/nilex/skins.mail** and copy the proper skins from
 **/opt/monitor/op5/notify/skins.mail** to the aforementioned directory.
-
- 
 
 To only receive acknowledgement notifications, you’ll need to copy**
 host.ACKNOWLEDGEMENT** and, if you want service acknowledgements, the
@@ -82,5 +72,3 @@ Revision 1<br />2009-08-27</td>
 </tr>
 </tbody>
 </table>
-
-

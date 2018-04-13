@@ -8,21 +8,19 @@ Only for NSClient++ \>= 0.5.x
 
 **Due to a [bug](https://github.com/mickem/nscp/issues/227) in NSClient++ in 0.4 you should not use anything else than 0.5 or later when handling configuration in this way.**
 
- 
-
--   [About the document](#ConfiguringNSClient++fromtheWindowscommandprompt-Aboutthedocument)
--   [Listing settings](#ConfiguringNSClient++fromtheWindowscommandprompt-Listingsettings)
--   [Change settings](#ConfiguringNSClient++fromtheWindowscommandprompt-Changesettings)
--   [Allowed hosts](#ConfiguringNSClient++fromtheWindowscommandprompt-AllowedhostsAllowed_hosts)
--   [Turning on debug logging](#ConfiguringNSClient++fromtheWindowscommandprompt-TurningondebugloggingTurning_on_debug_logging)
--   [Modules](#ConfiguringNSClient++fromtheWindowscommandprompt-Modules)
--   [Fetch configuration from HTTP server](#ConfiguringNSClient++fromtheWindowscommandprompt-FetchconfigurationfromHTTPserverFetch_configuration_from_HTTP_server)
--   [Examples](#ConfiguringNSClient++fromtheWindowscommandprompt-Examples)
-    -   [Allow arguments for the NRPE server](#ConfiguringNSClient++fromtheWindowscommandprompt-AllowargumentsfortheNRPEserver)
-    -   [Allow nasty characters as arguments for the NRPE server](#ConfiguringNSClient++fromtheWindowscommandprompt-AllownastycharactersasargumentsfortheNRPEserver)
-    -   [Allow arguments for external scripts](#ConfiguringNSClient++fromtheWindowscommandprompt-Allowargumentsforexternalscripts)
-    -   [Add an external script](#ConfiguringNSClient++fromtheWindowscommandprompt-Addanexternalscript)
--   [More information](#ConfiguringNSClient++fromtheWindowscommandprompt-Moreinformation)
+- [About the document](#ConfiguringNSClient++fromtheWindowscommandprompt-Aboutthedocument)
+- [Listing settings](#ConfiguringNSClient++fromtheWindowscommandprompt-Listingsettings)
+- [Change settings](#ConfiguringNSClient++fromtheWindowscommandprompt-Changesettings)
+- [Allowed hosts](#ConfiguringNSClient++fromtheWindowscommandprompt-AllowedhostsAllowed_hosts)
+- [Turning on debug logging](#ConfiguringNSClient++fromtheWindowscommandprompt-TurningondebugloggingTurning_on_debug_logging)
+- [Modules](#ConfiguringNSClient++fromtheWindowscommandprompt-Modules)
+- [Fetch configuration from HTTP server](#ConfiguringNSClient++fromtheWindowscommandprompt-FetchconfigurationfromHTTPserverFetch_configuration_from_HTTP_server)
+- [Examples](#ConfiguringNSClient++fromtheWindowscommandprompt-Examples)
+  - [Allow arguments for the NRPE server](#ConfiguringNSClient++fromtheWindowscommandprompt-AllowargumentsfortheNRPEserver)
+  - [Allow nasty characters as arguments for the NRPE server](#ConfiguringNSClient++fromtheWindowscommandprompt-AllownastycharactersasargumentsfortheNRPEserver)
+  - [Allow arguments for external scripts](#ConfiguringNSClient++fromtheWindowscommandprompt-Allowargumentsforexternalscripts)
+  - [Add an external script](#ConfiguringNSClient++fromtheWindowscommandprompt-Addanexternalscript)
+- [More information](#ConfiguringNSClient++fromtheWindowscommandprompt-Moreinformation)
 
 # About the document
 
@@ -46,13 +44,13 @@ You can chose between list all settings or just a sub path.
 
 Let's say you want to check the settings of the "allow nasty characters" for the NRPE server module and then disable it.
 
-1.  First check the setting:
+1. First check the setting:
     `C:\Program Files\NSClient++>nscp settings --list --path /settings/NRPE/server --key "allow nasty characters"`
     `/settings/NRPE/server.allow arguments=true`
     `/settings/NRPE/server.allow nasty characters=true`
-2.  Update the "allow nasty characters" for the NRPE server module with the new value
-3.  `C:\Program Files\NSClient++>nscp settings --path /settings/default --key "allow nasty characters" --set false`
-4.  Restart nscp with:
+2. Update the "allow nasty characters" for the NRPE server module with the new value
+3. `C:\Program Files\NSClient++>nscp settings --path /settings/default --key "allow nasty characters" --set false`
+4. Restart nscp with:
     `C:\Program Files\NSClient++>nscp service --stop`
     `Stopping service.`
     `C:\Program Files\NSClient++>nscp service --start`
@@ -62,9 +60,9 @@ Let's say you want to check the settings of the "allow nasty characters" for the
 
 In NSClient++ there are two levels where you can set which server is allowed to talk to NSClient++ on the monitored Windows server.
 
--   Global
--   NSClient/server
--   NRPE/server
+- Global
+- NSClient/server
+- NRPE/server
 
 **To check the settings:**
 
@@ -98,20 +96,20 @@ If done in an ini file it looks like this:
 
 But now we will add it via cmd instead
 
-1.  First check the current log level:
+1. First check the current log level:
     `C:\Program Files\NSClient++>nscp settings --list --path /settings/log`
-2.  Set log file name:
+2. Set log file name:
     `C:\Program Files\NSClient++>nscp settings --path /settings/log --key "file name" --set "nsclient-debug.log"`
-3.  Set the log level:
+3. Set the log level:
     `C:\Program Files\NSClient++>nscp settings --path /settings/log --key "level" --set "debug"`
-4.  Set rotation after 1Gb:
+4. Set rotation after 1Gb:
     `C:\Program Files\NSClient++>nscp settings --path /settings/log/file --key "max size" --set "1073741824"`
-5.  Let's check the new settings:
+5. Let's check the new settings:
     `C:\Program Files\NSClient++>nscp settings --list --path /settings/log`
     `/settings/log/file.max size=1073741824`
     `/settings/log.file name=nsclient-debug.log`
     `/settings/log.level=debug`
-6.  Restart nscp with:
+6. Restart nscp with:
     `C:\Program Files\NSClient++>nscp service --stop`
     `Stopping service.`
     `C:\Program Files\NSClient++>nscp service --start`
@@ -122,15 +120,15 @@ But now we will add it via cmd instead
 Let's say that you need to activate a module that is not activated by default. Then you can of course do that with "nscp settings". This time you want to make it possible to use the "WMI interface" in NSClient++ then you need to activate the module:
 CheckWMI
 
-1.  First let's list all active modules:
+1. First let's list all active modules:
     `C:\Program Files\NSClient++>nscp settings --list --path /modules`
-2.  This is done with the following command:
+2. This is done with the following command:
     `C:\Program Files\NSClient++>nscp settings --activate-module CheckWMI --add-defaults`
-3.  Restart nscp with:
+3. Restart nscp with:
     `C:\Program Files\NSClient++>nscp service --stop`
     `Stopping service.`
     `C:\Program Files\NSClient++>nscp service --start`
-    `Starting NSCP` 
+    `Starting NSCP`
 
 # Fetch configuration from HTTP server
 
@@ -146,9 +144,9 @@ First thing to do before we change the settings of NSClient++ on a Windows serve
 
 Now we will switch to the new configuration file:
 
-1.  Update the settings:
+1. Update the settings:
     `C:\Program Files\NSClient++>nscp settings --switch http://10.10.10.4/nsclient/nsclient.ini`
-2.  Restart nscp with:
+2. Restart nscp with:
     `C:\Program Files\NSClient++>nscp service --stop`
     `Stopping service.`
     `C:\Program Files\NSClient++>nscp service --start`
@@ -158,15 +156,13 @@ If the web server for some reason will be come unreachable NSClient will be usin
 
 To swich back to using the local registry
 
-1.  Update the settings:
+1. Update the settings:
     `C:\Program Files\NSClient++>nscp settings --switch registry`
-2.  Restart nscp with:
+2. Restart nscp with:
     `C:\Program Files\NSClient++>nscp service --stop`
     `Stopping service.`
     `C:\Program Files\NSClient++>nscp service --start`
     `Starting NSCP`
-
- 
 
 # Examples
 
@@ -198,4 +194,3 @@ With arguments:
 
 For more settings in NSClient++ please take a look at the official NSClient++ settings documentation:
 <https://docs.nsclient.org>
-

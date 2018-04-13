@@ -4,12 +4,12 @@
 
 op5 Monitor has got a search functionality that makes it easy to find:
 
--   Hosts
--   Services
--   Host groups
--   Service groups
--   Notes
--   Status information
+- Hosts
+- Services
+- Host groups
+- Service groups
+- Notes
+- Status information
 
 ![](attachments/16482309/16679036.png)
 
@@ -155,4 +155,3 @@ More information can be found in the [Filters](Filters) section.
 # Related pages
 
 Error rendering macro 'sv-contentbylabel' : null
-

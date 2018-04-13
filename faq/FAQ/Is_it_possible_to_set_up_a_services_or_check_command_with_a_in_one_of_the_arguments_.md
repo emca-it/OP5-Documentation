@@ -10,31 +10,25 @@ Is it possible to set up a services or check\_command with a dollar sign (\$) in
 
 * * * * *
 
- 
-
 Yes, but some careful configuration is needed, in several steps:
 
--   The arguments containing the \$ character must be escaped with yet another \$ character, so it looks like: \$\$
--   The arguments in the check command lines must be properly quoted using single quotes.
-
- 
+- The arguments containing the \$ character must be escaped with yet another \$ character, so it looks like: \$\$
+- The arguments in the check command lines must be properly quoted using single quotes.
 
 Begin by looking at (editing) the check command used in this check. Look for the \$ARG*n*\$ [macro](https://kb.op5.com/display/DOC/Macros) corresponding to the argument in the service's check\_command\_args setting. The check command can be set up in three different ways, as outlined by the examples below.
 
--   `$USER1$/check_plugin_example -H $HOSTADDRESS$ -u '$ARG1$' -d '$ARG2$'`
-    -   \$ARG1\$ and \$ARG2\$ are single quoted.
-    -   The arguments defined in the service's check\_command\_args setting should be set without quoting, such as:
+- `$USER1$/check_plugin_example -H $HOSTADDRESS$ -u '$ARG1$' -d '$ARG2$'`
+  - \$ARG1\$ and \$ARG2\$ are single quoted.
+  - The arguments defined in the service's check\_command\_args setting should be set without quoting, such as:
         `username!mysql$$instance`
--   `$USER1$/check_plugin_example -H $HOSTADDRESS$ -u $ARG1$ -d $ARG2$`
-    -   \$ARG1\$ and \$ARG2\$ are not quoted at all.
-    -   Add single quotes surrounding your \$ARG*n*\$ as seen in the first example.
-    -   Set up the service's check\_command\_args setting as described in the first example.
--   `$USER1$/check_plugin_example -H $HOSTADDRESS$ -u "$ARG1$" -d "$ARG2$"`
-    -   \$ARG1\$ and \$ARG2\$ are double quoted.
-    -   Change from double quotes to single quotes surrounding your \$ARG*n*\$.
-    -   Set up the service's check\_command\_args setting as described in the first example.
-
- 
+- `$USER1$/check_plugin_example -H $HOSTADDRESS$ -u $ARG1$ -d $ARG2$`
+  - \$ARG1\$ and \$ARG2\$ are not quoted at all.
+  - Add single quotes surrounding your \$ARG*n*\$ as seen in the first example.
+  - Set up the service's check\_command\_args setting as described in the first example.
+- `$USER1$/check_plugin_example -H $HOSTADDRESS$ -u "$ARG1$" -d "$ARG2$"`
+  - \$ARG1\$ and \$ARG2\$ are double quoted.
+  - Change from double quotes to single quotes surrounding your \$ARG*n*\$.
+  - Set up the service's check\_command\_args setting as described in the first example.
 
 **Why \$\$ and single quotes, then?**
 
@@ -53,8 +47,6 @@ For an even better understanding of this issue, spawn a shell such as a bash. Fo
 
 Do you spot the difference?
 
- 
-
 What if we use the same argument as in the check command?
 
 `echo "mssql$instance"`
@@ -66,4 +58,3 @@ And what if instance is a defined variable?
 `echo 'mssql$instance'`
 
 As you can see, single quotes is the only safe option in this check command case.
-

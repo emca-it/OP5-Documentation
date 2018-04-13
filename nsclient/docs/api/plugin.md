@@ -1,36 +1,29 @@
 
-
-
-
 <a name=".Plugin.Common"/>
 
 # Common
-
 
 Full name: `Plugin.Common`
 
 Common utility types (re-used in various messages below)
 
-
 ### ResultCode
 
 A "Nagios" status result.
 
-| Possible values           | Value | Description  | 
+| Possible values           | Value | Description  |
 | ------------------------- | ----- | ------------ |
 | OK                        | 0    | An ok status in Nagios  |
 | WARNING                   | 1    | A warning status in Nagios  |
 | CRITICAL                  | 2    | A critical status in Nagios  |
 | UNKNOWN                   | 3    | Not able to determine status in Nagios  |
 
-
-
 ### DataType
 
 Type of data fields.
 @deprecated in favor of checking which field is available.
 
-| Possible values           | Value | Description  | 
+| Possible values           | Value | Description  |
 | ------------------------- | ----- | ------------ |
 | INT                       | 1    | An ok status in Nagios  |
 | STRING                    | 2    | A warning status in Nagios  |
@@ -38,22 +31,14 @@ Type of data fields.
 | BOOL                      | 4    | Not able to determine status in Nagios  |
 | LIST                      | 5    |  |
 
-
-
-
-
-
 <a name=".Plugin.Common.AnyDataType"/>
 
 ## AnyDataType
-
 
 Full name: `Plugin.Common.AnyDataType`
 
 Data type used to wrap "any" primitive type.
 Used whenever the type can change.
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -63,40 +48,26 @@ Used whenever the type can change.
 | optional             | bool | bool_data | Boolean (true/false) payload  |
 | repeated             | string | list_data | A string (multiple lines are separated by list entries)  |
 
-
-
-
-
 <a name=".Plugin.Common.KeyValue"/>
 
 ## KeyValue
 
-
 Full name: `Plugin.Common.KeyValue`
 
 Key value pair
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | required             | string | key | The key identifying the value  |
 | required             | string | value | The value  |
 
-
-
-
-
 <a name=".Plugin.Common.Host"/>
 
 ## Host
 
-
 Full name: `Plugin.Common.Host`
 
 Field identifying a host entry
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -108,21 +79,14 @@ Field identifying a host entry
 | repeated             | [KeyValue](#.Plugin.Common.KeyValue) | metadata | A key value store with attributes describing this host.  |
 | repeated             | string | tags | A number of tags defined for this host  |
 
-
-
-
-
 <a name=".Plugin.Common.Header"/>
 
 ## Header
-
 
 Full name: `Plugin.Common.Header`
 
 A common header used in all messages.
 Contains basic information about the message.
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -136,21 +100,14 @@ Contains basic information about the message.
 | repeated             | string | tags | A list of tags associated with the message.  |
 | repeated             | [Host](#.Plugin.Common.Host) | hosts | A list of hosts.  |
 
-
-
-
-
 <a name=".Plugin.Common.PerformanceData"/>
 
 ## PerformanceData
-
 
 Full name: `Plugin.Common.PerformanceData`
 
 How metrics are encoded into check results
 Nagios calls this performance data and we inherited the name.
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -160,19 +117,13 @@ Nagios calls this performance data and we inherited the name.
 | optional             | [FloatValue](#.Plugin.Common.PerformanceData.FloatValue) | float_value | If the value is a floating point number (can be only one)  |
 | optional             | [BoolValue](#.Plugin.Common.PerformanceData.BoolValue) | bool_value | If the value is a boolean (can be only one)  |
 
-
-
-
 <a name=".Plugin.Common.PerformanceData.IntValue"/>
 
 ### IntValue
 
-
 Full name: `Plugin.Common.PerformanceData.IntValue`
 
 Numeric performance data
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -183,39 +134,25 @@ Numeric performance data
 | optional             | int64 | minimum | The lowest possible value  |
 | optional             | int64 | maximum | The highest possible value  |
 
-
-
-
-
 <a name=".Plugin.Common.PerformanceData.StringValue"/>
 
 ### StringValue
-
 
 Full name: `Plugin.Common.PerformanceData.StringValue`
 
 Textual performance data
 
-
-
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | required             | string | value | The value  |
-
-
-
-
 
 <a name=".Plugin.Common.PerformanceData.FloatValue"/>
 
 ### FloatValue
 
-
 Full name: `Plugin.Common.PerformanceData.FloatValue`
 
 Floating point performance data
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -226,20 +163,13 @@ Floating point performance data
 | optional             | double | minimum | The lowest possible value  |
 | optional             | double | maximum | The highest possible value  |
 
-
-
-
-
 <a name=".Plugin.Common.PerformanceData.BoolValue"/>
 
 ### BoolValue
 
-
 Full name: `Plugin.Common.PerformanceData.BoolValue`
 
 Boolean performance data
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -248,21 +178,11 @@ Boolean performance data
 | optional             | bool | warning | The warning threshold (if available)  |
 | optional             | bool | critical | The warning critical (if available)  |
 
-
-
-
-
-
 <a name=".Plugin.Common.Metric"/>
 
 ## Metric
 
-
 Full name: `Plugin.Common.Metric`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -271,20 +191,11 @@ Full name: `Plugin.Common.Metric`
 | optional             | string | alias |  |
 | optional             | string | desc |  |
 
-
-
-
-
 <a name=".Plugin.Common.MetricsBundle"/>
 
 ## MetricsBundle
 
-
 Full name: `Plugin.Common.MetricsBundle`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -294,32 +205,20 @@ Full name: `Plugin.Common.MetricsBundle`
 | optional             | string | alias |  |
 | optional             | string | desc |  |
 
-
-
-
-
 <a name=".Plugin.Common.Result"/>
 
 ## Result
 
-
 Full name: `Plugin.Common.Result`
-
-
-
 
 ### StatusCodeType
 
-
-| Possible values           | Value | Description  | 
+| Possible values           | Value | Description  |
 | ------------------------- | ----- | ------------ |
 | STATUS_OK                 | 0    |  |
 | STATUS_WARNING            | 1    |  |
 | STATUS_ERROR              | 2    |  |
 | STATUS_DELAYED            | 3    |  |
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -327,16 +226,9 @@ Full name: `Plugin.Common.Result`
 | optional             | string | message |  |
 | optional             | string | data |  |
 
-
-
-
-
-
-
 <a name=".Plugin.QueryRequestMessage"/>
 
 # QueryRequestMessage
-
 
 Full name: `Plugin.QueryRequestMessage`
 
@@ -344,26 +236,16 @@ Query request
 Used for querying the client this is the "normal" check_nrpe message request.
 Associated response is :py:class:`Plugin.QueryResponseMessage`
 
-
-
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header |  |
 | repeated             | [Request](#.Plugin.QueryRequestMessage.Request) | payload |  |
 
-
-
-
 <a name=".Plugin.QueryRequestMessage.Request"/>
 
 ## Request
 
-
 Full name: `Plugin.QueryRequestMessage.Request`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -373,16 +255,9 @@ Full name: `Plugin.QueryRequestMessage.Request`
 | optional             | string | alias |  |
 | repeated             | string | arguments |  |
 
-
-
-
-
-
-
 <a name=".Plugin.QueryResponseMessage"/>
 
 # QueryResponseMessage
-
 
 Full name: `Plugin.QueryResponseMessage`
 
@@ -390,26 +265,16 @@ Query response
 Used for querying the client this is the "normal" check_nrpe message request.
 Associated request is `[QueryRequestMessage](#.Plugin.QueryRequestMessage)`
 
-
-
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header |  |
 | repeated             | [Response](#.Plugin.QueryResponseMessage.Response) | payload |  |
 
-
-
-
 <a name=".Plugin.QueryResponseMessage.Response"/>
 
 ## Response
 
-
 Full name: `Plugin.QueryResponseMessage.Response`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -422,36 +287,20 @@ Full name: `Plugin.QueryResponseMessage.Response`
 | repeated             | [Line](#.Plugin.QueryResponseMessage.Response.Line) | lines |  |
 | optional             | bytes | data |  |
 
-
-
-
 <a name=".Plugin.QueryResponseMessage.Response.Line"/>
 
 ### Line
 
-
 Full name: `Plugin.QueryResponseMessage.Response.Line`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | required             | string | message |  |
 | repeated             | [PerformanceData](#.Plugin.Common.PerformanceData) | perf |  |
 
-
-
-
-
-
-
-
 <a name=".Plugin.ExecuteRequestMessage"/>
 
 # ExecuteRequestMessage
-
 
 Full name: `Plugin.ExecuteRequestMessage`
 
@@ -459,26 +308,16 @@ Execute command request and response.
 Used for executing commands on clients similar to :py:class:`Plugin.QueryRequestMessage` but wont return Nagios check data
 Associated response is :py:class:`Plugin.ExecuteResponseMessage`
 
-
-
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header |  |
 | repeated             | [Request](#.Plugin.ExecuteRequestMessage.Request) | payload |  |
 
-
-
-
 <a name=".Plugin.ExecuteRequestMessage.Request"/>
 
 ## Request
 
-
 Full name: `Plugin.ExecuteRequestMessage.Request`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -486,41 +325,22 @@ Full name: `Plugin.ExecuteRequestMessage.Request`
 | required             | string | command |  |
 | repeated             | string | arguments |  |
 
-
-
-
-
-
-
 <a name=".Plugin.ExecuteResponseMessage"/>
 
 # ExecuteResponseMessage
 
-
 Full name: `Plugin.ExecuteResponseMessage`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header |  |
 | repeated             | [Response](#.Plugin.ExecuteResponseMessage.Response) | payload |  |
 
-
-
-
 <a name=".Plugin.ExecuteResponseMessage.Response"/>
 
 ## Response
 
-
 Full name: `Plugin.ExecuteResponseMessage.Response`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -531,16 +351,9 @@ Full name: `Plugin.ExecuteResponseMessage.Response`
 | required             | string | message |  |
 | optional             | bytes | data |  |
 
-
-
-
-
-
-
 <a name=".Plugin.SubmitRequestMessage"/>
 
 # SubmitRequestMessage
-
 
 Full name: `Plugin.SubmitRequestMessage`
 
@@ -549,23 +362,15 @@ Used for submitting a passive check results.
 The actual payload (Request) is a normal :py:class:`Plugin.QueryResponseMessage.Response`.
 Associated response is :py:class:`Plugin.SubmitResponseMessage`
 
-
-
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header | The header  |
 | required             | string | channel |  |
 | repeated             | [Response](#.Plugin.QueryResponseMessage.Response) | payload |  |
 
-
-
-
-
-
 <a name=".Plugin.SubmitResponseMessage"/>
 
 # SubmitResponseMessage
-
 
 Full name: `Plugin.SubmitResponseMessage`
 
@@ -573,26 +378,16 @@ Submit result response message.
 Response from submitting a passive check results.
 Associated request is :py:class:`Plugin.SubmitRequestMessage`
 
-
-
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header |  |
 | repeated             | [Response](#.Plugin.SubmitResponseMessage.Response) | payload |  |
 
-
-
-
 <a name=".Plugin.SubmitResponseMessage.Response"/>
 
 ## Response
 
-
 Full name: `Plugin.SubmitResponseMessage.Response`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -600,16 +395,9 @@ Full name: `Plugin.SubmitResponseMessage.Response`
 | required             | string | command |  |
 | required             | [Result](#.Plugin.Common.Result) | result |  |
 
-
-
-
-
-
-
 <a name=".Plugin.EventMessage"/>
 
 # EventMessage
-
 
 Full name: `Plugin.EventMessage`
 
@@ -617,26 +405,16 @@ Execute command request and response.
 Used for executing commands on clients similar to :py:class:`Plugin.QueryRequestMessage` but wont return Nagios check data
 Associated response is :py:class:`Plugin.ExecuteResponseMessage`
 
-
-
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header |  |
 | repeated             | [Request](#.Plugin.EventMessage.Request) | payload |  |
 
-
-
-
 <a name=".Plugin.EventMessage.Request"/>
 
 ## Request
 
-
 Full name: `Plugin.EventMessage.Request`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -644,16 +422,9 @@ Full name: `Plugin.EventMessage.Request`
 | repeated             | string | arguments |  |
 | repeated             | [KeyValue](#.Plugin.Common.KeyValue) | data |  |
 
-
-
-
-
-
-
 <a name=".Plugin.Registry"/>
 
 # Registry
-
 
 Full name: `Plugin.Registry`
 
@@ -662,11 +433,9 @@ It is not used to submit checks or query status instead it is used so register m
 As well as query for them.
 The registry is a central component inside NSClient++ and this is the way to interact with the registry.
 
-
 ### ItemType
 
-
-| Possible values           | Value | Description  | 
+| Possible values           | Value | Description  |
 | ------------------------- | ----- | ------------ |
 | QUERY                     | 1    |  |
 | COMMAND                   | 2    |  |
@@ -679,51 +448,29 @@ The registry is a central component inside NSClient++ and this is the way to int
 | EVENT                     | 9    |  |
 | ALL                       | 99   |  |
 
-
-
 ### Command
 
-
-| Possible values           | Value | Description  | 
+| Possible values           | Value | Description  |
 | ------------------------- | ----- | ------------ |
 | LOAD                      | 1    |  |
 | UNLOAD                    | 2    |  |
 | RELOAD                    | 3    |  |
 
-
-
-
-
-
 <a name=".Plugin.Registry.Query"/>
 
 ## Query
 
-
 Full name: `Plugin.Registry.Query`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | string | expression |  |
 
-
-
-
-
 <a name=".Plugin.Registry.Information"/>
 
 ## Information
 
-
 Full name: `Plugin.Registry.Information`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -735,20 +482,11 @@ Full name: `Plugin.Registry.Information`
 | optional             | bool | advanced |  |
 | repeated             | string | plugin |  |
 
-
-
-
-
 <a name=".Plugin.Registry.KeyWordDescription"/>
 
 ## KeyWordDescription
 
-
 Full name: `Plugin.Registry.KeyWordDescription`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -758,20 +496,11 @@ Full name: `Plugin.Registry.KeyWordDescription`
 | optional             | string | short_description |  |
 | optional             | string | long_description |  |
 
-
-
-
-
 <a name=".Plugin.Registry.ParameterDetail"/>
 
 ## ParameterDetail
 
-
 Full name: `Plugin.Registry.ParameterDetail`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -784,20 +513,11 @@ Full name: `Plugin.Registry.ParameterDetail`
 | optional             | string | long_description |  |
 | repeated             | [KeyWordDescription](#.Plugin.Registry.KeyWordDescription) | keyword |  |
 
-
-
-
-
 <a name=".Plugin.Registry.FieldDetail"/>
 
 ## FieldDetail
 
-
 Full name: `Plugin.Registry.FieldDetail`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -805,40 +525,22 @@ Full name: `Plugin.Registry.FieldDetail`
 | optional             | string | short_description |  |
 | optional             | string | long_description |  |
 
-
-
-
-
 <a name=".Plugin.Registry.ParameterDetails"/>
 
 ## ParameterDetails
 
-
 Full name: `Plugin.Registry.ParameterDetails`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | repeated             | [ParameterDetail](#.Plugin.Registry.ParameterDetail) | parameter |  |
 | repeated             | [FieldDetail](#.Plugin.Registry.FieldDetail) | fields |  |
 
-
-
-
-
 <a name=".Plugin.Registry.Schedule"/>
 
 ## Schedule
 
-
 Full name: `Plugin.Registry.Schedule`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -846,41 +548,22 @@ Full name: `Plugin.Registry.Schedule`
 | optional             | string | cron |  |
 | optional             | string | interval |  |
 
-
-
-
-
-
-
 <a name=".Plugin.RegistryRequestMessage"/>
 
 # RegistryRequestMessage
 
-
 Full name: `Plugin.RegistryRequestMessage`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header |  |
 | repeated             | [Request](#.Plugin.RegistryRequestMessage.Request) | payload |  |
 
-
-
-
 <a name=".Plugin.RegistryRequestMessage.Request"/>
 
 ## Request
 
-
 Full name: `Plugin.RegistryRequestMessage.Request`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -889,19 +572,11 @@ Full name: `Plugin.RegistryRequestMessage.Request`
 | optional             | [Inventory](#.Plugin.RegistryRequestMessage.Request.Inventory) | inventory |  |
 | optional             | [Control](#.Plugin.RegistryRequestMessage.Request.Control) | control |  |
 
-
-
-
 <a name=".Plugin.RegistryRequestMessage.Request.Registration"/>
 
 ### Registration
 
-
 Full name: `Plugin.RegistryRequestMessage.Request.Registration`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -913,20 +588,11 @@ Full name: `Plugin.RegistryRequestMessage.Request.Registration`
 | repeated             | string | alias |  |
 | repeated             | [Schedule](#.Plugin.Registry.Schedule) | schedule |  |
 
-
-
-
-
 <a name=".Plugin.RegistryRequestMessage.Request.Inventory"/>
 
 ### Inventory
 
-
 Full name: `Plugin.RegistryRequestMessage.Request.Inventory`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -936,20 +602,11 @@ Full name: `Plugin.RegistryRequestMessage.Request.Inventory`
 | optional             | bool | fetch_all |  |
 | optional             | bool | fetch_information |  |
 
-
-
-
-
 <a name=".Plugin.RegistryRequestMessage.Request.Control"/>
 
 ### Control
 
-
 Full name: `Plugin.RegistryRequestMessage.Request.Control`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -958,42 +615,22 @@ Full name: `Plugin.RegistryRequestMessage.Request.Control`
 | optional             | string | name |  |
 | optional             | string | alias |  |
 
-
-
-
-
-
-
-
 <a name=".Plugin.RegistryResponseMessage"/>
 
 # RegistryResponseMessage
 
-
 Full name: `Plugin.RegistryResponseMessage`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header |  |
 | repeated             | [Response](#.Plugin.RegistryResponseMessage.Response) | payload |  |
 
-
-
-
 <a name=".Plugin.RegistryResponseMessage.Response"/>
 
 ## Response
 
-
 Full name: `Plugin.RegistryResponseMessage.Response`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -1003,38 +640,21 @@ Full name: `Plugin.RegistryResponseMessage.Response`
 | repeated             | [Inventory](#.Plugin.RegistryResponseMessage.Response.Inventory) | inventory |  |
 | optional             | [Control](#.Plugin.RegistryResponseMessage.Response.Control) | control |  |
 
-
-
-
 <a name=".Plugin.RegistryResponseMessage.Response.Registration"/>
 
 ### Registration
 
-
 Full name: `Plugin.RegistryResponseMessage.Response.Registration`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | int32 | item_id |  |
 
-
-
-
-
 <a name=".Plugin.RegistryResponseMessage.Response.Inventory"/>
 
 ### Inventory
 
-
 Full name: `Plugin.RegistryResponseMessage.Response.Inventory`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -1046,57 +666,33 @@ Full name: `Plugin.RegistryResponseMessage.Response.Inventory`
 | optional             | [ParameterDetails](#.Plugin.Registry.ParameterDetails) | parameters |  |
 | repeated             | [Schedule](#.Plugin.Registry.Schedule) | schedule |  |
 
-
-
-
-
 <a name=".Plugin.RegistryResponseMessage.Response.Control"/>
 
 ### Control
 
-
 Full name: `Plugin.RegistryResponseMessage.Response.Control`
-
-
-
-
-
-
-
-
-
-
 
 <a name=".Plugin.ScheduleNotificationMessage"/>
 
 # ScheduleNotificationMessage
-
 
 Full name: `Plugin.ScheduleNotificationMessage`
 
 Schedule Notification commands
 Used when a schedule is executed
 
-
-
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header |  |
 | repeated             | [Request](#.Plugin.ScheduleNotificationMessage.Request) | payload |  |
 
-
-
-
 <a name=".Plugin.ScheduleNotificationMessage.Request"/>
 
 ## Request
 
-
 Full name: `Plugin.ScheduleNotificationMessage.Request`
 
 A request message of a schule notification
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -1105,16 +701,9 @@ A request message of a schule notification
 | optional             | [Information](#.Plugin.Registry.Information) | info |  |
 | optional             | [Schedule](#.Plugin.Registry.Schedule) | schedule |  |
 
-
-
-
-
-
-
 <a name=".Plugin.Settings"/>
 
 # Settings
-
 
 Full name: `Plugin.Settings`
 
@@ -1122,51 +711,30 @@ Settings is an internal message.
 It is not used to submit checks or query status instead it is used to interact with the settings store.
 The settings is a central component inside NSClient++ and this is the way to interact with it.
 
-
 ### Command
 
-
-| Possible values           | Value | Description  | 
+| Possible values           | Value | Description  |
 | ------------------------- | ----- | ------------ |
 | LOAD                      | 1    |  |
 | SAVE                      | 2    |  |
 | RELOAD                    | 3    |  |
 
-
-
-
-
-
 <a name=".Plugin.Settings.Node"/>
 
 ## Node
 
-
 Full name: `Plugin.Settings.Node`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | required             | string | path |  |
 | optional             | string | key |  |
 
-
-
-
-
 <a name=".Plugin.Settings.Information"/>
 
 ## Information
 
-
 Full name: `Plugin.Settings.Information`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -1183,41 +751,22 @@ Full name: `Plugin.Settings.Information`
 | repeated             | string | plugin |  |
 | optional             | bool | subkey |  |
 
-
-
-
-
-
-
 <a name=".Plugin.SettingsRequestMessage"/>
 
 # SettingsRequestMessage
 
-
 Full name: `Plugin.SettingsRequestMessage`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header |  |
 | repeated             | [Request](#.Plugin.SettingsRequestMessage.Request) | payload |  |
 
-
-
-
 <a name=".Plugin.SettingsRequestMessage.Request"/>
 
 ## Request
 
-
 Full name: `Plugin.SettingsRequestMessage.Request`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -1230,19 +779,11 @@ Full name: `Plugin.SettingsRequestMessage.Request`
 | optional             | [Control](#.Plugin.SettingsRequestMessage.Request.Control) | control |  |
 | optional             | [Status](#.Plugin.SettingsRequestMessage.Request.Status) | status |  |
 
-
-
-
 <a name=".Plugin.SettingsRequestMessage.Request.Registration"/>
 
 ### Registration
 
-
 Full name: `Plugin.SettingsRequestMessage.Request.Registration`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -1250,20 +791,11 @@ Full name: `Plugin.SettingsRequestMessage.Request.Registration`
 | optional             | [Information](#.Plugin.Settings.Information) | info |  |
 | optional             | string | fields |  |
 
-
-
-
-
 <a name=".Plugin.SettingsRequestMessage.Request.Query"/>
 
 ### Query
 
-
 Full name: `Plugin.SettingsRequestMessage.Request.Query`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -1272,40 +804,22 @@ Full name: `Plugin.SettingsRequestMessage.Request.Query`
 | optional             | [DataType](#.Plugin.Common.DataType) | type |  |
 | optional             | [AnyDataType](#.Plugin.Common.AnyDataType) | default_value |  |
 
-
-
-
-
 <a name=".Plugin.SettingsRequestMessage.Request.Update"/>
 
 ### Update
 
-
 Full name: `Plugin.SettingsRequestMessage.Request.Update`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Node](#.Plugin.Settings.Node) | node |  |
 | optional             | [AnyDataType](#.Plugin.Common.AnyDataType) | value |  |
 
-
-
-
-
 <a name=".Plugin.SettingsRequestMessage.Request.Inventory"/>
 
 ### Inventory
 
-
 Full name: `Plugin.SettingsRequestMessage.Request.Inventory`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -1318,76 +832,39 @@ Full name: `Plugin.SettingsRequestMessage.Request.Inventory`
 | optional             | bool | fetch_templates |  |
 | optional             | bool | descriptions |  |
 
-
-
-
-
 <a name=".Plugin.SettingsRequestMessage.Request.Control"/>
 
 ### Control
 
-
 Full name: `Plugin.SettingsRequestMessage.Request.Control`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | required             | [Command](#.Plugin.Settings.Command) | command |  |
 | optional             | string | context |  |
 
-
-
-
-
 <a name=".Plugin.SettingsRequestMessage.Request.Status"/>
 
 ### Status
 
-
 Full name: `Plugin.SettingsRequestMessage.Request.Status`
-
-
-
-
-
-
-
-
-
-
 
 <a name=".Plugin.SettingsResponseMessage"/>
 
 # SettingsResponseMessage
 
-
 Full name: `Plugin.SettingsResponseMessage`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header |  |
 | repeated             | [Response](#.Plugin.SettingsResponseMessage.Response) | payload |  |
 
-
-
-
 <a name=".Plugin.SettingsResponseMessage.Response"/>
 
 ## Response
 
-
 Full name: `Plugin.SettingsResponseMessage.Response`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -1400,67 +877,34 @@ Full name: `Plugin.SettingsResponseMessage.Response`
 | optional             | [Control](#.Plugin.SettingsResponseMessage.Response.Control) | control |  |
 | optional             | [Status](#.Plugin.SettingsResponseMessage.Response.Status) | status |  |
 
-
-
-
 <a name=".Plugin.SettingsResponseMessage.Response.Registration"/>
 
 ### Registration
 
-
 Full name: `Plugin.SettingsResponseMessage.Response.Registration`
-
-
-
-
-
-
-
 
 <a name=".Plugin.SettingsResponseMessage.Response.Query"/>
 
 ### Query
 
-
 Full name: `Plugin.SettingsResponseMessage.Response.Query`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | required             | [Node](#.Plugin.Settings.Node) | node |  |
 | optional             | [AnyDataType](#.Plugin.Common.AnyDataType) | value |  |
 
-
-
-
-
 <a name=".Plugin.SettingsResponseMessage.Response.Update"/>
 
 ### Update
 
-
 Full name: `Plugin.SettingsResponseMessage.Response.Update`
-
-
-
-
-
-
-
 
 <a name=".Plugin.SettingsResponseMessage.Response.Inventory"/>
 
 ### Inventory
 
-
 Full name: `Plugin.SettingsResponseMessage.Response.Inventory`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -1468,34 +912,17 @@ Full name: `Plugin.SettingsResponseMessage.Response.Inventory`
 | required             | [Information](#.Plugin.Settings.Information) | info |  |
 | optional             | [AnyDataType](#.Plugin.Common.AnyDataType) | value |  |
 
-
-
-
-
 <a name=".Plugin.SettingsResponseMessage.Response.Control"/>
 
 ### Control
 
-
 Full name: `Plugin.SettingsResponseMessage.Response.Control`
-
-
-
-
-
-
-
 
 <a name=".Plugin.SettingsResponseMessage.Response.Status"/>
 
 ### Status
 
-
 Full name: `Plugin.SettingsResponseMessage.Response.Status`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -1503,45 +930,27 @@ Full name: `Plugin.SettingsResponseMessage.Response.Status`
 | optional             | string | type |  |
 | optional             | bool | has_changed |  |
 
-
-
-
-
-
-
-
 <a name=".Plugin.LogEntry"/>
 
 # LogEntry
-
 
 Full name: `Plugin.LogEntry`
 
 LogEntry is used to log status information.
 
-
-
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | repeated             | [Entry](#.Plugin.LogEntry.Entry) | entry |  |
-
-
-
 
 <a name=".Plugin.LogEntry.Entry"/>
 
 ## Entry
 
-
 Full name: `Plugin.LogEntry.Entry`
-
-
-
 
 ### Level
 
-
-| Possible values           | Value | Description  | 
+| Possible values           | Value | Description  |
 | ------------------------- | ----- | ------------ |
 | LOG_TRACE                 | 1000 |  |
 | LOG_DEBUG                 | 500  |  |
@@ -1549,9 +958,6 @@ Full name: `Plugin.LogEntry.Entry`
 | LOG_WARNING               | 50   |  |
 | LOG_ERROR                 | 10   |  |
 | LOG_CRITICAL              | 1    |  |
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
@@ -1562,92 +968,53 @@ Full name: `Plugin.LogEntry.Entry`
 | optional             | string | message |  |
 | optional             | int32 | date |  |
 
-
-
-
-
-
-
 <a name=".Plugin.MetricsQueryMessage"/>
 
 # MetricsQueryMessage
-
 
 Full name: `Plugin.MetricsQueryMessage`
 
 Metrics message
 Used for fetching and sending metrics.
 
-
-
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header |  |
 | repeated             | [Request](#.Plugin.MetricsQueryMessage.Request) | payload |  |
 
-
-
-
 <a name=".Plugin.MetricsQueryMessage.Request"/>
 
 ## Request
 
-
 Full name: `Plugin.MetricsQueryMessage.Request`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | int64 | id |  |
 | optional             | string | type |  |
 
-
-
-
-
-
-
 <a name=".Plugin.MetricsMessage"/>
 
 # MetricsMessage
-
 
 Full name: `Plugin.MetricsMessage`
 
 Metrics message
 Used for fetching and sending metrics.
 
-
-
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | [Header](#.Plugin.Common.Header) | header |  |
 | repeated             | [Response](#.Plugin.MetricsMessage.Response) | payload |  |
 
-
-
-
 <a name=".Plugin.MetricsMessage.Response"/>
 
 ## Response
 
-
 Full name: `Plugin.MetricsMessage.Response`
-
-
-
-
 
 | Modifier | Type | Key    | Description                |
 | -------- | -----| ------ | -------------------- |
 | optional             | int64 | id |  |
 | required             | [Result](#.Plugin.Common.Result) | result |  |
 | repeated             | [MetricsBundle](#.Plugin.Common.MetricsBundle) | bundles |  |
-
-
-
-
-

@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - CHANGE_CUSTOM_HOST_VAR<br>
 
-
 #### Command Format:
 
 `CHANGE_CUSTOM_HOST_VAR;host_name;varname;varvalue`
@@ -29,6 +28,3 @@ Changes the value of a custom host variable.
 
 printf "[%lu] CHANGE_CUSTOM_HOST_VAR;host1;_SOMEVAR;some new value\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

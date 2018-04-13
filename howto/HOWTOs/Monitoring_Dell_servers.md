@@ -15,26 +15,24 @@ If you don’t have OMSA installed do the following:
 
 ### **Linux**
 
-1.  Set up the Dell OpenManage Repository
+1. Set up the Dell OpenManage Repository
 
         # wget -q -O - http://linux.dell.com/repo/hardware/latest/bootstrap.cgi | bash
 
-2.  Install OMSA
+2. Install OMSA
 
         # yum install srvadmin-all
 
-3.  Start OMSA Services.
+3. Start OMSA Services.
 
         # service snmpd restart
         # /opt/dell/srvadmin/sbin/srvadmin-services.sh restart
 
--   You may want even add this script to your server start, so next time you boot it, start automatically.
+- You may want even add this script to your server start, so next time you boot it, start automatically.
 
--   Run the following command to enable autostart of the service after reboot:
+- Run the following command to enable autostart of the service after reboot:
 
         # /opt/dell/srvadmin/sbin/srvadmin-services.sh enable
-
-     
 
 Corner Cases
 
@@ -44,15 +42,11 @@ If so, just run the following command: "yum install net-snmp"
 
 The package tog-pegasus may conflict with the packages listed above and can safely be removed if not used: "yum remove tog-pegasus"
 
- 
-
- 
-
 ## **Windows**
 
-1.  Go to [DELL support](http://support.dell.com/) website -\> click on “Drivers & Downloads” -\> choose your server model (in my case, I selected PowerEdge 2850) -\> choose the operating system -\> scroll-down and expand ‘Systems Management’ -\> Locate ‘OM-SrvAdmin-Dell-Web-WIN\*.exe’ and Click on ‘Download File’.
-2.  Install the file you downloaded and follow the wizard.
-3.  The OMSA services will start automatically in background.
+1. Go to [DELL support](http://support.dell.com/) website -\> click on “Drivers & Downloads” -\> choose your server model (in my case, I selected PowerEdge 2850) -\> choose the operating system -\> scroll-down and expand ‘Systems Management’ -\> Locate ‘OM-SrvAdmin-Dell-Web-WIN\*.exe’ and Click on ‘Download File’.
+2. Install the file you downloaded and follow the wizard.
+3. The OMSA services will start automatically in background.
 
 ## **Verify SNMP**
 
@@ -114,10 +108,6 @@ https://$HOSTADDRESS$:1311/</td>
 </tbody>
 </table>
 
- 
-
- 
-
 Tip
 
 Add a new Dell hardware service group and add your newly created services to the group.
@@ -129,8 +119,8 @@ Related article: [Monitoring the hardware of your OP5 server](Monitoring_the_ha
 
 **Known issues**
 
--   If you are upgrading to APS 6.4 we recommend that you read this blog post posted by our support team.[Dell OpenManage checks stops working after upgrading to APS 6.4](http://www.op5.com/blog/support-news/known-issues/dell-openmanage-checks-stops-working-after-upgrading-to-aps-6-4/)
--   On CentOS 6.5 64bit some have reported that when installing the "srvadmin-all" package, it will fail with a dependency error. This will help you get around the error:
+- If you are upgrading to APS 6.4 we recommend that you read this blog post posted by our support team.[Dell OpenManage checks stops working after upgrading to APS 6.4](http://www.op5.com/blog/support-news/known-issues/dell-openmanage-checks-stops-working-after-upgrading-to-aps-6-4/)
+- On CentOS 6.5 64bit some have reported that when installing the "srvadmin-all" package, it will fail with a dependency error. This will help you get around the error:
 
     \# yum remove tog-pegasus tog-pegasus-libs
 
@@ -138,13 +128,8 @@ Related article: [Monitoring the hardware of your OP5 server](Monitoring_the_ha
 
 # OP5 Monitor: Open Source Network Monitoring
 
-[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free. 
-
- 
+[OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free.
 
 ### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
 [![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
-
- 
-

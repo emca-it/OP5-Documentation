@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - PROCESS_HOST_CHECK_RESULT<br>
 
-
 #### Command Format:
 
 `PROCESS_HOST_CHECK_RESULT;host_name;status_code;plugin_output`
@@ -29,6 +28,3 @@ This is used to submit a passive check result for a particular host. The 'status
 
 printf "[%lu] PROCESS_HOST_CHECK_RESULT;host1;0;This is an example plugin output.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

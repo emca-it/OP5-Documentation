@@ -2,9 +2,6 @@
 
 Use this module to check the healt and status of NSClient++ it self
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the CheckNSCP module.
@@ -18,19 +15,11 @@ A list of all available queries (check commands)
 | [check_nscp](#check_nscp)                 | Check the internal healt of NSClient++.        |
 | [check_nscp_version](#check_nscp_version) | Check the version of NSClient++ which is used. |
 
-
-
-
 ### check_nscp
 
 Check the internal healt of NSClient++.
 
-
 * [Command-line Arguments](#check_nscp_options)
-
-
-
-
 
 <a name="check_nscp_help"/>
 <a name="check_nscp_help-pb"/>
@@ -39,7 +28,6 @@ Check the internal healt of NSClient++.
 <a name="check_nscp_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                   |
 |--------------|---------------|-----------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                |
@@ -47,20 +35,12 @@ Check the internal healt of NSClient++.
 | show-default | N/A           | Show default values for a given command       |
 | help-short   | N/A           | Show help screen (short format).              |
 
-
-
-
 ### check_nscp_version
 
 Check the version of NSClient++ which is used.
 
-
 * [Command-line Arguments](#check_nscp_version_options)
 * [Filter keywords](#check_nscp_version_filter_keys)
-
-
-
-
 
 <a name="check_nscp_version_warn"/>
 <a name="check_nscp_version_crit"/>
@@ -73,7 +53,6 @@ Check the version of NSClient++ which is used.
 <a name="check_nscp_version_help-short"/>
 <a name="check_nscp_version_options"/>
 #### Command-line Arguments
-
 
 | Option                                             | Default Value                                   | Description                                                                                                      |
 |----------------------------------------------------|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -98,35 +77,26 @@ Check the version of NSClient++ which is used.
 | [detail-syntax](#check_nscp_version_detail-syntax) | ${release}.${major}.${minor}.${build} (${date}) | Detail level syntax.                                                                                             |
 | [perf-syntax](#check_nscp_version_perf-syntax)     | version                                         | Performance alias syntax.                                                                                        |
 
-
-
 <h5 id="check_nscp_version_filter">filter:</h5>
 
 Filter which marks interesting items.
 Interesting items are items which will be included in the check.
 They do not denote warning or critical state instead it defines which items are relevant and you can remove unwanted items.
 
-
 <h5 id="check_nscp_version_warning">warning:</h5>
 
 Filter which marks items which generates a warning state.
 If anything matches this filter the return status will be escalated to warning.
-
-
 
 <h5 id="check_nscp_version_critical">critical:</h5>
 
 Filter which marks items which generates a critical state.
 If anything matches this filter the return status will be escalated to critical.
 
-
-
 <h5 id="check_nscp_version_ok">ok:</h5>
 
 Filter which marks items which generates an ok state.
 If anything matches this any previous state for this item will be reset to ok.
-
-
 
 <h5 id="check_nscp_version_empty-state">empty-state:</h5>
 
@@ -139,7 +109,6 @@ If no filter is specified this will never happen unless the file is empty.
 
 Performance data generation configuration
 TODO: obj ( key: value; key: value) obj (key:valuer;key:value)
-
 
 <h5 id="check_nscp_version_top-syntax">top-syntax:</h5>
 
@@ -155,12 +124,10 @@ ok syntax.
 DEPRECATED! This is the syntax for when an ok result is returned.
 This value will not be used if your syntax contains %(list) or %(count).
 
-
 <h5 id="check_nscp_version_empty-syntax">empty-syntax:</h5>
 
 Empty syntax.
 DEPRECATED! This is the syntax for when nothing matches the filter.
-
 
 <h5 id="check_nscp_version_detail-syntax">detail-syntax:</h5>
 
@@ -178,10 +145,8 @@ This is the syntax for the base names of the performance data.
 
 *Default Value:* `version`
 
-
 <a name="check_nscp_version_filter_keys"/>
 #### Filter keywords
-
 
 | Option        | Description                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -204,7 +169,3 @@ This is the syntax for the base names of the performance data.
 | version       | The NSClient++ Version as a string                                                                           |
 | warn_count    | Number of items matched the warning criteria. Common option for all checks.                                  |
 | warn_list     | A list of all items which matched the warning criteria. Common option for all checks.                        |
-
-
-
-

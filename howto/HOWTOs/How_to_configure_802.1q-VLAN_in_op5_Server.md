@@ -20,29 +20,24 @@ Either you could remove the IP details from the physical interface and use one o
 
 It is recommended that you have physical access to the server since you could easily lose contact with the server if something isn’t correctly configured.
 
-1.  Use your favorite SSH client to connect to your OP5 server.
-2.  Create a new file in /etc/sysconfig/network-scripts/ and name it “ifcfg-eth0.X”. Where “X” is your VLAN ID. *The valid VLAN ID range is between 1 and 4096. VLAN 1 is untagged traffic.*
-3.  Add the following to that file and replace the options to match your network configuration.
+1. Use your favorite SSH client to connect to your OP5 server.
+2. Create a new file in /etc/sysconfig/network-scripts/ and name it “ifcfg-eth0.X”. Where “X” is your VLAN ID. *The valid VLAN ID range is between 1 and 4096. VLAN 1 is untagged traffic.*
+3. Add the following to that file and replace the options to match your network configuration.
 
     ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
-    DEVICE=eth0.x 
+    DEVICE=eth0.x
     BOOTPROTO=static
-    BROADCAST=1.2.3.4 
-    IPADDR=1.2.3.4 
-    NETMASK=255.255.255.0 
-    NETWORK=1.2.3.0 
-    TYPE=Ethernet 
-    ONBOOT=yes 
+    BROADCAST=1.2.3.4
+    IPADDR=1.2.3.4
+    NETMASK=255.255.255.0
+    NETWORK=1.2.3.0
+    TYPE=Ethernet
+    ONBOOT=yes
     VLAN=yes
     ```
 
     **Note:***Only add the “GATEWAY” statement for the interface used for outbound traffic. There can only be one default route.*
 
-4.  Save the new configuration file and restart the network service. Note that you will lose connection to the server and will have to reconnect.
+4. Save the new configuration file and restart the network service. Note that you will lose connection to the server and will have to reconnect.
 
         # /etc/init.d/network restart
-
- 
-
- 
-

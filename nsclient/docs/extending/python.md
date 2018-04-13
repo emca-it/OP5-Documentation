@@ -108,10 +108,10 @@ This will load the same script four times with the following arguments:
 
 plugin_id | plugin_alias | script_alias
 ----------|--------------|-------------
-1         | ps1          | ms1
-1         | ps1          | ms2
-2         | ps2          | ms1
-2         | ps2          | ms2
+1.       | ps1          | ms1
+1.       | ps1          | ms2
+2.       | ps2          | ms1
+2.       | ps2          | ms2
 
 Thus when loading configuration it is recommended to place it under the following pseudo key `/settings/:script_name/:plugin_alias/:script_alias/` to allow for users loading a script multiple times.
 
@@ -257,7 +257,6 @@ def init(plugin_id, plugin_alias, script_alias):
 Bind a function to a check query. This is similar to the `Registry.function` function but the bound
 function has a simpler syntax so you wont have to deal with the complexity of the protobuf API.
 
-
 Option         | Description
 ---------------|----------------------------------------------------
 query_name     | The name of the query (i.e. the check command name)
@@ -291,7 +290,6 @@ def init(plugin_id, plugin_alias, script_alias):
 
 Bind a function to a check query. This is similar to the `Registry.simple_cmdline` function but the bound
 function uses a more powerfull syntax which requires you to parse the reques/response using the protobuf API.
-
 
 Option       | Description
 -------------|----------------------------------------------------
@@ -506,7 +504,6 @@ The core is a representation of NSClient++ and exposes functions to interact wit
 
 `Core.get()`
 
-
 Get an instance of the core module.
 
 **Example:**
@@ -651,7 +648,6 @@ The `Settings` object wraps the Settings API which allows you to access and modi
 Option    | Description
 ----------|------------------------------------------------------------------
 plugin_id | The plugin id as supplied at module ini (i.e. the init function).
-
 
 Get an instance of the settings module.
 

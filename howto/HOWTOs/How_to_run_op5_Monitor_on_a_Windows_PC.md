@@ -20,5 +20,4 @@ Follow these steps to set up OP5 Monitor on a Windows PC. Make sure you are logg
 
 ![](attachments/688579/5242957.jpg)
 
-9) Type in the ip address shown in your web browser and log in. You will be prompted to create an account with administrator privileges the first time you access OP5 Monitor. 
-
+9) Type in the ip address shown in your web browser and log in. You will be prompted to create an account with administrator privileges the first time you access OP5 Monitor.

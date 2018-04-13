@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_PERFORMANCE_DATA<br>
 
-
 #### Command Format:
 
 `DISABLE_PERFORMANCE_DATA;`
@@ -29,6 +28,3 @@ Disables the processing of host and service performance data on a program-wide b
 
 printf "[%lu] DISABLE_PERFORMANCE_DATA;\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

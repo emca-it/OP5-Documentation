@@ -12,9 +12,9 @@ The purpose of this article is to describe how one can add support for new plugi
 
 To be able to complete this how-to you will need the following:
 
--   OP5 Monitor installed correctly
--   a host to which you can add a service for testing purposes
--   a check, returning performance data that you want to graph (or use the dummy check)
+- OP5 Monitor installed correctly
+- a host to which you can add a service for testing purposes
+- a check, returning performance data that you want to graph (or use the dummy check)
 
 ## **How to see if a check returns performance data**
 
@@ -76,9 +76,9 @@ If you go to the dummy service we created above in the web interface, and click 
 
 Let’s build a custom template to display this performance data in a more effective and prettier way. Our new template should:
 
--   combine the two series of data our plugin generates into a single graph
--   use separate colors to differentiate between the data series
--   have custom titles and legends describing the graphed data.
+- combine the two series of data our plugin generates into a single graph
+- use separate colors to differentiate between the data series
+- have custom titles and legends describing the graphed data.
 
 It doesn’t sound like much, but it makes a lot of difference when you see the graph!
 
@@ -102,8 +102,6 @@ Let’s go ahead and create an empty .php file named after the plugin we want to
 /opt/monitor/op5/pnp/templates/check_dummy_howto.php
 ```
 
- 
-
 Remember to start encapsulating the template code between:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
@@ -114,8 +112,6 @@ Remember to start encapsulating the template code between:
 ?>
 ```
 
- 
-
 The only thing a graph template file should do is to set two variables. It must not produce any output, and it must be valid PHP (which is not that hard to do!).
 
 The two variables are arrays named \$opt and \$def. It is optional to set a value in \$opt, but \$def always needs to be defined. Each graph has exactly one value in each of these arrays. So, if you wanted to create three graphs, you would have three values in \$opt and three values in \$def. The values are simply long text strings that contain arguments and data to the graph engine.
@@ -125,7 +121,7 @@ Our dummy plugin returns two performance data values, two series of data, and a 
 Let’s start by adding our first data series:
 
 ``` {.php data-syntaxhighlighter-params="brush: php; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: php; gutter: false; theme: Confluence"}
-$def[1] = ""; 
+$def[1] = "";
 $def[1] .= "DEF:ds1=$rrdfile:$DS[1]:AVERAGE ";
 $def[1] .= 'LINE:ds1#00FF00:"Percentage points " ';
 ```
@@ -174,8 +170,3 @@ That last part, “:STACK”, means that the second area will be stacked on top 
 This how-to only scratches the surface of what is possible to do with graph templates in OP5 Monitor. If you want to learn more, you can find documentation for the components here:
 
 RRDTool: <http://oss.oetiker.ch/rrdtool/doc/index.en.html>
-
- 
-
- 
-

@@ -2,29 +2,21 @@
 
 # About our apps
 
-The OP5 Monitor App works directly towards the OP5 Monitor API and your filter settings (based on your username). This enables you to tailor your app to show the list-views you set up in Monitor. For more information on list views, see links at bottom of this page. 
+The OP5 Monitor App works directly towards the OP5 Monitor API and your filter settings (based on your username). This enables you to tailor your app to show the list-views you set up in Monitor. For more information on list views, see links at bottom of this page.
 
 ## System requirements
 
--   OP5 Monitor 6.3 or higher
--   API access on OP5 Monitor
-    -   API "can\_submit\_commands" access if you want to be able to "acknowledge" events in the app.
--   Android 4.x or iOS 7
--   Our mobile app:
-
- 
+- OP5 Monitor 6.3 or higher
+- API access on OP5 Monitor
+  - API "can\_submit\_commands" access if you want to be able to "acknowledge" events in the app.
+- Android 4.x or iOS 7
+- Our mobile app:
 
 [![](attachments/9929159/11141142.png)](https://play.google.com/store/apps/details?id=com.op5.op5monitor&hl=en)
 
- 
-
 [![](attachments/9929159/11141143.png)](https://itunes.apple.com/se/app/op5-monitor/id915446915?l=en&mt=8)
 
- 
-
 * * * * *
-
- 
 
 # Getting started
 
@@ -34,13 +26,9 @@ Enter your hostname in the box. In this example we are using demo.op5.com
 
 ![Screenshot\_2014-06-24-11-09-24.png](https://lh4.googleusercontent.com/NXJjtC98XSGis5JdeS11UxJ0HbwslGMAOmQNoIgq7Dmc9uuwrmI1bw71lmS2E5KwzQrdNoGG26JgM-M60-GjeL7p1CYsBmkR54Cf73ajgiWeX4anQWtAgl5nkYDQKG03Xg)
 
- 
-
 ![](attachments/9929159/11141150.png)
 
 Note: Advanced users can use another port if needed. Useful if a port forwarding firewall is used to get through NAT. The syntax is :
-
- 
 
 ## Add user credentials
 
@@ -67,33 +55,19 @@ The rotating arrows are the the refresh button.
 
 ![](attachments/9929159/11141149.png)
 
- 
-
- 
-
- 
-
- 
-
 ## Menu actions
 
 Top left there is a meny with the possibility to do different actions:
 
--   Home, get back to start
--   All the filters
--   Feedback, send feedback to OP5 from the OP5 Monitor app
--   About, information about OP5 and OP5 knowledgebase
--   Logout
-
- 
+- Home, get back to start
+- All the filters
+- Feedback, send feedback to OP5 from the OP5 Monitor app
+- About, information about OP5 and OP5 knowledgebase
+- Logout
 
 ![Screenshot\_2014-06-24-13-17-09.png](https://lh4.googleusercontent.com/I91S_e20MxQ6IccT0QYunZQlUb1yzAJYDR9ZJeNJPitG0AZXrxjE90c2o8tNe39AZ1TC4RvoRDS0CARjis3UTF_GEMYfS78wc7Qflr5lq8pIEm0WdNFYNdq32U4NW0vK5A)
 
 ![](attachments/9929159/11141146.png)
-
- 
-
- 
 
 ## Settings
 
@@ -103,41 +77,19 @@ Top right is the settings menu, where it is set whether hosts and services that 
 
 ![](attachments/9929159/11141152.png)
 
- 
-
- 
-
 ## Acknowledge
 
 To acknowledge a host or service problem. Pick the problem and choose top right corner, the acknowledge shows up. Press it.
 
- 
-
 ![](attachments/9929159/11141145.png)
-
- 
-
- 
-
- 
-
- 
 
 ## Feedback
 
 If you want to send feedback to OP5 about the app, use the feedback function in the app. If you want OP5 to contact you, enter your emailadress and check the “should OP5 contact you?” checkbox
 
-![Screenshot\_2014-06-24-14-02-21.png](https://lh6.googleusercontent.com/63yFW_UNdIZEQYWb_P8w6d63B19LBJxMpGv8XCTG6lYo7jM0w5xNFlJv8YX7DqGDBRnl7i6IRug5g2ScT9FFGq8dF1Mhcw9C3hOuvQfDak-7Q1kAMnBh54pKpLMDoFPFcA) 
+![Screenshot\_2014-06-24-14-02-21.png](https://lh6.googleusercontent.com/63yFW_UNdIZEQYWb_P8w6d63B19LBJxMpGv8XCTG6lYo7jM0w5xNFlJv8YX7DqGDBRnl7i6IRug5g2ScT9FFGq8dF1Mhcw9C3hOuvQfDak-7Q1kAMnBh54pKpLMDoFPFcA)
 
 ![](attachments/9929159/11141141.png)
-
- 
-
- 
-
- 
-
- 
 
 # Advanced usage
 
@@ -150,6 +102,3 @@ The get a list of all hosts, create a filter named: All hosts and has the synt
 The get a list of all services, create a filter named: All services and has the syntax [services] all
 
 To read more about filters, see OP5 knowledge base Filters
-
- 
-

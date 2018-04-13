@@ -2,8 +2,6 @@
 
 This is an abstraction from the [op5 admin manual](http://goo.gl/1aUa3A), for further details please see the full manual.
 
- 
-
 A management pack is essentially a group of services connected to a hostgroup with the possibility to add custom variables. These are then used by the Host Wizard.
 
 The benefit with using management packs is that the monitoring will be more homogeneous.
@@ -22,10 +20,10 @@ To create a new management pack from a hostgroup go to Management Packs in the
 
 ![](attachments/4653645/5242927.png)
 
-1.  Enter a name for the management pack.
-2.  Select which hostgroup that should be used for the management pack.
-3.  Select an icon (a larger icon looks better in the host wizard).
-4.  Enter a description.
+1. Enter a name for the management pack.
+2. Select which hostgroup that should be used for the management pack.
+3. Select an icon (a larger icon looks better in the host wizard).
+4. Enter a description.
 
 It is also possible to add custom variables, these can be used for information that needs to be entered when using the host wizard. Such as username, password and SNMP community names.
 
@@ -47,8 +45,8 @@ If a management pack is associated with ‘fruits’ will the host be added to t
 
 If a management pack is associated with apples the host will be added to the hostgroup apples and get all the services that are in the hostgroup ‘apples’ AND all the services that are in the hostgroup ‘fruits’.
 
-More concrete; 
-A hostgroup ‘linux’ is created with the check ‘check\_ssh\_cpu’ 
+More concrete;
+A hostgroup ‘linux’ is created with the check ‘check\_ssh\_cpu’
 A hostgroup ‘generic’ is created with the check ‘check\_ping’
 
 Management pack ‘generic server’ is associated with the hostgroup ‘generic’. Hosts that are added with the management pack ‘generic server’ will get the ‘check\_ping’ service.
@@ -90,6 +88,3 @@ Go to Management Pack Management under configuration.
 Click on Export on the management pack to export this to a json-file. The file will be downloaded to you computer.
 
 ![](attachments/4653645/5242934.png)
-
- 
-

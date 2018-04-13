@@ -1,6 +1,6 @@
 # Graph web front end
 
-# About 
+# About
 
 This article covers the PNP web front-end configuration.
 
@@ -23,4 +23,3 @@ $conf['graph_width'] = "1500";
  To access the PNP web front end through the GUI click on Graphs in the menu.
 
 When adding a new object that produces graphs, a 5 minute delay should be expected until the graph is rendered.
-

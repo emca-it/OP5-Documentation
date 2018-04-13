@@ -1,16 +1,16 @@
 -- log
 log("caught a trap from host: " .. result.host)
-  
-  
+ 
+ 
 -- dump the trap into logs (to view it in SNMP traps gui) for debugging purposes
 -- dump.trap()
-  
+ 
 -- update passive service check even if there is no state change (useful for keepalive traps)
 -- result.notify = NOTIFY.ALWAYS
-  
+ 
 -- set the rest
 result.service = "Interface status"
-  
+ 
 for k, v in pairs(trap.fields) do
     if string.match(k,'^\.1\.3\.6\.1\.2\.1\.16\.9\.1\.1\.2\.76$') then
         local message = v

@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# check_file_exists.pl 
+# check_file_exists.pl
 #
 # Checks if a file exists.
 #
@@ -31,11 +31,11 @@ for($i = 0; $i < $#ARGV; $i++) {
 	elsif($ARGV[$i] =~ /^-f|^--filename/) { # filename argument
 		$i++;
 		$filename = $ARGV[$i];
-	} 
+	}
     elsif($ARGV[$i] =~ /^-t|^--timeout/) { # timeout argument
 		$i++;
 		$TIMEOUT = $ARGV[$i];
-	} 
+	}
 	else {	# Unknown argument, print help
 		print_usage();
 		exit($ERRORS{"UNKNOWN"});
@@ -48,7 +48,7 @@ if (!defined($filename)) {
 	exit($ERRORS{"UNKNOWN"});
 }
 
-# Timeout handler used 
+# Timeout handler used
 $SIG{'ALRM'} = sub {
 	print "CRITICAL: Plugin timed out after $TIMEOUT seconds\n";
 	exit($ERRORS{'CRITICAL'});

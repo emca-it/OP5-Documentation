@@ -2,8 +2,6 @@
 
 # About
 
- 
-
 The mon command is a very powerful command. Primarily, this is the command that is used to manually stop and start the monitor system processes, and to set up a distributed or a load balanced environment.
 
 Handle this command with care! It has the power to both create and destroy your whole OP5 installation.
@@ -382,4 +380,3 @@ Set the warning threshold for min,max and average execution time, in seconds</td
 ```
 
 Checks for checks that haven't been run in too long a time.
-

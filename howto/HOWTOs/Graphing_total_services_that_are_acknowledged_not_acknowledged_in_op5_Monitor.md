@@ -10,8 +10,6 @@ Articles in the Community-Space are not supported by OP5 Support.
 
 This article shows how to graph the total amount of services (excluding those that are in scheduled downtime, state = ok and in\_notification\_period = 1) in OP5 Monitor. This is really handy if you want to follow up on number of incidents in your environment over time and how how incidents gets handled over time in an nice graph.
 
- 
-
 Example from our demo system: [Graphing of acknowledged and unacknowleged alerts](https://demo.op5.com/monitor/index.php/extinfo/details?host=special-stats&service=Services%20acknowledged%20and%20not%20acknowledged)
 
 ![](attachments/5376623/5734740.png)
@@ -28,7 +26,7 @@ states=`cat <<EOF | unixcat /opt/monitor/var/rw/live
 GET services
 Filter: scheduled_downtime_depth = 0
 Filter: host_scheduled_downtime_depth = 0
-Filter: in_notification_period = 1 
+Filter: in_notification_period = 1
 Filter: state != 0
 Stats: state < 5 # all services
 Stats: state = 0 # services in ok state
@@ -84,7 +82,7 @@ $color_list = array(
                     3 => "#ee0a04", // Red
                     4 => "#007dd0", // Blue
                     5 => "#ff6600", // Orange
-                    6 => "#a4a4a4", // Grey                    
+                    6 => "#a4a4a4", // Grey
                     7 => "#ff6600", // Orange
                     8 => "#a4a4a4", // Grey
                     9 => "#336633", // darker green
@@ -156,12 +154,3 @@ for ($i = 1; $i <= count($DS); $i++) {
     }
 }
 ```
-
- 
-
- 
-
- 
-
- 
-

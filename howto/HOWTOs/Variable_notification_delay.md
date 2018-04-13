@@ -1,18 +1,14 @@
 # Variable notification delay
 
-add to /etc/cron.d/ 
+add to /etc/cron.d/
 
 command:
 change\_delay.sh extend
 change\_delay.sh reset
 
- 
-
 Example script using the old command-line API:
 
 [change\_delay(1).sh](attachments/688519/983055.sh)
-
- 
 
 Necessary API calls using the NEW web services API:
 
@@ -30,4 +26,3 @@ Get a list of done changes and commit these:
 
     curl -k -X GET -u 'user:password' https://monitor.host/api/config/change
     curl -k -X POST -u 'user:password' https://monitor.host/api/config/change
-

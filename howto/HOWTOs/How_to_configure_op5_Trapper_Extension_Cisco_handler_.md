@@ -4,33 +4,25 @@ The purpose of this document is to describe how to configure OP5 Trapper. In the
 
 ## Prerequisites
 
--   OP5 Monitor with OP5 Trapper Extension
--   A Cisco device configured to send traps to OP5 Monitor and with trap type set as "syslog"
-
- 
+- OP5 Monitor with OP5 Trapper Extension
+- A Cisco device configured to send traps to OP5 Monitor and with trap type set as "syslog"
 
 To Configure a Cisco device to send traps to OP5 Monitor and with type "syslog" as covered in this example do the following:
-
- 
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # snmp-server enable traps
 # snmp-server host monitor-server-ip public snmp syslog
 ```
 
- 
-
 ## OP5 Monitor and OP5 Trapper configuration:
 
--   #### OP5 Monitor:
+- #### OP5 Monitor:
 
 Create a destination host and service for your traps, this service need to be added manually for this example to work. You also need to disable active checks as traps are handled as passive results from trapper.
 
 In this example trap-handler (rule) we have a host called "op5-system" which has a service named "Interface linkstatus".
 
- 
-
--   #### Trapper Extension:
+- #### Trapper Extension:
 
 Log on to your server using ssh and create the directory where you will place your rules:
 
@@ -38,15 +30,11 @@ Log on to your server using ssh and create the directory where you will place yo
 # mkdir /opt/trapper/share/addons/cisco-syslog
 ```
 
- 
-
 Next we'll create a file containing our trapper-handler in your favorite editor, we use "vi" in this example:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # vi /opt/trapper/share/addons/cisco-syslog/cisco-syslog.lua
 ```
-
- 
 
 Paste the following code to our newly created file:
 
@@ -110,23 +98,17 @@ And save your handler-file with :wq
 
 *Note: This handler, when loaded in OP5 Trapper will match all traps of the type (Cisco Syslog MIB) and set severity in Monitor as stated in our rule (severity 1-4 we set as CRITICAL, 5 as WARNING and 6-8 as OK-state)*
 
- 
-
 Now we need to tell OP5 trapper to create our handler:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # /opt/trapper/bin/traped create handler cisco-syslog
 ```
 
- 
-
 Update the handler from the file we created earlier:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # /opt/trapper/bin/traped update cisco-syslog < /opt/trapper/share/addons/cisco-syslog/cisco-syslog.lua
 ```
-
- 
 
 To verify your handler was created simply use the command "list handlers":
 
@@ -137,15 +119,11 @@ cisco-syslog
 
 *Note: At this stage we have our handler loaded but it will not match on any incoming traps yet so we need to tell trapper which trap-OIDs should be associated with this handler (In most cases you probably have several handlers for different types of devices)*
 
- 
-
 Create a bind between the trap OID and our cisco-syslog handler:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # /opt/trapper/bin/traped bind .1.3.6.1.4.1.9.9.41.2* cisco-syslog
 ```
-
- 
 
 And verify that your handler is associated correctly:
 
@@ -154,8 +132,6 @@ And verify that your handler is associated correctly:
 .1.3.6.1.4.1.9.9.41.2*          cisco-syslog
 ```
 
- 
-
 Next restart trapper:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
@@ -163,21 +139,15 @@ Next restart trapper:
 # service collector restart
 ```
 
- 
-
 Now when you have your handler loaded it's time to test it!
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # snmptrap -c public -v 2c demo.op5.com "" .1.3.6.1.4.1.9.9.41.2 .1.3.6.1.4.1.9.9.41.1.2.3.1.2.4435 s "LINEPROTO" .1.3.6.1.4.1.9.9.41.1.2.3.1.3.4435 i "4" .1.3.6.1.4.1.9.9.41.1.2.3.1.4.4435 s "UPDOWN" .1.3.6.1.4.1.9.9.41.1.2.3.1.5.4435 s "Line protocol on Interface GigabitEthernet1/0/13, changed state to down"
 ```
 
- 
-
 Take a look in the OP5 Trapper view in Monitor, you should see a new line as in the screenshot below:
 
 ![Traps in gui](attachments/688778/5242986.jpg)
-
- 
 
 This handler has a lot of logging enabled by default so we can follow how a trap is handled (/var/log/messages)
 
@@ -200,41 +170,36 @@ Jun 26 11:42:08 demo-master trapper-processor: Context is {}
 
 Log explained in more detail:
 
--   Received SNMP trap with OID: .1.3.6.1.4.1.9.9.41.2
-    -   Trap OID
--   SNMP trap matches handler: cisco-syslog
-    -   Matched handler
--   Trap from: demo.op5.com
-    -   Trap sending device or host (info from trap-daemon)
--   Resulting host: switch1-sth
-    -   device to host mapping (if other than trap.host)
--   Trap type is: UPDOWN
-    -   Trap type (Cisco syslog)
--   Result service is: Interface linkstatus
-    -   Trap type to service mapping
--   Trap severity is: 4
-    -   Actual severity in the original trap
--   Severity to state: 2
-    -   How we translate trap-severity to OP5 Monitor severity (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN)
--   Trap message is: Line protocol on Interface GigabitEthernet1/0/13, changed state to down
-    -   Trap message
--   Tag matching: GigabitEthernet1/0/13
-    -   Not covered in this howto, please see trapper manual. 
--   SNMP trap handler executed.
--   The state of Interface linkstatus at switch1-sth is now CRITICAL
-    -   OP5 Monitor status change (and not just trapper state change for a specific "tag")
--   Message: Line protocol on Interface GigabitEthernet1/0/13, changed state to down
-    -   Resulting status output in OP5 Monitor.
-
- 
+- Received SNMP trap with OID: .1.3.6.1.4.1.9.9.41.2
+  - Trap OID
+- SNMP trap matches handler: cisco-syslog
+  - Matched handler
+- Trap from: demo.op5.com
+  - Trap sending device or host (info from trap-daemon)
+- Resulting host: switch1-sth
+  - device to host mapping (if other than trap.host)
+- Trap type is: UPDOWN
+  - Trap type (Cisco syslog)
+- Result service is: Interface linkstatus
+  - Trap type to service mapping
+- Trap severity is: 4
+  - Actual severity in the original trap
+- Severity to state: 2
+  - How we translate trap-severity to OP5 Monitor severity (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN)
+- Trap message is: Line protocol on Interface GigabitEthernet1/0/13, changed state to down
+  - Trap message
+- Tag matching: GigabitEthernet1/0/13
+  - Not covered in this howto, please see trapper manual.
+- SNMP trap handler executed.
+- The state of Interface linkstatus at switch1-sth is now CRITICAL
+  - OP5 Monitor status change (and not just trapper state change for a specific "tag")
+- Message: Line protocol on Interface GigabitEthernet1/0/13, changed state to down
+  - Resulting status output in OP5 Monitor.
 
 If we take a look in OP5 Monitor log files /opt/monitor/var/nagios.log you will see the result submitted by trapper to Monitor and the service will be updated with the actual status:
-
- 
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 [1331841880] EXTERNAL COMMAND: PROCESS_SERVICE_CHECK_RESULT;op5-system;SNMP Traps and Notifications;1;duplex mismatch discovered on FastEthernet0/7 (not full duplex), with op5-system.op5.com GigabitEthernet0/1 (full duplex).
 ```
 
 *Note: If you see a message below this line saying something similar to “host could not be found/host missing/unknown host” or “service missing/unknown” the problem is most likely caused by the hostname resolved by trapper is not configured in OP5 Monitor or it could be configured using a different name.*
-

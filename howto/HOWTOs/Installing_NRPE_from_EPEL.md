@@ -4,15 +4,11 @@ Redirection Notice
 
 This page will redirect to [Installation of NRPE agent on CentOS and RHEL](/display/HOWTOs/Installation+of+NRPE+agent+on+CentOS+and+RHEL) in about 5 seconds.
 
- 
-
 Version
 
 This article was written for version 7.0 of OP5 Monitor, it could work on both lower and higher version if nothing else is stated.
 
 Articles in the Community-Space are not supported by OP5 Support.
-
- 
 
 # Introduction
 
@@ -24,8 +20,8 @@ The EPEL repository is not controlled and managed by OP5 AB - we can not guarant
 
 # Prerequisites
 
--   Root access on the host
--   A working Internet-connection
+- Root access on the host
+- A working Internet-connection
 
 # Installation
 
@@ -49,8 +45,6 @@ We first need to install the EPEL the repository and it's public GPG key. This i
 # yum --enablerepo=extras install epel-release
 ```
 
- 
-
 If the installation of the repositories was successful, execute the following command to install NRPE:
 
 ``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
@@ -67,8 +61,6 @@ This is done by changing the value of "enabled" to "0" in the repository configu
 ``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
 # sed -i 's/enabled=1/enabled=0/g' /etc/yum.repos.d/epel.repo
 ```
-
- 
 
 If you choose to disable the repository, make sure to enable it during updates so the NRPE agent receives security and bug fixes:
 

@@ -18,25 +18,25 @@ IP: 10.1.0.2
 
 ## Requirements
 
--   `At least OpenVPN 2.2.0 from OP5 repository on both master and poller. `\# yum install openvpn
+- `At least OpenVPN 2.2.0 from OP5 repository on both master and poller. `\# yum install openvpn
 
 ## How-to
 
 ### Poller-side configuration
 
--   Login to poller as root
--   Edit /etc/hosts to add the masters IP on the poller with a name
--   Enable execution of scripts
+- Login to poller as root
+- Edit /etc/hosts to add the masters IP on the poller with a name
+- Enable execution of scripts
 
 `# cd /usr/share/doc/openvpn-2.2.2/easy-rsa/2.0 # chmod +x *`
 
--   Edit vars file and change the following values, examples below:
+- Edit vars file and change the following values, examples below:
 
 `export KEY_COUNTRY="SE" export KEY_PROVINCE="Stockholm" export KEY_CITY="Stockholm" export KEY_ORG="op5 AB" export KEY_EMAIL="support@op5.com"`
 
 `# ./vars`
 
--   Ignore the NOTE
+- Ignore the NOTE
 
 `#  ./clean-all # ./pkitool --initca # ./build-key-server poller-to-master`
 
@@ -85,11 +85,11 @@ This will generate the following output, press enter on all questions except y/n
 * *Data Base Updated
 * *—- Buffer —-*
 
--   Generate a Client key on the poller.
+- Generate a Client key on the poller.
 
 `# ./build-key internal-master-to-poller`
 
--   This will generate the following output, press enter on all questions except y/n questions where you will answer ‘y’:
+- This will generate the following output, press enter on all questions except y/n questions where you will answer ‘y’:
 
 *—- Buffer —-*
  *Generating a 1024 bit RSA private key
@@ -131,23 +131,23 @@ This will generate the following output, press enter on all questions except y/n
 
 *—- Buffer —-*
 
--   Create the directories needed for your setup
+- Create the directories needed for your setup
 
 `# cd /etc/openvpn # mkdir certs # mkdir dh # mkdir keys # mkdir /var/log/openvpn/`
 
--   Create the dh key
+- Create the dh key
 
 `# openssl dhparam -out dh/dh1024.pem 1024`
 
--   Create tls key
+- Create tls key
 
 `# openvpn --genkey --secret keys/ta.key`
 
--   Copy the certificates and keys to right place
+- Copy the certificates and keys to right place
 
 `# cp /usr/share/doc/openvpn-2.2.0/easy-rsa/2.0/keys/ca.crt certs/ # cp /usr/share/doc/openvpn-2.2.0/easy-rsa/2.0/keys/poller-to-master.crt certs/ # cp /usr/share/doc/openvpn-2.2.0/easy-rsa/2.0/keys/poller-to-master.key keys/`
 
--   Create a default configuration
+- Create a default configuration
 
 Default configuration is stored in /etc/openvpn/master-to-poller.conf. Create this file with you favorite editor and copy/paste the code below. Remember to change parameters to match your setup.
 
@@ -176,19 +176,17 @@ mute 20
 script-security 2
 ```
 
- 
-
--   Add rule to IP-tables firewall chain
+- Add rule to IP-tables firewall chain
 
 To allow traffic from your master to your poller you need to open the pollers firewall to let in your masters gateway. In this example 193.201.96.46 is our masters gateway to the internet, please lookup your gateway and replace the IP. You can use <http://whatismyip.org/> or contact your IT administrator.
 
 `# iptables -I RH-Firewall-1-INPUT -s 193.201.96.46 -p udp --dport 1194 -j ACCEPT # service iptables save`
 
--   Set OpenVPN to autostart
+- Set OpenVPN to autostart
 
 `# chkconfig --level 345 openvpn on`
 
--   Verify installation
+- Verify installation
 
 Test your installation and look in the logs for problems in the logs.
 
@@ -199,13 +197,13 @@ Verify that startup is OK.
 
 ### Master-side configuration
 
--   Login to Master as root
--   Edit /etc/hosts to add the pollers IP on the master with a name
--   Copy keys to master
+- Login to Master as root
+- Edit /etc/hosts to add the pollers IP on the master with a name
+- Copy keys to master
 
 `# cd /etc/openvpn # mkdir certs keys logs # scp root@91.123.201.38:/usr/share/doc/openvpn-2.2.0/easy-rsa/2.0/keys/internal-master-to-poller.key keys/ # scp root@91.123.201.38:/usr/share/doc/openvpn-2.2.0/easy-rsa/2.0/keys/internal-master-to-poller.crt certs/ # scp root@91.123.201.38:/usr/share/doc/openvpn-2.2.0/easy-rsa/2.0/keys/ca.crt certs/ # scp root@91.123.201.38:/etc/openvpn/keys/ta.key keys/`
 
--   Create the client configuration. Remember to change IP adresses to match your setup.
+- Create the client configuration. Remember to change IP adresses to match your setup.
 
 **/etc/openvpn/master-to-poller.conf**
 
@@ -232,13 +230,11 @@ group nobody
 script-security 2
 ```
 
- 
-
--   Set OpenVPN to autostart
+- Set OpenVPN to autostart
 
 `# chkconfig --level 345 openvpn on`
 
--   Verify installation
+- Verify installation
 
 `# service openvpn restart`
 
@@ -253,11 +249,11 @@ if 10.1.0.1 response the VPN tunnel is working.
 
 Secure Merlin communication by using the internal IP (openvpn) instead of public IP.
 
--   Master configuration
+- Master configuration
 
 Open /opt/monitor/op5/merlin/merlin.conf and change your pollers IP to the internal IP 10.1.0.1
 
--   Poller configuration
+- Poller configuration
 
 Open /opt/monitor/op5/merlin/merlin.conf and change your master IP to the internal IP 10.1.0.2
 
@@ -279,5 +275,3 @@ Restart master and all pollers, run on master
 </tr>
 </tbody>
 </table>
-
-

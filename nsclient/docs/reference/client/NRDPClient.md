@@ -2,9 +2,6 @@
 
 NRDP client can be used both from command line and from queries to check remote systes via NRDP
 
-
-
-
 ## Queries
 
 A quick reference for all available queries (check commands) in the NRDPClient module.
@@ -17,19 +14,11 @@ A list of all available queries (check commands)
 |-----------------------------|-----------------------------------------------|
 | [submit_nrdp](#submit_nrdp) | Submit information to the remote NRDP Server. |
 
-
-
-
 ### submit_nrdp
 
 Submit information to the remote NRDP Server.
 
-
 * [Command-line Arguments](#submit_nrdp_options)
-
-
-
-
 
 <a name="submit_nrdp_help"/>
 <a name="submit_nrdp_help-pb"/>
@@ -58,7 +47,6 @@ Submit information to the remote NRDP Server.
 <a name="submit_nrdp_options"/>
 #### Command-line Arguments
 
-
 | Option       | Default Value | Description                                                                           |
 |--------------|---------------|---------------------------------------------------------------------------------------|
 | help         | N/A           | Show help screen (this screen)                                                        |
@@ -86,14 +74,7 @@ Submit information to the remote NRDP Server.
 | sender-host  |               | Source/sender host name (default is auto which means use the name of the actual host) |
 | token        |               | The security token                                                                    |
 
-
-
-
-
-
 ## Configuration
-
-
 
 | Path / Section                                              | Description               |
 |-------------------------------------------------------------|---------------------------|
@@ -101,21 +82,14 @@ Submit information to the remote NRDP Server.
 | [/settings/NRDP/client/handlers](#client-handler-section)   | CLIENT HANDLER SECTION    |
 | [/settings/NRDP/client/targets](#remote-target-definitions) | REMOTE TARGET DEFINITIONS |
 
-
-
 ### SMTP CLIENT SECTION <a id="/settings/NRDP/client"/>
 
 Section for SMTP passive check module.
-
-
-
 
 | Key                   | Default Value | Description |
 |-----------------------|---------------|-------------|
 | [channel](#channel)   | NRDP          | CHANNEL     |
 | [hostname](#hostname) | auto          | HOSTNAME    |
-
-
 
 ```ini
 # Section for SMTP passive check module.
@@ -125,17 +99,9 @@ hostname=auto
 
 ```
 
-
-
-
-
 #### CHANNEL <a id="/settings/NRDP/client/channel"></a>
 
 The channel to listen to.
-
-
-
-
 
 | Key            | Description                                     |
 |----------------|-------------------------------------------------|
@@ -144,7 +110,6 @@ The channel to listen to.
 | Default value: | `NRDP`                                          |
 | Used by:       | NRDPClient                                      |
 
-
 **Sample:**
 
 ```
@@ -152,8 +117,6 @@ The channel to listen to.
 # CHANNEL
 channel=NRDP
 ```
-
-
 
 #### HOSTNAME <a id="/settings/NRDP/client/hostname"></a>
 
@@ -169,18 +132,12 @@ ${domain}	Domainname
 ${domain_lc}	Domainname in lowercase
 ${domain_uc}	Domainname in uppercase
 
-
-
-
-
-
 | Key            | Description                                     |
 |----------------|-------------------------------------------------|
 | Path:          | [/settings/NRDP/client](#/settings/NRDP/client) |
 | Key:           | hostname                                        |
 | Default value: | `auto`                                          |
 | Used by:       | NRDPClient                                      |
-
 
 **Sample:**
 
@@ -190,29 +147,15 @@ ${domain_uc}	Domainname in uppercase
 hostname=auto
 ```
 
-
 ### CLIENT HANDLER SECTION <a id="/settings/NRDP/client/handlers"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
-
-
-
-
-
 
 ### REMOTE TARGET DEFINITIONS <a id="/settings/NRDP/client/targets"/>
 
-
-
-
 This is a section of objects. This means that you will create objects below this point by adding sections which all look the same.
 
-
 **Keys:**
-
 
 | Key      | Default Value | Description    |
 |----------|---------------|----------------|
@@ -224,7 +167,6 @@ This is a section of objects. This means that you will create objects below this
 | retries  | 3             | RETRIES        |
 | timeout  | 30            | TIMEOUT        |
 | token    |               | SECURITY TOKEN |
-
 
 **Sample:**
 
@@ -241,9 +183,3 @@ timeout=30
 #token=...
 
 ```
-
-
-
-
-
-

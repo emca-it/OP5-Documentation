@@ -8,7 +8,7 @@ In the subsections to Managing objects we will assume that you start from the ma
 
 ![](attachments/16482396/21300106.png)
 
-# 
+#
 Before you start
 
 ## Add new
@@ -35,65 +35,65 @@ Before we start to add any new contacts we will create a contact template to use
 
 ### To add a contact template
 
--   -   -   Click **Contact templates**. 
-        -   Give the contact template a name
+- Click **Contact templates**.
+  - Give the contact template a name
             ![](attachments/16482396/21300172.png)
-        -   Change **can\_submit\_commands** to yes.
-             ![](attachments/16482396/21300181.png)  
+  - Change **can\_submit\_commands** to yes.
+             ![](attachments/16482396/21300181.png)
             This gives this the user connected to this contact the possibility to execute commands like acknowledge problems etc.
 
--   -   -   Click **Submit**.
-        -   Click **Save**.
+- Click **Submit**.
+  - Click **Save**.
 
 ## Adding a contact
 
 ### To add a contact
 
--   -   -   Click **Contacts** on the main page.
-        -   Use the template on call template we created in Adding a contact template. ![](attachments/16482396/21300219.png) .
-        -   Type in a contact\_name
+- Click **Contacts** on the main page.
+  - Use the template on call template we created in Adding a contact template. ![](attachments/16482396/21300219.png) .
+  - Type in a contact\_name
             ![](attachments/16482396/21300201.png)
-        -   Type in an alias
+  - Type in an alias
              ![](attachments/16482396/21300160.png)
-        -   Type in the email address
+  - Type in the email address
              ![](attachments/16482396/21300167.png)
-        -   Click **Submit**.
-        -   If you want to create access check the "Configure access rights for this contact" box, otherwise save changes
+  - Click **Submit**.
+  - If you want to create access check the "Configure access rights for this contact" box, otherwise save changes
             ![](attachments/16482396/21300156.png)
-        -   When Configuring access right for this contact select the access rights the contact should have, after that save the changes.
+  - When Configuring access right for this contact select the access rights the contact should have, after that save the changes.
             ![](attachments/16482396/21300108.png)
 
 ## Modify a contact
 
 ### To modify a contact
 
--   -   -   Click **Contacts** on the main page.
-        -   Choose the contact you like to modify in the drop down list.
+- Click **Contacts** on the main page.
+  - Choose the contact you like to modify in the drop down list.
             ![](attachments/16482396/21300109.png)
-        -   Click **Go**.
-        -   In the view you will get only directives differ from the template will be shown. To change the other directives click **Advanced**.
-        -   Make your modifications and click **Submit**.
-        -   Click **Save**.
+  - Click **Go**.
+  - In the view you will get only directives differ from the template will be shown. To change the other directives click **Advanced**.
+  - Make your modifications and click **Submit**.
+  - Click **Save**.
 
 ## Delete a contact
 
--   -   -   Click **Contacts** on the main page.
-        -   Choose the contact you like to modify in the drop down list.
+- Click **Contacts** on the main page.
+  - Choose the contact you like to modify in the drop down list.
             ![](attachments/16482396/21300109.png)
-        -   Click **Go**.
-        -   Click on **Delete**.
+  - Click **Go**.
+  - Click on **Delete**.
             ![](attachments/16482396/21300116.png)
-        -   Click **Save**.
+  - Click **Save**.
 
 # Hosts
 
 There are many ways to add a host. A host can be added by
 
--   -   -   **Host Wizard**
-        -   **new host** option
-        -   a **network scan**
-        -   cloning of a host
-        -   using a profile
+- **Host Wizard**
+  - **new host** option
+  - a **network scan**
+  - cloning of a host
+  - using a profile
 
 In this guide we only describes the directive we will not use the default value in.
 
@@ -101,33 +101,33 @@ In this guide we only describes the directive we will not use the default value 
 
 ### To add a new hosts using the new host option - Part 1
 
--   -   -   Click** Hosts** on the main page.
-        -   Type in a host\_name.
+- Click** Hosts** on the main page.
+  - Type in a host\_name.
              ![](attachments/16482396/21300199.png)
-        -   Type in an alias.
+  - Type in an alias.
              ![](attachments/16482396/21300193.png)
-        -   Type in the address to the host, IP address is mostly the best choice.
+  - Type in the address to the host, IP address is mostly the best choice.
              ![](attachments/16482396/21300218.png)
-        -   We assume this is a Microsoft windows server and that NSClient++ has been installed. Check for the following service checks.
+  - We assume this is a Microsoft windows server and that NSClient++ has been installed. Check for the following service checks.
 
             When using WMI a administrators account must be selected. It is also possible to create a user with less privileges, see how-to https://kb.op5.com/x/K4IK
 
-        -   ![](attachments/16482396/21300216.png)
-        -   Click host logo to set the icon that will be displayed for this host in lists and maps.
-            ![](attachments/16482396/21300143.png) 
-        -   Click the icon you like to use.
-        -   Click **Add services**.
+  - ![](attachments/16482396/21300216.png)
+  - Click host logo to set the icon that will be displayed for this host in lists and maps.
+            ![](attachments/16482396/21300143.png)
+  - Click the icon you like to use.
+  - Click **Add services**.
             ![](attachments/16482396/21300200.png)
 
 ### To add a new host using the new host option - Part 2
 
--   -   -   Leave the initial settings All new services will inherit the Initial Service Settings. If you choose not to enter a value for one or more required variable, those variables must be set in the selected template.
+- Leave the initial settings All new services will inherit the Initial Service Settings. If you choose not to enter a value for one or more required variable, those variables must be set in the selected template.
              as it is and scroll down to the services.
-        -   The scan has found out that NSClient++ is installed plus two other services that can be added to this host.
-            ![](attachments/16482396/21300119.png) 
-        -   Check Select All to add all services found or select the one you like to add for this host.
-        -   Click **Continue to step 3**.
-        -   Now either click the host or service links or click **Save**.
+  - The scan has found out that NSClient++ is installed plus two other services that can be added to this host.
+            ![](attachments/16482396/21300119.png)
+  - Check Select All to add all services found or select the one you like to add for this host.
+  - Click **Continue to step 3**.
+  - Now either click the host or service links or click **Save**.
             ![](attachments/16482396/21300120.png)
 
 ## Adding hosts with network scan
@@ -137,44 +137,42 @@ Network ranges can be specified in a very free form. Each of the four parts of t
 
 ### To add hosts with network scan
 
--   -   -   Click **Hosts** on the main page.
-        -   Click **Network scan**.
+- Click **Hosts** on the main page.
+  - Click **Network scan**.
             ![](attachments/16482396/21300121.png)
-        -   Fill in the desired network range. We will scan for hosts in the range from `172.27.86.8 - 172.27.86.97`
+  - Fill in the desired network range. We will scan for hosts in the range from `172.27.86.8 - 172.27.86.97`
              ![](attachments/16482396/21300226.png) .
-        -   Click **Scan Ranges**.
-        -   In this case we found Only hosts that aren't previously configured will be listed
+  - Click **Scan Ranges**.
+  - In this case we found Only hosts that aren't previously configured will be listed
              three hosts.
             ![](attachments/16482396/21300122.png)
-        -   Repeat To add a new hosts using the new host option - Part 1 for each host, except for the last step. If here is one or more host you do not like to add choose **No** in **Add this host?** When you are finished click **Scan hosts for services**.
-        -   Repeat To add a new host using the new host option - Part 2 for each host, except for the last step.When you are finished click **Continue to step 3**
-        -   Click **Save**.
+  - Repeat To add a new hosts using the new host option - Part 1 for each host, except for the last step. If here is one or more host you do not like to add choose **No** in **Add this host?** When you are finished click **Scan hosts for services**.
+  - Repeat To add a new host using the new host option - Part 2 for each host, except for the last step.When you are finished click **Continue to step 3**
+  - Click **Save**.
 
 ## Modifying a host
 
 ### To modify a host
 
--   -   -   On the start page choose the host you like to modify in the drop down list.
+- On the start page choose the host you like to modify in the drop down list.
             ![](attachments/16482396/21300112.png)
-        -   Click **Go**.
-        -   In the view you will get only directives differ from the template will be shown. To change the other directives click **Advanced**.
+  - Click **Go**.
+  - In the view you will get only directives differ from the template will be shown. To change the other directives click **Advanced**.
             ![](attachments/16482396/21300196.png)
-        -   Make your modifications and click **Submit.**
-        -   Click **Save**.
-
- 
+  - Make your modifications and click **Submit.**
+  - Click **Save**.
 
 ## Deleting a host
 
 ### To modify a host
 
--   -   -   On the start page choose the host you like to delete in the drop down list.
+- On the start page choose the host you like to delete in the drop down list.
             ![](attachments/16482396/21300112.png)
-        -   Click **Go**.
-        -   Click **Delete**.
+  - Click **Go**.
+  - Click **Delete**.
              ![](attachments/16482396/21300198.png)
-        -   Click **Delete all affected objects**.
-        -   Click **Save**.
+  - Click **Delete all affected objects**.
+  - Click **Save**.
 
 ## Renaming objects
 
@@ -185,12 +183,12 @@ Renaming objects in the configuration files directly is **not** supported. It mu
 
 Follow the guideline below to rename the objects throughout the system.
 
-1.  Log in as root via SSH to your OP5 Monitor server
-2.  Stop the monitoring service
-3.  Make sure you save a backup
+1. Log in as root via SSH to your OP5 Monitor server
+2. Stop the monitoring service
+3. Make sure you save a backup
     \# op5-backup
-4.  Execute the rename program
-5.  Start the monitoring service again
+4. Execute the rename program
+5. Start the monitoring service again
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # mon stop
@@ -204,16 +202,14 @@ If there is a lot of historical data this program can take a while to execute an
 
 Note that this does not work on schedule downtime objects. If a host is renamed that has a scheduled downtime the scheduled downtime will be removed and needs to be re-configured.
 
- 
-
 Network autoscan
 
 It might get handy to let OP5 Monitor scan and notify you if there are any new hosts on a particular network range.
  The network autoscan function will
 
--   -   scan certain range for new hosts
-    -   notify you when new are found
-    -   be executed every night by cron on the OP5 Monitor server.
+- scan certain range for new hosts
+  - notify you when new are found
+  - be executed every night by cron on the OP5 Monitor server.
 
         No host will be automatically added. The network autoscan function will only find the hosts for you.
 
@@ -223,17 +219,15 @@ You may add as many autoscan configuration as you wish. When adding a your netwo
 
 ### To add a new autoscan configuration
 
- 
-
--   -   -   Click **Configure** in the main menu.
-        -   Click **Network Autoscan**.
-        -   Fill in the **New scan** form
+- Click **Configure** in the main menu.
+  - Click **Network Autoscan**.
+  - Fill in the **New scan** form
             ![](attachments/16482396/21300123.png)
-        -   **Name**: The identifier of this autoscan configuration
-        -   **IP Range**: In this case a complete C net.
-        -   **Description**
-        -   **Activate**: Make this autoscan configuration active and in use.
-        -   Click **Save**.
+  - **Name**: The identifier of this autoscan configuration
+  - **IP Range**: In this case a complete C net.
+  - **Description**
+  - **Activate**: Make this autoscan configuration active and in use.
+  - Click **Save**.
 
 ## Adding a host to blacklist
 
@@ -241,11 +235,11 @@ In certain ranges you are scanning with the network autoscan there might be host
 
 ### To add a host to the blacklist
 
--   -   -   Click **Configure** in the main menu.
-        -   Click **Network Autoscan**.
-        -   Add a host (IP address) in the **Host** field
+- Click **Configure** in the main menu.
+  - Click **Network Autoscan**.
+  - Add a host (IP address) in the **Host** field
             ![](attachments/16482396/21300124.png)
-        -   Click **Add**.
+  - Click **Add**.
 
 ## The result
 
@@ -257,11 +251,11 @@ After the networks scan has been executed a small result will be shown in the up
 
  Services can be added in a few different ways in Configure. You may add a service by using
 
--   -   -   **add service for this host**
-        -   **scan host for network services**
-        -   **scan host for snmp interfaces**
-        -   **scan host for windows services with agent**
-        -   **scan host for windows services using WMI**
+- **add service for this host**
+  - **scan host for network services**
+  - **scan host for snmp interfaces**
+  - **scan host for windows services with agent**
+  - **scan host for windows services using WMI**
 
 We will take a look at the **add service for this host.**
  In this guide we only describes the directive we will not use the default value in.
@@ -271,24 +265,24 @@ We will take a look at the **add service for this host.**
 
 ### To add a service using add service for this host
 
--   -   -   On the start page choose the host you like to add a new service to in the drop down list.
+- On the start page choose the host you like to add a new service to in the drop down list.
             ![](attachments/16482396/21300112.png)
-        -   Click **Go**.
-        -   Click **Services for host...**.under related items menu to the right.
+  - Click **Go**.
+  - Click **Services for host...**.under related items menu to the right.
             ![](attachments/16482396/21300130.png)
             The add new service pages is shown.
-        -   Type in a service\_description.
+  - Type in a service\_description.
             ![](attachments/16482396/21300149.png)
-        -   We will use the check\_nt\_cpuload command for this service.Type in as many characters you need in the filter by regular expression field until the command shows up.
+  - We will use the check\_nt\_cpuload command for this service.Type in as many characters you need in the filter by regular expression field until the command shows up.
             ![](attachments/16482396/21300135.png)
-        -   Click **Syntax help** to see what arguments are needed for this command.
+  - Click **Syntax help** to see what arguments are needed for this command.
             ![](attachments/16482396/21300131.png)
             You can see that we have a macro called **\$ARG1\$**. This is the first, and in this case the only, argument we need to give to this command.
-        -   Click **Syntax help** again to hide the help text.
-        -   Type in the argument If more than one the shall be separated by a ! like this: argone!argtwo..
+  - Click **Syntax help** again to hide the help text.
+  - Type in the argument If more than one the shall be separated by a ! like this: argone!argtwo..
              ![](attachments/16482396/21300177.png)
-        -   Click **Submit**.
-        -   Click the **Save** icon.
+  - Click **Submit**.
+  - Click the **Save** icon.
 
 If the arguments include an exclamation mark "!" this has to be escaped with an back slash (). Example: username!crypticpassword!!warning!critical
  This will out put "crypticpassword!"
@@ -297,18 +291,18 @@ If the arguments include an exclamation mark "!" this has to be escaped with an 
 
 ### To modify a service
 
--   -   -   On the start page choose the host you like to modify a service on in the drop down list.
+- On the start page choose the host you like to modify a service on in the drop down list.
             ![](attachments/16482396/21300112.png)
-        -   Click **Go**.
-        -   Click **Services for host ...** .
+  - Click **Go**.
+  - Click **Services for host ...** .
              ![](attachments/16482396/21300221.png)
-        -   Choose the service you like to modify in the drop down list.
+  - Choose the service you like to modify in the drop down list.
             ![](attachments/16482396/21300113.png)
-        -   Click **Go**.
-        -   In the view you will get only directives differ from the template will be shown. To change the other directives click **Advanced**.
+  - Click **Go**.
+  - In the view you will get only directives differ from the template will be shown. To change the other directives click **Advanced**.
              ![](attachments/16482396/21300229.png)
-        -   Make your modifications and click **Submit**.
-        -   Click **Save**.
+  - Make your modifications and click **Submit**.
+  - Click **Save**.
 
 ## Test this check
 
@@ -317,38 +311,38 @@ If the arguments include an exclamation mark "!" this has to be escaped with an 
 
 ### To test a check
 
--   -   -   Pick up the service you like to test as it is done in Modifying a service.
-        -   Click **Test this check**, at the bottom of the page.
+- Pick up the service you like to test as it is done in Modifying a service.
+  - Click **Test this check**, at the bottom of the page.
             ![](attachments/16482396/21300183.png)
-        -   The output looks like the one below. If you get any errors it will be shown here in the output
+  - The output looks like the one below. If you get any errors it will be shown here in the output
             ![](attachments/16482396/21300174.png)
-        -   Click **Hide check** to hide the output.
+  - Click **Hide check** to hide the output.
 
 ### To test a hostgroup check
 
--   Pick up the service you like to test as it is done in Modifying a service.
--   Select the host that you would like the test to run on from the drop down menu.
-    ![](attachments/16482396/21300136.png) 
--   Click **Test this check**, at the bottom of the page.
+- Pick up the service you like to test as it is done in Modifying a service.
+- Select the host that you would like the test to run on from the drop down menu.
+    ![](attachments/16482396/21300136.png)
+- Click **Test this check**, at the bottom of the page.
     ![](attachments/16482396/21300183.png)
--   The output looks like the one below. If you get any errors it will be shown here in the output
+- The output looks like the one below. If you get any errors it will be shown here in the output
     ![](attachments/16482396/21300174.png)
--   Click **Hide check** to hide the output.
+- Click **Hide check** to hide the output.
 
 ## Deleting a service
 
 ### To delete a service
 
--   -   -   On the start page choose the host you like to delete a service from in the drop down list.
+- On the start page choose the host you like to delete a service from in the drop down list.
             ![](attachments/16482396/21300112.png)
-        -   Click **Go**.
-        -   Click **Services for host ...** .
+  - Click **Go**.
+  - Click **Services for host ...** .
              ![](attachments/16482396/21300221.png)
-        -   Choose the service you like to delete in the drop down list.
+  - Choose the service you like to delete in the drop down list.
             ![](attachments/16482396/21300113.png)
-        -   Click **Delete**.
+  - Click **Delete**.
              ![](attachments/16482396/21300148.png)
-        -   Click **Save**.
+  - Click **Save**.
 
 ## Scanning host for network services
 
@@ -356,11 +350,11 @@ When you [added your host](#Managingobjects-to-add-part1) you had the opportuni
 
 ### To scan a host for network services
 
--   -   -   Open up the host, in **Configure**, you like to add new services on.
-        -   Click **Scan host for network services**.
-        -   Select the new services found and click **Continue to step 3**.
-        -   Click either the host or service link to go back to the place where you started.
-        -   Click **Save**.
+- Open up the host, in **Configure**, you like to add new services on.
+  - Click **Scan host for network services**.
+  - Select the new services found and click **Continue to step 3**.
+  - Click either the host or service link to go back to the place where you started.
+  - Click **Save**.
 
 **Additional information**: In a distributed environment a selectbox will appear when hovering over the menu item "Scan host for network services" where you can select from which OP5 Monitor system that should preform the scan. ![](attachments/16482396/21300220.png)
 
@@ -371,23 +365,23 @@ In many times when you are about to monitor a switch or a router you need to set
 
 ### To add snmp interfaces
 
--   -   -   Open up the host, in **Configure**, you like to add new services on.
-        -   Click **Scan host for SNMP interfaces**.
-        -   Set the SNMP community.
-        -   Chose SNMP version.
-        -   Click **Scan host**.
+- Open up the host, in **Configure**, you like to add new services on.
+  - Click **Scan host for SNMP interfaces**.
+  - Set the SNMP community.
+  - Chose SNMP version.
+  - Click **Scan host**.
             ![](attachments/16482396/21300125.png)
-        -   Select the services you like to add.
-        -   Click either the host or the service link to get back.
-        -   Click **Add selected services**.
-        -   Click **Save**.
+  - Select the services you like to add.
+  - Click either the host or the service link to get back.
+  - Click **Add selected services**.
+  - Click **Save**.
 
 # Scanning host for windows services
 
 There are two ways to scan a windows host for services:
 
--   -   Using the windows agent NSclient++
-    -   Using WMI, Windows Management Instrumentation
+- Using the windows agent NSclient++
+  - Using WMI, Windows Management Instrumentation
 
 The following sections will describe how to accomplish this using the different techniques.
 
@@ -395,63 +389,61 @@ The following sections will describe how to accomplish this using the different 
 
 Adding a service that checks a windows services is many times harder than you think. You need to
 
--   -   -   have access to the windows server
-        -   know the exact name of the windows service
+- have access to the windows server
+  - know the exact name of the windows service
 
 With OP5 Monitor you do not need to do anything more than make sure the latest agent (NSClient++) is installed and follow the next few steps.
 
 ### To add windows services
 
--   -   -   Open up the host, in **Configure**, you like to add new services on.
-        -   Click **Scan host for Windows Services**.
-        -   Choose which server to preform the scan:
+- Open up the host, in **Configure**, you like to add new services on.
+  - Click **Scan host for Windows Services**.
+  - Choose which server to preform the scan:
              ![](attachments/16482396/21300145.png)
-        -   Select the Windows Services you like to add as a new service in OP5 Monitor.
+  - Select the Windows Services you like to add as a new service in OP5 Monitor.
             ![](attachments/16482396/21300134.png)
-        -   Give the new service a **Service description**.
-        -   Click **Add Selected Services**.
-        -   Click either the service link or the **Scan for more service** button.
-        -   Click **Save**.
+  - Give the new service a **Service description**.
+  - Click **Add Selected Services**.
+  - Click either the service link or the **Scan for more service** button.
+  - Click **Save**.
 
 ## Scan for service using WMI
 
 Scan for services using Windows Management Instrumentation has a number of dependencies to be able to work:
 
--   -   -   WMI enabled on the windows server
-        -   User account on the windows server with sufficient privileges
+- WMI enabled on the windows server
+  - User account on the windows server with sufficient privileges
 
  There are two ways to scan for WMI on a windows host:
 
--   -   -   When adding a new host
-        -   Scanning a existing host
+- When adding a new host
+  - Scanning a existing host
 
 ### Scanning for WMI when adding a new host
 
 To scan a host for WMI-counters and services upon adding the host to your OP5 Monitor configuration as partly described in: Adding a host with new host option.
  To scan for WMI counters when adding a new host:
 
--   -   -   Select **Configure** in the main menu
-        -   Click on **New Hosts**
-        -   Enter the information about the host
-        -   Select the checkbox **Add WMI
+- Select **Configure** in the main menu
+  - Click on **New Hosts**
+  - Enter the information about the host
+  - Select the checkbox **Add WMI
             ** ![](attachments/16482396/21300224.png)
-        -   Enter username and password
-        -   Press **Add Services
+  - Enter username and password
+  - Press **Add Services
             ** ![](attachments/16482396/21300194.png)
-        -   Select the services you wish to add from the list
+  - Select the services you wish to add from the list
              ![](attachments/16482396/21300168.png) :
 
- 
-
--   -   -   Press **Finish
+- Press **Finish
             ** ![](attachments/16482396/21300166.png) at the end of the page.
 
 The host is added and you can save your configuration.
  ![](attachments/16482396/21300164.png)
 
--   -   -   Press **Save** in the top right corner
+- Press **Save** in the top right corner
             ![](attachments/16482396/21300214.png)
-        -   Review your changes then by clicking on **More info** press **Save objects I have change**d
+  - Review your changes then by clicking on **More info** press **Save objects I have change**d
             ![](attachments/16482396/21300165.png)
 
 After this the configuration will be saved and i final preflight configuration check has been performed.
@@ -488,8 +480,6 @@ Custom variables can be used to store custom information for hosts, services and
 </tr>
 </tbody>
 </table>
-
- 
 
 ## Creating a new custom variable
 
@@ -556,82 +546,82 @@ Host and service escalations works exactly in the same way so we will only take 
 
 In this guide we will add a small escalation chain that does the following
 
--   -   -   First notification is sent to the support-group
-        -   After 10 minutes the second (the last one) is sent to the sysadmins group.
+- First notification is sent to the support-group
+  - After 10 minutes the second (the last one) is sent to the sysadmins group.
 
 ### To add a host escalation
 
--   -   -   On the **Edit Host** page, choose the host you like to add an escalation to in the drop down list.
+- On the **Edit Host** page, choose the host you like to add an escalation to in the drop down list.
             ![](attachments/16482396/21300112.png)
-        -   Click **Go**.
-        -   Click **Escalations**.
+  - Click **Go**.
+  - Click **Escalations**.
             ![](attachments/16482396/21300192.png)
-        -   Add the escalation number one.
-        -   Choose the contact group that shall have the notification.
+  - Add the escalation number one.
+  - Choose the contact group that shall have the notification.
             ![](attachments/16482396/21300110.png)
-        -   Set the start number in the escalation chain.
+  - Set the start number in the escalation chain.
              ![](attachments/16482396/21300151.png)
-        -   Set the end number in the escalation chain If the start number is 1 and the end number is two it means that the first and the second notification will be handled by this escalation.
+  - Set the end number in the escalation chain If the start number is 1 and the end number is two it means that the first and the second notification will be handled by this escalation.
              . ![](attachments/16482396/21300173.png)
-        -   Set the notification interval which is the number of minutes to wait to the next notification.
+  - Set the notification interval which is the number of minutes to wait to the next notification.
              ![](attachments/16482396/21300155.png)
-        -   Choose the time period when this escalation will be in use.
+  - Choose the time period when this escalation will be in use.
             ![](attachments/16482396/21300142.png)
-        -   Choose what states this escalation will be valid for.
+  - Choose what states this escalation will be valid for.
             ![](attachments/16482396/21300132.png)
             In this case we do not use the escalation for unreachable or recovery which means that unreachable and recovery notifications will be sent to the contact group set on the host.
-        -   Click **Submit**.
-        -   Choose Add new host escalation
+  - Click **Submit**.
+  - Choose Add new host escalation
             ![](attachments/16482396/21300127.png)
-        -   Click **Go**.
-        -   Add the escalation number two.
-        -   Choose the contact group that shall have the notification.
+  - Click **Go**.
+  - Add the escalation number two.
+  - Choose the contact group that shall have the notification.
             ![](attachments/16482396/21300111.png)
-        -   Set the start number in the escalation chain.
+  - Set the start number in the escalation chain.
              ![](attachments/16482396/21300202.png)
-        -   Set the end number in the escalation chain We have set the first notification and the last notification to 2 because this escalation will only be used once.
+  - Set the end number in the escalation chain We have set the first notification and the last notification to 2 because this escalation will only be used once.
              . ![](attachments/16482396/21300223.png)
-        -   Set the notification interval which is the number of minutes to wait to the next notification.
+  - Set the notification interval which is the number of minutes to wait to the next notification.
              ![](attachments/16482396/21300186.png) The escalation interval is set to 0 because there will be no more escalations when this one is done.
 
--   -   -   Choose the time period when this escalation will be in use.
+- Choose the time period when this escalation will be in use.
             ![](attachments/16482396/21300217.png)
-        -   Choose what states this escalation will be valid for.
+  - Choose what states this escalation will be valid for.
             ![](attachments/16482396/21300132.png)
             In this case we do not use the escalation for unreachable or recovery which means that unreachable and recovery notifications will be sent to the contact group set on the host.
-        -   Click **Submit**.
-        -   Click **Save**.
+  - Click **Submit**.
+  - Click **Save**.
 
 ## Modifying a host escalation
 
 ### To modify a host escalation
 
--   -   -   On the start page choose the host you like to modify an escalation on in the drop down list.
+- On the start page choose the host you like to modify an escalation on in the drop down list.
             ![](attachments/16482396/21300112.png)
-        -   Click **Go**.
-        -   Click **Escalations**.
+  - Click **Go**.
+  - Click **Escalations**.
             ![](attachments/16482396/21300169.png)
-        -   Choose the escalation you like to modify.
+  - Choose the escalation you like to modify.
              ![](attachments/16482396/21300197.png)
-        -   Click **Go**.
-        -   Make the modifications you like to do and click **Submit**.
-        -   Click **Save**.
+  - Click **Go**.
+  - Make the modifications you like to do and click **Submit**.
+  - Click **Save**.
 
 ## Deleting a host escalation
 
 ### To delete a host escalation
 
--   -   -   On the start page choose the host you like to delete an escalation from in the drop down list.
+- On the start page choose the host you like to delete an escalation from in the drop down list.
             ![](attachments/16482396/21300112.png)
-        -   Click **Go**.
-        -   Click **Escalations**.
+  - Click **Go**.
+  - Click **Escalations**.
              ![](attachments/16482396/21300171.png)
-        -   Choose the escalation you like to modify.
+  - Choose the escalation you like to modify.
             ![](attachments/16482396/21300231.png)
-        -   Click **Go**.
-        -   Click **Delete**.
+  - Click **Go**.
+  - Click **Delete**.
              ![](attachments/16482396/21300198.png)
-        -   Click **Save**.
+  - Click **Save**.
 
 # Access rights and contacts
 
@@ -644,10 +634,10 @@ To be able to login to OP5 Monitor you need to have a user, described in Local u
 
 ### To connect access rights to a contact
 
--   -   -   Configure a new contact.
-        -   Add the contact to an existing contactgroup or create a new contactgroup specific for the new contact. If you created a new contactgroup make sure to add the contact group for the hosts and services that you want to make available in the customized view.
-        -   Configure a user in access rights with the exact same name as the contact you created.
-        -   Set the options for the new access right.When selecting options do not use the last four options, authorized for all. By doing this the new user will only see the hosts and services that uses the contactgroup that he is a member of.
+- Configure a new contact.
+  - Add the contact to an existing contactgroup or create a new contactgroup specific for the new contact. If you created a new contactgroup make sure to add the contact group for the hosts and services that you want to make available in the customized view.
+  - Configure a user in access rights with the exact same name as the contact you created.
+  - Set the options for the new access right.When selecting options do not use the last four options, authorized for all. By doing this the new user will only see the hosts and services that uses the contactgroup that he is a member of.
 
 # Management packs
 
@@ -663,10 +653,10 @@ To create a management pack a hostgroup must be created and the services that sh
  To create a new management pack from a hostgroup go to **Management Packs** in the configuration.
 ![](attachments/16482396/21300178.png)
 
--   -   -   Enter a name for the management pack.
-        -   Select whitch hostgroup that should be used for the management pack.
-        -   Select an icon (a larger icon looks better in the host wizard).
-        -   Enter a description.
+- Enter a name for the management pack.
+  - Select whitch hostgroup that should be used for the management pack.
+  - Select an icon (a larger icon looks better in the host wizard).
+  - Enter a description.
 
 It is also possible to add custom variables, these can be used for information that needs to be entered when using the host wizard. Such as username, password and SNMP community names.
  ![](attachments/16482396/21300188.png)
@@ -710,4 +700,3 @@ Export management packs makes it possible to share your management pack with oth
  ![](attachments/16482396/21300153.png)
  Click on Export on the management pack to export this to a json-file. The file will be downloaded to you computer.
 ![](attachments/16482396/21300212.png)
-

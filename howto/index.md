@@ -1,2 +1,1 @@
--   [HOWTOs](HOWTOs/index)
-
+- [HOWTOs](HOWTOs/index)

@@ -25,5 +25,3 @@ Apr 10, 2015</td>
 </tr>
 </tbody>
 </table>
-
-

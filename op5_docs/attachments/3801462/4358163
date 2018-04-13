@@ -5,7 +5,7 @@
 # Script for SNMP monitoring Cisco UCS servers
 
 # Version 2.0.3 - 16th May 2013
-# - Add support for greater OID 
+# - Add support for greater OID
 # - Uknown status with 0 object detected
 
 # Version 2.0.2 23rd January 2013
@@ -94,7 +94,7 @@ elsif($type eq "f") {
 	$test= "Fan";
 	$oid_prefix = F; }
 elsif($type eq "po") {
-	$test = "PSU"; 
+	$test = "PSU";
 	$oid_prefix = PO; }
 elsif($type eq "fs") {
         $test = "Faults";
@@ -148,7 +148,7 @@ for(my $i = 0; $i < @descs; $i++) {
 # Get results for selected host
 my @results;
 for (my $i = 0; $i < @descriptions; $i++)  {
-        $oid = @oids[$i]; 
+        $oid = @oids[$i];
 	$get = $session->get_request("$oid");
         if (!defined $get) {
                 printf "SNMP Error: %s.\n at OID: $_\n", $session->error();
@@ -186,7 +186,7 @@ for (my $i=0; $i < @results; $i++) {
 		$output .= " " . $descriptions[$i];
 	}
 }
-if($exit_state eq NAGIOS_OK) { 
+if($exit_state eq NAGIOS_OK) {
 	if((@results eq 0) && ($type ne "fs")) { $exit_state = NAGIOS_UNKNOWN; print "No object found\n"; }
 	else { print int(@results). " objects OK\n"; }}
 else { print "$output.\n"; }

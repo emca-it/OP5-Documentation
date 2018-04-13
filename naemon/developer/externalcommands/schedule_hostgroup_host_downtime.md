@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - SCHEDULE_HOSTGROUP_HOST_DOWNTIME<br>
 
-
 #### Command Format:
 
 `SCHEDULE_HOSTGROUP_HOST_DOWNTIME;hostgroup_name;start_time;end_time;fixed;trigger_id;duration;author;comment`
@@ -29,6 +28,3 @@ Schedules downtime for all hosts in a specified hostgroup. If the 'fixed' argume
 
 printf "[%lu] SCHEDULE_HOSTGROUP_HOST_DOWNTIME;hostgroup1;1478648441;1478638441;1;0;3600;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

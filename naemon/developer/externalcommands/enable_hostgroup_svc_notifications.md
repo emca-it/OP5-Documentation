@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - ENABLE_HOSTGROUP_SVC_NOTIFICATIONS<br>
 
-
 #### Command Format:
 
 `ENABLE_HOSTGROUP_SVC_NOTIFICATIONS;hostgroup_name`
@@ -29,6 +28,3 @@ Enables notifications for all services that are associated with hosts in a parti
 
 printf "[%lu] ENABLE_HOSTGROUP_SVC_NOTIFICATIONS;hostgroup1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

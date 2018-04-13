@@ -39,11 +39,11 @@ Click anywhere outside the help text to hide it.
 
 The navigation in OP5 Monitor is simple and can be found in the top of the GUI. There are five main sections, seen from the left.
 
--   Branding (About menu)
--   Dashboards
--   Monitor
--   Report
--   Manage
+- Branding (About menu)
+- Dashboards
+- Monitor
+- Report
+- Manage
 
 ![](attachments/16482331/18481418.png)
 
@@ -51,10 +51,10 @@ There are also quicklinks next to the menu which may be populated on a per-user 
 
 By default they contain:
 
--   Settings
--   Unhandled host problems
--   Unhandled service problems
--   Add quicklink
+- Settings
+- Unhandled host problems
+- Unhandled service problems
+- Add quicklink
 
 ![](attachments/16482331/18481419.png)
 

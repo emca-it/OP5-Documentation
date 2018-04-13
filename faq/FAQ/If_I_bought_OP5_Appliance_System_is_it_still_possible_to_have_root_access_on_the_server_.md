@@ -11,4 +11,3 @@ If I bought OP5 Appliance System is it still possible to have root access on the
 * * * * *
 
 Yes
-

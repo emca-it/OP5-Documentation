@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - SET_HOST_NOTIFICATION_NUMBER<br>
 
-
 #### Command Format:
 
 `SET_HOST_NOTIFICATION_NUMBER;host_name;notification_number`
@@ -29,6 +28,3 @@ Sets the current notification number for a particular host. A value of 0 indicat
 
 printf "[%lu] SET_HOST_NOTIFICATION_NUMBER;host1;0\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

@@ -1,9 +1,5 @@
 # how\_notifications\_work
 
- 
-
- 
-
 # About
 
 In the OP5 Monitor user manual we describe some of the basics with notifications. Let us take a closer look at how it really works.
@@ -12,27 +8,23 @@ In the OP5 Monitor user manual we describe some of the basics with notifications
 
  The decision to send out notifications is made in the service check and host check logic. Host and service notifications occur in the following instances:
 
--   -   When a hard state change occurs. More information on state types and hard state changes can be found [here](http://www.naemon.org/documentation/usersguide/statetypes.html).
-    -   When a host or service remains in a hard non-OK state and the time specified by the configuration setting *notification\_interval* in the host or service configuration has passed since the last notification was sent out (for that specified host or service).
+- When a hard state change occurs. More information on state types and hard state changes can be found [here](http://www.naemon.org/documentation/usersguide/statetypes.html).
+  - When a host or service remains in a hard non-OK state and the time specified by the configuration setting *notification\_interval* in the host or service configuration has passed since the last notification was sent out (for that specified host or service).
 
 Each host and service definition has a *contact\_groups* option that specifies what contact groups receive notifications for that particular host or service. Contact groups can contain one or more individual contacts.
 
 When OP5 Monitor sends out a host or service notification, it will notify each contact that is a member of any contact groups specified in the *contact\_groups* option of the service definition. OP5 Monitor realizes that a contact may be a member of more than one contact group, so it removes duplicate contact notifications before it does anything.
 
- 
-
 The default behavior is if a host has the option *contact\_groups* configured in the host configuration, that or those contact\_groups will receive notifications for the host and the services on the host. There is an exception to this default behavior:
 
--   -   If a service on a host has the option *contact\_groups* set to a different contact group than the one on the host, the contact group on the host will receive all the notifications, *except* from the service that has a contact group defined.
-    -   If a service on a hostgroup has the option *contact\_groups* set, only that specific contact group will receive the notification.
+- If a service on a host has the option *contact\_groups* set to a different contact group than the one on the host, the contact group on the host will receive all the notifications, *except* from the service that has a contact group defined.
+  - If a service on a hostgroup has the option *contact\_groups* set, only that specific contact group will receive the notification.
 
 Additional information on implied inheritance can be found here: <http://www.naemon.org/documentation/usersguide/objectinheritance.html#implied_inheritance>
 
 # Notification filters
 
 When a notification is about to be sent it has to go through a number of filters before OP5 Monitor can determine whether a notification really is supposed to be sent or not.
-
- 
 
 |:--|
 |**Filter**
@@ -41,28 +33,26 @@ When a notification is about to be sent it has to go through a number of filters
 
 This tells OP5 Monitor if notifications are turned on or not in a program-wide basis. Program-wide notification settings are managed in Manage -\> Process information.|Service and host filters
 
--   Is the host or service in scheduled downtime or not?
--   Is the host or service in a flapping state?
--   Do the host or service notification options says that this type of notification is supposed to be sent?
--   Are we in the right time period for notifications at the moment?
--   Have we already sent a notification about this alert? Has the host or service remained in the same non-OK state that it was when the last notification went out?|Contact filters
+- Is the host or service in scheduled downtime or not?
+- Is the host or service in a flapping state?
+- Do the host or service notification options says that this type of notification is supposed to be sent?
+- Are we in the right time period for notifications at the moment?
+- Have we already sent a notification about this alert? Has the host or service remained in the same non-OK state that it was when the last notification went out?|Contact filters
 
--   Do the contact notifications options says that this type of notification is supposed to be sent?
--   Are we in the right time period for notifications at the moment, according to the notification time period set on the contact?|
-
- 
+- Do the contact notifications options says that this type of notification is supposed to be sent?
+- Are we in the right time period for notifications at the moment, according to the notification time period set on the contact?|
 
 # Notification commands
 
 How the notifications are sent is defined in either one of the two files below:
 
--   checkcommands.cfg
--   misccommands.cfg
+- checkcommands.cfg
+- misccommands.cfg
 
 The commands are divided into:
 
--   **host notification commands** -- such as the default 'ping'
--   **service notification commands** -- all other service checks running against the host
+- **host notification commands** -- such as the default 'ping'
+- **service notification commands** -- all other service checks running against the host
 
 The notification commands are then using scripts in the same way as the normal check commands does.
  All default scripts shipped with OP5 Monitor is located in:
@@ -71,8 +61,8 @@ The notification commands are then using scripts in the same way as the normal c
 
 *From the host machine's page in the OP5 web console --*
 
--   **To disable host notifications:** simply toggle the Notifications switch.
--   **To disable service notifications:** click on the Options drop-down menu in the upper right and select "Service Operations -\> Disable notifications for all services".
+- **To disable host notifications:** simply toggle the Notifications switch.
+- **To disable service notifications:** click on the Options drop-down menu in the upper right and select "Service Operations -\> Disable notifications for all services".
 
 # Notification macros
 
@@ -106,15 +96,11 @@ This can be useful if OP5 Monitor is configured for [load-balanced](Load_balance
 
 The URL back to OP5 Monitor can be configured by creating the file: `/etc/op5/notify.yml` with a hostname different from the systems hostname displayed by setting the following option:
 
- 
-
 **/etc/op5/notify.yml**
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 hostname: master1.op5.com
 ```
-
- 
 
 The below example is a notification sent from **master2** **.op5.com** in a load balanced configuration:
 
@@ -144,9 +130,9 @@ Notifications are by default sent from the e-mail address "op5monitor" without a
 
  To change the sender e-mail address in the notification command from `op5monitor@localhost.localdomain` to `op5notification@mycompany.com`, do the following:
 
--   -   Navigate to the check\_command configuration under *Manage -\> Configuration -\> Check Commands*
-    -   Enter the host notification command "host-notify" in the search box
-    -   Edit the *command\_line* for the notification command and add: "`--from op5notification@mycompany.com`" without the "-signs.
+- Navigate to the check\_command configuration under *Manage -\> Configuration -\> Check Commands*
+  - Enter the host notification command "host-notify" in the search box
+  - Edit the *command\_line* for the notification command and add: "`--from op5notification@mycompany.com`" without the "-signs.
 
 **Example**:
 
@@ -160,6 +146,3 @@ To change this for the service notifications, you need to repeat the steps above
 # Additional Resources
 
 The notifications in OP5 Monitor follows a extensive rule set that is inherited from the core daemon Naemon. More documentation can be found in the [notification documentation for Naemon](http://www.naemon.org/documentation/usersguide/notifications.html)
-
- 
-

@@ -35,4 +35,3 @@ The level to use by default and used for the majority of reports
 Trivial
 
 Very small problems
-

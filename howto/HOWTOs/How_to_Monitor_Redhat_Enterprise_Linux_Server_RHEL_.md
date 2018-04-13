@@ -2,13 +2,9 @@
 
 The purpose of this article is to describe how [op5 Monitor](http://www.op5.com/network-monitoring/op5-monitor/) can be used  for monitoring of a RHEL server. We will write some examples of basic monitoring and show you how to continue and monitor more.
 
- 
-
 ## Watch the HOWTO video:
 
 ![](images/icons/grey_arrow_down.png)Click to watch monitoring of Linux servers with OP5 Monitor
-
- 
 
 [![Get Adobe Flash player](https://www.adobe.com/images/shared/download_buttons/get_flash_player.gif)](https://get.adobe.com/flashplayer/)
 
@@ -16,13 +12,9 @@ The purpose of this article is to describe how [op5 Monitor](http://www.op5.com
 
 In this video we will give you a quick tour covering Linux server and application monitoring. OP5 Monitor provides you the ability to keep an eye on various aspects of the Linux ecosystem such as KVM virtual machines, the JBOSS application server, MySQL databases and things like disk usage, system load, available updates and similar. OP5 Monitor is a great fit for Linux monitoring since it’s built on top of flexible and proven open source software.
 
- 
-
 Prerequisites
 
 Download NRPE client from our [download area](http://www.op5.com/download-op5-monitor/agents/) and install it on your server. You can follow the installation [manual](http://www.op5.com/manuals/extras/op5_NRPE_2.7_manual.pdf "NRPE manual")even if it’s not written for the version of NRPE you run.
-
- 
 
 ## Adding the server and basic checks
 
@@ -38,21 +30,21 @@ In the next window you will get a list of services. Choose ‘*Select all’* o
 
 Network checks “Net”  example
 
--   Ping
--   SSH Server
--   HTTP Server
--   HTTPS Server
--   MySQL
+- Ping
+- SSH Server
+- HTTP Server
+- HTTPS Server
+- MySQL
 
 NRPE agent checks example
 
--   Current users
--   System load
--   Disk usage
--   Total processes
--   Zombie Processes
--   Rsyslog Process
--   Swap usage
+- Current users
+- System load
+- Disk usage
+- Total processes
+- Zombie Processes
+- Rsyslog Process
+- Swap usage
 
 *![](attachments/688583/5242947.png) *
 
@@ -89,6 +81,3 @@ If you are in need of some inspiration we recommend you to browse our [live demo
 ## Need assistance?
 
 Please do not hesitate to contact our support if you have any questions or feedback in regards to the how-to’s or plug-ins.
-
- 
-

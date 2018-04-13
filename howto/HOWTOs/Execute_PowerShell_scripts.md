@@ -12,8 +12,8 @@ This how-to will show you how to execute a powershell script via the OP5 Agent.
 
 # Prerequisites
 
--   Working installation of OP5 Agent 
--   Working installation of OP5 Monitor
+- Working installation of OP5 Agent
+- Working installation of OP5 Monitor
 
 # Create powerShell script
 
@@ -24,7 +24,7 @@ The script that we will use is
 **hello.ps1**
 
 ``` {.powershell data-syntaxhighlighter-params="brush: powershell; gutter: true; theme: Confluence" data-theme="Confluence" style="brush: powershell; gutter: true; theme: Confluence"}
- Write-Host "Hello World! `n" 
+ Write-Host "Hello World! `n"
 ```
 
 This will be placed in the script folder within the agent installation folder, in this case in: C:\\Program Files\\op5\\NSClient++\\scripts\\
@@ -76,9 +76,8 @@ If everything is working you should get the response "Hello World!"
 
 Go to the configuration of a host in OP5 Monitor and add a new service.
 
-1.  Enter a Service Description of you choice
-2.  Select *check\_nrpe* as check\_command 
-3.  Enter *hello* as check\_command\_args
+1. Enter a Service Description of you choice
+2. Select *check\_nrpe* as check\_command
+3. Enter *hello* as check\_command\_args
     ![](attachments/12190637/12386439.png)
-4.  Save the configuration.
-
+4. Save the configuration.

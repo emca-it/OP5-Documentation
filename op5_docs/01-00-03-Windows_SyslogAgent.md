@@ -18,7 +18,7 @@ If a prior version of the SyslogAgent is installed it should to avoid problems, 
 
 Follow these steps to stop and uninstall the SyslogAgent service:
 
-1.  1.  Start the SyslogAgent Configuration tool
+1. 1.  Start the SyslogAgent Configuration tool
     2.  Press the "Stop"-button (see Fig 3. in the section Configuration)
     3.  Press the "Uninstall"-button
 
@@ -35,9 +35,9 @@ When the configuration tool is started the following window should be displayed:
 
 To configure the elementary functions and start the SyslogAgent started follow the following steps:
 
--   -   Enter the IP address in the field **Syslog Server:**. This IP should be the one to your OP5 Logserver or OP5 Monitor server.
-    -   Make sure the check box "**Enable forwarding of event logs**" is checked.
-    -   Press **Start Service**.
+- Enter the IP address in the field **Syslog Server:**. This IP should be the one to your OP5 Logserver or OP5 Monitor server.
+  - Make sure the check box "**Enable forwarding of event logs**" is checked.
+  - Press **Start Service**.
 
 Your SyslogAgent is now configured and should be sending logs to your OP5 Logserver or OP5 Monitor server.
 
@@ -73,11 +73,10 @@ All settings are stored in the Windows Registry, and can therefore be exported t
 **Caveat**: When exporting, *delete the 'LastRun' key* before copying the file to another computer. This key helps each computer know which entries have already been sent. Failure to delete this field can cause computers not to send 'syslog' entries.
  To create a .reg file:
 
-1.  1.  Open the RegEdit tool ('winkey-r' for a command prompt, then type 'regedit');
+1. 1.  Open the RegEdit tool ('winkey-r' for a command prompt, then type 'regedit');
     2.  Navigate to HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Datagram\\SyslogAgent:
         ![](attachments/16482385/16679129.png)
     3.  Right-click the folder and choose export:
         ![](attachments/16482385/16679130.png)
     4.  Save the file and open it by right-clicking the file and choosing edit;
     5.  Remove the whole line corresponding to the keyword "LastRun" (if present). That line can be found under the section: " HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Datagram\\SyslogAgent]"
-

@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_HOST_EVENT_HANDLER<br>
 
-
 #### Command Format:
 
 `DISABLE_HOST_EVENT_HANDLER;host_name`
@@ -29,6 +28,3 @@ Disables the event handler for the specified host.
 
 printf "[%lu] DISABLE_HOST_EVENT_HANDLER;host1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

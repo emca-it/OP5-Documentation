@@ -8,17 +8,17 @@ This guide will take you through the process of setting up a NagVis and Listview
 
 To be able to display content in a external widget, you will need a local user account configured in OP5 Monitor. TODO: Insert link to Local user configuration (missing)
 
--   -   Create a new local user account via the OP5 Monitor web interface. In this example, the user is called *externalview.*
-    -   Make sure the new user is allowed to view the widget, by adding proper group rights. Preferably, only add a minimum set of rights.
-    -   Log on to the new user account, using the ordinary OP5 Monitor web interface.
+- Create a new local user account via the OP5 Monitor web interface. In this example, the user is called *externalview.*
+  - Make sure the new user is allowed to view the widget, by adding proper group rights. Preferably, only add a minimum set of rights.
+  - Log on to the new user account, using the ordinary OP5 Monitor web interface.
 
 # Configuration
 
-1.  Log on to the OP5 Monitor system via SSH, as root, and execute the following command:
+1. Log on to the OP5 Monitor system via SSH, as root, and execute the following command:
     `cp -pv /opt/monitor/op5/ninja/application/config/{,custom/}external_widget.php `
-2.  Edit the newly created file using your favorite text editor. For example, like this:
+2. Edit the newly created file using your favorite text editor. For example, like this:
     `nano /opt/monitor/op5/ninja/application/config/custom/external_widget.php `
-3.  The file will contain several comment blocks (the text within /\* ... \*/), and a few lines starting with *\$config* that will need to be set properly.
+3. The file will contain several comment blocks (the text within /\* ... \*/), and a few lines starting with *\$config* that will need to be set properly.
     1.  Set the *username* parameter to the name of the user that was added in the instructions found in the beginning of this article:
 
         **username**
@@ -79,14 +79,14 @@ To be able to display content in a external widget, you will need a local user a
 
 ## Explanation of configuration parameters
 
--   *company\_network* and *unhandled\_problems* in these examples are the external widget names, which is used in the external widget URL, such as:
+- *company\_network* and *unhandled\_problems* in these examples are the external widget names, which is used in the external widget URL, such as:
     `https://op5-monitor/monitor/index.php/external_widget/`*`company_network`
      *
--   *name* should be set to the internal name of the widget. The internal widget names available in your system can be found by running this (oneliner) command via SSH:
+- *name* should be set to the internal name of the widget. The internal widget names available in your system can be found by running this (oneliner) command via SSH:
     `for d in /opt/monitor/op5/ninja/modules/*/widgets/* /opt/monitor/op5/ninja/application/widgets/*; do [ -d "$d" ] || continue; echo "${d##*/}"; done | sort `
--   *friendly\_name* can be empty or have any value, but it must be defined.
--   *setting* and its content depends on what widget is being used, and it is mainly populated for the NagVis and Listview widgets.
--   To configure multiple external widgets, just add additional items for the *\$config['widgets']* array. Just make sure to keep the keys unique (*company\_network *and *unhandled\_problems* in the examples above).
+- *friendly\_name* can be empty or have any value, but it must be defined.
+- *setting* and its content depends on what widget is being used, and it is mainly populated for the NagVis and Listview widgets.
+- To configure multiple external widgets, just add additional items for the *\$config['widgets']* array. Just make sure to keep the keys unique (*company\_network *and *unhandled\_problems* in the examples above).
 
 # Displaying the widget
 
@@ -103,6 +103,3 @@ The *company\_network* part of the URL is the name given in the configuration (
 When done your external widget can render on any site with access to the OP5 Monitor server, such as this:
 
 ![](attachments/688739/17269637.png)
-
- 
-

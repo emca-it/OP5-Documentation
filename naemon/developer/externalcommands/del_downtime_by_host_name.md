@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DEL_DOWNTIME_BY_HOST_NAME<br>
 
-
 #### Command Format:
 
 `DEL_DOWNTIME_BY_HOST_NAME;hostname;hostname;hostname;hostname;hostname`
@@ -29,6 +28,3 @@ This command deletes all downtimes matching the specified filters.
 
 printf "[%lu] DEL_DOWNTIME_BY_HOST_NAME;host1;host1;host1;host1;host1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-

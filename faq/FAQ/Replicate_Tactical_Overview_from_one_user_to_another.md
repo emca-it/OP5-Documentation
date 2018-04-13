@@ -16,17 +16,11 @@ The example below is intended for the OP5 Monitor administrator that wants to de
 
 Linux command line experience and basic knowledge of MySQL is required.
 
- 
-
 This article is intended for use on OP5 Monitor 7.1.5. The behaviour might change in later versions of the product.
-
- 
 
 Settings *source user*: **monitor**
 
 Target *user*: **newuser**
-
- 
 
 1. Log in to OP5 Monitor user interface and configure a Tactical Overview  with a user that reflects what should be replicated to multiple users in the GUI on the *source user*.
 
@@ -38,15 +32,11 @@ Target *user*: **newuser**
 # mysqldump merlin ninja_settings ninja_widgets > /root/merlin_tac_backup.sql
 ```
 
- 
-
 3. Enter the database "merlin"
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 # mysql merlin
 ```
-
- 
 
 4. Have a look at the structures for the settings configured for the user you want to replicate to get a general understanding of the structure:
 
@@ -76,15 +66,11 @@ mysql> DELETE FROM ninja_settings WHERE page = 'tac/index' AND username = 'newus
 
 The above is not necessary if preparations are made for a new user that haven't logged in before.
 
- 
-
 6. Now it's time to copy the widgets from the user "**monitor**" to the user "**newuser**" Change the query to reflect your username you want to copy the settings too:
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 mysql> INSERT INTO ninja_widgets (`username`,`page`,`name`,`setting`,`friendly_name`,`instance_id`) SELECT 'newuser' AS username, `page`,`name`,`setting`,`friendly_name`,`instance_id` FROM ninja_widgets WHERE username = 'monitor';
 ```
-
- 
 
 7. Update the settings table for the widgets that you copied to "**newuser**" in stage 6:
 
@@ -92,7 +78,4 @@ mysql> INSERT INTO ninja_widgets (`username`,`page`,`name`,`setting`,`friendly_n
 mysql> INSERT INTO ninja_settings (`username`,`page`,`type`,`setting`,`widget_id`) SELECT 'newuser' AS username, `page`,`type`,`setting`,`widget_id` FROM ninja_settings WHERE username = 'monitor';
 ```
 
- 
-
 8. Log in as **newuser** in the user interface to verify that all settings were copied correctly.
-

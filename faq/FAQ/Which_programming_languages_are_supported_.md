@@ -11,4 +11,3 @@ Which programming languages are supported?
 * * * * *
 
 Perl, php, shell script, python, C, C++, all Linux languages are supported.
-

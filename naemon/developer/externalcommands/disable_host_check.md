@@ -11,7 +11,6 @@ title: External Command Reference
 
 <span class="glyphicon glyphicon-arrow-up"></span><a href="index.html"> External Commands Reference</a> - DISABLE_HOST_CHECK<br>
 
-
 #### Command Format:
 
 `DISABLE_HOST_CHECK;host_name`
@@ -29,6 +28,3 @@ Disables (regularly scheduled and on-demand) active checks of the specified host
 
 printf "[%lu] DISABLE_HOST_CHECK;host1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
-
-
-
