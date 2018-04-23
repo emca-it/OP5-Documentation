@@ -53,6 +53,10 @@ $if(highlighting-macros)$
 $highlighting-macros$
 $endif$
 % End default packages from the pandoc latex template
+% Adding tightlist definition to get around using '-' instead of '*'.
+% For pandoc 1.17.0.3+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 $if(tables)$
 \usepackage{longtable,booktabs}
 $endif$
