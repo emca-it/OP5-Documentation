@@ -1,6 +1,6 @@
 ---
-title: "Documentation of DLC"
-version: 1.1.0
+title: "Documentation for DLC"
+version: 1.2.0
 author: "OP5, Inc."
 toc: yes
 tocdepth: yes
@@ -16,4 +16,11 @@ lang: english
 title_background: ../images/op5-datacenter.png
 op5_logo: ../images/op5-logo.png
 client_logo: ../images/duquesne-light-company.png
+op5fonts: yes
+mainfont: LiberationSans
+mainfontextension: .ttf
+sansfont: OpenSans
+sansfontextension: .ttf
+monofont: LiberationMono
+monofontextension: .ttf
 ---
