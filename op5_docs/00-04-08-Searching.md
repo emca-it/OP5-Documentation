@@ -146,7 +146,6 @@ Click on **View in listview** and click on the icon **Show/Edit Text Filter **
 **![](attachments/16482309/16679044.png "Show/Edit text filter")**
 
 Enter a name and click on **Save Filter** in the dialog.
-![](download/attachments/10944877/worddav7040170aaa1f039ab1691174e0ce4245.png)
 
 More information can be found in the [Filters](Filters) section.
 

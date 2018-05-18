@@ -1,12 +1,12 @@
 # My account
 
-# About
+## About
 
 The **My Account** page is the place to change various settings for the currently logged in account.
 
 From here, the account password can be changed, the pagination behavior changed, and the list refresh rate can be set along with various other settings.
 
-![](attachments/16482337/23792990.png)
+![](attachments/16482337/23792990.png) \
 
 There are two parts to the **My Account** page.
 
@@ -17,13 +17,15 @@ The Change Password link opens the **Change Password** page where the password 
 
 The *Settings* list is where various user accessible settings can be tuned or enabled.
 
-# Accessing the My Account Page
+## Accessing the My Account Page
 
 1. Hover over the account avatar/account name on the left hand side of the OP5 Monitor Toolbar to reveal a drop down menu.
 2. Click on *My Account* from the drop down menu to open the **My Account** page. (Red box in the screenshot.)
-    ![](attachments/16482337/23792988.png)
 
-# Changing account password
+![](attachments/16482337/23792988.png) \
+
+
+## Changing account password
 
 1. Click on the *Change Password* link to open the **Change Password** page.
 
@@ -51,16 +53,14 @@ The *Settings* list is where various user accessible settings can be tuned or e
 
 6. Click on the Account Settings link to return to the **Account Settings** page, or return via the back feature of the browser.
 
-![](attachments/16482337/23792983.png)
+![](attachments/16482337/23792983.png) \
 
-# Pagination
+
+## Pagination
 
 The *Pagination* section controls the number of items displayed per page.
 
-|:--|
-|**Pagination Setting**
-
-**Description**|Pagination Limit
-Sets the maximum number of items to display per screen.|Pagination Step
-
-Sets the default value of the pagination drop-down menu.|
+| **Pagination Setting** | **Description** |
+|-----|-----|
+| Pagination Limit | Sets the maximum number of items to display per screen. |
+| Pagination Step | Sets the default value of the pagination drop-down menu. |
