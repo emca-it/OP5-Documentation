@@ -23,7 +23,8 @@ You can use host groups to:
 ## Host group commands
 
 By clicking on the "Action" icon on a host group you will get a menu to control the host group.
- ![](attachments/16482320/16679209.png)
+
+![](attachments/16482320/16679209.png)
 
 From this menu you can:
 
@@ -37,7 +38,9 @@ From this menu you can:
 ## Host group reporting
 
 From the host group command menu (see above) there are also a couple of reporting tools
- ![](attachments/16482320/16679208.png)
+
+![](attachments/16482320/16679208.png)
+
  From this menu you can view Availability reports and Alert history for the host group.
 
 # Using Service groups
@@ -58,8 +61,10 @@ On the hosts listed above there are services that must be working otherwise your
 ## Service group commands
 
 By clicking on a service group name (the name within parentheses) in any of the service group views you will get a menu to control the service group.
+
 ![](attachments/16482320/16679214.png)
- From this menu you can:
+
+From this menu you can:
 
 - Schedule downtime for all host and/or services in the service group.
   - Enable and disable notifications for all hosts and/or services in the service group.
@@ -69,7 +74,9 @@ By clicking on a service group name (the name within parentheses) in any of the 
 ## Service group reporting
 
 From the service group command menu (see above) there are also a couple of reporting tools
- ![](attachments/16482320/16679213.png)
+
+![](attachments/16482320/16679213.png)
+
  From this menu you can view Availability reports and Alert history for the service group.
 
 Another good way to use service groups is to create Service Level Agreement (SLA) reports based on service groups. If you take the example above and create a SLA report from it you will directly see if you can deliver your service the way you promised your customers.

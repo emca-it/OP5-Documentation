@@ -54,8 +54,9 @@ Notifications are sent out on state changes. A notification is sent during one o
 As you can see in the GUI there are many views in OP5 Monitor to show you host and service status in. Two of the most useful default views for a system administrator, is the unacknowledged  service view and the unacknowledged hosts view.
 
 ![](attachments/16482319/19234885.png)
- In these views you will only find unacknowledged problems for hosts and services
- This views can be accessed from the quickbar menu.
+
+In these views you will only find unacknowledged problems for hosts and services
+This views can be accessed from the quickbar menu.
 
 ![](attachments/16482319/19234884.png)
 
@@ -79,7 +80,9 @@ The most common way to acknowledge a problem is to do it in the GUI. This is eas
 
 1. Look up the host in the GUI and click on the host name.
 2. Click on **Acknowledge This host problem** in the left area of the user interface.
-    ![](attachments/16482319/19234881.png)
+
+![](attachments/16482319/19234881.png)
+
 3. Fill in a comment and click **Submit**.
 
     With the Sticky options all notifications are suppressed until the problem goes to OK or UP. Un-check this box to remove the acknowledgment even when the problem goes to another problem state, for example from WARNING to CRITICAL or from CRITICAL to WARNING. Use the **Notify** checkbox to send out a notification that this problem has been acknowledged. With every acknowledgment a comment is added to the object. If you would like this comment to remain after the problem has retured to OK or UP use the **Persistent** checkbox.
@@ -102,21 +105,27 @@ Sometimes you might need to remove an acknowledge. Maybe you acknowledged the wr
 
 1. Pick up the host or service detail view in the gui.
 2. Hover the menu **Options -\> Actions -\> Remove acknowledgment**
-    **![](attachments/16482319/19234880.png)**
+
+![](attachments/16482319/19234880.png)
 
 Now the notifications will continue as it is setup for the object.
- The comment for the acknowledge *is not removed*.
+The comment for the acknowledge *is not removed*.
 
 ## Removing multiple acknowledgements
 
 To remove several acknowledgements:
 
 1. Go to  your dashboard, and in the "**acknowledge service problem**" widget and click on "X Acknowledged services"
-    ![](attachments/16482319/19234905.png)
-2. Click **Send Multi Action** below the search field![](attachments/16482319/19234910.png)
-    (It is located in the top right of the list.)
+
+![](attachments/16482319/19234905.png)
+
+2. Click **Send Multi Action** below the search field. It is located in the top right of the list.
+
+![](attachments/16482319/19234910.png)
+
 3. Chose **Acknowledge** in **Select Action** drop down list just below the list and click **Submit**.
-    ![](attachments/16482319/19234890.png)
+
+![](attachments/16482319/19234890.png)
 
 # Schedule downtime
 
@@ -154,9 +163,13 @@ As you have seen we can schedule downtime for both hosts and services. Now we wi
 
 1. Find the host you like to schedule downtime for and pick up the host information page ([Hosts and services](Hosts_and_services)).
 2. In the **Host detail view** click **Schedule Downtime.**
-    ![](attachments/16482319/19234882.png)
+
+![](attachments/16482319/19234882.png)
+
 3. Fill in the form
-    ![](attachments/16482319/19234883.png)
+    
+![](attachments/16482319/19234883.png)
+
     1.  Enter start and end time.
     2.  Choose between fixed or flexible. **Fixed** downtime starts and stops at the exact start and end times that you specify when you schedule it. **Flexible** is used when you know for how long a host or service will be down but do not know exactly when it will go down.
     3.  Use **Triggered by** if you would like another schedule downtime to start the downtime. For instance, if you schedule flexible downtime for a particular host (because its going down for maintenance), you might want to schedule triggered downtime for all of that hosts' "children". Note that this option is hidden if no other scheduled downtimes are available.
@@ -170,11 +183,17 @@ As you have seen we can schedule downtime for both hosts and services. Now we wi
 ### To schedule downtime for a host group
 
 1. Locate the host group you like to schedule downtime for by clicking on Hostgroup summary in the main menu under Monitoring.
-    ![](attachments/16482319/19234901.png)
+
+![](attachments/16482319/19234901.png)
+
 2. Click on the hostgroup "Action" icon
-    ![](attachments/16482319/19234907.png)
+
+![](attachments/16482319/19234907.png)
+
 3. Click **Schedule downtime for all hosts in this Hostgroup** in the list of Hostgroup Commands.
-    ![](attachments/16482319/19234904.png)
+
+![](attachments/16482319/19234904.png)
+
 4. Follow a-e in step Fill in the form in To schedule downtime for a host.
 5. Click **Submit**.
 6. Click **Done**.
@@ -189,11 +208,12 @@ To remove a scheduled downtime
 
 1. Open up the scheduled downtime view by follow the instructions in To view all scheduled downtime.
 2. Click the **delete** icon under Actions.
-    ![](attachments/16482319/19234903.png)
-3. Click **Submit**.
-    ![](attachments/16482319/19234891.png)
 
- Now the scheduled downtime and the comment saved when you created the scheduled downtime is removed.
+![](attachments/16482319/19234903.png)
+
+3. Click **Submit**. Now the scheduled downtime and the comment have been removed.
+
+![](attachments/16482319/19234891.png)
 
 # Schedule recurring downtime
 
@@ -207,16 +227,26 @@ Let us say that you are using Citrix and you need to reboot your citrix servers 
 ### To add a recurring downtime
 
 1. Click **Recurring downtime** in the Monitoring menu.
-    ![](attachments/16482319/19234886.png)
+
+![](attachments/16482319/19234886.png)
+
 2. Select **New**, located to the left of the filter and multi select options
-    ![](attachments/16482319/19234898.png)
+
+![](attachments/16482319/19234898.png)
+
 3. Choose the object type.
-    ![](attachments/16482319/19234894.png)
+
+![](attachments/16482319/19234894.png)
+
 4. Chose objects to use, in this case the citrix host group.
-    ![](attachments/16482319/19234897.png)
+
+![](attachments/16482319/19234897.png)
+
 5. Add a comment.
 6. Set start and end time.
-    ![](attachments/16482319/19234892.png)
+
+![](attachments/16482319/19234892.png)
+
 7. Choose day of week and months of the year this schedule shall be used.
 8. Click **Add schedule**.
 
@@ -229,7 +259,8 @@ Once you have created a recurring downtime schedule you may
   - delete it.
 
 This is done from the Schedules tab.
- The view looks like this
+The view looks like this
+
 ![](attachments/16482319/19234893.png)
 
 ## Editing a recurring downtime
@@ -238,7 +269,9 @@ This is done from the Schedules tab.
 
 1. Click **Recurring downtime** and then **Schedules**.
 2. Click **Edit**.
-    ![](attachments/16482319/19234895.png)
+
+![](attachments/16482319/19234895.png)
+
 3. Edit the fields you like to change and click **Add schedule**.
 
 ## Deleting a recurring downtime
@@ -247,5 +280,7 @@ This is done from the Schedules tab.
 
 1. Click **Recurring downtime** and then **Schedules**.
 2. Click **Delete**
-    ![](attachments/16482319/19234889.png) .
+
+![](attachments/16482319/19234889.png) .
+
 3. Click **Ok**.
