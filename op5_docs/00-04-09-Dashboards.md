@@ -1,6 +1,6 @@
 # Tactical overview
 
-# About
+## About
 
 Dashboards contain multiple widgets which render monitoring information and status in different ways, dashboards are accessible through the Dashboards main-menu item.
 
@@ -8,7 +8,7 @@ You can create multiple dashboards for different purposes which will populate th
 
 On the first login of a user in OP5 Monitor the default Dashboard will generated for you, this dashboard can be removed if it is not relevant.
 
-# Creating new dashboards
+## Creating new dashboards
 
 New dashboards can be created by selecting "New Dashboard" in the Dashboards item of the main-menu.
 
@@ -22,7 +22,7 @@ When a new dashboard has been created it is empty and will only display a short 
 
 ![](attachments/16482310/18481513.png)
 
-# Adding widgets
+## Adding widgets
 
 Widgets are added through the "Dashboard options" menu, simply hover the "Dashboard options" and then "Add widget" and you are presented with a list of widget, just click them to add the widget to your dashboard.
 
@@ -30,13 +30,13 @@ More on widgets is covered in the [Widgets](Widgets) chapter.
 
 ![](attachments/16482310/18481522.png)
 
-# Selecting dashboard layout
+## Selecting dashboard layout
 
 The dashboard can take on two different layout which can be changed after the creation of the dashboard via the "Dashboard options" menu in the top-right corner of the dashboard view.
 
 ![](attachments/16482310/18481517.png)
 
-# Sharing a dashboard
+## Sharing a dashboard
 
 You can share a dashboard you have created with your colleagues, this makes it available to them for viewing, they can not change it.
 
@@ -60,7 +60,7 @@ When sharing dashboards to groups or users that are fetched from LDAP or Active 
 
 The same goes for auto completion of local users and groups if your user isn't member of a group with the permission "Access Rights". More information can be found in [Authorization section](Authorization_16482400.html#Authorization-Authorizationpoints) of the documentation. You can still share dashboards if you input the correct user or group name in the input field.
 
-# Other options
+## Other options
 
 As can be seen in this image there are also options for deleting and renaming the dashboard. There is also a "Set as login dashboard" option, which will make the currently viewed dashboard the one that is displayed when you log into OP5 Monitor. If no dashboard has been given this status, OP5 Monitor will display one of the dashboards you have access to.
 

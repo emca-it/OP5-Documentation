@@ -1,14 +1,14 @@
 # Load balanced monitoring
 
-# Introduction
+## Introduction
 
 The OP5 Monitor backend can easily be used as a load balanced monitoring solution. The load balanced model looks like this.
  ![](attachments/16482411/21300233.png)
 The load balanced solution have two or more peers in the same environment sharing the same tasks (the hosts to monitor). Any new configuration made on any of the peers is distributed to the other peers. The peers divides the load automatically and keep tracks of when one peer go down, the other(s) take over the job.
 
-# Before we start
+## Before we start
 
-## Prerequisites
+### Prerequisites
 
 There are a few things you need to take care of before you can start setting up a load balanced monitoring. You need to make sure you have at least two servers of **the same architecture **(32/64 bit), both running the **same** version of OP5 Monitor.
 
@@ -22,7 +22,7 @@ More specifically, make sure that:
   - All servers' system clocks must be synchronized, preferably by NTP.
   - All nodes should be in the same geographical location. If distribution is required, please look at [Distributed Monitoring](Distributed_Monitoring)
 
-## Cluster state information
+### Cluster state information
 
 In the OP5 Monitor system, a tool called *mon* can be found via the command line (accessed via SSH). To view the current cluster state, run the command like this:
 
@@ -32,16 +32,16 @@ All known nodes, the local one, peers and pollers, should be displayed, includin
 
 More information regarding the mon command can be found [here](The_mon_command).
 
-# The configuration
+## The configuration
 
-## Setting up the load balanced solution
+### Setting up the load balanced solution
 
 This load balanced configuration will be set up with two peered nodes ("peers"):
 
 - peer-blue
   - peer-green
 
-### To set up a load balanced monitoring solution
+#### To set up a load balanced monitoring solution
 
 1. Log on to peer-green via SSH, as root.
 
@@ -75,7 +75,7 @@ On peer-blue: scp /opt/monitor/var/status.sav peer-green:/opt/monitor/var/status
 
 On both peers: mon start
 
-## Adding another peer
+### Adding another peer
 
 In this instruction we will have the following hosts:
 
@@ -83,7 +83,7 @@ In this instruction we will have the following hosts:
 - peer-blue
 - peer-red (This is the new one.)
 
-### To add a new peer
+#### To add a new peer
 
 1. Log on to peer-red via SSH, as root.
 
@@ -105,7 +105,7 @@ In this instruction we will have the following hosts:
     `mon node ctrl --self -- mon restart`
 8. After a minute or two, make sure that the peers are fully connected and synchronized according to [mon node status](#Loadbalancedmonitoring-monnodestatus).
 
-## Removing a peer
+### Removing a peer
 
 In this instruction we will remove a peer called:
 
@@ -113,7 +113,7 @@ In this instruction we will remove a peer called:
 
 The peer will be removed from all other peers' configuration.
 
-### To remove a peer
+#### To remove a peer
 
 1. Log on to peer-red via SSH, as root.
 2. Remove oneself from all other peers:
@@ -127,10 +127,10 @@ The peer will be removed from all other peers' configuration.
 4. Restart OP5 Monitor:mon restart
 5. Unless peer-red isn't powered off, the node will be running with the same configuration as its previous peers, but as a standalone server, performing all host/service check on its own.
 
-## File and directory synchronization
+### File and directory synchronization
 
 Information regarding how to synchronize files and/or directories between peers can be found in the [File synchronization](File_synchronization) chapter.
 
-# More information
+## More information
 
 For more information and advanced examples, please have a look at the [How-To document](https://kb.op5.com/display/MERLIN/Merlin+How-To) found in the merlin project.

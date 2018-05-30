@@ -1,16 +1,16 @@
 # Troubleshooting
 
-# About
+## About
 
 In this chapter we will present some debugging tactics to troubleshoot problems in OP5 Monitor.
 
-# Preface
+## Preface
 
 A logfile is a file that records either events that occur in an operating system or other software runs, or messages between different users of a communication software. This information is very useful when you need to troubleshoot. However it might generate a lot of data depending on the configured log level. This text will also cover which logfiles contain which type of information.
 
 We have based the paths presented below on a CentOS 6 installation. There may be differences on CentOS 7, so we are revising as we move the Monitor Appliance to that version.
 
-# Log Files
+## Log Files
 
 The table shows the available modules and their log files.
 
@@ -176,11 +176,11 @@ Info
 
 Merlin communication and module logs.
 
-# Log levels
+## Log levels
 
 These tables show the logging levels and labels. Each level will automatically include all less granular levels. That is: if the debug level is set to Warning, then Warning, Error, and Critical events will all be logged.
 
-## log.yml
+### log.yml
 
 Level
 
@@ -212,7 +212,7 @@ Debug
 
 Fine-grained informational events.
 
-## smsd.log
+### smsd.log
 
 Level
 
@@ -256,7 +256,7 @@ Critical
 
 Error message when the program has a permanent problem (for example sending failed on multiple occurrences or wrong permissions to a queue).
 
-## syslog-ng
+### syslog-ng
 
 Level
 
@@ -312,9 +312,9 @@ debug
 
 Debug-level messages.
 
-# Examples
+## Examples
 
-## Business Services
+### Business Services
 
 The two most significant configuration files to manage logging for business services: '/etc/op5/log.yml' and '/opt/synergy/etc/config.lua'.
 

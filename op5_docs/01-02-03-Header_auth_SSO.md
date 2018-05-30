@@ -1,12 +1,12 @@
 # Header\_auth\_SSO
 
-# Introduction
+## Introduction
 
 Header Authentication can be used to give single sign on (SSO) access to OP5 Monitor by sending extra headers with the HTTP request. The headers must be sent on every page load, which means performing the authentication every time you load a page.
 
 This authentication method should only be used when all requests are made through an authenticating proxy that filters all request headers. Failing to do this will enable any user to send extra headers that can grant admin privileges.
 
-# Configuration
+## Configuration
 
 It's possible to enable HTTP header authentication by adding a authentication module using the "Header" driver. To configure this module, you need to add the following section to "/etc/op5/auth.yml". Note that "X-Username", "X-Realname", "X-Email", and "X-Groups" are the corresponding and case-insensitive headers. Additionally, you must set the "enable\_auto\_login" option to "true" for header authentication work:
 
@@ -24,6 +24,6 @@ Below is an example configuration of the authentication module in Monitor (from 
 
 ![](attachments/16482391/16679134.png)
 
-# Permissions
+## Permissions
 
 Permissions are handled by the groups that are sent in the group header, which can be configured on the "[Group permissions](https://kb.op5.com/display/HOWTOs/How+to+add+a+user+with+limited+visibility)" page.

@@ -1,12 +1,12 @@
 # View Active Config
 
-# About
+## About
 
 The **View Active Config** page (Manage \> View Active Config) displays all of the configured objects in the OP5 Monitor install. There can be quite a few objects in a production install, and **View Active Config** provides a way to get an overview of the configuration.
 
 The objects can have more attribute columns then can be displayed in the browser window, so expanding the window horizontally might be necessary to see all of the attributes.
 
-# Overview
+## Overview
 
 There are several parts of the View Active Config page:
 

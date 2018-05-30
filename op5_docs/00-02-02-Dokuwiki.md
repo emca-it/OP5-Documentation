@@ -1,17 +1,17 @@
 # Dokuwiki
 
-# About
+## About
 
 op5 Monitor comes with an dokuwiki that gives you a great way to document both your environment and things related to your monitored systems.
 Of course you can also use this dokuwiki to save other kind of related information in too. This makes it easy to reach and you will ensure you have all documentation in the same place.
 
-# Editing a wiki page
+## Editing a wiki page
 
 To edit an existing page, go to the page you want to edit and select 'Edit this page' in the top right corner.
  A backup of the previous page will automatically be created.
  ![](attachments/16482323/16679250.png)
 
-# Formatting a wiki page
+## Formatting a wiki page
 
 You can format your text by using wiki markup. This consists of normal characters like asterisks, single quotes or equal signs which have a special function in the wiki, sometimes depending on their position. For example, to format a word in italic, you include it in two pairs of single quotes like ''this''.
 

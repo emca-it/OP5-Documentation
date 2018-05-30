@@ -1,16 +1,16 @@
 # OP5 Trapper
 
-# About
+## About
 
 In this chapter we will cover the Trapper extension.
 
-# Preface
+## Preface
 
 Throughout the manual we may use the terms 'trap' from SNMP v1 and 'notification' from SNMP v2 interchangeably, except the places where it is stated explicitly. For the sake of readability, we will also use foreshortened, fake examples of SNMP OIDs – e.g.: ".1.1", ".1.2", ".1.3". You will need to substitute real OIDs into your instances.
 
-# Workflow
+## Workflow
 
-# Quick Start
+## Quick Start
 
 This is an overview of the screens and steps to create a Trapper trap. The sections after this will cover more of the details. The important part is that you need at least one handler before you can create any matchers -- in other words, you need a Lua script to handle incoming SNMP data before the matchers can act on the data.
 
@@ -68,7 +68,7 @@ This is an overview of the screens and steps to create a Trapper trap. The secti
 
     4.  Click on Send trap.
 
-# Matchers
+## Matchers
 
 Note
 
@@ -80,7 +80,7 @@ Example: .1.3.6.1.\*
 
 Keep in mind that a trap could be matched to more than one matcher. Fallback will only be used if it’s impossible to match the trap with any of the other matchers.
 
-# Handlers
+## Handlers
 
 A handler is a rule that defines what should be done when an OID is matched by a matcher.
 
@@ -190,7 +190,7 @@ Minute
 
 Second
 
-## Context
+### Context
 
 Variables used in handler (as well as trap and result structures) exist in scope of one handler call and their values do not persist across different handler calls, even between the calls done
 
@@ -204,7 +204,7 @@ var = context[ "name" ] or
 
 Code containing context variables can be found in the section [Code examples](https://kb.op5.com/display/DOC/op5+Trapper#op5Trapper-Codeexamples).
 
-## Actions
+### Actions
 
 |:--|
 |**Action**
@@ -217,9 +217,9 @@ Stop processing this trap by this handler and proceed to next handler if any.|`a
 
 Stop the handler normally; useful to return from deep nested constructions.|
 
-## Code examples
+### Code examples
 
-### Example 1 - Basic handler
+#### Example 1 - Basic handler
 
 This is a very basic handler that will set the state to "Critical". result.state is the only mandatory parameter.
 
@@ -229,7 +229,7 @@ This is a very basic handler that will set the state to "Critical". result.state
 result.state=STATE.CRITICAL
 ```
 
-### Example 2 - Conditional state including historical data
+#### Example 2 - Conditional state including historical data
 
 A device periodically sends a trap with the OID ‘.1.1’ with its temperature in variable binding \`.10.10\`. A temperatures below 40 is considered OK and above 100 a problem. Between 40 and 100 we want the state to be WARNING if the temperature increases and OK state if it decreases.
 
@@ -253,7 +253,7 @@ end
 context[ "temperature" ] = t
 ```
 
-### Example 3 - Multiple occurrences
+#### Example 3 - Multiple occurrences
 
 A device can send us a trap with the OID \`.1.1\`. When this trap is received the service "Detections" should normally change state to WARNING but if 3 such traps are received within two minutes the service state should change to CRITICAL.
 
@@ -275,11 +275,11 @@ context[ "prev" ] = time
 
 The timestamps of two previously received traps are used to calculate the time difference and at the end the handler updates the timestamps.
 
-# Modules
+## Modules
 
 To include "module-name" in a handler has the same effect as including the body of the module "module-name" in the handler. This may be convenient when multiple handlers share identical code sections.
 
-# Language
+## Language
 
 Handlers DSL is created on top of a subset of the Lua programming language. The [Lua Reference Manual](http://www.lua.org/manual/5.1/) is a good source if you need more information about the language.
 
@@ -300,7 +300,7 @@ a bare-bone haiku.
  --]]
 ```
 
-# Map to service
+## Map to service
 
 In addition to result.state the following parameters are also mandatory:
 

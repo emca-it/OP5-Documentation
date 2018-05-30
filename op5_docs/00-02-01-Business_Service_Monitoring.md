@@ -1,10 +1,10 @@
 # Business Service Monitoring
 
-# About
+## About
 
 The business services view is designed to combine your IT monitoring and your business service management (BSM) to give an overview of the applications and/or services that your organisation is providing either to customers or internally.
 
-# Viewing Business Services
+## Viewing Business Services
 
 To access the Business Services view click on **Business Services** in the main menu. ![](attachments/16482326/16679247.png)
  The Business Services view gives an easy overview of how your Business Processes are working.

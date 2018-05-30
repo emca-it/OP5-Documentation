@@ -1,12 +1,12 @@
 # Viewing Graphs
 
-# About
+## About
 
 op5 Monitor includes support for graphing what's known as "performance data" returned by check plugins that support this feature.
 Performance data can be anything that gives a more detailed picture of a particular check's performance characteristics than the OK/WARNING/CRITICAL levels found in Monitor responses.
 For example: check\_ping returns performance data for packet loss and round trip times. This data is stored by Monitor and used to create graphs for different time periods, such as the last 24 hours and past week. This feature can be very helpful in identifying trends or potential problems in a network.
 
-# Viewing graphs
+## Viewing graphs
 
 From most of the views in OP5 Monitor you can find the graph icon looking like this: ![](attachments/16482317/17859856.png)
 To view the graphs for a service or a host click on the graph icon and you will get the graph view.
@@ -59,12 +59,12 @@ Here you see a short information about the host. Click the host or service name 
 Other graphs on this host
 The list shows the rest of the graphs available for this host. Just click on one of them to view the graphs of an other service.
 
-# Adding graphs for custom plugins
+## Adding graphs for custom plugins
 
 Sometimes you find a plugin you like to use but there are no graphs made from the output of the plugin. Then you need to create your own template.
 To create a template of your own, review our [Graph Template documentation](Graph_templates).
 
-# Graph basket
+## Graph basket
 
 To view graphs from multiple sources it's possible to add graphs to the basket.
 By adding a graph to the basket it will be possible to view the basket with the selected graphs below each other.

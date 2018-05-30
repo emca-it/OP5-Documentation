@@ -1,6 +1,6 @@
 # Quick Action Menu
 
-# About
+## About
 
 For quick access to some host and service commands you can access the Quick action menu.
 The menu can be accessed thrugh right clicking on the status icon in front of a host or service.
@@ -8,7 +8,7 @@ The menu can be accessed thrugh right clicking on the status icon in front of a 
 
 This menu will only appear if you are 'Authorized for system commands', this is set under User Rights in the configuration, see [Authorization](Authorization).
 
-# Host Actions
+## Host Actions
 
 The actions accessible from the host quick access menu are:
 
@@ -25,7 +25,7 @@ The actions accessible from the host quick access menu are:
 - Schedule a check for all services on this host
 - Add host comment
 
-# Service Actions
+## Service Actions
 
 The actions that are available on a service quick access menu are:
 

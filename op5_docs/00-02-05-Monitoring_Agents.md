@@ -1,6 +1,6 @@
 # Monitoring Agents
 
-# About
+## About
 
 op5 Monitor can do a lot on its own. But to get the most out of OP5 Monitor you should use our agents.
 The following agents are available from the download section in the support section at http://www.op5.com/get-op5-monitor/download/\#Agents-tab.

@@ -1,6 +1,6 @@
 # HTTP-API
 
-# About
+## About
 
 OP5 Monitor comes with a REST API. It lets you configure, get status information, and get report data by issuing regular HTTP requests. The workflow should be familiar to anyone that has used a REST API:
 
@@ -16,20 +16,20 @@ This document does not attempt to replace those pages, as they are kept updated 
 
 Note also that there is still a section for Status API. This has been obsolete since OP5 Monitor version 6.3, replaced by the Filter queries (which get their data more directly from the databases). We will remove this section in an upcoming release.
 
-# HTTP Filter API
+## HTTP Filter API
 
 The filter API will allow you to fetch information and status from filters about hosts, services, traps, logs and much more. For more information about filters, please read the [Filters](Filters) chapter. If you are already familair with OP5 Listview syntax, then you can create filter queries with minimal character replacements: '%20' for space, for example.
 
 There are two sections within the filter API: filter and count --
 
-## Filter
+### Filter
 
 By using filter you will get the whole list of object within the filter.
 
 Example: To view hosts that are not OK --
 `https://{your.op5.monitor}/api/filter/query?query=[hosts]%20state!=0&columns=name,state,acknowledged,has_been_checked`
 
-## Count
+### Count
 
 Count will return the count of objects in the filter search.
 
@@ -41,25 +41,25 @@ This is an example of how a query might look like, in this example we will fetch
 
 The documentation for filters can be found [here](https://demo%40op5.com:MonitorDemo123@demo.op5.com/api/help/filter) or in your OP5 Monitor server at https://{your.op5.monitor}/api/help/filter
 
-# HTTP Configuration API
+## HTTP Configuration API
 
 The configure API is used to manipulate the object configuration used by OP5 Monitor. It uses the same configuration database as the OP5 Monitor Configuration tool does. Objects changed by the API will also be visible within the configuration GUI. You may use it to integrate OP5 Monitor with other third-party software.
 
 The API help page for configuration can be found [here](https://demo%40op5.com:MonitorDemo123@demo.op5.com/api/help/config) or in your OP5 Monitor server at https://{your.op5.monitor}/api/help/filter .
 
-# HTTP Command API
+## HTTP Command API
 
 The command section lets you submit the following commands to OP5 Monitor using the REST API. The API help page for commands can be found [here](https://demo%40op5.com:MonitorDemo123@demo.op5.com/api/help/command) or in your OP5 Monitor server at https://{your.op5.monitor}/api/help/command .
 
-# HTTP Report API
+## HTTP Report API
 
 The report API can be used to retrieve report data in either XML or JSON format.
 
-# HTTP Filter API
+## HTTP Filter API
 
 The filter API can be used to ether retrieve a list of objects from a filter or do a count of objects in a filter.
 
-# Script Example
+## Script Example
 
 In this example we will create a new host called **my\_server** -- IP address **192.168.0.20** -- with one ping service. The OP5 server is called **op5-server**, the username is **joe**, and joe's password is **joespassword**. The page <https://op5monitor.example.com/api/help/config/host>, provides more detailed information on how to create a host.
 
@@ -112,7 +112,7 @@ $save = curl_exec($a_handle);
 
 Now, visiting [https://{your.op5.monitor}/api/config/host/my\_server](https://op5-server/api/config/host/my_server) in a web browser should show you the live configuration.
 
-## REST and LDAP
+### REST and LDAP
 
 When you have more than one authentication module, such as "Local" and "LDAP", you need to specify which you are calling. This is done with the dollar character ('\$'). Thus, this regular call:
 
