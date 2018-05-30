@@ -1,11 +1,11 @@
 # Rotation pools
 
-# About
+## About
 
 The Rotation pools are just sets of NagVis maps that are used to rotate between. So you can open up a rotation pool to have your maps shown for a certain time and then the rotate function will switch to the next map in the pool.
 There is no GUI to use for administration of the rotation pools so this will require editing the configuration file from the command line.
 
-# Adding a rotation pool
+## Adding a rotation pool
 
 To add a new rotation pool you need to edit Nagvis main configuration file. Follow the steps below to configure a basic rotation pool with two maps:
 

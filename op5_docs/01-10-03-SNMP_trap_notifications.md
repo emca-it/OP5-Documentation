@@ -1,17 +1,17 @@
 # SNMP trap notifications
 
-# About
+## About
 
 op5 Monitor is shipped with the possibility to send notifications as SNMP traps. To start use the SNMP notifications you need to
 
 - add a few new commands
 - configure the contacts
 
-# Adding SNMP notification commands
+## Adding SNMP notification commands
 
 Here we need to add two commands one for host notifications and one for service notifications.
 
-## To add a SNMP notification command
+### To add a SNMP notification command
 
 1. Login to the OP5 Monitor user interface and go to **Configure**.
 2. Click **Commands**.
@@ -25,9 +25,9 @@ Here we need to add two commands one for host notifications and one for service 
 4. Click **Apply**.
 5. Click **Save**.
 
-# Configuring the contacts
+## Configuring the contacts
 
-## To configure the contacts
+### To configure the contacts
 
 1. Login to the OP5 Monitor user interface and go to **Configure**.
 2. Either open up an existing contact or create a new one.

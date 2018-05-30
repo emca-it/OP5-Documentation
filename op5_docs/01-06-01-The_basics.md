@@ -1,31 +1,31 @@
 # The basics
 
-# About
+## About
 
 In The basics section we will take a look at the basic step you need to know when working with **Configure**
 
-# Start working
+## Start working
 
 There are many ways to jump in to Configure and start working with the configuration of OP5 Monitor.
 
-## To start working in Configure
+### To start working in Configure
 
 Click **Configure** in the **Manage** menu
 
 This will take you to the main menu of Configure.
 ![](attachments/16482408/23793048.png)
 
-### Alternative
+#### Alternative
 
 Click the **Configure** icon found on many objects in the monitoring part of OP5 Monitor ![](attachments/16482408/17269446.png)
 
 This will take you directly to the configuration part for the object you clicked on.
 
-# Submitting changes
+## Submitting changes
 
 When you have made any changes to an object you have to submit it to the Configure database.
 
-## To submit the new configuration to the database
+### To submit the new configuration to the database
 
 Click **Submit** at the bottom of the page
  ![](attachments/16482408/17269457.png)
@@ -34,12 +34,12 @@ Click **Submit** at the bottom of the page
 ![](attachments/16482408/23793047.png)
  Continue work until your work is done for this time.
 
-# Save the changes
+## Save the changes
 
 When you have finished working and consider your new configuration is ready to be used by OP5 Monitor you need to save the changes in the Configure database to the configuration files.
  This will also make OP5 Monitor start using the new configuration.
 
-## To save the changes and reload OP5 Monitor
+### To save the changes and reload OP5 Monitor
 
 Click **Save** icon at the top of the page.
 ![](attachments/16482408/17269442.png)
@@ -55,17 +55,17 @@ Click **Save** icon at the top of the page.
 
 If two users with the same permissions are editing the same host all configuration regarding the host or service will be saved.
 
-## Permissions
+### Permissions
 
 The save the configuration the user must have export permissions. See [Authorization](Authorization) for more information.
 
-# Undo changes
+## Undo changes
 
 Sometimes it might be handy to reset the configuration to the state it was in where you started to work in Configure. The only thing you have to do then is to undo your changes.
 
 The undo function will only work as long as you do not have saved the data to the configuration files.
 
-## To undo the configuration changes.
+### To undo the configuration changes.
 
 Click **undo** icon at the top of the Configure page.
 
@@ -75,7 +75,7 @@ Click **undo** icon at the top of the Configure page.
  To undo all users changes click on **complete reimport**. This will re-read the configuration files and all changes will be reverted. If any changes were made directly into the configurations files these changes will now be loaded in to the web configuration
  ![](attachments/16482408/17269449.png)
 
-# Historical Configuration Changes
+## Historical Configuration Changes
 
 Historical configuration changes can be used to track changes in the configuration. In the log you will find all changes in the configuration on objects that you have access to.
  To access the historical configuration changes log, go to **Configure** and click on the **Changelog** icon in the upper right corner.
@@ -84,7 +84,7 @@ Historical configuration changes can be used to track changes in the configurati
  Full access users will see all changes.
  ![](attachments/16482408/17269454.png)
 
-## Filter config changes
+### Filter config changes
 
 To filter the configuration changes select **Toggle filter bar
 ** ![](attachments/16482408/17269452.png)

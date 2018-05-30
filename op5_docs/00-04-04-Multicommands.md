@@ -1,12 +1,12 @@
 # Multiple host and service commands
 
-# About
+## About
 
 Multiple commands are used to apply a single command to one or more objects at the same time.
 
 In lists of objects (such as host and service list views) that have commands you may perform commands on multiple objects within the list at the same time. This is very useful if you, for instance, have a bigger problem with one or many services and you want to acknowledge all of them at once.
 
-# Multiple host commands list
+## Multiple host commands list
 
 - Schedule downtime
 - Cancel Scheduled downtime
@@ -21,7 +21,7 @@ In lists of objects (such as host and service list views) that have commands you
 - Add host comment
 - Delete host
 
-# Multiple service commands list
+## Multiple service commands list
 
 - Schedule downtime
 - Cancel Scheduled downtime
@@ -35,11 +35,11 @@ In lists of objects (such as host and service list views) that have commands you
 - Add service comment
 - Delete Service(s)
 
-# Example
+## Example
 
 In this example we will send acknowledgements to multiple services.
 
-## Execute multiple commands
+### Execute multiple commands
 
 Open up **Unhandled problems** filter under the filter menu.
  ![](attachments/16482308/18481407.png)

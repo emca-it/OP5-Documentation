@@ -1,6 +1,6 @@
 # Default
 
-# About
+## About
 
 For local users, the default driver can be used. This enables a local store of users at the OP5 Monitor server. It is recommended that you always keep this driver configured with an admin account as a fallback if the system is primarily using LDAP.
 

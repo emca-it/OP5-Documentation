@@ -1,10 +1,10 @@
 # Notification skins
 
-# About
+## About
 
 The three basic notifications (email, sms and htmlpost notifications) are all using something called notification skins. The notification skins are templates describing how the notification is supposed to look like when it is sent to its receiver.
 
-# Files
+## Files
 
 If we will take a look at the notify folder we will find the following skins folders:
 
@@ -27,17 +27,17 @@ Each folder contains a number of notification skins divided into host and servic
 
 As you can see there is one skin for the most common notification types.
 
-# The content of a notification skin
+## The content of a notification skin
 
 Let us take a look at what a skin looks like.
 
-### The sms service.PROBLEM skin
+#### The sms service.PROBLEM skin
 
 `#SERVICEDESC# on #HOSTNAME# is #SERVICESTATE#. #SERVICEOUTPUT# `
 
 This is a very simple skin. The reason for that is that you can not send too much data with a normal sms.
 
-### The mail service.PROBLEM skin
+#### The mail service.PROBLEM skin
 
  `From: op5Monitor To: #CONTACTEMAIL# Subject: [op5] #NOTIFICATIONTYPE#: '#SERVICEDESC#' on '#HOSTNAME#' is #SERVICESTATE#`
 ` #extra_host_vars#`
@@ -65,11 +65,11 @@ That text is called **keywords**.
 
 If a notification macro, or other value sent to a corresponding keyword, is missing in the notification command it will not stop the notification from being sent. It is only the replacement that will be missing.
 
-# Creating custom notification skins
+## Creating custom notification skins
 
 Sometimes the default notification skins needs to be changed. This shall not be done in the default folders.
 
-## To create custom notification skins
+### To create custom notification skins
 
 Go to the notify folder: `cd /opt/monitor/op5/notify`
  Create the custom-skins folder: `mkdir custom-skins`

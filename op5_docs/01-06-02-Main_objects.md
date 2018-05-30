@@ -1,6 +1,6 @@
 # Main objects
 
-# About
+## About
 
 The configuration is based on objects. There are several types of objects, each one defining different things in the monitoring process.
 
@@ -22,12 +22,12 @@ In Configure you can
 A lot of objects can be cross referenced in the configuration and Configure helps you with this too.
 In most of the listings you will find a small text field called **Filter by regular expression**. Use this to filter out the content you are interested in when viewing the different lists.
 
-# Required directives
+## Required directives
 
 All objects have a list of directives that are required when adding a new object. The other directives can be left out. They will then get the OP5 Monitor defaults value.
  This does not mean you have to set every directive for every object. One solution is called templates. They make it a lot easier to manage a large set of objects. Read more about templates in [Using templates](Using_templates).
 
-# Hosts
+## Hosts
 
 Hosts are one of the central objects in the monitoring logic. Important attributes of hosts are as follows:
 
@@ -36,7 +36,7 @@ Hosts are one of the central objects in the monitoring logic. Important attribut
   - Hosts does not need a service directly associated to them, the services can be inherited from a hostgroup. A host can also exist without services.
   - Hosts can have parent/child relationships with other hosts, often representing real-world network connections, which is used in the network reachability logic.
 
-## Required directives
+### Required directives
 
 The following directives are required for a host object.
 
@@ -72,7 +72,7 @@ The table below describes the required directives for the host object
 </tbody>
 </table>
 
-# Services
+## Services
 
 A service can be practically any thing that you can measure and monitor on a host. It is almost only your imagination and programming skills that sets the limit for what you can monitor with a service.
  A service
@@ -81,7 +81,7 @@ A service can be practically any thing that you can measure and monitor on a hos
   - can check things by tcp, agents, snmp etc.
   - use a check command ([Commands](#Mainobjects-Commands)) to communicate with the plugin ([Plugins](Plugins)) that gets all the data.
 
-## Required directives
+### Required directives
 
 The following directives are required for a service object.
 
@@ -120,7 +120,7 @@ The table below describes the required directives for the host object
 </tbody>
 </table>
 
-# Contacts
+## Contacts
 
 A contact is used for two purposes:
 
@@ -129,7 +129,7 @@ A contact is used for two purposes:
 
 A contact is not the same as the login account given access rights to the system.
 
-## Required directives
+### Required directives
 
 The following directives are required for a service object.
 
@@ -166,14 +166,14 @@ The table below describes the required directives for the host object
 </tbody>
 </table>
 
-# Local users
+## Local users
 
 Local users are user accounts that makes it possible to login to the OP5 Monitor GUI using the default driver. For more information about drivers see [Authentication Integration](Authentication_Integration) chapter
  Local users does not have any thing to do with notifications or the permissions of viewing objects in OP5 Monitor.
  Local users can be connected to a contact by giving the username the same name as the id (contact\_name) of a contact.
  A local user can also be created by checking the box "Configure access rights for this contact" when creating a contact.
 
-## Required directives
+### Required directives
 
 The following directives are required for a access rights object.
 
@@ -203,11 +203,11 @@ The table below describes the required directives for the host object.
 </tbody>
 </table>
 
-## Group Rights
+### Group Rights
 
 Group rights determents the permission the user will have. For more information about group right, see [Authorization](Authorization).
 
-# Time periods
+## Time periods
 
 Time periods is time defining objects that span over a week. You can define included time for each day of the week in the time period definition.
  You can also:
@@ -218,7 +218,7 @@ Time periods is time defining objects that span over a week. You can define incl
 The time period objects are used at many places in the configuration. Most noticeably are in the contact objects where the time periods defines when notifications should be sent out.
  You can also use time periods to define when a service or a host should be monitored or when you are creating reports.
 
-## A time period in detail
+### A time period in detail
 
 The following tables describes the directives of a time period and how to use them.
  The table below describes the first part of directives of a time period.
@@ -326,7 +326,7 @@ Hours
 Which time to include for this exception. You can define multiple times by separating them with comma.
  Example: 00:00-01:00,03:00-06:00
 
-# Commands
+## Commands
 
 A command is exactly what it sounds like. It can use macros and arguments. Mostly they are used with services but they can actually be used as
 
@@ -337,7 +337,7 @@ A command is exactly what it sounds like. It can use macros and arguments. Mostl
 
 The most common exposure to commands would be check commands for services or hosts, in particular when new commands are added during upgrades or when commands are updated when upgraded.
 
-## Directives
+### Directives
 
 A command has got only two directives
 
@@ -359,7 +359,7 @@ A command has got only two directives
 </tbody>
 </table>
 
-## Accessing commands
+### Accessing commands
 
 To access and configure commands go to **Commands** on the main configuration page
 
@@ -369,7 +369,7 @@ To access and configure commands go to **Commands** on the main configuration pa
 
 Here it's possible to utilize the search box to have a look at configured commands, add new commands and copy commands to use as a template for your custom command.
 
-## Check Command Import
+### Check Command Import
 
 Updating OP5 Monitor often brings new functionality, and one of them are new commands that adds functionality in the product. A typical scenario is that a new plugin is added and a number of commands is added to utilize the new plugin.
 
@@ -385,7 +385,7 @@ In this particular case, all new commands are imported, and there are two modifi
 
 Importing commands is a manual operation since updating existing commands might be destructive.
 
-# Plugins
+## Plugins
 
 Plugins are compiled executable or scripts that can be run from a command line to check the status of a host or service.
  There are many plugins included in the OP5 Monitor software. A list of the plugins can be found in the [list of included plugins](https://kb.op5.com/display/PLUGINS/Plugins+List).
@@ -397,7 +397,7 @@ Plugins are compiled executable or scripts that can be run from a command line t
 
 You can use any plugin written for Nagios but you might need to modify them a bit before they work in the OP5 Monitor environment.
 
-## Plugin search
+### Plugin search
 
 To search the plugins that are shipped with OP5 Monitor or added afterwards to to **Plugin Search** on the main configuration page
  ![](attachments/16482406/16679136.png)

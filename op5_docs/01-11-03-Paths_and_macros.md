@@ -1,6 +1,6 @@
 # Paths and macros
 
-# About
+## About
 
 We hope the previous section made you eager to tweak an existing plugin or port some of your existing scripts to be OP5 plugins. We want our tool to amplify your existing monitoring specializations as you grow.
 
@@ -10,9 +10,9 @@ Earlier we [mentioned that Naemon maintains plugin compatibility with Nagios](ht
 
 To get you moving, we have provided just a few of the most important macros below. These are most important things to understand before you go to another page.
 
-# Most important macros
+## Most important macros
 
-## USER series
+### USER series
 
 The '`$USER#$`' series of macros deal with paths to plugins. We configure these in the resource configuration file, '`/opt/monitor/etc/resource.cfg`':
 
@@ -23,6 +23,6 @@ The '`$USER#$`' series of macros deal with paths to plugins. We configure these 
 - If you want to create any new site-wide plugin macros (in contrast to host, service, or contact directives for templates), we have left '`$USER11$`' through '`$USER255$`' for your use.
 - Nagios Core only allowed up to 32 USER macros; Naemon allows up to 255. The resource configuration file does not mention this increase.
 
-## ARGument series
+### ARGument series
 
 The '`$ARG#$`' series of macros deal with command-line arguments for commands made from plugins. This will be very useful for macro substitution, such as passing a service template's baseline critical percentage as the third argument value (i.e.: '`$ARG3$`') in an SNMP-centric plugin.

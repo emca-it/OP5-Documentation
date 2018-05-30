@@ -1,6 +1,6 @@
 # The mon command
 
-# About
+## About
 
 The mon command is a very powerful command. Primarily, this is the command that is used to manually stop and start the monitor system processes, and to set up a distributed or a load balanced environment.
 
@@ -8,41 +8,41 @@ Handle this command with care! It has the power to both create and destroy your 
 
 **Do not use this command unless specifically instructed by OP5 Support or the Documentation itself.**
 
-# The commands
+## The commands
 
 ``` {style="margin-left: 30.0px;"}
-# mon
+mon
 ```
 
 Simply running the command without any arguments will present a small syntax help text, and a list of available sub commands. Most sub commands are categorized, meaning that mon has to be run with at least two arguments to trigger the sub command. A few sub commands are non-categorized, requiring only a single argument being passed to mon to trigger the sub command.
 
-## start
+### start
 
 ``` {style="margin-left: 60.0px;"}
-# mon start
+mon start
 ```
 
 This command will start the monitor and merlind system processes.
 
-## stop
+### stop
 
 ``` {style="margin-left: 60.0px;"}
-# mon stop
+mon stop
 ```
 
 This command will stop the monitor and merlind system processes.
 
-## restart
+### restart
 
 ``` {style="margin-left: 60.0px;"}
-# mon restart
+mon restart
 ```
 
 This command will restart the monitor and merlind system processes.
 
-## ecmd
+### ecmd
 
-### search
+#### search
 
 ``` {style="margin-left: 90.0px;"}
 mon ecmd search <regex>
@@ -51,7 +51,7 @@ mon ecmd search <regex>
 Prints 'templates' for all available commands matching \<regex\>.
  The search is case insensitive.
 
-### submit
+#### submit
 
 ``` {style="margin-left: 90.0px;"}
 mon ecmd submit [options] command <parameters>
@@ -77,35 +77,35 @@ Note how services are written. You can also use positional arguments, in which c
 mon ecmd submit add_svc_comment 'foo;PING' 1 'John Doe' 'the comment'
 ```
 
-## log
+### log
 
-### show
+#### show
 
 ``` {style="margin-left: 90.0px;"}
-# mon log show
+mon log show
 ```
 
 Runs the showlog helper program. Arguments passed to this command will be sent to the showlog helper.
  For more information, a help text can be found by running the command like this:
 
 ``` {style="margin-left: 90.0px;"}
-# mon log show --help
+mon log show --help
 ```
 
-## node
+### node
 
-### add
+#### add
 
 ``` {style="margin-left: 90.0px;"}
-# mon node add <name> --type=[peer|poller|master] [var1=value] [varN=value]
+mon node add <name> --type=[peer|poller|master] [var1=value] [varN=value]
 ```
 
 Adds a node with the designated type and variables.
 
-### ctrl
+#### ctrl
 
 ``` {style="margin-left: 90.0px;"}
-# mon node ctrl <name1> <name2> [--self] [all|--type=<peer|poller|master>] -- <command>
+mon node ctrl <name1> <name2> [--self] [all|--type=<peer|poller|master>] -- <command>
 ```
 
 Execute \<command\> on the remote node(s) named.
@@ -130,137 +130,137 @@ Run the command on all configured nodes.</td>
 The first unrecognized argument marks the start of the command to be executed, but using double dashes is recommended. Use single-quotes to execute commands with shell variables, output redirection or scriptlets, like so:
 
 ``` {style="margin-left: 90.0px;"}
-# mon node ctrl -- '(for x in 1 2 3; do echo $x; done) > /tmp/foo'
+mon node ctrl -- '(for x in 1 2 3; do echo $x; done) > /tmp/foo'
 ```
 
 ``` {style="margin-left: 90.0px;"}
-# mon node ctrl -- cat /tmp/foo
+mon node ctrl -- cat /tmp/foo
 ```
 
-### list
+#### list
 
 ``` {style="margin-left: 90.0px;"}
-# mon node list [--type=poller,peer,master]
+mon node list [--type=poller,peer,master]
 ```
 
 Lists all nodes of the (optionally) specified type
 
-### remove
+#### remove
 
 ``` {style="margin-left: 90.0px;"}
-# mon node remove <name1> [name2] [nameN]
+mon node remove <name1> [name2] [nameN]
 ```
 
 Removes one or more nodes from the merlin configuration.
 
-### show
+#### show
 
 ``` {style="margin-left: 90.0px;"}
-# mon node show [--type=poller,peer,master]
+mon node show [--type=poller,peer,master]
 ```
 
 Display all variables for all nodes, or for one node in a fashion suitable for being used as eval \$(mon node show nodename) from shell scripts and scriptlets.
 
-### status
+#### status
 
 ``` {style="margin-left: 90.0px;"}
-# mon node status
+mon node status
 ```
 
 Show status of all nodes configured in the running Merlin daemon.
  Red text points to problem areas, such as high latency or the node being inactive, not handling any checks, or not sending regular enough program\_status updates.
 
-## oconf
+### oconf
 
-### changed
+#### changed
 
 ``` {style="margin-left: 90.0px;"}
-# mon oconf changed
+mon oconf changed
 ```
 
 Print the last modification time among all object configuration files.
 
-### files
+#### files
 
 ``` {style="margin-left: 90.0px;"}
-# mon oconf files
+mon oconf files
 ```
 
 Print a list of the naemon object configuration files in alphabetical order.
 
-### hash
+#### hash
 
 ``` {style="margin-left: 90.0px;"}
-# mon oconf hash
+mon oconf hash
 ```
 
 Print an sha1 hash of the running configuration.
 
-### hglist
+#### hglist
 
 ``` {style="margin-left: 90.0px;"}
-# mon oconf hglist
+mon oconf hglist
 ```
 
 Print a sorted list of all configured hostgroups.
 
-### nodesplit
+#### nodesplit
 
 ``` {style="margin-left: 90.0px;"}
-# mon oconf nodesplit
+mon oconf nodesplit
 ```
 
 Same as 'split', but use merlin's config to split config into configuration files suitable for poller consumption
 
-### push
+#### push
 
 ``` {style="margin-left: 90.0px;"}
-# mon oconf push
+mon oconf push
 ```
 
 Splits configuration based on merlin's peer and poller configuration and send object configuration to all peers and pollers, restarting those that receive a configuration update. ssh keys need to be set up for this to be usable without admin supervision.
  This command uses 'nodesplit' as its backend.
 
-### split
+#### split
 
 ``` {style="margin-left: 90.0px;"}
-# mon oconf split <outfile:hostgroup1,hostgroup2,hostgroupN>
+mon oconf split <outfile:hostgroup1,hostgroup2,hostgroupN>
 ```
 
 Write config for hostgroup1,hostgroup2 and hostgroupN into outfile.
 
-## sshkey
+### sshkey
 
-### fetch
+#### fetch
 
 ``` {style="margin-left: 90.0px;"}
-# mon sshkey fetch
+mon sshkey fetch
 ```
 
 Fetches all the SSH keys from peers and pollers.
 
 The fetch command is not recommended – run the push command instead.
 
-### push
+#### push
 
 ``` {style="margin-left: 90.0px;"}
-# mon sshkey push
+mon sshkey push
 ```
 
 Pushes the local SSH keys to all peers and pollers.
 
-## sysconf
+### sysconf
 
-### ramdisk
+#### ramdisk
 
 ``` {style="margin-left: 90.0px;"}
-# mon sysconf ramdisk
+mon sysconf ramdisk
 ```
 
 To enable the ramdisk setup:
 
 ``` {style="margin-left: 90.0px;"}
-# mon sysconf ramdisk enable
+mon sysconf ramdisk enable
 ```
 
 A ramdisk can be enabled for storing spools for performance data and checkresults.
@@ -269,12 +269,12 @@ A ramdisk can be enabled for storing spools for performance data and checkresult
 
 As of Monitor 6, enabling the ramdisk is no longer recommended. To disable the ramdisk if already enabled, see the separate article [Reverting a ramdisk enabled setup back to the default non-ramdisk layout](https://kb.op5.com/display/HOWTOs/Reverting+a+ramdisk+enabled+setup+back+to+the+default+non-ramdisk+layout).
 
-## check
+### check
 
-### spool
+#### spool
 
 ``` {style="margin-left: 90.0px;"}
-$ mon check spool [--maxage=<seconds>] [--warning=X] [--critical=X] <path> [--delete]
+mon check spool [--maxage=<seconds>] [--warning=X] [--critical=X] <path> [--delete]
 ```
 
 Checks a certain spool directory for files (and files only) that are older than 'maxage'. It's intended to prevent buildup of checkresult files and unprocessed performance-data files in the various spool directories used by OP5 Monitor.
@@ -296,10 +296,10 @@ Checks a certain spool directory for files (and files only) that are older than 
 
 Only one directory at a time may be checked.
 
-### cores
+#### cores
 
 ``` {style="margin-left: 90.0px;"}
-$ mon check cores --warning=X --critical=X [--dir=]
+mon check cores --warning=X --critical=X [--dir=]
 ```
 
 Checks for memory dumps resulting from segmentation violation from core parts of OP5 Monitor. Detected core-files are moved to /tmp/mon-cores in order to keep working directories clean.
@@ -319,18 +319,20 @@ Checks for memory dumps resulting from segmentation violation from core parts of
 </tbody>
 </table>
 
-### distribution
+#### distribution
 
-`$ mon check distribution [--no-perfdata]`
+```
+mon check distribution [--no-perfdata]
+```
 
 Checks to make sure distribution works ok.
 
 Note that it's not expected to work properly the first couple of minutes after a new machine has been brought online or taken offline
 
-### exectime
+#### exectime
 
 ``` {style="margin-left: 90.0px;"}
-$ mon check exectime [host|service] --warning=<min,max,avg> --critical=<min,max,avg>
+mon check exectime [host|service] --warning=<min,max,avg> --critical=<min,max,avg>
 ```
 
 Checks execution time of active checks.
@@ -350,10 +352,10 @@ Checks execution time of active checks.
 </tbody>
 </table>
 
-### latency
+#### latency
 
 ``` {style="margin-left: 90.0px;"}
-$ mon check latency [host|service] --warning=<min,max,avg> --critical=<min,max,avg>
+mon check latency [host|service] --warning=<min,max,avg> --critical=<min,max,avg>
 ```
 
 Checks latency time of active checks.
@@ -373,10 +375,10 @@ Set the warning threshold for min,max and average execution time, in seconds</td
 </tbody>
 </table>
 
-### orphans
+#### orphans
 
 ``` {style="margin-left: 90.0px;"}
-#mon check orphans
+mon check orphans
 ```
 
 Checks for checks that haven't been run in too long a time.

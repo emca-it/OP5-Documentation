@@ -1,11 +1,11 @@
 # Combined Graphs
 
-# About
+## About
 
 A combined graph overlays several graphs in the same graph which will give a better overview of how two different checks are performing.
 It takes one or more service from one or more host and lays them on top of each other in the same graph. The service checks must have the same name on all the hosts for combined graphs to work.
 
-# Creating combined graphs
+## Creating combined graphs
 
 The combined graphs is created though the configuration.
  Go to **Configure** in the menu
@@ -18,7 +18,7 @@ The combined graphs is created though the configuration.
  ![](attachments/16482375/16679086.png)
  Click on **Submit**
 
-# Viewing combined graphs
+## Viewing combined graphs
 
 The combined graphs can be found under **Graphs** in the main menu
 ![](attachments/16482375/16679085.png)

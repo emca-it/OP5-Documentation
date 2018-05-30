@@ -1,6 +1,6 @@
 # Distributed Monitoring
 
-# Introduction
+## Introduction
 
 The OP5 Monitor backend can easily be configured to be used as a distributed monitoring solution. The distributed model looks like this.
 ![](attachments/16482412/17269702.png)
@@ -11,10 +11,10 @@ In the distributed monitoring solution:
   - All new configuration is distributed to the pollers.
   - Each poller node is responsible for its own host group (site).
   - The master node has all the status information.
-#
+##
 Before we start
 
-## Prerequisites
+### Prerequisites
 
 There are a few things you need to take care of before you can start setting up a distributed monitoring solution. You need to make sure you have at least two servers of **the same architecture **(32/64 bit), both running the **same** version of OP5 Monitor.
 
@@ -28,7 +28,7 @@ More specifically, make sure that:
   - All servers' system clocks must be synchronized, preferably by NTP.
   - The host group which the poller will be responsible for must be set up on the master, in advance. At the bare minimum, the host group must contain at least one host, with at least one contact and one service.
 
-## Cluster state information
+### Cluster state information
 
 In the OP5 Monitor system, a tool called *mon* can be found via the command line (accessed via SSH). To view the current cluster state, run the command like this:
 
@@ -38,9 +38,9 @@ All known nodes, the local one, peers and pollers, should be displayed, includin
 
 More information regarding the mon command can be found [here](The_mon_command).
 
-# The configuration
+## The configuration
 
-## Setting up the new distributed monitoring solution
+### Setting up the new distributed monitoring solution
 
 This distributed configuration will have one master and one poller node:
 
@@ -49,7 +49,7 @@ This distributed configuration will have one master and one poller node:
 
 The poller will be monitoring a host group named *se-gbg*.
 
-### Master-side configuration
+#### Master-side configuration
 
 1. Make sure that the host group which the poller will be responsible for is already configured, saved and can be found in the status pages of the OP5 Monitor web interface. Remember, at the bare minimum, the host group must contain at least one host, with at least one contact and one service.
 2. In case of running a [load balanced setup with peered masters](Load_balanced_monitoring), make sure that all peers are fully connected and synchronized according to [mon node status](#DistributedMonitoring-monnodestatus). The following steps (starting from step 3), should be performed on all masters.
@@ -98,7 +98,7 @@ The poller will be monitoring a host group named *se-gbg*.
     `mon node ctrl poller01 mon node add master01 type=master connect=no`**
     **
 
-### Pushing the configuration
+#### Pushing the configuration
 
 In case of peered masters, **perform these steps only on *one* of the masters**.
 
@@ -111,11 +111,11 @@ In case of peered masters, **perform these steps only on *one* of the masters**.
 4. Restart OP5 Monitor on all masters:
     `mon node ctrl --self --type=peer mon restart`
 
-## Adding a new host group to a poller
+### Adding a new host group to a poller
 
 A poller can handle several host groups, which is a simple way of increasing a poller's scope.
 
-### Master-side configuration
+#### Master-side configuration
 
 In case of running a [load balanced setup with peered masters](Load_balanced_monitoring), make sure that all peers are fully connected and synchronized according to [mon node status](#DistributedMonitoring-monnodestatus) first. The steps below should be performed on all masters.
 
@@ -131,7 +131,7 @@ In case of running a [load balanced setup with peered masters](Load_balanced_mo
 
 Finish up by [pushing the configuration](#DistributedMonitoring-Pushingtheconfiguration).
 
-## Removing a poller
+### Removing a poller
 
 In this instruction we will remove a poller called:
 
@@ -139,7 +139,7 @@ In this instruction we will remove a poller called:
 
 The poller will be removed from the master's configuration, and then all distributed configuration on the poller will be removed.
 
-### To remove a poller
+#### To remove a poller
 
 In case of peered masters, **perform these steps only on *one* of the masters**.
 
@@ -152,15 +152,15 @@ In case of peered masters, **perform these steps only on *one* of the masters
 4. Restart OP5 Monitor on the poller:
     `mon node ctrl poller01 mon restart`
 
-## File synchronization
+### File synchronization
 
 Information regarding how to synchronize files and/or directories from a master to a poller can be found in the [File synchronization](File_synchronization) chapter.
 
-## Notify through master
+### Notify through master
 
 Depending on the setup of a poller, it might be difficult to send notifications directly from the poller. This could be due to a non-existing or non-accessible SMS/SMTP gateway. In such scenarios it is possible to send notifications through the master instead.
 
-### Master-side configuration
+#### Master-side configuration
 
 The steps below should be performed on all masters. This will matter most when running a [load balanced setup with peered masters](Load_balanced_monitoring):
 
@@ -184,7 +184,7 @@ The steps below should be performed on all masters. This will matter most when r
 4. Restart OP5 Monitor:
     `mon restart`
 
-### Poller-side configuration
+#### Poller-side configuration
 
 1. Log onto the poller via SSH, as root.
 2. Edit the file */opt/monitor/op5/merlin/merlin.conf *using a text editor:
@@ -202,6 +202,6 @@ The steps below should be performed on all masters. This will matter most when r
 
 4. `Restart OP5 Monitor:mon restart`
 
-# More information
+## More information
 
 For more information and advanced examples, please have a look at the [How-To document](https://kb.op5.com/display/MERLIN/Merlin+How-To) found in the merlin project.

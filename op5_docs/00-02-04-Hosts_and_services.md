@@ -1,10 +1,10 @@
 # Hosts and services
 
-# About
+## About
 
 Hosts and services are the objects that are monitored by OP5 Monitor.
 
-# A host in detail
+## A host in detail
 
 A host can be any kind of network device, virtual device and other objects that you might reach from the OP5 Monitor server.
  Let us take a look at the Host information view and see what parts it is built upon. In the coming sections we will go through each part and learn how they can be used.
@@ -65,12 +65,12 @@ Comments
 
 Manually added comments and comments from the system are shown here.
 
-# Page links
+## Page links
 
 The page links gives you a couple of shortcuts to more information about this host and its services.
  ![](attachments/16482322/16679297.png)
 
-# Host information header
+## Host information header
 
 Here you will get a short summary of the host.
 ![](attachments/16482322/16679307.png)
@@ -83,12 +83,12 @@ Here you will get a short summary of the host.
   - links to extra service actions, service notes and the performance graphs.
   - a link to the object in the configuration GUI.
 
-# Host state information
+## Host state information
 
 In this view you get all kind of status information about the host. This is the most detailed view you can get over a host.
  ![](attachments/16482322/16679304.png)
 
-# Host commands
+## Host commands
 
 The host commands part gives you a various commands to handle the host. Here you can
 
@@ -103,7 +103,7 @@ The host commands part gives you a various commands to handle the host. Here you
 
 ![](attachments/16482322/16679310.png)
 
-# Comments
+## Comments
 
 There are two types of comments:
 
@@ -119,7 +119,7 @@ As a manually added comment you can type in almost anything you like.
  ![](attachments/16482322/16679309.png)
  Comments are designed to be short texts. If you would like to add documentation, longer descriptions and so on you should consider using the Dokuwiki that is included in OP5 Monitor.
 
-# A service in detail
+## A service in detail
 
 A service is practically anything that can be measured. A service must be connected to a host.
  Let us take a look at the Service information view and see what parts it is built upon. In the coming sections we will go through each part and learn how they can be used.
@@ -182,12 +182,12 @@ These are comments you put there either by adding a scheduled downtime or just a
 
 ![](attachments/16482322/16679303.png)
 
-# Page links
+## Page links
 
 The page links gives you a couple of short cuts to more information about this service and the host it is connected to.
  ![](attachments/16482322/16679254.png)
 
-# Service header information
+## Service header information
 
 Here you will get a short summary of the service.
 ![](attachments/16482322/16679253.png)
@@ -200,12 +200,12 @@ Here you will get a short summary of the service.
   - Links to extra service actions, service notes and performance graphs.
   - A link to the object in the configuration GUI.
 
-# Service state information
+## Service state information
 
 In this view you get all kind of status information about the host. This is the most detailed view you can get over a service.
  ![](attachments/16482322/16679305.png)
 
-# Service commands
+## Service commands
 
 The service commands part gives you a various commands to handle the service. Here you can
 
@@ -219,7 +219,7 @@ The service commands part gives you a various commands to handle the service. He
 
 ![](attachments/16482322/16679251.png)
 
-# Comments
+## Comments
 
 There are two types of comments:
 

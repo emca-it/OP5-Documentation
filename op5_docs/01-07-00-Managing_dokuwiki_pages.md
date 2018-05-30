@@ -1,6 +1,6 @@
 # Managing wiki pages
 
-# Introduction
+## Introduction
 
 OP5 Monitor includes a wiki, which can be used for documenting any host or service, including hostgroups and service groups. It will generate individual pages for each. It also has built-in versioning, so you can view and track changes in wiki pages and restore an older version. You can use the wiki to document:
 
@@ -10,7 +10,7 @@ OP5 Monitor includes a wiki, which can be used for documenting any host or servi
 
 The official Dokuwiki manual can be found here: <http://www.dokuwiki.org/manual>
 
-# Creating a wiki page
+## Creating a wiki page
 
 To create a wiki page for a host or service:
 
@@ -35,6 +35,6 @@ To create a wiki page for a host or service:
 7. Click on **Create page**;
 8. Edit the information and click on **Save.**
 
-# Deleting a wiki page
+## Deleting a wiki page
 
 If you edit a page and remove all its content, then DokuWiki will delete the page as well as its associated page name.

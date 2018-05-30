@@ -1,12 +1,12 @@
 # User Menus
 
-# About
+## About
 
 It is possible for an administrator to customize users menu.
 
 This can be uses to limit the menu options for users that are not allowed to use certain parts of OP5 Monitor.
 
-# Customizing
+## Customizing
 
 Full access users have complete control over what other user\_group have available in the OP5 menu.
 
@@ -29,7 +29,7 @@ You can follow the following procedure to edit the user menu for a user\_group.
     ![](attachments/16482374/20054076.png)
     Be sure to click "Save new settings!" when you finish editing your user menus.
 
-# Menu Options Selection Details
+## Menu Options Selection Details
 
 This is a table of what each individual option hides from the user.
 

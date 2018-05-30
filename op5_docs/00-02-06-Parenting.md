@@ -1,10 +1,10 @@
 # Parenting
 
-# About
+## About
 
 Parenting in OP5 Monitor is used to determine whether a host is down or unreachable.
 
-# Description
+## Description
 
 A host is...
  down if the host is the first one it can not reach in the "tree"

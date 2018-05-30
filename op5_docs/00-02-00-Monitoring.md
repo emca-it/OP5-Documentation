@@ -1,7 +1,5 @@
 # Monitoring
 
-# **Monitoring**
-
 The monitoring section in the web menu is related to problem management and status of your network.
 It is here that you will spend most of your time when using OP5 Monitor. In the monitoring section you can
 

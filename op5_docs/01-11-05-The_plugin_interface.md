@@ -1,6 +1,6 @@
 # The plugin interface
 
-# About
+## About
 
 A plugin is a small executable that takes optional command line parameters as input and
 
@@ -8,18 +8,18 @@ A plugin is a small executable that takes optional command line parameters as in
 2. Reports a diagnostic message on stdout (will be shown in the web GUI)
 3. Returns an exit code.
 
-# Example
+## Example
 
 Execute `check_tcp` to test the port 80/tcp on 193.201.96.136
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
-# /opt/plugins/check_tcp -H 193.201.96.136 -p 80
+## /opt/plugins/check_tcp -H 193.201.96.136 -p 80
 TCP OK - 0.043 second response time on port 80|time=0.042824s;0.000000;0.000000;0.000000;10.000000
-# echo $?
+## echo $?
 0
-# /opt/plugins/check_tcp -H 193.201.96.136 -p 143
+## /opt/plugins/check_tcp -H 193.201.96.136 -p 143
 Connection refused
-# echo $?
+## echo $?
 2
 ```
 
@@ -32,14 +32,14 @@ Connection refused
 
 The performance data is not mandatory but you need it if you want your plugin to be able to produce graphs for you in OP5 Monitor.
 
-# Status information
+## Status information
 
 The Status information is the text describing the result in human readable form. The plugin must print the status output to stdout when your plugin is executed.
  You will see it in the Status state information on the Service or Host information page.
 ![](attachments/16482419/19235818.png)
  This text can be anything, you like to use to describe the status situation for your plugin, including HTML.
 
-# Performance data
+## Performance data
 
 The performance data is data displaying the result in numbers. The plugin must print the status output to stdout when your plugin is executed. It is also to produce performance graphs in OP5 Monitor.
  So if you want graphs from your plugin you need to have performance data in your output.
@@ -75,13 +75,13 @@ warn, crit, min, max
 - min and max is not needed if UOM is %.
 - value, warn, crit, min and max must be of the same UOM.
 
-# Example 2
+## Example 2
 
 Performance data output:
  `time=0.218901s;;;0.000000 size=42236B;;;0`
  The example 2 above shows a performance data output from a plugin with two values separated with one space in the output.
 
-# Return code
+## Return code
 
 The return code is the one that OP5 Monitor uses to determine what state the services is in. It may be one of the following:
  `0, 1, 2, 3`

@@ -1,6 +1,6 @@
 # Managing objects
 
-# About
+## About
 
 Now let us be a bit more hands on. In this section we will take a look at how to add/edit/delete objects using the Configure.
 There are sometimes many ways to do things in OP5 Monitor but we will only show a few examples.
@@ -8,32 +8,31 @@ In the subsections to Managing objects we will assume that you start from the ma
 
 ![](attachments/16482396/21300106.png)
 
-#
-Before you start
+## Before you start
 
-## Add new
+### Add new
 
 Every time you comes to a page where you can handle an object you will have the **Add new...** dialog ready for you to add a new object.
 
-## Configuration files
+### Configuration files
 
 Every object is placed in a configuration file. You may change what file the object is placed in at the bottom of every configuration page. This is normally not necessary and only used in special cases.
 
-## Help
+### Help
 
 In the guides we will only describe the directive that are differ from the default value. Click the **help icon**
 
-## Templates
+### Templates
 
 Because handling templates is the same for all kind of templates, only the directives differ, we will only add a template in Contacts.
 
-# Contacts
+## Contacts
 
-### Adding a contact template
+#### Adding a contact template
 
 Before we start to add any new contacts we will create a contact template to use with the contact in the next section. In this guide we only describes the directive we will not use the default value in.
 
-### To add a contact template
+#### To add a contact template
 
 - Click **Contact templates**.
   - Give the contact template a name
@@ -45,9 +44,9 @@ Before we start to add any new contacts we will create a contact template to use
 - Click **Submit**.
   - Click **Save**.
 
-## Adding a contact
+### Adding a contact
 
-### To add a contact
+#### To add a contact
 
 - Click **Contacts** on the main page.
   - Use the template on call template we created in Adding a contact template. ![](attachments/16482396/21300219.png) .
@@ -63,9 +62,9 @@ Before we start to add any new contacts we will create a contact template to use
   - When Configuring access right for this contact select the access rights the contact should have, after that save the changes.
             ![](attachments/16482396/21300108.png)
 
-## Modify a contact
+### Modify a contact
 
-### To modify a contact
+#### To modify a contact
 
 - Click **Contacts** on the main page.
   - Choose the contact you like to modify in the drop down list.
@@ -75,7 +74,7 @@ Before we start to add any new contacts we will create a contact template to use
   - Make your modifications and click **Submit**.
   - Click **Save**.
 
-## Delete a contact
+### Delete a contact
 
 - Click **Contacts** on the main page.
   - Choose the contact you like to modify in the drop down list.
@@ -85,7 +84,7 @@ Before we start to add any new contacts we will create a contact template to use
             ![](attachments/16482396/21300116.png)
   - Click **Save**.
 
-# Hosts
+## Hosts
 
 There are many ways to add a host. A host can be added by
 
@@ -97,9 +96,9 @@ There are many ways to add a host. A host can be added by
 
 In this guide we only describes the directive we will not use the default value in.
 
-## Adding a host with new host option
+### Adding a host with new host option
 
-### To add a new hosts using the new host option - Part 1
+#### To add a new hosts using the new host option - Part 1
 
 - Click** Hosts** on the main page.
   - Type in a host\_name.
@@ -119,7 +118,7 @@ In this guide we only describes the directive we will not use the default value 
   - Click **Add services**.
             ![](attachments/16482396/21300200.png)
 
-### To add a new host using the new host option - Part 2
+#### To add a new host using the new host option - Part 2
 
 - Leave the initial settings All new services will inherit the Initial Service Settings. If you choose not to enter a value for one or more required variable, those variables must be set in the selected template.
              as it is and scroll down to the services.
@@ -130,12 +129,12 @@ In this guide we only describes the directive we will not use the default value 
   - Now either click the host or service links or click **Save**.
             ![](attachments/16482396/21300120.png)
 
-## Adding hosts with network scan
+### Adding hosts with network scan
 
 Network ranges can be specified in a very free form. Each of the four parts of the IP-address may contain any combination of comma-separated numbers, 'from-to' ranges and single numbers, as such: `10.1,2.0,4-10.1-50`.
  You can specify multiple ranges, separated by spaces, if you like.
 
-### To add hosts with network scan
+#### To add hosts with network scan
 
 - Click **Hosts** on the main page.
   - Click **Network scan**.
@@ -150,9 +149,9 @@ Network ranges can be specified in a very free form. Each of the four parts of t
   - Repeat To add a new host using the new host option - Part 2 for each host, except for the last step.When you are finished click **Continue to step 3**
   - Click **Save**.
 
-## Modifying a host
+### Modifying a host
 
-### To modify a host
+#### To modify a host
 
 - On the start page choose the host you like to modify in the drop down list.
             ![](attachments/16482396/21300112.png)
@@ -162,9 +161,9 @@ Network ranges can be specified in a very free form. Each of the four parts of t
   - Make your modifications and click **Submit.**
   - Click **Save**.
 
-## Deleting a host
+### Deleting a host
 
-### To modify a host
+#### To modify a host
 
 - On the start page choose the host you like to delete in the drop down list.
             ![](attachments/16482396/21300112.png)
@@ -174,7 +173,7 @@ Network ranges can be specified in a very free form. Each of the four parts of t
   - Click **Delete all affected objects**.
   - Click **Save**.
 
-## Renaming objects
+### Renaming objects
 
 When renaming a host or service in the web GUI it will only rename the object and will not rename the objects name in log-files, graphs or report data in the database, meaning that the history logs for the object is lost.
  To rename the object name in log-files as well a program needs to be run manually. If this is not done the object will lose its alert history.
@@ -191,11 +190,11 @@ Follow the guideline below to rename the objects throughout the system.
 5. Start the monitoring service again
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
-# mon stop
-# su - monitor
+## mon stop
+## su - monitor
 $ /opt/monitor/op5/merlin/rename --rename-all
 $ exit
-# mon start
+## mon start
 ```
 
 If there is a lot of historical data this program can take a while to execute and during this time the OP5 Monitor service will not be running.
@@ -213,11 +212,11 @@ It might get handy to let OP5 Monitor scan and notify you if there are any new h
 
         No host will be automatically added. The network autoscan function will only find the hosts for you.
 
-## Adding a new autoscan configuration
+### Adding a new autoscan configuration
 
 You may add as many autoscan configuration as you wish. When adding a your network range you may use the same syntax as when you manually scans a network from the Add new host wizard.
 
-### To add a new autoscan configuration
+#### To add a new autoscan configuration
 
 - Click **Configure** in the main menu.
   - Click **Network Autoscan**.
@@ -229,11 +228,11 @@ You may add as many autoscan configuration as you wish. When adding a your netwo
   - **Activate**: Make this autoscan configuration active and in use.
   - Click **Save**.
 
-## Adding a host to blacklist
+### Adding a host to blacklist
 
 In certain ranges you are scanning with the network autoscan there might be hosts you do not want to include in the result. Then you should add that host or hosts to the blacklist.
 
-### To add a host to the blacklist
+#### To add a host to the blacklist
 
 - Click **Configure** in the main menu.
   - Click **Network Autoscan**.
@@ -241,13 +240,13 @@ In certain ranges you are scanning with the network autoscan there might be host
             ![](attachments/16482396/21300124.png)
   - Click **Add**.
 
-## The result
+### The result
 
 After the networks scan has been executed a small result will be shown in the upper left corner of the OP5 Monitor GUI
  ![](attachments/16482396/21300230.png)
  To add the hosts that has been found you only need to click on the text to the right of the icon. You will then come to the Add new host wizard the same as when you have done a manual network scan.
 
-# Services
+## Services
 
  Services can be added in a few different ways in Configure. You may add a service by using
 
@@ -261,9 +260,9 @@ We will take a look at the **add service for this host.**
  In this guide we only describes the directive we will not use the default value in.
  The default service template will used.
 
-## Adding a service
+### Adding a service
 
-### To add a service using add service for this host
+#### To add a service using add service for this host
 
 - On the start page choose the host you like to add a new service to in the drop down list.
             ![](attachments/16482396/21300112.png)
@@ -287,9 +286,9 @@ We will take a look at the **add service for this host.**
 If the arguments include an exclamation mark "!" this has to be escaped with an back slash (). Example: username!crypticpassword!!warning!critical
  This will out put "crypticpassword!"
 
-## Modifying a service
+### Modifying a service
 
-### To modify a service
+#### To modify a service
 
 - On the start page choose the host you like to modify a service on in the drop down list.
             ![](attachments/16482396/21300112.png)
@@ -304,12 +303,12 @@ If the arguments include an exclamation mark "!" this has to be escaped with an 
   - Make your modifications and click **Submit**.
   - Click **Save**.
 
-## Test this check
+### Test this check
 
 **Test this check** makes it possible for you to test the service you added or modified before you save the new configuration and reload monitor. This is a nice way to make sure the service works as it is supposed to.
  In the guide below we will work with the service created in Adding a service.
 
-### To test a check
+#### To test a check
 
 - Pick up the service you like to test as it is done in Modifying a service.
   - Click **Test this check**, at the bottom of the page.
@@ -318,7 +317,7 @@ If the arguments include an exclamation mark "!" this has to be escaped with an 
             ![](attachments/16482396/21300174.png)
   - Click **Hide check** to hide the output.
 
-### To test a hostgroup check
+#### To test a hostgroup check
 
 - Pick up the service you like to test as it is done in Modifying a service.
 - Select the host that you would like the test to run on from the drop down menu.
@@ -329,9 +328,9 @@ If the arguments include an exclamation mark "!" this has to be escaped with an 
     ![](attachments/16482396/21300174.png)
 - Click **Hide check** to hide the output.
 
-## Deleting a service
+### Deleting a service
 
-### To delete a service
+#### To delete a service
 
 - On the start page choose the host you like to delete a service from in the drop down list.
             ![](attachments/16482396/21300112.png)
@@ -344,11 +343,11 @@ If the arguments include an exclamation mark "!" this has to be escaped with an 
              ![](attachments/16482396/21300148.png)
   - Click **Save**.
 
-## Scanning host for network services
+### Scanning host for network services
 
 When you [added your host](#Managingobjects-to-add-part1) you had the opportunity to add services found during the scan for network services. This scan function can also be reached afterwords.
 
-### To scan a host for network services
+#### To scan a host for network services
 
 - Open up the host, in **Configure**, you like to add new services on.
   - Click **Scan host for network services**.
@@ -358,12 +357,12 @@ When you [added your host](#Managingobjects-to-add-part1) you had the opportuni
 
 **Additional information**: In a distributed environment a selectbox will appear when hovering over the menu item "Scan host for network services" where you can select from which OP5 Monitor system that should preform the scan. ![](attachments/16482396/21300220.png)
 
-## Scanning a host for snmp interfaces
+### Scanning a host for snmp interfaces
 
 In many times when you are about to monitor a switch or a router you need to setup a lot of services. It is hard work and takes a lot of time to add them one by one.
  Instead of adding all interface services one by one you should use the scan for snmp interfaces function.
 
-### To add snmp interfaces
+#### To add snmp interfaces
 
 - Open up the host, in **Configure**, you like to add new services on.
   - Click **Scan host for SNMP interfaces**.
@@ -376,7 +375,7 @@ In many times when you are about to monitor a switch or a router you need to set
   - Click **Add selected services**.
   - Click **Save**.
 
-# Scanning host for windows services
+## Scanning host for windows services
 
 There are two ways to scan a windows host for services:
 
@@ -385,7 +384,7 @@ There are two ways to scan a windows host for services:
 
 The following sections will describe how to accomplish this using the different techniques.
 
-## Scan for services using agent
+### Scan for services using agent
 
 Adding a service that checks a windows services is many times harder than you think. You need to
 
@@ -394,7 +393,7 @@ Adding a service that checks a windows services is many times harder than you th
 
 With OP5 Monitor you do not need to do anything more than make sure the latest agent (NSClient++) is installed and follow the next few steps.
 
-### To add windows services
+#### To add windows services
 
 - Open up the host, in **Configure**, you like to add new services on.
   - Click **Scan host for Windows Services**.
@@ -407,7 +406,7 @@ With OP5 Monitor you do not need to do anything more than make sure the latest a
   - Click either the service link or the **Scan for more service** button.
   - Click **Save**.
 
-## Scan for service using WMI
+### Scan for service using WMI
 
 Scan for services using Windows Management Instrumentation has a number of dependencies to be able to work:
 
@@ -419,7 +418,7 @@ Scan for services using Windows Management Instrumentation has a number of depen
 - When adding a new host
   - Scanning a existing host
 
-### Scanning for WMI when adding a new host
+#### Scanning for WMI when adding a new host
 
 To scan a host for WMI-counters and services upon adding the host to your OP5 Monitor configuration as partly described in: Adding a host with new host option.
  To scan for WMI counters when adding a new host:
@@ -451,7 +450,7 @@ After this the configuration will be saved and i final preflight configuration c
  Your configuration is saved and the host and its services are ready to be monitored.
 ![](attachments/16482396/21300140.png)
 
-# Custom Variables
+## Custom Variables
 
 Custom variables can be used to store custom information for hosts, services and contacts in the configuration. These variables can be used as a macro in command arguments and notifications for example.
  All custom variables will automatically get a underscore "\_" as a prefix to prevent name collisions with the standard variables.
@@ -481,7 +480,7 @@ Custom variables can be used to store custom information for hosts, services and
 </tbody>
 </table>
 
-## Creating a new custom variable
+### Creating a new custom variable
 
 Go to the configuration for a host, service or contact and click on **add custom variable**.
 ![](attachments/16482396/21300209.png)
@@ -489,7 +488,7 @@ Go to the configuration for a host, service or contact and click on **add custom
  ![](attachments/16482396/21300190.png)
  Click on **submit** and save the configuration.
 
-## Example
+### Example
 
 Instead of using the SNMP community name hardcoded in the check command or in the command arguments in the service check we will create a custom variable that we will use as a macro in the command arguments.
  In this example we will move the SNMP community name on a traffic check on a switch port from being in the command arguments to a custom variable.
@@ -501,12 +500,12 @@ Instead of using the SNMP community name hardcoded in the check command or in th
 ![](attachments/16482396/21300105.png)
  Click on **submit** and save the configuration.
 
-# Dynamic Button
+## Dynamic Button
 
 The dynamic button is a customizable button which any script can be added to.
  If defined, a link in the service information page will appear under "Service Commands" on the service ext info page.
 
-## Configuration
+### Configuration
 
 To configure the dynamic button two custom variables has to be created on the service which the button should be added to.
  The first one is the command line and the second one is the permissions.
@@ -516,7 +515,7 @@ To configure the dynamic button two custom variables has to be created on the se
 
 Note that there are two underscores!
 
-### Action
+#### Action
 
 The action has the variable name \_**`OP5H__ACTION__NAME`**
  The value of the action is the path to the script that should be executed.
@@ -526,7 +525,7 @@ The action has the variable name \_**`OP5H__ACTION__NAME`**
  **Variable name:**`_OP5H__ACTION__RESTART_SERVICE`
  **Value:**`/opt/plugins/custom/restart_service.sh`
 
-### Access
+#### Access
 
 The `OP5HACCESS_NAME` sets who will be able to use the dynamic button. This is set on contact-groups only.
  If a user is not in a group that is specified in the access variable the button will not be visible for the user.
@@ -536,20 +535,20 @@ The `OP5HACCESS_NAME` sets who will be able to use the dynamic button. This is s
  **Variable name:** \_`OP5H__ACCESS__RESTART_SERVCE`
  **Value:** `support-group,windows-admins`
 
-# Escalations
+## Escalations
 
 Escalations let you configure escalation of notifications for this host. The idea is that if you have a really important host you can send the first notification to the default contact group in order for them to solve the problem. If the problem is not solved in lets say 30 minutes you can send the notification to a broader range of contacts, as the name implies, escalate the issue.
 
 Host and service escalations works exactly in the same way so we will only take a look at host escalations from now on.
 
-## Adding a host escalation
+### Adding a host escalation
 
 In this guide we will add a small escalation chain that does the following
 
 - First notification is sent to the support-group
   - After 10 minutes the second (the last one) is sent to the sysadmins group.
 
-### To add a host escalation
+#### To add a host escalation
 
 - On the **Edit Host** page, choose the host you like to add an escalation to in the drop down list.
             ![](attachments/16482396/21300112.png)
@@ -592,9 +591,9 @@ In this guide we will add a small escalation chain that does the following
   - Click **Submit**.
   - Click **Save**.
 
-## Modifying a host escalation
+### Modifying a host escalation
 
-### To modify a host escalation
+#### To modify a host escalation
 
 - On the start page choose the host you like to modify an escalation on in the drop down list.
             ![](attachments/16482396/21300112.png)
@@ -607,9 +606,9 @@ In this guide we will add a small escalation chain that does the following
   - Make the modifications you like to do and click **Submit**.
   - Click **Save**.
 
-## Deleting a host escalation
+### Deleting a host escalation
 
-### To delete a host escalation
+#### To delete a host escalation
 
 - On the start page choose the host you like to delete an escalation from in the drop down list.
             ![](attachments/16482396/21300112.png)
@@ -623,30 +622,30 @@ In this guide we will add a small escalation chain that does the following
              ![](attachments/16482396/21300198.png)
   - Click **Save**.
 
-# Access rights and contacts
+## Access rights and contacts
 
 To be able to login to OP5 Monitor you need to have a user, described in Local users on page Main Objects. But you need to have a contact, described in Contacts on page Main Objects, to be able to receive notifications and in some cases even be able to see any hosts or services.
  By connecting access rights to a contact you will be able to login and get notifications with the user created in access rights.
  So basically what you need to do is to configure a new contact. Add the contact to an existing contact group or create a new contact group specific for the new contact. If you created a new contact group make sure to add the contact group for the hosts and services that you want to make available in the customized view.
  Add new access rights and connect it to the contact you created earlier.
 
-## Connecting access rights to contacts
+### Connecting access rights to contacts
 
-### To connect access rights to a contact
+#### To connect access rights to a contact
 
 - Configure a new contact.
   - Add the contact to an existing contactgroup or create a new contactgroup specific for the new contact. If you created a new contactgroup make sure to add the contact group for the hosts and services that you want to make available in the customized view.
   - Configure a user in access rights with the exact same name as the contact you created.
   - Set the options for the new access right.When selecting options do not use the last four options, authorized for all. By doing this the new user will only see the hosts and services that uses the contactgroup that he is a member of.
 
-# Management packs
+## Management packs
 
 A management pack is essantially a group of services connected to a hostgroup with the possibility to add custom variables. These are then used by the Host Wizard.
  The benefit with using management packs is that the monitoring will be more homogenous.
  The picture below shows how management packs integrates into OP5 Monitor.
  ![](attachments/16482396/21300144.png)
 
-## Creating management packs
+### Creating management packs
 
 To create a management pack a hostgroup must be created and the services that should be included in the management pack should be added to that hostgroup. See Services on Host groups on page Groups for more information.
  After the hostgroup with services has been created the hostgroup can be converted into a management pack.
@@ -663,11 +662,11 @@ It is also possible to add custom variables, these can be used for information t
  In this example we create a management pack for HP Servers with one custom variable for SNMP community name.
  Click on **Submit** to save the management pack.
 
-## Group in Group with Management Packs
+### Group in Group with Management Packs
 
 It is possible to use the group in group with management packs. This works in the same way as it does for normal hostgroups.
 
-### Example
+#### Example
 
 The hostgroup fruits includes the hostgroup '`apples`'.
  If a management pack i associated with '`fruits`' will the host be added to the hostgroup '`fruits`' and it will get all the services that is on the hostgroup '`fruits`', but it will not be affected by the '`apples`' hostgroup.
@@ -676,7 +675,7 @@ The hostgroup fruits includes the hostgroup '`apples`'.
  Management pack '`generic server'` is associated with the hostgroup '`generic`'. Hosts that are added with the management pack '`generic server`' will get the '`check_ping`' service.
  Mangement pack '`linux servers`' is associated with the hostgroup '`linux`'. Hosts added with the '`linux servers`' will get both the '`check_ssh_cpu`' and the '`check_ping`' checks.
 
-## Activate Management Packs
+### Activate Management Packs
 
 Management packs that is not created by the user, provided by OP5 or a third party, needs to be activeted.
  To activate a management pack go to **Mangement Pack Management** in the configuration.
@@ -685,7 +684,7 @@ Management packs that is not created by the user, provided by OP5 or a third par
 ![](attachments/16482396/21300208.png)
  **Force Activate** will override any management pack with the same name.
 
-## Import Management Packs
+### Import Management Packs
 
 To import a management pack from a json-file go to Management Pack Management.
 ![](attachments/16482396/21300176.png)
@@ -693,7 +692,7 @@ To import a management pack from a json-file go to Management Pack Management.
 ![](attachments/16482396/21300154.png)
  Click on **Upload json file** to import the management pack.
 
-## Export Management Packs
+### Export Management Packs
 
 Export management packs makes it possible to share your management pack with others or upload it to another OP5 Monitor server.
  Go to Mangement Pack Mangement under configuration.

@@ -1,6 +1,6 @@
 # Configuring Logger clients
 
-# Introduction
+## Introduction
 
 *Logger* acts as a [syslog server](http://en.wikipedia.org/wiki/Syslog). This means any system with remote syslog capabilities can send its logs to your *OP5 Monitor* host for storage and analysis.
 
