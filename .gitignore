@@ -152,3 +152,6 @@ Temporary Items
 
 servers/
 rendered_cfgs/
+
+# Ignoring Vim swap files.
+*.swp
