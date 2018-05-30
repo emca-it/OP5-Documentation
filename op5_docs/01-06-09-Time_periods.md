@@ -1,10 +1,10 @@
 # Time periods
 
-# About
+## About
 
 In this section we will take a look at time periods.
 
-# Add a time period
+## Add a time period
 
 Time periods is time defining objects that span over a week. You can define included time for each day of the week in the time period definition.
  You can also:

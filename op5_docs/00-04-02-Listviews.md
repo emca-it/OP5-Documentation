@@ -1,6 +1,6 @@
 # Listviews
 
-# About
+## About
 
 Listviews are all views that lists host, services, hostgroups etc.
 
@@ -21,7 +21,7 @@ The following views, or tables, uses listviews:
 - Notifications
 - Saved filters
 
-# Columns
+## Columns
 
 Every user can choose which columns to display in listviews. The columns can be specified under **My Account** in the **Profile** menu, by hovering your username.
 
@@ -40,9 +40,9 @@ To change which columns to show in a table, you change the text "default" to a l
 
 ![](attachments/16482333/19235824.png)
 
-## Column list
+### Column list
 
-### Hosts
+#### Hosts
 
 <table>
 <colgroup>
@@ -59,7 +59,7 @@ To change which columns to show in a table, you change the text "default" to a l
 </tbody>
 </table>
 
-### Services
+#### Services
 
 <table>
 <colgroup>
@@ -76,7 +76,7 @@ To change which columns to show in a table, you change the text "default" to a l
 </tbody>
 </table>
 
-### Host groups
+#### Host groups
 
 <table>
 <colgroup>
@@ -93,7 +93,7 @@ To change which columns to show in a table, you change the text "default" to a l
 </tbody>
 </table>
 
-### Service groups
+#### Service groups
 
 <table>
 <colgroup>
@@ -110,7 +110,7 @@ To change which columns to show in a table, you change the text "default" to a l
 </tbody>
 </table>
 
-### Comments
+#### Comments
 
 <table>
 <colgroup>
@@ -127,7 +127,7 @@ To change which columns to show in a table, you change the text "default" to a l
 </tbody>
 </table>
 
-### Downtimes
+#### Downtimes
 
 <table>
 <colgroup>
@@ -144,7 +144,7 @@ To change which columns to show in a table, you change the text "default" to a l
 </tbody>
 </table>
 
-### Contacts
+#### Contacts
 
 <table>
 <colgroup>
@@ -161,7 +161,7 @@ To change which columns to show in a table, you change the text "default" to a l
 </tbody>
 </table>
 
-### Notifications
+#### Notifications
 
 <table>
 <colgroup>
@@ -178,7 +178,7 @@ To change which columns to show in a table, you change the text "default" to a l
 </tbody>
 </table>
 
-### Saved filters
+#### Saved filters
 
 <table>
 <colgroup>
@@ -195,7 +195,7 @@ To change which columns to show in a table, you change the text "default" to a l
 </tbody>
 </table>
 
-### Log Messages
+#### Log Messages
 
 This is used by Logger.
 
@@ -214,7 +214,7 @@ The ID of the message in the database, this is not shown in the GUI by default</
 </tbody>
 </table>
 
-## Custom columns
+### Custom columns
 
 It is possible to create a custom column if the column isn't available from the standard columns.
  The format is "\<label\>" = \<data\> where \<data\> is the source of the data, for example if you would like to create a column that show the note of a host set in the configuration:
@@ -223,25 +223,25 @@ It is possible to create a custom column if the column isn't available from the 
 ![](attachments/16482333/19235825.png)
  It is also possible to fetch. For example the host notes on a service as well, by using the host.notes label.
 
-### Links in custom columns
+#### Links in custom columns
 
 It is also possible to add HTML code into the column. Let's say that you have a note with an ID that corresponds to the system in your CMS database and you would like to create a link directly to that object.
  "Asset ID" = "\<a href=\\"http://inventory.example.org/?asset=" + notes + "\\"\>Asset " + notes + "\</a\>"
 
 ![](attachments/16482333/19235826.png)
 
-### Custom variables
+#### Custom variables
 
 To show a custom variable in a column use the format custom\_variable.\<VARIABLE\_NAME\>. The custom variable should be used without the underscore prefix. Using the same example as above, but this time we have the ID in a custom variable called **ASSETID**
  "Asset ID" = "\<a href=\\"http://inventory.example.org/?asset=" + custom\_variables.ASSETID + "\\"\>Asset " + custom\_variables.ASSETID + "\</a\>"
 
-## Sorting
+### Sorting
 
 To sort a column use click on the column. It is possible to sort columns ascending and descending.
 
 ![](attachments/16482333/19235827.png)
 
-# More information
+## More information
 
 List views support POSIX extended regular expressions as supported by MK Livestatus. For more information, see [http://mathias-kettner.de](http://mathias-kettner.de/checkmk_livestatus.html#Regular%20expression%20matching)
 
@@ -249,6 +249,6 @@ Full list of columns that can be used in the filter language can be found on the
 
 * * * * *
 
-## Related pages
+### Related pages
 
 Error rendering macro 'sv-contentbylabel' : null

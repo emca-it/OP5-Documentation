@@ -1,10 +1,10 @@
 # Writeprotected configuration files
 
-# About
+## About
 
 By making a file write-protected it cannot be changed by OP5 Configuration. This is equivalent to the naemon function called **notouch.**
 
-# Writing the file
+## Writing the file
 
 Create the file `/opt/monitor/op5/nacoma/custom_config.php`
 

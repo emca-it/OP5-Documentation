@@ -1,6 +1,6 @@
 # Configure NagVis
 
-# About
+## About
 
 All settings are administrated through the Configuration. The **Configuration** menu can be found under **Options** in the menu at the top of the default view
 
@@ -14,8 +14,8 @@ From this menu you can:
 - Add, edit and delete shapes
 - Configure the backend.
 
-# Edit plain maps
-## To edit a plain NagVis map
+## Edit plain maps
+### To edit a plain NagVis map
 
 1. Click on NagVis in the monitoring menu of OP5 Monitor.
 2. Click on the NagVis map that you want to edit.

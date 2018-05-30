@@ -1,10 +1,10 @@
 # NagVis maps
 
-# About
+## About
 
 As you have seen there are a couple of demo maps in the default configuration. They are included so you have something to start with when you are using NagVis for the first time.
 
-# Manage backgrounds
+## Manage backgrounds
 
 When you start to create your own maps you will need to have a background image. The background image can be what ever you want.
 The following image types are supported:
@@ -13,9 +13,9 @@ The following image types are supported:
 - png
 - gif
 
-## Add
+### Add
 
-### To add a new background image
+#### To add a new background image
 
 1. Go to nagvis in the monitoring menu.
 2. Go to the menu on top and select **Options -> Manage Backgrounds**
@@ -29,9 +29,9 @@ The following image types are supported:
 
 4. Click **Upload**. Now your background image is ready to use.
 
-## Delete
+### Delete
 
-### To delete a background image
+#### To delete a background image
 
 1. Go to Nagvis in the monitoring menu.
 2. Go to the menu on top and select **Options -\> Manage** **Backgrounds**
@@ -43,11 +43,11 @@ The following image types are supported:
 ![](attachments/16482343/16678971.png) \
 
 
-# Manage maps
+## Manage maps
 
-## Add
+### Add
 
-### To add a new map
+#### To add a new map
 
 1. Go to the menu on top and select **Options** **-\> Manage Maps**
 
@@ -67,11 +67,11 @@ The following image types are supported:
 
 This will be the name of the map and used both in URLs and it will be the name of the configuration file in the file system
 
-## Change options
+### Change options
 
 Since the **Add new map** window is pretty limited you probably want to change some of the options for your newly created map.
 
-### To find the Option window for your map.
+#### To find the Option window for your map.
 
 1. Go to the map that you would like to change.
 2. Go to the menu on top and select **Edit Map -\> Map Options**
@@ -81,9 +81,9 @@ Since the **Add new map** window is pretty limited you probably want to change s
 The number of options is large. For more information about the options please read more in the official NagVis Manual at:
 [http://www.nagvis.org/documentation](http://www.nagvis.org/documentation+)
 
-## Deleting a map
+### Deleting a map
 
-### To delete a map
+#### To delete a map
 
 1. Select **Options -\> Manage** **Maps from the menu on top**
 
@@ -97,9 +97,9 @@ The number of options is large. For more information about the options please re
 
 3. Click **Ok** in the pop-up question to deleted the map.
 
-## Renaming a map
+### Renaming a map
 
-### To rename a map
+#### To rename a map
 
 1. Go to the top menu and choose **Options** -\> **Manage Maps**
 
@@ -114,7 +114,7 @@ The number of options is large. For more information about the options please re
 3. Type the new name in the **New name** text field and click **Rename**.
 4. Click **Ok** in the pop-up dialog that shows up and the map will be renamed.
 
-# Map object types
+## Map object types
 
 A map can have three types of objects. See the list of objects below:
 
@@ -152,13 +152,13 @@ Each object type consist of a number of objects that may be used in a map. The t
 If a host is in a problem state or a service on that host is in a problem state the host will be displayed in a non-green color (red, yellow or grey).
 If you hover the mouse over an object you will get a summary of how the current object.
 
-# Icon objects
+## Icon objects
 
 As you can see in the table in Map object types the type Icon consists of five different objects. All of them are icons that displays status of a certain object in OP5 Monitor. They will change color depending of the status of the corresponding object in OP5 Monitor.
 
-## Adding a host icon
+### Adding a host icon
 
-### To add a host icon
+#### To add a host icon
 
 1. Go to the menu on top and select **Edit** **Map** -> **Add Icon** -> **Host**.
 
@@ -181,7 +181,7 @@ Click on the map where you like to add your host.
 
 4. Click **Save** and your object is saved on the map.
 
-## Adding a service icon
+### Adding a service icon
 
 1. Go the menu on top and select **Edit** **Map** -\> **Add Icon** -\> **Service**
 
@@ -199,15 +199,15 @@ Click on the map where you like to add your host.
 
 4. Click **Save** and your object is saved on the map.
 
-# Line objects
+## Line objects
 
 A line object is a printed line between two objects. It can symbolize a connection between two icon objects and be associated with a object.
 
-## Adding a line
+### Adding a line
 
 Here we will add a line between two hosts and connect it to a switch-port Bandwidth Usage check.
 
-### To add a line
+#### To add a line
 
 1. Go to the menu on top and chose: **Edit Map** -\> **Add Line** -\> **Service**
 
@@ -232,9 +232,9 @@ Here we will add a line between two hosts and connect it to a switch-port Bandwi
 
 5.  Click **Save** and your object is saved on the map. Note that the percentage is not viewable in configuration mode.
 
-# Graph objects
+## Graph objects
 
-#  Add a graph
+##  Add a graph
 
 To add a graph to a Nagvis map works in the same way as creating a service object.
 
@@ -257,14 +257,14 @@ To add a graph to a Nagvis map works in the same way as creating a service objec
 
 4. Click on **Save** to add the graph to the nagvis map.
 
-## Selecting graph source
+### Selecting graph source
 
 A graph on a service can have multiple sources, for example the ping service has both Round Trip Times and Package loss where in this case RTT is source 0 and package loss is source 1.
 To change the source for a graph in nagvis edit the graph object and add &source=x to **gadget\_opts**
 
  ![](attachments/16482343/16678928.png)
 
-## Selecting graph length
+### Selecting graph length
 
 To select another graph length use the gadget\_opts option
  **&view=0** = 4 hours
@@ -275,16 +275,16 @@ To select another graph length use the gadget\_opts option
 
  ![](attachments/16482343/16678987.png)
 
-## Using multiple options
+### Using multiple options
 
 To combine multiple options for a graph enter the options directy after each other.
 For example if you would like to view a package loss graph for the last year use the **gadget\_opts** &source=1&view=4.
 
-# Managing objects
+## Managing objects
 
-## Deleting objects
+### Deleting objects
 
-### To delete an object
+#### To delete an object
 
 1. Open the map in which the object is located.
 2. Right click on the object icon and the following dialog is shown
@@ -300,9 +300,9 @@ For example if you would like to view a package loss graph for the last year use
 
 ![](attachments/16482343/16678930.png)
 
-## Modifying objects
+### Modifying objects
 
-### To modify an object
+#### To modify an object
 
 1. Open the map in which the object is located.
 2. Right click on the object icon and the following dialog is shown

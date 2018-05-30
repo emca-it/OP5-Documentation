@@ -1,12 +1,12 @@
 # Using Geomap
 
-# About
+## About
 
 Geomap creates maps to help to visualize the locations of objects and the links between objects in geographically diverse systems. Location and links are attributes added to objects in OP5 Monitor, and the map tiles used to render the map are downloaded from the specified geographic data service.
 
 !![](attachments/16482345/23793030.png)
 
-# Geomap
+## Geomap
 
 The **Geomap** page (Monitor \> Geomap) provides a visualization of object locations and links.
 
@@ -21,7 +21,7 @@ The *Geomap options* menu is located in the right hand side of the OP5 Monitor 
 
 The *Map area* takes up the lower part of the page, and it works like most mapping webpages. The default geographic data service is Google Maps and the map controls are imported from there.
 
-# Geomap Options
+## Geomap Options
 
 There are three entries in the *Geomap options* menu:
 
@@ -39,7 +39,7 @@ The search function returns inconsistent results, and the *Map area* isn't auto
 
 ![](attachments/16482345/23793031.png)
 
-# Geomap Settings
+## Geomap Settings
 
 There are two basic settings, *Provider* and *Geomap refresh rate*, and a third setting which is dependent on the *Provider* setting.
 
@@ -59,7 +59,7 @@ Real-time information on a Geomap client requires the client to have Internet ac
 
 *Geomap refresh rate* sets the interval, in seconds, between data refreshes. A stock install of OP5 Monitor sets the refresh interval to 10 seconds.
 
-## Accessing Geomap
+### Accessing Geomap
 
 1. Hover over the *Monitor* menu entry in the OP5 Monitor Toolbar to expand it.
 
@@ -68,7 +68,7 @@ Real-time information on a Geomap client requires the client to have Internet ac
 
 2. Click on the *Geomap* link to open the **Geomap Page**. (Red box in the screenshot)
 
-# Locations
+## Locations
 
 Before Geomap is useful you have to add locations to the map. Each location can be associated with an object. The following object types can be used:
 
@@ -77,11 +77,11 @@ Before Geomap is useful you have to add locations to the map. Each location can 
   - Host Group
   - Service Group
 
-## Adding a location
+### Adding a location
 
 Here we will add a new location. First we need to locate where on the map we want to put the location. Then we save the location with some basic settings.
 
-### To add the location
+#### To add the location
 
 1. Open up the Geomap from the monitoring menu.
 2. Click on edit in the upper left corner, just above the map.
@@ -102,11 +102,11 @@ Enter the variables for this locations and select type, then the object you want
 
 5. Click on **Save** to create the location.
 
-# Links
+## Links
 
 When you have added a couple of locations to your Geomap you might want to add a link between them. This can easily be done by associating a service to a so called link object.
 
-## Adding a link
+### Adding a link
 
 Here we will use two locations called:
 
@@ -116,7 +116,7 @@ Here we will use two locations called:
 The locations listed above are associated with one host each.
  Now we will add a link between the two locations and associate it with a service that will symbolize the link between the both locations.
 
-### To add the link
+#### To add the link
 
 1. Open up the **Geomap** from the menu. Click on **Edit** above the map:
 

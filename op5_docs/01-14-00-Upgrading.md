@@ -1,6 +1,6 @@
 # Upgrading
 
-# Introduction
+## Introduction
 
 OP5 Monitor is upgraded in the same way as the other OP5 products. If you have an OP Appliance system you can read about the upgrade procedure in the [OP5 Appliance system manual.](https://kb.op5.com/display/APSDOC)This chapter will only cover how to upgrade the application OP5 Monitor. We will learn how to upgrade two different ways:
 

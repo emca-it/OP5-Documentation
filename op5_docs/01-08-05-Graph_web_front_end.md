@@ -1,10 +1,10 @@
 # Graph web front end
 
-# About
+## About
 
 This article covers the PNP web front-end configuration.
 
-# Configuration
+## Configuration
 
 The behavior of the PNP web front-end can be controlled through the config file */opt/monitor/etc/pnp/config.php*. This is however not recommended as the file will be overwritten during updates of PNP as the paths and options are detected during ./configure.
 

@@ -1,10 +1,10 @@
-# how\_notifications\_work
+# How Notifications Work
 
-# About
+## About
 
 In the OP5 Monitor user manual we describe some of the basics with notifications. Let us take a closer look at how it really works.
 
-#  When do notifications occur and who gets notified?
+##  When do notifications occur and who gets notified?
 
  The decision to send out notifications is made in the service check and host check logic. Host and service notifications occur in the following instances:
 
@@ -22,7 +22,7 @@ The default behavior is if a host has the option *contact\_groups* configured in
 
 Additional information on implied inheritance can be found here: <http://www.naemon.org/documentation/usersguide/objectinheritance.html#implied_inheritance>
 
-# Notification filters
+## Notification filters
 
 When a notification is about to be sent it has to go through a number of filters before OP5 Monitor can determine whether a notification really is supposed to be sent or not.
 
@@ -42,7 +42,7 @@ This tells OP5 Monitor if notifications are turned on or not in a program-wide b
 - Do the contact notifications options says that this type of notification is supposed to be sent?
 - Are we in the right time period for notifications at the moment, according to the notification time period set on the contact?|
 
-# Notification commands
+## Notification commands
 
 How the notifications are sent is defined in either one of the two files below:
 
@@ -64,7 +64,7 @@ The notification commands are then using scripts in the same way as the normal c
 - **To disable host notifications:** simply toggle the Notifications switch.
 - **To disable service notifications:** click on the Options drop-down menu in the upper right and select "Service Operations -\> Disable notifications for all services".
 
-# Notification macros
+## Notification macros
 
 Many of the arguments sent to the notification commands are macros. The macros are a sort of variables containing a, in most cases, program-wide value. You can read more about macros in the Naemon manual: <http://www.naemon.org/documentation/usersguide/macros.html>
 
@@ -88,7 +88,7 @@ One of the most important macro used with notifications is: `$NOTIFICATIONTYPE$`
 
  The list of macros described in the Naemon manual is very useful when you are working with new notification commands and scripts. That list can be found here:  <http://www.naemon.org/documentation/usersguide/macrolist.html>
 
-# URL in notification email
+## URL in notification email
 
 One part of the notification email is a link back to the OP5 Monitor server that has sent the notification, and the hostname in this link can be configured to something else than the sending servers hostname.
 
@@ -123,7 +123,7 @@ Comment: /etc/op5/notify.yml configured on master2
 
 The link in the notification email will take you to **master1** to view the problem in more detail.
 
-# Changing "from" in notification e-mail
+## Changing "from" in notification e-mail
 
 Notifications are by default sent from the e-mail address "op5monitor" without any domain. The MTA adds the local domain name, which by default is "`@localhost.localdomain`".
  To change the e-mail address that notification are sent from use the --from argument for the notification command, or reconfigure your MTA and hostname in OP5 Monitor to send the message from the correct domain.
@@ -143,6 +143,6 @@ command_line=$USER3$/notify/notify --from op5notification@mycompany.com -c "$CON
 
 To change this for the service notifications, you need to repeat the steps above on the command* *"service-notify" as well.
 
-# Additional Resources
+## Additional Resources
 
 The notifications in OP5 Monitor follows a extensive rule set that is inherited from the core daemon Naemon. More documentation can be found in the [notification documentation for Naemon](http://www.naemon.org/documentation/usersguide/notifications.html)

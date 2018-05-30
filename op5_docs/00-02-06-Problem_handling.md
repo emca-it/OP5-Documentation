@@ -1,15 +1,15 @@
 # Problem handling
 
-# About
+## About
 
 Much of your work with OP5 Monitor is about problem handling. In the beginning when you start working with OP5 Monitor normally most of the time is about configuring, tweaking and fixing problems. After a while you will see that you can start working in a proactive way instead of how it used to be.
 In this section we will take a look at how you can work effectively with OP5 Monitor as a great help during your problem handling.
 
-# Hard and soft states
+## Hard and soft states
 
 A problem is classified as a **soft** problem until the number of checks has reached the configured **max\_check\_attempts** value. When **max\_check\_attempts** is reached the problem is reclassified as **hard** and normally OP5 Monitor will send out a notification about the problem. **Soft** problems do not result in a notification.
 
-# Alerts and notifications management
+## Alerts and notifications management
 
 Alerts and notifications are two of the most important things for you as a system administrator who depends on a monitoring tool like OP5 Monitor.
  Alerts, alarm and notifications are called different things in most monitoring system. In OP5 Monitor we define them like this:
@@ -49,7 +49,7 @@ Notifications are sent out on state changes. A notification is sent during one o
 
  An alert can happen any time and it does not necessary needs to be associated with a notification, but a notification is always associated with an alert.
 
-# Unacknowledged problems views
+## Unacknowledged problems views
 
 As you can see in the GUI there are many views in OP5 Monitor to show you host and service status in. Two of the most useful default views for a system administrator, is the unacknowledged  service view and the unacknowledged hosts view.
 
@@ -60,7 +60,7 @@ This views can be accessed from the quickbar menu.
 
 ![](attachments/16482319/19234884.png)
 
-# Acknowledge problems
+## Acknowledge problems
 
 When a new problem is discovered you need to take care of it. The first thing you should do is to acknowledge the problem. There are many ways to acknowledge a problem.
  When you acknowledge a problem you will:
@@ -73,7 +73,7 @@ We will here take a look at two of them, acknowledge by:
 - The GUI
 - SMS
 
-## Acknowledging a problem in the GUI
+### Acknowledging a problem in the GUI
 
 The most common way to acknowledge a problem is to do it in the GUI. This is easy and you will also be able to add a comment to your acknowledge. It is also the same routine no matter if it is a host or service problem you are about to acknowledge.
  To acknowledge a host problem:
@@ -88,7 +88,7 @@ The most common way to acknowledge a problem is to do it in the GUI. This is eas
     With the Sticky options all notifications are suppressed until the problem goes to OK or UP. Un-check this box to remove the acknowledgment even when the problem goes to another problem state, for example from WARNING to CRITICAL or from CRITICAL to WARNING. Use the **Notify** checkbox to send out a notification that this problem has been acknowledged. With every acknowledgment a comment is added to the object. If you would like this comment to remain after the problem has retured to OK or UP use the **Persistent** checkbox.
 4. Click **Submit** and you will be directed back to the host you where on when you started.
 
-## Acknowledging a problem by sms
+### Acknowledging a problem by sms
 
 If you have received your notification by sms you can acknowledge it by sending a sms back to the OP5 Monitor server.
  To acknowledge a problem by sms
@@ -98,7 +98,7 @@ If you have received your notification by sms you can acknowledge it by sending 
 
 If you now take a look at the host or service you will see that it has been acknowledged and a small comment is placed in the comment part for the object.
 
-## Removing an acknowledge
+### Removing an acknowledge
 
 Sometimes you might need to remove an acknowledge. Maybe you acknowledged the wrong problem or you for some reason need to stop working on it but you like more notifications to be sent out.
  To remove an acknowledge for a host:
@@ -111,7 +111,7 @@ Sometimes you might need to remove an acknowledge. Maybe you acknowledged the wr
 Now the notifications will continue as it is setup for the object.
 The comment for the acknowledge *is not removed*.
 
-## Removing multiple acknowledgements
+### Removing multiple acknowledgements
 
 To remove several acknowledgements:
 
@@ -127,7 +127,7 @@ To remove several acknowledgements:
 
 ![](attachments/16482319/19234890.png)
 
-# Schedule downtime
+## Schedule downtime
 
 Using scheduled downtime enables you to plan for system work ahead. When a host or service is scheduled for downtime OP5 Monitor suppresses alarms for that host or service. Furthermore OP5 Monitor informs you about when a host or service is scheduled for downtime through the web interface. Information about the scheduled downtime is also stored so that planned system work does not affect availability reports.
  It is possible to schedule downtime for the following object types:
@@ -139,7 +139,7 @@ Using scheduled downtime enables you to plan for system work ahead. When a host 
 
 You can also configure triggered downtime for hosts located below a host currently in scheduled downtime. To do this you need to have your parenting configured correctly. You can read more about [Parenting](Parenting).
 
-## Viewing scheduled downtime
+### Viewing scheduled downtime
 
 Basically the Scheduled Downtime view is a summary of all currently configured scheduled downtime for hosts and services.
 
@@ -147,19 +147,19 @@ Basically the Scheduled Downtime view is a summary of all currently configured 
 
 In this view you can also remove scheduled downtime
 
-### To view all scheduled downtime
+#### To view all scheduled downtime
 
 1. Click **Scheduled downtime** in the main menu under the **Monitoring menu**.
 
 ![](attachments/16482319/19234908.png)
 
-## Scheduling downtime
+### Scheduling downtime
 
 As you have seen we can schedule downtime for both hosts and services. Now we will take a look at how to schedule downtime for a host and a host group. The procedure is the same for services and service groups.
  When the scheduled downtime starts a notification is sent saying that the scheduled downtime has started.
  When adding a retroactively downtime, this will be noted in the log for the service or host.
 
-### To schedule downtime for a host
+#### To schedule downtime for a host
 
 1. Find the host you like to schedule downtime for and pick up the host information page ([Hosts and services](Hosts_and_services)).
 2. In the **Host detail view** click **Schedule Downtime.**
@@ -180,7 +180,7 @@ As you have seen we can schedule downtime for both hosts and services. Now we wi
 4. Click **Submit**.
 5. Click **Done**.
 
-### To schedule downtime for a host group
+#### To schedule downtime for a host group
 
 1. Locate the host group you like to schedule downtime for by clicking on Hostgroup summary in the main menu under Monitoring.
 
@@ -198,11 +198,11 @@ As you have seen we can schedule downtime for both hosts and services. Now we wi
 5. Click **Submit**.
 6. Click **Done**.
 
-## Remove a scheduled downtime
+### Remove a scheduled downtime
 
 Sometimes it is necessary to remove a scheduled downtime. This can be done both before the scheduled downtime has started and during the downtime. If the scheduled downtime has been canceled before it has reached its end time a notification will be sent saying that the scheduled downtime has been canceled.
 
-### Removing a scheduled downtime
+#### Removing a scheduled downtime
 
 To remove a scheduled downtime
 
@@ -215,16 +215,16 @@ To remove a scheduled downtime
 
 ![](attachments/16482319/19234891.png)
 
-# Schedule recurring downtime
+## Schedule recurring downtime
 
 As a good practice you shall put your hosts and services in scheduled downtime when you are planing to take them down. Many downtime events are recurring and it is pretty easy to forget to put your objects in scheduled downtime.
  This is when Recurring Downtime is a great help for you.
 
-## Scheduling a recurring downtime
+### Scheduling a recurring downtime
 
 Let us say that you are using Citrix and you need to reboot your citrix servers once per week. This is a perfect case of when you should use a recurring downtime schedule.
 
-### To add a recurring downtime
+#### To add a recurring downtime
 
 1. Click **Recurring downtime** in the Monitoring menu.
 
@@ -250,7 +250,7 @@ Let us say that you are using Citrix and you need to reboot your citrix servers 
 7. Choose day of week and months of the year this schedule shall be used.
 8. Click **Add schedule**.
 
-## Viewing your recurring downtime schedules
+### Viewing your recurring downtime schedules
 
 Once you have created a recurring downtime schedule you may
 
@@ -263,9 +263,9 @@ The view looks like this
 
 ![](attachments/16482319/19234893.png)
 
-## Editing a recurring downtime
+### Editing a recurring downtime
 
-### To edit a recurring downtime
+#### To edit a recurring downtime
 
 1. Click **Recurring downtime** and then **Schedules**.
 2. Click **Edit**.
@@ -274,9 +274,9 @@ The view looks like this
 
 3. Edit the fields you like to change and click **Add schedule**.
 
-## Deleting a recurring downtime
+### Deleting a recurring downtime
 
-### To delete a recurring downtime
+#### To delete a recurring downtime
 
 1. Click **Recurring downtime** and then **Schedules**.
 2. Click **Delete**

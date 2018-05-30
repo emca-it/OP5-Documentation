@@ -1,10 +1,10 @@
 # Host Wizard
 
-# About
+## About
 
 Host wizard is a tool to create a new host based on management packs (preconfigured services).
 
-# Adding a host using Host wizard
+## Adding a host using Host wizard
 
 - Go to the **Configuration** menu and select **Host Wizard**
     ![](attachments/16482397/16679325.png)
@@ -22,7 +22,7 @@ Host wizard is a tool to create a new host based on management packs (preconfigu
 - the configuration and go back to adding more host, with different device types, by selecting **Save Configuration and Add More Hosts
     ** ![](attachments/16482397/16679323.png)
 
-## Groups rights for Host Wizard
+### Groups rights for Host Wizard
 
 The Host Wizard requires the following rights for a user:
  configuration\_information

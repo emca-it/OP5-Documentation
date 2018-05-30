@@ -1,6 +1,6 @@
 # plugin\_support\_levels
 
-# About
+## About
 
 Plugins that we ship with OP5 Monitor have different support levels. Many came from the Nagios Exchange communities, so we can only wait for community revisions. Other plugins started with OP5 or have become so deeply entrenched in Monitor that we take pride in revising them for you. This means we may open bugs or RFEs for one plugin while deferring to the outside world for another.
 
@@ -16,7 +16,7 @@ explanation
 
 ![Full button, green background](attachments/16482417/23793066.png "Full button")
 
-# Full
+## Full
 
 high
 
@@ -24,7 +24,7 @@ OP5 fully supports and continuously tests this plugin. We have a fully compatibl
 
 ![Bug Support button, canary yellow background](attachments/16482417/23793067.png "Bug Support button")
 
-# Bug Support
+## Bug Support
 
 medium
 
@@ -32,7 +32,7 @@ OP5 does not test this plugin continuously. We may not have a compatible test en
 
 ![Best Effort button, orange background](attachments/16482417/23793068.png "Best Effort button")
 
-# Best Effort
+## Best Effort
 
 low
 
@@ -40,7 +40,7 @@ OP5 ships this plugin only as a courtesy to our customers. At some point in the 
 
 ![Deprecated button, red background](attachments/16482417/23793069.png "Deprecated button")
 
-# Deprecated
+## Deprecated
 
 nearly none
 
@@ -48,7 +48,7 @@ OP5 has concluded that this plugin can no longer be supported. It may have been 
 
 ![Unsupported button, medium gray background](attachments/16482417/23793070.png "Unsupported button")
 
-# Unsupported
+## Unsupported
 
 none
 

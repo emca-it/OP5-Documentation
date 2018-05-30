@@ -1,6 +1,6 @@
 # Logger Interface
 
-# About
+## About
 
 In the OP5 Logger interface you can:
 
@@ -9,14 +9,14 @@ In the OP5 Logger interface you can:
 
 Logger uses filters for selecting the data to show, these are described in the [Filters](Filters) chapter.
 
-# Logger GUI
+## Logger GUI
 
 To access Logger click on Log Messages in the Monitor menu
 ![](attachments/16482334/16679019.png)
 
 The GUI uses [Listviews](Listviews) and filters to [filter](Filters) the messages.
 
-## Filters
+### Filters
 
 The filters can be built based on the following fields:
 
@@ -68,11 +68,11 @@ msg
 
 The message text
 
-## Columns
+### Columns
 
 The columns in Logger can be modified in the same way as the rest of the listviews, see the [Listviews](Listviews) chapter.
 
-# Search archive
+## Search archive
 
 To perform a search in the archived logs go to Logger in the monitoring menu.
 
@@ -87,6 +87,6 @@ This will create a report on the specified filter.
 
 * * * * *
 
-# Related pages
+## Related pages
 
 Error rendering macro 'sv-contentbylabel' : null

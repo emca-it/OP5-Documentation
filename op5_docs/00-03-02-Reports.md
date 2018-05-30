@@ -1,16 +1,16 @@
 # Reports
 
-# About
+## About
 
 It shows you the status on your hosts and services right now. The Reporting headline is about letting the user create historical reports from the information that OP5 Monitor has collected.
 A monitoring system receives a huge amount of data from your IT environment. OP5 Monitor has a powerful, yet easy-to-use, built-in report generator.
 The reports are generated from the history-logs from all the elements included in the report.
 
-# SLA
+## SLA
 
 The reports in OP5 Monitor can be mapped against unique Service Level Agreements. This means that you can directly see and follow-up on both your internal and external SLAs.
 
-## Creating an SLA report
+### Creating an SLA report
 
 The fast and easy way to create an SLA report is to only follow steps 1-3 and then skip to the end of the guide, which will cause default values to be used for almost all settings.
  The complete instruction describes all settings.
@@ -59,7 +59,7 @@ The fast and easy way to create an SLA report is to only follow steps 1-3 and th
     Click on the icon in front of the name of the months to copy the value to the other months that are available Only the months that are included in the report will be available.![](attachments/16482315/16679237.png)
 8. Click **Show report**.
 
-## The SLA report
+### The SLA report
 
 When you have created your report you will get a result page looking like this.
  ![](attachments/16482315/16679240.png)
@@ -92,11 +92,11 @@ The result, same result as above, shown in a table.
 
 A list of every object included in the report. Click on the object name to get an SLA report for each and every object.
 
-## Editing the SLA report settings
+### Editing the SLA report settings
 
 You do not have to create a completely new report if you only want to change a minor setting in the one you just created.
 
-### To edit the settings
+#### To edit the settings
 
 1. Click edit settings.
     ![](attachments/16482315/16679239.png)
@@ -104,16 +104,16 @@ You do not have to create a completely new report if you only want to change a m
     ![](attachments/16482315/16679241.png)
 3. Click **Show report** to save the new values.
 
-# Availability
+## Availability
 
 An availability report shows availability for host groups, service groups, hosts or services, during a specified period of time.
 
-## Creating an availability report
+### Creating an availability report
 
 The fast and easy way to create an availability report is to only follow steps 1-3 and then skip to the end of the following guide, which will use default values for almost all settings.
  The complete instruction describes all settings.
 
-### To create an availability report
+#### To create an availability report
 
 1. In the main menu to the left click **Availability
     **![](attachments/16482315/16679244.png)
@@ -161,7 +161,7 @@ The fast and easy way to create an availability report is to only follow steps 1
 
 7. Click **Show report**.
 
-## The Availability report
+### The Availability report
 
 When you have created your report you will get a result page looking like this.
  ![](attachments/16482315/16679190.png)
@@ -197,11 +197,11 @@ This is the actual result. You can here see how much time each object has been i
 
 A pie chart displaying the result in a graphical way.
 
-## Editing the availability report settings
+### Editing the availability report settings
 
 You do not have to create a totally new report if you only like to change a minor settings of the one you just created.
 
-### To edit the settings
+#### To edit the settings
 
 Click edit settings.
 ![](attachments/16482315/16679239.png)
@@ -209,7 +209,7 @@ Click edit settings.
 ![](attachments/16482315/16679187.png)
  Click **Show report** to save the new values.
 
-# Save reports
+## Save reports
 
 There are two reasons for saving a report:
  It is easy to reach the same report the next time you would like to see it.
@@ -217,9 +217,9 @@ There are two reasons for saving a report:
  To save a report you need first to create the report. When viewing the report the save option will be available.
  The procedure is the same for both SLA reports and Availability reports. In the guide below we will use a SLA report.
 
-## Saving a report
+### Saving a report
 
-### To save a report
+#### To save a report
 
 Create a new report.
  In the result page click **Save report**.
@@ -228,7 +228,7 @@ Create a new report.
  ![](attachments/16482315/16679194.png)
  Click **Save report**.
 
-# Schedule reports
+## Schedule reports
 
 If you want a report to be regularly regenerated, you should schedule the report to do this automatically.
  Before you schedule a report you need to create it ( [Creating SLA report](#Reports-CreatingSLAreport) or [availability report](#Reports-Creatinganavailabilityreport)) and then save it ([Save reports](#Reports-Savereports)).
@@ -236,7 +236,7 @@ If you want a report to be regularly regenerated, you should schedule the report
 
 Note that the report first must be saved before a scheduled report can be created.
 
-## Schedule a report from the result page
+### Schedule a report from the result page
 
 In the guides below we will schedule a SLA report but it is done exactly the same way for the availability reports.
 
@@ -255,7 +255,7 @@ In the guides below we will schedule a SLA report but it is done exactly the sam
 11. Add a path where to save the report. The path must be absolute and include the filename, with either .pdf or .csv prefix depending in what format you want the file. This is optional.
 12. Click **Save**.
 
-## Schedule a report from the report menu
+### Schedule a report from the report menu
 
 Before a report can be scheduled through the menu a report must first be saved.
 
@@ -273,9 +273,9 @@ Before a report can be scheduled through the menu a report must first be saved.
 
 Weekly reports are sent out on Mondays and monthly reports are sent out on the 1:st every month.
 
-# Modifying scheduled reports
+## Modifying scheduled reports
 
-## To modify a scheduled report
+### To modify a scheduled report
 
 1. Click Schedule reports in the main menu.
      ![](attachments/16482315/16679198.png)
@@ -286,7 +286,7 @@ Weekly reports are sent out on Mondays and monthly reports are sent out on the 1
 
  If you want to save the report as file, enter a absolute path including the filename and prefix (.pdf or .csv) in local persistent filepath.
 
-# Deleting scheduled reports
+## Deleting scheduled reports
 
 To delete a scheduled report
 

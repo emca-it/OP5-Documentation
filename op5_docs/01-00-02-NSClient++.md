@@ -1,34 +1,34 @@
 # OP5 NSClient++
 
-# About
+## About
 
 [NSClient++](http://nsclient.org/) is the agent we  for monitoring hosts that run Microsoft Windows. It integrates very well with recent Windows Servers versions, copying its commands into the Registry and simplifying authentication. It also has versions for Linux, but OP5 has not tested against such implementations.
 
 OP5 used to provide a modified version of NSClient++. Starting with version 0.4.x and moving into the 0.5.x series, the main NSClient++ release has a cleaner integration with OP5 Monitor as well as the operating system. We strongly recommend [downloading the latest stable release directly](https://nsclient.org/download/) from our friends there.
 
-# Lead plugins for NSClient++ communication
+## Lead plugins for NSClient++ communication
 
-## check\_nt
+### check\_nt
 
 This is an increasingly deprecated plugin. In the past OP5 used it for all basic tests, such as CPU, memory, and disks. It can even check Windows services and performances counters.
 
 Nevertheless this plugin has stopped receiving any new development. Thus it does not work as well with more recent versions of Windows Server, in particular 2012 R2 and onward. OP5 strongly recommends using 'check\_nrpe' for any custom scripts or other new work.
 
-## check\_nrpe
+### check\_nrpe
 
 This is the same plugin used with the NRPE agent. This makes it very easy to use the same check command for any host server, be it on Windows, Unix, or Linux. We already described how to configure such commands.
 
 Please keep in mind that the 'check\_nrpe' plugin and the NRPE agent are not the same thing. The plugin sits on the OP5 Monitor to make remote calls, while the Unix and Linux agent sits on hosts to listen for those calls. Thus you can use the same check command syntax against a Windows host as a Linux host, because the configuration file on the host will determine how the host will listen and respond.
 
-# Configuration files
+## Configuration files
 
 NSClient++ operation used to be configured in a set of plaintext files. These are still located in the installation directory, typically "C:\\Program Files\\op5\\nsclient++\\". You can still edit these files, but your edits are not guaranteed to work. Instead you will need Registry write permissions.
 
-## Modern approach (v0.5.x)
+### Modern approach (v0.5.x)
 
 Michael Medin, the head of the NSClient++ project, has provided [very good documentation for writing configuration files](https://docs.nsclient.org/settings/). OP5 provides [an in-depth presentation](https://kb.op5.com/x/kAEjAQ) in our Knowledge Base.
 
-## Deprecated approach (v0.3.x and older)
+### Deprecated approach (v0.3.x and older)
 
 Much of this has been deprecated since version 0.4 and changed again with version 0.5. Please consider this section historical for version 0.3.x. Please also refer to [our more in-depth material from our Knowledge Article](https://kb.op5.com/x/Pw4jAQ) about the older configuration methods.
 
@@ -110,7 +110,7 @@ Note that '1' is the most typical value, even though it is not default. This all
 
 NRPE handlers provide a way to execute any custom plugin or check command on the monitored Windows server. This section is where you configure all the commands that should be available.
 
-## Adding a custom script or plugin to NSClient++
+### Adding a custom script or plugin to NSClient++
 
 `command[my_custom]=c:\mycustomdir\my_prog.exe`
 

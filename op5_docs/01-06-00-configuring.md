@@ -1,6 +1,6 @@
 # configuring
 
-# Introduction
+## Introduction
 
 There are two supported ways to change the configuration of your OP5 Monitor:
 
@@ -9,7 +9,7 @@ There are two supported ways to change the configuration of your OP5 Monitor:
 
 We will discuss the API as a configuration tool in a later chapter. This chapter will take a look at how to use the OP5 Monitor Configuration tool, which henceforth we will call **Configure**.
 
-# Caveat
+## Caveat
 
 OP5 does not support editing configuration files directly!
 
@@ -19,7 +19,7 @@ OP5 Monitor uses Livestatus to parse the configuration files based on a temporar
 
 We need to make this as clear as possible. Many people reading this Guide may come from Nagios administration, where editing the configuration files and creating new files are commonplace. We beg of you to leave these files alone. Please let our complex of miniature databases serve your higher goals.
 
-# Workflow
+## Workflow
 
 Most of the configuration in OP5 Monitor is saved in configuration files (text files) in /opt/monitor/etc/. The Configure works with a database and this makes it possible to do changes in the configuration without saving it to file before all configuration is done. The table below describes the workflow:
 

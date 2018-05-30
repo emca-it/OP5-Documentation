@@ -1,12 +1,12 @@
 # Features not supported by Configure
 
-# About
+## About
 
 Even though some features are not supported by the OP5 Monitor configuration tool you can still use them.
 The `hostgroup_name` is one of them.
 What you have to do is to add a separate configuration file not read by the import function in Configure. Then you add your other configuration tricks into that file.
 
-# To add a configuration file not read by Configure
+## To add a configuration file not read by Configure
 
 - Open up a ssh connection to the OP5 Monitor server and login as root.
   - Create the following file with an editor of your choice:

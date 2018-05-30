@@ -1,11 +1,11 @@
 # Creating a more complex plugin
 
-# About
+## About
 
 In this section we will create a more complex and useful plugin compared to the one we created in [Adding your first plugin to OP5 Monitor](Adding_your_first_plugin_to_op5_Monitor). We will use Bash, the standard Linux shell.
 We will create a plugin that checks that the storage path specified in '`/etc/op5-backup/main.conf`' exists, to make sure that `op5-backup` is configured properly for local operation.
 
-# To create a more complex plugin
+## To create a more complex plugin
 
 1. Create the script and edit it:
 
@@ -62,6 +62,6 @@ We will create a plugin that checks that the storage path specified in '`/etc/op
 4. Enter the service configuration for your monitor server, and add a service with `check_op5backup` as the check\_command`;`
 5. Save configuration.
 
-# More information
+## More information
 
 This chapter has only scratched on the surface of how to write your own plugins. To read more about plugin development, take a look at the [guidelines from the Monitoring Plugins Development Team](https://www.monitoring-plugins.org/doc/guidelines.html).

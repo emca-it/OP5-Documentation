@@ -1,6 +1,6 @@
 # Authentication Integration
 
-# Introduction
+## Introduction
 
 Authentication drivers handle OP5 Monitor's authentication system. Each driver handles both authentication of the user and resolution of the group memberships for the given user. The groups are then mapped to permissions by the authorization layer, which we will describe later.
 
