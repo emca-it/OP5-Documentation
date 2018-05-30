@@ -149,6 +149,7 @@ Temporary Items
 *.zip
 *.tar.gz
 *.tgz
+*.swp
 
 servers/
 rendered_cfgs/
