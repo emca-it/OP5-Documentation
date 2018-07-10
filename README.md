@@ -67,9 +67,11 @@ Here is nothing.
 
 ### Figures/Screenshots
 
+Figures need to separated from the paragraph by a blank line because Markdown is whitespace sensative. Without the blank line, the figures are considered part of the paragraph, and they are positioned at the end of the paragraph which results in the figure running off of the page.
+
 Figures have a tendency to endup in random locations, so they need to be proofed to make sure they are in the correct location. We can help Latex put the figures in the correct spot by adding a linebreak and two empty lines before the next piece of content.
 
-Example:
+Correctly formatted example:
 
 ```
 This is my ant farm. These little guys can lift fifty times their own weight. They also spend weeks digging these intricate little tunnels. And oh yeah, they really hate it when you do this!
