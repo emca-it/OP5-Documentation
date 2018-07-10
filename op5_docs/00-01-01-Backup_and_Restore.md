@@ -18,23 +18,11 @@ Clicking on Save you current OP5 Monitor Configuration link will create a backup
 
 The *Actions* column contains links to the View Backup,  Restore Backup, and Delete Backup operations. Each action only affects the row it's on, so clicking on the Delete Backup link on row one only deletes the backup file listed in row one.
 
-Icon
-
-Action
-
-Explanation
-
-View
-
-View the contents of the backup file.
-
-Restore
-
-Return the configuration to production.
-
-Delete
-
-Remove the backup file from the server.
+| **Icon** | **Action** | **Explanation** |
+| ---- | ---- | ---- |
+| ![](attachments/16482336/23793017.png) | View | View the contents of the backup file. |
+| ![](attachments/16482336/23793018.png) | Restore | Return the configuration to production. |
+| ![](attachments/16482336/23793019.png) | Delete | Remove the backup file from the server. |
 
 The *Backups* columns contains the names of the backup files. The names also happen to be links to the backup files, and clicking on one will prompt the web browser to download the file.
 
@@ -44,7 +32,9 @@ The *Backups* columns contains the names of the backup files. The names also hap
 
 1. Click on the Save your current OP5 Monitor configuration link.
 2. A dialog box will appear asking for confirmation.
-    ![](attachments/16482336/23793016.png)
+
+![](attachments/16482336/23793016.png)
+
   - Click *Yes* to confirm the creation of a backup file.
   - Click *Close* to exit without creating a backup file.
 
@@ -56,14 +46,18 @@ The *Backups* columns contains the names of the backup files. The names also hap
 
 1. Click on the View Backup icon in the *Actions* column to open a page listing the contents of the backup file.
 2. Scroll up and down the page to view the list of included files. (Green box in the screenshot below.)
-    ![](attachments/16482336/23793023.png)
+
+![](attachments/16482336/23793023.png)
+
 3. Return to the **Backup/Restore** page by clicking on the Backup/Restore List link to the right of the backup file name (Red box in the screenshot), or use the back button in the browser to return to the previous page.
 
 ### Restore a backup file
 
 1. Click on the Restore Backup icon in the *Actions* column to start the restoration process.
 2. A dialog box will appear asking for confirmation.
-    ![](attachments/16482336/23793020.png)
+
+![](attachments/16482336/23793020.png)
+
   - Click *Yes* to confirm restoration of the configuration.
   - Click *Close* to exit without restoring the configuration.
 
@@ -83,7 +77,9 @@ The *Backups* columns contains the names of the backup files. The names also hap
 
 1. Click on the Delete Backup icon in the *Actions* column to start the deletion process.
 2. A dialog box will appear asking for confirmation.
+
     ![](attachments/16482336/23793024.png)
+
   - Click *Yes* to confirm the deletion of a backup file.
   - Click *Close* to exit without deleting a backup file.
 
@@ -93,7 +89,9 @@ The *Backups* columns contains the names of the backup files. The names also hap
 ### Download a backup file
 
 1. Click on the name of the backup file from the *Backups* column to start downloading the file.
-    ![](attachments/16482336/23793022.png)
+
+![](attachments/16482336/23793022.png) \
+
 
 ### Miscellaneous Information
 
@@ -107,13 +105,13 @@ The *Backups* columns contains the names of the backup files. The names also hap
 ##### File name broken down into parts:
 
 - Creation process:
-  - `backup` is from the web application backup process.
-  - `nacoma-pre-2018.a1.1-upgrade` is from the OS level upgrade process.
+    - `backup` is from the web application backup process.
+    - `nacoma-pre-2018.a1.1-upgrade` is from the OS level upgrade process.
 - Process Date Delimiter: `-`
 - Date backup was created (ISO 8601 format):
-  - `2018-02-21` is February 21, 2018 formatted as `YYYY-MM-DD`.
+    - `2018-02-21` is February 21, 2018 formatted as `YYYY-MM-DD`.
 - Date Time Delimiter: `_`
 - Time (24 hour format):
-  - `12.54.35` is 12:54.35 pm.
-  - `10.29` is 10:29 am.
+    - `12.54.35` is 12:54.35 pm.
+    - `10.29` is 10:29 am.
 - Extension: `.tar.gz`
