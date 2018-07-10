@@ -8,7 +8,8 @@ This is the initial overview of OP5 Monitor, and it's meant to get people famili
 
 The *Welcome* page is the initial landing point for people accessing OP5 Monitor. The default *Welcome* page is shown below, but it can be customized to suit the client.
 
-![](attachments/23792753/23792974.png)
+![](attachments/23792753/23792974.png) \
+
 
 There are four links at the top of the *Welcome* page:
 
