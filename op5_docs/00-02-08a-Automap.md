@@ -15,8 +15,7 @@ Example of how the defaultroot works in NagVis Automap
 
 
  Here the **demo** host is set to **defaultroot** and all of its children are displayed.
- If you set the host **switch1-gbg** as **defaultroot** in Nagvis the automap only display **switch1-gbg** and it's children (**environment-gbg** and **printer-gbg**). The picture below shows how it would look like:*
-* 
+ If you set the host **switch1-gbg** as **defaultroot** in Nagvis the automap only display **switch1-gbg** and it's children (**environment-gbg** and **printer-gbg**). The picture below shows how it would look like:
 
 ![](images/16482342/16678970.png) \
 
