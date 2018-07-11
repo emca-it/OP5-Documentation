@@ -3,7 +3,7 @@
 #
 #         FILE: doc_converter.pl
 #
-#        USAGE: ./doc_converter.pl 
+#        USAGE: ./doc_converter.pl
 #
 #  DESCRIPTION:
 #
@@ -33,19 +33,23 @@ my $dir_output = '';
 
 # Option variables
 my $type_input = "markdown";
-my $type_output = "docx";
-my $delimiter_file = ".";
-my $delimiter_name = "-";
+my $type_output = "pdf";
 
 # Internal variables
 my $date = localtime->strftime("%Y%m%d");
 
-GetOptions (
-	"file-delimiter=s" => \$delimiter_file,
-	"name-delimiter=s" => \$delimiter_name,
-);
-
-foreach my $argument (@ARGV) {
-	print "$argument\n";
+if (@ARGV < 3) {
+    die "Not enough arguments.\n";
+} elsif (@ARGV > 3) {
+    die "Too many arguments.\n";
 }
 
+GetOptions (
+	"input-type=s" => \$type_input,
+	"output-type=s" => \$type_output,
+);
+
+($client, $dir_source, $dir_output) = @ARGV;
+print "$client\n";
+print "$dir_source\n";
+print "$dir_output\n";
