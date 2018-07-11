@@ -73,4 +73,7 @@ This document applies to the installable software version of OP5 Monitor. For in
 12. After reboot, use your browser and browse to the server, use the following address:
     https://\<IP or hostname\>/monitor
 13. You will be prompted to create an account with administrator privileges the first time you access OP5 Monitor. Save the login credentials at a safe location so that the account is not lost.
-    ![](images/17661962/17858614.png)
+
+![](images/17661962/17858614.png) \
+
+

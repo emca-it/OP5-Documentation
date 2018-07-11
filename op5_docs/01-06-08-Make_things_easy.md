@@ -11,7 +11,10 @@ Making things easier to handle with OP5 Monitor.
 To clone a host follow these steps:
 
 - On the start page choose the host you like to create a profile of in the drop down list.
-        ![](images/16482402/17269605.png)
+
+![](images/16482402/17269605.png) \
+
+
   - Click **Go**.
   - Click the **Clone** button
   - Select the services you wish to include
@@ -58,12 +61,21 @@ The copy will inherit all the values set on a object except the name.
 
 - Click on **Configure** in the main menu:
   - Select **Commands** in the configuration menu
-        ![](images/16482402/17269607.png)
+
+![](images/16482402/17269607.png) \
+
+
   - Search for a command to copy:
-        ![](images/16482402/17269602.png)
+
+![](images/16482402/17269602.png) \
+
+
   - Click **Copy**
   - Make the changes you want. A new name is required. and i.e create a listing of the attached VMFS-storages:
-        ![](images/16482402/17269603.png)
+
+![](images/16482402/17269603.png) \
+
+
   - Click **Submit**
 
 This approach should apply to the most objects that are possible to copy.
@@ -77,18 +89,30 @@ To change the same directive on many objects of the same type can be a really ti
 ### To propagate a value of a directive
 
 - On the start page choose the host you like to propagate a directive value from in the drop down list.
-        ![](images/16482402/17859596.png)
+
+![](images/16482402/17859596.png) \
+
+
   - Click **Go**.
   - Click the tab **Propagate.**
-        ![](images/16482402/17269608.png)
+
+![](images/16482402/17269608.png) \
+
+
   - Tick the check box for the configuration option, in this example we want to propagate the setting **hostgroup** to another host so it also is associated with the same hostgroups as VMware Host 1.
-        ![](images/16482402/17859595.png)
+
+![](images/16482402/17859595.png) \
+
 
   - Click **Propagate selected settings** on the bottom of the page.
-        ** ![](images/16482402/17859594.png)**
+
+![](images/16482402/17859594.png) \
+
 
   - Select the host objects (host or whole host groups) you like to propagate the settings to. In this example I want to propagate the value to the hosts VMware Host 2 and VMware Host 3.
-        ![](images/16482402/17859597.png)
+
+![](images/16482402/17859597.png) \
+
 
   - Click **Submit**
 
@@ -140,11 +164,23 @@ Bulk delete is powerful tool to remove several host or services at once.
 As an example, we will delete two services "Ping" on two different hosts, but the process is similar on all objects listed above.
  To delete multiple services this is preformed trough Configure
 
-- ![](images/16482402/17269599.png) Select a host which services you want to delete and click **GO**
+![](images/16482402/17269599.png) \
+
+
+Select a host which services you want to delete and click **GO**
   - Click **Services for host** in the right menu.
-         ![](images/16482402/17269609.png)
+
+![](images/16482402/17269609.png) \
+
+
   - Click on **Bulk delete objects
-        **![](images/16482402/17269597.png)
+
+![](images/16482402/17269597.png) \
+
+
   - Select the services that you want to delete and click **Delete**
-        ![](images/16482402/17269598.png)
+
+![](images/16482402/17269598.png) \
+
+
   - Click **Delete**

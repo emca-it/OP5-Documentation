@@ -180,7 +180,3 @@ Configuration instructions:
     Application!1!1!2h!1505
 
 3. Click on the “Submit” button and save the configuration changes
-
-### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
-
-[![](images/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)

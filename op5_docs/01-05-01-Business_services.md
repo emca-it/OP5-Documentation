@@ -8,34 +8,64 @@ It is also possible to add sub-groups that can have their own rule-set.
 ## Creating a new group
 
 To create a new group go to "Business Process" in the menu.
- ![](images/16482357/16679165.png)
+
+![](images/16482357/16679165.png) \
+
+
  Click on the "New Object" button at top-right area
- ![](images/16482357/16679166.png)
+
+![](images/16482357/16679166.png) \
+
+
  Select rule for your business process group
-![](images/16482357/16679159.png)
+
+![](images/16482357/16679159.png) \
+
+
  Fill in the name of the group
-![](images/16482357/16679160.png)
+
+![](images/16482357/16679160.png) \
+
+
  Enter the parameters of the rule, if any.
-![](images/16482357/16679162.png)
+
+![](images/16482357/16679162.png) \
+
+
  Click on the "Create" button
-![](images/16482357/16679155.png)
+
+![](images/16482357/16679155.png) \
+
+
  Click on the "Save" icon.
-![](images/16482357/16679161.png)
+
+![](images/16482357/16679161.png) \
+
 
 ## Creating a sub-element
 
 A sub-element is either a service, a host or another group with it's own rule-set.
  To add the sub-element click "add sub-element" icon in actions icons column
-![](images/16482357/16679156.png)
+
+![](images/16482357/16679156.png) \
+
 
 ### Add a monitored object
 
 Select what type of object you what to add. In the example below we use **Service**
-![](images/16482357/16679152.png)
+
+![](images/16482357/16679152.png) \
+
+
  Select which object by clicking in the empty text field and select you object from the drop-down menu.
-![](images/16482357/16679157.png)
+
+![](images/16482357/16679157.png) \
+
+
  Click on the "Save" icon.
- ![](images/16482357/16679161.png)
+
+![](images/16482357/16679161.png) \
+
 
 ### Add a group as sub-element
 
@@ -146,7 +176,10 @@ It is possible to create your own custom rules. This is done in a script languag
 
 It is possible to publish an object as a service of a host. By doing this the object will get the same possibilities as a service in Monitor such as notifications, reports, graphs and so on.
  To publish an object edit the object that you want to publish and select "as a service" and the host on which to publish the object.
- ![](images/16482357/16679158.png)
+
+![](images/16482357/16679158.png) \
+
+
  The object will now be found under the host as a service.
 
 ## Reporting
@@ -156,6 +189,12 @@ When creating a SLA or Availability report out of a BSM top level element that h
  To enable this choose to include BSM event when creating a report.
  If the selected BSM service is not a top level element, no BSM events will be displayed.
  To enable this choose to **include BSM event** when creating a report.
- ![](images/16482357/16679151.png)
+
+![](images/16482357/16679151.png) \
+
+
  When the report is generated the event will be included in the report.
- ![](images/16482357/16679154.png)
+
+![](images/16482357/16679154.png) \
+
+

@@ -20,11 +20,14 @@ Sign on to OP5 Monitor and then go to Trapper via the Monitor option in the main
 ### 2 - Create a simple "catch all" rule
 
 Go to "Handlers" and then "New Handler", call it Sink, and upload this LUA code: [trap\_sink.lua](images/6193568/6422589.lua)
-![](images/6193568/6422594.png)
+
+![](images/6193568/6422594.png) \
+
 
 Once the handler has been uploaded, go to "Matchers" and then "New Matcher". We should match on all OIDs (\*) and use our newly created handler *Sink*.
 
-![](images/6193568/13271319.png)
+![](images/6193568/13271319.png) \
+
 
 ### 3 - Send a test trap
 
@@ -37,10 +40,13 @@ Go to "Subservices" and then "Trigger test trap". Now enter these values:
   - **Type:** Integer
   - **Value:** 2
 
-![](images/6193568/6422592.png)
+![](images/6193568/6422592.png) \
+
 
 ### 4 - Watch your traps appear in the list view.
-![](images/6193568/6422593.png)
+
+![](images/6193568/6422593.png) \
+
 
 Debugging trap related issues
 

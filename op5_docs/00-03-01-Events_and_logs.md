@@ -13,28 +13,58 @@ One useful report in OP5 Monitor is the Top alert producers report. This report 
 
 1. Click Alert summary in the main menu.
 
-    ![](images/16482316/16678946.png)
+![](images/16482316/16678946.png) \
+
 
 2. Select custom report mode.
-    ![](images/16482316/16678947.png)
+
+![](images/16482316/16678947.png) \
+
+
 3. Select all hostgroups.
-    ![](images/16482316/16678948.png)
-4. Select Report period Since this is the first time we generate this report we use the last 31 days. When you use this on, for example, weekly basis you could use the last 7 days. ![](images/16482316/16678945.png)
+
+![](images/16482316/16678948.png) \
+
+
+4. Select Report period Since this is the first time we generate this report we use the last 31 days. When you use this on, for example, weekly basis you could use the last 7 days.
+
+![](images/16482316/16678945.png) \
+
+
 5.  Select Summary type and set it to Top alert producers.
-    ![](images/16482316/16678949.png)
+
+![](images/16482316/16678949.png) \
+
+
 6. Leave the Alert Types with the default value.
-    ![](images/16482316/16678952.png)
+
+![](images/16482316/16678952.png) \
+
+
 7. Choose Hard states for State Types, we are only interested in the real problems.
-     ![](images/16482316/16678950.png)
+
+![](images/16482316/16678950.png) \
+
+
 8. Choose only problems sate for both hosts and services.
-    ![](images/16482316/16678954.png)
-9. Set the number of items to show in the resulting report. If you have a large environment with a lots of host you might want to increase the number of shown items.![](images/16482316/16678951.png)
+
+![](images/16482316/16678954.png) \
+
+
+9. Set the number of items to show in the resulting report. If you have a large environment with a lots of host you might want to increase the number of shown items.
+
+![](images/16482316/16678951.png) \
+
+
 10. Click on **Show Report**.
 
 ### Top alert producers result
 
 Now we have a report ready to be examined.
-![](images/16482316/16678956.png)
+
+![](images/16482316/16678956.png) \
+
+
  This report can be used as a guide to help you to minimize the number of false alerts and notifications. Significant amounts of false alerts can lead to the users loosing faith in the monitoring system.
 
 ### Saving an Alert summary report
@@ -45,7 +75,10 @@ Alert summary reports are useful from time to time. So when you have created a n
 
 1. Create an Alert summary report like you did in [Creating a Top alert producers report](#Eventsandlogs-Creatingtopalertproducersreport), show the report then:
 2. Click **Save report**.
-    ![](images/16482316/16678955.png)
+
+![](images/16482316/16678955.png) \
+
+
 3. Enter a name for the report and click **Create Summary Report**.
 
 ### Scheduling an Alert summary report
@@ -56,9 +89,15 @@ For the exact same reason as it is to schedule an availability report or a SLA r
 
 1. Create an Alert summary report like you did in [Creating top alert producers report](#Eventsandlogs-Creatingtopalertproducersreport) and save the report.
 2. Click the plus icon at the right top of the page
-    ![](images/16482316/16678953.png)
+
+![](images/16482316/16678953.png) \
+
+
 3. Follow the instructions in [Schedule reports](Reports_16482315.html#Reports-schedule_reports), just select "Alert summary report" as report type.
-     ![](images/16482316/16678958.png)
+
+![](images/16482316/16678958.png) \
+
+
 4. Click **Save**.
 
 ## Trends
@@ -68,9 +107,14 @@ Trends display a graphic view of status on a host or a service during a selected
 ### Creating a trend report
 
 1. Click **Include trends graph**.
-    ![](images/16482316/16678957.png)
+
+![](images/16482316/16678957.png) \
+
+
 2. The trends will be shown in the report.
-    ![](images/16482316/16679215.png)
+
+![](images/16482316/16679215.png) \
+
 
 ## Event log
 
@@ -86,10 +130,14 @@ In the OP5 Monitor event log you can
 #### To view the event log
 
 Click the Event log icon in the main menu and there you go.
-![](images/16482316/16679217.png)
+
+![](images/16482316/16679217.png) \
+
 
 As you can see in the picture below everything except for **Initial and logrotation states** are shown by default.
-![](images/16482316/16679216.png)
+
+![](images/16482316/16679216.png) \
+
 
 The event log view is divided into two parts
 
@@ -114,13 +162,21 @@ In the OP5 Monitor alert history you can
 #### To view the alert history
 
 Click Alert history icon in the main menu, and you see an unfiltered list of alerts.
-![](images/16482316/16679219.png)
+
+![](images/16482316/16679219.png) \
+
 
 #### Filter alert history
 
 The list can be long. Try applying a filter to it by using the filter options. You can access them through the **Edit** settings icon.
-![](images/16482316/16679220.png)
+
+![](images/16482316/16679220.png) \
+
+
  In the appearing dialog you can filter you alert history view.
- ![](images/16482316/16679218.png)
+
+![](images/16482316/16679218.png) \
+
+
  By checking the check box **Show all** it is possible to filter the view on hostgroups, hosts, services and servicegroups as well.
  Select the checkbox **Include full output** to get the status information from the check in the alert histry as well.

@@ -9,25 +9,27 @@ WMI monitoring should be used only when it's not possible to use the agent.
 
 ## Contents
 
-- [Introduction](#AgentlessMonitoringofWindowsusingWMI-Introduction)
-- [Contents](#AgentlessMonitoringofWindowsusingWMI-Contents)
-- [Information about WMI](#AgentlessMonitoringofWindowsusingWMI-InformationaboutWMI)
-  - [What is WMI?](#AgentlessMonitoringofWindowsusingWMI-WhatisWMI?)
-  - [Why should I use WMI?](#AgentlessMonitoringofWindowsusingWMI-WhyshouldIuseWMI?)
-- [Prerequisites](#AgentlessMonitoringofWindowsusingWMI-Prerequisites)
-- [Start monitoring](#AgentlessMonitoringofWindowsusingWMI-Startmonitoring)
-  - [Add a new host using Management packs](#AgentlessMonitoringofWindowsusingWMI-AddanewhostusingManagementpacks)
-  - [Usage examples](#AgentlessMonitoringofWindowsusingWMI-Usageexamples)
-  - [Monitoring all system services ](#AgentlessMonitoringofWindowsusingWMI-Monitoringallsystemservices)
-  - [Monitoring specific system service](#AgentlessMonitoringofWindowsusingWMI-Monitoringspecificsystemservice)
-- [Troubleshooting and testing](#AgentlessMonitoringofWindowsusingWMI-Troubleshootingandtesting)
-  - [Manually test the check\_wmi\_plus plugin](#AgentlessMonitoringofWindowsusingWMI-Manuallytestthecheck_wmi_plusplugin)
-  - [Configure WMI account information](#AgentlessMonitoringofWindowsusingWMI-ConfigureWMIaccountinformation)
-- [Configure remote WMI access in Windows](#AgentlessMonitoringofWindowsusingWMI-ConfigureremoteWMIaccessinWindows)
-  - [Create a new user](#AgentlessMonitoringofWindowsusingWMI-Createanewuser)
-  - [Change user settings](#AgentlessMonitoringofWindowsusingWMI-Changeusersettings)
-  - [Grant privileges to WMI](#AgentlessMonitoringofWindowsusingWMI-GrantprivilegestoWMI)
-- [How does it look like in monitor?](#AgentlessMonitoringofWindowsusingWMI-Howdoesitlooklikeinmonitor?)
+- [Agentless Monitoring of Windows using WMI](#agentless-monitoring-of-windows-using-wmi)
+  - [Introduction](#introduction)
+  - [Contents](#contents)
+  - [Information about WMI](#information-about-wmi)
+    - [What is WMI?](#what-is-wmi)
+    - [Why should I use WMI?](#why-should-i-use-wmi)
+  - [Prerequisites](#prerequisites)
+  - [Start monitoring](#start-monitoring)
+    - [Add a new host using Management packs](#add-a-new-host-using-management-packs)
+    - [**Usage examples**](#usage-examples)
+      - [Monitoring all system services](#monitoring-all-system-services)
+      - [Monitoring specific system service](#monitoring-specific-system-service)
+  - [Troubleshooting and testing](#troubleshooting-and-testing)
+    - [Manually test the check\_wmi\_plus plugin](#manually-test-the-checkwmiplus-plugin)
+    - [Configure WMI account information](#configure-wmi-account-information)
+  - [Configure remote WMI access in Windows](#configure-remote-wmi-access-in-windows)
+    - [Create a new user](#create-a-new-user)
+    - [Change user settings](#change-user-settings)
+    - [Grant privileges to WMI](#grant-privileges-to-wmi)
+  - [How does it look like in monitor?](#how-does-it-look-like-in-monitor)
+- [OP5 Monitor: Open Source Network Monitoring](#op5-monitor-open-source-network-monitoring)
 
 [OP5 Monitor: Open Source Network Monitoring](#AgentlessMonitoringofWindowsusingWMI-OP5Monitor:OpenSourceNetworkMonitoring)
 
@@ -56,9 +58,15 @@ WMI is Microsoft’s implementation of the Web-Based Enterprise Management ([WBE
 ### Add a new host using Management packs
 
 1. Go to Configure -\> Host Wizard
-    ![](images/688602/12386399.png)
+
+![](images/688602/12386399.png) \
+
+
 2. Select the management pack "Microsoft Windows Server via WMI" and enter the credentials for a user with WMI query privileges
-    ![](images/688602/12386400.png)
+
+![](images/688602/12386400.png) \
+
+
 3. Click the **Next** button
 4. Enter host name and IP address and click **Next**
 5. Click on **Save configuration and view hosts**
@@ -152,14 +160,16 @@ We create a new user and after that we will give the user access to do remote WM
 - Check ‘Password never expires’
 - Click ‘Create’
 
-![](images/688602/5242999.png)
+![](images/688602/5242999.png) \
+
 
 ### Change user settings
 
 - Edit the user just created and go to the tab ‘Members of’
 - Click add and add the group ‘Distributed COM Users’
 
-![](images/688602/5243000.png)
+![](images/688602/5243000.png) \
+
 
 - Click ‘OK’
 - Also add the group ‘Perfomance log users’
@@ -172,7 +182,8 @@ We create a new user and after that we will give the user access to do remote WM
 - Go to File -\> Add/Remove Snap-in…’
 - Add ‘WMI Control’ for the local computer
 
-![](images/688602/5243001.png)
+![](images/688602/5243001.png) \
+
 
 - Click ‘OK’
 - Right-click on ‘WMI Control (local)’ in the right hand list and select ‘Properties’
@@ -183,13 +194,15 @@ We create a new user and after that we will give the user access to do remote WM
   - Enable Account
   - Remote Enable
 
-![](images/688602/5243002.png)
+![](images/688602/5243002.png) \
+
 
 - Click on ‘Advanced’
 - Select the WMI user and click on ‘Edit’
 - Select to apply this to ‘This namespace and subnamespaces’
 
-![](images/688602/5243003.png)
+![](images/688602/5243003.png) \
+
 
 - Click ‘OK’ four times.
 
@@ -197,7 +210,8 @@ Done!
 
 ## How does it look like in monitor?
 
-![](images/688602/10190873.png)
+![](images/688602/10190873.png) \
+
 
 Read more
 
@@ -207,7 +221,3 @@ Read more
 # OP5 Monitor: Open Source Network Monitoring
 
 [OP5 ](https://www.op5.com/)is the preferred Open Source Networking & Server Monitoring tool for large multi-national companies in over 60 markets. If you would like to experience OP5 Monitor you can get started here, alternatively, if you prefer to get more hands on you can Download OP5 Monitor for free.
-
-### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
-
-[![](images/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
