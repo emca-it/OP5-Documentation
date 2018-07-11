@@ -9,7 +9,9 @@ Of course you can also use this dokuwiki to save other kind of related informati
 
 To edit an existing page, go to the page you want to edit and select 'Edit this page' in the top right corner.
  A backup of the previous page will automatically be created.
- ![](attachments/16482323/16679250.png)
+
+![](images/16482323/16679250.png) \
+
 
 ## Formatting a wiki page
 

@@ -6,8 +6,10 @@ The purpose of this article is to give the reader a high-level overview of how O
 It will cover the different components of the product and how they interact with each other.
 
 ## Overview
+*
+![](images/16482360/17269437.png) \
 
-*![](attachments/16482360/17269437.png)
+
 This illustration is a simplified version of the components relationships*
 
 ## Components

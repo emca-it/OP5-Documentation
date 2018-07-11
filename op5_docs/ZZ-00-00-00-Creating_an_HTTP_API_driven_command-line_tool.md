@@ -63,7 +63,8 @@ To start of this article we will check what is required to submit a passive chec
 
 This will show you the HTTP API help page for submitting a passive check result for services (see image), looking down at the page you are supplied with multiple examples but we will look at the command line cURL example which looks like the following command
 
-![](attachments/14648649/14778467.png)
+![](images/14648649/14778467.png) \
+
 
 ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
 curl -u '<your username>:<your password>' -H 'content-type: application/json' -d '{"host_name":"string","status_code":"int","plugin_output":"string"}' 'https://<your monitor host>/api/command/PROCESS_SERVICE_CHECK_RESULT'
@@ -526,4 +527,4 @@ This script is unsupported by op5, if you find errors it should be reported as s
 
 op5 Remote Source
 
-Download: [op5remote.tar.gz](attachments/14648649/14778471.gz)
+Download: [op5remote.tar.gz](images/14648649/14778471.gz)

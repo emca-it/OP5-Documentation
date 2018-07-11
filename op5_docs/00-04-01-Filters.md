@@ -9,12 +9,16 @@ Filters can be applied on listviews. All listview content is based on filters, s
 
 To edit a filter, click on the filter icon in the listview
 
-![](attachments/16482332/18481371.png)
+![](images/16482332/18481371.png) \
+
+
 You can either edit the filter manually or graphically. When editing a filter graphically the manual string is automatically shown. We will focus on the graphical design of filters.
 
 ## Filter categories
 
-![](attachments/16482332/18481372.png)
+![](images/16482332/18481372.png) \
+
+
 There are many different filter categories to choose from, depending on what type of information you want to consume.
 You can base your filter on sources like
 
@@ -63,21 +67,25 @@ These can also be used in combination, for example
 Here we will list all services that are notifying to contact-group "support-group" and is a member of the hostgroup "network".
 Manual Input: [services] contact\_groups \>= "support-group" and groups \>= "network"
 
-![](attachments/16482332/18481373.png)
+![](images/16482332/18481373.png) \
+
 
 ### Example 2
 
 In this example we will list all services that uses the check command "check\_tcp"
 Manual Input: [services] check\_command \~\~ "check\_tcp"
 
-![](attachments/16482332/18481374.png)
+![](images/16482332/18481374.png) \
+
 
 ### Example 3
 
 Here we would like to list all services that contains the description "www" and is not located on the vmware host "vmware1-sth". (For this to work parent/child relationships must have been set)
 Manual input: [services] description \~\~ "www" and not (host.parents \>= "vmware1-sth")
 
-![](attachments/16482332/18481375.png)
+![](images/16482332/18481375.png) \
+
+
 Note that we use the **negate** (not) option on the host.parents rule.
 
 ### Example 4
@@ -85,25 +93,33 @@ Note that we use the **negate** (not) option on the host.parents rule.
 In this example we filter for syslog messages with error or warning severity, received in the last two minutes.
 Manual input: [syslog] severity \<= 4 and rtime \>= date("2 minutes ago")
 
-![](attachments/16482332/18481376.png)
+![](images/16482332/18481376.png) \
+
 
 ## Save filters
 
 To save a filter, you need to enter a name and click on **save filter** in the filter dialog.
 
-![](attachments/16482332/18481377.png)
+![](images/16482332/18481377.png) \
+
+
 To make the filter global, accessible for everyone, select **Make global** before you save the filter.
 Save filters are accessible from the main menu of the type the filter was defined as (i.e. host filter are located under Monitoring -\> Hosts).
 
-![](attachments/16482332/18481378.png)
+![](images/16482332/18481378.png) \
+
 
 ## Remove filters
 
 Remove a saved filter by selecting **Manage filters** from the Manage -\> Manage filters menu.
 
-![](attachments/16482332/18481379.png)
+![](images/16482332/18481379.png) \
+
+
 Use the delete icon behind the filter that you would like to remove.
-![](attachments/16482332/18481385.png)
+
+![](images/16482332/18481385.png) \
+
 
 ## Related pages
 
