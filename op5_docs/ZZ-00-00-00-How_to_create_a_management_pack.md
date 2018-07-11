@@ -6,7 +6,7 @@ A management pack is essentially a group of services connected to a hostgroup wi
 
 The benefit with using management packs is that the monitoring will be more homogeneous.
 
-![](attachments/4653645/5242926.png)
+![](images/4653645/5242926.png)
 
 The picture below shows how management packs integrates into OP5 Monitor.
 
@@ -18,7 +18,7 @@ After the hostgroup with services has been created the hostgroup can be converte
 
 To create a new management pack from a hostgroup go to Management Packs in the configuration.
 
-![](attachments/4653645/5242927.png)
+![](images/4653645/5242927.png)
 
 1. Enter a name for the management pack.
 2. Select which hostgroup that should be used for the management pack.
@@ -27,7 +27,7 @@ To create a new management pack from a hostgroup go to Management Packs in the
 
 It is also possible to add custom variables, these can be used for information that needs to be entered when using the host wizard. Such as username, password and SNMP community names.
 
-![](attachments/4653645/5242928.png)
+![](images/4653645/5242928.png)
 
 In this example we create a management pack for HP Servers with one custom variable for SNMP community name.
 
@@ -61,7 +61,7 @@ To activate a management pack go to Management Pack Management in the configura
 
 Click on **Activate** to activate a management pack.
 
-![](attachments/4653645/5242929.png)
+![](images/4653645/5242929.png)
 
 Force Activate will override any management pack with the same name.
 
@@ -69,11 +69,11 @@ Force Activate will override any management pack with the same name.
 
 To import a management pack from a json-file go to Management Pack Management.
 
-![](attachments/4653645/5242930.png)
+![](images/4653645/5242930.png)
 
 Click on Choose File to select the json-file that should be imported.
 
-![](attachments/4653645/5242931.png)
+![](images/4653645/5242931.png)
 
 Click on Upload json file to import the management pack.
 
@@ -83,8 +83,8 @@ Export management packs makes it possible to share your management pack with oth
 
 Go to Management Pack Management under configuration.
 
-![](attachments/4653645/5242933.png)
+![](images/4653645/5242933.png)
 
 Click on Export on the management pack to export this to a json-file. The file will be downloaded to you computer.
 
-![](attachments/4653645/5242934.png)
+![](images/4653645/5242934.png)

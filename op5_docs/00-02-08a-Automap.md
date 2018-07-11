@@ -10,10 +10,10 @@ Defaultroot tells Nagvis what host to start your tree with.
 
 Example of how the defaultroot works in NagVis Automap
  In this example we have the following tree in OP5 Monitor.
- ![](attachments/16482342/16678964.png)
+ ![](images/16482342/16678964.png)
  Here the **demo** host is set to **defaultroot** and all of its children are displayed.
  If you set the host **switch1-gbg** as **defaultroot** in Nagvis the automap only display **switch1-gbg** and it's children (**environment-gbg** and **printer-gbg**). The picture below shows how it would look like:*
-* ![](attachments/16482342/16678970.png)
+* ![](images/16482342/16678970.png)
 
 ## Setting defaultroot
 
@@ -23,7 +23,7 @@ This is done when you have one of the maps in Edit mode. There is no Edit mode o
 
 1. Open Nagvis.
 2. Go to the top menu and choose: **Option -\> General Configuration**
-    ![](attachments/16482342/16678969.png)
+    ![](images/16482342/16678969.png)
 3. In the **Automap** section and type in the complete host name in the "defaultroot" text box:
-    ![](attachments/16482342/16678967.png)
+    ![](images/16482342/16678967.png)
 4. Click **Save** and the new setting has been saved.

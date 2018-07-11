@@ -117,7 +117,7 @@ The LDAP protocol version to use. Almost everyone will keep this at 3.
 
 ## Example configuration for Active Directory
 
-![](attachments/16482392/16679170.png)
+![](images/16482392/16679170.png)
 
 Server:`ldap.example.com`
  Port:

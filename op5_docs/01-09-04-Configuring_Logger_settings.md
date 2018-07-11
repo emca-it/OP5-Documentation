@@ -7,7 +7,7 @@ The Logger configuration page allows you to tweak storage settings, log rotation
 ## Configuration
 
 To access the Logger configuration go to the configuration page and click on **Logger Configuration**
-![](attachments/16482382/16679128.png)
+![](images/16482382/16679128.png)
 
 In Logger configuration you can configure
 
@@ -19,7 +19,7 @@ In Logger configuration you can configure
 Logs are rotated out from the database when they reach a certain age.
 This can be configured using the **Keep in database** option.
 
-![](attachments/16482382/16679127.png)
+![](images/16482382/16679127.png)
 
 The default database retention setting is 192 hours (=8 days). This should be sufficiently short to not require too much disk space, while keeping enough data to evaluate Logger and decide on storage requirements and suitable retention times. The OP5 Monitor machine might run out of disk if many log messages are received. The OP5 Monitor self-monitoring (enabled by default on new installations) will warn if the server is running out of disk space.
 
@@ -28,7 +28,7 @@ The default database retention setting is 192 hours (=8 days). This should be su
 A log archive can be set to store the logs in. The archive will not have any retention time.
 To enable log archive check the **Archive logs** checkbox and specify an absolut **storage path** on the OP5 Monitor server.
 **
-![](attachments/16482382/16679126.png)
+![](images/16482382/16679126.png)
 **In the default configuration archiving is disabled, this is to avoid filling up disk space on the OP5 Monitor server.
 
 We recommend to configure a remote storage for the archive, both for security reasons in case of hardware failure and for storage reasons.

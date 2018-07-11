@@ -7,35 +7,35 @@ The authorization is set under **Group rights** under configuration.
 ## Group rights
 
 Authorizations are only set on group(s). When an authorization point is hovered a tooltip will appear explaining what the setting does and the corresponding group and setting will be highlighted
- ![](attachments/16482400/19235286.png)
+ ![](images/16482400/19235286.png)
 
 ### Expand/Contract authorization categories
 
-The authorization categories are contracted by default. You can either choose to expand or contract all categories simultaneously by clicking the **Expand All** and **Contract All** buttons ![](attachments/16482400/19235295.png)
+The authorization categories are contracted by default. You can either choose to expand or contract all categories simultaneously by clicking the **Expand All** and **Contract All** buttons ![](images/16482400/19235295.png)
  or expand or contract them individually by clicking the +/- sign underneath each category.
- ![](attachments/16482400/19235290.png)
+ ![](images/16482400/19235290.png)
 
 ### Select/Deselect all rights
 
 To select or de-select all the rights in a group of rights, for example "Host" check the checkbox below the group of rights that you would like to add or remove.
-![](attachments/16482400/19235292.png)
+![](images/16482400/19235292.png)
  The minus sign ![(minus)](images/icons/emoticons/forbidden.png) in the checkbox means that the group of rights is partially selected. Some rights in the group are checked.
- ![](attachments/16482400/19235291.png)
+ ![](images/16482400/19235291.png)
 
 ### Lookup user
 
 You can find out which groups a user is a member of by entering a username in the Lookup user text box and clicking the Lookup button.
- ![](attachments/16482400/19235288.png)
+ ![](images/16482400/19235288.png)
  The groups that the user is a member will be highlighted and the authentication driver that they belong to will be indicated with an **X**.
-![](attachments/16482400/19235287.png)
+![](images/16482400/19235287.png)
  You will also get a list of additional groups the user is a member of underneath the Lookup user text box. An empty search string will hide the list and remove the highlights.
 
 ### Filter groups
 
 By adding a filter text in the Filter groups text box and clicking Filter groups you can set a filter on the visible groups.
-![](attachments/16482400/19235293.png)
+![](images/16482400/19235293.png)
  Wildcard characters are neither supported nor needed. For example the filter strings "ad", "a" and "min" will all match a group called "admins".
-![](attachments/16482400/19235294.png)
+![](images/16482400/19235294.png)
  An empty filter string will reset the filter.
 
 ### Add, delete, rename groups

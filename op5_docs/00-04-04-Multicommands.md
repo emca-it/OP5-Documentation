@@ -42,18 +42,18 @@ In this example we will send acknowledgements to multiple services.
 ### Execute multiple commands
 
 Open up **Unhandled problems** filter under the filter menu.
- ![](attachments/16482308/18481407.png)
+ ![](images/16482308/18481407.png)
 
 Select the services problems you like to acknowledge.
 
 Click the **Send multi action** icon below the search field.
 
-![](attachments/16482308/18481410.png)
+![](images/16482308/18481410.png)
 The multi action menu is located on top of every listview, on the far right side of the screen.
 
  Chose **Acknowledge Problem** in the **Multi action** menu.
- ![](attachments/16482308/18481409.png)
+ ![](images/16482308/18481409.png)
 
 Type in a comment and click **Submit**.
 
-![](attachments/16482308/18481411.png)
+![](images/16482308/18481411.png)
