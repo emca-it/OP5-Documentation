@@ -56,9 +56,9 @@ WMI is Microsoft’s implementation of the Web-Based Enterprise Management ([WBE
 ### Add a new host using Management packs
 
 1. Go to Configure -\> Host Wizard
-    ![](attachments/688602/12386399.png)
+    ![](images/688602/12386399.png)
 2. Select the management pack "Microsoft Windows Server via WMI" and enter the credentials for a user with WMI query privileges
-    ![](attachments/688602/12386400.png)
+    ![](images/688602/12386400.png)
 3. Click the **Next** button
 4. Enter host name and IP address and click **Next**
 5. Click on **Save configuration and view hosts**
@@ -152,14 +152,14 @@ We create a new user and after that we will give the user access to do remote WM
 - Check ‘Password never expires’
 - Click ‘Create’
 
-![](attachments/688602/5242999.png)
+![](images/688602/5242999.png)
 
 ### Change user settings
 
 - Edit the user just created and go to the tab ‘Members of’
 - Click add and add the group ‘Distributed COM Users’
 
-![](attachments/688602/5243000.png)
+![](images/688602/5243000.png)
 
 - Click ‘OK’
 - Also add the group ‘Perfomance log users’
@@ -172,7 +172,7 @@ We create a new user and after that we will give the user access to do remote WM
 - Go to File -\> Add/Remove Snap-in…’
 - Add ‘WMI Control’ for the local computer
 
-![](attachments/688602/5243001.png)
+![](images/688602/5243001.png)
 
 - Click ‘OK’
 - Right-click on ‘WMI Control (local)’ in the right hand list and select ‘Properties’
@@ -183,13 +183,13 @@ We create a new user and after that we will give the user access to do remote WM
   - Enable Account
   - Remote Enable
 
-![](attachments/688602/5243002.png)
+![](images/688602/5243002.png)
 
 - Click on ‘Advanced’
 - Select the WMI user and click on ‘Edit’
 - Select to apply this to ‘This namespace and subnamespaces’
 
-![](attachments/688602/5243003.png)
+![](images/688602/5243003.png)
 
 - Click ‘OK’ four times.
 
@@ -197,7 +197,7 @@ Done!
 
 ## How does it look like in monitor?
 
-![](attachments/688602/10190873.png)
+![](images/688602/10190873.png)
 
 Read more
 
@@ -210,4 +210,4 @@ Read more
 
 ### [Download OP5 Monitor Free](https://www.op5.com/download-op5-monitor/)
 
-[![](attachments/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)
+[![](images/688465/16155433.png)](https://www.op5.com/download-op5-monitor/)

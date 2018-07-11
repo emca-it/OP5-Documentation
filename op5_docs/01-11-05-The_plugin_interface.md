@@ -36,7 +36,7 @@ The performance data is not mandatory but you need it if you want your plugin to
 
 The Status information is the text describing the result in human readable form. The plugin must print the status output to stdout when your plugin is executed.
  You will see it in the Status state information on the Service or Host information page.
-![](attachments/16482419/19235818.png)
+![](images/16482419/19235818.png)
  This text can be anything, you like to use to describe the status situation for your plugin, including HTML.
 
 ## Performance data

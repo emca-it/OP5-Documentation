@@ -6,7 +6,7 @@ Now let us be a bit more hands on. In this section we will take a look at how to
 There are sometimes many ways to do things in OP5 Monitor but we will only show a few examples.
 In the subsections to Managing objects we will assume that you start from the main page of Configure.
 
-![](attachments/16482396/21300106.png)
+![](images/16482396/21300106.png)
 
 ## Before you start
 
@@ -36,9 +36,9 @@ Before we start to add any new contacts we will create a contact template to use
 
 - Click **Contact templates**.
   - Give the contact template a name
-            ![](attachments/16482396/21300172.png)
+            ![](images/16482396/21300172.png)
   - Change **can\_submit\_commands** to yes.
-             ![](attachments/16482396/21300181.png)
+             ![](images/16482396/21300181.png)
             This gives this the user connected to this contact the possibility to execute commands like acknowledge problems etc.
 
 - Click **Submit**.
@@ -49,18 +49,18 @@ Before we start to add any new contacts we will create a contact template to use
 #### To add a contact
 
 - Click **Contacts** on the main page.
-  - Use the template on call template we created in Adding a contact template. ![](attachments/16482396/21300219.png) .
+  - Use the template on call template we created in Adding a contact template. ![](images/16482396/21300219.png) .
   - Type in a contact\_name
-            ![](attachments/16482396/21300201.png)
+            ![](images/16482396/21300201.png)
   - Type in an alias
-             ![](attachments/16482396/21300160.png)
+             ![](images/16482396/21300160.png)
   - Type in the email address
-             ![](attachments/16482396/21300167.png)
+             ![](images/16482396/21300167.png)
   - Click **Submit**.
   - If you want to create access check the "Configure access rights for this contact" box, otherwise save changes
-            ![](attachments/16482396/21300156.png)
+            ![](images/16482396/21300156.png)
   - When Configuring access right for this contact select the access rights the contact should have, after that save the changes.
-            ![](attachments/16482396/21300108.png)
+            ![](images/16482396/21300108.png)
 
 ### Modify a contact
 
@@ -68,7 +68,7 @@ Before we start to add any new contacts we will create a contact template to use
 
 - Click **Contacts** on the main page.
   - Choose the contact you like to modify in the drop down list.
-            ![](attachments/16482396/21300109.png)
+            ![](images/16482396/21300109.png)
   - Click **Go**.
   - In the view you will get only directives differ from the template will be shown. To change the other directives click **Advanced**.
   - Make your modifications and click **Submit**.
@@ -78,10 +78,10 @@ Before we start to add any new contacts we will create a contact template to use
 
 - Click **Contacts** on the main page.
   - Choose the contact you like to modify in the drop down list.
-            ![](attachments/16482396/21300109.png)
+            ![](images/16482396/21300109.png)
   - Click **Go**.
   - Click on **Delete**.
-            ![](attachments/16482396/21300116.png)
+            ![](images/16482396/21300116.png)
   - Click **Save**.
 
 ## Hosts
@@ -102,32 +102,32 @@ In this guide we only describes the directive we will not use the default value 
 
 - Click** Hosts** on the main page.
   - Type in a host\_name.
-             ![](attachments/16482396/21300199.png)
+             ![](images/16482396/21300199.png)
   - Type in an alias.
-             ![](attachments/16482396/21300193.png)
+             ![](images/16482396/21300193.png)
   - Type in the address to the host, IP address is mostly the best choice.
-             ![](attachments/16482396/21300218.png)
+             ![](images/16482396/21300218.png)
   - We assume this is a Microsoft windows server and that NSClient++ has been installed. Check for the following service checks.
 
             When using WMI a administrators account must be selected. It is also possible to create a user with less privileges, see how-to https://kb.op5.com/x/K4IK
 
-  - ![](attachments/16482396/21300216.png)
+  - ![](images/16482396/21300216.png)
   - Click host logo to set the icon that will be displayed for this host in lists and maps.
-            ![](attachments/16482396/21300143.png)
+            ![](images/16482396/21300143.png)
   - Click the icon you like to use.
   - Click **Add services**.
-            ![](attachments/16482396/21300200.png)
+            ![](images/16482396/21300200.png)
 
 #### To add a new host using the new host option - Part 2
 
 - Leave the initial settings All new services will inherit the Initial Service Settings. If you choose not to enter a value for one or more required variable, those variables must be set in the selected template.
              as it is and scroll down to the services.
   - The scan has found out that NSClient++ is installed plus two other services that can be added to this host.
-            ![](attachments/16482396/21300119.png)
+            ![](images/16482396/21300119.png)
   - Check Select All to add all services found or select the one you like to add for this host.
   - Click **Continue to step 3**.
   - Now either click the host or service links or click **Save**.
-            ![](attachments/16482396/21300120.png)
+            ![](images/16482396/21300120.png)
 
 ### Adding hosts with network scan
 
@@ -138,13 +138,13 @@ Network ranges can be specified in a very free form. Each of the four parts of t
 
 - Click **Hosts** on the main page.
   - Click **Network scan**.
-            ![](attachments/16482396/21300121.png)
+            ![](images/16482396/21300121.png)
   - Fill in the desired network range. We will scan for hosts in the range from `172.27.86.8 - 172.27.86.97`
-             ![](attachments/16482396/21300226.png) .
+             ![](images/16482396/21300226.png) .
   - Click **Scan Ranges**.
   - In this case we found Only hosts that aren't previously configured will be listed
              three hosts.
-            ![](attachments/16482396/21300122.png)
+            ![](images/16482396/21300122.png)
   - Repeat To add a new hosts using the new host option - Part 1 for each host, except for the last step. If here is one or more host you do not like to add choose **No** in **Add this host?** When you are finished click **Scan hosts for services**.
   - Repeat To add a new host using the new host option - Part 2 for each host, except for the last step.When you are finished click **Continue to step 3**
   - Click **Save**.
@@ -154,10 +154,10 @@ Network ranges can be specified in a very free form. Each of the four parts of t
 #### To modify a host
 
 - On the start page choose the host you like to modify in the drop down list.
-            ![](attachments/16482396/21300112.png)
+            ![](images/16482396/21300112.png)
   - Click **Go**.
   - In the view you will get only directives differ from the template will be shown. To change the other directives click **Advanced**.
-            ![](attachments/16482396/21300196.png)
+            ![](images/16482396/21300196.png)
   - Make your modifications and click **Submit.**
   - Click **Save**.
 
@@ -166,10 +166,10 @@ Network ranges can be specified in a very free form. Each of the four parts of t
 #### To modify a host
 
 - On the start page choose the host you like to delete in the drop down list.
-            ![](attachments/16482396/21300112.png)
+            ![](images/16482396/21300112.png)
   - Click **Go**.
   - Click **Delete**.
-             ![](attachments/16482396/21300198.png)
+             ![](images/16482396/21300198.png)
   - Click **Delete all affected objects**.
   - Click **Save**.
 
@@ -221,7 +221,7 @@ You may add as many autoscan configuration as you wish. When adding a your netwo
 - Click **Configure** in the main menu.
   - Click **Network Autoscan**.
   - Fill in the **New scan** form
-            ![](attachments/16482396/21300123.png)
+            ![](images/16482396/21300123.png)
   - **Name**: The identifier of this autoscan configuration
   - **IP Range**: In this case a complete C net.
   - **Description**
@@ -237,13 +237,13 @@ In certain ranges you are scanning with the network autoscan there might be host
 - Click **Configure** in the main menu.
   - Click **Network Autoscan**.
   - Add a host (IP address) in the **Host** field
-            ![](attachments/16482396/21300124.png)
+            ![](images/16482396/21300124.png)
   - Click **Add**.
 
 ### The result
 
 After the networks scan has been executed a small result will be shown in the upper left corner of the OP5 Monitor GUI
- ![](attachments/16482396/21300230.png)
+ ![](images/16482396/21300230.png)
  To add the hosts that has been found you only need to click on the text to the right of the icon. You will then come to the Add new host wizard the same as when you have done a manual network scan.
 
 ## Services
@@ -265,21 +265,21 @@ We will take a look at the **add service for this host.**
 #### To add a service using add service for this host
 
 - On the start page choose the host you like to add a new service to in the drop down list.
-            ![](attachments/16482396/21300112.png)
+            ![](images/16482396/21300112.png)
   - Click **Go**.
   - Click **Services for host...**.under related items menu to the right.
-            ![](attachments/16482396/21300130.png)
+            ![](images/16482396/21300130.png)
             The add new service pages is shown.
   - Type in a service\_description.
-            ![](attachments/16482396/21300149.png)
+            ![](images/16482396/21300149.png)
   - We will use the check\_nt\_cpuload command for this service.Type in as many characters you need in the filter by regular expression field until the command shows up.
-            ![](attachments/16482396/21300135.png)
+            ![](images/16482396/21300135.png)
   - Click **Syntax help** to see what arguments are needed for this command.
-            ![](attachments/16482396/21300131.png)
+            ![](images/16482396/21300131.png)
             You can see that we have a macro called **\$ARG1\$**. This is the first, and in this case the only, argument we need to give to this command.
   - Click **Syntax help** again to hide the help text.
   - Type in the argument If more than one the shall be separated by a ! like this: argone!argtwo..
-             ![](attachments/16482396/21300177.png)
+             ![](images/16482396/21300177.png)
   - Click **Submit**.
   - Click the **Save** icon.
 
@@ -291,15 +291,15 @@ If the arguments include an exclamation mark "!" this has to be escaped with an 
 #### To modify a service
 
 - On the start page choose the host you like to modify a service on in the drop down list.
-            ![](attachments/16482396/21300112.png)
+            ![](images/16482396/21300112.png)
   - Click **Go**.
   - Click **Services for host ...** .
-             ![](attachments/16482396/21300221.png)
+             ![](images/16482396/21300221.png)
   - Choose the service you like to modify in the drop down list.
-            ![](attachments/16482396/21300113.png)
+            ![](images/16482396/21300113.png)
   - Click **Go**.
   - In the view you will get only directives differ from the template will be shown. To change the other directives click **Advanced**.
-             ![](attachments/16482396/21300229.png)
+             ![](images/16482396/21300229.png)
   - Make your modifications and click **Submit**.
   - Click **Save**.
 
@@ -312,20 +312,20 @@ If the arguments include an exclamation mark "!" this has to be escaped with an 
 
 - Pick up the service you like to test as it is done in Modifying a service.
   - Click **Test this check**, at the bottom of the page.
-            ![](attachments/16482396/21300183.png)
+            ![](images/16482396/21300183.png)
   - The output looks like the one below. If you get any errors it will be shown here in the output
-            ![](attachments/16482396/21300174.png)
+            ![](images/16482396/21300174.png)
   - Click **Hide check** to hide the output.
 
 #### To test a hostgroup check
 
 - Pick up the service you like to test as it is done in Modifying a service.
 - Select the host that you would like the test to run on from the drop down menu.
-    ![](attachments/16482396/21300136.png)
+    ![](images/16482396/21300136.png)
 - Click **Test this check**, at the bottom of the page.
-    ![](attachments/16482396/21300183.png)
+    ![](images/16482396/21300183.png)
 - The output looks like the one below. If you get any errors it will be shown here in the output
-    ![](attachments/16482396/21300174.png)
+    ![](images/16482396/21300174.png)
 - Click **Hide check** to hide the output.
 
 ### Deleting a service
@@ -333,14 +333,14 @@ If the arguments include an exclamation mark "!" this has to be escaped with an 
 #### To delete a service
 
 - On the start page choose the host you like to delete a service from in the drop down list.
-            ![](attachments/16482396/21300112.png)
+            ![](images/16482396/21300112.png)
   - Click **Go**.
   - Click **Services for host ...** .
-             ![](attachments/16482396/21300221.png)
+             ![](images/16482396/21300221.png)
   - Choose the service you like to delete in the drop down list.
-            ![](attachments/16482396/21300113.png)
+            ![](images/16482396/21300113.png)
   - Click **Delete**.
-             ![](attachments/16482396/21300148.png)
+             ![](images/16482396/21300148.png)
   - Click **Save**.
 
 ### Scanning host for network services
@@ -355,7 +355,7 @@ When you [added your host](#Managingobjects-to-add-part1) you had the opportuni
   - Click either the host or service link to go back to the place where you started.
   - Click **Save**.
 
-**Additional information**: In a distributed environment a selectbox will appear when hovering over the menu item "Scan host for network services" where you can select from which OP5 Monitor system that should preform the scan. ![](attachments/16482396/21300220.png)
+**Additional information**: In a distributed environment a selectbox will appear when hovering over the menu item "Scan host for network services" where you can select from which OP5 Monitor system that should preform the scan. ![](images/16482396/21300220.png)
 
 ### Scanning a host for snmp interfaces
 
@@ -369,7 +369,7 @@ In many times when you are about to monitor a switch or a router you need to set
   - Set the SNMP community.
   - Chose SNMP version.
   - Click **Scan host**.
-            ![](attachments/16482396/21300125.png)
+            ![](images/16482396/21300125.png)
   - Select the services you like to add.
   - Click either the host or the service link to get back.
   - Click **Add selected services**.
@@ -398,9 +398,9 @@ With OP5 Monitor you do not need to do anything more than make sure the latest a
 - Open up the host, in **Configure**, you like to add new services on.
   - Click **Scan host for Windows Services**.
   - Choose which server to preform the scan:
-             ![](attachments/16482396/21300145.png)
+             ![](images/16482396/21300145.png)
   - Select the Windows Services you like to add as a new service in OP5 Monitor.
-            ![](attachments/16482396/21300134.png)
+            ![](images/16482396/21300134.png)
   - Give the new service a **Service description**.
   - Click **Add Selected Services**.
   - Click either the service link or the **Scan for more service** button.
@@ -427,28 +427,28 @@ To scan a host for WMI-counters and services upon adding the host to your OP5 Mo
   - Click on **New Hosts**
   - Enter the information about the host
   - Select the checkbox **Add WMI
-            ** ![](attachments/16482396/21300224.png)
+            ** ![](images/16482396/21300224.png)
   - Enter username and password
   - Press **Add Services
-            ** ![](attachments/16482396/21300194.png)
+            ** ![](images/16482396/21300194.png)
   - Select the services you wish to add from the list
-             ![](attachments/16482396/21300168.png) :
+             ![](images/16482396/21300168.png) :
 
 - Press **Finish
-            ** ![](attachments/16482396/21300166.png) at the end of the page.
+            ** ![](images/16482396/21300166.png) at the end of the page.
 
 The host is added and you can save your configuration.
- ![](attachments/16482396/21300164.png)
+ ![](images/16482396/21300164.png)
 
 - Press **Save** in the top right corner
-            ![](attachments/16482396/21300214.png)
+            ![](images/16482396/21300214.png)
   - Review your changes then by clicking on **More info** press **Save objects I have change**d
-            ![](attachments/16482396/21300165.png)
+            ![](images/16482396/21300165.png)
 
 After this the configuration will be saved and i final preflight configuration check has been performed.
- ![](attachments/16482396/21300204.png)
+ ![](images/16482396/21300204.png)
  Your configuration is saved and the host and its services are ready to be monitored.
-![](attachments/16482396/21300140.png)
+![](images/16482396/21300140.png)
 
 ## Custom Variables
 
@@ -483,9 +483,9 @@ Custom variables can be used to store custom information for hosts, services and
 ### Creating a new custom variable
 
 Go to the configuration for a host, service or contact and click on **add custom variable**.
-![](attachments/16482396/21300209.png)
+![](images/16482396/21300209.png)
  Enter a variable name and the value of the variable. Note that the prefix underscore and conversion to upper case is done automatically.
- ![](attachments/16482396/21300190.png)
+ ![](images/16482396/21300190.png)
  Click on **submit** and save the configuration.
 
 ### Example
@@ -497,7 +497,7 @@ Instead of using the SNMP community name hardcoded in the check command or in th
  Enter the name of your SNMP community as a value. Let's say for this example that the community name is "qwerty"
  Change the command argument of the command argument from "`qwerty!2!100mbit!70!90`" to "`$_SERVICESNMP_COMMUNITY$!2!100mbit!70!90`"
 
-![](attachments/16482396/21300105.png)
+![](images/16482396/21300105.png)
  Click on **submit** and save the configuration.
 
 ## Dynamic Button
@@ -551,42 +551,42 @@ In this guide we will add a small escalation chain that does the following
 #### To add a host escalation
 
 - On the **Edit Host** page, choose the host you like to add an escalation to in the drop down list.
-            ![](attachments/16482396/21300112.png)
+            ![](images/16482396/21300112.png)
   - Click **Go**.
   - Click **Escalations**.
-            ![](attachments/16482396/21300192.png)
+            ![](images/16482396/21300192.png)
   - Add the escalation number one.
   - Choose the contact group that shall have the notification.
-            ![](attachments/16482396/21300110.png)
+            ![](images/16482396/21300110.png)
   - Set the start number in the escalation chain.
-             ![](attachments/16482396/21300151.png)
+             ![](images/16482396/21300151.png)
   - Set the end number in the escalation chain If the start number is 1 and the end number is two it means that the first and the second notification will be handled by this escalation.
-             . ![](attachments/16482396/21300173.png)
+             . ![](images/16482396/21300173.png)
   - Set the notification interval which is the number of minutes to wait to the next notification.
-             ![](attachments/16482396/21300155.png)
+             ![](images/16482396/21300155.png)
   - Choose the time period when this escalation will be in use.
-            ![](attachments/16482396/21300142.png)
+            ![](images/16482396/21300142.png)
   - Choose what states this escalation will be valid for.
-            ![](attachments/16482396/21300132.png)
+            ![](images/16482396/21300132.png)
             In this case we do not use the escalation for unreachable or recovery which means that unreachable and recovery notifications will be sent to the contact group set on the host.
   - Click **Submit**.
   - Choose Add new host escalation
-            ![](attachments/16482396/21300127.png)
+            ![](images/16482396/21300127.png)
   - Click **Go**.
   - Add the escalation number two.
   - Choose the contact group that shall have the notification.
-            ![](attachments/16482396/21300111.png)
+            ![](images/16482396/21300111.png)
   - Set the start number in the escalation chain.
-             ![](attachments/16482396/21300202.png)
+             ![](images/16482396/21300202.png)
   - Set the end number in the escalation chain We have set the first notification and the last notification to 2 because this escalation will only be used once.
-             . ![](attachments/16482396/21300223.png)
+             . ![](images/16482396/21300223.png)
   - Set the notification interval which is the number of minutes to wait to the next notification.
-             ![](attachments/16482396/21300186.png) The escalation interval is set to 0 because there will be no more escalations when this one is done.
+             ![](images/16482396/21300186.png) The escalation interval is set to 0 because there will be no more escalations when this one is done.
 
 - Choose the time period when this escalation will be in use.
-            ![](attachments/16482396/21300217.png)
+            ![](images/16482396/21300217.png)
   - Choose what states this escalation will be valid for.
-            ![](attachments/16482396/21300132.png)
+            ![](images/16482396/21300132.png)
             In this case we do not use the escalation for unreachable or recovery which means that unreachable and recovery notifications will be sent to the contact group set on the host.
   - Click **Submit**.
   - Click **Save**.
@@ -596,12 +596,12 @@ In this guide we will add a small escalation chain that does the following
 #### To modify a host escalation
 
 - On the start page choose the host you like to modify an escalation on in the drop down list.
-            ![](attachments/16482396/21300112.png)
+            ![](images/16482396/21300112.png)
   - Click **Go**.
   - Click **Escalations**.
-            ![](attachments/16482396/21300169.png)
+            ![](images/16482396/21300169.png)
   - Choose the escalation you like to modify.
-             ![](attachments/16482396/21300197.png)
+             ![](images/16482396/21300197.png)
   - Click **Go**.
   - Make the modifications you like to do and click **Submit**.
   - Click **Save**.
@@ -611,15 +611,15 @@ In this guide we will add a small escalation chain that does the following
 #### To delete a host escalation
 
 - On the start page choose the host you like to delete an escalation from in the drop down list.
-            ![](attachments/16482396/21300112.png)
+            ![](images/16482396/21300112.png)
   - Click **Go**.
   - Click **Escalations**.
-             ![](attachments/16482396/21300171.png)
+             ![](images/16482396/21300171.png)
   - Choose the escalation you like to modify.
-            ![](attachments/16482396/21300231.png)
+            ![](images/16482396/21300231.png)
   - Click **Go**.
   - Click **Delete**.
-             ![](attachments/16482396/21300198.png)
+             ![](images/16482396/21300198.png)
   - Click **Save**.
 
 ## Access rights and contacts
@@ -643,14 +643,14 @@ To be able to login to OP5 Monitor you need to have a user, described in Local u
 A management pack is essantially a group of services connected to a hostgroup with the possibility to add custom variables. These are then used by the Host Wizard.
  The benefit with using management packs is that the monitoring will be more homogenous.
  The picture below shows how management packs integrates into OP5 Monitor.
- ![](attachments/16482396/21300144.png)
+ ![](images/16482396/21300144.png)
 
 ### Creating management packs
 
 To create a management pack a hostgroup must be created and the services that should be included in the management pack should be added to that hostgroup. See Services on Host groups on page Groups for more information.
  After the hostgroup with services has been created the hostgroup can be converted into a management pack.
  To create a new management pack from a hostgroup go to **Management Packs** in the configuration.
-![](attachments/16482396/21300178.png)
+![](images/16482396/21300178.png)
 
 - Enter a name for the management pack.
   - Select whitch hostgroup that should be used for the management pack.
@@ -658,7 +658,7 @@ To create a management pack a hostgroup must be created and the services that sh
   - Enter a description.
 
 It is also possible to add custom variables, these can be used for information that needs to be entered when using the host wizard. Such as username, password and SNMP community names.
- ![](attachments/16482396/21300188.png)
+ ![](images/16482396/21300188.png)
  In this example we create a management pack for HP Servers with one custom variable for SNMP community name.
  Click on **Submit** to save the management pack.
 
@@ -679,23 +679,23 @@ The hostgroup fruits includes the hostgroup '`apples`'.
 
 Management packs that is not created by the user, provided by OP5 or a third party, needs to be activeted.
  To activate a management pack go to **Mangement Pack Management** in the configuration.
- ![](attachments/16482396/21300187.png)
+ ![](images/16482396/21300187.png)
  Click on **Activate** to activate a management pack.
-![](attachments/16482396/21300208.png)
+![](images/16482396/21300208.png)
  **Force Activate** will override any management pack with the same name.
 
 ### Import Management Packs
 
 To import a management pack from a json-file go to Management Pack Management.
-![](attachments/16482396/21300176.png)
+![](images/16482396/21300176.png)
  Click on **Choose File** to select the json-file that should be imported.
-![](attachments/16482396/21300154.png)
+![](images/16482396/21300154.png)
  Click on **Upload json file** to import the management pack.
 
 ### Export Management Packs
 
 Export management packs makes it possible to share your management pack with others or upload it to another OP5 Monitor server.
  Go to Mangement Pack Mangement under configuration.
- ![](attachments/16482396/21300153.png)
+ ![](images/16482396/21300153.png)
  Click on Export on the management pack to export this to a json-file. The file will be downloaded to you computer.
-![](attachments/16482396/21300212.png)
+![](images/16482396/21300212.png)

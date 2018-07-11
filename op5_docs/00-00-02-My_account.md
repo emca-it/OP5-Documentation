@@ -6,7 +6,7 @@ The **My Account** page is the place to change various settings for the currentl
 
 From here, the account password can be changed, the pagination behavior changed, and the list refresh rate can be set along with various other settings.
 
-![](attachments/16482337/23792990.png)
+![](images/16482337/23792990.png)
 
 There are two parts to the **My Account** page.
 
@@ -21,17 +21,17 @@ The *Settings* list is where various user accessible settings can be tuned or e
 
 1. Hover over the account avatar/account name on the left hand side of the OP5 Monitor Toolbar to reveal a drop down menu.
 2. Click on *My Account* from the drop down menu to open the **My Account** page. (Red box in the screenshot.)
-    ![](attachments/16482337/23792988.png)
+    ![](images/16482337/23792988.png)
 
 ## Changing account password
 
 1. Click on the *Change Password* link to open the **Change Password** page.
 
-![](attachments/16482337/23792989.png)
+![](images/16482337/23792989.png)
 
 2. Once the **Change Password** page appears, enter the current account password in the Current Password field. (Red box in the screenshot.)
 
-![](attachments/16482337/23792987.png)
+![](images/16482337/23792987.png)
 
 3. Next, enter the new password in the New Password field. (Green box in the screenshot.)
 
@@ -41,17 +41,17 @@ The *Settings* list is where various user accessible settings can be tuned or e
 
 - A green banner will be displayed if successful.
 
-![](attachments/16482337/23792986.png)
+![](images/16482337/23792986.png)
 
 - A red banner will be displayed indicating the problem if unsuccessful.
 
-![](attachments/16482337/23792984.png)
+![](images/16482337/23792984.png)
 
-![](attachments/16482337/23792985.png)
+![](images/16482337/23792985.png)
 
 6. Click on the Account Settings link to return to the **Account Settings** page, or return via the back feature of the browser.
 
-![](attachments/16482337/23792983.png)
+![](images/16482337/23792983.png)
 
 ## Pagination
 

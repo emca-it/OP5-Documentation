@@ -4,7 +4,7 @@
 
 Listviews are all views that lists host, services, hostgroups etc.
 
-![](attachments/16482333/19235821.png)
+![](images/16482333/19235821.png)
 The content of listviews is selected by the use of filters, see [Filters](Filters).
 
 A listview is divided into two parts - the first is a top banner that contains a summary of the content in the listview, and the second contains the list items themselves, together with their properties. This documentation page covers the most common usage of values that can be used in the listview filter language. For a full list of the columns, please see the page [Listview filter columns](https://kb.op5.com/display/GUI/Listview+filter+columns)
@@ -25,20 +25,20 @@ The following views, or tables, uses listviews:
 
 Every user can choose which columns to display in listviews. The columns can be specified under **My Account** in the **Profile** menu, by hovering your username.
 
-![](attachments/16482333/19235828.png)
+![](images/16482333/19235828.png)
 The user can specify a set of columns to display on a per-table basis, all of the tables can have their own set of columns.
 
 To change which columns to show in a table, you change the text "default" to a list of the columns that you want to see.
 
-![](attachments/16482333/19235822.png)
+![](images/16482333/19235822.png)
  For example if you would like to view only Status, Host name, Service name and the state in the service-view, you need to enter:
  host\_state,host\_name,description, state
 
-![](attachments/16482333/19235823.png)
+![](images/16482333/19235823.png)
  It is also possible to hide one column by using a "-" before the column that you would like to remove from the table. If you want to hide the attempts column enter:
  default, -attempt
 
-![](attachments/16482333/19235824.png)
+![](images/16482333/19235824.png)
 
 ### Column list
 
@@ -220,7 +220,7 @@ It is possible to create a custom column if the column isn't available from the 
  The format is "\<label\>" = \<data\> where \<data\> is the source of the data, for example if you would like to create a column that show the note of a host set in the configuration:
  "Notes" = notes
 
-![](attachments/16482333/19235825.png)
+![](images/16482333/19235825.png)
  It is also possible to fetch. For example the host notes on a service as well, by using the host.notes label.
 
 #### Links in custom columns
@@ -228,7 +228,7 @@ It is possible to create a custom column if the column isn't available from the 
 It is also possible to add HTML code into the column. Let's say that you have a note with an ID that corresponds to the system in your CMS database and you would like to create a link directly to that object.
  "Asset ID" = "\<a href=\\"http://inventory.example.org/?asset=" + notes + "\\"\>Asset " + notes + "\</a\>"
 
-![](attachments/16482333/19235826.png)
+![](images/16482333/19235826.png)
 
 #### Custom variables
 
@@ -239,7 +239,7 @@ To show a custom variable in a column use the format custom\_variable.\<VARIABLE
 
 To sort a column use click on the column. It is possible to sort columns ascending and descending.
 
-![](attachments/16482333/19235827.png)
+![](images/16482333/19235827.png)
 
 ## More information
 

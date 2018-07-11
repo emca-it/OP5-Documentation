@@ -12,7 +12,7 @@ Logger uses filters for selecting the data to show, these are described in the [
 ## Logger GUI
 
 To access Logger click on Log Messages in the Monitor menu
-![](attachments/16482334/16679019.png)
+![](images/16482334/16679019.png)
 
 The GUI uses [Listviews](Listviews) and filters to [filter](Filters) the messages.
 
@@ -78,9 +78,9 @@ To perform a search in the archived logs go to Logger in the monitoring menu.
 
 1. 1.  Create a filter or leave the filter blank to search for all messages
     2.  Click on **Run query on Archive **in the upper right corner
-        ![](attachments/16482334/16679009.png)
+        ![](images/16482334/16679009.png)
     3.  Select a start and stop time
-        ![](attachments/16482334/16679020.png)
+        ![](images/16482334/16679020.png)
     4.  Click on **Run query on archive **
 
 This will create a report on the specified filter.

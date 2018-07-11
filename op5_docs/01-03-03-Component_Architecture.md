@@ -7,7 +7,7 @@ It will cover the different components of the product and how they interact with
 
 ## Overview
 
-*![](attachments/16482360/17269437.png)
+*![](images/16482360/17269437.png)
 This illustration is a simplified version of the components relationships*
 
 ## Components

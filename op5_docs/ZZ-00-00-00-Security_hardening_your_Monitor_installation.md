@@ -131,7 +131,7 @@ This could result in tampered check results if an attacker would get access to a
 
 Select the *"Stop accepting passive checks for this service"* on the status detail page for desired services
 
-![](attachments/6193759/10191069.png)
+![](images/6193759/10191069.png)
 
 # Configure sudo for privileges separation
 

@@ -3,7 +3,7 @@
 ## Introduction
 
 The OP5 Monitor backend can easily be used as a load balanced monitoring solution. The load balanced model looks like this.
- ![](attachments/16482411/21300233.png)
+ ![](images/16482411/21300233.png)
 The load balanced solution have two or more peers in the same environment sharing the same tasks (the hosts to monitor). Any new configuration made on any of the peers is distributed to the other peers. The peers divides the load automatically and keep tracks of when one peer go down, the other(s) take over the job.
 
 ## Before we start
