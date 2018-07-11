@@ -8,10 +8,16 @@ For example: check\_ping returns performance data for packet loss and round trip
 
 ## Viewing graphs
 
-From most of the views in OP5 Monitor you can find the graph icon looking like this: ![](images/16482317/17859856.png)
+From most of the views in OP5 Monitor you can find the graph icon looking like this: 
+
+![](images/16482317/17859856.png) \
+
+
 To view the graphs for a service or a host click on the graph icon and you will get the graph view.
 
-![](images/16482317/17859860.png)
+![](images/16482317/17859860.png) \
+
+
 The table below describes the parts of the Service Overview, where all graphs are being displayed --
 
 **Nr**
@@ -71,9 +77,20 @@ By adding a graph to the basket it will be possible to view the basket with the 
 This will give you an easy way to compare graphs from one or more hosts.
 
 To add a graph to the basket select the graph that you would like to add then click on the + icon above the graph:
-![](images/16482317/17859857.png)
-After adding the desired graphs select **graphs** from the menu ![](images/16482317/17859858.png)
+
+![](images/16482317/17859857.png) \
+
+
+After adding the desired graphs select **graphs** from the menu 
+
+![](images/16482317/17859858.png) \
+
+
 then click on **show basket**
 
-**![](images/16482317/17859859.png)
+*
+
+![](images/16482317/17859859.png) \
+
+
 **

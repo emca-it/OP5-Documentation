@@ -52,7 +52,9 @@ Windows users may use [PuTTY](http://www.chiark.greenend.org.uk/%7Esgtatham/putt
     ```
 
     It should look like this in the configuration dialog:
-    ![](images/16482423/19235817.png)
+
+![](images/16482423/19235817.png) \
+
 
 3. Click "Submit" and save the configuration.
 

@@ -28,7 +28,8 @@ The group of your interest here is the "**limited\_view**" group, as this group 
 - Service - Service View Contact
 - Hostgroup - Hostgroup View Contact
 
-![](images/9929161/10191034.png)
+![](images/9929161/10191034.png) \
+
 
 These permissions define what permissions users in the "limited\_view" group has access to. It is clear that the permissions for "limited\_view" translates to: "Give this user read only access to host, services and host groups that the user is set as a contact for"
 
@@ -49,7 +50,8 @@ The steps below outline how to successfully add a user with limited visibility o
 
 Step 2 is not required if a user already exists, locally or in Active Directory or LDAP.
 
-![](images/9929161/17859262.png)
+![](images/9929161/17859262.png) \
+
 
 *Click Submit, then **also Save your changes.***
 
@@ -63,7 +65,8 @@ Submit, and Save your changes.
 
 Now logout and login as the user **monitor\_only** and you should only see the hosts you have assigned user monitor\_only as a contact to.
 
-![](images/9929161/17859263.png)
+![](images/9929161/17859263.png) \
+
 
 ## Step 5 - (Optional) Limiting the menu items for specific groups
 
@@ -73,7 +76,8 @@ You can also limited the menu items available to specific groups by following th
 
 - Click "edit user menu"
 
-![](images/9929161/17859268.png)
+![](images/9929161/17859268.png) \
+
 
 - Select the group in this case "limited\_view". Check the boxes for items you wish this group to have access to.
 - **REMEMBER:** The features you select will only allow the users to view what you have given the access to specifically.

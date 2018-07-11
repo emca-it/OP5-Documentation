@@ -19,7 +19,10 @@ To create a wiki page for a host or service:
 3. Click on the **Advanced tab;
     **
 4. Scroll down to 'notes\_url' and click **Use wiki**. This will add a notes URL to a wiki page:
-    ![](images/16482371/23793052.png)
+
+![](images/16482371/23793052.png) \
+
+
     Here are some default locations that clicking the button will generate. Note that each of these consider the Apache root content page as their root (that is: "/var/www/html"):
     object
     notes URL default
@@ -31,7 +34,10 @@ To create a wiki page for a host or service:
     /dokuwiki/doku.php/servicegroups/\$SERVICEGROUPNAME\$
 5. Click **Submit**, then click to **Save** your configuration;
 6. Find the object in List View and click on **Extra notes** icon in the Actions column. It looks like a pen against a white note on top of a monitor:
-    ![](images/16482371/23793054.png)
+
+![](images/16482371/23793054.png) \
+
+
 7. Click on **Create page**;
 8. Edit the information and click on **Save.**
 

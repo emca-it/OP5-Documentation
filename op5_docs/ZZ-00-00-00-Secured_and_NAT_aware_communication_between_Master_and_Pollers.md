@@ -8,7 +8,8 @@ Also, if you use your master/poller setup through insecure networks like over th
 
 In the following howto, we will set up a secure communication between three systems: master, poller-01 and poller-02. The setup will be as follows.
 
-![](images/17073058/17269658.png)
+![](images/17073058/17269658.png) \
+
 
 Let's assume we have a master that is connected to the public Internet with a publicly available IP address. Also one of our pollers, poller-01 is available with a public IP address, but the communication goes through the Internet and should therefore be encrypted. Additionally, we have a second poller, poller-02 that is located behind a NAT router and doesn't have a publicly reachable IP address. The goal is to build a VPN layer between those three systems that makes each of the machines available directly through a private VPN IP address. The communication between the two pollers will not be possible, but every of the poller will reach the master directly, and the master will reach every of the pollers.
 

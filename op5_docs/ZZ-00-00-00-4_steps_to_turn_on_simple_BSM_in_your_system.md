@@ -32,11 +32,13 @@ Build your BSM-services by using existing monitoring metrics for the systems you
 
 First create the top level object to mirror what you visualized in step 2 and select "worst state". This means that if any child-objects has any alarm-state this will also be the case for "this" object.
 
-![](images/5376342/5734730.png)
+![](images/5376342/5734730.png) \
+
 
 Next add the second level and in this case this is Online and Tools also configured as "worst state" (for other options or rules please see our manual).
 
-![](images/5376342/5734731.png)
+![](images/5376342/5734731.png) \
+
 
 The metrics you use should cover both availability and performance, for example if you monitor HTTP-request towards the Trouble ticket system to see if the server responds as it should for normal HTTP-traffic you probably also want to add something to alert if things are getting slow such as sign-in session timeouts or high system load. Add additional objects as the previous screenshot but use "Service" to browse for the services you want to add.
 
@@ -44,13 +46,15 @@ At this stage you probably found out that you haven't checks for everything you 
 
 When you are done adding you services it should look like something like this:
 
-![](images/5376342/5734732.png)
+![](images/5376342/5734732.png) \
+
 
 ## 4 - Visualize for everybody!
 
 Below are a few screenshots to give inspiration on what you can do to visualize your BSM-services on dashboards and big screens using Nagvis in OP5 Monitor. Sky is the limit here. Popular choices are Visio-diagrams and also as simple as creating a spreadsheet to use as background as seen below:
 
-![](images/5376342/5734737.png)
+![](images/5376342/5734737.png) \
+
 
 This is from one of our users who published this really nice idea for a dashboard on twitter (source)
 

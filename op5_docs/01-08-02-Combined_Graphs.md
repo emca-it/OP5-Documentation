@@ -9,20 +9,41 @@ It takes one or more service from one or more host and lays them on top of each 
 
 The combined graphs is created though the configuration.
  Go to **Configure** in the menu
- ![](images/16482375/16679082.png)
+
+![](images/16482375/16679082.png) \
+
+
  Click on **Combined Graphs
-** ![](images/16482375/16679081.png)
+
+![](images/16482375/16679081.png) \
+
+
  Enter a name of the combined graph and click on **Add
-** ![](images/16482375/16679079.png)
+
+![](images/16482375/16679079.png) \
+
+
  Select the service to graph and from which hosts this service should be fetched from. Also add a name and comment.
- ![](images/16482375/16679086.png)
+
+![](images/16482375/16679086.png) \
+
+
  Click on **Submit**
 
 ## Viewing combined graphs
 
 The combined graphs can be found under **Graphs** in the main menu
-![](images/16482375/16679085.png)
+
+![](images/16482375/16679085.png) \
+
+
  and click on the **Combined Graphs** icon.
-![](images/16482375/16679080.png)
+
+![](images/16482375/16679080.png) \
+
+
  All the combined graphs can be found under **Combined graphs** in the right side menu.
-![](images/16482375/16679083.png)
+
+![](images/16482375/16679083.png) \
+
+

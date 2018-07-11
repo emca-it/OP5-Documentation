@@ -11,7 +11,8 @@ op5 Monitor has got a search functionality that makes it easy to find:
 - Notes
 - Status information
 
-![](images/16482309/16679036.png)
+![](images/16482309/16679036.png) \
+
 
 The search is case insensitive. The quick result in search field is limited to maximum 10 result rows per object type.
 In the upper right corner of the GUI you find the search input field:
@@ -21,7 +22,10 @@ In the upper right corner of the GUI you find the search input field:
 To perform a simple search
  Enter the search string in the search input field in the top right corner.
  While you are typing your search string OP5 Monitor will show you a list of hosts matching the string.
- ![](images/16482309/16679033.png)
+
+![](images/16482309/16679033.png) \
+
+
  If you click on a host in the drop down list you will be redirected to the **Service Status Details For Host** page for the host you clicked on. The same happens if the search found only one object matching your search string.
  OP5 Monitor will search for hosts, services, service groups, host groups and notes matching the search string you entered.
  The table below shows a list of in what parts of the object types is used in the search.
@@ -109,10 +113,17 @@ To get a complete list of all hosts, services, host groups and service groups yo
 ## Notes search
 
 To search for notes the notes column must be added to the listview.
- Go to **My Account** under the Configuration menu. ![](images/16482309/16679034.png)
+ Go to **My Account** under the Configuration menu. 
+
+![](images/16482309/16679034.png) \
+
+
  Add the following to the table for hosts and/or services.
  `"Notes" = notes`
-![](images/16482309/16679046.png)
+
+![](images/16482309/16679046.png) \
+
+
  It is also possible to fetch for example the host notes on a service as well, by using the `host.notes` label.
 
 ## Limiting the number of result objects
@@ -128,14 +139,19 @@ The default search result will is limited to 100 rows. This can be changed in th
 
 No matter if you use the simple or the advanced way to do your search you will end up with the same type of result list.
  As you can see in the search result example below the search will be shown with one part for each type of object.
- ![](images/16482309/16679032.png)
+
+![](images/16482309/16679032.png) \
+
+
  Just like in the normal views you can sort almost all columns in the search result.
 
 ### Multiple actions
 
 To do multiple actions from the search result the search result must first be viewed in listview.
  To view the result in listview click on **View in listview** below each category.
- ![](images/16482309/16679031.png)
+
+![](images/16482309/16679031.png) \
+
 
 ### Saving a search
 

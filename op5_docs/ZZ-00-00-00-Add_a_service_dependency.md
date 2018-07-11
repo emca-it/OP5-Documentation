@@ -8,25 +8,30 @@ Sometimes you want to have dependencies on certain services. For example some ne
 
 Go to Configure
 
-![](images/12190188/12386388.png)
+![](images/12190188/12386388.png) \
+
 
 Choose the host in which the service is set on.
 
-![](images/12190188/12386389.png)
+![](images/12190188/12386389.png) \
+
 
 And click Go
 
 Go to services for host [host]
 
-![](images/12190188/12386390.png)
+![](images/12190188/12386390.png) \
+
 
 Choose the service from the drop down menu and click "go"
 
-![](images/12190188/12386391.png)
+![](images/12190188/12386391.png) \
+
 
 Click on Dependencies
 
-![](images/12190188/12386393.png)
+![](images/12190188/12386393.png) \
+
 
 At the top bar you see the service which will be dependent on another service.
 
@@ -38,11 +43,13 @@ You can edit what kind of failure criteria that is necessary for the dependency 
 
 Click Submit.
 
-![](images/12190188/12386394.png)
+![](images/12190188/12386394.png) \
+
 
 Now you see that the service you chose from the beginning is dependent on the service dependency you edited right now.
 
-![](images/12190188/12386395.png)
+![](images/12190188/12386395.png) \
+
 
 Save your work.
 
