@@ -102,7 +102,7 @@ For more info see the [Development Guidelines](https://www.monitoring-plugins.or
 
 #### First Example: Dead Simple Plugin
 
-Read through this code, try to understand what it does. There's explanations below for reference. ([Download](attachments/11632752/11567123.py))
+Read through this code, try to understand what it does. There's explanations below for reference. ([Download](images/11632752/11567123.py))
 
 ``` {.py data-syntaxhighlighter-params="brush: py; gutter: true; theme: Confluence" data-theme="Confluence" style="brush: py; gutter: true; theme: Confluence"}
 !/usr/bin/env python
@@ -154,7 +154,7 @@ This is where the "magic" happens, we are now checking our state and depending o
 
 #### Second Example: Dead Simple Plugin with Arguments
 
-Here's a bit more advanced example with argument parsing, it looks kind of like the first example but with some user input. Go through the code and see if you understand what it does, explanations is found below the code. ([Download](attachments/11632752/11567122.py))
+Here's a bit more advanced example with argument parsing, it looks kind of like the first example but with some user input. Go through the code and see if you understand what it does, explanations is found below the code. ([Download](images/11632752/11567122.py))
 
 ``` {.py data-syntaxhighlighter-params="brush: py; gutter: true; theme: Confluence" data-theme="Confluence" style="brush: py; gutter: true; theme: Confluence"}
 #!/usr/bin/env python
@@ -255,7 +255,7 @@ As in the first example we will need some logic to determinate what todo with th
 
 #### Third example, using pynag to make development easier
 
-Once you understand the basic principles of plugin development, moving on to using a class/lib for making the development process easier is preferred. There's alot of different libraries for this out there but here's an example using [pynag](http://pynag.org). ([Download](attachments/11632752/11567156.py))
+Once you understand the basic principles of plugin development, moving on to using a class/lib for making the development process easier is preferred. There's alot of different libraries for this out there but here's an example using [pynag](http://pynag.org). ([Download](images/11632752/11567156.py))
 
 ``` {.py data-syntaxhighlighter-params="brush: py; gutter: true; theme: Confluence" data-theme="Confluence" style="brush: py; gutter: true; theme: Confluence"}
 #!/usr/bin/env python

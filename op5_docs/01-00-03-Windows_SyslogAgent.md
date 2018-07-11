@@ -9,7 +9,10 @@ OP5 SyslogAgent is a repackaged version of the Datagram SyslogAgent, which itse
 ## Download and Installation
 
 The OP5 SyslogAgent installation package consists of an MSI installer, available as either 32-bit or 64-bit from [our web site's Download Library](https://www.op5.com/op5-monitor/download-library/category/windows-syslog-agent/). To install, simply double-click the installation MSI file (usually as an Administrator) and follow the on-screen instructions. Note that product has not been updated since OP5 revised its logo:
-![](attachments/16482385/16679132.png)
+
+![](images/16482385/16679132.png) \
+
+
  By default the OP5 SyslogAgent will be installed in an OP5 subdirectory, which itself will be placed in "`%SystemRoot%\%ProgramFiles%`": by default, that path becomes "`C:\Program Files\op5\SyslogAgent\`". Please review the [upcoming section](#WindowsSyslogAgent-Configuration) for any configuration details.
 
 ## Upgrading
@@ -29,7 +32,8 @@ After the service have been stopped and uninstalled, you should uninstall the pr
 
 When the configuration tool is started the following window should be displayed:
 
- ![](attachments/16482385/16679131.png)
+![](images/16482385/16679131.png) \
+
 
 ### Configuring the elementary functions
 
@@ -75,8 +79,14 @@ All settings are stored in the Windows Registry, and can therefore be exported t
 
 1. 1.  Open the RegEdit tool ('winkey-r' for a command prompt, then type 'regedit');
     2.  Navigate to HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Datagram\\SyslogAgent:
-        ![](attachments/16482385/16679129.png)
+
+![](images/16482385/16679129.png) \
+
+
     3.  Right-click the folder and choose export:
-        ![](attachments/16482385/16679130.png)
+
+![](images/16482385/16679130.png) \
+
+
     4.  Save the file and open it by right-clicking the file and choosing edit;
     5.  Remove the whole line corresponding to the keyword "LastRun" (if present). That line can be found under the section: " HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Datagram\\SyslogAgent]"

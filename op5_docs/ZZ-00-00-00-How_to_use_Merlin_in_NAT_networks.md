@@ -21,7 +21,8 @@ This can be done by installing and configuring [OpenVPN](http://en.wikipedia.org
 
 # Topology
 
-![](attachments/9928889/10190925.png)
+![](images/9928889/10190925.png) \
+
 
 In this scenario we have a Internet accessible monitor server. This master has to be able to reach the pollers that are behind a firewall configured with NAT ([Network Address Translation](http://en.wikipedia.org/wiki/Network_address_translation)). This creates an issue when reaching the pollers. The master can not pass by the firewall and reach the internal pollers and simultaneously differentiate between them. The master sees one public IP address to the pollers.
 
