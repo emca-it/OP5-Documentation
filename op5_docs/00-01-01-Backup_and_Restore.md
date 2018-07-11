@@ -33,7 +33,8 @@ The *Backups* columns contains the names of the backup files. The names also hap
 1. Click on the Save your current OP5 Monitor configuration link.
 2. A dialog box will appear asking for confirmation.
 
-![](attachments/16482336/23793016.png)
+![](images/16482336/23793016.png) \
+
 
   - Click *Yes* to confirm the creation of a backup file.
   - Click *Close* to exit without creating a backup file.
@@ -47,7 +48,8 @@ The *Backups* columns contains the names of the backup files. The names also hap
 1. Click on the View Backup icon in the *Actions* column to open a page listing the contents of the backup file.
 2. Scroll up and down the page to view the list of included files. (Green box in the screenshot below.)
 
-![](attachments/16482336/23793023.png)
+![](images/16482336/23793023.png) \
+
 
 3. Return to the **Backup/Restore** page by clicking on the Backup/Restore List link to the right of the backup file name (Red box in the screenshot), or use the back button in the browser to return to the previous page.
 
@@ -56,7 +58,8 @@ The *Backups* columns contains the names of the backup files. The names also hap
 1. Click on the Restore Backup icon in the *Actions* column to start the restoration process.
 2. A dialog box will appear asking for confirmation.
 
-![](attachments/16482336/23793020.png)
+![](images/16482336/23793020.png) \
+
 
   - Click *Yes* to confirm restoration of the configuration.
   - Click *Close* to exit without restoring the configuration.
@@ -65,7 +68,8 @@ The *Backups* columns contains the names of the backup files. The names also hap
 
     Only the OP5 Monitor services are restarted. This does not restart the server.
 
-    ![](attachments/16482336/23793021.png)
+![](images/16482336/23793021.png) \
+
 
   - Click *Restart Now* to immediately restart the OP5 Monitor services and apply the configuration.
   - Click *Close* to exit without restoring the configuration.
@@ -78,7 +82,8 @@ The *Backups* columns contains the names of the backup files. The names also hap
 1. Click on the Delete Backup icon in the *Actions* column to start the deletion process.
 2. A dialog box will appear asking for confirmation.
 
-    ![](attachments/16482336/23793024.png)
+![](images/16482336/23793024.png) \
+
 
   - Click *Yes* to confirm the deletion of a backup file.
   - Click *Close* to exit without deleting a backup file.
@@ -90,7 +95,7 @@ The *Backups* columns contains the names of the backup files. The names also hap
 
 1. Click on the name of the backup file from the *Backups* column to start downloading the file.
 
-![](attachments/16482336/23793022.png) \
+![](images/16482336/23793022.png) \
 
 
 ### Miscellaneous Information

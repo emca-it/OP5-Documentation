@@ -18,7 +18,8 @@ There are several parts of the View Active Config page:
 
 - Object List (Green box in screenshot)
 
-![](attachments/23792660/23793026.png)
+![](images/23792660/23793026.png) \
+
 
 The Object Type Filter filters the displayed objects. The drop down menu lists the different object categories which can be displayed, and the text box allows for search terms to be entered. Different categories will have different columns, and for this document, the *hosts* object type is selected.
 A few things to note about the search terms. The searches are case insensitive, so `AWS` and `aws` are the same thing. The search terms apply to the *Host Name* column, and the text box also allows for rudimentary regular expressions (regex) to be used to narrow down the number objects displayed. For instance, `com$` will display objects with a host name which ends with "`com`", such as "`domain.com`".

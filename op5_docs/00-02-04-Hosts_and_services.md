@@ -9,9 +9,10 @@ Hosts and services are the objects that are monitored by OP5 Monitor.
 A host can be any kind of network device, virtual device and other objects that you might reach from the OP5 Monitor server.
  Let us take a look at the Host information view and see what parts it is built upon. In the coming sections we will go through each part and learn how they can be used.
 
-![](attachments/16482322/16679308.png)
+![](images/16482322/16679308.png) \
 
- The table below describes each part of the Host information view briefly.
+
+The table below describes each part of the Host information view briefly.
 
 **Nr**
 
@@ -71,43 +72,47 @@ Manually added comments and comments from the system are shown here.
 
 The page links gives you a couple of shortcuts to more information about this host and its services.
 
- ![](attachments/16482322/16679297.png)
+![](images/16482322/16679297.png) \
+
 
 ## Host information header
 
 Here you will get a short summary of the host.
 
-![](attachments/16482322/16679307.png)
+![](images/16482322/16679307.png) \
+
 
 The host header information contains
 
 - the host address.
-  - the parent host.
-  - what host groups it's member of.
-  - what group will get the notifications for this host.
-  - links to extra service actions, service notes and the performance graphs.
-  - a link to the object in the configuration GUI.
+- the parent host.
+- what host groups it's member of.
+- what group will get the notifications for this host.
+- links to extra service actions, service notes and the performance graphs.
+- a link to the object in the configuration GUI.
 
 ## Host state information
 
 In this view you get all kind of status information about the host. This is the most detailed view you can get over a host.
 
-![](attachments/16482322/16679304.png)
+![](images/16482322/16679304.png) \
+
 
 ## Host commands
 
 The host commands part gives you a various commands to handle the host. Here you can
 
 - locate the host in a status map
-  - add a host comment
-  - re-schedule the next check for this host
-  - disable and enable active and passive checks
-  - disable and enable notifications
-  - schedule downtime
-  - disable and enable event handlers.
-  - send custom notifications
+- add a host comment
+- re-schedule the next check for this host
+- disable and enable active and passive checks
+- disable and enable notifications
+- schedule downtime
+- disable and enable event handlers.
+- send custom notifications
 
-![](attachments/16482322/16679310.png)
+![](images/16482322/16679310.png) \
+
 
 ## Comments
 
@@ -123,7 +128,8 @@ Automatically added comments can be:
 
 As a manually added comment you can type in almost anything you like.
 
-![](attachments/16482322/16679309.png)
+![](images/16482322/16679309.png) \
+
 
  Comments are designed to be short texts. If you would like to add documentation, longer descriptions and so on you should consider using the Dokuwiki that is included in OP5 Monitor.
 
@@ -133,7 +139,7 @@ A service is practically anything that can be measured. A service must be connec
  Let us take a look at the Service information view and see what parts it is built upon. In the coming sections we will go through each part and learn how they can be used.
  The picture below shows the Service information view.
 
-![](attachments/16482322/16679306.png)
+![](images/16482322/16679306.png) \
 
 
 **Nr**
@@ -190,19 +196,22 @@ Comments
 
 These are comments you put there either by adding a scheduled downtime or just a comment of it own.
 
-![](attachments/16482322/16679303.png)
+![](images/16482322/16679303.png) \
+
 
 ## Page links
 
 The page links gives you a couple of short cuts to more information about this service and the host it is connected to.
 
-![](attachments/16482322/16679254.png)
+![](images/16482322/16679254.png) \
+
 
 ## Service header information
 
 Here you will get a short summary of the service.
 
-![](attachments/16482322/16679253.png)
+![](images/16482322/16679253.png) \
+
 
 Here you may see things like
 
@@ -217,7 +226,8 @@ Here you may see things like
 
 In this view you get all kind of status information about the host. This is the most detailed view you can get over a service.
 
-![](attachments/16482322/16679305.png)
+![](images/16482322/16679305.png) \
+
 
 ## Service commands
 
@@ -231,7 +241,8 @@ The service commands part gives you a various commands to handle the service. He
   - Submit a service comment
   - Send custom notification
 
-![](attachments/16482322/16679251.png)
+![](images/16482322/16679251.png) \
+
 
 ## Comments
 
@@ -245,6 +256,7 @@ There are two types of comments:
 
 As a manually added comment you can type in almost anything you like.
 
-![](attachments/16482322/16679252.png)
+![](images/16482322/16679252.png) \
 
-Comments are designed to be short texts. If you would like to add documentation, longer descriptions and so on you should consider using the [Dokuwiki](Dokuwiki) that is included in OP5 Monitor.
+
+Comments are designed to be short texts. If you would like to add documentation, longer descriptions and so on you should consider using the Dokuwiki that is included in OP5 Monitor.

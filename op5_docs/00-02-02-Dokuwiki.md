@@ -9,7 +9,8 @@ Of course you can also use this dokuwiki to save other kind of related informati
 
 To edit an existing page, go to the page you want to edit and select 'Edit this page' in the top right corner. A backup of the previous page will automatically be created.
 
-![](attachments/16482323/16679250.png)
+![](images/16482323/16679250.png) \
+
 
 ## Formatting a wiki page
 
@@ -30,5 +31,3 @@ You can format your text by using wiki markup. This consists of normal character
 
  Note:
  A table of content is automatically created when an article has 3 or more headings.
-
- For more information about formatting text please go to <https://www.dokuwiki.org/wiki:syntax>. More information about how to use the dokuwiki in OP5 Monitor can be found in [OP5 Monitor Administrator Manual](op5_Monitor_Administrator_Manual) or at <http://docuwiki.net/>

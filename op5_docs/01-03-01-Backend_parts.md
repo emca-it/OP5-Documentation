@@ -21,4 +21,7 @@ This is a database that includes Naemon object status and status changes. It als
 ## Backend Layout
 
 Describes the workflow of the OP5 Monitor backend
-![](attachments/16482361/16679179.png)
+
+![](images/16482361/16679179.png) \
+
+

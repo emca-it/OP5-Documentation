@@ -6,7 +6,8 @@ Widgets are used on a [dashboard](Tactical_overview) and gives the user the abil
 
 The first thing you will see when you login to OP5 Monitor is a dashboard and it can look something like this.
 
-![](attachments/16482313/18481251.png)
+![](images/16482313/18481251.png) \
+
 
 In a dashboard you may:
 
@@ -24,23 +25,27 @@ op5 Monitor comes with a number of available widgets used to display data in a d
 
 Can display a host or service aggregate as a factor/percentage or count, given a configured threshold it can display as red/yellow or green. If no threshold is given it displays with a blue background.
 
-![](attachments/16482313/18481252.png)
+![](images/16482313/18481252.png) \
+
 
 It can also display the performance data of an object and will then use the performance data thresholds to decide its state-color.
 
-![](attachments/16482313/18481255.png)
+![](images/16482313/18481255.png) \
+
 
 ### State summary
 
 Displays the amount of objects in different states for a service or host filter.
 
-![](attachments/16482313/18481257.png)
+![](images/16482313/18481257.png) \
+
 
 ### NagVis
 
 Displays a NagVis map of any kind in a widget box on your dashboard.
 
-![](attachments/16482313/18481254.png)
+![](images/16482313/18481254.png) \
+
 
 ### Other widgets
 
@@ -67,7 +72,9 @@ There are many more widgets available that display a wide array of data and stat
 
 Below you see an example of what a widget can look like:
 
-![](attachments/16482313/18481253.png)
+![](images/16482313/18481253.png) \
+
+
  The following list describes the parts of a widget shown in the picture above.
 
 1. Widget header
@@ -92,7 +99,8 @@ The different widgets have different settings, we will show you the Big number w
 
 To view and change settings click the edit settings icon in the widget header. The content is now replaced with the edit view for that widget, once you have changed the settings you want, click save and you will be returned to the widget content with updated settings.
 
-![](attachments/16482313/18481256.png)
+![](images/16482313/18481256.png) \
+
 
 ### Multiple widgets
 

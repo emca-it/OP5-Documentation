@@ -54,7 +54,8 @@ Go to the configuration menu, and press configure. On the configuration page, pr
 
 Create a new module by clicking the Add New Module tab. Call it, for example “ActiveDirectory” and set “LDAP” in the Driver Type selection. Click “Add”. A new tab will appear with LDAP specific settings.
 
-![](attachments/3801513/16155405.png)
+![](images/3801513/16155405.png) \
+
 
 Many of the fields in the form are the same for every active directory integration. Their respective configurations are described below.
 
@@ -250,7 +251,8 @@ Once added, check all checkboxes for “op5 administrators” and the following 
 
 - Servicegroup View All
 
-    ![](attachments/3801513/5242991.png)
+![](images/3801513/5242991.png) \
+
 
 # Troubleshooting
 
