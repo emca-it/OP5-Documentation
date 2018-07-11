@@ -81,3 +81,12 @@ This is my ant farm. These little guys can lift fifty times their own weight. Th
 
 Oh, look! They're really mad now!
 ```
+
+### Tables
+
+```
+| Column Heading | Column Heading |
+| ---- | ---- |
+| 1 | Text here |
+| 2 | More text here |
+```
