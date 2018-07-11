@@ -83,17 +83,18 @@ To add a custom link to the quickbar menu select the small manage quickbar menu 
 ## Pop up graphs and comments
 
 In every view where you find the icons for
- graphs 
+
+- graphs 
 
 ![](images/16482331/18481433.png) \
 
 
- comments 
+- comments 
 
 ![](images/16482331/18481431.png) \
 
 
- You can hover the mouse pointer over the icon and get a pop up looking like this
+You can hover the mouse pointer over the icon and get a pop up looking like this
 
 ![](images/16482331/18481422.png) \
 
