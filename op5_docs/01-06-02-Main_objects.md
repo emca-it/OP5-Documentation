@@ -364,9 +364,12 @@ A command has got only two directives
 
 To access and configure commands go to **Commands** on the main configuration page
 
-![](attachments/16482406/16679419.png)
+![](images/16482406/16679419.png) \
 
-![](attachments/16482406/16679424.png)
+
+
+![](images/16482406/16679424.png) \
+
 
 Here it's possible to utilize the search box to have a look at configured commands, add new commands and copy commands to use as a template for your custom command.
 
@@ -376,9 +379,12 @@ Updating OP5 Monitor often brings new functionality, and one of them are new com
 
 Accessing this function is done via **Check command import** via the main configuration page
 
-![](attachments/16482406/16679425.png)
+![](images/16482406/16679425.png) \
 
-![](attachments/16482406/16679422.png)
+
+
+![](images/16482406/16679422.png) \
+
 
 If new commands are available they will be listed in the upper section of the screen, and changed commands in the lower part of the screen.
 
@@ -401,8 +407,14 @@ You can use any plugin written for Nagios but you might need to modify them a bi
 ### Plugin search
 
 To search the plugins that are shipped with OP5 Monitor or added afterwards to to **Plugin Search** on the main configuration page
- ![](attachments/16482406/16679136.png)
+
+![](images/16482406/16679136.png) \
+
+
  From this page you may
  See the support levels of the plugins and see descriptions of the plugins.
  The support levels are described in [Plugin Support Levels](plugin_support_levels).
-![](attachments/16482406/16679135.png)
+
+![](images/16482406/16679135.png) \
+
+

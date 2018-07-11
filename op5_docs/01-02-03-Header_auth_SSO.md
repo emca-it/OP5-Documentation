@@ -22,7 +22,8 @@ HeaderAuth:
 
 Below is an example configuration of the authentication module in Monitor (from "/etc/op5/auth.yml"):
 
-![](attachments/16482391/16679134.png)
+![](images/16482391/16679134.png) \
+
 
 ## Permissions
 

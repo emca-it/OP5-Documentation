@@ -4,13 +4,15 @@
 
 Geomap creates maps to help to visualize the locations of objects and the links between objects in geographically diverse systems. Location and links are attributes added to objects in OP5 Monitor, and the map tiles used to render the map are downloaded from the specified geographic data service.
 
-!![](attachments/16482345/23793030.png)
+![](images/16482345/23793030.png) \
+
 
 ## Geomap
 
 The **Geomap** page (Monitor \> Geomap) provides a visualization of object locations and links.
 
-![](attachments/16482345/23793028.png)
+![](images/16482345/23793028.png) \
+
 
 There are two main parts of Geomap:
 
@@ -37,7 +39,8 @@ The search function returns inconsistent results, and the *Map area* isn't auto
 
 *Settings* opens a dialog box where the geographic data provider can be set, with various provider specific options, and the refresh rate can be changed. The refresh rate is displayed in seconds. The screenshots shows refresh rates of 10 seconds and 290 seconds (4 minutes).
 
-![](attachments/16482345/23793031.png)
+![](images/16482345/23793031.png) \
+
 
 ## Geomap Settings
 
@@ -63,7 +66,7 @@ Real-time information on a Geomap client requires the client to have Internet ac
 
 1. Hover over the *Monitor* menu entry in the OP5 Monitor Toolbar to expand it.
 
-![](attachments/16482345/23793029.png) \
+![](images/16482345/23793029.png) \
 
 
 2. Click on the *Geomap* link to open the **Geomap Page**. (Red box in the screenshot)
@@ -86,18 +89,18 @@ Here we will add a new location. First we need to locate where on the map we wan
 1. Open up the Geomap from the monitoring menu.
 2. Click on edit in the upper left corner, just above the map.
 
-![](attachments/16482345/16678936.png) \
+![](images/16482345/16678936.png) \
 
 
 3. Double click on the map to place your location
 4. A bubble will appear on the location, select 'Add location':
 
-![](attachments/16482345/16678938.png) \
+![](images/16482345/16678938.png) \
 
 
 Enter the variables for this locations and select type, then the object you want to link to this location. You can also enter the exact latitude and longitude here:
 
-![](attachments/16482345/16678939.png) \
+![](images/16482345/16678939.png) \
 
 
 5. Click on **Save** to create the location.
@@ -120,22 +123,23 @@ The locations listed above are associated with one host each.
 
 1. Open up the **Geomap** from the menu. Click on **Edit** above the map:
 
-![](attachments/16482345/16678940.png) \
+![](images/16482345/16678940.png) \
 
 
 2. Click on one of the locations that you want to link together and select **Link**:
 
-![](attachments/16482345/16678942.png) \
+![](images/16482345/16678942.png) \
 
 
 3. Choose the second location and select **Link** in the bubble on that location. This will create grey line between the two locations.
 
-![](attachments/16482345/16678944.png) \
+![](images/16482345/16678944.png) \
 
 
 4. Click on the grey line to open a bubble dialog. Click on **Edit** in the bubble dialog.
 
-![](attachments/16482345/16678941.png)
+![](images/16482345/16678941.png) \
+
 
     1.  Enter a description.
     2.  Select a type.
@@ -143,6 +147,5 @@ The locations listed above are associated with one host each.
 
 5. Click **Save** to save your link.
 
-![](attachments/16482345/16678943.png) \
-
+![](images/16482345/16678943.png) \
 
