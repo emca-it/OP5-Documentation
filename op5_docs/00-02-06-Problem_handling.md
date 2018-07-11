@@ -56,8 +56,7 @@ As you can see in the GUI there are many views in OP5 Monitor to show you host a
 ![](images/16482319/19234885.png) \
 
 
- In these views you will only find unacknowledged problems for hosts and services
- This views can be accessed from the quickbar menu.
+ In these views you will only find unacknowledged problems for hosts and services. This views can be accessed from the quickbar menu.
 
 ![](images/16482319/19234884.png) \
 
@@ -89,6 +88,7 @@ The most common way to acknowledge a problem is to do it in the GUI. This is eas
 3. Fill in a comment and click **Submit**.
 
     With the Sticky options all notifications are suppressed until the problem goes to OK or UP. Un-check this box to remove the acknowledgment even when the problem goes to another problem state, for example from WARNING to CRITICAL or from CRITICAL to WARNING. Use the **Notify** checkbox to send out a notification that this problem has been acknowledged. With every acknowledgment a comment is added to the object. If you would like this comment to remain after the problem has retured to OK or UP use the **Persistent** checkbox.
+
 4. Click **Submit** and you will be directed back to the host you where on when you started.
 
 ### Acknowledging a problem by sms
@@ -113,7 +113,7 @@ Sometimes you might need to remove an acknowledge. Maybe you acknowledged the wr
 
 
 Now the notifications will continue as it is setup for the object.
- The comment for the acknowledge *is not removed*.
+The comment for the acknowledge *is not removed*.
 
 ### Removing multiple acknowledgements
 
@@ -124,12 +124,11 @@ To remove several acknowledgements:
 ![](images/16482319/19234905.png) \
 
 
-2. Click **Send Multi Action** below the search field
+2. Click **Send Multi Action** below the search field. It is located in the top right of the list.
 
 ![](images/16482319/19234910.png) \
 
 
-    (It is located in the top right of the list.)
 1. Chose **Acknowledge** in **Select Action** drop down list just below the list and click **Submit**.
 
 ![](images/16482319/19234890.png) \
@@ -227,12 +226,18 @@ To remove a scheduled downtime
 ![](images/16482319/19234903.png) \
 
 
-3. Click **Submit**.
+3. Click **Submit**. Now the scheduled downtime and the comment have been removed.
 
 ![](images/16482319/19234891.png) \
 
 
- Now the scheduled downtime and the comment saved when you created the scheduled downtime is removed.
+![](images/16482319/19234903.png) \
+
+
+3. Click **Submit**. Now the scheduled downtime and the comment have been removed.
+
+![](images/16482319/19234891.png) \
+
 
 ## Schedule recurring downtime
 
@@ -279,11 +284,12 @@ Let us say that you are using Citrix and you need to reboot your citrix servers 
 Once you have created a recurring downtime schedule you may
 
 - view it
-  - edit it
-  - delete it.
+- edit it
+- delete it.
 
 This is done from the Schedules tab.
- The view looks like this
+
+The view looks like this
 
 ![](images/16482319/19234893.png) \
 
@@ -305,7 +311,7 @@ This is done from the Schedules tab.
 #### To delete a recurring downtime
 
 1. Click **Recurring downtime** and then **Schedules**.
-2. Click **Delete**
+2. Click **Delete**.
 
 ![](images/16482319/19234889.png) \
 

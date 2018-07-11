@@ -16,7 +16,6 @@ From this menu you can:
 - Configure the backend.
 
 ## Edit plain maps
-
 ### To edit a plain NagVis map
 
 1. Click on NagVis in the monitoring menu of OP5 Monitor.
@@ -24,5 +23,4 @@ From this menu you can:
 3. Use the menu on the top to access the edit options.
 
 ![](images/16482341/16678963.png) \
-
 

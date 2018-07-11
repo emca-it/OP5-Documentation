@@ -67,10 +67,7 @@ The *Settings* list is where various user accessible settings can be tuned or e
 
 The *Pagination* section controls the number of items displayed per page.
 
-|:--|
-|**Pagination Setting**
-
-**Description**|Pagination Limit
-Sets the maximum number of items to display per screen.|Pagination Step
-
-Sets the default value of the pagination drop-down menu.|
+| **Pagination Setting** | **Description** |
+|-----|-----|
+| Pagination Limit | Sets the maximum number of items to display per screen. |
+| Pagination Step | Sets the default value of the pagination drop-down menu. |

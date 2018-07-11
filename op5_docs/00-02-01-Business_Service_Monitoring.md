@@ -21,52 +21,15 @@ For better viewing the following screenshot has been divided in to two pieces.
 ![](images/16482326/16679261.png) \
 
 
-**Nr**
-
-**Description**
-
-1
-
-Business Object
- List all the Business service objects. An object can be one of the following items
-
-- Group
-  - Service
-  - Host.
-  - Random value
-  - Constant value
-
-2
-
-Rule
- Shows which rule is applied to the group.
- For more information about the different rules see Rules types on page 156 in OP5 Administrator manual.
-
-3
-
-Actions
- A list of action buttons.
- Click the icons to
-
-- Look up service/host in OP5 Monitor
-  - Go to the configuration for the host or service
-  - Add sub element, only available on groups
-  - Edit object
-  - Remove object
-  - Clone object, only available on groups
-
-4
-
-Last check.
- This will show when the object was last checked.
- The time on a group is the time for when the last sub element was checked.
-
-5
-
-Duration
- Displays how long the group or service has been in it's current state.
-
-6
-
-Status Information
- Displays in what state the current group is in. For hosts and services the output from the OP5 Monitor check is displayed.
+| **Figure Number** | **Description** |
+| ----- | ----- |
+| 1 | Business Object: Lists all the Business service objects. \
+An object can be: Group, Service, Host, Random value, Constant value |
+| 2 | Rule: Shows which rule is applied to the group. |
+| 3 | Actions: A list of action buttons. |
+| 4 | Last check: This will show when the object was last checked. \
+The time on a group is the time for when the last sub element was checked. |
+| 5 | Duration: Displays how long the group or service has been in it's current \
+state. |
+| 6 | Status Information: Displays in what state the current group is in. For \
+hosts and services the output from the OP5 Monitor check is displayed. |

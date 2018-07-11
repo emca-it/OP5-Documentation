@@ -43,14 +43,15 @@ Like many applications, the first step is to get logged in. An account should al
 6. Next, click on the Login method drop down menu to select the correct authentication method. OP5 Monitor can support multiple authentication mechanisms, and the correct mechanism needs to be selected for account credential verification to succeed.
 7. Finally, click the Login button to submit the credentials for authentication.
 8. If authentication was successful, the *Dashboard* for the account will be displayed, and if authentication was unsuccessful, a red banner stating the login failed will appear above the username, password, and login method fields.
+
     - Account *Dashboard* after successful credential authentication.
 
-![](images/23792753/23792973.png) \
+    ![](images/23792753/23792973.png) \
 
 
     - Login page after unsuccessful credential authentication.
 
-![](images/23792753/23792972.png) \
+    ![](images/23792753/23792972.png) \
 
 
 9. Once authentication succeeds, the account preferences can be adjusted, if needed, and OP5 Monitor can be put to work.

@@ -98,7 +98,7 @@ Here we will add a new location. First we need to locate where on the map we wan
 ![](images/16482345/16678938.png) \
 
 
-    Enter the variables for this locations and select type, then the object you want to link to this location. You can also enter the exact latitude and longitude here:
+Enter the variables for this locations and select type, then the object you want to link to this location. You can also enter the exact latitude and longitude here:
 
 ![](images/16482345/16678939.png) \
 
@@ -136,7 +136,11 @@ The locations listed above are associated with one host each.
 ![](images/16482345/16678944.png) \
 
 
-4. Click on the grey line. Click on **Edit** in the pop-up bubble.
+4. Click on the grey line to open a bubble dialog. Click on **Edit** in the bubble dialog.
+
+![](images/16482345/16678941.png) \
+
+
     1.  Enter a description.
     2.  Select a type.
     3.  Select the object you want the link to represent.
@@ -144,5 +148,4 @@ The locations listed above are associated with one host each.
 5. Click **Save** to save your link.
 
 ![](images/16482345/16678943.png) \
-
 

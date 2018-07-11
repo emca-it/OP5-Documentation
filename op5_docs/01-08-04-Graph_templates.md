@@ -16,4 +16,3 @@ By default a the template default is used for drawing graphs. This can be change
 
 ![](images/16482376/16679073.png) \
 
-

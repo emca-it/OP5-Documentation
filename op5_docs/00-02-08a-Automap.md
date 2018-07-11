@@ -8,8 +8,7 @@ Defaultroot tells Nagvis what host to start your tree with.
 
 ## Example
 
-Example of how the defaultroot works in NagVis Automap
- In this example we have the following tree in OP5 Monitor.
+Example of how the defaultroot works in NagVis Automap. In this example we have the following tree in OP5 Monitor.
 
 ![](images/16482342/16678964.png) \
 

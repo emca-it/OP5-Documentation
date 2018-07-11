@@ -2,16 +2,17 @@
 
 ## About
 
- The OP5 Monitor GUI has got a built-in configuration backup feature. This is not supposed to be a replacement to  [op5-backup](op5-backup)
+ The OP5 Monitor GUI has got a built-in configuration backup feature. This is not supposed to be a replacement to op5-backup.
 
 The configuration backup is only backing up the OP5 Monitor configuration, nothing else.
 
 ## Backup/Restore actions
 
 In the list of backups the first column is called **ACTIONS**. This is the functions you will find there, from the left to the right:
- View what files are included in the backup.
- Restore the backup
- Delete the backup.
+
+- View what files are included in the backup.
+- Restore the backup
+- Delete the backup.
 
 ## Backing up the configuration
 

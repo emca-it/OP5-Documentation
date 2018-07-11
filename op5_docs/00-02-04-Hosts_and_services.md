@@ -12,7 +12,7 @@ A host can be any kind of network device, virtual device and other objects that 
 ![](images/16482322/16679308.png) \
 
 
- The table below describes each part of the Host information view briefly.
+The table below describes each part of the Host information view briefly.
 
 **Nr**
 
@@ -82,14 +82,14 @@ Here you will get a short summary of the host.
 ![](images/16482322/16679307.png) \
 
 
- The host header information contains
+The host header information contains
 
 - the host address.
-  - the parent host.
-  - what host groups it's member of.
-  - what group will get the notifications for this host.
-  - links to extra service actions, service notes and the performance graphs.
-  - a link to the object in the configuration GUI.
+- the parent host.
+- what host groups it's member of.
+- what group will get the notifications for this host.
+- links to extra service actions, service notes and the performance graphs.
+- a link to the object in the configuration GUI.
 
 ## Host state information
 
@@ -103,13 +103,13 @@ In this view you get all kind of status information about the host. This is the 
 The host commands part gives you a various commands to handle the host. Here you can
 
 - locate the host in a status map
-  - add a host comment
-  - re-schedule the next check for this host
-  - disable and enable active and passive checks
-  - disable and enable notifications
-  - schedule downtime
-  - disable and enable event handlers.
-  - send custom notifications
+- add a host comment
+- re-schedule the next check for this host
+- disable and enable active and passive checks
+- disable and enable notifications
+- schedule downtime
+- disable and enable event handlers.
+- send custom notifications
 
 ![](images/16482322/16679310.png) \
 
@@ -213,7 +213,7 @@ Here you will get a short summary of the service.
 ![](images/16482322/16679253.png) \
 
 
- Here you may see things like
+Here you may see things like
 
 - What host it belongs to.
   - The service groups it is a member of.
@@ -259,4 +259,4 @@ As a manually added comment you can type in almost anything you like.
 ![](images/16482322/16679252.png) \
 
 
- Comments are designed to be short texts. If you would like to add documentation, longer descriptions and so on you should consider using the [Dokuwiki](Dokuwiki) that is included in OP5 Monitor.
+Comments are designed to be short texts. If you would like to add documentation, longer descriptions and so on you should consider using the Dokuwiki that is included in OP5 Monitor.

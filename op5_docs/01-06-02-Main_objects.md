@@ -25,15 +25,16 @@ In most of the listings you will find a small text field called **Filter by reg
 ## Required directives
 
 All objects have a list of directives that are required when adding a new object. The other directives can be left out. They will then get the OP5 Monitor defaults value.
- This does not mean you have to set every directive for every object. One solution is called templates. They make it a lot easier to manage a large set of objects. Read more about templates in [Using templates](Using_templates).
+
+This does not mean you have to set every directive for every object. One solution is called templates. They make it a lot easier to manage a large set of objects. Read more about templates in the Using Templates section.
 
 ## Hosts
 
 Hosts are one of the central objects in the monitoring logic. Important attributes of hosts are as follows:
 
 - Hosts are usually physical or virtual devices on your network (servers, workstations, routers, switches, printers, etc) but it could be practically anything you can reach and monitor from the OP5 Monitor server.
-  - Hosts have an address of some kind, IP address or host name.
-  - Hosts does not need a service directly associated to them, the services can be inherited from a hostgroup. A host can also exist without services.
+ - Hosts have an address of some kind, IP address or host name.
+ - Hosts does not need a service directly associated to them, the services can be inherited from a hostgroup. A host can also exist without services.
   - Hosts can have parent/child relationships with other hosts, often representing real-world network connections, which is used in the network reachability logic.
 
 ### Required directives
@@ -41,13 +42,13 @@ Hosts are one of the central objects in the monitoring logic. Important attribut
 The following directives are required for a host object.
 
 - host\_name
-  - address
-  - max\_check\_attempts
-  - check\_period
-  - contacts
-  - contact\_groups
-  - notification\_interval
-  - notification\_period
+- address
+- max\_check\_attempts
+- check\_period
+- contacts
+- contact\_groups
+- notification\_interval
+- notification\_period
 
 The table below describes the required directives for the host object
 
@@ -86,16 +87,16 @@ A service can be practically any thing that you can measure and monitor on a hos
 The following directives are required for a service object.
 
 - host\_name
-  - service\_description
-  - check\_command
-  - max\_check\_attempts
-  - check\_interval
-  - retry\_interval
-  - check\_period
-  - notification\_interval
-  - notification\_period
-  - contacts
-  - contact\_groups
+- service\_description
+- check\_command
+- max\_check\_attempts
+- check\_interval
+- retry\_interval
+- check\_period
+- notification\_interval
+- notification\_period
+- contacts
+- contact\_groups
 
 The table below describes the required directives for the host object
 
@@ -398,8 +399,8 @@ Plugins are compiled executable or scripts that can be run from a command line t
  If you are looking for a plugin not found in OP5 Monitor by default there are several other places to look:
 
 - Contact OP5 for a specific development
-  - [www.op5.org](http://www.op5.org)
-  - [exchange.nagios.org](http://exchange.nagios.org)
+- [www.op5.org](http://www.op5.org)
+- [exchange.nagios.org](http://exchange.nagios.org)
 
 You can use any plugin written for Nagios but you might need to modify them a bit before they work in the OP5 Monitor environment.
 
