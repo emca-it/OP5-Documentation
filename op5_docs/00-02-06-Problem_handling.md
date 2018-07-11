@@ -181,12 +181,12 @@ As you have seen we can schedule downtime for both hosts and services. Now we wi
 ![](images/16482319/19234883.png) \
 
 
-1.  Enter start and end time.
-2.  Choose between fixed or flexible. **Fixed** downtime starts and stops at the exact start and end times that you specify when you schedule it. **Flexible** is used when you know for how long a host or service will be down but do not know exactly when it will go down.
-3.  Use **Triggered by** if you would like another schedule downtime to start the downtime. For instance, if you schedule flexible downtime for a particular host (because its going down for maintenance), you might want to schedule triggered downtime for all of that hosts' "children". Note that this option is hidden if no other scheduled downtimes are available.
-4.  If you chosen flexible in **b** then type in how long the scheduled downtime is supposed to be active.
-5.  Add a comment about this scheduled downtime.
-6.  Choose what to do with the child host of this host (if there are any).
+    1.  Enter start and end time.
+    2.  Choose between fixed or flexible. **Fixed** downtime starts and stops at the exact start and end times that you specify when you schedule it. **Flexible** is used when you know for how long a host or service will be down but do not know exactly when it will go down.
+    3.  Use **Triggered by** if you would like another schedule downtime to start the downtime. For instance, if you schedule flexible downtime for a particular host (because its going down for maintenance), you might want to schedule triggered downtime for all of that hosts' "children". Note that this option is hidden if no other scheduled downtimes are available.
+    4.  If you chosen flexible in **b** then type in how long the scheduled downtime is supposed to be active.
+    5.  Add a comment about this scheduled downtime.
+    6.  Choose what to do with the child host of this host (if there are any).
 
 4. Click **Submit**.
 5. Click **Done**.
@@ -226,7 +226,7 @@ To remove a scheduled downtime
 ![](images/16482319/19234903.png) \
 
 
-3. Click **Submit**.
+3. Click **Submit**. Now the scheduled downtime and the comment have been removed.
 
 ![](images/16482319/19234891.png) \
 

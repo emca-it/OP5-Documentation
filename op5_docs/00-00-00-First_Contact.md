@@ -55,4 +55,3 @@ Like many applications, the first step is to get logged in. An account should al
 
 
 9. Once authentication succeeds, the account preferences can be adjusted, if needed, and OP5 Monitor can be put to work.
-

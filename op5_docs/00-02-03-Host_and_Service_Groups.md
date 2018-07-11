@@ -34,9 +34,6 @@ From this menu you can:
 - Enable and disable active checks for all hosts and/or services in the host group.
 - Go directly to the configuration for this host group.
 
-![](images/16482320/16679207.png) \
-
-
 ### Host group reporting
 
 From the host group command menu (see above) there are also a couple of reporting tools

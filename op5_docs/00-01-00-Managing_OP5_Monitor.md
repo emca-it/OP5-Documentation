@@ -19,4 +19,3 @@ The **Configure** page (Manage \> Configure) is the central location for links t
 
 
 More in-depth discussion of the **Configure** page can be found in the OP5 Monitor Admin Guide.
-
