@@ -88,6 +88,7 @@ The most common way to acknowledge a problem is to do it in the GUI. This is eas
 3. Fill in a comment and click **Submit**.
 
     With the Sticky options all notifications are suppressed until the problem goes to OK or UP. Un-check this box to remove the acknowledgment even when the problem goes to another problem state, for example from WARNING to CRITICAL or from CRITICAL to WARNING. Use the **Notify** checkbox to send out a notification that this problem has been acknowledged. With every acknowledgment a comment is added to the object. If you would like this comment to remain after the problem has retured to OK or UP use the **Persistent** checkbox.
+
 4. Click **Submit** and you will be directed back to the host you where on when you started.
 
 ### Acknowledging a problem by sms
@@ -283,11 +284,12 @@ Let us say that you are using Citrix and you need to reboot your citrix servers 
 Once you have created a recurring downtime schedule you may
 
 - view it
-  - edit it
-  - delete it.
+- edit it
+- delete it.
 
 This is done from the Schedules tab.
- The view looks like this
+
+The view looks like this
 
 ![](images/16482319/19234893.png) \
 
@@ -309,10 +311,9 @@ This is done from the Schedules tab.
 #### To delete a recurring downtime
 
 1. Click **Recurring downtime** and then **Schedules**.
-2. Click **Delete**
+2. Click **Delete**.
 
 ![](images/16482319/19234889.png) \
 
 
 3. Click **Ok**.
-

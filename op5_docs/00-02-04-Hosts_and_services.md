@@ -12,7 +12,7 @@ A host can be any kind of network device, virtual device and other objects that 
 ![](images/16482322/16679308.png) \
 
 
- The table below describes each part of the Host information view briefly.
+The table below describes each part of the Host information view briefly.
 
 **Nr**
 
@@ -103,13 +103,13 @@ In this view you get all kind of status information about the host. This is the 
 The host commands part gives you a various commands to handle the host. Here you can
 
 - locate the host in a status map
-  - add a host comment
-  - re-schedule the next check for this host
-  - disable and enable active and passive checks
-  - disable and enable notifications
-  - schedule downtime
-  - disable and enable event handlers.
-  - send custom notifications
+- add a host comment
+- re-schedule the next check for this host
+- disable and enable active and passive checks
+- disable and enable notifications
+- schedule downtime
+- disable and enable event handlers.
+- send custom notifications
 
 ![](images/16482322/16679310.png) \
 
@@ -259,4 +259,4 @@ As a manually added comment you can type in almost anything you like.
 ![](images/16482322/16679252.png) \
 
 
- Comments are designed to be short texts. If you would like to add documentation, longer descriptions and so on you should consider using the that is included in OP5 Monitor.
+Comments are designed to be short texts. If you would like to add documentation, longer descriptions and so on you should consider using the Dokuwiki that is included in OP5 Monitor.

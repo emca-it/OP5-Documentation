@@ -53,7 +53,6 @@ The following image types are supported:
 
 1. Go to the menu on top and select **Options -\> Manage Maps**
 
-<<<<<<< HEAD
 ![](images/16482343/16678977.png) \
 
 
@@ -180,7 +179,7 @@ Click on the map where you like to add your host.
 
 3. A box with the host options is now shown.
 
-![](images/16482343/16678979.png) \
+    ![](images/16482343/16678979.png) \
 
 
     The options marked with bold text are mandatory. So the host name is the only one you have to change for now.
@@ -201,7 +200,7 @@ Click on the map where you like to add your host.
 
 3. Click on the map where you like to add your service.
 
-![](images/16482343/16678990.png) \
+    ![](images/16482343/16678990.png) \
 
 
     First select the host of the service, then select the service.
@@ -234,10 +233,10 @@ Here we will add a line between two hosts and connect it to a switch-port Bandwi
 
 3. A box with the line options is now shown.
 
-![](images/16482343/16678988.png) \
+    ![](images/16482343/16678988.png) \
 
 
-The options marked with bold text and **line type** are mandatory. So the host name, service descriptions and line type the only one you have to change for now.
+    The options marked with bold text and **line type** are mandatory. So the host name, service descriptions and line type the only one you have to change for now.
 
 4. Select line\_type. The line type "-%\>
 
@@ -258,7 +257,7 @@ To add a graph to a Nagvis map works in the same way as creating a service objec
 
 2. You will now get a mouse pointer looking like a cross:
 
-![](images/16482343/16678985.png) \
+    ![](images/16482343/16678985.png) \
 
 
     Click on the map where you like to add your service.
@@ -268,7 +267,7 @@ To add a graph to a Nagvis map works in the same way as creating a service objec
     Set **gadget\_url** to **pnp\_graph.php**
     Set **gadget\_typ** to **HTML Code**
 
-![](images/16482343/16678989.png) \
+    ![](images/16482343/16678989.png) \
 
 
 4. Click on **Save** to add the graph to the nagvis map.
@@ -284,11 +283,12 @@ To change the source for a graph in nagvis edit the graph object and add &source
 ### Selecting graph length
 
 To select another graph length use the gadget\_opts option
- **&view=0** = 4 hours
- **&view=1** = 25 hours
- **&view=2** = one week
- **&view=3** = one month
- **&view=4** = one year
+
+- **&view=0** = 4 hours
+- **&view=1** = 25 hours
+- **&view=2** = one week
+- **&view=3** = one month
+- **&view=4** = one year
 
 ![](images/16482343/16678987.png) \
 
@@ -340,5 +340,4 @@ For example if you would like to view a package loss graph for the last year use
 5. Lock the object again to exit edit mode. Right click on the object and select **Lock**
 
 ![](images/16482343/16678932.png) \
-
 

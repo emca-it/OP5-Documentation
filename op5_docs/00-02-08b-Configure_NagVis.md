@@ -24,4 +24,3 @@ From this menu you can:
 
 ![](images/16482341/16678963.png) \
 
-

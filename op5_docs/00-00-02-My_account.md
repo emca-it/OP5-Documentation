@@ -60,6 +60,7 @@ The *Settings* list is where various user accessible settings can be tuned or e
 
 6. Click on the Account Settings link to return to the **Account Settings** page, or return via the back feature of the browser.
 
+
 ![](images/16482337/23792983.png) \
 
 

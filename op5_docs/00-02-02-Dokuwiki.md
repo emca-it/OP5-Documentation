@@ -29,8 +29,5 @@ You can format your text by using wiki markup. This consists of normal character
 | 4 | `=== Heading 4 ===` |
 | 5 | `== Heading 5 ==` |
 
-Note:
-A table of content is automatically created when an article has 3 or more headings.
-
-For more information about formatting text please go to <https://www.dokuwiki.org/wiki:syntax>. More information about how to use the dokuwiki in OP5 Monitor can be found in OP5 Monitor Administrator Manual or at <http://dokuwiki.net/>
-
+ Note:
+ A table of content is automatically created when an article has 3 or more headings.
