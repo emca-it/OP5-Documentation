@@ -102,4 +102,6 @@ The *company\_network* part of the URL is the name given in the configuration (
 
 When done your external widget can render on any site with access to the OP5 Monitor server, such as this:
 
-![](attachments/688739/17269637.png)
+![](images/688739/17269637.png) \
+
+

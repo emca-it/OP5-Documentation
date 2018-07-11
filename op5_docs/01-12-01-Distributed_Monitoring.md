@@ -3,7 +3,9 @@
 ## Introduction
 
 The OP5 Monitor backend can easily be configured to be used as a distributed monitoring solution. The distributed model looks like this.
-![](attachments/16482412/17269702.png)
+
+![](images/16482412/17269702.png) \
+
 
 In the distributed monitoring solution:
 

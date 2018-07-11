@@ -8,46 +8,92 @@ Articles in the Community-Space are not supported by OP5 Support.
 
 This how-to will help you use LDAP SSL with AD authentication
 
-- [Install Active Directory Certificate Services (AD CS)](#CertificatemanagementforLDAPSSL(sldap)withActiveDirectory-InstallActiveDirectoryCertificateServices(ADCS))
-- [Export certificate to OP5 Monitor](#CertificatemanagementforLDAPSSL(sldap)withActiveDirectory-Exportcertificatetoop5Monitor)
-- [Import certificate in to OP5 Monitor](#CertificatemanagementforLDAPSSL(sldap)withActiveDirectory-Importcertificateintoop5Monitor)
-- [Related information: TLS error -8179:Peer's Certificate issuer is not recognized](#CertificatemanagementforLDAPSSL(sldap)withActiveDirectory-Relatedinformation:TLSerror-8179:Peer'sCertificateissuerisnotrecognized)
+- [Certificate management for LDAP SSL (sldap) with Active Directory](#certificate-management-for-ldap-ssl-sldap-with-active-directory)
+- [Install Active Directory Certificate Services (AD CS)](#install-active-directory-certificate-services-ad-cs)
+- [Export certificate to OP5 Monitor](#export-certificate-to-op5-monitor)
+- [Import certificate in to OP5 Monitor](#import-certificate-in-to-op5-monitor)
+- [Related information: TLS error -8179:Peer's Certificate issuer is not recognized](#related-information-tls-error--8179peers-certificate-issuer-is-not-recognized)
 
 # Install Active Directory Certificate Services (AD CS)
 
 To create a certificate, start with installing the *Active Directory Certificate Services* (AD CS) role if it is not already installed and create a root certificate.
 
 1. Add a new server role
-    ![](attachments/12189788/12386446.png)
+
+![](images/12189788/12386446.png) \
+
+
     Select "Active Directory Certificate Services" and click Next
 2. Click "Add features"
-    ![](attachments/12189788/12386447.png)
+
+![](images/12189788/12386447.png) \
+
+
 3. Click Next without selecting any features
-    ![](attachments/12189788/12386448.png)
+
+![](images/12189788/12386448.png) \
+
+
 4. Click Next
-    ![](attachments/12189788/12386452.png)
+
+![](images/12189788/12386452.png) \
+
+
 5. Select "Certification Authority" and click Next
-    ![](attachments/12189788/12386449.png)
+
+![](images/12189788/12386449.png) \
+
+
 6. Click Install
-    ![](attachments/12189788/12386450.png)
+
+![](images/12189788/12386450.png) \
+
+
 7. When the installation is complete you'll get a task to configure AD CS. Click the task to open the configuration wizard.
-    ![](attachments/12189788/12386451.png)
+
+![](images/12189788/12386451.png) \
+
+
 8. Click Next to use your current credentals
-    ![](attachments/12189788/12386453.png)
+
+![](images/12189788/12386453.png) \
+
+
 9. Click Next
-    ![](attachments/12189788/12386454.png)
+
+![](images/12189788/12386454.png) \
+
+
 10. Click Next
-    ![](attachments/12189788/12386455.png)
+
+![](images/12189788/12386455.png) \
+
+
 11. Click Next
-    ![](attachments/12189788/12386456.png)
+
+![](images/12189788/12386456.png) \
+
+
 12. Click Next
-    ![](attachments/12189788/12386457.png)
+
+![](images/12189788/12386457.png) \
+
+
 13. Select SHA256 (or the appropriate settings for your company's security policy)
-    ![](attachments/12189788/12386458.png)
+
+![](images/12189788/12386458.png) \
+
+
 14. Click Next
-    ![](attachments/12189788/12386459.png)
+
+![](images/12189788/12386459.png) \
+
+
 15. Click Next
-    ![](attachments/12189788/12386460.png)
+
+![](images/12189788/12386460.png) \
+
+
 16. Click Next
 17. Click Configure
 
@@ -89,7 +135,8 @@ In order for the OP5 Monitor server to verify the server's certificate, the publ
     TLS_REQCERT allow
     ```
 
-    ![](attachments/12189788/17269676.png)
+![](images/12189788/17269676.png) \
+
 
 4. Restart apache by running:
 

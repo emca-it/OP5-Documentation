@@ -4,7 +4,8 @@
 
 All settings are administrated through the Configuration. The **Configuration** menu can be found under **Options** in the menu at the top of the default view
 
-![](attachments/16482341/16678966.png)
+![](images/16482341/16678966.png) \
+
 
 From this menu you can:
 
@@ -21,6 +22,6 @@ From this menu you can:
 2. Click on the NagVis map that you want to edit.
 3. Use the menu on the top to access the edit options.
 
-![](attachments/16482341/16678963.png) \
+![](images/16482341/16678963.png) \
 
 

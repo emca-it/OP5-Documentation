@@ -6,17 +6,20 @@ The business services view is designed to combine your IT monitoring and your bu
 
 ## Viewing Business Services
 
-To access the Business Services view click on **Business Services** in the main menu.
+To access the Business Services view click on **Business Services** in the main menu. 
 
-![](attachments/16482326/16679247.png)
+![](images/16482326/16679247.png) \
 
-The Business Services view gives an easy overview of how your Business Processes are working.
 
-![](attachments/16482326/16679248.png)
+ The Business Services view gives an easy overview of how your Business Processes are working.
+
+![](images/16482326/16679248.png) \
+
 
 For better viewing the following screenshot has been divided in to two pieces.
 
-![](attachments/16482326/16679261.png)
+![](images/16482326/16679261.png) \
+
 
 | **Figure Number** | **Description** |
 | ----- | ----- |

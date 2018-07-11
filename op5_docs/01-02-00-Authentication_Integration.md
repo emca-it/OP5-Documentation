@@ -11,7 +11,10 @@ An authentication driver can rely on either:
 -     An external system for managing users (Driver LDAP).
 
 We can configure the authentication system using the **Auth Modules** option in Configure:
-![](attachments/16482389/16679133.png)
+
+![](images/16482389/16679133.png) \
+
+
 We store the configuration for the authentication system in '`/etc/op5/auth.yml`*'.*
 
 **Child Pages**

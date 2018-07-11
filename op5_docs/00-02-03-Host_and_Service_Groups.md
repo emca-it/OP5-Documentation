@@ -24,7 +24,12 @@ You can use host groups to:
 
 By clicking on the "Action" icon on a host group you will get a menu to control the host group.
 
+<<<<<<< HEAD
 ![](attachments/16482320/16679209.png)
+=======
+![](images/16482320/16679209.png) \
+
+>>>>>>> master
 
 From this menu you can:
 
@@ -33,13 +38,26 @@ From this menu you can:
 - Enable and disable active checks for all hosts and/or services in the host group.
 - Go directly to the configuration for this host group.
 
+<<<<<<< HEAD
+=======
+![](images/16482320/16679207.png) \
+
+
+>>>>>>> master
 ### Host group reporting
 
 From the host group command menu (see above) there are also a couple of reporting tools
 
+<<<<<<< HEAD
 ![](attachments/16482320/16679208.png) \
 
 From this menu you can view Availability reports and Alert history for the host group.
+=======
+![](images/16482320/16679208.png) \
+
+
+ From this menu you can view Availability reports and Alert history for the host group.
+>>>>>>> master
 
 ## Using Service groups
 
@@ -60,9 +78,16 @@ On the hosts listed above there are services that must be working otherwise your
 
 By clicking on a service group name (the name within parentheses) in any of the service group views you will get a menu to control the service group.
 
+<<<<<<< HEAD
 ![](attachments/16482320/16679214.png)
 
 From this menu you can:
+=======
+![](images/16482320/16679214.png) \
+
+
+ From this menu you can:
+>>>>>>> master
 
 - Schedule downtime for all host and/or services in the service group.
   - Enable and disable notifications for all hosts and/or services in the service group.
@@ -73,7 +98,12 @@ From this menu you can:
 
 From the service group command menu (see above) there are also a couple of reporting tools
 
+<<<<<<< HEAD
 ![](attachments/16482320/16679213.png)
+=======
+![](images/16482320/16679213.png) \
+
+>>>>>>> master
 
  From this menu you can view Availability reports and Alert history for the service group.
 

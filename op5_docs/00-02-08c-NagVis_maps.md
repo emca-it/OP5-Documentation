@@ -18,13 +18,14 @@ The following image types are supported:
 #### To add a new background image
 
 1. Go to nagvis in the monitoring menu.
-2. Go to the menu on top and select **Options -> Manage Backgrounds**
+2. Go to the menu on top and select **Options -\> Manage** **Backgrounds**
 
-![](attachments/16482343/16678968.png)
+![](images/16482343/16678968.png) \
+
 
 3. Click on **Choose File** in the **Upload background image** and choose the image to upload.
 
-![](attachments/16482343/16678973.png) \
+![](images/16482343/16678973.png) \
 
 
 4. Click **Upload**. Now your background image is ready to use.
@@ -36,11 +37,12 @@ The following image types are supported:
 1. Go to Nagvis in the monitoring menu.
 2. Go to the menu on top and select **Options -\> Manage** **Backgrounds**
 
-![](attachments/16482343/16678974.png) \
+![](images/16482343/16678974.png) \
+
 
 3. Under **Delete background image** choose the background image you like to remove and click **Delete**.
 
-![](attachments/16482343/16678971.png) \
+![](images/16482343/16678971.png) \
 
 
 ## Manage maps
@@ -49,13 +51,16 @@ The following image types are supported:
 
 #### To add a new map
 
-1. Go to the menu on top and select **Options** **-\> Manage Maps**
+1. Go to the menu on top and select **Options -\> Manage Maps**
 
-![](attachments/16482343/16678977.png)
+<<<<<<< HEAD
+![](images/16482343/16678977.png) \
+
 
 2. Now fill in the following fields:
 
-![](attachments/16482343/16678972.png)
+![](images/16482343/16678972.png) \
+
 
 | **Option**  | **Description**                         |
 | ----        | ----                                    |
@@ -76,7 +81,8 @@ Since the **Add new map** window is pretty limited you probably want to change s
 1. Go to the map that you would like to change.
 2. Go to the menu on top and select **Edit Map -\> Map Options**
 
-![](attachments/16482343/16678978.png)
+![](images/16482343/16678978.png) \
+
 
 The number of options is large. For more information about the options please read more in the official NagVis Manual at:
 [http://www.nagvis.org/documentation](http://www.nagvis.org/documentation+)
@@ -87,12 +93,12 @@ The number of options is large. For more information about the options please re
 
 1. Select **Options -\> Manage** **Maps from the menu on top**
 
-![](attachments/16482343/16678982.png) \
+![](images/16482343/16678982.png) \
 
 
 2. Under **Delete map** choose the map you like to remove and click **Delete**.
 
-![](attachments/16482343/16678976.png) \
+![](images/16482343/16678976.png) \
 
 
 3. Click **Ok** in the pop-up question to deleted the map.
@@ -103,12 +109,12 @@ The number of options is large. For more information about the options please re
 
 1. Go to the top menu and choose **Options** -\> **Manage Maps**
 
-![](attachments/16482343/16678975.png) \
+![](images/16482343/16678975.png) \
 
 
 2. Select the map you like to rename.
 
-![](attachments/16482343/16678980.png) \
+![](images/16482343/16678980.png) \
 
 
 3. Type the new name in the **New name** text field and click **Rename**.
@@ -160,21 +166,21 @@ As you can see in the table in Map object types the type Icon consists of five d
 
 #### To add a host icon
 
-1. Go to the menu on top and select **Edit** **Map** -> **Add Icon** -> **Host**.
+1. Go to the menu on top and select **Edit** **Map** -\> **Add Icon** -\> **Host**
 
-![](attachments/16482343/16678981.png) \
+![](images/16482343/16678981.png) \
 
 
 2. You will now get a mouse pointer looking like a cross:
 
-![](attachments/16482343/16678985.png) \
+![](images/16482343/16678985.png) \
 
 
 Click on the map where you like to add your host.
 
 3. A box with the host options is now shown.
 
-    ![](attachments/16482343/16678979.png) \
+![](images/16482343/16678979.png) \
 
 
     The options marked with bold text are mandatory. So the host name is the only one you have to change for now.
@@ -185,15 +191,18 @@ Click on the map where you like to add your host.
 
 1. Go the menu on top and select **Edit** **Map** -\> **Add Icon** -\> **Service**
 
-    ![](attachments/16482343/16678986.png)
+![](images/16482343/16678986.png) \
+
 
 2. You will now get a mouse pointer looking like a cross:
 
-    ![](attachments/16482343/16678985.png)
+![](images/16482343/16678985.png) \
+
 
 3. Click on the map where you like to add your service.
 
-    ![](attachments/16482343/16678990.png)
+![](images/16482343/16678990.png) \
+
 
     First select the host of the service, then select the service.
 
@@ -211,11 +220,13 @@ Here we will add a line between two hosts and connect it to a switch-port Bandwi
 
 1. Go to the menu on top and chose: **Edit Map** -\> **Add Line** -\> **Service**
 
-    ![](attachments/16482343/16678983.png)
+![](images/16482343/16678983.png) \
+
 
 2. Place the line between your objects like this.
 
-    ![](attachments/16482343/16678984.png)
+![](images/16482343/16678984.png) \
+
 
     1.  Click on the host icon you like to start your line from.
     2.  Drag the mouse to the other host you like to connect the line to.
@@ -223,9 +234,11 @@ Here we will add a line between two hosts and connect it to a switch-port Bandwi
 
 3. A box with the line options is now shown.
 
-    ![](attachments/16482343/16678988.png)
+![](images/16482343/16678988.png) \
 
-    The options marked with bold text and **line type** are mandatory. So the host name, service descriptions and line type the only one you have to change for now.
+
+The options marked with bold text and **line type** are mandatory. So the host name, service descriptions and line type the only one you have to change for now.
+
 4. Select line\_type. The line type "-%\>
 
     The line type "-%+BW\>\<%+BW-" is used for showing both percentage and Bandwidth. This line does not work with the standard traffic check.
@@ -240,11 +253,13 @@ To add a graph to a Nagvis map works in the same way as creating a service objec
 
 1. Go the menu on top and select **Edit** **Map** -\> **Add Icon** -\> **Service**
 
-    ![](attachments/16482343/16678986.png)
+![](images/16482343/16678986.png) \
+
 
 2. You will now get a mouse pointer looking like a cross:
 
-    ![](attachments/16482343/16678985.png)
+![](images/16482343/16678985.png) \
+
 
     Click on the map where you like to add your service.
 
@@ -253,7 +268,8 @@ To add a graph to a Nagvis map works in the same way as creating a service objec
     Set **gadget\_url** to **pnp\_graph.php**
     Set **gadget\_typ** to **HTML Code**
 
-    ![](attachments/16482343/16678989.png)
+![](images/16482343/16678989.png) \
+
 
 4. Click on **Save** to add the graph to the nagvis map.
 
@@ -262,7 +278,8 @@ To add a graph to a Nagvis map works in the same way as creating a service objec
 A graph on a service can have multiple sources, for example the ping service has both Round Trip Times and Package loss where in this case RTT is source 0 and package loss is source 1.
 To change the source for a graph in nagvis edit the graph object and add &source=x to **gadget\_opts**
 
- ![](attachments/16482343/16678928.png)
+![](images/16482343/16678928.png) \
+
 
 ### Selecting graph length
 
@@ -273,7 +290,8 @@ To select another graph length use the gadget\_opts option
  **&view=3** = one month
  **&view=4** = one year
 
- ![](attachments/16482343/16678987.png)
+![](images/16482343/16678987.png) \
+
 
 ### Using multiple options
 
@@ -289,16 +307,19 @@ For example if you would like to view a package loss graph for the last year use
 1. Open the map in which the object is located.
 2. Right click on the object icon and the following dialog is shown
 
-    ![](attachments/16482343/16678927.png)
+![](images/16482343/16678927.png) \
+
 
 3. Click **Unlock** to enter edit mode for that object
 4. Right click on the object again and select **Delete**.
 
-    ![](attachments/16482343/16678931.png)
+![](images/16482343/16678931.png) \
 
-5. Lock the object again to exit edit mode. Right click on the object and select **Lock**. 
 
-![](attachments/16482343/16678930.png)
+5. Lock the object again to exit edit mode. Right click on the object and select **Lock**
+
+![](images/16482343/16678930.png) \
+
 
 ### Modifying objects
 
@@ -307,14 +328,17 @@ For example if you would like to view a package loss graph for the last year use
 1. Open the map in which the object is located.
 2. Right click on the object icon and the following dialog is shown
 
-    ![](attachments/16482343/16678927.png)
+![](images/16482343/16678927.png) \
+
 
 3. Click **Unlock** to enter edit mode for that object
 4. Right click on the object again and select **Modify object**.
 
-    ![](attachments/16482343/16678929.png)
+![](images/16482343/16678929.png) \
+
 
 5. Lock the object again to exit edit mode. Right click on the object and select **Lock**
 
-    ![](attachments/16482343/16678932.png)
+![](images/16482343/16678932.png) \
+
 
