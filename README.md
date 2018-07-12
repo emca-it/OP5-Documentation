@@ -86,7 +86,19 @@ Oh, look! They're really mad now!
 
 ```
 | Column Heading | Column Heading |
-| ---- | ---- |
+| ---- | ----------- |
 | 1 | Text here |
 | 2 | More text here |
+| 3 | Long line of text \ |
+|   | across multiple lines |
+| 4 | - Item 1 |
+|   | - Item 2 |
+|   | - etc.   |
+| 5 | Line 1 |
+|   | Line 2 |
+|   | etc.   |
 ```
+
+The dashes in the second line under the heading control the width of the columns. To keep the fields from being wrapped the dashes need to span the width of the largest item, or the dashes need to span the desired width of the column that way fields are wrapped at a specific length. 
+
+Pandoc will not split words when wrapping, so a word larger then the width of the column will overlap the next column.
