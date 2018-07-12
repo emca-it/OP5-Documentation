@@ -22,7 +22,6 @@ then
 		file_name=$(printf "$file" | tr "." "_")
 		printf "Processing $file -> $file_name.pdf\t"
 		/usr/bin/time -h pandoc --latex-engine=lualatex -sf markdown --template=../template/dlc-custom-latex.template -o $DIR_OUTPUT/$file_name.pdf ../template/metadata.yaml $file
-		printf "Done!\n"
 	done
 elif [[ -f $SOURCE ]]
 then
