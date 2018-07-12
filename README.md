@@ -25,6 +25,12 @@ pandoc --latex-engine=lualatex -sf markdown --template=../template/dlc-custom-la
 
 We follow the Pandoc Markdown standard since we're using pandoc to render the `.md` files into something useable.
 
+### Markdown Notes
+
+- There is not a standard. Each renderer will create pages which are slightly different.
+- Whitespace is significant, for better or worse... Mostly worse. Whitespace at the beginning of a line controls the text's indention and which group it is considered a part of, and pandoc counts in groups of 4. 0-3 space is considered on the same level, 4-7 is the next level, and so on.
+- Anything on the same level in a numbered list will break the numbering sequence. Text, figures, tables, code, etc. needs to be indented to the next level to make sure the numbering sequence continues.
+
 ### Table of Contents
 
 Pandoc keys off of the headings in the Markdown files to create the table of contents (ToC).
