@@ -63,8 +63,8 @@
 = 00-02-05-Monitoring_Agents.md
 = 00-04-04-Multicommands.md
 = 00-00-02-My_account.md
-00-02-08-NagVis.md
-00-02-08c-NagVis_maps.md
+= 00-02-08-NagVis.md
+= 00-02-08c-NagVis_maps.md
 00-04-05-Navigation.md
 01-10-00-Notifications.md
 01-10-02-Notification_skins.md
