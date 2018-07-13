@@ -10,15 +10,15 @@ In this chapter the different parts of the GUI is described.
 ### Logging in to OP5 Monitor
 
 First of all you need to login before you can start using OP5 Monitor.
- To login to the OP5 Monitor GUI:
- Point your browser to the portal page of your OP5 Monitor server ( <https://yourserver/> )
+
+To login to the OP5 Monitor GUI, point your browser to the portal page of your OP5 Monitor server ( <https://yourserver/> )
 
 Click OP5 Monitor.
 
 ![](images/16482331/18481425.png) \
 
 
- Enter your login and password.
+Enter your login and password.
 
 Click **Login**
 
@@ -75,7 +75,7 @@ To add a custom link to the quickbar menu select the small manage quickbar menu 
 ![](images/16482331/18481417.png) \
 
 
- Add the URI, name and icon for your custom link
+Add the URI, name and icon for your custom link
 
 ![](images/16482331/18481421.png) \
 
@@ -86,12 +86,12 @@ In every view where you find the icons for
 
 - graphs 
 
-![](images/16482331/18481433.png) \
+    ![](images/16482331/18481433.png) \
 
 
 - comments 
 
-![](images/16482331/18481431.png) \
+    ![](images/16482331/18481431.png) \
 
 
 You can hover the mouse pointer over the icon and get a pop up looking like this

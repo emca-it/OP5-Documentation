@@ -32,83 +32,37 @@ Michael Medin, the head of the NSClient++ project, has provided [very good docum
 
 Much of this has been deprecated since version 0.4 and changed again with version 0.5. Please consider this section historical for version 0.3.x. Please also refer to [our more in-depth material from our Knowledge Article](https://kb.op5.com/x/Pw4jAQ) about the older configuration methods.
 
-|:--|
-|File
+| **File** | **Description** | 
+| --------  | ----------------------------------------  |
+| `NSC.ini` | This is the standard configuration file. This contains the default settings for NSClient++. |
+| | This file might be overwritten during an update of NSClient++ |
+| `op5.ini` | This is a OP5 specific configuration file. Here are the changes made by OP5 entered. | 
+| | This file might be overwritten during an update of NSClient++ |
+| `custom.ini` | This is where you shall place your own configuration. | 
+| | It will never be overwritten during any update of NSClient++. |
 
-Description|NSC.ini
+The default configuration provided is fully functional, but there are some options that likely need to change.
 
-This is the standard configuration file. This contains the default settings for NSClient++
- This file might be overwritten during an update of NSClient++|op5.ini
-
-This is a OP5 specific configuration file. Here are the changes made by OP5 entered.
- This file might be overwritten during an update of NSClient++|custom.ini
-
-This is where you shall place your own configuration.
- It will never be overwritten during any update of NSClient++.|
-
- The default configuration provided is fully functional, but there are some options that likely need to change.
-
-Changing the configuration
+### Changing the configuration
 
 To change the configuration open the custom.ini file using your favorite text-editor (e.g. WordPad). This file is empty but take a look at NSC.ini to view all settings. Read the NSC.ini file carefully to get a complete understanding of all configuration options. Lines starting with ; (semicolon) are comments or disabled commands.
- Before the changes will take effect, the op5NSClient++ service must be restarted.
- Options most likely in need for configuration are described bellow, section by section.
 
-subsection
+Before the changes will take effect, the op5NSClient++ service must be restarted.
 
-argument
+Options most likely in need for configuration are described bellow, section by section.
 
-default value
-
-description
-
-`[Settings]`
-
-`allowed_hosts=`
-
-This option lists all servers that are allowed to talk to the agent. Enter the IP-address of the OP5 Monitor server or servers if used in a load balanced configuration. If this option is left blank anybody will be able to communicate with the agent.
-
-`[log]`
-
-`debug=`
-
-0 (zero)
-
-Set debug to 1 to enable debugging. This is normally not necessary, as the logs can get large. However this can be very useful when troubleshooting.
-
-`[NSClient]`
-
-`port=`
-
-1248
-
-This is the port where NSClient++ will listen for request for 'check\_nt' or formatted for older NSClient++ versions. If any other application is already using the default port, it might be necessary to change this value.
-
-`[NRPE]`
-
-`port=`
-
-5666
-
-This is the port used for requests formatted for 'check\_nrpe'. OP5 recommends using the default value: otherwise, 'check\_nrpe' check commands on the OP5 Monitor will need to written with a variable and value for the revised port.
-
-Reminder
-
-If you change this value, you also need to make changes in the check\_command used on the OP5 Monitor.
-
-`allow_arguments=`
-
-0 (zero)
-
-Set this to 1 to enable the possibility to include arguments in NRPE requests.
-
-Allowing OP5 Monitor to pass arguments (\$ARG2\$, etc.) could be considered a security risk. Only enable this if the host is not a read-only environment, then set the expected warning and critical values in the custom command syntax.
-
-Note that '1' is the most typical value, even though it is not default. This allows dynamic arguments from the OP5 side. Just make sure to set the 'allowed\_hosts' option described above if you allow arguments.
-
-`[NRPE Handlers]`
-
-NRPE handlers provide a way to execute any custom plugin or check command on the monitored Windows server. This section is where you configure all the commands that should be available.
+| **Subsection** | **Argument** | **Default Value** | **Description** |
+| ---------------   | ---------------  | ---------- | ---------------------------------------- |
+| `[Settings]` | `allowed_hosts=` | | This option lists all servers that are allowed to talk to the agent. Enter the IP-address of the OP5 Monitor server or servers if used in a load balanced configuration. If this option is left blank anybody will be able to communicate with the agent. |
+| `[log]` | `debug=` | 0 (zero) | Set debug to 1 to enable debugging. This is normally not necessary, as the logs can get large. However this can be very useful when troubleshooting. |
+| `[NSClient]` | `port=` | 1248 | This is the port where NSClient++ will listen for request for 'check\_nt' or formatted for older NSClient++ versions. If any other application is already using the default port, it might be necessary to change this value. |
+| `[NRPE]` | `port=` | 5666 | This is the port used for requests formatted for 'check\_nrpe'. OP5 recommends using the default value: otherwise, 'check\_nrpe' check commands on the OP5 Monitor will need to written with a variable and value for the revised port. |
+| | | | Reminder: |
+| | | | If you change this value, you also need to make changes in the check\_command used on the OP5 Monitor. |
+| | `allow_arguments=` | 0 (zero) | Set this to 1 to enable the possibility to include arguments in NRPE requests. |
+| | | | Allowing OP5 Monitor to pass arguments (\$ARG2\$, etc.) could be considered a security risk. Only enable this if the host is not a read-only environment, then set the expected warning and critical values in the custom command syntax.
+| | | | Note that '1' is the most typical value, even though it is not default. This allows dynamic arguments from the OP5 side. Just make sure to set the 'allowed\_hosts' option described above if you allow arguments.
+| `[NRPE Handlers]` | | | NRPE handlers provide a way to execute any custom plugin or check command on the monitored Windows server. This section is where you configure all the commands that should be available.
 
 ### Adding a custom script or plugin to NSClient++
 
