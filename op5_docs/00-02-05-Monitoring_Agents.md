@@ -6,10 +6,10 @@ op5 Monitor can do a lot on its own. But to get the most out of OP5 Monitor you 
 The following agents are available from the download section in the support section at http://www.op5.com/get-op5-monitor/download/\#Agents-tab.
 
 - OP5 NSClient++
-  - NRPE
-  - MRTGEXT
-  - Windows syslog Agent
-  - Nagstamon
+- NRPE
+- MRTGEXT
+- Windows syslog Agent
+- Nagstamon
 
 op5 NSClient++
 
@@ -17,7 +17,7 @@ This is the agent used for monitoring Microsoft Windows operating systems.
  You can use it to monitor things like
 
 - CPU, memory and disk usage
-  - services, windows events and files
+- services, windows events and files
 
 You can also use the built-in NRPE support to create your own commands for OP5 NSClient++
 
@@ -39,4 +39,4 @@ Nagstamon
 
 Nagstamon is a status monitor for the desktop. It can connect to several servers and resides in the systray or as a floating statusbar at the desktop showing a brief summary of critical, warning, unknown, unreachable and down hosts and services and pops up a detailed status overview when moving the mouse pointer over it
 
- More information about the agents can be found in the [OP5 Monitor Administrator Manual](op5_Monitor_Administrator_Manual).
+ More information about the agents can be found in the OP5 Monitor Administrator Manual.
