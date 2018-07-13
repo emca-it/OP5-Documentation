@@ -53,9 +53,9 @@
 00-04-03-Logger_Interface.md
 ----------
 = 01-06-10-Macros.md
-01-06-02-Main_objects.md
-01-06-08-Make_things_easy.md
-01-07-00-Managing_dokuwiki_pages.md
+= 01-06-02-Main_objects.md
+= 01-06-08-Make_things_easy.md
+= 01-07-00-Managing_dokuwiki_pages.md
 01-06-06-Managing_objects.md
 00-01-00-Managing_OP5_Monitor.md
 = 01-12-04-Merlin.md
