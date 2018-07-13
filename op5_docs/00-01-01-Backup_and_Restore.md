@@ -20,9 +20,9 @@ The *Actions* column contains links to the View Backup,  Restore Backup, and De
 
 | **Icon** | **Action** | **Explanation** |
 | ---- | ---- | ---- |
-| ![](attachments/16482336/23793017.png) | View | View the contents of the backup file. |
-| ![](attachments/16482336/23793018.png) | Restore | Return the configuration to production. |
-| ![](attachments/16482336/23793019.png) | Delete | Remove the backup file from the server. |
+| ![](images/16482336/23793017.png) | View | View the contents of the backup file. |
+| ![](images/16482336/23793018.png) | Restore | Return the configuration to production. |
+| ![](images/16482336/23793019.png) | Delete | Remove the backup file from the server. |
 
 The *Backups* columns contains the names of the backup files. The names also happen to be links to the backup files, and clicking on one will prompt the web browser to download the file.
 
