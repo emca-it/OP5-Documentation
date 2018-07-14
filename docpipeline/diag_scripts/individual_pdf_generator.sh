@@ -2,7 +2,7 @@
 # $1 is the source directory for the Markdown files. Can be a relative path.
 # $2 is the out directory. This needs to be an absolute path at this point in time.
 
-RUNDATETIME=$(date +%F-%T)
+RUNDATETIME=$(date +%F-%H%M%S)
 SOURCE="$1"
 DIR_OUTPUT="$2/single_pdfs-$RUNDATETIME"
 
