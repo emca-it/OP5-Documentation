@@ -25,6 +25,12 @@ pandoc --latex-engine=lualatex -sf markdown --template=../template/dlc-custom-la
 
 We follow the Pandoc Markdown standard since we're using pandoc to render the `.md` files into something useable.
 
+### Markdown Notes
+
+- There is not a standard. Each renderer will create pages which are slightly different.
+- Whitespace is significant, for better or worse... Mostly worse. Whitespace at the beginning of a line controls the text's indention and which group it is considered a part of, and pandoc counts in groups of 4. 0-3 space is considered on the same level, 4-7 is the next level, and so on.
+- Anything on the same level in a numbered list will break the numbering sequence. Text, figures, tables, code, etc. needs to be indented to the next level to make sure the numbering sequence continues.
+
 ### Table of Contents
 
 Pandoc keys off of the headings in the Markdown files to create the table of contents (ToC).
@@ -86,7 +92,19 @@ Oh, look! They're really mad now!
 
 ```
 | Column Heading | Column Heading |
-| ---- | ---- |
+| ---- | ----------- |
 | 1 | Text here |
 | 2 | More text here |
+| 3 | Long line of text \ |
+|   | across multiple lines |
+| 4 | - Item 1 |
+|   | - Item 2 |
+|   | - etc.   |
+| 5 | Line 1 |
+|   | Line 2 |
+|   | etc.   |
 ```
+
+The dashes in the second line under the heading control the width of the columns. To keep the fields from being wrapped the dashes need to span the width of the largest item, or the dashes need to span the desired width of the column that way fields are wrapped at a specific length. 
+
+Pandoc will not split words when wrapping, so a word larger then the width of the column will overlap the next column.
