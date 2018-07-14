@@ -16,23 +16,20 @@ This image file contains all dependencies required to upgrade OP5 Monitor to the
 
 Mount the ISO image file in the filesystem:
 
-``` {style="margin-left: 30.0px;"}
+```
 mkdir -p /media/cdrom# mount -o loop op5-System-6.8-Monitor-7.2.8-20160819-1816.iso /media/cdrom/
 ```
 
 On versions prior to OP5 Monitor 7.2.8 you need to execute two additional commands:
 
-    # yum --disablerepo=* --enablerepo=*media* update op5-release
-
-    # rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+- `yum --disablerepo=* --enablerepo=*media* update op5-release`
+- `rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6`
 
 Upgrade the system from the mounted ISO-file:
 
 `# yum --disablerepo=* --enablerepo=*media* update`
 
-You will now get a summary of all packages that will be updated or installed for dependencies, answer: yes
-
-`Is this ok [y/N]: y`
+Yum will display a summary of all packages that will be updated or installed for dependencies. Answer `y` install or update the packages.
 
 The upgrade process will take a coulple of minutes, go get some coffee or tea.
 
