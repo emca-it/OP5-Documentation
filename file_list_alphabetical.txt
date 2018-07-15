@@ -79,7 +79,7 @@
 = 01-11-00-Plugins.md
 = 01-11-04-plugin_support_levels.md
 = 00-02-06-Problem_handling.md
-00-04-06-Quick_Action_Menu.md
+= 00-04-06-Quick_Action_Menu.md
 00-04-07-Refresh_time.md
 00-03-00-Reporting.md
 00-03-02-Reports.md
