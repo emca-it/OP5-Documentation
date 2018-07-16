@@ -11,7 +11,7 @@
 00-01-01-Backup_and_Restore.md
 01-05-00-Business_Service.md
 01-05-01-Business_services.md
-00-02-01-Business_Service_Monitoring.md
+= 00-02-01-Business_Service_Monitoring.md
 01-08-01-Collections.md
 01-08-02-Combined_Graphs.md
 01-03-03-Component_Architecture.md
@@ -94,12 +94,12 @@
 01-11-05-The_plugin_interface.md
 01-06-09-Time_periods.md
 01-16-02-Trapper_Hostname_Matching_Flowchart.md
-01-13-00-Troubleshooting.md
+= 01-13-00-Troubleshooting.md
 01-03-04-Tweaks.md
 01-14-02-Upgradding_with_tar.gz_files.md
 01-14-00-Upgrading.md
 01-14-03-Upgrading_with_yum.md
-01-15-00-User_Menus.md
+= 01-15-00-User_Menus.md
 01-16-03-Using_Command_Line_Tools.md
 00-02-10-Using_Geomap.md
 01-06-05-Using_templates.md
