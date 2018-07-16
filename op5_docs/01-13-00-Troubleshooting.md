@@ -16,165 +16,28 @@ The table shows the available modules and their log files.
 
 Note that enabling Reference will add a reference to the concerned file into the log message. Please be aware that this is a costly operation, and that it only applies to configuration files in '`/etc/op5`':
 
- Monitor aspect
+| Monitor aspect | Module | Log configuration file | Default logfile path | Default debug level | Default reference\* | Content |
+|-------------------------------|----------|---------------------------------|---------------------------------|---------------------|---------------------|------------------------------------------------------------------------------------------------------------------------|
+| Authentication | Auth | /etc/op5/log.yml | /var/log/op5/auth.log | Error | True | PHP errors. |
+| Business service | Synergy | /etc/op5/log.yml | /var/log/op5/synergy.log | Error | True | PHP errors. |
+| Business service | Synergy | /opt/synergy/etc/config.lua | See Syslog. | See Syslog. | See Syslog. | Only on/off configuration available, everything else managed by syslog-ng. |
+| Configuration | Nacoma | /etc/op5/log.yml | /var/log/op5/nacoma.log | Error | True | PHP errors. |
+| GUI | Ninja | /etc/op5/log.yml | /var/log/op5/ninja.log | Error | True | PHP errors. |
+| HTTP API | HTTP API | /etc/op5/log.yml | /var/log/op5/http\_api.log | Error | True | PHP errors. |
+| MayI | MayI | /etc/op5/log.yml | /var/log/op5/mayi.log | Error | False | PHP errors. |
+| SMS |  | /etc/smsd.conf | /var/log/smsd/smsd.log | Notice |  |  |
+| SMS |  | /etc/smsd.conf | /var/log/smsd/smsd\_trouble.log | Notice |  | Only available if smart\_logging is enabled. Smart\_logging creates a separate log file for errors in order to clearly |
+| Syslog |  | /etc/syslog-ng/syslog-ng.conf \ | /dev/console \ |  |  |  |
+|  |  |  | /var/log/messages \ |  |  |  |
+|  |  |  | /var/log/secure \ |  |  |  |
+|  |  |  | /var/log/maillog \ |  |  |  |
+|  |  |  | /var/log/spooler \ |  |  |  |
+|  |  |  | /var/log/boot.log \ |  |  |  |
+|  |  |  | /var/log/cron \ |  |  |  |
+|  |  |  | /var/log/kern |  |  |  |
+| Distribution and Load Balancing | Merlin | /opt/monitor/op5/merlin/merlin.conf | /var/log/op5/merlin/daemon.log | Info |  | Merlin communication and module logs |
+|  |  |  | /var/log/op5/merlin/neb.log |  |  |  |
 
-Module
-
-Log configuration file
-
-Default logfile path
-
-Default debug level
-
-Default reference\*
-
-Content
-
-Authentication & Authorization
-
-Auth
-
-/etc/op5/log.yml
-
-/var/log/op5/auth.log
-
-Error
-
-True
-
-PHP errors.
-
-Business service
-
-Synergy
-
-/etc/op5/log.yml
-
-/var/log/op5/synergy.log
-
-Error
-
-True
-
-PHP errors.
-
-Business service
-
-Synergy
-
-/opt/synergy/etc/config.lua
-
-See Syslog.
-
-See Syslog.
-
-See Syslog.
-
-Only on/off configuration available, everything else managed by syslog-ng.
-
-Configuration
-
-Nacoma
-
-/etc/op5/log.yml
-
-/var/log/op5/nacoma.log
-
-Error
-
-True
-
-PHP errors.
-
-GUI
-
-Ninja
-
-/etc/op5/log.yml
-
-/var/log/op5/ninja.log
-
-Error
-
-True
-
-PHP errors.
-
-HTTP API
-
-HTTP API
-
-/etc/op5/log.yml
-
-/var/log/op5/http\_api.log
-
-Error
-
-True
-
-PHP errors.
-
-MayI
-
-MayI
-
-/etc/op5/log.yml
-
-/var/log/op5/mayi.log
-
-Error
-
-False
-
-PHP errors.
-
-SMS
-
--
-
-/etc/smsd.conf
-
-/var/log/smsd/smsd.log
-
-Notice
-
--
-
-SMS
-
--
-
-/etc/smsd.conf
-
-/var/log/smsd/smsd\_trouble.log
-
-Notice
-
--
-
-Only available if smart\_logging is enabled. Smart\_logging creates a separate log file for errors in order to clearly
-
-Syslog
-
-/etc/syslog-ng/syslog-ng.conf
-
-/dev/console
-/var/log/messages/var/log/secure/var/log/maillog/var/log/spooler/var/log/boot.log/var/log/cron/var/log/kern
-
-Distribution and Load Balancing
-
-Merlin
-
-/opt/monitor/op5/merlin/merlin.conf
-
-/var/log/op5/merlin/daemon.log
-/var/log/op5/merlin/neb.log
-
-Info
-
--
-
-Merlin communication and module logs.
 
 ## Log levels
 
@@ -182,135 +45,35 @@ These tables show the logging levels and labels. Each level will automatically i
 
 ### log.yml
 
-Level
-
-Label
-
-Description
-
-1
-
-Error
-
-Errors that have already occurred.
-
-2
-
-Warning
-
-Potentially harmful situations.
-
-3
-
-Notice
-
-Informational message.
-
-4
-
-Debug
-
-Fine-grained informational events.
+| Level | Label | Description |
+| ----- | ------- | ---------------------------------- |
+| 1 | Error | Errors that have already occurred |
+| 2 | Warning | Potentially harmful situations |
+| 3 | Notice | Informational message |
+| 4 | Debug | Fine-grained informational events |
 
 ### smsd.log
-
-Level
-
-Label
-
-Description
-
-7
-
-Debug
-
-All AT commands and modem answers and other detailed information useful for debugging
-
-6
-
-Info
-
-Information regarding current occurrences. Not detailed enough for debugging but maybe interesting.
-
-5
-
-Notice
-
-Information regarding when a message was received or sent and when something not normal happens but program still works fine (for example wrong destination number in SMS file).
-
-4
-
-Warning
-
-Warning message when the program has a problem sending a single short message.
-
-3
-
-Error
-
-Error message when the program has temporary problem (for example modem answered with ERROR during initialization or a file can not be accessed).
-
-2
-
-Critical
-
-Error message when the program has a permanent problem (for example sending failed on multiple occurrences or wrong permissions to a queue).
+| Level | Label | Description |
+| ----- | -------- | -------------------------------------------------- |
+| 7 | Debug | All AT commands and modem answers and other detailed information useful for debugging |
+| 6 | Info | Information regarding current occurrences. Not detailed enough for debugging but maybe interesting |
+| 5 | Notice | Information regarding when a message was received or sent and when something not normal happens but program still works fine (for example wrong destination number in SMS file) |
+| 4 | Warning | Warning message when the program has a problem sending a single short message |
+| 3 | Error | Error message when the program has temporary problem (for example modem answered with ERROR during initialization or a file can not be accessed) |
+| 2 | Critical | Error message when the program has a permanent problem (for example sending failed on multiple occurrences or wrong permissions to a queue) |
 
 ### syslog-ng
 
-Level
-
-Label
-
-Description
-
-0
-
-emerg
-
-System is unusable.
-
-1
-
-alert
-
-Action must be taken immediately.
-
-2
-
-crit
-
-Critical conditions.
-
-3
-
-err
-
-Error conditions.
-
-4
-
-warning
-
-Warning conditions.
-
-5
-
-notice
-
-Normal but significant condition.
-
-6
-
-info
-
-Informational.
-
-7
-
-debug
-
-Debug-level messages.
+| Level | Label | Description |
+| ----- | -------- | -------------------------------------------------- |
+| 0 | emerg | System is unusable |
+| 1 | alert | Action must be taken immediately |
+| 2 | crit | Critical conditions |
+| 3 | err | Error conditions |
+| 4 | warning | Warning conditions |
+| 5 | notice | Normal but significant condition |
+| 6 | info | Informational |
+| 7 | debug | Debug-level messages
 
 ## Examples
 
