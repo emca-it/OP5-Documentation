@@ -15,29 +15,11 @@ Let's assume we have a master that is connected to the public Internet with a pu
 
 For this example, we will use the following IP addresses:
 
-System
-
-IP address
-
-VPN Tunnel IP address
-
-master
-
-88.88.88.88
-
-10.8.0.1
-
-poller-01
-
-99.99.99.99
-
-10.9.0.1
-
-poller-02
-
-192.168.0.22
-
-10.9.0.3
+| System    | IP Address   | VPN Tunnnel IP Address |
+|-----------|--------------|------------------------|
+| master    | 88.88.88.88  | 10.8.0.1               |
+| poller-01 | 99.99.99.99  | 10.9.0.1               |
+| poller-02 | 192.168.0.22 | 10.9.0.3               |
 
 # Certificates and the Certificate Authority
 
