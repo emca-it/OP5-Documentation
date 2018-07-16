@@ -11,10 +11,10 @@ To add a new rotation pool you need to edit Nagvis main configuration file. Foll
 
 1. Choose a few maps that you want to use in your rotation pool
 2. Log on to your OP5 Monitor server as root via ssh or directly at the console.
-3. Open up NagVis main configuration file  in your favorite editor: */opt/monitor/op5/nagvis\_ls/etc/nagvis.ini.php*
-4. Go down to the "**Rotation pool definitions**" section and add the lines in the example below:
+3. Open up NagVis main configuration file  in your favorite editor: `/opt/monitor/op5/nagvis\_ls/etc/nagvis.ini.php`
+4. Go down to the **Rotation pool definitions** section and add the lines in the example below:
 
-    ``` {.bash data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: bash; gutter: false; theme: Confluence"}
+    ```{.bash}
     ; ----------------------------
     ; Rotation pool definitions
     ; ----------------------------
@@ -28,28 +28,14 @@ To add a new rotation pool you need to edit Nagvis main configuration file. Foll
 
 6. Go back to your browser and reload the NagVis default page
 
-The table below describes the options shown above:
+    The table below describes the options shown above:
 
-Option
-
-Description
-
-[rotation\_NAME]
-
-NAME is the displayed name of this rotation pool on NagVis default page.
-
-rotationid="NAME"
-
-NAME is the ID of this rotation pool, need to be the same as NAME in [rotation\_NAME].
-
-maps="Map One:map1,Map Two:map2"
-
-"Map One" and "Map Two" are labels that are displayed in the rotation pool list on the Nagvis overview page.
-
-"map1" and "map2" are the name of the configuration files for the included maps from */opt/monitor/op5/nagvis\_ls/etc/maps*
-
-interval=15
-
-15 is the rotation time in seconds between the maps.
+| **Option** | **Description** |
+| ---------------------------------- | ---------------------------------------- |
+| `[rotation\_NAME]` | NAME is the displayed name of this rotation pool on NagVis default page. |
+| `rotationid="NAME"` | NAME is the ID of this rotation pool, need to be the same as NAME in [rotation\_NAME]. |
+| `maps="Map One:map1,Map Two:map2"` | "Map One" and "Map Two" are labels that are displayed in the rotation pool list on the Nagvis overview page. |
+| | "map1" and "map2" are the name of the configuration files for the included maps from `/opt/monitor/op5/nagvis\_ls/etc/maps`. |
+| `interval=15` | 15 is the rotation time in seconds between the maps. |
 
 Maps must be named exactly the same as the corresponding map configuration file, without the extension ".cfg".
