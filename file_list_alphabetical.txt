@@ -1,3 +1,4 @@
+---------- KD
 01-11-01-Adding_your_first_plugin_to_op5_Monitor.md
 01-00-00-Agents.md
 01-02-01-Apache.md
@@ -32,6 +33,8 @@
 00-04-01-Filters.md
 00-00-00-First_Contact.md
 01-03-02-Folders_and_files.md
+---------- KD
+---------- DB
 00-00-01-Getting_Logged_In.md
 01-08-00-Graphs.md
 01-08-03-Graph_prediction.md
@@ -51,6 +54,7 @@
 01-09-00-Logger.md
 01-09-02-Logger_client_on_UNIX_Linux.md
 00-04-03-Logger_Interface.md
+---------- DB
 ---------- RQ
 = 01-06-10-Macros.md
 = 01-06-02-Main_objects.md
@@ -88,6 +92,7 @@
 = 00-04-08-Searching.md
 = 01-10-03-SNMP_trap_notifications.md
 ---------- RQ
+---------- SK
 01-06-01-The_basics.md
 00-04-00-The_GUI.md
 01-12-05-The_mon_command.md
@@ -109,3 +114,4 @@
 00-04-10-Widgets.md
 01-00-03-Windows_SyslogAgent.md
 01-06-11-Writeprotected_configuration_files.md
+---------- SK
