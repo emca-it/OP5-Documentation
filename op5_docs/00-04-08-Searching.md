@@ -30,46 +30,42 @@ To perform a simple search
  OP5 Monitor will search for hosts, services, service groups, host groups and notes matching the search string you entered.
  The table below shows a list of in what parts of the object types is used in the search.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>Object type</strong></p>
-<p><strong>Variable</strong></p></td>
-<td align="left"><p>Host</p>
-<p>host_name<br /> host_alias<br /> host_address<br /> display_name</p></td>
-</tr>
-</tbody>
-</table>
++--------------------+-------------------------+
+| **Object Type**    | **Variable**            |
++====================+=========================+
+| Host               | `host_name` \           |
+|                    | `host_alias` \          |
+|                    | `host_address` \        |
+|                    | `display_name` \        |
++--------------------+-------------------------+
+| Service            | `service_description` \ |
+|                    | `display_name` \        |
++--------------------+-------------------------+
+| Host group         | `hostgroup_name` \      |
+|                    | `alias` \               |
++--------------------+-------------------------+
+| Service group      | `servicegroup_name` \   |
+|                    | `alias` \               |
++--------------------+-------------------------+
+| Notes              | Host notes \            |
+|                    | Service notes \         |
++--------------------+-------------------------+
+| Status information |                         |
++--------------------+-------------------------+
 
 ## Advanced search
 
-To make your search more specific you should use the advanced search features.
- The following table describes the search parameters that can be used in the search function:
+To make your search more specific you should use the advanced search features. The following table describes the search parameters that can be used in the search function:
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>Short parameter</strong></p>
-<p><strong>Long parameter</strong></p>
-<p><strong>Description</strong></p></td>
-<td align="left"><p>h:</p>
-<p>host:</p>
-<p>Search for hosts</p></td>
-<td align="left"><p>s:</p>
-<p>service:</p>
-<p>Search for services</p></td>
-</tr>
-</tbody>
-</table>
+| **Short Parameter** | **Long Parameter** | **Description** |
+| ------------------- | ------------------ | ---------------------------------------- |
+| `h:` | `host:` | Search for hosts |
+| `s:` | `service:` | Search for services |
+| `hg:` | `hostgroup:` | Search for host groups |
+| `sg:` | `servicegroup:` | Search for service groups |
+| `si:` | `statusinformation:` | Search for status information using the output from the latest service/host check. |
+| AND | | The AND operator is used to filter records based on more then one condition. |
+| OR | | The OR operator is used to filter records based on more then one condition. |
 
  Remember to not use any space between the **:** and the search string
 
@@ -159,14 +155,9 @@ To save a search query you need to view the output in the listview.
 
 Click on **View in listview** and click on the icon **Show/Edit Text Filter **
 
-**![](images/16482309/16679044.png "Show/Edit text filter")**
+![](images/16482309/16679044.png "Show/Edit text filter")
 
 Enter a name and click on **Save Filter** in the dialog.
 
 More information can be found in the [Filters](Filters) section.
 
-* * * * *
-
-## Related pages
-
-Error rendering macro 'sv-contentbylabel' : null

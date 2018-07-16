@@ -27,7 +27,7 @@ An alert is when any kind of status changes on a host or a service, like:
 - service warning
 - service critical
 - service unknown
-     and so on.
+- and so on.
 
 Notifications
 
@@ -82,7 +82,7 @@ The most common way to acknowledge a problem is to do it in the GUI. This is eas
 1. Look up the host in the GUI and click on the host name.
 2. Click on **Acknowledge This host problem** in the left area of the user interface.
 
-![](images/16482319/19234881.png) \
+    ![](images/16482319/19234881.png) \
 
 
 3. Fill in a comment and click **Submit**.
@@ -121,17 +121,17 @@ To remove several acknowledgements:
 
 1. Go to  your dashboard, and in the "**acknowledge service problem**" widget and click on "X Acknowledged services"
 
-![](images/16482319/19234905.png) \
+    ![](images/16482319/19234905.png) \
 
 
 2. Click **Send Multi Action** below the search field. It is located in the top right of the list.
 
-![](images/16482319/19234910.png) \
+    ![](images/16482319/19234910.png) \
 
 
 1. Chose **Acknowledge** in **Select Action** drop down list just below the list and click **Submit**.
 
-![](images/16482319/19234890.png) \
+    ![](images/16482319/19234890.png) \
 
 
 ## Schedule downtime
@@ -173,12 +173,12 @@ As you have seen we can schedule downtime for both hosts and services. Now we wi
 1. Find the host you like to schedule downtime for and pick up the host information page ([Hosts and services](Hosts_and_services)).
 2. In the **Host detail view** click **Schedule Downtime.**
 
-![](images/16482319/19234882.png) \
+    ![](images/16482319/19234882.png) \
 
 
 3. Fill in the form
 
-![](images/16482319/19234883.png) \
+    ![](images/16482319/19234883.png) \
 
 
     1.  Enter start and end time.
@@ -195,17 +195,17 @@ As you have seen we can schedule downtime for both hosts and services. Now we wi
 
 1. Locate the host group you like to schedule downtime for by clicking on Hostgroup summary in the main menu under Monitoring.
 
-![](images/16482319/19234901.png) \
+    ![](images/16482319/19234901.png) \
 
 
 2. Click on the hostgroup "Action" icon
 
-![](images/16482319/19234907.png) \
+    ![](images/16482319/19234907.png) \
 
 
 3. Click **Schedule downtime for all hosts in this Hostgroup** in the list of Hostgroup Commands.
 
-![](images/16482319/19234904.png) \
+    ![](images/16482319/19234904.png) \
 
 
 4. Follow a-e in step Fill in the form in To schedule downtime for a host.
@@ -223,20 +223,20 @@ To remove a scheduled downtime
 1. Open up the scheduled downtime view by follow the instructions in To view all scheduled downtime.
 2. Click the **delete** icon under Actions.
 
-![](images/16482319/19234903.png) \
+    ![](images/16482319/19234903.png) \
 
 
 3. Click **Submit**. Now the scheduled downtime and the comment have been removed.
 
-![](images/16482319/19234891.png) \
+    ![](images/16482319/19234891.png) \
 
 
-![](images/16482319/19234903.png) \
+    ![](images/16482319/19234903.png) \
 
 
 3. Click **Submit**. Now the scheduled downtime and the comment have been removed.
 
-![](images/16482319/19234891.png) \
+    ![](images/16482319/19234891.png) \
 
 
 ## Schedule recurring downtime
@@ -252,28 +252,28 @@ Let us say that you are using Citrix and you need to reboot your citrix servers 
 
 1. Click **Recurring downtime** in the Monitoring menu.
 
-![](images/16482319/19234886.png) \
+    ![](images/16482319/19234886.png) \
 
 
 2. Select **New**, located to the left of the filter and multi select options
 
-![](images/16482319/19234898.png) \
+    ![](images/16482319/19234898.png) \
 
 
 3. Choose the object type.
 
-![](images/16482319/19234894.png) \
+    ![](images/16482319/19234894.png) \
 
 
 4. Chose objects to use, in this case the citrix host group.
 
-![](images/16482319/19234897.png) \
+    ![](images/16482319/19234897.png) \
 
 
 5. Add a comment.
 6. Set start and end time.
 
-![](images/16482319/19234892.png) \
+    ![](images/16482319/19234892.png) \
 
 
 7. Choose day of week and months of the year this schedule shall be used.
@@ -301,7 +301,7 @@ The view looks like this
 1. Click **Recurring downtime** and then **Schedules**.
 2. Click **Edit**.
 
-![](images/16482319/19234895.png) \
+    ![](images/16482319/19234895.png) \
 
 
 3. Edit the fields you like to change and click **Add schedule**.
@@ -313,7 +313,7 @@ The view looks like this
 1. Click **Recurring downtime** and then **Schedules**.
 2. Click **Delete**.
 
-![](images/16482319/19234889.png) \
+    ![](images/16482319/19234889.png) \
 
 
 3. Click **Ok**.
