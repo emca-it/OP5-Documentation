@@ -86,7 +86,7 @@
 = 00-02-08d-Rotation_pools.md
 = 01-12-00-Scalable_Monitoring.md
 = 00-04-08-Searching.md
-01-10-03-SNMP_trap_notifications.md
+= 01-10-03-SNMP_trap_notifications.md
 ---------- RQ
 01-06-01-The_basics.md
 00-04-00-The_GUI.md
