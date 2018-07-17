@@ -12,9 +12,9 @@ If adjustments are needed they should be implemented in:
 
         /opt/monitor/etc/pnp/config_local.php
 
-If this file does not exist the file config.php can be used as a guideline. All variables will be inherited from config.php unless they are specifically overwritten by config\_local.php, i.e. there is no need to copy the entire file in order to change one variable. The file must however always begin with "\<?php". The following example shows what the code should look like in order to set the graph width to 1500:
+If this file does not exist the file config.php can be used as a guideline. All variables will be inherited from config.php unless they are specifically overwritten by config\_local.php, i.e. there is no need to copy the entire file in order to change one variable. The file must however always begin with `<?php`. The following example shows what the code should look like in order to set the graph width to 1500:
 
-``` {.php data-syntaxhighlighter-params="brush: php; gutter: true; theme: Confluence" data-theme="Confluence" style="brush: php; gutter: true; theme: Confluence"}
+``` {.php}
 <?php
 
 $conf['graph_width'] = "1500";
