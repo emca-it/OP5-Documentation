@@ -10,14 +10,14 @@ This authentication method should only be used when all requests are made throug
 
 It's possible to enable HTTP header authentication by adding a authentication module using the "Header" driver. To configure this module, you need to add the following section to "/etc/op5/auth.yml". Note that "X-Username", "X-Realname", "X-Email", and "X-Groups" are the corresponding and case-insensitive headers. Additionally, you must set the "enable\_auto\_login" option to "true" for header authentication work:
 
-``` {.text data-syntaxhighlighter-params="brush: text; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: text; gutter: false; theme: Confluence"}
+``` {.text}
 HeaderAuth:
-  driver: "Header"
-  header_username: X-Username
-  header_realname: X-Realname
-  header_email: X-Email
-  header_groups: X-Groups
-  group_list_delimiter: ","
+driver: "Header"
+header_username: X-Username
+header_realname: X-Realname
+header_email: X-Email
+header_groups: X-Groups
+group_list_delimiter: ","
 ```
 
 Below is an example configuration of the authentication module in Monitor (from "/etc/op5/auth.yml"):
@@ -27,4 +27,4 @@ Below is an example configuration of the authentication module in Monitor (from 
 
 ## Permissions
 
-Permissions are handled by the groups that are sent in the group header, which can be configured on the "[Group permissions](https://kb.op5.com/display/HOWTOs/How+to+add+a+user+with+limited+visibility)" page.
+Permissions are handled by the groups that are sent in the group header, which can be configured on the Group permissions page.
