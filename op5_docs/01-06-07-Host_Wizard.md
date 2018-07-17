@@ -31,8 +31,7 @@ Host wizard is a tool to create a new host based on management packs (preconfigu
 
     If you would like to add more than one host using the same device type click on **+ Add Host** to get more address and name fields. Click on **Next** to continue.
 - Review the information and click on **Save Configuration and View Added Hosts**. It is possible to
-- the configuration and go back to adding more host, with different device types, by selecting **Save Configuration and Add More Hosts
-    ** 
+- the configuration and go back to adding more host, with different device types, by selecting **Save Configuration and Add More Hosts** .
 
 ![](images/16482397/16679323.png) \
 
@@ -43,11 +42,11 @@ The Host Wizard requires the following rights for a user:
  configuration\_information
 
 - Misc \> FILE
-  - Api \> API config
-  - Host \> Host add delete
-  - Host Template \> Host template view all
-  - Hostgroup \> Hostgroup view all
-  - Management Pack \> Management pack view all
-  - Configuration \> Export
+- Api \> API config
+- Host \> Host add delete
+- Host Template \> Host template view all
+- Hostgroup \> Hostgroup view all
+- Management Pack \> Management pack view all
+- Configuration \> Export
 
-For more information on group rights and how to use them see[Group Rights](Authorization_16482400.html#Authorization-group_rights).
+For more information on group rights and how to use them see Group Rights.
