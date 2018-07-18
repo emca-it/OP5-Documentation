@@ -13,7 +13,7 @@ The OP5 SyslogAgent installation package consists of an MSI installer, available
 ![](images/16482385/16679132.png) \
 
 
- By default the OP5 SyslogAgent will be installed in an OP5 subdirectory, which itself will be placed in "`%SystemRoot%\%ProgramFiles%`": by default, that path becomes "`C:\Program Files\op5\SyslogAgent\`". Please review the [upcoming section](#WindowsSyslogAgent-Configuration) for any configuration details.
+By default the OP5 SyslogAgent will be installed in an OP5 subdirectory, which itself will be placed in "`%SystemRoot%\%ProgramFiles%`": by default, that path becomes "`C:\Program Files\op5\SyslogAgent\`". Please review the [upcoming section](#WindowsSyslogAgent-Configuration) for any configuration details.
 
 ## Upgrading
 
@@ -21,9 +21,9 @@ If a prior version of the SyslogAgent is installed it should to avoid problems, 
 
 Follow these steps to stop and uninstall the SyslogAgent service:
 
-1. 1.  Start the SyslogAgent Configuration tool
-    2.  Press the "Stop"-button (see Fig 3. in the section Configuration)
-    3.  Press the "Uninstall"-button
+1.  Start the SyslogAgent Configuration tool
+2.  Press the "Stop"-button (see Fig 3. in the section Configuration)
+3.  Press the "Uninstall"-button
 
 After the service have been stopped and uninstalled, you should uninstall the previous version of the SyslogAgent from "Add/Remove software" on the windows control panel.
  Now you can proceed with the installation of the new version as usual. Note that your previous settings will be used directly when the installation is complete.
@@ -40,8 +40,8 @@ When the configuration tool is started the following window should be displayed:
 To configure the elementary functions and start the SyslogAgent started follow the following steps:
 
 - Enter the IP address in the field **Syslog Server:**. This IP should be the one to your OP5 Logserver or OP5 Monitor server.
-  - Make sure the check box "**Enable forwarding of event logs**" is checked.
-  - Press **Start Service**.
+- Make sure the check box "**Enable forwarding of event logs**" is checked.
+- Press **Start Service**.
 
 Your SyslogAgent is now configured and should be sending logs to your OP5 Logserver or OP5 Monitor server.
 
@@ -66,7 +66,7 @@ By default, syslog entries are forwarded to the syslog server. If only applicati
 
 In certain cases, it can be desirable to filter out certain Event ID's. SyslogAgent supports this by entering the Event ID's to be filtered out in a comma separated list. A maximum of 30 Event ID's can be specified. For instance:
 
-``` {style="margin-left: 30.0px;"}
+```
 562,565,4132,566,836,837
 ```
 
@@ -77,16 +77,16 @@ All settings are stored in the Windows Registry, and can therefore be exported t
 **Caveat**: When exporting, *delete the 'LastRun' key* before copying the file to another computer. This key helps each computer know which entries have already been sent. Failure to delete this field can cause computers not to send 'syslog' entries.
  To create a .reg file:
 
-1. 1.  Open the RegEdit tool ('winkey-r' for a command prompt, then type 'regedit');
-    2.  Navigate to HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Datagram\\SyslogAgent:
+1.  Open the RegEdit tool ('winkey-r' for a command prompt, then type 'regedit');
+2.  Navigate to HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Datagram\\SyslogAgent:
 
-![](images/16482385/16679129.png) \
-
-
-    3.  Right-click the folder and choose export:
-
-![](images/16482385/16679130.png) \
+    ![](images/16482385/16679129.png) \
 
 
-    4.  Save the file and open it by right-clicking the file and choosing edit;
-    5.  Remove the whole line corresponding to the keyword "LastRun" (if present). That line can be found under the section: " HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Datagram\\SyslogAgent]"
+3.  Right-click the folder and choose export:
+
+    ![](images/16482385/16679130.png) \
+
+
+4.  Save the file and open it by right-clicking the file and choosing edit;
+5.  Remove the whole line corresponding to the keyword "LastRun" (if present). That line can be found under the section: `HKEY_LOCAL_MACHINE\SOFTWARE\Datagram\SyslogAgent`
