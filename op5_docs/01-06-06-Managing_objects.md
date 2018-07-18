@@ -660,7 +660,10 @@ Name the variable: `snmp_community` (the prefix and upper case conversion will b
 
 Enter the name of your SNMP community as a value. Let's say for this example that the community name is "qwerty"
 
-Change the command argument of the command argument from `qwerty!2!100mbit!70!90` to `$_SERVICESNMP_COMMUNITY$!2!100mbit!70!90`.
+Change the command argument of the command argument use the newly created variable.
+
+- Before: `qwerty!2!100mbit!70!90`
+- After:  `$_SERVICESNMP_COMMUNITY$!2!100mbit!70!90`.
 
 ![](images/16482396/21300105.png) \
 

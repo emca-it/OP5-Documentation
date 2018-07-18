@@ -2,7 +2,7 @@
 
 ## About
 
- The op5-backup script is a script that backs up the OP5 installation.
+The op5-backup script is a script that backs up the OP5 installation.
 
 It does not backup the operating system nor does it include logger data.
 
