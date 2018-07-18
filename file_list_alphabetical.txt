@@ -112,6 +112,6 @@
 00-01-02-View_Active_Config.md
 01-12-06-VRRP.md
 00-04-10-Widgets.md
-01-00-03-Windows_SyslogAgent.md
+= 01-00-03-Windows_SyslogAgent.md
 01-06-11-Writeprotected_configuration_files.md
 ---------- SK

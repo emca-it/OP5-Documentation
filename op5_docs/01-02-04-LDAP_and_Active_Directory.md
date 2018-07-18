@@ -107,24 +107,41 @@ Check this box if Memberkey is defines the entire DN of the member user or group
 ### Bind with UPN
 
 If binding to the LDAP server should be done with the user principal name instead of the DN of the user.
- For Active Directory, this is true. For all other systems, this is false.
- When binding with UPN, the system constructs a UPN from the username and UPN suffix, and tries to bind with the constructed UPN and given password. If bind succeeds, it resolves the groups.
- When binding with DN, the system tries to bind with "Bind DN" and "Bind Secret" to look in the directory for the user. If the user is found, it tries to rebind with the user DN and password given, and if that succeeds, the group membership is resolved.
+For Active Directory, this is true. For all other systems, this is false.
+When binding with UPN, the system constructs a UPN from the username and UPN suffix, and tries to bind with the constructed UPN and given password. If bind succeeds, it resolves the groups.
+When binding with DN, the system tries to bind with "Bind DN" and "Bind Secret" to look in the directory for the user. If the user is found, it tries to rebind with the user DN and password given, and if that succeeds, the group membership is resolved.
 
 ### Protocol version
 
-The LDAP protocol version to use. Almost everyone will keep this at 3.
+The LDAP protocol version to use. Almost everyone will keep this at "3".
 
 ## Example configuration for Active Directory
 
+- Server:`ldap.example.com`
+- Port:
+- Encryption:`none`
+- Bind DN:`service_op5@example.com`
+- Bind Secret:`file:/etc/op5/ldap_secret`
+- Resolve with service account: `yes`
+- Base DN:`DC=example,DC=com`
+- User Base DN:`DC=example,DC=com`
+- User filter:`(objectClass=user)`
+- Group Base DN:`DC=example,DC=com`
+- Group filter:`(objectClass=group)`
+- Groupkey:`cn`Group Recursive:`yes`
+- UPN Suffix:`example.com`
+- Userkey:`userPrincipalName`
+- Userkey is UPN:`yes`
+- Userkey realname:`cn`
+- Userkey email:`mail`
+- Memberkey:`member`
+- Memberkey is DN:`yes`
+- Bind with UPN:`yes`
+- LDAP Options: `LDAP_OPT_PROTOCOL_VERSION`,`3`
+- Rename Module: `AD`
+
 ![](images/16482392/16679170.png) \
 
-
-Server:`ldap.example.com`
- Port:
- Encryption:`none`
- Bind DN:`service_op5@example.com`
- Bind Secret:`file:/etc/op5/ldap_secret`Resolve with service account: `yes`Base DN:`DC=example,DC=com`User Base DN:`DC=example,DC=com`User filter:`(objectClass=user)`Group Base DN:`DC=example,DC=com`Group filter:`(objectClass=group)`Groupkey:`cn`Group Recursive:`yes`UPN Suffix:`example.com`Userkey:`userPrincipalName`Userkey is UPN:`yes`Userkey realname:`cn`Userkey email:`mail`Memberkey:`member`Memberkey is DN:`yes`Bind with UPN:`yes`Protocol version:`3`
 
 ## Test your connection
 
