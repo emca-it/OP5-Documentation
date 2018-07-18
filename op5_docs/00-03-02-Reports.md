@@ -87,7 +87,7 @@ The fast and easy way to create an SLA report is to only follow steps 1-3 and th
         ![](images/16482315/16679234.png) \
 
 
-    8.  It is possible to include a Summary Report with the SLA report. For more information about summary reports, see [Alert summary - Top alert producers](Events-and-logs_16482316.html#Eventsandlogs-Alertsummary-Topalertproducers)
+    8.  It is possible to include a Summary Report with the SLA report. For more information about summary reports, see Alert summary - Top alert producers.
 
         ![](images/16482315/16679233.png) \
 
