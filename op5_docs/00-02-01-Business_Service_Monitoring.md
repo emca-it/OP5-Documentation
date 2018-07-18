@@ -21,7 +21,7 @@ To access the Business Services view click on **Business Services** in the main 
 
 
 | Figure Number | Column Name | Description |
-| --- | --- | --- |
+| ------------- | ------------------- | ---------------------------------------- |
 | 1 | Business Object | Lists all the Business service objects. An object can be: Group, Service, Host, Random value, Constant value |
 | 2 | Rule | Shows which rule is applied to the group. |
 | 3 | Actions | A list of action buttons. |
