@@ -34,6 +34,7 @@ my $dir_output = '';
 # Option variables
 my $type_input = "markdown";
 my $type_output = "pdf";
+my $config = "default.cfg";
 
 # Internal variables
 my $date = localtime->strftime("%Y%m%d");
@@ -47,9 +48,15 @@ if (@ARGV < 3) {
 GetOptions (
 	"input-type=s" => \$type_input,
 	"output-type=s" => \$type_output,
+    "config-file=s" => \$config
 );
 
 ($client, $dir_source, $dir_output) = @ARGV;
+
 print "$client\n";
 print "$dir_source\n";
 print "$dir_output\n";
+print "$type_input\n";
+print "$type_output\n";
+print "$config\n";
+
