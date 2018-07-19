@@ -45,7 +45,7 @@
 00-02-04-Hosts_and_services.md
 00-02-03-Host_and_Service_Groups.md
 = 01-06-07-Host_Wizard.md
-01-10-01-how_notifications_work.md
+= 01-10-01-how_notifications_work.md
 = 01-01-01-HTTP-API.md
 = 01-09-03-Installing_syslog_agent_on_windows.md
 = 01-02-04-LDAP_and_Active_Directory.md
