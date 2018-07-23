@@ -27,7 +27,7 @@
 01-12-01-Distributed_Monitoring.md
 00-02-02-Dokuwiki.md
 00-03-01-Events_and_logs.md
-01-17-00-External_Widget_configuration.md
+= 01-17-00-External_Widget_configuration.md
 = 01-06-12-Features_not_supported_by_Configure.md
 01-12-03-File_synchronization.md
 00-04-01-Filters.md
