@@ -724,168 +724,162 @@ In this guide we will add a small escalation chain that does the following:
 
 #### To add a host escalation
 
-- On the **Edit Host** page, choose the host you like to add an escalation to in the drop down list.
+1. On the **Edit Host** page, choose the host you like to add an escalation to in the drop down list.
 
-![](images/16482396/21300112.png) \
-
-
-  - Click **Go**.
-  - Click **Escalations**.
-
-![](images/16482396/21300192.png) \
+    ![](images/16482396/21300112.png) \
 
 
-  - Add the escalation number one.
-  - Choose the contact group that shall have the notification.
+1. Click **Go**.
+1. Click **Escalations**.
 
-![](images/16482396/21300110.png) \
-
-
-  - Set the start number in the escalation chain.
-
-![](images/16482396/21300151.png) \
+    ![](images/16482396/21300192.png) \
 
 
-  - Set the end number in the escalation chain If the start number is 1 and the end number is two it means that the first and the second notification will be handled by this escalation.
+1. Add the escalation number one.
+1. Choose the contact group that shall have the notification.
 
-![](images/16482396/21300173.png) \
-
-
-  - Set the notification interval which is the number of minutes to wait to the next notification.
-
-![](images/16482396/21300155.png) \
+    ![](images/16482396/21300110.png) \
 
 
-  - Choose the time period when this escalation will be in use.
+1. Set the start number in the escalation chain.
 
-![](images/16482396/21300142.png) \
-
-
-  - Choose what states this escalation will be valid for.
-
-![](images/16482396/21300132.png) \
+    ![](images/16482396/21300151.png) \
 
 
-In this case we do not use the escalation for unreachable or recovery which means that unreachable and recovery notifications will be sent to the contact group set on the host.
+1. Set the end number in the escalation chain If the start number is 1 and the end number is two it means that the first and the second notification will be handled by this escalation.
 
-  - Click **Submit**.
-  - Choose Add new host escalation
-
-![](images/16482396/21300127.png) \
+    ![](images/16482396/21300173.png) \
 
 
-  - Click **Go**.
-  - Add the escalation number two.
-  - Choose the contact group that shall have the notification.
+1. Set the notification interval which is the number of minutes to wait to the next notification.
 
-![](images/16482396/21300111.png) \
+    ![](images/16482396/21300155.png) \
 
 
-  - Set the start number in the escalation chain.
+1. Choose the time period when this escalation will be in use.
 
-![](images/16482396/21300202.png) \
-
-
-  - Set the end number in the escalation chain We have set the first notification and the last notification to 2 because this escalation will only be used once.
-
-![](images/16482396/21300223.png) \
+    ![](images/16482396/21300142.png) \
 
 
-  - Set the notification interval which is the number of minutes to wait to the next notification.
+1. Choose what states this escalation will be valid for.
 
-![](images/16482396/21300186.png) \
-
-
-  - The escalation interval is set to 0 because there will be no more escalations when this one is done.
-
-- Choose the time period when this escalation will be in use.
-
-![](images/16482396/21300217.png) \
-
-
-  - Choose what states this escalation will be valid for.
-
-![](images/16482396/21300132.png) \
+    ![](images/16482396/21300132.png) \
 
 
     In this case we do not use the escalation for unreachable or recovery which means that unreachable and recovery notifications will be sent to the contact group set on the host.
 
-  - Click **Submit**.
-  - Click **Save**.
+1. Click **Submit**.
+1. Choose Add new host escalation
+
+    ![](images/16482396/21300127.png) \
+
+
+1. Click **Go**.
+1. Add the escalation number two.
+1. Choose the contact group that shall have the notification.
+
+    ![](images/16482396/21300111.png) \
+
+
+1. Set the start number in the escalation chain.
+
+    ![](images/16482396/21300202.png) \
+
+
+1. Set the end number in the escalation chain We have set the first notification and the last notification to 2 because this escalation will only be used once.
+
+    ![](images/16482396/21300223.png) \
+
+
+1. Set the notification interval which is the number of minutes to wait to the next notification.
+
+    ![](images/16482396/21300186.png) \
+
+
+1. The escalation interval is set to 0 because there will be no more escalations when this one is done.
+1. Choose the time period when this escalation will be in use.
+
+    ![](images/16482396/21300217.png) \
+
+
+1. Choose what states this escalation will be valid for.
+
+    ![](images/16482396/21300132.png) \
+
+
+    In this case we do not use the escalation for unreachable or recovery which means that unreachable and recovery notifications will be sent to the contact group set on the host.
+
+1. Click **Submit**.
+1. Click **Save**.
 
 ### Modifying a host escalation
 
 #### To modify a host escalation
 
-- On the start page choose the host you like to modify an escalation on in the drop down list.
+1. On the start page choose the host you like to modify an escalation on in the drop down list.
 
-![](images/16482396/21300112.png) \
-
-
-  - Click **Go**.
-  - Click **Escalations**.
-
-![](images/16482396/21300169.png) \
+    ![](images/16482396/21300112.png) \
 
 
-  - Choose the escalation you like to modify.
+1. Click **Go**.
+1. Click **Escalations**.
 
-![](images/16482396/21300197.png) \
+    ![](images/16482396/21300169.png) \
 
 
-  - Click **Go**.
-  - Make the modifications you like to do and click **Submit**.
-  - Click **Save**.
+1. Choose the escalation you like to modify.
+
+    ![](images/16482396/21300197.png) \
+
+
+1. Click **Go**.
+1. Make the modifications you like to do and click **Submit**.
+1. Click **Save**.
 
 ### Deleting a host escalation
 
 #### To delete a host escalation
 
-- On the start page choose the host you like to delete an escalation from in the drop down list.
+1. On the start page choose the host you like to delete an escalation from in the drop down list.
 
-![](images/16482396/21300112.png) \
-
-
-  - Click **Go**.
-  - Click **Escalations**.
-
-![](images/16482396/21300171.png) \
+    ![](images/16482396/21300112.png) \
 
 
-  - Choose the escalation you like to modify.
+1. Click **Go**.
+1. Click **Escalations**.
 
-![](images/16482396/21300231.png) \
-
-
-  - Click **Go**.
-  - Click **Delete**.
-
-![](images/16482396/21300198.png) \
+    ![](images/16482396/21300171.png) \
 
 
-  - Click **Save**.
+1. Choose the escalation you like to modify.
+
+    ![](images/16482396/21300231.png) \
+
+
+1. Click **Go**.
+1. Click **Delete**.
+
+    ![](images/16482396/21300198.png) \
+
+
+1. Click **Save**.
 
 ## Access rights and contacts
 
-To be able to login to OP5 Monitor you need to have a user, described in Local users on page Main Objects. But you need to have a contact, described in Contacts on page Main Objects, to be able to receive notifications and in some cases even be able to see any hosts or services.
- By connecting access rights to a contact you will be able to login and get notifications with the user created in access rights.
- So basically what you need to do is to configure a new contact. Add the contact to an existing contact group or create a new contact group specific for the new contact. If you created a new contact group make sure to add the contact group for the hosts and services that you want to make available in the customized view.
- Add new access rights and connect it to the contact you created earlier.
+To be able to login to OP5 Monitor you need to have a user, described in Local users on page Main Objects. But you need to have a contact, described in Contacts on page Main Objects, to be able to receive notifications and in some cases even be able to see any hosts or services. By connecting access rights to a contact you will be able to login and get notifications with the user created in access rights. So basically what you need to do is to configure a new contact. Add the contact to an existing contact group or create a new contact group specific for the new contact. If you created a new contact group make sure to add the contact group for the hosts and services that you want to make available in the customized view. Add new access rights and connect it to the contact you created earlier.
 
 ### Connecting access rights to contacts
 
 #### To connect access rights to a contact
 
-- Configure a new contact.
-  - Add the contact to an existing contactgroup or create a new contactgroup specific for the new contact. If you created a new contactgroup make sure to add the contact group for the hosts and services that you want to make available in the customized view.
-  - Configure a user in access rights with the exact same name as the contact you created.
-  - Set the options for the new access right.When selecting options do not use the last four options, authorized for all. By doing this the new user will only see the hosts and services that uses the contactgroup that he is a member of.
+1. Configure a new contact.
+1. Add the contact to an existing contactgroup or create a new contactgroup specific for the new contact. If you created a new contactgroup make sure to add the contact group for the hosts and services that you want to make available in the customized view.
+1. Configure a user in access rights with the exact same name as the contact you created.
+1. Set the options for the new access right.When selecting options do not use the last four options, authorized for all. By doing this the new user will only see the hosts and services that uses the contactgroup that he is a member of.
 
 ## Management packs
 
-A management pack is essantially a group of services connected to a hostgroup with the possibility to add custom variables. These are then used by the Host Wizard.
- The benefit with using management packs is that the monitoring will be more homogenous.
- The picture below shows how management packs integrates into OP5 Monitor.
+A management pack is essantially a group of services connected to a hostgroup with the possibility to add custom variables. These are then used by the Host Wizard. The benefit with using management packs is that the monitoring will be more homogenous. The picture below shows how management packs integrates into OP5 Monitor.
 
 ![](images/16482396/21300144.png) \
 
@@ -899,18 +893,19 @@ To create a management pack a hostgroup must be created and the services that sh
 ![](images/16482396/21300178.png) \
 
 
-- Enter a name for the management pack.
-  - Select whitch hostgroup that should be used for the management pack.
-  - Select an icon (a larger icon looks better in the host wizard).
-  - Enter a description.
+1. Enter a name for the management pack.
+1. Select whitch hostgroup that should be used for the management pack.
+1. Select an icon (a larger icon looks better in the host wizard).
+1. Enter a description.
 
-It is also possible to add custom variables, these can be used for information that needs to be entered when using the host wizard. Such as username, password and SNMP community names.
+    It is also possible to add custom variables, these can be used for information that needs to be entered when using the host wizard. Such as username, password and SNMP community names.
 
-![](images/16482396/21300188.png) \
+    ![](images/16482396/21300188.png) \
 
 
- In this example we create a management pack for HP Servers with one custom variable for SNMP community name.
- Click on **Submit** to save the management pack.
+    In this example we create a management pack for HP Servers with one custom variable for SNMP community name.
+
+1. Click on **Submit** to save the management pack.
 
 ### Group in Group with Management Packs
 
