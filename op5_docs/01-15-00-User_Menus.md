@@ -100,17 +100,21 @@ This removes the actual "Dashboards" menu, however the user will still see the d
 #### items explicit to the Business Services, Host, and Service pages
 
 ##### Removing any of the following will remove "Options -> $item":
-	Report
+
+- Report
 
 ##### Removing any of the following will remove "Options -> Report > $item". Note that each of these require enabling the Report Menu Item if they need to be viewable within the Options section:
-	Availability
-	Histogram
-	Alert History
-	Event log
+
+- Availability
+- Histogram
+- Alert History
+- Event log
 
 ##### Removing any of the following will remove "Options -> Links > $item":
-	Graphs
-	Notifications
+
+- Graphs
+- Notifications
 
 ##### Removing any of the following will remove "Options -> Configuration > $item":
-	Configure
+
+- Configure
