@@ -1,0 +1,15 @@
+// Comment
+// Defining variables.
+#= docdir1 /path1/to
+#= docdir2 ~/path2/to/
+
+// Including files. Not implemented yet.
+//#+ /path/to/file
+
+/path/to/metadata.yml
+
+docdir1:path/to/file1
+docdir1:/path/to/file2
+
+    docdir2: path/to/file1
+  docdir2:/path/to/file2
