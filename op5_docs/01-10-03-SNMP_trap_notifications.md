@@ -16,9 +16,45 @@ Here we need to add two commands one for host notifications and one for service 
 1. Login to the OP5 Monitor user interface and go to **Configure**.
 2. Click **Commands**.
 3. Add the following new commands with the following settings:
-    `command_name host_notify_by_snmp command_line $USER3$/notify/notify_by_snmp.pl -h snmp.trap.host -C SNMPCOMMUNITY  -t nHostNotify "NOTIFICATIONTYPE=$NOTIFICATIONTYPE$"  "NOTIFICATIONNUMBER=$NOTIFICATIONNUMBER$"  "HOSTACKAUTHOR=$HOSTACKAUTHOR$" "HOSTACKCOMMENT=$HOSTACKCOMMENT$"  "HOSTNAME=$HOSTNAME$" "HOSTSTATEID=$HOSTSTATEID$"  "HOSTSTATETYPE=$HOSTSTATETYPE$" "HOSTATTEMPT=$HOSTATTEMPT$"  "HOSTDURATIONSEC=$HOSTDURATIONSEC$" "HOSTGROUPNAME=$HOSTGROUPNAME$"  "LASTHOSTCHECK=$LASTHOSTCHECK$"  "LASTHOSTSTATECHANGE=$LASTHOSTSTATECHANGE$" "HOSTOUTPUT=$HOSTOUTPUT$" `
+
+    ```
+    command_name host_notify_by_snmp command_line $USER3$/notify/notify_by_snmp.pl \
+    -h snmp.trap.host \
+    -C SNMPCOMMUNITY \
+    -t nHostNotify "NOTIFICATIONTYPE=$NOTIFICATIONTYPE$" \
+                   "NOTIFICATIONNUMBER=$NOTIFICATIONNUMBER$" \
+                   "HOSTACKAUTHOR=$HOSTACKAUTHOR$" \
+                   "HOSTACKCOMMENT=$HOSTACKCOMMENT$" \
+                   "HOSTNAME=$HOSTNAME$" \
+                   "HOSTSTATEID=$HOSTSTATEID$" 
+                   "HOSTSTATETYPE=$HOSTSTATETYPE$" \
+                   "HOSTATTEMPT=$HOSTATTEMPT$" \
+                   "HOSTDURATIONSEC=$HOSTDURATIONSEC$" \
+                   "HOSTGROUPNAME=$HOSTGROUPNAME$" \
+                   "LASTHOSTCHECK=$LASTHOSTCHECK$" \
+                   "LASTHOSTSTATECHANGE=$LASTHOSTSTATECHANGE$" \
+                   "HOSTOUTPUT=$HOSTOUTPUT$" 
+    ```
  
-    `command_name service_notify_by_snmp command_line $USER3$/notify/notify_by_snmp.pl -h snmp.trap.host -C SNMPCOMMUNITY  -t nSvcNotify "NOTIFICATIONTYPE=$NOTIFICATIONTYPE$"  "NOTIFICATIONNUMBER=$NOTIFICATIONNUMBER$"  "SERVICEACKAUTHOR=$SERVICEACKAUTHOR$"  "SERVICEACKCOMMENT=$SERVICEACKCOMMENT$" "HOSTNAME=$HOSTNAME$"  "HOSTSTATEID=$HOSTSTATEID$" "SERVICEDESCRIPTION=$SERVICEDESCRIPTION$"  "SERVICESTATEID=$SERVICESTATEID$" "SERVICEATTEMPT=$SERVICEATTEMPT$"  "SERVICEDURATIONSEC=$SERVICEDURATIONSEC$"  "SERVICEGROUPNAME=$SERVICEGROUPNAME$"  "LASTSERVICECHECK=$LASTSERVICECHECK$"  "LASTSERVICESTATECHANGE=$LASTSERVICESTATECHANGE$"  "SERVICEOUTPUT=$SERVICEOUTPUT$"`
+    ```
+    command_name service_notify_by_snmp command_line $USER3$/notify/notify_by_snmp.pl \
+    -h snmp.trap.host \
+    -C SNMPCOMMUNITY \
+    -t nSvcNotify "NOTIFICATIONTYPE=$NOTIFICATIONTYPE$" \
+                  "NOTIFICATIONNUMBER=$NOTIFICATIONNUMBER$" \
+                  "SERVICEACKAUTHOR=$SERVICEACKAUTHOR$" \
+                  "SERVICEACKCOMMENT=$SERVICEACKCOMMENT$" \
+                  "HOSTNAME=$HOSTNAME$" \
+                  "HOSTSTATEID=$HOSTSTATEID$" \
+                  "SERVICEDESCRIPTION=$SERVICEDESCRIPTION$" \
+                  "SERVICESTATEID=$SERVICESTATEID$" \
+                  "SERVICEATTEMPT=$SERVICEATTEMPT$" \
+                  "SERVICEDURATIONSEC=$SERVICEDURATIONSEC$" \
+                  "SERVICEGROUPNAME=$SERVICEGROUPNAME$" \
+                  "LASTSERVICECHECK=$LASTSERVICECHECK$" \
+                  "LASTSERVICESTATECHANGE=$LASTSERVICESTATECHANGE$" \
+                  "SERVICEOUTPUT=$SERVICEOUTPUT$"
+    ```
 
     Change the following to their correct value, in both commands:
    
