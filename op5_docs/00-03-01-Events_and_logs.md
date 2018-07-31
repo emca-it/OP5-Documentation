@@ -73,7 +73,7 @@ Alert summary reports are useful from time to time. So when you have created a n
 
 #### To save an Alert summary report.
 
-1. Create an Alert summary report like you did in [Creating a Top alert producers report](#Eventsandlogs-Creatingtopalertproducersreport), show the report then:
+1. Create an Alert summary report like you did in Creating a Top alert producers report, show the report then:
 2. Click **Save report**.
 
 ![](images/16482316/16678955.png) \
@@ -87,13 +87,13 @@ For the exact same reason as it is to schedule an availability report or a SLA r
 
 #### To schedule an alert summary report
 
-1. Create an Alert summary report like you did in [Creating top alert producers report](#Eventsandlogs-Creatingtopalertproducersreport) and save the report.
+1. Create an Alert summary report like you did in Creating top alert producers report save the report.
 2. Click the plus icon at the right top of the page
 
 ![](images/16482316/16678953.png) \
 
 
-3. Follow the instructions in [Schedule reports](Reports_16482315.html#Reports-schedule_reports), just select "Alert summary report" as report type.
+3. Follow the instructions in Schedule reports, just select "Alert summary report" as report type.
 
 ![](images/16482316/16678958.png) \
 

@@ -26,7 +26,7 @@
 01-02-02-Default.md
 01-12-01-Distributed_Monitoring.md
 00-02-02-Dokuwiki.md
-00-03-01-Events_and_logs.md
+= 00-03-01-Events_and_logs.md
 = 01-17-00-External_Widget_configuration.md
 = 01-06-12-Features_not_supported_by_Configure.md
 01-12-03-File_synchronization.md
@@ -108,7 +108,7 @@
 01-16-03-Using_Command_Line_Tools.md
 00-02-10-Using_Geomap.md
 01-06-05-Using_templates.md
-00-02-09-Viewing_Graphs.md
+= 00-02-09-Viewing_Graphs.md
 00-01-02-View_Active_Config.md
 01-12-06-VRRP.md
 00-04-10-Widgets.md
