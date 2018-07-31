@@ -84,7 +84,7 @@ Since the **Add new map** window is pretty limited you probably want to change s
 
 
 The number of options is large. For more information about the options please read more in the official NagVis Manual at:
-[http://www.nagvis.org/documentation](http://www.nagvis.org/documentation+)
+[http://www.nagvis.org/documentation](http://www.nagvis.org/documentation)
 
 ### Deleting a map
 
@@ -277,7 +277,7 @@ To add a graph to a Nagvis map works in the same way as creating a service objec
 A graph on a service can have multiple sources, for example the ping service has both Round Trip Times and Package loss where in this case RTT is source 0 and package loss is source 1.
 To change the source for a graph in nagvis edit the graph object and add &source=x to **gadget\_opts**
 
-    ![](images/16482343/16678928.png) \
+![](images/16482343/16678928.png) \
 
 
 ### Selecting graph length
