@@ -144,7 +144,7 @@ Using scheduled downtime enables you to plan for system work ahead. When a host 
   - all members of a host group
   - all members of a service group.
 
-You can also configure triggered downtime for hosts located below a host currently in scheduled downtime. To do this you need to have your parenting configured correctly. You can read more about [Parenting](Parenting).
+You can also configure triggered downtime for hosts located below a host currently in scheduled downtime. To do this you need to have your parenting configured correctly. You can read more about Parenting.
 
 ### Viewing scheduled downtime
 
@@ -170,7 +170,7 @@ As you have seen we can schedule downtime for both hosts and services. Now we wi
 
 #### To schedule downtime for a host
 
-1. Find the host you like to schedule downtime for and pick up the host information page ([Hosts and services](Hosts_and_services)).
+1. Find the host you like to schedule downtime for and pick up the host information page (Hosts and services).
 2. In the **Host detail view** click **Schedule Downtime.**
 
     ![](images/16482319/19234882.png) \
