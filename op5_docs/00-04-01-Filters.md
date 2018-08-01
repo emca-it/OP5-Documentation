@@ -121,6 +121,3 @@ Use the delete icon behind the filter that you would like to remove.
 ![](images/16482332/18481385.png) \
 
 
-## Related pages
-
-Error rendering macro 'sv-contentbylabel' : null
