@@ -49,7 +49,7 @@
 = 01-01-01-HTTP-API.md
 = 01-09-03-Installing_syslog_agent_on_windows.md
 = 01-02-04-LDAP_and_Active_Directory.md
-00-04-02-Listviews.md
+= 00-04-02-Listviews.md
 01-12-02-Load_balanced_monitoring.md
 = 01-09-00-Logger.md
 = 01-09-02-Logger_client_on_UNIX_Linux.md
