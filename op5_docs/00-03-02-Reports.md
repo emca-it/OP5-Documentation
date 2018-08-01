@@ -149,7 +149,7 @@ You do not have to create a completely new report if you only want to change a m
     ![](images/16482315/16679239.png) \
 
 
-2. Edit the settings you would like to change in the dialog shown below. All options are described in [Creating SLA report](#Reports-CreatingSLAreport).
+2. Edit the settings you would like to change in the dialog shown below. All options are described in Creating SLA report.
 
     ![](images/16482315/16679241.png) \
 
@@ -307,7 +307,7 @@ Click edit settings.
 ![](images/16482315/16679239.png) \
 
 
- Edit the settings you like to change in the dialog shown below. All options are described in [Creating an availability report](#Reports-Creatinganavailabilityreport).
+ Edit the settings you like to change in the dialog shown below. All options are described in Creating an availability report.
 
 ![](images/16482315/16679187.png) \
 
@@ -342,7 +342,7 @@ Create a new report.
 ## Schedule reports
 
 If you want a report to be regularly regenerated, you should schedule the report to do this automatically.
- Before you schedule a report you need to create it ( [Creating SLA report](#Reports-CreatingSLAreport) or [availability report](#Reports-Creatinganavailabilityreport)) and then save it ([Save reports](#Reports-Savereports)).
+ Before you schedule a report you need to create it ( Creating SLA report or availability report) and then save it (Save reports).
  Scheduling reports can be done by clicking Schedule in the reporting menu.
 
 Note that the report first must be saved before a scheduled report can be created.
@@ -351,8 +351,8 @@ Note that the report first must be saved before a scheduled report can be create
 
 In the guides below we will schedule a SLA report but it is done exactly the same way for the availability reports.
 
-1. Create the report as shown in [Creating SLA report](#Reports-CreatingSLAreport).
-2. Save the report as shown in [Save reports](#Reports-Savereports)
+1. Create the report as shown in Creating SLA report.
+2. Save the report as shown in Save reports
 3. Click create schedule icon.
 
     ![](images/16482315/16679193.png) \
@@ -376,7 +376,7 @@ In the guides below we will schedule a SLA report but it is done exactly the sam
 
 Before a report can be scheduled through the menu a report must first be saved.
 
-1. Create the report as shown in [Creating SLA report](#Reports-CreatingSLAreport).
+1. Create the report as shown in Creating SLA report.
 2. Save the report as shown in Save reports.
 3. Go to the report menu and select **Schedule Reports**.
 

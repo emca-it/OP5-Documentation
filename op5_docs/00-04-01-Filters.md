@@ -65,7 +65,7 @@ These can also be used in combination, for example
 ### Example 1
 
 Here we will list all services that are notifying to contact-group "support-group" and is a member of the hostgroup "network".
-Manual Input: [services] contact\_groups \>= "support-group" and groups \>= "network"
+Manual Input: `[services] contact_groups >= "support-group" and groups >= "network"`
 
 ![](images/16482332/18481373.png) \
 
@@ -73,7 +73,7 @@ Manual Input: [services] contact\_groups \>= "support-group" and groups \>= "net
 ### Example 2
 
 In this example we will list all services that uses the check command "check\_tcp"
-Manual Input: [services] check\_command \~\~ "check\_tcp"
+Manual Input: `[services] check_command ~~ "check_tcp"`
 
 ![](images/16482332/18481374.png) \
 
@@ -81,7 +81,7 @@ Manual Input: [services] check\_command \~\~ "check\_tcp"
 ### Example 3
 
 Here we would like to list all services that contains the description "www" and is not located on the vmware host "vmware1-sth". (For this to work parent/child relationships must have been set)
-Manual input: [services] description \~\~ "www" and not (host.parents \>= "vmware1-sth")
+Manual input: `[services] description ~~ "www" and not (host.parents >= "vmware1-sth")`
 
 ![](images/16482332/18481375.png) \
 
@@ -91,7 +91,7 @@ Note that we use the **negate** (not) option on the host.parents rule.
 ### Example 4
 
 In this example we filter for syslog messages with error or warning severity, received in the last two minutes.
-Manual input: [syslog] severity \<= 4 and rtime \>= date("2 minutes ago")
+Manual input: `[syslog] severity <= 4 and rtime >= date("2 minutes ago")`
 
 ![](images/16482332/18481376.png) \
 
@@ -121,6 +121,3 @@ Use the delete icon behind the filter that you would like to remove.
 ![](images/16482332/18481385.png) \
 
 
-## Related pages
-
-Error rendering macro 'sv-contentbylabel' : null
