@@ -8,7 +8,7 @@ The menu can be accessed thrugh right clicking on the status icon in front of a 
 ![](images/16482311/16679023.png) \
 
 
-This menu will only appear if you are 'Authorized for system commands', this is set under User Rights in the configuration, see [Authorization](Authorization).
+This menu will only appear if you are 'Authorized for system commands', this is set under User Rights in the configuration, see Authorization.
 
 ## Host Actions
 
