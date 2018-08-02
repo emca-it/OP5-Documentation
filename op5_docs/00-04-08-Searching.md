@@ -159,5 +159,5 @@ Click on **View in listview** and click on the icon **Show/Edit Text Filter **
 
 Enter a name and click on **Save Filter** in the dialog.
 
-More information can be found in the [Filters](Filters) section.
+More information can be found in the Filters section.
 
