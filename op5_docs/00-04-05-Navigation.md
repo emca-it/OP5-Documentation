@@ -11,7 +11,7 @@ In this chapter the different parts of the GUI is described.
 
 First of all you need to login before you can start using OP5 Monitor.
 
-To login to the OP5 Monitor GUI, point your browser to the portal page of your OP5 Monitor server ( <https://yourserver/> )
+To login to the OP5 Monitor GUI, point your browser to the portal page of your OP5 Monitor server ( `<https://yourserver/>` )
 
 Click OP5 Monitor.
 
