@@ -8,7 +8,7 @@ In the OP5 Monitor user manual we describe some of the basics with notifications
 
  The decision to send out notifications is made in the service check and host check logic. Host and service notifications occur in the following instances:
 
-- When a hard state change occurs. More information on state types and hard state changes can be found [here](http://www.naemon.org/documentation/usersguide/statetypes.html).
+- When a hard state change occurs. More information on state types and hard state changes can be found here.
 - When a host or service remains in a hard non-OK state and the time specified by the configuration setting *notification\_interval* in the host or service configuration has passed since the last notification was sent out (for that specified host or service).
 
 Each host and service definition has a *contact\_groups* option that specifies what contact groups receive notifications for that particular host or service. Contact groups can contain one or more individual contacts.
@@ -185,4 +185,4 @@ To change this for the service notifications, you need to repeat the steps above
 
 ## Additional Resources
 
-The notifications in OP5 Monitor follows a extensive rule set that is inherited from the core daemon Naemon. More documentation can be found in the [notification documentation for Naemon](http://www.naemon.org/documentation/usersguide/notifications.html)
+The notifications in OP5 Monitor follows a extensive rule set that is inherited from the core daemon Naemon. More documentation can be found in the notification documentation for Naemon
