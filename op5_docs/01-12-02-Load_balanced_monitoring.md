@@ -23,7 +23,7 @@ More specifically, make sure that:
   - 15551 (merlin), used for state communication, such as check results.
   - All server names must be resolvable by DNS or manually via */etc/hosts*.
   - All servers' system clocks must be synchronized, preferably by NTP.
-  - All nodes should be in the same geographical location. If distribution is required, please look at [Distributed Monitoring](Distributed_Monitoring)
+  - All nodes should be in the same geographical location. If distribution is required, please look at Distributed Monitoring
 
 ### Cluster state information
 
@@ -33,7 +33,7 @@ In the OP5 Monitor system, a tool called *mon* can be found via the command lin
 
 All known nodes, the local one, peers and pollers, should be displayed, including their current state. A properly synchronized and online cluster should display all nodes as *ACTIVE*. Beware of any text colored in red.
 
-More information regarding the mon command can be found [here](The_mon_command).
+More information regarding the mon command can be found here.
 
 ## The configuration
 
@@ -66,7 +66,7 @@ This load balanced configuration will be set up with two peered nodes ("peers"):
 8. Restart OP5 Monitor on all nodes:
     `mon node ctrl --self -- mon restart`
 
-9. After a minute or two, make sure that the peers are fully connected and synchronized according to [mon node status](#Loadbalancedmonitoring-monnodestatus).
+9. After a minute or two, make sure that the peers are fully connected and synchronized according to mon node status.
 
 In case you have been running OP5 Monitor for a while already, and you are now about to convert your standalone server to a load balanced setup, you should think of peer-blue as your current OP5 Monitor server, and peer-green as the new peer. This is important to get right, as you may otherwise push the new peer's empty host/service object configuration to the current server, effectively overwriting your actual configuration. If in doubt, please consult your technical contact at op5.
 
@@ -106,7 +106,7 @@ In this instruction we will have the following hosts:
     `asmonitor mon oconf push peer-red `
 7. Finally, on any of the peers (old or new), trigger a full restart OP5 Monitor on all nodes:
     `mon node ctrl --self -- mon restart`
-8. After a minute or two, make sure that the peers are fully connected and synchronized according to [mon node status](#Loadbalancedmonitoring-monnodestatus).
+8. After a minute or two, make sure that the peers are fully connected and synchronized according to mon node status.
 
 ### Removing a peer
 
@@ -132,8 +132,8 @@ The peer will be removed from all other peers' configuration.
 
 ### File and directory synchronization
 
-Information regarding how to synchronize files and/or directories between peers can be found in the [File synchronization](File_synchronization) chapter.
+Information regarding how to synchronize files and/or directories between peers can be found in the File synchronization chapter.
 
 ## More information
 
-For more information and advanced examples, please have a look at the [How-To document](https://kb.op5.com/display/MERLIN/Merlin+How-To) found in the merlin project.
+For more information and advanced examples, please have a look at the How-To document found in the merlin project.
