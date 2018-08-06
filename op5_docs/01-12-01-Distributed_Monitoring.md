@@ -38,7 +38,7 @@ In the OP5 Monitor system, a tool called *mon* can be found via the command line
 
 All known nodes, the local one, peers and pollers, should be displayed, including their current state. A properly synchronized and online cluster should display all nodes as *ACTIVE*. Beware of any text colored in red.
 
-More information regarding the mon command can be found [here](The_mon_command).
+More information regarding the mon command can be found here.
 
 ## The configuration
 
@@ -54,12 +54,13 @@ The poller will be monitoring a host group named *se-gbg*.
 #### Master-side configuration
 
 1. Make sure that the host group which the poller will be responsible for is already configured, saved and can be found in the status pages of the OP5 Monitor web interface. Remember, at the bare minimum, the host group must contain at least one host, with at least one contact and one service.
-2. In case of running a [load balanced setup with peered masters](Load_balanced_monitoring), make sure that all peers are fully connected and synchronized according to [mon node status](#DistributedMonitoring-monnodestatus). The following steps (starting from step 3), should be performed on all masters.
+
+2. In case of running a load balanced setup with peered masters, make sure all peers are fully connected and synchronized according to mon node status. The following steps (starting from step 3), should be performed on all masters.
 
 3. Log onto the master via SSH, as root. OP5 recommends establishing non-root accounts with sudo privileges.
 
-4. To verify that the host group exists, print its current host members:
-    `mon query ls hostgroups -c members name=se-gbg`
+4. To verify that the host group exists, print its current host members: `mon query ls hostgroups -c members name=se-gbg`
+
 5. Add the new poller to the configuration:
 
     `mon node add poller01 type=poller hostgroup=se-gbg takeover=no`
@@ -119,7 +120,7 @@ A poller can handle several host groups, which is a simple way of increasing a p
 
 #### Master-side configuration
 
-In case of running a [load balanced setup with peered masters](Load_balanced_monitoring), make sure that all peers are fully connected and synchronized according to [mon node status](#DistributedMonitoring-monnodestatus) first. The steps below should be performed on all masters.
+In case of running a load balanced setup with peered masters, make sure that all peers are fully connected and synchronized according to mon node status first. The steps below should be performed on all masters.
 
 1. Log on to the master via SSH, as root.
 2. Edit the file */opt/monitor/op5/merlin/merlin.conf *using a text editor:
@@ -131,7 +132,7 @@ In case of running a [load balanced setup with peered masters](Load_balanced_mo
     `hostgroup = se-gbg,se-sth`
     Note that the hostgroups should be **comma-separated only**, without any white space. Otherwise the error "`Incompatible object config (sync triggered)`" may arise during the naemon restart.
 
-Finish up by [pushing the configuration](#DistributedMonitoring-Pushingtheconfiguration).
+Finish up by pushing the configuration.
 
 ### Removing a poller
 
@@ -156,7 +157,7 @@ In case of peered masters, **perform these steps only on *one* of the masters
 
 ### File synchronization
 
-Information regarding how to synchronize files and/or directories from a master to a poller can be found in the [File synchronization](File_synchronization) chapter.
+Information regarding how to synchronize files and/or directories from a master to a poller can be found in the File synchronization chapter.
 
 ### Notify through master
 
@@ -164,7 +165,7 @@ Depending on the setup of a poller, it might be difficult to send notifications 
 
 #### Master-side configuration
 
-The steps below should be performed on all masters. This will matter most when running a [load balanced setup with peered masters](Load_balanced_monitoring):
+The steps below should be performed on all masters. This will matter most when running a load balanced setup with peered masters:
 
 1. Log onto the master via SSH, as root.
 2. Edit the file */opt/monitor/op5/merlin/merlin.conf *using a text editor. For example:
@@ -206,4 +207,4 @@ The steps below should be performed on all masters. This will matter most when r
 
 ## More information
 
-For more information and advanced examples, please have a look at the [How-To document](https://kb.op5.com/display/MERLIN/Merlin+How-To) found in the merlin project.
+For more information and advanced examples, please have a look at the How-To document found in the merlin project.
