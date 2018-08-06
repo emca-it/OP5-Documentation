@@ -14,7 +14,7 @@ Throughout the manual we may use the terms 'trap' from SNMP v1 and 'notification
 
 This is an overview of the screens and steps to create a Trapper trap. The sections after this will cover more of the details. The important part is that you need at least one handler before you can create any matchers -- in other words, you need a Lua script to handle incoming SNMP data before the matchers can act on the data.
 
-1. Create a new Lua snippet with your favorite text editor and set values for the desired parameters. You can make this a normal text file, and the contents can be as simple as the one line in this example. We provide more advanced examples in the upcoming [handlers section]([OP5 Trapper](#op5Trapper-Handlers)):
+1. Create a new Lua snippet with your favorite text editor and set values for the desired parameters. You can make this a normal text file, and the contents can be as simple as the one line in this example. We provide more advanced examples in the upcoming handlers section(OP5 Trapper):
 
     |  **matcher example** |
     | ------------------------------- |

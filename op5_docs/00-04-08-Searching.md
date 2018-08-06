@@ -155,9 +155,10 @@ To save a search query you need to view the output in the listview.
 
 Click on **View in listview** and click on the icon **Show/Edit Text Filter **
 
-![](images/16482309/16679044.png "Show/Edit text filter")
+![](images/16482309/16679044.png "Show/Edit text filter") \
+
 
 Enter a name and click on **Save Filter** in the dialog.
 
-More information can be found in the [Filters](Filters) section.
+More information can be found in the Filters section.
 

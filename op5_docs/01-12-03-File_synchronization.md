@@ -8,7 +8,7 @@ For example, when a new user has been added in OP5 Monitor on one of your master
 
 ## Prerequisites
 
-Make sure you have already set up a either a [load balanced](Load_balanced_monitoring) or [distributed](Distributed_Monitoring) monitoring environment (or a combination of which).
+Make sure you have already set up a either a load balanced or distributed monitoring environment (or a combination of which).
 
 ## The configuration
 
@@ -65,4 +65,4 @@ The files will be synchronized using the *monitor* system user – not *root*
 
 ## Triggering the synchronization
 
-The file and directory synchronization occurs during a *configuration push*, which is triggered as a new configuration is saved in the web interface. For instance, adding a new host in Monitor and then [saving the configuration](The_basics) will trigger this.
+The file and directory synchronization occurs during a *configuration push*, which is triggered as a new configuration is saved in the web interface. For instance, adding a new host in Monitor and then saving the configuration will trigger this.
