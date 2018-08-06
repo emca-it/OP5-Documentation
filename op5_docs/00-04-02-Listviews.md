@@ -9,7 +9,7 @@ Listviews are all views that lists host, services, hostgroups etc.
 
 The content of listviews is selected by the use of filters, see Filters.
 
-A listview is divided into two parts - the first is a top banner that contains a summary of the content in the listview, and the second contains the list items themselves, together with their properties. This documentation page covers the most common usage of values that can be used in the listview filter language. For a full list of the columns, please see the page [Listview filter columns](https://kb.op5.com/display/GUI/Listview+filter+columns)
+A listview is divided into two parts - the first is a top banner that contains a summary of the content in the listview, and the second contains the list items themselves, together with their properties. This documentation page covers the most common usage of values that can be used in the listview filter language. For a full list of the columns, please see the page Listview filter columns
 
 The following views, or tables, uses listviews:
 
@@ -206,7 +206,7 @@ png
 
 ## More information
 
-List views support POSIX extended regular expressions as supported by MK Livestatus. For more information, see [http://mathias-kettner.de](http://mathias-kettner.de/checkmk_livestatus.html#Regular%20expression%20matching)
+List views support POSIX extended regular expressions as supported by MK Livestatus. For more information, see http://mathias-kettner.de
 
-Full list of columns that can be used in the filter language can be found on the page [Listview filter columns](https://kb.op5.com/display/GUI/Listview+filter+columns)
+Full list of columns that can be used in the filter language can be found on the page Listview filter columns
 

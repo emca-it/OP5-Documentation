@@ -162,7 +162,7 @@ To retrieve the saved value just refer to the context with the same key:
 
 `var = context[ "name" ] or <default value>`
 
-Code containing context variables can be found in the section [Code examples](https://kb.op5.com/display/DOC/op5+Trapper#op5Trapper-Codeexamples).
+Code containing context variables can be found in the section Code examples.
 
 ### Actions
 
@@ -232,7 +232,7 @@ To include "module-name" in a handler has the same effect as including the body 
 
 ## Language
 
-Handlers DSL is created on top of a subset of the Lua programming language. The [Lua Reference Manual](http://www.lua.org/manual/5.1/) is a good source if you need more information about the language.
+Handlers DSL is created on top of a subset of the Lua programming language. The Lua Reference Manual is a good source if you need more information about the language.
 
 Note that handlers run in separate secure sandboxes, and potentially dangerous functionality, like access to the file system, will not be available.
 

@@ -2,11 +2,11 @@
 
 ## About
 
-In this section we will create a very simple check plugin to demonstrate *OP5 Monitor*'s [plugin interface](The_plugin_interface.md). We will use basic tools, such as writing it in the Bourne shell (the original Unix shell language). The resulting plugin may not be very useful, but going through this process will teach you the necessary steps for creating your own monitoring plugins.
+In this section we will create a very simple check plugin to demonstrate *OP5 Monitor*'s plugin interface. We will use basic tools, such as writing it in the Bourne shell (the original Unix shell language). The resulting plugin may not be very useful, but going through this process will teach you the necessary steps for creating your own monitoring plugins.
 
 This tutorial requires that you have shell access to the server running *OP5 Monitor* as well as some basic Unix shell knowledge. If you are coming from the Windows world, take heart: you can now install PowerShell starting with version 7 of Red Hat Enterprise Linux (RHEL) and CentOS, on which OP5 Monitor runs. Follow along as best you can, and it will be worth your while.
 
-Windows users may use [PuTTY](http://www.chiark.greenend.org.uk/%7Esgtatham/putty/latest.html) for terminal access via SSH and [WinSCP](https://winscp.net/eng/index.php) for file transfers via SFTP (SSH). MacOS, Linux, and other Unix users may use 'ssh' or 'scp' from a local terminal window.
+Windows users may use PuTTY for terminal access via SSH and WinSCP for file transfers via SFTP (SSH). MacOS, Linux, and other Unix users may use 'ssh' or 'scp' from a local terminal window.
 
 ## Creating the plugin
 

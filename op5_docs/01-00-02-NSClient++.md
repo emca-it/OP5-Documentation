@@ -2,9 +2,9 @@
 
 ## About
 
-[NSClient++](http://nsclient.org/) is the agent we  for monitoring hosts that run Microsoft Windows. It integrates very well with recent Windows Servers versions, copying its commands into the Registry and simplifying authentication. It also has versions for Linux, but OP5 has not tested against such implementations.
+NSClient++ is the agent we  for monitoring hosts that run Microsoft Windows. It integrates very well with recent Windows Servers versions, copying its commands into the Registry and simplifying authentication. It also has versions for Linux, but OP5 has not tested against such implementations.
 
-OP5 used to provide a modified version of NSClient++. Starting with version 0.4.x and moving into the 0.5.x series, the main NSClient++ release has a cleaner integration with OP5 Monitor as well as the operating system. We strongly recommend [downloading the latest stable release directly](https://nsclient.org/download/) from our friends there.
+OP5 used to provide a modified version of NSClient++. Starting with version 0.4.x and moving into the 0.5.x series, the main NSClient++ release has a cleaner integration with OP5 Monitor as well as the operating system. We strongly recommend downloading the latest stable release directly from our friends there.
 
 ## Lead plugins for NSClient++ communication
 
@@ -26,11 +26,11 @@ NSClient++ operation used to be configured in a set of plaintext files. These ar
 
 ### Modern approach (v0.5.x)
 
-Michael Medin, the head of the NSClient++ project, has provided [very good documentation for writing configuration files](https://docs.nsclient.org/settings/). OP5 provides [an in-depth presentation](https://kb.op5.com/x/kAEjAQ) in our Knowledge Base.
+Michael Medin, the head of the NSClient++ project, has provided very good documentation for writing configuration files. OP5 provides an in-depth presentation in our Knowledge Base.
 
 ### Deprecated approach (v0.3.x and older)
 
-Much of this has been deprecated since version 0.4 and changed again with version 0.5. Please consider this section historical for version 0.3.x. Please also refer to [our more in-depth material from our Knowledge Article](https://kb.op5.com/x/Pw4jAQ) about the older configuration methods.
+Much of this has been deprecated since version 0.4 and changed again with version 0.5. Please consider this section historical for version 0.3.x. Please also refer to our more in-depth material from our Knowledge Article about the older configuration methods.
 
 | **File** | **Description** | 
 | --------  | ----------------------------------------  |

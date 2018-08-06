@@ -2,7 +2,7 @@
 
 ## About
 
-Widgets are used on a [dashboard](Tactical_overview) and gives the user the ability to personalize a view to display the status data they are interested in.
+Widgets are used on a dashboard and gives the user the ability to personalize a view to display the status data they are interested in.
 
 The first thing you will see when you login to OP5 Monitor is a dashboard and it can look something like this.
 

@@ -6,7 +6,7 @@ We hope the previous section made you eager to tweak an existing plugin or port 
 
 You probably also saw some variables and wondered, "is there an API, or at least a list?" Not only are there lists, but there is an entire naming system.
 
-Earlier we [mentioned that Naemon maintains plugin compatibility with Nagios](https://kb.op5.com/x/lQprAQ). Nagios is famous for its set of variables for plugins, which are known as macros. Naemon's documentation includes both [the macro list](http://www.naemon.org/documentation/usersguide/macrolist.html) as well as [a great page for understanding how to think about them](http://www.naemon.org/documentation/usersguide/macros.html) and implement them.
+Earlier we mentioned that Naemon maintains plugin compatibility with Nagios. Nagios is famous for its set of variables for plugins, which are known as macros. Naemon's documentation includes both the macro list as well as a great page for understanding how to think about them and implement them.
 
 To get you moving, we have provided just a few of the most important macros below. These are most important things to understand before you go to another page.
 

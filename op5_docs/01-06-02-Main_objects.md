@@ -72,7 +72,7 @@ A service can be practically any thing that you can measure and monitor on a hos
 
 - Must be connected to a host
 - Can check things by tcp, agents, snmp etc.
-- Use a check command ([Commands](#Mainobjects-Commands)) to communicate with the plugin that gets all the data.
+- Use a check command to communicate with the plugin that gets all the data.
 
 ### Required directives
 
@@ -286,12 +286,12 @@ Importing commands is a manual operation since updating existing commands might 
 ## Plugins
 
 Plugins are compiled executable or scripts that can be run from a command line to check the status of a host or service.
- There are many plugins included in the OP5 Monitor software. A list of the plugins can be found in the [list of included plugins](https://kb.op5.com/display/PLUGINS/Plugins+List).
+ There are many plugins included in the OP5 Monitor software. A list of the plugins can be found in the list of included plugins.
  If you are looking for a plugin not found in OP5 Monitor by default there are several other places to look:
 
 - Contact OP5 for a specific development
-- [www.op5.org](http://www.op5.org)
-- [exchange.nagios.org](http://exchange.nagios.org)
+- www.op5.org
+- exchange.nagios.org
 
 You can use any plugin written for Nagios but you might need to modify them a bit before they work in the OP5 Monitor environment.
 

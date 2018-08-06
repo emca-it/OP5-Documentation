@@ -19,7 +19,7 @@ We store the configuration for the authentication system in '`/etc/op5/auth.yml`
 
 **Child Pages**
 
-- [Apache](Apache)
-- [Default](Default)
-- [Header Authentication Method, or SSO (single sign on)](Header_auth_SSO)
-- [LDAP and Active Directory](LDAP_and_Active_Directory)
+- Apache
+- Default
+- Header Authentication Method, or SSO (single sign on)
+- LDAP and Active Directory

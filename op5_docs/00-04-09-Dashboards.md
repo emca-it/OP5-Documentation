@@ -29,7 +29,7 @@ When a new dashboard has been created it is empty and will only display a short 
 
 Widgets are added through the "Dashboard options" menu, simply hover the "Dashboard options" and then "Add widget" and you are presented with a list of widget, just click them to add the widget to your dashboard.
 
-More on widgets is covered in the [Widgets](Widgets) chapter.
+More on widgets is covered in the Widgets chapter.
 
 ![](images/16482310/18481522.png) \
 
@@ -66,7 +66,7 @@ Once shared with a group or user they are shown in the lower part of this dialog
 
 When sharing dashboards to groups or users that are fetched from LDAP or Active Directory, the form is not auto-completed and the full name of the user or group needs to be written in the input field.
 
-The same goes for auto completion of local users and groups if your user isn't member of a group with the permission "Access Rights". More information can be found in [Authorization section](Authorization_16482400.html#Authorization-Authorizationpoints) of the documentation. You can still share dashboards if you input the correct user or group name in the input field.
+The same goes for auto completion of local users and groups if your user isn't member of a group with the permission "Access Rights". More information can be found in Authorization section of the documentation. You can still share dashboards if you input the correct user or group name in the input field.
 
 ## Other options
 

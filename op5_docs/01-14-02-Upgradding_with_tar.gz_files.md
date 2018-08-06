@@ -2,7 +2,7 @@
 
 ## About
 
-Before you start with the upgrade you need to make sure you have the login to the download sections at [www.op5.com](http://www.op5.com). Otherwise you will not be able to download the `tar.gz` files.
+Before you start with the upgrade you need to make sure you have the login to the download sections at www.op5.com. Otherwise you will not be able to download the `tar.gz` files.
 To create an account please go to http://www.op5.com/sign-in/
 
 ## To upgrade with tar.gz files

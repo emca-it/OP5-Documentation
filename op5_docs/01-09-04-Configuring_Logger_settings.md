@@ -50,4 +50,4 @@ Since the archive will not automatically be rotated logs will be stored indefi
 
 ## Log Monitoring
 
-If you want to learn about monitoring log patterns, see the "[Monitoring log filters in OP5 Monitor 7.0 or later](https://kb.op5.com/display/HOWTOs/Monitoring+log+filters+in+Monitor+7.0+or+higher)"
+If you want to learn about monitoring log patterns, see the "Monitoring log filters in OP5 Monitor 7.0 or later"

@@ -43,7 +43,7 @@ A rule contains an actual search field. Different types of categories have diffe
 
 ## Date and Time
 
-When filtering on fields with either time or date it is possible to use relative time, it is also possible to use relative time in combination with specific time. More information about this can be found in the [PHP manual.](http://php.net/manual/en/datetime.formats.php)
+When filtering on fields with either time or date it is possible to use relative time, it is also possible to use relative time in combination with specific time. More information about this can be found in the PHP manual.
 
 Some examples that can be used are
 

@@ -10,7 +10,7 @@ OP5 Monitor comes with a REST API. It lets you configure, get status information
 
 The response can be formatted as HTML, JSON, or XML.
 
-For more information about the REST API go to [API help page](https://demo%40op5.com:MonitorDemo123@demo.op5.com/api/help). This page is also available within your installation at [https://{your.op5.monitor}/api/help/](https://your-op5-monitor/api/help/) , replacing "{your.OP5.monitor}" with your Monitor server's FQDN.
+For more information about the REST API go to API help page. This page is also available within your installation at https://{your.op5.monitor}/api/help/ , replacing "{your.OP5.monitor}" with your Monitor server's FQDN.
 
 This document does not attempt to replace those pages, as they are kept updated with each API improvement. Instead we want this to give a better idea of how each subsection can help you, how to find what you need more quickly by understanding the subsections.
 
@@ -18,7 +18,7 @@ Note also that there is still a section for Status API. This has been obsolete s
 
 ## HTTP Filter API
 
-The filter API will allow you to fetch information and status from filters about hosts, services, traps, logs and much more. For more information about filters, please read the [Filters](Filters) chapter. If you are already familair with OP5 Listview syntax, then you can create filter queries with minimal character replacements: '%20' for space, for example.
+The filter API will allow you to fetch information and status from filters about hosts, services, traps, logs and much more. For more information about filters, please read the Filters chapter. If you are already familair with OP5 Listview syntax, then you can create filter queries with minimal character replacements: '%20' for space, for example.
 
 There are two sections within the filter API: filter and count --
 
@@ -39,17 +39,17 @@ Example: To get a count of the objects using the same query as above --
 This is an example of how a query might look like, in this example we will fetch hosts that are down, not acknowledged and not in scheduled downtime
  https://demo.op5.com/api/filter/query?query=[hosts] state != 0 and acknowledged = 0 and scheduled\_downtime\_depth = 0
 
-The documentation for filters can be found [here](https://demo%40op5.com:MonitorDemo123@demo.op5.com/api/help/filter) or in your OP5 Monitor server at https://{your.op5.monitor}/api/help/filter
+The documentation for filters can be found here or in your OP5 Monitor server at https://{your.op5.monitor}/api/help/filter
 
 ## HTTP Configuration API
 
 The configure API is used to manipulate the object configuration used by OP5 Monitor. It uses the same configuration database as the OP5 Monitor Configuration tool does. Objects changed by the API will also be visible within the configuration GUI. You may use it to integrate OP5 Monitor with other third-party software.
 
-The API help page for configuration can be found [here](https://demo%40op5.com:MonitorDemo123@demo.op5.com/api/help/config) or in your OP5 Monitor server at https://{your.op5.monitor}/api/help/filter .
+The API help page for configuration can be found here or in your OP5 Monitor server at https://{your.op5.monitor}/api/help/filter .
 
 ## HTTP Command API
 
-The command section lets you submit the following commands to OP5 Monitor using the REST API. The API help page for commands can be found [here](https://demo%40op5.com:MonitorDemo123@demo.op5.com/api/help/command) or in your OP5 Monitor server at https://{your.op5.monitor}/api/help/command .
+The command section lets you submit the following commands to OP5 Monitor using the REST API. The API help page for commands can be found here or in your OP5 Monitor server at https://{your.op5.monitor}/api/help/command .
 
 ## HTTP Report API
 
@@ -110,7 +110,7 @@ $save = curl_exec($a_handle);
 ?>
 ```
 
-Now, visiting [https://{your.op5.monitor}/api/config/host/my\_server](https://op5-server/api/config/host/my_server) in a web browser should show you the live configuration.
+Now, visiting https://{your.op5.monitor}/api/config/host/my\_server in a web browser should show you the live configuration.
 
 ### REST and LDAP
 

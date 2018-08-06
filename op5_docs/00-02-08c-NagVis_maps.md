@@ -84,7 +84,7 @@ Since the **Add new map** window is pretty limited you probably want to change s
 
 
 The number of options is large. For more information about the options please read more in the official NagVis Manual at:
-[http://www.nagvis.org/documentation](http://www.nagvis.org/documentation)
+http://www.nagvis.org/documentation
 
 ### Deleting a map
 

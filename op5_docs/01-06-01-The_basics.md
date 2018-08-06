@@ -78,7 +78,7 @@ If two users with the same permissions are editing the same host all configurati
 
 ### Permissions
 
-The save the configuration the user must have export permissions. See [Authorization](Authorization) for more information.
+The save the configuration the user must have export permissions. See Authorization for more information.
 
 ## Undo changes
 

@@ -8,12 +8,12 @@ OP5 SyslogAgent is a repackaged version of the Datagram SyslogAgent, which itse
 
 ## Download and Installation
 
-The OP5 SyslogAgent installation package consists of an MSI installer, available as either 32-bit or 64-bit from [our web site's Download Library](https://www.op5.com/op5-monitor/download-library/category/windows-syslog-agent/). To install, simply double-click the installation MSI file (usually as an Administrator) and follow the on-screen instructions. Note that product has not been updated since OP5 revised its logo:
+The OP5 SyslogAgent installation package consists of an MSI installer, available as either 32-bit or 64-bit from our web site's Download Library. To install, simply double-click the installation MSI file (usually as an Administrator) and follow the on-screen instructions. Note that product has not been updated since OP5 revised its logo:
 
 ![](images/16482385/16679132.png) \
 
 
-By default the OP5 SyslogAgent will be installed in an OP5 subdirectory, which itself will be placed in "`%SystemRoot%\%ProgramFiles%`": by default, that path becomes "`C:\Program Files\op5\SyslogAgent\`". Please review the [upcoming section](#WindowsSyslogAgent-Configuration) for any configuration details.
+By default the OP5 SyslogAgent will be installed in an OP5 subdirectory, which itself will be placed in "`%SystemRoot%\%ProgramFiles%`": by default, that path becomes "`C:\Program Files\op5\SyslogAgent\`". Please review the upcoming section for any configuration details.
 
 ## Upgrading
 

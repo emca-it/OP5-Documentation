@@ -480,7 +480,7 @@ This will out put "crypticpassword!"
 
 ### Scanning host for network services
 
-When you [added your host](#Managingobjects-to-add-part1) you had the opportunity to add services found during the scan for network services. This scan function can also be reached afterwords.
+When you added your host you had the opportunity to add services found during the scan for network services. This scan function can also be reached afterwords.
 
 #### To scan a host for network services
 
