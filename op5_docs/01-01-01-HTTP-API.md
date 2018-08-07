@@ -61,7 +61,7 @@ The filter API can be used to ether retrieve a list of objects from a filter or 
 
 ## Script Example
 
-In this example we will create a new host called **my\_server** -- IP address **192.168.0.20** -- with one ping service. The OP5 server is called **op5-server**, the username is **user1**, and user1's password is **insecurepassword**. The page <https://op5monitor.example.com/api/help/config/host>, provides more detailed information on how to create a host.
+In this example we will create a new host called **my\_server** -- IP address **192.168.0.20** -- with one ping service. The OP5 server is called **op5-server**, the username is **user1**, and user1's password is **insecurepassword**. The page `https://op5monitor.example.com/api/help/config/host`, provides more detailed information on how to create a host.
 
 This is what needs to be done as a PHP section, which can be placed directly into HTML as well. For Python calls, we will provide a related example in a future release:
 
