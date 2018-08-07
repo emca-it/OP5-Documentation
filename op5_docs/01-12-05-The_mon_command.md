@@ -265,8 +265,6 @@ mon sysconf ramdisk enable
 
 A ramdisk can be enabled for storing spools for performance data and checkresults.
 
-~~By storing these spools on a ramdisk we can lower the disk I/O significantly.~~
-
 As of Monitor 6, enabling the ramdisk is no longer recommended. To disable the ramdisk if already enabled, see the separate article [Reverting a ramdisk enabled setup back to the default non-ramdisk layout](https://kb.op5.com/display/HOWTOs/Reverting+a+ramdisk+enabled+setup+back+to+the+default+non-ramdisk+layout).
 
 ### check
